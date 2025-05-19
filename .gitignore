@@ -1,0 +1,28 @@
+# Terraform
+**/.terraform/*
+*.tfstate
+*.tfstate.*
+*.tfplan
+*.tfvars
+!*.tfvars.example
+.terraform.lock.hcl
+
+# Backend configs
+**/config/*.backend.hcl
+!**/config/*.backend.hcl.example
+
+# Lambda build artifacts
+**/builds/*
+**/node_modules/*
+**/.serverless/*
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS files
+.DS_Store
+Thumbs.db
+/source_examples/
