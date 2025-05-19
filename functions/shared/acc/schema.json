@@ -1,0 +1,74 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "CompanyParticipationInfo",
+  "type": "object",
+  "properties": {
+    "companyName": { "type": "string" },
+    "documentType": { "type": "string" },
+    "taxId": {
+      "type": "string",
+      "pattern": "^[0-9.\\-]+$"
+    },
+
+    "relatedParties": {
+      "type": "array",
+      "items": {
+        "oneOf": [
+          { "$ref": "#/$defs/PersonRelatedParty" },
+          { "$ref": "#/$defs/CompanyRelatedParty" }
+        ]
+      }
+    }
+  },
+  "required": ["companyName", "documentType", "taxId", "relatedParties"],
+  "additionalProperties": false,
+  "$defs": {
+    "CommonFields": {
+      "type": "object",
+      "properties": {
+        "identificationType": { "type": "string" },
+        "identificationNumber": {
+          "type": "string",
+          "pattern": "^[0-9A-Za-z.\\-]+$"
+        },
+        "relationshipType": { "type": "string" },
+        "participationPercentage": {
+          "type": "string",
+          "pattern": "^[0-9]+(\\.[0-9]+)?$"
+        }
+      },
+      "required": [
+        "relationshipType",
+        "participationPercentage"
+      ],
+      "additionalProperties": false
+    },
+    "PersonRelatedParty": {
+      "allOf": [
+        { "$ref": "#/$defs/CommonFields" },
+        {
+          "type": "object",
+          "properties": {
+            "firstName": { "type": "string" },
+            "lastName":  { "type": "string" }
+          },
+          "required": ["firstName", "lastName"],
+          "additionalProperties": false
+        }
+      ]
+    },
+    "CompanyRelatedParty": {
+      "allOf": [
+        { "$ref": "#/$defs/CommonFields" },
+        {
+          "type": "object",
+          "properties": {
+            "companyName": { "type": "string" }
+          },
+          "required": ["companyName"],
+          "additionalProperties": false
+        }
+      ]
+    }
+  }
+}
