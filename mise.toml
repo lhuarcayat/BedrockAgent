@@ -1,0 +1,8 @@
+[env]
+# Automatically create and use a virtual environment in the .venv directory
+_.python.venv = { path = ".venv", create = true }
+
+[tasks.install]
+description = "Install dependencies"
+alias = "i"
+run = "uv pip install -r requirements.txt"
