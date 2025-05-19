@@ -1,0 +1,89 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Empresa",
+  "type": "object",
+  "properties": {
+    "razonSocial": {
+      "type": "string"
+    },
+    "tipoDocumento": {
+      "type": "string"
+    },
+    "nit": {
+      "type": "number"
+    },
+    "direccionPrincipal": {
+      "type": "string"
+    },
+    "fechaConstitucion": {
+      "type": "string",
+      "format": "date"
+    },
+    "duracionSociedad": {
+      "type": "string"
+    },
+    "numeroMatricula": {
+      "type": "number"
+    },
+    "tamano": {
+      "type": "string"
+    },
+    "relacionados": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "nombre": {
+            "type": "string"
+          },
+          "apellido": {
+            "type": "string"
+          },
+          "tipoIdentificacion": {
+            "type": "string"
+          },
+          "identificacion": {
+            "type": "string"
+          },
+          "tipoRelacion": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "nombre",
+          "apellido",
+          "tipoIdentificacion",
+          "identificacion",
+          "tipoRelacion"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "embargos": {
+      "type": "string"
+    },
+    "liquidaciones": {
+      "type": "string"
+    },
+    "fechaEmisionDocumento": {
+      "type": "string",
+      "format": "date"
+    },
+    "fechaUltimaRenovacionMatricula": {
+      "type": "string",
+      "format": "date"
+    }
+  },
+  "required": [
+    "razonSocial",
+    "tipoDocumento",
+    "nit",
+    "direccionPrincipal",
+    "fechaConstitucion",
+    "duracionSociedad",
+    "numeroMatricula",
+    "tamano",
+    "relacionados"
+  ],
+  "additionalProperties": false
+}

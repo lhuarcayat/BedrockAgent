@@ -1,0 +1,105 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "CompanyInfoWithRepresentatives",
+  "type": "object",
+  "properties": {
+    "companyName": {
+      "type": "string"
+    },
+    "documentType": {
+      "type": "string"
+    },
+    "taxId": {
+      "type": "number"
+    },
+    "verificationDigit": {
+      "type": "number"
+    },
+    "personType": {
+      "type": "string",
+      "enum": [
+        "Natural Person",
+        "Legal Entity"
+      ]
+    },
+    "representatives": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "firstName": {
+            "type": "string"
+          },
+          "lastName": {
+            "type": "string"
+          },
+          "identificationType": {
+            "type": "string"
+          },
+          "identificationNumber": {
+            "type": "string"
+          },
+          "relationshipType": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "firstName",
+          "lastName",
+          "identificationType",
+          "identificationNumber",
+          "relationshipType"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "relatedParties": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "firstName": {
+            "type": "string"
+          },
+          "lastName": {
+            "type": "string"
+          },
+          "identificationType": {
+            "type": "string"
+          },
+          "identificationNumber": {
+            "type": "string"
+          },
+          "relationshipType": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "firstName",
+          "lastName",
+          "identificationType",
+          "identificationNumber",
+          "relationshipType"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "address": {
+      "type": "string"
+    },
+    "pdfGenerationDate": {
+      "type": "string",
+      "format": "date"
+    }
+  },
+  "required": [
+    "companyName",
+    "documentType",
+    "taxId",
+    "verificationDigit",
+    "personType",
+    "address",
+    "pdfGenerationDate"
+  ],
+  "additionalProperties": false
+}

@@ -1,0 +1,89 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Company",
+  "type": "object",
+  "properties": {
+    "companyName": {
+      "type": "string"
+    },
+    "documentType": {
+      "type": "string"
+    },
+    "taxId": {
+      "type": "number"
+    },
+    "mainAddress": {
+      "type": "string"
+    },
+    "incorporationDate": {
+      "type": "string",
+      "format": "date"
+    },
+    "companyDuration": {
+      "type": "string"
+    },
+    "registrationNumber": {
+      "type": "number"
+    },
+    "size": {
+      "type": "string"
+    },
+    "relatedParties": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "firstName": {
+            "type": "string"
+          },
+          "lastName": {
+            "type": "string"
+          },
+          "identificationType": {
+            "type": "string"
+          },
+          "identificationNumber": {
+            "type": "string"
+          },
+          "relationshipType": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "firstName",
+          "lastName",
+          "identificationType",
+          "identificationNumber",
+          "relationshipType"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "embargoes": {
+      "type": "string"
+    },
+    "liquidations": {
+      "type": "string"
+    },
+    "documentIssueDate": {
+      "type": "string",
+      "format": "date"
+    },
+    "lastRegistrationRenewalDate": {
+      "type": "string",
+      "format": "date"
+    }
+  },
+  "required": [
+    "companyName",
+    "documentType",
+    "taxId",
+    "mainAddress",
+    "incorporationDate",
+    "companyDuration",
+    "registrationNumber",
+    "size",
+    "relatedParties"
+  ],
+  "additionalProperties": false
+}

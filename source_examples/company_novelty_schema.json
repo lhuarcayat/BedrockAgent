@@ -1,0 +1,59 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "CompanyNoveltyInfo",
+  "type": "object",
+  "properties": {
+    "companyName": {
+      "type": "string"
+    },
+    "documentType": {
+      "type": "string"
+    },
+    "taxId": {
+      "type": "number"
+    },
+    "relatedParties": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "firstName": {
+            "type": "string"
+          },
+          "lastName": {
+            "type": "string"
+          },
+          "identificationType": {
+            "type": "string"
+          },
+          "identificationNumber": {
+            "type": "string"
+          },
+          "noveltyType": {
+            "type": "string"
+          },
+          "participationPercentage": {
+            "type": "string",
+            "pattern": "^[0-9]+(\\.[0-9]+)?$"
+          }
+        },
+        "required": [
+          "firstName",
+          "lastName",
+          "identificationType",
+          "identificationNumber",
+          "noveltyType",
+          "participationPercentage"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  "required": [
+    "companyName",
+    "documentType",
+    "taxId",
+    "relatedParties"
+  ],
+  "additionalProperties": false
+}
