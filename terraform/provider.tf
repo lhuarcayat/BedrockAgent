@@ -14,8 +14,9 @@ provider "aws" {
 
   default_tags {
     tags = {
-      Project   = "par-servicios"
+      Project   = var.service_name
       Component = "agents-bedrock"
+      Environment = var.stage_name
     }
   }
 }
