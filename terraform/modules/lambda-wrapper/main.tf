@@ -1,92 +1,25 @@
-resource "aws_iam_role" "lambda_exec" {
-  name = "${var.project_prefix}-${var.function_name}-role"
-
-  assume_role_policy = jsonencode({
-    Version = "2012-10-17"
-    Statement = [{
-      Action = "sts:AssumeRole"
-      Effect = "Allow"
-      Principal = {
-        Service = "lambda.amazonaws.com"
-      }
-    }]
-  })
-
-  tags = merge(
-    { for tag in var.tags : tag => true },
-    { Name = "${var.project_prefix}-${var.function_name}-role" }
-  )
+locals {
+  default_memory_size = 1024
+  default_timeout     = 6
+  default_runtime     = "python3.11"
 }
 
-resource "aws_iam_role_policy" "lambda_permissions" {
-  name = "${var.project_prefix}-${var.function_name}-policy"
-  role = aws_iam_role.lambda_exec.id
+module "lambda" {
+  source  = "terraform-aws-modules/lambda/aws"
+  version = "~> 7.0"
 
-  policy = jsonencode({
-    Version = "2012-10-17"
-    Statement = [
-      {
-        Effect = "Allow"
-        Action = [
-          "s3:GetObject",
-          "s3:PutObject",
-          "s3:ListBucket"
-        ]
-        Resource = "*"
-      },
-      {
-        Effect = "Allow"
-        Action = [
-          "sqs:SendMessage",
-          "sqs:ReceiveMessage",
-          "sqs:DeleteMessage"
-        ]
-        Resource = "*"
-      },
-      {
-        Effect = "Allow"
-        Action = [
-          "sns:Publish"
-        ]
-        Resource = "*"
-      },
-      {
-        Effect = "Allow"
-        Action = [
-          "textract:AnalyzeDocument",
-          "textract:StartDocumentAnalysis"
-        ]
-        Resource = "*"
-      },
-      {
-        Effect = "Allow"
-        Action = [
-          "logs:CreateLogGroup",
-          "logs:CreateLogStream",
-          "logs:PutLogEvents"
-        ]
-        Resource = "arn:aws:logs:*:*:*"
-      }
-    ]
-  })
-}
-
-resource "aws_lambda_function" "main" {
   function_name = "${var.project_prefix}-${var.function_name}"
   handler       = var.handler
-  runtime       = var.runtime
-  role          = aws_iam_role.lambda_exec.arn
+  runtime       = var.runtime != null ? var.runtime : local.default_runtime
+  source_path   = var.source_path
 
-  environment {
-    variables = var.environment
-  }
+  environment_variables            = var.environment_variables
+  attach_policy_statements         = var.attach_policy_statements
+  policy_statements                = var.policy_statements
+  publish                          = var.publish
+  allowed_triggers                 = var.allowed_triggers
+  cloudwatch_logs_retention_in_days = var.cloudwatch_logs_retention_in_days
 
-  tags = merge(
-    { for tag in var.tags : tag => true },
-    { Name = "${var.project_prefix}-${var.function_name}" }
-  )
-
-  # Source code will be uploaded separately
-  filename         = "${path.module}/../../functions/${var.function_name}/src/lambda_function.zip"
-  source_code_hash = filebase64sha256("${path.module}/../../functions/${var.function_name}/src/lambda_function.zip")
+  memory_size = var.memory_size != null ? var.memory_size : local.default_memory_size
+  timeout     = var.timeout     != null ? var.timeout     : local.default_timeout
 }
