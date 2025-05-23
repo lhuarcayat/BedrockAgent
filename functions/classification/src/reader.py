@@ -69,6 +69,29 @@ def create_messages(prompt: str, pdf_bytes: bytes):
     }
     return [msg]
 
+def create_messages_for_claude(prompt: str, pdf_bytes: bytes):
+    return [
+        {
+            "role": "user",
+            "content": [
+                {
+                    "type": "text",
+                    "text": prompt
+                },
+                {
+                    "type": "document",
+                    "document": {
+                        "name": "document_to_evaluate.pdf",
+                        "format": "pdf",
+                        "source": {
+                            "bytes": pdf_bytes
+                        }
+                    }
+                }
+            ]
+        }
+    ]
+
 
 # def create_messages(prompt, file_to_read):
 
@@ -100,6 +123,14 @@ def set_model_params(max_tokens=300, top_p=0.1, temperature=0.3):
     }
     return params
 
+def set_claude_params(max_tokens=300, top_p=0.1, temperature=0.3):
+    params = {
+        "max_tokens": max_tokens,
+        "top_p": top_p,
+        "temperature": temperature
+    }
+    return params
+
 
 def get_model_response(client, model_id, messages, params):
     # response = client.converse(
@@ -110,19 +141,45 @@ def get_model_response(client, model_id, messages, params):
 
     payload = {
         "messages": messages,
-        **params
+        "inferenceConfig": params
     }
 
     response = client.invoke_model(
         modelId=model_id,
         contentType="application/json",
         accept="application/json",
+        trace='ENABLED',
         body=json.dumps(payload).encode("utf-8")
     )
 
     body = response["body"].read().decode("utf-8")
 
     return json.loads(body)
+
+def get_claude_response(client, model_id, messages, params):
+    # response = client.converse(
+    #     modelId=model_id,
+    #     messages=messages,
+    #     inferenceConfig=params
+    # )
+
+    payload = {
+        "messages": messages,
+        "inferenceConfig": params
+    }
+
+    response = client.invoke_model(
+        modelId=model_id,
+        contentType="application/json",
+        accept="application/json",
+        body=json.dumps(payload).encode("utf-8"),
+        trace='ENABLED'
+    )
+
+    body = response["body"].read().decode("utf-8")
+
+    return json.loads(body)
+
 
 
 def save_to_json(response, output_path="response_indented.json", indent=2):
@@ -148,10 +205,11 @@ def save_to_json(response, output_path="response_indented.json", indent=2):
 
 def main():
     region = "us-east-1"
-    modelId = "amazon.nova-pro-v1:0"
+    # modelId = "us.anthropic.claude-3-7-sonnet-20250219-v1:0"
+    modelId = "us.amazon.nova-pro-v1:0"
     temperature = 0.1
     top_p = 0.9
-    max_tokens = 10000
+    max_tokens = 8192
 
     client = create_client("bedrock-runtime", region)
 
