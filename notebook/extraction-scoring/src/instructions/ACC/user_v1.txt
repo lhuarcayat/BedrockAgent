@@ -1,0 +1,32 @@
+Please process the following PDF and extract the company data according to the ACC schema:
+**Do not** include any examples, commentary, or markdown. Only return the raw JSON below.
+
+
+1. Extract the json
+- PDF to process: `$pdf_path`
+- Classification metadata:
+  - document_number: `$document_number`
+  - document_type: `$document_type`
+  - category: `$category`
+
+
+2. Validate your draft JSON against:
+   - The JSON schema in `schema.json`.
+   - The PERSON_ID / COMPANY_ID lookup rules for documentCountry.
+   If you spot any missing/extra fields or mis-classified parties, **fix** them now.
+
+3. **Return exactly this JSON structure** (with your substituted values and the fields defined in schema.json):
+
+```json
+{
+  "path": "$pdf_path",
+  "result": {
+    /* companyName, documentType, taxId, relatedParties */
+  },
+  "document_type": "$document_type",
+  "document_number": "$document_number",
+  "category": "$category",
+  "country": "$country"
+}
+
+Think step-by-step and don't include any examples, commentary, or markdown in the responses
