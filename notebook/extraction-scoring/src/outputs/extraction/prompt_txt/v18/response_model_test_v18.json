@@ -1,0 +1,33 @@
+{
+  "ResponseMetadata": {
+    "RequestId": "30f5c019-b6dd-45ec-a2bf-593cfa2edbbb",
+    "HTTPStatusCode": 200,
+    "HTTPHeaders": {
+      "date": "Wed, 28 May 2025 22:06:49 GMT",
+      "content-type": "application/json",
+      "content-length": "2135",
+      "connection": "keep-alive",
+      "x-amzn-requestid": "30f5c019-b6dd-45ec-a2bf-593cfa2edbbb"
+    },
+    "RetryAttempts": 0
+  },
+  "output": {
+    "message": {
+      "role": "assistant",
+      "content": [
+        {
+          "text": "Think step-by-step to ensure accurate extraction and proper JSON formatting.\n\n```json\n{\n  \"path\": \"../../shared/file_examples/ACC/800216686/231_CA_2020-02-29.pdf\",\n  \"result\": {\n    \"companyName\": \"AEROSUPPORT S.A.S.\",\n    \"documentType\": \"Equity Composition\",\n    \"taxId\": \"800.216.686-2\",\n    \"country\": \"Colombia\",\n    \"identificationDetails\": {\n      \"source\": \"text_reference\",\n      \"indicators\": [\n        \"Bogotá\",\n        \"Colombia\"\n      ],\n      \"requiresReview\": false\n    },\n    \"relatedParties\": [\n      {\n        \"firstName\": \"GERMAN\",\n        \"lastName\": \"SALGADO VERGARA\",\n        \"identificationType\": \"C.C.\",\n        \"identificationNumber\": \"19306991\",\n        \"relationshipType\": \"Shareholder\",\n        \"participationPercentage\": \"49.50\",\n        \"timeFound\": 1,\n        \"job\": \"Representante Legal\"\n      },\n      {\n        \"companyName\": \"GLOBAL AVIATION SUPPORT CORP\",\n        \"identificationType\": \"NIT\",\n        \"identificationNumber\": \"1045179-1-546162\",\n        \"relationshipType\": \"Shareholder\",\n        \"participationPercentage\": \"49.00\"\n      },\n      {\n        \"firstName\": \"ADRIANA\",\n        \"lastName\": \"ARANGO JARAMILLO\",\n        \"identificationType\": \"C.C.\",\n        \"identificationNumber\": \"35469632\",\n        \"relationshipType\": \"Shareholder\",\n        \"participationPercentage\": \"1.00\",\n        \"timeFound\": 1\n      },\n      {\n        \"firstName\": \"NICOLAS\",\n        \"lastName\": \"SALGADO ARANGO\",\n        \"identificationType\": \"C.C.\",\n        \"identificationNumber\": \"1020763136\",\n        \"relationshipType\": \"Shareholder\",\n        \"participationPercentage\": \"0.50\",\n        \"timeFound\": 1\n      }\n    ]\n  },\n  \"document_type\": \"company\",\n  \"document_number\": \"800216686\",\n  \"category\": \"ACC\"\n}\n```"
+        }
+      ]
+    }
+  },
+  "stopReason": "end_turn",
+  "usage": {
+    "inputTokens": 5008,
+    "outputTokens": 518,
+    "totalTokens": 5526
+  },
+  "metrics": {
+    "latencyMs": 9288
+  }
+}
