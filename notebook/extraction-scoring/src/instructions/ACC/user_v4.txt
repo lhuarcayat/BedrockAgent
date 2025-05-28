@@ -22,30 +22,33 @@ Extract company data from the PDF document following these strict guidelines:
 {
   "path": "$pdf_path",
   "result": {
-    "companyName": "",
+    "companyName": "(extracted legal name)",
     "documentType": "Equity Composition",
-    "taxId": "",
-    "country": "",
+    "taxId": "(validated tax ID)",
+    "country": "(detected country)",
     "identificationDetails": {
-      "source": "",
-      "indicators": [],
-      "conflictingSources": {}
+      "source": "text_reference|id_analysis",
+      "indicators": ["..."],
+      "conflictingSources": {"source_type": "value"} // if conflicts
     },
     "relatedParties": [
+      // PERSON_ID match:
       {
-        "firstName": "",
-        "lastName": "",
-        "identificationType": "",
-        "identificationNumber": "",
-        "relationshipType": "",
-        "participationPercentage": "",
-        "timeFound": 1
+        "firstName": "...",
+        "lastName": "...",
+        "identificationType": "(validated)",
+        "identificationNumber": "...",
+        "relationshipType": "...",
+        "participationPercentage": "...",
+        "timeFound": 1,
+        "job": "(if present)"
       },
+      // COMPANY_ID match:
       {
-        "companyName": "",
-        "identificationType": "",
-        "identificationNumber": "",
-        "relationshipType": ""
+        "companyName": "...",
+        "identificationType": "(validated)",
+        "identificationNumber": "...",
+        "relationshipType": "..."
       }
     ]
   },
@@ -55,4 +58,4 @@ Extract company data from the PDF document following these strict guidelines:
 }
 ```
 
-Only return the data collected instead of the examples. Think step-by-step to ensure accurate extraction and proper JSON formatting.
+Think step-by-step and Do NOT include examples or commentary. Return only valid JSON matching the schema.
