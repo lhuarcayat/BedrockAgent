@@ -16,7 +16,8 @@
       "type": "number"
     },
     "documentType": {
-      "type": "string"
+      "type": "string",
+      "description": "Type of document, (NIT, RUC, RUT, etc)"
     },
     "taxId": {
       "type": "string",
@@ -85,15 +86,10 @@
           "type": "string",
           "pattern": "^[0-9A-Za-z.\\-]+$"
         },
-        "relationshipType": { "type": "string" },
-        "participationPercentage": {
-          "type": "string",
-          "pattern": "^[0-9]+(\\.[0-9]+)?$"
-        }
+        "relationshipType": { "type": "string" }
       },
       "required": [
-        "relationshipType",
-        "participationPercentage"
+        "relationshipType"
       ],
       "additionalProperties": false
     },
