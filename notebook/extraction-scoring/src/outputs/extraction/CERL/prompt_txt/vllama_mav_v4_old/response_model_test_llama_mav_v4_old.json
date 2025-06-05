@@ -1,0 +1,33 @@
+{
+  "ResponseMetadata": {
+    "RequestId": "7bd3796a-5c2a-44dc-a19d-a50eb41c8055",
+    "HTTPStatusCode": 200,
+    "HTTPHeaders": {
+      "date": "Tue, 03 Jun 2025 20:33:07 GMT",
+      "content-type": "application/json",
+      "content-length": "5035",
+      "connection": "keep-alive",
+      "x-amzn-requestid": "7bd3796a-5c2a-44dc-a19d-a50eb41c8055"
+    },
+    "RetryAttempts": 0
+  },
+  "output": {
+    "message": {
+      "role": "assistant",
+      "content": [
+        {
+          "text": "To extract the required data from the provided document, I will follow the given guidelines step by step.\n\n1. **Count the total number of pages in the document**: The document has 6 pages.\n\n2. **Analyze the document structure to identify key sections**: The document is a certificate of existence and legal representation issued by the Chamber of Commerce of Bogotá. It contains information about the company \"GEOKINETICS INTERNATIONAL, INC.\" including its registration details, address, legal representatives, and other related parties.\n\n3. **Extract company information systematically**:\n   - **Company Name**: \"GEOKINETICS INTERNATIONAL, INC.\"\n   - **Company Type**: The document indicates it's a \"SUCURSAL\" (branch) of a foreign company, suggesting its type is related to a foreign corporation's branch in Colombia.\n   - **Country**: Colombia, as indicated by the Chamber of Commerce of Bogotá issuing the certificate.\n   - **Tax Id**: \"860006152-8\"\n   - **Main Address**: \"CALLE 100 N. 19 - 54 OFICINA 604, BOGOTA D.C.\"\n   - **Incorporation Date**: The initial registration date is \"28 DE ABRIL DE 1972\" (1972-04-28).\n   - **Company Duration**: The document states the company's duration is \"HASTA EL 4 DE FEBRERO DE 2462\" (until February 4, 2462), which translates to 2022-02-04 + 440 years. However, the correct interpretation is that it was initially registered on February 4, 1963, and the duration is until February 4, 2462. The incorporation date relevant to the Colombian registration is February 21, 1963.\n   - **Registration Number**: \"C0018259\"\n   - **Size**: Not explicitly mentioned.\n\n4. **Process related parties one by one**:\n   - **Jorge Enrique Rodriguez Rojas**: \"APODERADO GENERAL PRINCIPAL\" (General Principal Attorney-in-fact), C.C. 17448874.\n   - **Narciso Manuel Chiquillo Conde**: \"PRIMER SUPLENTE DEL APODERADO GENERAL PRINCIPAL\" (First Alternate of the General Principal Attorney-in-fact), C.C. 17124736.\n   - **Jose Manuel Tamayo Olarte**: \"SEGUNDO SUPLENTE DEL APODERADO GENERAL PRINCIPAL\" (Second Alternate of the General Principal Attorney-in-fact), C.C. 19303534.\n   - **Edwin Rene Vargas Salgado**: \"REVISOR FISCAL SUPLENTE\" (Alternate Statutory Auditor).\n   - **ERNST & YOUNG AUDIT LTDA**: \"REVISOR FISCAL\" (Statutory Auditor), NIT 8600588905.\n   - **Buridiana Manriqa Falla Montealegre**: \"REVISOR FISCAL PRINCIPAL\" (Principal Statutory Auditor), C.C. 3637389.\n\n5. **Validate the draft JSON against schema requirements**:\n   - Ensure all required fields are present and correctly formatted.\n   - Dates are in YYYY-MM-DD format.\n   - Tax Id matches the pattern.\n\nGiven the information and following the required JSON format, here is the extracted data:\n\n```json\n{\n  \"companyName\": \"GEOKINETICS INTERNATIONAL, INC.\",\n  \"companyType\": \"Sucursal Extranjera\",\n  \"country\": \"Colombia\",\n  \"document_pages\": 6,\n  \"documentType\": \"NIT\",\n  \"taxId\": \"860006152-8\",\n  \"mainAddress\": \"Calle 100 N. 19 - 54 Oficina 604 - Municipio de Bogota D.C.\",\n  \"incorporationDate\": \"1963-02-21\",\n  \"companyDuration\": \"2462-02-04\",\n  \"registrationNumber\": \"C0018259\",\n  \"size\": \"\",\n  \"relatedParties\": [\n    {\n      \"firstName\": \"Jorge Enrique\",\n      \"lastName\": \"Rodriguez Rojas\",\n      \"identificationType\": \"C.C.\",\n      \"identificationNumber\": \"17448874\",\n      \"relationshipType\": \"Apoderado General Principal\"\n    },\n    {\n      \"firstName\": \"Narciso Manuel\",\n      \"lastName\": \"Chiquillo Conde\",\n      \"identificationType\": \"C.C.\",\n      \"identificationNumber\": \"17124736\",\n      \"relationshipType\": \"Primer Suplente del Apoderado General Principal\"\n    },\n    {\n      \"firstName\": \"Jose Manuel\",\n      \"lastName\": \"Tamayo Olarte\",\n      \"identificationType\": \"C.C.\",\n      \"identificationNumber\": \"19303534\",\n      \"relationshipType\": \"Segundo Suplente del Apoderado General Principal\"\n    },\n    {\n      \"firstName\": \"Edwin Rene\",\n      \"lastName\": \"Vargas Salgado\",\n      \"identificationType\": \"\",\n      \"identificationNumber\": \"\",\n      \"relationshipType\": \"Revisor Fiscal Suplente\"\n    },\n    {\n      \"companyName\": \"ERNST & YOUNG AUDIT LTDA\",\n      \"identificationType\": \"N.I.T.\",\n      \"identificationNumber\": \"8600588905\",\n      \"relationshipType\": \"Revisor Fiscal\"\n    },\n    {\n      \"firstName\": \"Buridiana Manriqa\",\n      \"lastName\": \"Falla Montealegre\",\n      \"identificationType\": \"C.C.\",\n      \"identificationNumber\": \"3637389\",\n      \"relationshipType\": \"Revisor Fiscal Principal\"\n    }\n  ],\n  \"embargoes\": \"\",\n  \"liquidations\": \"\",\n  \"documentIssueDate\": \"2009-04-16\",\n  \"lastRegistrationRenewalDate\": \"\"\n}\n```"
+        }
+      ]
+    }
+  },
+  "stopReason": "end_turn",
+  "usage": {
+    "inputTokens": 18436,
+    "outputTokens": 1216,
+    "totalTokens": 19652
+  },
+  "metrics": {
+    "latencyMs": 6801
+  }
+}

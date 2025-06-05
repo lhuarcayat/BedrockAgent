@@ -1,0 +1,33 @@
+{
+  "ResponseMetadata": {
+    "RequestId": "64dcebe7-e3a2-4de0-b16b-cc112a95b0ad",
+    "HTTPStatusCode": 200,
+    "HTTPHeaders": {
+      "date": "Wed, 04 Jun 2025 17:42:45 GMT",
+      "content-type": "application/json",
+      "content-length": "5244",
+      "connection": "keep-alive",
+      "x-amzn-requestid": "64dcebe7-e3a2-4de0-b16b-cc112a95b0ad"
+    },
+    "RetryAttempts": 0
+  },
+  "output": {
+    "message": {
+      "role": "assistant",
+      "content": [
+        {
+          "text": "Here's the step-by-step reasoning for extracting the company data from the provided JSON document:\n\n1. **Generating the JSON Output**: The output will be a JSON object with the required fields.\n\n2. **Defining Data Mapping**: Based on the provided schema, the data mapping is as follows:\n   - companyName: Extract from the text as it appears.\n   - companyType: Extract from the text as it appears.\n   - country: Extract from the text as it appears or infer from the document format.\n   - document_pages: Count the total number of pages in the document.\n   - documentType: Extract from the text as it appears.\n   - taxId: Extract from the text following the pattern ^[0-9.\\-]+$.\n   - mainAddress: Extract and format as \"[Primary Address] - [Type] de [Name]\".\n   - incorporationDate: Extract and convert to YYYY-MM-DD format.\n   - companyDuration: Extract and convert to YYYY-MM-DD format if a specific date is provided.\n   - registrationNumber: Extract from the text as it appears.\n   - size: Extract from the \"Tamaño de la empresa\" section.\n   - relatedParties: Extract each occurrence separately with complete information.\n   - embargoes: Extract from the text as it appears.\n   - liquidations: Extract from the text as it appears.\n   - documentIssueDate: Extract and convert to YYYY-MM-DD format.\n   - lastRegistrationRenewalDate: Extract and convert to YYYY-MM-DD format.\n\n3. **Defining the Data Extraction**: The data extraction will be done by analyzing the document text and extracting the required fields.\n\n4. **Refining Data Extraction**: The extracted data will be refined by converting dates to YYYY-MM-DD format, formatting addresses, and handling anonymized data.\n\n5. **Extracting and Mapping Data**: The extracted data will be mapped to the corresponding fields in the output JSON.\n\n6. **Extracting Related Parties**: Each related party occurrence will be extracted separately with complete information.\n\n7. **Extracting & Refining the Data**: The extracted data will be refined by converting dates to YYYY-MM-DD format, formatting addresses, and handling anonymized data.\n\n8. **Refining Data Accuracy**: The extracted data will be verified against the schema to ensure accuracy.\n\n9. **Extracting and Finalizing Data**: The extracted data will be finalized by verifying against the schema and ensuring all required fields are present.\n\n10. **Constructing the Final JSON**: The final JSON will be constructed with the extracted and refined data.\n\nBased on the provided document, the extracted data is as follows:\n\n```json\n{\n  \"path\": \"../../shared/file_examples/CERL/860006752/22_CamCom_2020-02-28.pdf\",\n  \"result\": {\n    \"companyName\": \"GRANT GEOPHYSICAL (INT'L) INC.\",\n    \"companyType\": \"Sociedad por Acciones Simplificada\",\n    \"country\": \"COLOMBIA\",\n    \"document_pages\": 6,\n    \"documentType\": \"NIT\",\n    \"taxId\": \"860006152-8\",\n    \"mainAddress\": \"CALLE 100N. 19 - 54 OFICINA 604, BOGOTA D.C. - Municipio de Bogotá\",\n    \"incorporationDate\": \"1963-02-04\",\n    \"companyDuration\": \"2462-02-04\",\n    \"registrationNumber\": \"0018259\",\n    \"size\": \"\",\n    \"relatedParties\": [\n      {\n        \"firstName\": \"JORGE ENRIQUE\",\n        \"lastName\": \"RODRIGUEZ ROJAS\",\n        \"identificationType\": \"C.C.\",\n        \"identificationNumber\": \"000000017448474\",\n        \"relationshipType\": \"REPRESENTANTE LEGAL\"\n      },\n      {\n        \"firstName\": \"NARCISO MANUEL\",\n        \"lastName\": \"CHIQUILLO CONDE\",\n        \"identificationType\": \"C.C.\",\n        \"identificationNumber\": \"000000017124736\",\n        \"relationshipType\": \"REPRESENTANTE LEGAL\"\n      },\n      {\n        \"firstName\": \"VICTOR URCICIO\",\n        \"lastName\": \"GOMEZ GUTIERREZ\",\n        \"identificationType\": \"C.C.\",\n        \"identificationNumber\": \"80414776\",\n        \"relationshipType\": \"REPRESENTANTE LEGAL\"\n      },\n      {\n        \"firstName\": \"RAFAEL CASILLO\",\n        \"lastName\": \"CHARRY\",\n        \"identificationType\": \"C.C.\",\n        \"identificationNumber\": \"79370170\",\n        \"relationshipType\": \"REPRESENTANTE LEGAL\"\n      },\n      {\n        \"firstName\": \"ERNST & YOUNG AUDIT\",\n        \"lastName\": \"\",\n        \"identificationType\": \"\",\n        \"identificationNumber\": \"0000008600C88905\",\n        \"relationshipType\": \"REVISOR FISCAL\"\n      },\n      {\n        \"firstName\": \"FALLA MONTALEASEGRA\",\n        \"lastName\": \"BUITRAGO\",\n        \"identificationType\": \"C.C.\",\n        \"identificationNumber\": \"000000036337389\",\n        \"relationshipType\": \"REVISOR FISCAL\"\n      }\n    ],\n    \"embargoes\": \"\",\n    \"liquidations\": \"\",\n    \"documentIssueDate\": \"\",\n    \"lastRegistrationRenewalDate\": \"\"\n  },\n  \"document_type\": \"company\",\n  \"document_number\": \"860006752\",\n  \"category\": \"CERL\"\n}\n```\n\nNote that some fields are empty as they were not found in the provided document."
+        }
+      ]
+    }
+  },
+  "stopReason": "end_turn",
+  "usage": {
+    "inputTokens": 19164,
+    "outputTokens": 1170,
+    "totalTokens": 20334
+  },
+  "metrics": {
+    "latencyMs": 26710
+  }
+}

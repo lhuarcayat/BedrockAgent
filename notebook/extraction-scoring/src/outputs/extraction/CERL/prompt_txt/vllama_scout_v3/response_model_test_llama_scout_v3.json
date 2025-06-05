@@ -1,0 +1,33 @@
+{
+  "ResponseMetadata": {
+    "RequestId": "ed7d18de-70be-445d-a40f-7c6ba692474c",
+    "HTTPStatusCode": 200,
+    "HTTPHeaders": {
+      "date": "Wed, 04 Jun 2025 16:50:41 GMT",
+      "content-type": "application/json",
+      "content-length": "3318",
+      "connection": "keep-alive",
+      "x-amzn-requestid": "ed7d18de-70be-445d-a40f-7c6ba692474c"
+    },
+    "RetryAttempts": 0
+  },
+  "output": {
+    "message": {
+      "role": "assistant",
+      "content": [
+        {
+          "text": "1. **Document Analysis**:\n   - The document provided is a PDF text extracted from a Colombian company registration document.\n   - It contains information about a company named \"GEOINETICS INTERNATIONAL, INC.\" with tax ID \"860006152-8\".\n   - The document is 6 pages long.\n\n2. **Company Information Extraction**:\n   - **Company Name**: GEOINETICS INTERNATIONAL, INC.\n   - **Company Type**: Not explicitly mentioned, but it appears to be a foreign company (Sucursal Extranjera).\n   - **Country**: Colombia (based on the document context and mentions of \"Cámara de Comercio de Bogotá\").\n   - **Tax ID**: 860006152-8\n   - **Document Type**: Certificate of Existence and Legal Representation.\n\n3. **Address Composition**:\n   - **Primary Address**: Calle 100 N. 19 - 54 Oficina 604, Bogotá D.C.\n   - **District/Municipio**: Bogotá D.C.\n\n4. **Date Normalization**:\n   - **Incorporation Date**: Not explicitly mentioned.\n   - **Document Issue Date**: 2009-04-01 (16 de Abril de 2009).\n   - **Company Duration**: Until February 4, 2462.\n\n5. **Registration Details**:\n   - **Registration Number**: Not explicitly mentioned.\n\n6. **Related Parties Handling**:\n   - **JORGE ENRIQUE RODRIGUEZ ROJAS**, C.C. 000000017144874, Representante Legal Principal.\n   - **NARCISO MANUEL TAMAYO OLARTE**, C.C. 000000019303534, Primer Suplente del Apoderado General Principal.\n   - **TAMAYO OLARTE JOSE MANUEL**, C.C. 000000019303534, Segundo Suplente de Apoderado General Principal.\n\n7. **Validation and Corrections**:\n   - Verify that all required fields are present and correctly formatted.\n   - Ensure tax ID matches the required pattern.\n\nHere is the final JSON:\n\n```json\n{\n  \"companyName\": \"GEOINETICS INTERNATIONAL, INC.\",\n  \"companyType\": \"Sucursal Extranjera\",\n  \"country\": \"Colombia\",\n  \"document_pages\": 6,\n  \"documentType\": \"Certificate of Existence and Legal Representation\",\n  \"taxId\": \"860006152-8\",\n  \"mainAddress\": \"Calle 100 N. 19 - 54 Oficina 604, Bogotá D.C.\",\n  \"incorporationDate\": \"\",\n  \"companyDuration\": \"2462-02-04\",\n  \"registrationNumber\": \"\",\n  \"size\": \"\",\n  \"relatedParties\": [\n    {\n      \"firstName\": \"JORGE ENRIQUE\",\n      \"lastName\": \"RODRIGUEZ ROJAS\",\n      \"identificationType\": \"C.C.\",\n      \"identificationNumber\": \"000000017144874\",\n      \"relationshipType\": \"Representante Legal Principal\"\n    },\n    {\n      \"firstName\": \"NARCISO MANUEL\",\n      \"lastName\": \"TAMAYO OLARTE\",\n      \"identificationType\": \"C.C.\",\n      \"identificationNumber\": \"000000019303534\",\n      \"relationshipType\": \"Primer Suplente del Apoderado General Principal\"\n    },\n    {\n      \"firstName\": \"TAMAYO OLARTE\",\n      \"lastName\": \"JOSE MANUEL\",\n      \"identificationType\": \"C.C.\",\n      \"identificationNumber\": \"000000019303534\",\n      \"relationshipType\": \"Segundo Suplente de Apoderado General Principal\"\n    }\n  ],\n  \"embargoes\": \"\",\n  \"liquidations\": \"\",\n  \"documentIssueDate\": \"2009-04-16\",\n  \"lastRegistrationRenewalDate\": \"\"\n}\n```"
+        }
+      ]
+    }
+  },
+  "stopReason": "end_turn",
+  "usage": {
+    "inputTokens": 18394,
+    "outputTokens": 796,
+    "totalTokens": 19190
+  },
+  "metrics": {
+    "latencyMs": 11541
+  }
+}

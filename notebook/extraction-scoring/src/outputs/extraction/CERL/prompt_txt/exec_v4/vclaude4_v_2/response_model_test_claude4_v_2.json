@@ -1,0 +1,35 @@
+{
+  "ResponseMetadata": {
+    "RequestId": "ca7a824c-787f-4008-a3ff-009ae0e13148",
+    "HTTPStatusCode": 200,
+    "HTTPHeaders": {
+      "date": "Wed, 04 Jun 2025 18:01:39 GMT",
+      "content-type": "application/json",
+      "content-length": "5843",
+      "connection": "keep-alive",
+      "x-amzn-requestid": "ca7a824c-787f-4008-a3ff-009ae0e13148"
+    },
+    "RetryAttempts": 0
+  },
+  "output": {
+    "message": {
+      "role": "assistant",
+      "content": [
+        {
+          "text": "I'll analyze this Colombian company registration document step by step.\n\n## Step-by-Step Analysis\n\n**0. Count pages manually by analyzing document structure:**\nLooking at the document text, I can see page markers \"HOJA : 1 DE 6\", \"HOJA:2DE\", \"HOJA : 3 DE\", \"HOJA : 4 DE\", \"HOJA i 5 DE\", and \"HOJA : 6 DE 6\". This indicates 6 pages total.\n\n**1. Generating the JSON Output:**\nThis is a Colombian Chamber of Commerce certificate (Certificado de Existencia y Representación Legal) for a foreign branch office.\n\n**2. Defining Data Mapping:**\n- Company: GEOKINET1CS INTERNATIONAL, INC (foreign branch in Colombia)\n- Document type: NIT (Colombian tax identification)\n- Country: Colombia (branch location)\n\n**3. Defining the Data Extraction:**\n- Tax ID: 860006152-8\n- Address: CALLE 100N. 19 - 54 OFICINA 604, BOGOTA D.C.\n- Registration number: C0018259\n\n**4. Refining Data Extraction:**\n- Incorporation date: February 4, 1963 (original establishment)\n- Company duration: Shows \"2462\" which is clearly an OCR error - should be \"2062\"\n- Document issue date: April 16, 2009\n\n**5. Extracting and Mapping Data:**\n- Company type: Sucursal Extranjera (Foreign Branch)\n- Size: Not explicitly mentioned in the document\n- Capital assigned: $671,400,210.00\n\n**6. Extracting Related Parties:**\nScanning all pages for related parties:\n- Jorge Enrique Rodriguez Rojas (Apoderado General Principal)\n- Narciso Manuel Chiquillo Conde (Primer Suplente del Apoderado General Principal)\n- Jose Manuel Tamayo Olarte (Segundo Suplente del Apoderado General Principal)\n- Victor Mauricio Gomez Gutierrez (Apoderado)\n- Rafael Castillo Charry (Apoderado)\n- Ernst & Young Audit Ltda (Revisor Fiscal)\n- Edwin René Vargas Salgado (Revisor Fiscal Suplente)\n- Ruth Maritza Falla Montealegre (Revisor Fiscal Principal)\n\n**7. Extracting & Refining the Data:**\n- Company duration correction: \"2462\" → \"2062\" (OCR error correction)\n- Confidence reduced to 60 for companyDuration due to correction\n\n**8. Refining Data Accuracy:**\n- All dates converted to YYYY-MM-DD format\n- Tax ID follows required pattern\n- Address properly formatted\n\n**9. Extracting and Finalizing Data:**\n- No embargoes or liquidations mentioned\n- Last registration renewal not explicitly stated\n\n**10. Constructing the Final JSON:**\n\n```json\n{\n  \"path\": \"document.pdf\",\n  \"result\": {\n    \"companyName\": \"GEOKINETICS INTERNATIONAL, INC\",\n    \"companyType\": \"Sucursal Extranjera\",\n    \"country\": \"Colombia\",\n    \"document_pages\": 6,\n    \"documentType\": \"NIT\",\n    \"taxId\": \"860006152-8\",\n    \"mainAddress\": \"CALLE 100N. 19 - 54 OFICINA 604, BOGOTA D.C.\",\n    \"incorporationDate\": \"1963-02-04\",\n    \"companyDuration\": \"2062-02-04\",\n    \"registrationNumber\": \"C0018259\",\n    \"size\": \"\",\n    \"relatedParties\": [\n      {\n        \"firstName\": \"Jorge Enrique\",\n        \"lastName\": \"Rodriguez Rojas\",\n        \"identificationType\": \"C.C.\",\n        \"identificationNumber\": \"000000017144874\",\n        \"relationshipType\": \"Apoderado General Principal\"\n      },\n      {\n        \"firstName\": \"Narciso Manuel\",\n        \"lastName\": \"Chiquillo Conde\",\n        \"identificationType\": \"C.C.\",\n        \"identificationNumber\": \"000000017124736\",\n        \"relationshipType\": \"Primer Suplente del Apoderado General Principal\"\n      },\n      {\n        \"firstName\": \"Jose Manuel\",\n        \"lastName\": \"Tamayo Olarte\",\n        \"identificationType\": \"C.C.\",\n        \"identificationNumber\": \"000000019303534\",\n        \"relationshipType\": \"Segundo Suplente del Apoderado General Principal\"\n      },\n      {\n        \"firstName\": \"Victor Mauricio\",\n        \"lastName\": \"Gomez Gutierrez\",\n        \"identificationType\": \"C.C.\",\n        \"identificationNumber\": \"80.414.776\",\n        \"relationshipType\": \"Apoderado\"\n      },\n      {\n        \"firstName\": \"Rafael\",\n        \"lastName\": \"Castillo Charry\",\n        \"identificationType\": \"C.C.\",\n        \"identificationNumber\": \"79370170\",\n        \"relationshipType\": \"Apoderado\"\n      },\n      {\n        \"companyName\": \"Ernst & Young Audit Ltda\",\n        \"identificationType\": \"N.I.T.\",\n        \"identificationNumber\": \"860008905\",\n        \"relationshipType\": \"Revisor Fiscal\"\n      },\n      {\n        \"firstName\": \"Edwin René\",\n        \"lastName\": \"Vargas Salgado\",\n        \"identificationType\": \"C.C.\",\n        \"identificationNumber\": \"000000079791291\",\n        \"relationshipType\": \"Revisor Fiscal Suplente\"\n      },\n      {\n        \"firstName\": \"Ruth Maritza\",\n        \"lastName\": \"Falla Montealegre\",\n        \"identificationType\": \"C.C.\",\n        \"identificationNumber\": \"000000036317389\",\n        \"relationshipType\": \"Revisor Fiscal Principal\"\n      }\n    ],\n    \"embargoes\": \"\",\n    \"liquidations\": \"\",\n    \"documentIssueDate\": \"2009-04-16\",\n    \"lastRegistrationRenewalDate\": \"\"\n  },\n  \"confidenceScores\": {\n    \"companyName\": 95,\n    \"companyType\": 90,\n    \"country\": 100,\n    \"document_pages\": 100,\n    \"taxId\": 100,\n    \"mainAddress\": 90,\n    \"incorporationDate\": 85,\n    \"companyDuration\": 60,\n    \"registrationNumber\": 95,\n    \"size\": 70,\n    \"relatedParties\": 90\n  },\n  \"document_type\": \"company\",\n  \"document_number\": \"860006152\",\n  \"category\": \"CERL\"\n}\n```"
+        }
+      ]
+    }
+  },
+  "stopReason": "end_turn",
+  "usage": {
+    "inputTokens": 23923,
+    "outputTokens": 1656,
+    "totalTokens": 25579,
+    "cacheReadInputTokens": 0,
+    "cacheWriteInputTokens": 0
+  },
+  "metrics": {
+    "latencyMs": 36690
+  }
+}

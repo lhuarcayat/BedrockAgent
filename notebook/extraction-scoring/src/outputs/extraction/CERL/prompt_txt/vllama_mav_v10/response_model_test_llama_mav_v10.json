@@ -1,0 +1,33 @@
+{
+  "ResponseMetadata": {
+    "RequestId": "7544cdc3-b762-4582-9c1f-d038641d75da",
+    "HTTPStatusCode": 200,
+    "HTTPHeaders": {
+      "date": "Wed, 04 Jun 2025 16:55:53 GMT",
+      "content-type": "application/json",
+      "content-length": "5595",
+      "connection": "keep-alive",
+      "x-amzn-requestid": "7544cdc3-b762-4582-9c1f-d038641d75da"
+    },
+    "RetryAttempts": 0
+  },
+  "output": {
+    "message": {
+      "role": "assistant",
+      "content": [
+        {
+          "text": "To extract the required data from the given document, I will follow the steps outlined in the guidelines.\n\n1. **Count pages manually**: The document content indicates it is 6 pages long, as seen in the page markers (\"HOJA : 1 DE 6\", \"HOJA : 2 DE 6\", etc.).\n\n2. **Analyze the document structure**: The document is a certificate of existence and legal representation from the Chamber of Commerce of Bogota. It contains information about a company named \"GEOINETICS INTERNATIONAL, INC.\".\n\n3. **Extract company information**:\n   - **companyName**: \"GEOINETICS INTERNATIONAL, INC.\"\n   - **companyType**: The document doesn't explicitly state the company type, but it mentions it's a \"SUCURSAL\" (branch) of a foreign company.\n   - **country**: \"Colombia\" (since it's registered in the Chamber of Commerce of Bogota).\n   - **document_pages**: 6\n   - **documentType**: \"CERTIFICADO DE EXISTENCIA Y REPRESENTACIÓN LEGAL\" (Certificate of Existence and Legal Representation).\n   - **taxId**: \"860006152-8\"\n   - **mainAddress**: \"CALLE 100 N. 19 - 54 OFICINA 604, BOGOTA D.C.\"\n   - **incorporationDate**: The original incorporation date is \"28 DE ABRIL DE 1972\", which needs to be converted to YYYY-MM-DD format: \"1972-04-28\".\n   - **companyDuration**: The duration is mentioned as \"HASTA EL 4 DE FEBRERO DE 2462\". This date is implausible and likely an OCR error. Correcting it to a more plausible date (considering it might be a typo and should be in the 21st century), we get \"2062-02-04\". The confidence score for this field will be reduced.\n   - **registrationNumber**: \"C0018259\"\n   - **size**: Not explicitly mentioned.\n\n4. **Process related parties**:\n   - The document lists several related parties with their roles:\n     - **Jorge Enrique Rodriguez Rojas**: \"APODERADO GENERAL PRINCIPAL\" (General Attorney)\n     - **Narciso Manuel Chiquillo Conde**: \"PRIMER SUPLENTE DEL APODERADO GENERAL PRINCIPAL\" (First Alternate of the General Attorney)\n     - **Jose Manuel Tamayo Olarte**: \"SEGUNDO SUPLENTE DEL APODERADO GENERAL PRINCIPAL\" (Second Alternate of the General Attorney)\n     - **Edwin Rene Vargas Salgado**: \"REVISOR FISCAL SUPLENTE\" (Alternate Fiscal Auditor)\n     - **Ernst & Young Audit Ltda**: \"REVISOR FISCAL\" (Fiscal Auditor)\n     - **Burgundy Manizca Fallon Montealegre**: \"REVISOR FISCAL PRINCIPAL\" (Principal Fiscal Auditor)\n\n5. **Validate the draft JSON against schema requirements**:\n   - All required fields are present.\n   - Dates are in YYYY-MM-DD format.\n   - taxId follows the required pattern.\n\n6. **Apply OCR validation and corrections**:\n   - The companyDuration was corrected from \"2462-02-04\" to \"2062-02-04\".\n\n7. **Assign confidence scores**:\n   - **companyName**: 95\n   - **companyType**: 80 (since it's not explicitly stated but can be inferred)\n   - **country**: 100\n   - **document_pages**: 100\n   - **documentType**: 100\n   - **taxId**: 100\n   - **mainAddress**: 90\n   - **incorporationDate**: 90\n   - **companyDuration**: 60 (due to the correction made)\n   - **registrationNumber**: 100\n   - **size**: 0 (since it's not mentioned)\n   - **relatedParties**: 85 (average confidence for the related parties extracted)\n\nHere's the final JSON output:\n\n```json\n{\n  \"companyName\": \"GEOINETICS INTERNATIONAL, INC.\",\n  \"companyType\": \"Sucursal\",\n  \"country\": \"Colombia\",\n  \"document_pages\": 6,\n  \"documentType\": \"CERTIFICADO DE EXISTENCIA Y REPRESENTACIÓN LEGAL\",\n  \"taxId\": \"860006152-8\",\n  \"mainAddress\": \"CALLE 100 N. 19 - 54 OFICINA 604 - Municipio de Bogota D.C.\",\n  \"incorporationDate\": \"1972-04-28\",\n  \"companyDuration\": \"2062-02-04\",\n  \"registrationNumber\": \"C0018259\",\n  \"size\": \"\",\n  \"relatedParties\": [\n    {\n      \"firstName\": \"Jorge Enrique\",\n      \"lastName\": \"Rodriguez Rojas\",\n      \"identificationType\": \"C.C.\",\n      \"identificationNumber\": \"17448874\",\n      \"relationshipType\": \"Apoderado General Principal\"\n    },\n    {\n      \"firstName\": \"Narciso Manuel\",\n      \"lastName\": \"Chiquillo Conde\",\n      \"identificationType\": \"C.C.\",\n      \"identificationNumber\": \"17124736\",\n      \"relationshipType\": \"Primer Suplente del Apoderado General Principal\"\n    },\n    {\n      \"firstName\": \"Jose Manuel\",\n      \"lastName\": \"Tamayo Olarte\",\n      \"identificationType\": \"C.C.\",\n      \"identificationNumber\": \"19303534\",\n      \"relationshipType\": \"Segundo Suplente del Apoderado General Principal\"\n    },\n    {\n      \"companyName\": \"Ernst & Young Audit Ltda\",\n      \"identificationType\": \"N.I.T.\",\n      \"identificationNumber\": \"86005088905\",\n      \"relationshipType\": \"Revisor Fiscal\"\n    },\n    {\n      \"firstName\": \"Burgundy Manizca\",\n      \"lastName\": \"Fallon Montealegre\",\n      \"identificationType\": \"C.C.\",\n      \"identificationNumber\": \"36372389\",\n      \"relationshipType\": \"Revisor Fiscal Principal\"\n    },\n    {\n      \"firstName\": \"Edwin Rene\",\n      \"lastName\": \"Vargas Salgado\",\n      \"identificationType\": \"P.P.\",\n      \"identificationNumber\": \"\",\n      \"relationshipType\": \"Revisor Fiscal Suplente\"\n    }\n  ],\n  \"embargoes\": \"\",\n  \"liquidations\": \"\",\n  \"documentIssueDate\": \"2009-04-16\",\n  \"lastRegistrationRenewalDate\": \"\"\n}\n```"
+        }
+      ]
+    }
+  },
+  "stopReason": "end_turn",
+  "usage": {
+    "inputTokens": 19494,
+    "outputTokens": 1370,
+    "totalTokens": 20864
+  },
+  "metrics": {
+    "latencyMs": 7844
+  }
+}
