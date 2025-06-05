@@ -1,0 +1,99 @@
+Extract company data from the provided JSON document following these detailed guidelines. I'll need you to:
+
+Show me your reasoning in numbered steps (how you decided what to extract, how you handled missing fields, etc.).
+Then output the final JSON with all extracted information.
+
+# Extraction Requirements
+1. Document Processing:
+   - Input is a JSON with document_number, document_type, category, text, and path
+   - Documents may be in Spanish, Portuguese, or English
+   - Preserve original language terms in company names, addresses, and relationship types
+   - IMPORTANT: Always determine page count by analyzing document structure
+   - Look for page markers, section breaks, or other indicators in the document text to identify separate pages
+
+2. Data Normalization:
+   - Convert all dates to YYYY-MM-DD format
+   - Format addresses as complete strings including all available information
+   - Handle anonymized data by preserving asterisks in identificationNumber
+   - Extract personType from the document (either "Persona Natural" or "Persona Jurídica")
+   - Extract verificationDigit which follows the taxId (single digit or 'X', review cell 6)
+   - MANDATORY: Verify that verificationDigit is a single digit (0-9) or 'X'
+   - For country determination:
+     * First look for explicit mentions of country in the document
+     * If not found, use the documentType to infer country using the COMPANY_ID hash table
+     * Example: If documentType is "NIT", infer country as "Colombia"
+
+3. Related Party Handling (OPTIONAL - only if document has multiple pages):
+   - IMPORTANT: Related parties are OPTIONAL and may not be present if only the first page of the document is available
+   - When present, extract each occurrence separately with complete information
+   - Each related party appears in a separate row in the document's tables
+   - Preserve exact relationshipType terminology from document
+   - For each person, carefully extract from the corresponding row:
+     * firstName (first name components (primer nombre y otros nombres) - cells 117/106 and 118/107)
+     * lastName (remaining name components (primer apellido y segundo apellido) - cells 115/104 and 116/105)
+     * identificationType (e.g., "C.C.", "C.E.", "P.P." - cells 111/100)
+     * identificationNumber (as it appears, or "********" if anonymized - cells 112/101)
+     * relationshipType (exact term from document)
+   - For example, row 5 might contain cells numbered 111-123 representing one complete related party
+   - For company entities, use the companyName field instead of firstName/lastName
+   - When a person appears multiple times with different roles, create separate entries for each occurrence
+
+4. Validation:
+   - Compare your extraction against RUT schema.json requirements
+   - Ensure all required fields are present: companyName, documentType, taxId, verificationDigit, personType
+   - Confirm all dates follow YYYY-MM-DD format
+   - Verify taxId follows the pattern ^[0-9.\-]+$$
+   - Ensure verificationDigit is a single character (digit 0-9 or 'X')
+
+5. Confidence Assessment:
+   - Evaluate certainty for each extracted value
+   - Note low-confidence extractions in your reasoning
+   - Include scores in final output as a separate "confidenceScores" object
+   - Assign scores based on:
+     * 90-100: Exact text match found
+     * 70-89: Logical inference from context
+     * Below 70: Requires human review
+   - For relatedParties (if present), provide an overall confidence score for the extraction of all parties
+
+# Required Output
+```json
+{
+  "path": "$pdf_path",
+  "result": {
+    "companyName": "",
+    "country": "",
+    "documentType": "",
+    "taxId": "",
+    "verificationDigit": "",
+    "personType": "",
+    "relatedParties": [
+      {
+        "firstName": "",
+        "lastName": "",
+        "identificationType": "",
+        "identificationNumber": "",
+        "relationshipType": ""
+      }
+    ],
+    "address": "",
+    "documentGenerationDate": ""
+  },
+  "confidenceScores": {
+    "companyName": 95,
+    "documentType": 90,
+    "country": 100,
+    "taxId": 100,
+    "verificationDigit": 95,
+    "personType": 90,
+    "address": 85,
+    "relatedParties": 85
+  },
+  "document_type": "$document_type",
+  "document_number": "$document_number",
+  "category": "$category"
+}
+```
+
+Remember to provide detailed reasoning about how you extracted each field, especially for any fields where you had to make inferences or handle ambiguous data.
+
+Only return the data collected in the required JSON format.
