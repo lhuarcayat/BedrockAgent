@@ -1,0 +1,33 @@
+{
+  "ResponseMetadata": {
+    "RequestId": "01b4b253-f357-4d65-8cb7-8f38bd7b39f2",
+    "HTTPStatusCode": 200,
+    "HTTPHeaders": {
+      "date": "Thu, 05 Jun 2025 03:28:49 GMT",
+      "content-type": "application/json",
+      "content-length": "3376",
+      "connection": "keep-alive",
+      "x-amzn-requestid": "01b4b253-f357-4d65-8cb7-8f38bd7b39f2"
+    },
+    "RetryAttempts": 0
+  },
+  "output": {
+    "message": {
+      "role": "assistant",
+      "content": [
+        {
+          "text": "Here's my step-by-step reasoning for extracting the required information from the provided document:\n\n1. **Document Analysis**:\n   - The document is in Spanish and appears to be a RUT (Registro Único Tributario) document issued by DIAN in Colombia.\n   - The document contains multiple pages, but the essential information is present on the first page.\n\n2. **Company Information Extraction**:\n   - **companyName**: \"FARMACIA INSTITUCIONAL S A S\" (exact match, confidence score: 95)\n   - **documentType**: \"NIT\" (exact match, confidence score: 90)\n   - **taxId**: \"14699744621\" (exact match, confidence score: 100)\n   - **verificationDigit**: \"9\" (exact match, confidence score: 95)\n   - **personType**: \"Persona Jurídica\" (exact match, confidence score: 90)\n\n3. **Country Determination**:\n   - Explicit country mention: \"COLOMBIA\" (confidence score: 100)\n\n4. **Address Composition**:\n   - **address**: \"TV 93  53   32 IN 9, Bogotá D.C.\" (exact match, confidence score: 85)\n\n5. **Date Normalization**:\n   - **documentGenerationDate**: \"2021-02-08\" (converted to YYYY-MM-DD format)\n\n6. **Related Parties Handling**:\n   - Multiple related parties are present on subsequent pages of the document.\n\n7. **Related Parties Extraction**:\n   - Due to the complexity and the number of related parties, I will provide a summarized version of the extraction process:\n     - Multiple related parties are listed with their identification types, numbers, and relationship types.\n\n8. **Validation**:\n   - All required fields are present.\n   - taxId matches the pattern ^[0-9.\\-]+$.\n   - verificationDigit is a single character.\n\n9. **Confidence Assessment**:\n   - I have assigned confidence scores based on the extraction process.\n\nHere is the final JSON output:\n\n```json\n{\n  \"companyName\": \"FARMACIA INSTITUCIONAL S A S\",\n  \"country\": \"COLOMBIA\",\n  \"documentType\": \"NIT\",\n  \"taxId\": \"14699744621\",\n  \"verificationDigit\": \"9\",\n  \"personType\": \"Persona Jurídica\",\n  \"relatedParties\": [\n    {\n      \"identificationType\": \"Cédula de Ciudadanía\",\n      \"identificationNumber\": \"1380230151\",\n      \"relationshipType\": \"REPRS LEGAL PRIN\",\n      \"firstName\": \"TOVAR\",\n      \"lastName\": \"OSORIO LEON ALEXANDER\"\n    },\n    {\n      \"identificationType\": \"Cédula de Ciudadanía\",\n      \"identificationNumber\": \"5205335354\",\n      \"relationshipType\": \"REPRS LEGAL SUPL\",\n      \"firstName\": \"OLGA LUCIA\",\n      \"lastName\": \"RUGE TOVAR\"\n    },\n    {\n      \"identificationType\": \"Cédula de Ciudadanía\",\n      \"identificationNumber\": \"79474741\",\n      \"relationshipType\": \"Revisor Fiscal Principal\",\n      \"firstName\": \"WILIAN ANDRES\",\n      \"lastName\": \"VALDERRAMA ESQUIVEL\"\n    },\n    {\n      \"identificationType\": \"Cédula de Ciudadanía\",\n      \"identificationNumber\": \"13796639005\",\n      \"relationshipType\": \"Contador\",\n      \"firstName\": \"MILCIADES\",\n      \"lastName\": \"TAPIAS MENDIETA\"\n    }\n  ],\n  \"address\": \"TV 93  53   32 IN 9, Bogotá D.C.\",\n  \"documentGenerationDate\": \"2021-02-08\"\n}\n```"
+        }
+      ]
+    }
+  },
+  "stopReason": "end_turn",
+  "usage": {
+    "inputTokens": 10670,
+    "outputTokens": 792,
+    "totalTokens": 11462
+  },
+  "metrics": {
+    "latencyMs": 7244
+  }
+}
