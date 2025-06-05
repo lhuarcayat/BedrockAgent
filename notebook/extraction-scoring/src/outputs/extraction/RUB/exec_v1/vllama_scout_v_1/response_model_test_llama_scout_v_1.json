@@ -1,0 +1,33 @@
+{
+  "ResponseMetadata": {
+    "RequestId": "8b5c3ff4-67cc-4116-8c19-3e1191a9ed79",
+    "HTTPStatusCode": 200,
+    "HTTPHeaders": {
+      "date": "Thu, 05 Jun 2025 16:21:52 GMT",
+      "content-type": "application/json",
+      "content-length": "2399",
+      "connection": "keep-alive",
+      "x-amzn-requestid": "8b5c3ff4-67cc-4116-8c19-3e1191a9ed79"
+    },
+    "RetryAttempts": 0
+  },
+  "output": {
+    "message": {
+      "role": "assistant",
+      "content": [
+        {
+          "text": "Here's my step-by-step reasoning for extracting the required information:\n\n1. **Document Analysis**: The provided document appears to be a Registro Único de Beneficiarios Finales (RUB) document from Colombia. It contains information about a company and its beneficiaries.\n\n2. **Company Information Extraction**:\n   - **companyName**: The company name is \"G4S SECURE SOLUTIONS COLOMBIA S A.\" found in the document.\n   - **documentType**: The document type is \"NIT\" (Número de Identificación Tributaria), which is a Colombian tax identification number.\n   - **taxId**: The tax ID is \"26871006745258\".\n   - **country**: The country is explicitly mentioned as \"Colombia\" in the document.\n\n3. **Related Parties Extraction**:\n   - There is one related party mentioned in the document.\n   - **firstName**: The first name is \"DAVID ISAAC\".\n   - **lastName**: The last name is \"BUCKMAN\".\n   - **identificationType**: The identification type is \"Cédula de Extranjería\" (Foreigner's ID Card).\n   - **identificationNumber**: The identification number is \"19740758\".\n   - **noveltyType**: The novelty type is not explicitly mentioned for this beneficiary.\n   - **participationPercentage**: The participation percentage is not provided.\n\n4. **Date Normalization**:\n   - The date \"28/11/2024\" is normalized to \"2024-11-28\".\n   - The date \"18/07/2023\" is normalized to \"2023-07-18\".\n\n5. **Confidence Scores**:\n   - **companyName**: 95 (exact match found)\n   - **documentType**: 90 (inferred from context)\n   - **country**: 100 (explicitly mentioned)\n   - **taxId**: 100 (exact match found)\n   - **relatedParties**: 85 (most information found, some fields missing)\n\nNow, here's the extracted JSON:\n\n```json\n{\n  \"companyName\": \"G4S SECURE SOLUTIONS COLOMBIA S A.\",\n  \"documentType\": \"NIT\",\n  \"country\": \"Colombia\",\n  \"taxId\": \"26871006745258\",\n  \"relatedParties\": [\n    {\n      \"firstName\": \"DAVID ISAAC\",\n      \"lastName\": \"BUCKMAN\",\n      \"identificationType\": \"Cédula de Extranjería\",\n      \"identificationNumber\": \"19740758\",\n      \"noveltyType\": \"\",\n      \"participationPercentage\": \"\"\n    }\n  ]\n}\n```"
+        }
+      ]
+    }
+  },
+  "stopReason": "end_turn",
+  "usage": {
+    "inputTokens": 10634,
+    "outputTokens": 539,
+    "totalTokens": 11173
+  },
+  "metrics": {
+    "latencyMs": 6407
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "ResponseMetadata": {
+    "RequestId": "400f30e0-1aab-45d4-9098-e71b2595ae5a",
+    "HTTPStatusCode": 200,
+    "HTTPHeaders": {
+      "date": "Thu, 05 Jun 2025 16:25:35 GMT",
+      "content-type": "application/json",
+      "content-length": "2675",
+      "connection": "keep-alive",
+      "x-amzn-requestid": "400f30e0-1aab-45d4-9098-e71b2595ae5a"
+    },
+    "RetryAttempts": 0
+  },
+  "output": {
+    "message": {
+      "role": "assistant",
+      "content": [
+        {
+          "text": "To solve this task, I will follow the provided guidelines and extract the required information from the given document.\n\n1. **Document Analysis**:\n   - The document appears to be a Registro Único de Beneficiarios Finales (RUB) form issued by the DIAN (Dirección de Impuestos y Aduanas Nacionales) in Colombia.\n   - It contains information about the company \"G4S SECURE SOLUTIONS COLOMBIA S A.\" and its beneficiaries.\n\n2. **Company Information Extraction**:\n   - **companyName**: \"G4S SECURE SOLUTIONS COLOMBIA S A.\"\n   - **documentType**: \"NIT\" (Número de Identificación Tributaria), which is a Colombian tax identification number.\n   - **taxId**: \"860013951\" (extracted from the NIT field in the document).\n   - **country**: \"Colombia\" (inferred from the documentType \"NIT\" using the COMPANY_ID hash table).\n\n3. **Related Parties Extraction**:\n   - The document contains a table with information about the beneficiaries.\n   - One related party is identified: \"DAVID ISAAC BUCKMAN\".\n     - **firstName**: \"DAVID ISAAC\"\n     - **lastName**: \"BUCKMAN\"\n     - **identificationType**: \"Cédula de Extranjería\" (which corresponds to a foreigner identification card).\n     - **identificationNumber**: \"19740758\"\n     - **noveltyType**: \"Registro\" (indicating it's a registration).\n     - **participationPercentage**: \"0\" (as there's no explicit percentage mentioned, it defaults to 0).\n\n4. **Data Normalization**:\n   - Dates are already in the YYYY-MM-DD format where applicable.\n   - The address is partially provided but not directly required for the related parties.\n\n5. **Confidence Scoring**:\n   - **companyName**: 100 (exact match)\n   - **documentType**: 100 (exact match)\n   - **taxId**: 100 (exact match)\n   - **country**: 100 (inferred with high confidence from documentType)\n   - **relatedParties**: 90 (extracted with high confidence from the table)\n\nGiven the information and following the required JSON format, the output will be:\n\n```json\n{\n  \"companyName\": \"G4S SECURE SOLUTIONS COLOMBIA S A.\",\n  \"documentType\": \"NIT\",\n  \"taxId\": \"860013951\",\n  \"country\": \"Colombia\",\n  \"relatedParties\": [\n    {\n      \"firstName\": \"DAVID ISAAC\",\n      \"lastName\": \"BUCKMAN\",\n      \"identificationType\": \"Cédula de Extranjería\",\n      \"identificationNumber\": \"19740758\",\n      \"noveltyType\": \"Registro\",\n      \"participationPercentage\": \"0\"\n    }\n  ]\n}\n```<|eot_id|>"
+        }
+      ]
+    }
+  },
+  "stopReason": "end_turn",
+  "usage": {
+    "inputTokens": 10634,
+    "outputTokens": 599,
+    "totalTokens": 11233
+  },
+  "metrics": {
+    "latencyMs": 5079
+  }
+}

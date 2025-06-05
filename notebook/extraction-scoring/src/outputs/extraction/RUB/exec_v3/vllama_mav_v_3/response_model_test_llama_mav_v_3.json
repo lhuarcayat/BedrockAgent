@@ -1,0 +1,33 @@
+{
+  "ResponseMetadata": {
+    "RequestId": "f089fcbc-a0ef-431b-a548-ec7a1a83c263",
+    "HTTPStatusCode": 200,
+    "HTTPHeaders": {
+      "date": "Thu, 05 Jun 2025 16:39:56 GMT",
+      "content-type": "application/json",
+      "content-length": "5175",
+      "connection": "keep-alive",
+      "x-amzn-requestid": "f089fcbc-a0ef-431b-a548-ec7a1a83c263"
+    },
+    "RetryAttempts": 0
+  },
+  "output": {
+    "message": {
+      "role": "assistant",
+      "content": [
+        {
+          "text": "To solve this task, I will follow the provided guidelines and extraction requirements.\n\n1. **Document Processing**: The input document is in PDF format, and its content is provided. The document is in Spanish.\n\n2. **Document Validation**: The document appears to be an official form related to the Registro Único de Beneficiarios (RUB). It contains tabular data that will be processed.\n\n3. **Data Extraction**:\n   - **Company Information**:\n     - `companyName`: \"PAR SERVICIOS INTEGRALES S A\" is extracted from the document.\n     - `documentType`: \"NIT\" is identified as the document type.\n     - `taxId`: \"830067329\" is extracted as the tax identification number.\n     - `country`: \"Colombia\" is inferred based on the document type \"NIT\".\n\n   - **Related Parties**:\n     - The document contains a table with information about related parties.\n     - Each row in the table represents a related party.\n     - The required information for each related party is extracted:\n       - `firstName`\n       - `lastName`\n       - `identificationType`\n       - `identificationNumber`\n       - `noveltyType`\n       - `participationPercentage`\n\n4. **Data Normalization**:\n   - Dates are not present in the required format for related parties, but the date format is not necessary for the related parties information.\n   - The `participationPercentage` is extracted as a numeric value without the percentage symbol.\n\n5. **Related Party Handling**:\n   - Multiple related parties are extracted from the table.\n   - Each related party's information is extracted according to the schema requirements.\n\n6. **Confidence Assessment**:\n   - Confidence scores are assigned based on the certainty of the extracted values.\n   - The confidence scores for the extracted fields are:\n     - `companyName`: 95\n     - `documentType`: 90\n     - `country`: 100\n     - `taxId`: 100\n     - `relatedParties`: 85 (overall confidence score)\n\nHere's the step-by-step extraction:\n\n1. The company name \"PAR SERVICIOS INTEGRALES S A\" is extracted from the document header.\n2. The document type \"NIT\" and tax ID \"830067329\" are identified from the document.\n3. The country \"Colombia\" is inferred based on the document type \"NIT\".\n4. The related parties' information is extracted from the table in the document.\n5. Each related party's details are extracted according to the schema requirements.\n\nThe final JSON output with the extracted information is:\n\n```json\n{\n  \"result\": {\n    \"companyName\": \"PAR SERVICIOS INTEGRALES S A\",\n    \"documentType\": \"NIT\",\n    \"taxId\": \"830067329\",\n    \"country\": \"Colombia\",\n    \"relatedParties\": [\n      {\n        \"firstName\": \"ANDRES LEONARDO\",\n        \"lastName\": \"RODRIGUEZ RAMIREZ\",\n        \"identificationType\": \"Cédula de Ciudadanía\",\n        \"identificationNumber\": \"80074122\",\n        \"noveltyType\": \"Registro\",\n        \"participationPercentage\": \"14.99\"\n      },\n      {\n        \"firstName\": \"LUIS ALBERTO\",\n        \"lastName\": \"RODRIGUEZ SAMUDIO\",\n        \"identificationType\": \"Cédula de Ciudadanía\",\n        \"identificationNumber\": \"19193304\",\n        \"noveltyType\": \"Registro\",\n        \"participationPercentage\": \"29.98\"\n      },\n      {\n        \"firstName\": \"DIANA PAOLA\",\n        \"lastName\": \"RODRIGUEZ RAMIREZ\",\n        \"identificationType\": \"Cédula de Ciudadanía\",\n        \"identificationNumber\": \"52817177\",\n        \"noveltyType\": \"Registro\",\n        \"participationPercentage\": \"14.99\"\n      },\n      {\n        \"firstName\": \"ESTEFANIA\",\n        \"lastName\": \"CORREDOR RODRIGUEZ\",\n        \"identificationType\": \"Cédula de Ciudadanía\",\n        \"identificationNumber\": \"1019026903\",\n        \"noveltyType\": \"Registro\",\n        \"participationPercentage\": \"5.02\"\n      },\n      {\n        \"firstName\": \"LUIS MIGUEL\",\n        \"lastName\": \"ZUBIETA URIBE\",\n        \"identificationType\": \"Cédula de Ciudadanía\",\n        \"identificationNumber\": \"79939362\",\n        \"noveltyType\": \"Registro\",\n        \"participationPercentage\": \"14.99\"\n      },\n      {\n        \"firstName\": \"CAROLINA\",\n        \"lastName\": \"CORREDOR RODRIGUEZ\",\n        \"identificationType\": \"Cédula de Ciudadanía\",\n        \"identificationNumber\": \"52799584\",\n        \"noveltyType\": \"Registro\",\n        \"participationPercentage\": \"5.02\"\n      },\n      {\n        \"firstName\": \"ENRIQUE\",\n        \"lastName\": \"MERCADO IDARRAGA\",\n        \"identificationType\": \"Cédula de Ciudadanía\",\n        \"identificationNumber\": \"80134782\",\n        \"noveltyType\": \"Registro\",\n        \"participationPercentage\": \"10.05\"\n      }\n    ]\n  },\n  \"confidenceScores\": {\n    \"companyName\": 95,\n    \"documentType\": 90,\n    \"taxId\": 100,\n    \"country\": 100,\n    \"relatedParties\": 85\n  }\n}\n```"
+        }
+      ]
+    }
+  },
+  "stopReason": "end_turn",
+  "usage": {
+    "inputTokens": 6987,
+    "outputTokens": 1167,
+    "totalTokens": 8154
+  },
+  "metrics": {
+    "latencyMs": 4972
+  }
+}

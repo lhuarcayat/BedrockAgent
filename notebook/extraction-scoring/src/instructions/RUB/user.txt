@@ -1,0 +1,117 @@
+Extract company data from the provided JSON document following these detailed guidelines. I'll need you to:
+
+Show me your reasoning in numbered steps (how you decided what to extract, how you handled missing fields, etc.).
+Then output the final JSON with all extracted information.
+
+# Extraction Requirements
+1. Document Processing:
+   - Input is a JSON with document_number, document_type, category, text, and path
+   - Documents may be in Spanish, Portuguese, or English
+   - Preserve original language terms in company names, addresses, and relationship types
+   - IMPORTANT: Always determine page count by analyzing document structure
+   - Look for page markers, section breaks, or other indicators in the document text to identify separate pages
+
+2. Document Validation (Tip 0):
+   - Check ONLY for information in the tables, ignore sections that are informational only
+   - If the document doesn't have information or doesn't correspond to an official form:
+     * Only fill the companyName you identify
+     * Add to relatedParties a message: "Necesita revisión manual, documento no corresponde a formulario oficial"
+   - Process ONLY tabular data in vertical layout pages
+   - Ignore all non-tabular content except document headers
+
+3. Data Normalization:
+   - Convert all dates to YYYY-MM-DD format
+   - For the address, check for the value of Distrito and Municipio and add to the mainAddress
+   - Handle anonymized data by preserving asterisks in identificationNumber
+   - For country determination:
+     * First look for explicit mentions of country in the document
+     * If not found, use the documentType to infer country using the COMPANY_ID hash table
+     * Example: If documentType is "NIT", infer country as "Colombia"
+
+4. Related Party Handling:
+   - Extract each related party occurrence separately with complete information
+   - Each related party appears in a separate row in the document's tables
+   - On every page in the table, you can see a number like 1, 2, 3 and so on on the left side to identify a row
+   - Use these row numbers to correctly fill the related parties information
+   - For each person, extract:
+     * firstName (first name components)
+     * lastName (remaining name components)
+     * identificationType (e.g., "1", "4" or name like "CC", "dni")
+     * identificationNumber (as it appears, or "********" if anonymized)
+     * noveltyType (exact term from document, e.g., "Registro", "Actualización")
+     * participationPercentage (percentage value without the % symbol)
+   - When a person appears multiple times with different roles, create separate entries for each occurrence
+   - Always evaluate if the person has more than one name and extract accordingly
+
+5. Country Determination:
+   - Use this hash table if you can't find the city or country in the document:
+   ```text
+   COMPANY_ID = {
+     "Argentina":"CUIT","Bolivia":"NIT","Brasil":"CPF","Brasil":"CNPJ","Chile":"RUT",
+     "Colombia":"NIT","Costa Rica":"CIF","Cuba":"NIF","Ecuador":"RUC","El Salvador":"NIT",
+     "España":"NIF","Guatemala":"NIT","Honduras":"RTN","México":"RFC","Nicaragua":"RUC",
+     "Panamá":"RUC","Paraguay":"RUC","Perú":"RUC","República Dominicana":"RNC",
+     "Uruguay":"RUT","Venezuela":"RIF"
+   }
+   PERSON_ID = {
+     "Brasil":"CI","Bolivia":"CI","Chile":"CI","Costa Rica":"CI","Ecuador":"CI",
+     "Nicaragua":"CI","Uruguay":"CI","Venezuela":"CI","Argentina":"DNI",
+     "España":"DNI","Honduras":"DNI","Perú":"DNI","Colombia":["CC","TI","CE"],
+     "Cuba":"CI","México":["CURP","CRIP"],"Guatemala":"DPI",
+     "El Salvador":"DUI","República Dominicana":"CIE",
+     "Paraguay":"CIC/CI","Panamá":"CIP","Portugal":"CC","Puerto Rico":"ID"
+   }
+   ```
+
+6. Validation:
+   - Compare your extraction against RUB schema.json requirements
+   - Ensure all required fields are present: companyName, documentType, taxId, relatedParties
+   - For relatedParties, ensure each entry has firstName, lastName, identificationType, identificationNumber, noveltyType, and participationPercentage
+   - If the document is not an official form, include only companyName and a message in relatedParties
+
+7. Confidence Assessment:
+   - Evaluate certainty for each extracted value
+   - Note low-confidence extractions in your reasoning
+   - Include scores in final output as a separate "confidenceScores" object
+   - Assign scores based on:
+     * 90-100: Exact text match found
+     * 70-89: Logical inference from context
+     * Below 70: Requires human review
+   - For relatedParties, provide an overall confidence score for the extraction of all parties
+
+# Required Output
+```json
+{
+  "path": "$pdf_path",
+  "result": {
+    "companyName": "",
+    "country": "",
+    "documentType": "",
+    "taxId": "",
+    "relatedParties": [
+      {
+        "firstName": "",
+        "lastName": "",
+        "identificationType": "",
+        "identificationNumber": "",
+        "noveltyType": "",
+        "participationPercentage": ""
+      }
+    ]
+  },
+  "confidenceScores": {
+    "companyName": 95,
+    "documentType": 90,
+    "country": 100,
+    "taxId": 100,
+    "relatedParties": 85
+  },
+  "document_type": "$document_type",
+  "document_number": "$document_number",
+  "category": "$category"
+}
+```
+
+Remember to provide detailed reasoning about how you extracted each field, especially for any fields where you had to make inferences or handle ambiguous data.
+
+Only return the data collected in the required JSON format.
