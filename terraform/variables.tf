@@ -21,3 +21,9 @@ variable "project_prefix" {
   type        = string
   default     = "par-servicios-poc"
 }
+
+variable "cost_component" {
+  description = "cost identificator"
+  type        = string
+  default     = "agents-bedrock"
+}

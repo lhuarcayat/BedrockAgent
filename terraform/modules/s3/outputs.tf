@@ -1,15 +1,25 @@
-output "raw_bucket_arn" {
-  value = aws_s3_bucket.raw.arn
+output "s3_bucket_arn" {
+  value = module.s3_bucket.s3_bucket_arn
 }
 
-output "processed_bucket_arn" {
-  value = aws_s3_bucket.processed.arn
+output "s3_bucket_bucket_domain_name" {
+  value = module.s3_bucket.s3_bucket_bucket_domain_name
 }
 
-output "raw_bucket_name" {
-  value = aws_s3_bucket.raw.bucket
+output "s3_bucket_id" {
+  description = "The name of the bucket"
+  value = module.s3_bucket.s3_bucket_id
 }
 
-output "processed_bucket_name" {
-  value = aws_s3_bucket.processed.bucket
+output "s3_bucket_region" {
+  description = "The AWS region this bucket resides in"
+  value = module.s3_bucket.s3_bucket_region
+}
+
+output "s3_directory_bucket_arn" {
+  value = module.s3_bucket.s3_directory_bucket_arn
+}
+
+output "s3_directory_bucket_name" {
+  value = module.s3_bucket.s3_directory_bucket_name
 }

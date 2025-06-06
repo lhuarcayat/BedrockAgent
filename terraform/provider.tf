@@ -10,12 +10,12 @@ terraform {
 }
 
 provider "aws" {
-  region = "us-east-1"
+  region = "us-east-2"
 
   default_tags {
     tags = {
       Project   = var.service_name
-      Component = "agents-bedrock"
+      CostComponent = var.cost_component
       Environment = var.stage_name
     }
   }
