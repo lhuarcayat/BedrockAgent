@@ -1,0 +1,33 @@
+{
+  "ResponseMetadata": {
+    "RequestId": "c16e202c-c4f6-49f5-8e4e-2cb834e27c0f",
+    "HTTPStatusCode": 200,
+    "HTTPHeaders": {
+      "date": "Thu, 05 Jun 2025 21:52:21 GMT",
+      "content-type": "application/json",
+      "content-length": "1677",
+      "connection": "keep-alive",
+      "x-amzn-requestid": "c16e202c-c4f6-49f5-8e4e-2cb834e27c0f"
+    },
+    "RetryAttempts": 0
+  },
+  "output": {
+    "message": {
+      "role": "assistant",
+      "content": [
+        {
+          "text": "Unfortunately, the provided JSON document does not contain any information that can be used to extract personal identification data.\n\nHere's my step-by-step reasoning:\n\n1. The provided JSON document contains an empty `<document_content>` tag, which suggests that the document has not been processed or does not contain any text.\n2. Without any text or content, it is not possible to extract personal identification data such as names, identification numbers, or country information.\n3. Given the lack of information, I must conclude that the document does not correspond to an official identification document.\n\nBased on this reasoning, I will return the following JSON output:\n\n```json\n{\n  \"path\": \"\",\n  \"result\": {\n    \"firstName\": \"\",\n    \"lastName\": \"\",\n    \"country_issuer\": \"\",\n    \"nationality\": \"\",\n    \"identificationType\": \"\",\n    \"identificationNumber\": \"\",\n    \"message\": \"Necesita revisión manual, documento ilegible\"\n  },\n  \"confidenceScores\": {\n    \"firstName\": 0,\n    \"lastName\": 0,\n    \"country_issuer\": 0,\n    \"nationality\": 0,\n    \"identificationType\": 0,\n    \"identificationNumber\": 0\n  },\n  \"document_type\": \"\",\n  \"document_number\": \"\",\n  \"category\": \"\"\n}\n```\n\nNote that I have assigned a confidence score of 0 to all fields, indicating that no information was extracted. I have also included a message indicating that the document is illegible and requires manual review."
+        }
+      ]
+    }
+  },
+  "stopReason": "end_turn",
+  "usage": {
+    "inputTokens": 3084,
+    "outputTokens": 309,
+    "totalTokens": 3393
+  },
+  "metrics": {
+    "latencyMs": 5789
+  }
+}
