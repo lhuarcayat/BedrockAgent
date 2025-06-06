@@ -1,0 +1,33 @@
+{
+  "ResponseMetadata": {
+    "RequestId": "8ba9185c-5c7b-4d23-8958-78ab139e7a28",
+    "HTTPStatusCode": 200,
+    "HTTPHeaders": {
+      "date": "Thu, 05 Jun 2025 21:47:23 GMT",
+      "content-type": "application/json",
+      "content-length": "1662",
+      "connection": "keep-alive",
+      "x-amzn-requestid": "8ba9185c-5c7b-4d23-8958-78ab139e7a28"
+    },
+    "RetryAttempts": 0
+  },
+  "output": {
+    "message": {
+      "role": "assistant",
+      "content": [
+        {
+          "text": "```json\n{\n  \"document_number\": \"IDD75GVP89V7\",\n  \"document_type\": \"person\",\n  \"category\": \"CECRL\",\n  \"text\": \"BUNDESREPUBLIK DEUTSCHLAND PERSONALAUSWEIS [a] Name/Surname/Nom BETZLER [b] Vorname/Given name/Prénom ANDREAS Geburtsdatum/Date of birth 25.07.1975 DEUTSCH Geburtsort/Place of birth/Lieu de naissance PLETTENBERG Gültig bis/Date of expiry 04.06.2034 111360 Blau 186 cm 05.06.24 STADT LEVERKUSEN Anschrift/Address/Adresse 51375 LEVERKUSEN EINTRACHTSTRABE 86 IDD<<L75GVP89V7<<<<<<<<<<<<<<<< 7507254<3406049D<<2405<<<<<1 BETZLER<<ANDREAS<<<<<<<<<<<<<\",\n  \"path\": \"file_examples/CECRL/IDD75GVP89V7\"\n}\n```\n\nThe document appears to be a German national ID card (Personalausweis) containing personal identification details. The key indicators for classification are:\n\n1. The document contains personal identification information (name, birthdate, nationality) rather than corporate details\n2. The presence of \"BUNDESREPUBLIK DEUTSCHLAND PERSONALAUSWEIS\" confirms it's a citizenship ID\n3. The folder path structure uses \"IDD...\" as the document number\n\nFollowing the classification rules:\n- CECRL is for citizenship ID copies of legal representatives\n- Document type should be \"person\" for CECRL\n- The extracted text contains meaningful personal data\n\nThe path uses the parent folder \"IDD75GVP89V7\" as the document number, and the category path becomes \"file_examples/CECRL/IDD75GVP89V7\" per the formatting instructions."
+        }
+      ]
+    }
+  },
+  "stopReason": "end_turn",
+  "usage": {
+    "inputTokens": 7427,
+    "outputTokens": 476,
+    "totalTokens": 7903
+  },
+  "metrics": {
+    "latencyMs": 19434
+  }
+}
