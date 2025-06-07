@@ -1,6 +1,6 @@
 locals {
   default_memory_size = 1024
-  default_timeout     = 6
+  default_timeout     = 900
   lambda_source_path = [
     {
       path             = var.source_path
