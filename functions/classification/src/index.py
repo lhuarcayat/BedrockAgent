@@ -15,18 +15,20 @@ def handler(event, context):
     """
     try:
         logger.info(f"Received event: {json.dumps(event)}")
-
+        logger.info(f"Received context: {context}")
         # Extract PDF content and folder path from the event
         pdf_content = event.get('pdf_content')
         folder_path = event.get('folder_path')
 
         if not pdf_content or not folder_path:
-            return {
+            error_response = {
                 'statusCode': 400,
                 'body': json.dumps({
                     'error': 'Missing required parameters: pdf_content or folder_path'
                 })
             }
+            logger.error(f"Error response: {error_response}")
+            return error_response
 
         # Decode base64 PDF content if needed
         if isinstance(pdf_content, str):

@@ -106,11 +106,8 @@ variable "patterns_exclude" {
   default     = ["!test_*.py"]
 }
 
-variable "commands" {
-  type        = list(string)
+variable "shared_folder" {
+  type        = string
   description = "List of comands to execute"
-  default     = [
-      "uv pip install --no-compile --target=. --requirement=requirements.txt",
-      ":zip"
-    ]
+  default     = ""
 }

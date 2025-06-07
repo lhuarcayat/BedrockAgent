@@ -1,33 +1,33 @@
 #### SQS ####
 module "sqs" {
-  source       = "./modules/sqs"
+  source         = "./modules/sqs"
   project_prefix = "${var.project_prefix}-extraction-sqs"
 }
 
 #### LAMBA ####
 module "classification_lambda" {
-  source            = "./modules/lambda-wrapper"
-  source_path       = "${path.module}/../functions/classification/src"
-
+  source         = "./modules/lambda-wrapper"
+  source_path    = "${path.module}/../functions/classification/src"
+  shared_folder  = "${path.module}/../functions/shared"
   project_prefix = "${var.project_prefix}-${local.account_id}"
-  function_name = "${var.stage_name}-classification"
-  handler      = "index.handler"
+  function_name  = "${var.stage_name}-classification"
+  handler        = "index.handler"
   environment_variables = {
     S3_ORIGIN_BUCKET = module.filling_desk_bucket.s3_bucket_id
     EXTRACTION_SQS   = module.sqs.extraction_queue_url
-    BEDROCK_MODEL      = var.bedrock_model
-    FALLBACK_MODEL     = var.fallback_model
-    REGION             = var.aws_region
+    BEDROCK_MODEL    = var.bedrock_model
+    FALLBACK_MODEL   = var.fallback_model
+    REGION           = var.aws_region
   }
 }
 
 module "extraction_scoring_lambda" {
-  source       = "./modules/lambda-wrapper"
-  source_path  = "${path.module}/../functions/extraction-scoring/src"
-
+  source         = "./modules/lambda-wrapper"
+  source_path    = "${path.module}/../functions/extraction-scoring/src"
+  shared_folder  = "${path.module}/../functions/shared"
   project_prefix = "${var.project_prefix}-${local.account_id}"
-  function_name = "${var.stage_name}-extraction-scoring"
-  handler      = "index.handler"
+  function_name  = "${var.stage_name}-extraction-scoring"
+  handler        = "index.handler"
   environment_variables = {
     S3_ORIGIN_BUCKET   = module.filling_desk_bucket.s3_bucket_id
     FALLBACK_SQS       = module.sqs.fallback_queue_url
@@ -49,8 +49,8 @@ module "extraction_scoring_lambda" {
 
 data "aws_iam_policy_document" "lambda_policy" {
   statement {
-    effect    = "Allow"
-    actions   = ["s3:*"]
+    effect  = "Allow"
+    actions = ["s3:*"]
     resources = [
       module.filling_desk_bucket.s3_bucket_arn,
       "${module.filling_desk_bucket.s3_bucket_arn}/*",
@@ -69,17 +69,17 @@ data "aws_iam_policy_document" "lambda_policy" {
 #### S3 ####
 
 module "filling_desk_bucket" {
-  source = "./modules/s3"
-  bucket_name = "${var.project_prefix}-${var.stage_name}-filling-desk"
+  source         = "./modules/s3"
+  bucket_name    = "${var.project_prefix}-${var.stage_name}-filling-desk"
   project_prefix = "${var.project_prefix}-${local.account_id}"
-  tags = []
+  tags           = []
 }
 
 module "json-evaluation-results-bucket" {
-  source = "./modules/s3"
-  bucket_name = "${var.project_prefix}-${var.stage_name}-json-evaluation-results"
+  source         = "./modules/s3"
+  bucket_name    = "${var.project_prefix}-${var.stage_name}-json-evaluation-results"
   project_prefix = "${var.project_prefix}-${local.account_id}"
-  tags = []
+  tags           = []
 }
 resource "aws_s3_object" "desk_folders" {
   for_each = toset(local.folder_suffixes)
