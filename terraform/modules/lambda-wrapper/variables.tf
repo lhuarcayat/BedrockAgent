@@ -13,10 +13,21 @@ variable "runtime" {
   default     = "python3.12"
 }
 
-variable "environment" {
-  type        = map(string)
-  description = "Environment variables for Lambda function"
-  default     = {}
+variable "exclude_files" {
+  type        = list(string)
+  description = "List of files to be excluded from deployment"
+  default     = [
+    "tests",
+    "makefile",
+    "README.md",
+    "LICENSE",
+    "requirements.txt",
+    "Dockerfile",
+    ".gitignore",
+    ".gitattributes",
+    ".git/",
+    "!test_*.py"
+    ]
 }
 
 variable "tags" {
@@ -81,4 +92,25 @@ variable "timeout" {
   description = "Timeout in seconds for the Lambda function (overrides default if set)"
   type        = number
   default     = null
+}
+
+variable "pip_requirements" {
+  type        = bool
+  description = "if have to a requirements.txt file for build"
+  default     = false
+}
+
+variable "patterns_exclude" {
+  type        = list(string)
+  description = "List of patterns to exclude from deployment"
+  default     = ["!test_*.py"]
+}
+
+variable "commands" {
+  type        = list(string)
+  description = "List of comands to execute"
+  default     = [
+      "uv pip install --no-compile --target=. --requirement=requirements.txt",
+      ":zip"
+    ]
 }

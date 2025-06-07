@@ -1,8 +1,17 @@
 [env]
 # Automatically create and use a virtual environment in the .venv directory
-_.python.venv = { path = ".venv", create = true }
+_.python.venv = { path = ".venv", create = true}
+
+[tools]
+python = "3.12"
+uv     = "latest"
 
 [tasks.install]
 description = "Install dependencies"
 alias = "i"
 run = "uv pip install -r requirements.txt"
+
+[tasks.dep]
+description = "Install individual dependencies"
+alias = "dep"
+run = "uv pip install PyPDF2 pydantic"

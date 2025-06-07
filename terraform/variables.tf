@@ -1,7 +1,7 @@
 variable "aws_region" {
   description = "AWS region"
   type        = string
-  default     = "us-east-1"
+  default     = "us-east-2"
 }
 
 variable "stage_name" {
@@ -26,4 +26,16 @@ variable "cost_component" {
   description = "cost identificator"
   type        = string
   default     = "agents-bedrock"
+}
+
+variable "bedrock_model" {
+  description = "bedrock model"
+  type        = string
+  default     = "us.amazon.nova-pro-v1:0"
+}
+
+variable "fallback_model" {
+  description = "fallback model"
+  type        = string
+  default     = "us.anthropic.claude-sonnet-4-20250514-v1:0"
 }
