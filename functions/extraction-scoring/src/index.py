@@ -1,9 +1,13 @@
 import json
 import logging
+from shared.helper import load_env
 
 # Configure logger
 logger = logging.getLogger()
 logger.setLevel(logging.INFO)
+
+# Load environment variables
+load_env()
 
 def handler(event, context):
     """
