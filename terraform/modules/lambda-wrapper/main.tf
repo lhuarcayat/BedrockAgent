@@ -12,7 +12,7 @@ module "lambda" {
   # local_existing_package = archive_file.package
 
   environment_variables             = var.environment_variables
-  attach_policy_statements          = var.attach_policy_statements
+  attach_policy_statements          = var.policy_statements != null ? true : false
   policy_statements                 = var.policy_statements
   publish                           = var.publish
   allowed_triggers                  = var.allowed_triggers

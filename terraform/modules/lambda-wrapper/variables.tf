@@ -52,12 +52,6 @@ variable "environment_variables" {
   default     = {}
 }
 
-variable "attach_policy_statements" {
-  description = "Whether to attach policy statements"
-  type        = bool
-  default     = false
-}
-
 variable "policy_statements" {
   description = "IAM policy statements for Lambda permissions"
   type        = any
