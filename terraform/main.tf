@@ -2,14 +2,14 @@
 module "extraction_queue" {
   source = "terraform-aws-modules/sqs/aws"
 
-  name                       = "${var.project_prefix}-extraction-queue"
+  name                       = "${var.project_prefix}-${var.stage_name}-extraction-queue"
   visibility_timeout_seconds = 960
 }
 
 module "fallback_queue" {
   source = "terraform-aws-modules/sqs/aws"
 
-  name                       = "${var.project_prefix}-fallback-queue"
+  name                       = "${var.project_prefix}-${var.stage_name}-fallback-queue"
   visibility_timeout_seconds = 960
 
 }
