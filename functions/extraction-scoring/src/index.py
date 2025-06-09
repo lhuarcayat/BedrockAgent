@@ -2,6 +2,9 @@ import json
 import logging
 import os
 import boto3
+import re
+from pathlib import Path
+from typing import Dict, Any, Tuple
 
 from shared.helper import load_env
 from shared.bedrock_client import create_bedrock_client, set_model_params, converse_with_nova, NovaRequest, parse_extraction_response, create_payload_data_extraction
@@ -27,6 +30,94 @@ REGION = os.environ.get("REGION", "us-east-1")
 FOLDER_PREFIX = os.environ.get("FOLDER_PREFIX")
 # Create clients
 bedrock_client = create_bedrock_client()
+
+def process_document_with_model(
+    model_id: str,
+    req_params: Dict[str, Any],
+    source_key: str,
+    category: str,
+    document_number: str,
+    pdf_path: str
+) -> bool:
+    """
+    Process a document with the specified model and save results to S3.
+
+    Args:
+        model_id: The Bedrock model ID to use
+        req_params: The request parameters for Bedrock
+        source_key: The S3 key of the source PDF
+        category: The document category
+        document_number: The document number
+        pdf_path: The full S3 path to the PDF
+
+    Returns:
+        bool: True if processing was successful, False otherwise
+    """
+    try:
+        # Update model ID in request params
+        req_params["model_id"] = model_id
+
+        # Call Bedrock
+        resp_json = converse_with_nova(NovaRequest(**req_params), bedrock_client)
+        logger.info(f"Received response from Bedrock: {json.dumps(resp_json, indent=2)}")
+
+        # Parse the response
+        meta = parse_extraction_response(resp_json)
+        logger.info(f"Successfully parsed response: {json.dumps(meta, indent=2)}")
+        payload_data = create_payload_data_extraction(meta)
+
+        # Save results to S3
+        save_results_to_s3(resp_json, meta, payload_data, source_key, category, document_number)
+
+        # Log success
+        model_type = "primary" if model_id == BEDROCK_MODEL else "fallback"
+        logger.info(f"Successfully processed document with {model_type} model: {pdf_path}")
+
+        return True
+
+    except Exception as e:
+        logger.error(f"Error processing with model {model_id}: {str(e)}")
+        return False
+
+def save_results_to_s3(
+    resp_json: Dict[str, Any],
+    meta: Dict[str, Any],
+    payload_data: Dict[str, Any],
+    source_key: str,
+    category: str,
+    document_number: str
+) -> None:
+    """
+    Save processing results to S3.
+
+    Args:
+        resp_json: The raw response from Bedrock
+        meta: The extracted metadata
+        payload_data: The processed payload data
+        source_key: The S3 key of the source PDF
+        category: The document category
+        document_number: The document number
+    """
+    # Extract filename from the path to create a unique identifier
+    filename = Path(source_key).name
+    # Remove extension and use as unique identifier
+    file_id = Path(filename).stem
+
+    # Create folder paths
+    processed_folder = f"{FOLDER_PREFIX}/{category}/{document_number}"
+    raw_folder = f"RAW/{category}/{document_number}"
+
+    # Save payload_data to S3 in the processed folder
+    payload_destination_key = f"{processed_folder}/{category}_{document_number}_{file_id}.json"
+    save_to_s3(payload_data, DESTINATION_BUCKET, payload_destination_key)
+
+    # Save raw response to S3 in the RAW folder
+    resp_json_destination_key = f"{raw_folder}/raw_response_{file_id}.json"
+    save_to_s3(resp_json, DESTINATION_BUCKET, resp_json_destination_key)
+
+    # Save meta data to S3 in the RAW folder
+    meta_destination_key = f"{raw_folder}/meta_{file_id}.json"
+    save_to_s3(meta, DESTINATION_BUCKET, meta_destination_key)
 
 def handler(event, context):
     """
@@ -127,48 +218,37 @@ def handler(event, context):
                     "system": system_parameter,
                 }
 
-                try:
-                    resp_json = converse_with_nova(NovaRequest(**req_params), bedrock_client)
+                # Try with primary model first
+                success = process_document_with_model(
+                    model_id=BEDROCK_MODEL,
+                    req_params=req_params,
+                    source_key=source_key,
+                    category=category,
+                    document_number=document_number,
+                    pdf_path=pdf_path
+                )
 
-                    # Parse the response
-                    meta = parse_extraction_response(resp_json)
-                    payload_data = create_payload_data_extraction(meta)
+                # If primary model fails and fallback model is available, try with fallback
+                if not success and FALLBACK_MODEL:
+                    logger.info(f"Trying fallback model: {FALLBACK_MODEL}")
+                    success = process_document_with_model(
+                        model_id=FALLBACK_MODEL,
+                        req_params=req_params,
+                        source_key=source_key,
+                        category=category,
+                        document_number=document_number,
+                        pdf_path=pdf_path
+                    )
 
-                    # Save to S3
-                    destination_key = f"{FOLDER_PREFIX}/{category}/{document_number}/{category}_{document_number}.json"
-                    save_to_s3(payload_data, DESTINATION_BUCKET, destination_key)
-
-                    logger.info(f"Successfully processed document: {pdf_path}")
-
-                except Exception as e:
-                    logger.error(f"Error processing with primary model: {str(e)}")
-
-                    # Try fallback model if available
-                    if FALLBACK_MODEL:
-                        try:
-                            logger.info(f"Trying fallback model: {FALLBACK_MODEL}")
-
-                            # Update model ID and retry
-                            req_params["model_id"] = FALLBACK_MODEL
-                            resp_json = converse_with_nova(NovaRequest(**req_params), bedrock_client)
-
-                            # Parse the response
-                            meta = parse_extraction_response(resp_json)
-                            payload_data = create_payload_data_extraction(meta)
-
-                            # Save to S3
-                            destination_key = f"{category}/{document_number}/{category}_{document_number}.json"
-                            save_to_s3(payload_data, DESTINATION_BUCKET, destination_key)
-
-                            logger.info(f"Successfully processed document with fallback model: {pdf_path}")
-
-                        except Exception as fallback_error:
-                            logger.error(f"Error processing with fallback model: {str(fallback_error)}")
-                            # Send to fallback queue
-                            send_to_fallback_queue_extraction(payload)
-                    else:
-                        # Send to fallback queue
+                    if not success:
+                        # Both models failed, send to fallback queue
+                        logger.error("Both primary and fallback models failed")
                         send_to_fallback_queue_extraction(payload)
+
+                # If primary model failed and no fallback model is available
+                elif not success:
+                    # Send to fallback queue
+                    send_to_fallback_queue_extraction(payload)
 
             except json.JSONDecodeError:
                 logger.warning(f"Non-JSON payload received: {record['body']}")

@@ -72,11 +72,19 @@ Then output the final JSON with all extracted information.
 7. Confidence Assessment:
    - Evaluate certainty for each extracted value
    - Note low-confidence extractions in your reasoning
-   - Include scores in final output as a separate "confidenceScores" object
-   - Assign scores based on:
-     * 90-100: Exact text match found
-     * 70-89: Logical inference from context
-     * Below 70: Requires human review
+   - ALWAYS include scores in final output as a separate "confidenceScores" object
+   - Assign scores based on coverage and match quality, not just presence:
+     * RelatedParties rubric:
+       - Start with 100 × (extracted_parties ÷ detected_candidates)
+       - Subtract 10 points for each missing required field in any entry
+       - Cap at 90 if any names contain obvious OCR noise
+     * For all fields:
+       - 90-100: Complete coverage with high match quality
+       - 70-89: Partial coverage or moderate match quality
+       - Below 70: Significant gaps requiring human review
+   - If you infer that any required party may be missing, set relatedParties score ≤ 70 and explain why
+   - Flag any field with score <70 in your reasoning
+   - Recheck document for low-confidence fields
    - For relatedParties, provide an overall confidence score for the extraction of all parties
 
 # Required Output

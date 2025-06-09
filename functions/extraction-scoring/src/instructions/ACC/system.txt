@@ -171,7 +171,23 @@ Example with conflicting country information:
 
 5) Create a draft of the JSON, with the collected data.
 
-6) Validation checklist:
+6) Confidence Scoring:
+   - Assign scores based on coverage and match quality, not just presence:
+     * RelatedParties rubric:
+       - Start with 100 × (extracted_parties ÷ detected_candidates)
+       - Subtract 10 points for each missing required field in any entry
+       - Cap at 90 if any names contain obvious OCR noise
+     * For all fields:
+       - 90-100: Complete coverage with high match quality
+       - 70-89: Partial coverage or moderate match quality
+       - Below 70: Significant gaps requiring human review
+   - If you infer that any required party may be missing, set relatedParties score ≤ 70 and explain why
+   - Flag any field with score <70 in chain-of-thought
+   - Recheck document for low-confidence fields
+   - Include scores in final output as a separate "confidenceScores" object
+   - IMPORTANT: Always include confidence scores for each extracted field in the final output
+
+7) Validation checklist:
    - Verify all mandatory fields are present:
      * Root level: documentType, taxId, country, relatedParties
      * Person: firstName, lastName, identificationType, identificationNumber

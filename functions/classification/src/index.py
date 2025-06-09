@@ -1,7 +1,7 @@
 import json, base64, logging, os, re, boto3
 from urllib.parse import unquote_plus
 from shared.models import ClassMeta
-from shared.pdf_processor import get_first_pdf_page, create_message
+from shared.pdf_processor import detect_scanned_pdf, get_first_pdf_page, create_message
 from shared.bedrock_client import create_bedrock_client, set_model_params, converse_with_nova, parse_classification, NovaRequest
 from shared.sqs_handler import build_payload, send_to_extraction_queue
 from shared.prompts import get_instructions, add_now_process
@@ -19,6 +19,8 @@ def process_pdf(pdf_bytes, folder_path):
     """
     # Extract the first page of the PDF
     first_page = get_first_pdf_page(pdf_bytes)
+    is_scanned = detect_scanned_pdf(pdf_bytes)
+    logger.info(f"PDF type detected: {'scanned image' if is_scanned else 'has text'}")
 
     # Initialize Bedrock client
     bedrock = create_bedrock_client()

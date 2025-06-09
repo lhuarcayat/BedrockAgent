@@ -71,3 +71,17 @@ def get_first_pdf_page(pdf_bytes):
     except Exception as e:
         logger.error(f"Error extracting first page: {str(e)}")
         return pdf_bytes
+
+def detect_scanned_pdf(pdf_bytes: bytes, text_threshold: int = 20) -> bool:
+    """
+    Returns True if the PDF appears to be a scanned/image‐only PDF.
+    We consider it scanned if no page yields more than text_threshold chars.
+    """
+    reader = PdfReader(io.BytesIO(pdf_bytes))
+    for page in reader.pages:
+        text = page.extract_text() or ""
+        if len(text.strip()) > text_threshold:
+            # Found enough text to call it “generated”
+            return False
+    # No substantial text on any page → likely scanned
+    return True

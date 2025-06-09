@@ -198,8 +198,8 @@ def create_payload_data_extraction(data: Dict[str, Any]) -> Dict[str, Any]:
     """
     # The payload might sit under "result" or at the top level
     payload = data.get("result", data)
-
+    confidence_scores = data.get("confidenceScores", data)
     # Return all fields
     response = {key: value for key, value in payload.items()}
-
+    response["confidenceScores"] = confidence_scores
     return response

@@ -63,17 +63,23 @@ Then output the final JSON with all extracted information.
 6. Confidence Assessment:
    - Evaluate certainty for each extracted value
    - Note low-confidence extractions in your reasoning
-   - Include scores in final output as a separate "confidenceScores" object
-   - Assign scores based on:
-     * 90-100: Exact text match found
-     * 70-89: Logical inference from context
-     * 50-69: Partial extraction from low-quality source
-     * Below 50: Requires human review
+   - ALWAYS include scores in final output as a separate "confidenceScores" object
+   - Assign scores based on coverage and match quality, not just presence:
+     * For personal identification fields:
+       - Start with 100 for perfect matches
+       - Subtract 10 points for each field with partial/inferred data
+       - Cap at 90 if any fields contain obvious OCR noise
+     * For all fields:
+       - 90-100: Complete coverage with high match quality
+       - 70-89: Partial coverage or moderate match quality
+       - Below 70: Significant gaps requiring human review
+   - If you infer that any required field may be missing or incorrect, set its score ≤ 70 and explain why
+   - Flag any field with score <70 in your reasoning
+   - Recheck document for low-confidence fields
    - For image-based documents or poor quality:
      * Maximum score may be limited by document quality
      * Document your reasoning for each score
      * Prioritize extraction attempt over perfect accuracy
-   - Flag any field with score <70 in your chain-of-thought
 
 7. Step-by-Step Extraction Process:
    1. Generate the JSON output structure
