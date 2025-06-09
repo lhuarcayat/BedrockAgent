@@ -56,6 +56,7 @@ def process_pdf(pdf_bytes, folder_path):
     meta_dict = parse_classification(resp_json, pdf_path=folder_path)
     meta = ClassMeta.model_validate(meta_dict)
     payload = build_payload(meta_dict)
+    payload['path'] = folder_path
 
     # Send to extraction queue
     try:
@@ -134,7 +135,6 @@ def handler(event, context):
 
                 # Process the PDF
                 payload = process_pdf(pdf_bytes, folder_path)
-
                 results.append({
                     'key': key,
                     'status': 'success',
