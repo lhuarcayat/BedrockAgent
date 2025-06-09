@@ -55,6 +55,7 @@ module "extraction_scoring_lambda" {
     BEDROCK_MODEL      = var.bedrock_model
     FALLBACK_MODEL     = var.fallback_model
     REGION             = var.aws_region
+    FOLDER_PREFIX      = var.project_prefix
   }
   policy_statements = local.lambda_policy_statements
   allowed_triggers = {
