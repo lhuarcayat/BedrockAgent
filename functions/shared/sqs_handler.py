@@ -54,3 +54,28 @@ def send_to_extraction_queue(payload: Dict[str, Any]) -> Dict[str, Any]:
     except Exception as e:
         logger.error(f"Error sending message to SQS: {str(e)}")
         raise
+
+def send_to_fallback_queue_extraction(payload: Dict[str, Any]) -> None:
+    """
+    Send a message to the fallback SQS queue for extraction.
+
+    Args:
+        payload: The payload to send to the queue
+
+    Returns:
+        None
+    """
+    fallback_sqs = os.environ.get("FALLBACK_SQS")
+    if not fallback_sqs:
+        logger.error("FALLBACK_SQS environment variable not set")
+        return
+
+    try:
+        sqs_client = boto3.client('sqs', region_name=os.environ.get("REGION", "us-east-1"))
+        response = sqs_client.send_message(
+            QueueUrl=fallback_sqs,
+            MessageBody=json.dumps(payload)
+        )
+        logger.info(f"Message sent to fallback SQS: {response['MessageId']}")
+    except Exception as e:
+        logger.error(f"Error sending message to fallback SQS: {str(e)}")

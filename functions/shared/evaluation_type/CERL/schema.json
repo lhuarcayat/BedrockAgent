@@ -1,15 +1,45 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "title": "CompanyParticipationInfo",
+  "title": "Company",
   "type": "object",
   "properties": {
-    "companyName": { "type": "string" },
-    "documentType": { "type": "string" },
+    "companyName": {
+      "type": "string"
+    },
+    "companyType": {
+      "type": "string"
+    },
+    "country" : {
+      "type": "string"
+    },
+    "document_pages" : {
+      "type": "number"
+    },
+    "documentType": {
+      "type": "string",
+      "description": "Type of document, (NIT, RUC, RUT, etc)"
+    },
     "taxId": {
       "type": "string",
       "pattern": "^[0-9.\\-]+$"
     },
-
+    "mainAddress": {
+      "type": "string"
+    },
+    "incorporationDate": {
+      "type": "string",
+      "format": "date"
+    },
+    "companyDuration": {
+      "type": "string",
+      "format": "date"
+    },
+    "registrationNumber": {
+      "type": "string"
+    },
+    "size": {
+      "type": "string"
+    },
     "relatedParties": {
       "type": "array",
       "items": {
@@ -18,11 +48,36 @@
           { "$ref": "#/$defs/CompanyRelatedParty" }
         ]
       }
+    },
+    "embargoes": {
+      "type": "string"
+    },
+    "liquidations": {
+      "type": "string"
+    },
+    "documentIssueDate": {
+      "type": "string",
+      "format": "date"
+    },
+    "lastRegistrationRenewalDate": {
+      "type": "string",
+      "format": "date"
     }
   },
-  "required": ["companyName", "documentType", "taxId", "relatedParties"],
+  "required": [
+    "companyName",
+    "documentType",
+    "country",
+    "taxId",
+    "mainAddress",
+    "incorporationDate",
+    "companyDuration",
+    "registrationNumber",
+    "size",
+    "relatedParties"
+  ],
   "additionalProperties": false,
-  "$defs": {
+    "$defs": {
     "CommonFields": {
       "type": "object",
       "properties": {
@@ -31,15 +86,10 @@
           "type": "string",
           "pattern": "^[0-9A-Za-z.\\-]+$"
         },
-        "relationshipType": { "type": "string" },
-        "participationPercentage": {
-          "type": "string",
-          "pattern": "^[0-9]+(\\.[0-9]+)?$"
-        }
+        "relationshipType": { "type": "string" }
       },
       "required": [
-        "relationshipType",
-        "participationPercentage"
+        "relationshipType"
       ],
       "additionalProperties": false
     },

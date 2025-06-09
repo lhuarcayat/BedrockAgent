@@ -2,6 +2,7 @@ import boto3, json, re, logging, os
 from botocore.config import Config
 from typing import Dict, Any, Union, List, Optional
 from dataclasses import dataclass
+import re
 
 # Configure logging
 logging.basicConfig(level=logging.INFO)
@@ -156,3 +157,49 @@ def parse_classification(resp_json: dict, *, pdf_path: str | None = None) -> dic
             raise RuntimeError(f"Assistant did not return JSON: {e}") from None
 
     return _normalise(raw_obj, file_path=pdf_path)
+
+def parse_extraction_response(resp: dict) -> dict:
+    """
+    Parse a Bedrock response dict and extract data for extraction.
+
+    Args:
+        resp: The Bedrock response
+
+    Returns:
+        dict: The extracted data
+    """
+    # Extract the text from the response
+    text = resp["output"]["message"]["content"][0]["text"]
+
+    # Extract the JSON snippet between ```json and ```
+    match = re.search(r"```json\s*(\{[\s\S]*?\})\s*```", text)
+    if not match:
+        raise ValueError("Embedded JSON not found in Bedrock response")
+
+    raw = match.group(1)
+
+    # Parse it
+    try:
+        data = json.loads(raw)
+    except json.JSONDecodeError as e:
+        raise ValueError(f"Failed to parse embedded JSON: {e}")
+
+    return data
+
+def create_payload_data_extraction(data: Dict[str, Any]) -> Dict[str, Any]:
+    """
+    Extract payload data from the response for extraction.
+
+    Args:
+        data: The response data
+
+    Returns:
+        dict: The payload data
+    """
+    # The payload might sit under "result" or at the top level
+    payload = data.get("result", data)
+
+    # Return all fields
+    response = {key: value for key, value in payload.items()}
+
+    return response
