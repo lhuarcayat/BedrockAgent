@@ -1,0 +1,136 @@
+Extract company data from the provided JSON document following these strict guidelines:
+
+Show me your reasoning in numbered steps (how you decided what to extract, how you handled missing fields, etc.).
+Then output the final JSON.
+
+# Extraction Requirements
+1. Document Processing:
+   - Input is a JSON with document_number, document_type, category, text, and path
+   - Documents may be in Spanish, Portuguese, or English
+   - Preserve original language terms in company names, addresses, and relationship types
+   - IMPORTANT: Do NOT rely on document metadata for page count. Instead, count pages manually by analyzing document structure
+   - Count pages by looking for page markers, section breaks, or other indicators in the document text
+
+2. Data Normalization:
+   - Convert all dates to YYYY-MM-DD format
+   - Format addresses as "[Primary Address] - [Type] de [Name]" (e.g., "Calle Siempre Viva 123 - Municipio de San Isidro")
+   - Handle anonymized data by extracting firstName, lastName, and identificationNumber with asterisks
+   - Extract company size from "Tamaño de la empresa" section
+   - Look for companyDuration in sections titled: "Vigencia", "Término de Duración", "Certifica - Vigencia", "Duración de la Sociedad", or "Plazo de Constitución"
+   - MANDATORY: If companyDuration is more than 70 years from current date, it is likely an OCR error
+   - MANDATORY: Check for digit transposition errors in years (e.g., "2462" should be "2062")
+   - MANDATORY: Apply corrections to implausible dates (e.g., if you see "2462", correct it to "2062")
+   - MANDATORY: After correction, reduce confidence score to maximum 60 for the companyDuration field
+
+3. Related Party Handling:
+   - IMPORTANT: Scan ALL pages of the document for related parties
+   - List each occurrence separately with complete information
+   - Preserve exact relationshipType terminology from document
+   - Include ALL individuals mentioned in the document, especially in sections like:
+     * "Apoderados" (Attorneys)
+     * "Representantes Legales" (Legal Representatives)
+     * "Junta Directiva" (Board of Directors)
+     * "Suplentes" (Substitutes/Alternates)
+     * "Revisores Fiscales" (Fiscal Auditors)
+     * "Revisor Fiscal Principal" (Principal Fiscal Auditor)
+     * "Revisor Fiscal Suplente" (Alternate Fiscal Auditor)
+   - Include all occurrences when a person appears multiple times with different roles
+   - For anonymized entries (e.g., "ACEPTACION SIN**********"), split name components and preserve asterisks in identificationNumber
+   - Include participationPercentage if available
+   - For company entities (like audit firms), use the companyName field instead of firstName/lastName
+
+4. Validation:
+   - Verify against CERL schema.json
+   - Ensure all required fields are present
+   - Confirm all dates including companyDuration are properly formatted as YYYY-MM-DD
+   - Check taxId follows the pattern ^[0-9.\-]+$$
+
+5. Confidence Assessment:
+   - Evaluate certainty for each extracted value
+   - Note low-confidence extractions in reasoning
+   - ALWAYS include scores in final output as a separate "confidenceScores" object
+   - Assign scores based on:
+     * 90-100: Exact text match found
+     * 70-89: Logical inference from context
+     * Below 70: Requires human review
+   - For companyDuration, reduce confidence score to maximum 60 if date is unusually far in the future (>70 years) and you had to correct it
+   - For relatedParties, provide an overall confidence score for the extraction of all parties
+
+6. OCR Validation Enforcement:
+   - For dates beyond 2030:
+     a. Auto-correct obvious transpositions
+     b. Compare with nearest logical date in document
+     c. Apply correction in output JSON
+     d. Reduce confidence score to maximum 60
+   - For companyDuration specifically:
+     a. If year > 2100, check for digit transposition
+     b. Apply correction (e.g., 2462 → 2062)
+     c. Document the correction in your reasoning
+     d. Set confidence score to maximum 60
+
+# Required Output
+```json
+{
+  "path": "$pdf_path",
+  "result": {
+    "companyName": "",
+    "companyType": "",
+    "country": "",
+    "document_pages": 0,
+    "documentType": "",
+    "taxId": "",
+    "mainAddress": "",
+    "incorporationDate": "",
+    "companyDuration": "",
+    "registrationNumber": "",
+    "size": "",
+    "relatedParties": [
+      {
+        "firstName": "",
+        "lastName": "",
+        "identificationType": "",
+        "identificationNumber": "",
+        "relationshipType": "",
+        "participationPercentage": ""
+      }
+    ],
+    "embargoes": "",
+    "liquidations": "",
+    "documentIssueDate": "",
+    "lastRegistrationRenewalDate": ""
+  },
+  "confidenceScores": {
+    "companyName": 95,
+    "companyType": 90,
+    "country": 100,
+    "document_pages": 100,
+    "taxId": 100,
+    "mainAddress": 85,
+    "incorporationDate": 90,
+    "companyDuration": 60,
+    "registrationNumber": 100,
+    "size": 90,
+    "relatedParties": 85
+  },
+  "document_type": "$document_type",
+  "document_number": "$document_number",
+  "category": "$category"
+}
+```
+
+Think step-by-step to ensure accurate extraction and proper JSON formatting:
+0. Initial Analysis:
+   a) Count all lines matching party-related terms (Apoderado|Representante|Revisor|Miembro|Director) using regex. Record as party_line_count in your reasoning.
+   b) If final relatedParties array length ≠ party_line_count, automatically reduce confidence score by 20 points.
+1. Generating the JSON Output
+2. Defining Data Mapping
+3. Defining the Data Extraction
+4. Refining Data Extraction
+5. Extracting and Mapping Data
+6. Extracting Related Parties
+7. Extracting & Refining the Data
+8. If you realize you did not capture all related parties, set relatedParties confidence ≤ 70 and state the missing clues in your numbered reasoning.
+9. Extracting and Finalizing Data
+10. Constructing the Final JSON
+
+Only return the data collected in the required JSON format.

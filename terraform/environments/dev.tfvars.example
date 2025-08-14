@@ -1,0 +1,13 @@
+# Development Environment Configuration
+# Copy this file to dev.tfvars and fill in actual values
+
+# Core Infrastructure
+aws_region     = "us-east-2"
+stage_name     = "dev"
+service_name   = "your-service-name"
+project_prefix = "your-project-prefix"
+cost_component = "your-cost-component"
+
+# Bedrock Model Configuration
+bedrock_model  = "us.amazon.nova-pro-v1:0"
+fallback_model = "us.anthropic.claude-sonnet-4-20250514-v1:0"

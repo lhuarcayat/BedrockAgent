@@ -1,0 +1,33 @@
+{
+  "ResponseMetadata": {
+    "RequestId": "32abb431-3230-4b53-828b-555419f82b37",
+    "HTTPStatusCode": 200,
+    "HTTPHeaders": {
+      "date": "Wed, 04 Jun 2025 18:01:01 GMT",
+      "content-type": "application/json",
+      "content-length": "5607",
+      "connection": "keep-alive",
+      "x-amzn-requestid": "32abb431-3230-4b53-828b-555419f82b37"
+    },
+    "RetryAttempts": 0
+  },
+  "output": {
+    "message": {
+      "role": "assistant",
+      "content": [
+        {
+          "text": "Here's the step-by-step reasoning for extracting the company data from the provided JSON document:\n\n**Step 1: Count pages manually by analyzing document structure**\nAfter analyzing the document structure, I counted a total of 6 pages.\n\n**Step 2: Extract company name**\nThe company name is mentioned in the document as \"GEOKINETICS INTERNACIONAL, INC.\".\n\n**Step 3: Extract company type**\nThe company type is mentioned in the document as \"Sociedad por Acciones Simplificada\".\n\n**Step 4: Extract country**\nThe country is mentioned in the document as \"COLOMBIA\".\n\n**Step 5: Extract document type**\nThe document type is mentioned in the document as \"NIT\".\n\n**Step 6: Extract tax ID**\nThe tax ID is mentioned in the document as \"860006152-8\".\n\n**Step 7: Extract main address**\nThe main address is mentioned in the document as \"BOGOTA D.C.\".\n\n**Step 8: Extract incorporation date**\nThe incorporation date is mentioned in the document as \"1963-02-04\".\n\n**Step 9: Extract company duration**\nThe company duration is mentioned in the document as \"2462-02-04\". However, this date is more than 70 years from the current date, which is likely an OCR error. After correcting the date, it becomes \"2062-02-04\".\n\n**Step 10: Extract registration number**\nThe registration number is mentioned in the document as \"394273\".\n\n**Step 11: Extract company size**\nThe company size is mentioned in the document as \"MEDIANA EMPRESA\".\n\n**Step 12: Extract related parties**\nThere are several related parties mentioned in the document, including:\n\n* NARCISO IVANUEL CHIQUILLO CONDE (Representante Legal)\n* JORGE RODRIGUEZ ROJAS (Apoderado General)\n* JOSE MANUEL TAMAYO OLARTE (Apoderado General)\n* VICTOR UCURICIO GOMEZ GUTIERREZ (Apoderado General)\n* RAFAEL CASILLO CHARRY (Apoderado General)\n* EDWIN RENÉ VARGAS SALGADO (Revisor Fiscal Suplente)\n* FERNANDO MONTEALEGRE BUENAVENTURA (Revisor Fiscal Principal)\n\n**Step 13: Extract embargoes and liquidations**\nThere is no mention of embargoes or liquidations in the document.\n\n**Step 14: Extract document issue date and last registration renewal date**\nThe document issue date is mentioned in the document as \"2009-02-28\". The last registration renewal date is not mentioned in the document.\n\n**Step 15: Construct the final JSON**\nHere is the final JSON output:\n\n```json\n{\n  \"path\": \"../../shared/file_examples/CERL/860006752/22_CamCom_2020-02-28.pdf\",\n  \"result\": {\n    \"companyName\": \"GEOKINETICS INTERNACIONAL, INC.\",\n    \"companyType\": \"Sociedad por Acciones Simplificada\",\n    \"country\": \"COLOMBIA\",\n    \"document_pages\": 6,\n    \"documentType\": \"NIT\",\n    \"taxId\": \"860006152-8\",\n    \"mainAddress\": \"BOGOTA D.C.\",\n    \"incorporationDate\": \"1963-02-04\",\n    \"companyDuration\": \"2062-02-04\",\n    \"registrationNumber\": \"394273\",\n    \"size\": \"MEDIANA EMPRESA\",\n    \"relatedParties\": [\n      {\n        \"firstName\": \"NARCISO\",\n        \"lastName\": \"IVANUEL CHIQUILLO CONDE\",\n        \"identificationType\": \"C.C.\",\n        \"identificationNumber\": \"17.124.736\",\n        \"relationshipType\": \"Representante Legal\"\n      },\n      {\n        \"firstName\": \"JORGE\",\n        \"lastName\": \"RODRIGUEZ ROJAS\",\n        \"identificationType\": \"C.C.\",\n        \"identificationNumber\": \"17.444.414\",\n        \"relationshipType\": \"Apoderado General\"\n      },\n      {\n        \"firstName\": \"JOSE\",\n        \"lastName\": \"MANUEL TAMAYO OLARTE\",\n        \"identificationType\": \"C.C.\",\n        \"identificationNumber\": \"19.303.534\",\n        \"relationshipType\": \"Apoderado General\"\n      },\n      {\n        \"firstName\": \"VICTOR\",\n        \"lastName\": \"UCURICIO GOMEZ GUTIERREZ\",\n        \"identificationType\": \"C.C.\",\n        \"identificationNumber\": \"80.414.776\",\n        \"relationshipType\": \"Apoderado General\"\n      },\n      {\n        \"firstName\": \"RAFAEL\",\n        \"lastName\": \"CASILLO CHARRY\",\n        \"identificationType\": \"C.C.\",\n        \"identificationNumber\": \"79.370.170\",\n        \"relationshipType\": \"Apoderado General\"\n      },\n      {\n        \"firstName\": \"EDWIN\",\n        \"lastName\": \"RENÉ VARGAS SALGADO\",\n        \"identificationType\": \"C.C.\",\n        \"identificationNumber\": \"79.516.176\",\n        \"relationshipType\": \"Revisor Fiscal Suplente\"\n      },\n      {\n        \"firstName\": \"FERNANDO\",\n        \"lastName\": \"MONTEALEGRE BUENAVENTURA\",\n        \"identificationType\": \"C.C.\",\n        \"identificationNumber\": \"36.379.291\",\n        \"relationshipType\": \"Revisor Fiscal Principal\"\n      }\n    ],\n    \"embargoes\": \"\",\n    \"liquidations\": \"\",\n    \"documentIssueDate\": \"2009-02-28\",\n    \"lastRegistrationRenewalDate\": \"\"\n  },\n  \"confidenceScores\": {\n    \"companyName\": 95,\n    \"companyType\": 90,\n    \"country\": 100,\n    \"document_pages\": 100,\n    \"taxId\": 100,\n    \"mainAddress\": 85,\n    \"incorporationDate\": 90,\n    \"companyDuration\": 60,\n    \"registrationNumber\": 100,\n    \"size\": 90,\n    \"relatedParties\": 85\n  },\n  \"document_type\": \"company\",\n  \"document_number\": \"860006752\",\n  \"category\": \"CERL\"\n}\n```\n\nNote that the confidence score for the company duration is 60, as it was corrected from an OCR error."
+        }
+      ]
+    }
+  },
+  "stopReason": "end_turn",
+  "usage": {
+    "inputTokens": 20033,
+    "outputTokens": 1362,
+    "totalTokens": 21395
+  },
+  "metrics": {
+    "latencyMs": 28412
+  }
+}

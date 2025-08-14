@@ -1,0 +1,33 @@
+{
+  "ResponseMetadata": {
+    "RequestId": "9d85f771-39d2-4d24-81f7-30b9c6d979f2",
+    "HTTPStatusCode": 200,
+    "HTTPHeaders": {
+      "date": "Mon, 02 Jun 2025 21:49:39 GMT",
+      "content-type": "application/json",
+      "content-length": "3422",
+      "connection": "keep-alive",
+      "x-amzn-requestid": "9d85f771-39d2-4d24-81f7-30b9c6d979f2"
+    },
+    "RetryAttempts": 1
+  },
+  "output": {
+    "message": {
+      "role": "assistant",
+      "content": [
+        {
+          "text": "Here's my step-by-step reasoning for extracting the company data from the provided document:\n\n1. **Document Analysis**: The document appears to be a company registration certificate from the Chamber of Commerce of Bogotá, Colombia. It's written in Spanish.\n\n2. **Page Count**: The document has 6 pages.\n\n3. **Company Information**:\n   - **companyName**: \"GEOINTENETICS INTERNATIONAL, INC.\"\n   - **companyType**: Not explicitly stated, but it's a foreign company (Sucursal Extranjera).\n   - **country**: Colombia (implied, as it's registered in Bogotá, Colombia).\n   - **taxId**: \"860006152-8\"\n   - **documentType**: \"NIT\"\n\n4. **Address Composition**:\n   - **mainAddress**: \"Calle 100 N. 19 - 54 Oficina 604, Bogotá D.C., Municipio de Bogotá D.C.\"\n\n5. **Dates**:\n   - **incorporationDate**: Not explicitly stated for the main company, but there's a mention of the parent company's incorporation date in Pasadena, California.\n   - **documentIssueDate**: \"2009-04-01\" (16 de Abril de 2009)\n   - **companyDuration**: \"Hasta el 4 de Febrero de 2462\" (indefinite duration)\n\n6. **Registration Details**:\n   - **registrationNumber**: \"10: C0018259 del 28 de Abril de 1972\"\n\n7. **Related Parties**:\n   - Several legal representatives and power of attorney holders are mentioned:\n     1. Jorge Enrique Rodriguez Rojas (C.C. 000000017144874) - Primer Suplente del Apoderado General Principal\n     2. Narciso Manuel Chiquillo Conde (C.C. 000000017124736) - Segundo Suplente de Apoderado General Principal\n     3. Tamayo Olarte José Manuel (C.C. 000000019303534) - Certificador\n\n8. **Other Fields**:\n   - **embargoes** and **liquidations**: Empty strings\n   - **lastRegistrationRenewalDate**: Not explicitly stated\n\nHere's the extracted JSON:\n\n```json\n{\n  \"companyName\": \"GEOINTENETICS INTERNATIONAL, INC.\",\n  \"companyType\": \"Sucursal Extranjera\",\n  \"country\": \"Colombia\",\n  \"document_pages\": 6,\n  \"documentType\": \"NIT\",\n  \"taxId\": \"860006152-8\",\n  \"mainAddress\": \"Calle 100 N. 19 - 54 Oficina 604, Bogotá D.C., Municipio de Bogotá D.C.\",\n  \"incorporationDate\": \"\",\n  \"companyDuration\": \"Indefinida\",\n  \"registrationNumber\": \"10: C0018259 del 28 de Abril de 1972\",\n  \"size\": \"\",\n  \"relatedParties\": [\n    {\n      \"firstName\": \"Jorge Enrique\",\n      \"lastName\": \"Rodriguez Rojas\",\n      \"identificationType\": \"C.C.\",\n      \"identificationNumber\": \"000000017144874\",\n      \"relationshipType\": \"Primer Suplente del Apoderado General Principal\"\n    },\n    {\n      \"firstName\": \"Narciso Manuel\",\n      \"lastName\": \"Chiquillo Conde\",\n      \"identificationType\": \"C.C.\",\n      \"identificationNumber\": \"000000017124736\",\n      \"relationshipType\": \"Segundo Suplente de Apoderado General Principal\"\n    },\n    {\n      \"firstName\": \"José Manuel\",\n      \"lastName\": \"Tamayo Olarte\",\n      \"identificationType\": \"C.C.\",\n      \"identificationNumber\": \"000000019303534\",\n      \"relationshipType\": \"Certificador\"\n    }\n  ],\n  \"embargoes\": \"\",\n  \"liquidations\": \"\",\n  \"documentIssueDate\": \"2009-04-01\",\n  \"lastRegistrationRenewalDate\": \"\"\n}\n```"
+        }
+      ]
+    }
+  },
+  "stopReason": "end_turn",
+  "usage": {
+    "inputTokens": 18436,
+    "outputTokens": 822,
+    "totalTokens": 19258
+  },
+  "metrics": {
+    "latencyMs": 7471
+  }
+}

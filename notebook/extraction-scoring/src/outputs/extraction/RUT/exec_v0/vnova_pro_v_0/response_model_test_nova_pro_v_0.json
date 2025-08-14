@@ -1,0 +1,33 @@
+{
+  "ResponseMetadata": {
+    "RequestId": "c0c78eef-e6ec-44af-9de9-c49f5532c331",
+    "HTTPStatusCode": 200,
+    "HTTPHeaders": {
+      "date": "Thu, 05 Jun 2025 03:11:24 GMT",
+      "content-type": "application/json",
+      "content-length": "2006",
+      "connection": "keep-alive",
+      "x-amzn-requestid": "c0c78eef-e6ec-44af-9de9-c49f5532c331"
+    },
+    "RetryAttempts": 0
+  },
+  "output": {
+    "message": {
+      "role": "assistant",
+      "content": [
+        {
+          "text": "```json\n{\n  \"path\": \"path/to/document\",\n  \"result\": {\n    \"companyName\": \"FARMACIA INSTITUCIONAL S A S\",\n    \"country\": \"Colombia\",\n    \"documentType\": \"NIT\",\n    \"taxId\": \"900285194\",\n    \"verificationDigit\": \"8\",\n    \"personType\": \"Persona Jurídica\",\n    \"relatedParties\": [\n      {\n        \"firstName\": \"TOVAR\",\n        \"lastName\": \"OSORIO ALEXANDER\",\n        \"identificationType\": \"Cédula de Ciudadanía\",\n        \"identificationNumber\": \"20090506\",\n        \"relationshipType\": \"Representante legal Certificado\"\n      },\n      {\n        \"firstName\": \"RUGE\",\n        \"lastName\": \"LEON\",\n        \"identificationType\": \"Cédula de Ciudadanía\",\n        \"identificationNumber\": \"20090610\",\n        \"relationshipType\": \"Representante legal\"\n      },\n      {\n        \"firstName\": \"VALDERRA\",\n        \"lastName\": \"ESQUEUL\",\n        \"identificationType\": \"Cédula de Ciudadanía\",\n        \"identificationNumber\": \"1380230151\",\n        \"relationshipType\": \"Revisor Fiscal y Contador\"\n      },\n      {\n        \"firstName\": \"TAPIA\",\n        \"lastName\": \"MENDIVETA\",\n        \"identificationType\": \"Cédula de Ciudadanía\",\n        \"identificationNumber\": \"137963905\",\n        \"relationshipType\": \"Contador\"\n      }\n    ],\n    \"address\": \"TV 93 32 IN 9, Bogotá, D.C.\",\n    \"documentGenerationDate\": \"2020-07-20\"\n  },\n  \"confidenceScores\": {\n    \"companyName\": 95,\n    \"documentType\": 90,\n    \"country\": 100,\n    \"taxId\": 100,\n    \"verificationDigit\": 95,\n    \"personType\": 90,\n    \"address\": 85,\n    \"relatedParties\": 85\n  },\n  \"document_type\": \"company\",\n  \"document_number\": \"900285194\",\n  \"category\": \"RUT\"\n}\n```"
+        }
+      ]
+    }
+  },
+  "stopReason": "end_turn",
+  "usage": {
+    "inputTokens": 17959,
+    "outputTokens": 505,
+    "totalTokens": 18464
+  },
+  "metrics": {
+    "latencyMs": 13638
+  }
+}

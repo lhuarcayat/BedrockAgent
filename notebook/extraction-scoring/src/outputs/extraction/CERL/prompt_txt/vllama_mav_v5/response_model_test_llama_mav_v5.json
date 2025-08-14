@@ -1,0 +1,33 @@
+{
+  "ResponseMetadata": {
+    "RequestId": "f9daf3d8-8271-455e-881a-d71e25775153",
+    "HTTPStatusCode": 200,
+    "HTTPHeaders": {
+      "date": "Tue, 03 Jun 2025 20:58:21 GMT",
+      "content-type": "application/json",
+      "content-length": "5182",
+      "connection": "keep-alive",
+      "x-amzn-requestid": "f9daf3d8-8271-455e-881a-d71e25775153"
+    },
+    "RetryAttempts": 0
+  },
+  "output": {
+    "message": {
+      "role": "assistant",
+      "content": [
+        {
+          "text": "To extract the required information from the given document, I will follow the steps outlined in the guidelines.\n\n1. **Retrieve exact page count from document metadata**: The document has 6 pages.\n\n2. **Analyze the document structure to identify key sections on every page**: The document is a certificate of existence and legal representation issued by the Chamber of Commerce of Bogota. It contains information about the company, its legal representatives, and other related parties.\n\n3. **Extract company information systematically**:\n   - **Company Name**: \"GEOINETICS INTERNATIONAL, INC.\"\n   - **Company Type**: The document doesn't explicitly state the company type, but it mentions it's a \"SUCURSAL\" (branch) of a foreign company.\n   - **Country**: Colombia\n   - **Tax ID**: \"860006152-8\"\n   - **Main Address**: \"CALLE 100 N. 19 - 54 OFICINA 604, BOGOTA D.C.\"\n   - **Incorporation Date**: The document mentions the incorporation date as \"28 DE ABRIL DE 1972\" (April 28, 1972), which corresponds to the date of registration in the commercial registry.\n   - **Company Duration**: \"HASTA EL 4 DE FEBRERO DE 2462\" (until February 4, 2462). This date seems implausible and may require OCR validation or checking for digit transposition errors.\n   - **Registration Number**: \"C0018259\"\n\n4. **Process related parties one by one, ensuring all occurrences are captured**:\n   - **Related Parties**:\n     1. **Jorge Enrique Rodriguez Rojas**: \"APODERADO GENERAL PRINCIPAL\" (General Principal Attorney), C.C. 17448874\n     2. **Narciso Manuel Chiquillo Conde**: \"PRIMER SUPLENTE DEL APODERADO GENERAL PRINCIPAL\" (First Alternate of the General Principal Attorney), C.C. 17124736\n     3. **Jose Manuel Tamayo Olarte**: \"SEGUNDO SUPLENTE DEL APODERADO GENERAL PRINCIPAL\" (Second Alternate of the General Principal Attorney), C.C. 19303534\n     4. **Ernst & Young Audit Ltda.**: \"REVISOR FISCAL\" (Fiscal Auditor), N.I.T. 86088905\n     5. **Edwin Rene Vargas Salgado**: \"REVISOR FISCAL SUPLENTE\" (Alternate Fiscal Auditor), C.C. 79791291\n     6. **Burfi Manitza Falia Moncaleano**: \"REVISOR FISCAL PRINCIPAL\" (Principal Fiscal Auditor), C.C. 3637389\n\n5. **Validate the draft JSON against schema requirements**:\n   - The extracted data will be formatted according to the provided JSON schema.\n\n6. **Assign confidence scores to each extracted field**:\n   - Confidence scores will be assigned based on the certainty of the extraction.\n\nHere is the final JSON output:\n\n```json\n{\n  \"companyName\": \"GEOINETICS INTERNATIONAL, INC.\",\n  \"companyType\": \"Sucursal\",\n  \"country\": \"Colombia\",\n  \"document_pages\": 6,\n  \"documentType\": \"Certificado de Existencia y Representación Legal\",\n  \"taxId\": \"860006152-8\",\n  \"mainAddress\": \"Calle 100 N. 19 - 54 Oficina 604 - Bogota D.C.\",\n  \"incorporationDate\": \"1972-04-28\",\n  \"companyDuration\": \"2462-02-04\",\n  \"registrationNumber\": \"C0018259\",\n  \"size\": \"\",\n  \"relatedParties\": [\n    {\n      \"firstName\": \"Jorge Enrique\",\n      \"lastName\": \"Rodriguez Rojas\",\n      \"identificationType\": \"C.C.\",\n      \"identificationNumber\": \"17448874\",\n      \"relationshipType\": \"Apoderado General Principal\"\n    },\n    {\n      \"firstName\": \"Narciso Manuel\",\n      \"lastName\": \"Chiquillo Conde\",\n      \"identificationType\": \"C.C.\",\n      \"identificationNumber\": \"17124736\",\n      \"relationshipType\": \"Primer Suplente del Apoderado General Principal\"\n    },\n    {\n      \"firstName\": \"Jose Manuel\",\n      \"lastName\": \"Tamayo Olarte\",\n      \"identificationType\": \"C.C.\",\n      \"identificationNumber\": \"19303534\",\n      \"relationshipType\": \"Segundo Suplente del Apoderado General Principal\"\n    },\n    {\n      \"companyName\": \"Ernst & Young Audit Ltda.\",\n      \"identificationType\": \"N.I.T.\",\n      \"identificationNumber\": \"86088905\",\n      \"relationshipType\": \"Revisor Fiscal\"\n    },\n    {\n      \"firstName\": \"Edwin Rene\",\n      \"lastName\": \"Vargas Salgado\",\n      \"identificationType\": \"C.C.\",\n      \"identificationNumber\": \"79791291\",\n      \"relationshipType\": \"Revisor Fiscal Suplente\"\n    },\n    {\n      \"firstName\": \"Burfi Manitza\",\n      \"lastName\": \"Falia Moncaleano\",\n      \"identificationType\": \"C.C.\",\n      \"identificationNumber\": \"3637389\",\n      \"relationshipType\": \"Revisor Fiscal Principal\"\n    }\n  ],\n  \"embargoes\": \"\",\n  \"liquidations\": \"\",\n  \"documentIssueDate\": \"2009-04-16\",\n  \"lastRegistrationRenewalDate\": \"\"\n}\n```\n\n```json\n{\n  \"confidenceScores\": {\n    \"companyName\": 95,\n    \"companyType\": 80,\n    \"country\": 100,\n    \"document_pages\": 100,\n    \"taxId\": 100,\n    \"mainAddress\": 90,\n    \"incorporationDate\": 95,\n    \"companyDuration\": 60,\n    \"registrationNumber\": 100,\n    \"size\": 0,\n    \"relatedParties\": 85\n  }\n}\n```<|eot_id|>"
+        }
+      ]
+    }
+  },
+  "stopReason": "end_turn",
+  "usage": {
+    "inputTokens": 19335,
+    "outputTokens": 1263,
+    "totalTokens": 20598
+  },
+  "metrics": {
+    "latencyMs": 9906
+  }
+}

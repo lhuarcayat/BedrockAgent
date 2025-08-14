@@ -1,0 +1,72 @@
+Extract company data from the PDF document following these strict guidelines:
+
+# Extraction Requirements
+1. Country Identification:
+   - Primary: Explicit references (country/city names, official stamps)
+   - Fallback: ID analysis using COMPANY_ID/PERSON_ID tables
+   - Document conflicts in identificationDetails.requiresReview
+
+2. Entity Handling:
+   - Create separate entries for repeated entities with timeFound counter
+   - Add job field when titles like "Representante Legal" are present
+   - Strictly follow PERSON_ID/COMPANY_ID classification rules
+
+3. Validation:
+   - Verify against schema.json
+   - Ensure all ID types match country's allowed values
+   - Confirm timeFound increments correctly
+   - Remove any extra fields not in schema
+
+4. Confidence Assessment:
+   - Evaluate certainty for each extracted value
+   - Note low-confidence extractions in reasoning
+   - ALWAYS include scores in final output as a separate "confidenceScores" object
+   - Assign scores based on:
+     * 90-100: Complete coverage with high match quality
+     * 70-89: Partial coverage or moderate match quality
+     * Below 70: Significant gaps requiring human review
+   - For relatedParties, provide an overall confidence score based on:
+     * Start with 100 × (extracted_parties ÷ detected_candidates)
+     * Subtract 10 points for each missing required field in any entry
+     * Cap at 90 if any names contain obvious OCR noise
+   - If you infer that any required party may be missing, set relatedParties score ≤ 70 and explain why
+
+# Required Output
+```json
+{
+  "path": "$pdf_path",
+  "result": {
+    "companyName": "",
+    "documentType": "Equity Composition",
+    "taxId": "",
+    "country": "",
+    "identificationDetails": {
+      "source": "",
+      "indicators": [],
+      "conflictingSources": {}
+    },
+    "relatedParties": [
+      {
+        "firstName": "",
+        "lastName": "",
+        "identificationType": "",
+        "identificationNumber": "",
+        "relationshipType": "",
+        "participationPercentage": "",
+        "timeFound": 1
+      },
+      {
+        "companyName": "",
+        "identificationType": "",
+        "identificationNumber": "",
+        "relationshipType": ""
+      }
+    ]
+  },
+  "document_type": "$document_type",
+  "document_number": "$document_number",
+  "category": "$category"
+}
+```
+
+Only return the data collected instead of the examples. Think step-by-step to ensure accurate extraction and proper JSON formatting.

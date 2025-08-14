@@ -1,0 +1,141 @@
+# Version: 2.1.0
+# Date: 2025-01-11
+# Changes:
+#   - Fixed nationality vs place_of_birth logic (nationality = country from place of birth)
+#   - Improved firstName/lastName parsing for Colombian documents (APELLIDOS=lastName, NOMBRES=firstName)  
+#   - Added explicit field mapping guidance for different document formats
+#   - Enhanced country determination logic
+
+Extract personal identification data from the provided JSON document following these detailed guidelines. I'll need you to:
+
+Show me your reasoning in numbered steps (how you decided what to extract, how you handled ambiguous fields, etc.).
+Then output the final JSON with all extracted information.
+
+# Extraction Requirements
+1. Document Processing:
+   - Input is a JSON with document_number, document_type, category, text, and path
+   - Documents may be in Spanish, Portuguese, English, or other European languages
+   - Preserve original language terms in personal names
+   - Translate document types to their Spanish equivalents
+   - IMPORTANT: Scan the document thoroughly as it may be a photocopy or picture processed without OCR
+
+2. Document Validation:
+   - Check that the document is an official identification document
+   - If the document doesn't correspond to an official identification document:
+     * Fill only the fields you can identify with confidence
+     * Add a message: "Necesita revisión manual, documento no corresponde a documento oficial de identificación" if there isn't an identity document.
+     * Add a message: "Necesita revisión manual, documento ilegible" if isn't possible to find information.
+   - Look for official seals, headers, or other indicators of government issuance
+
+3. Data Extraction and Normalization:
+   - Extract full names, separating into firstName and lastName components:
+     * firstName should contain all given/first names, middle or another names
+     * lastName should contain all family/last names and second last name
+     * CRITICAL: Pay attention to document field labels:
+       - Colombian documents: "APELLIDOS" = lastName, "NOMBRES" = firstName
+       - US/European passports: "Surname" = lastName, "Given Names" = firstName
+       - Never assume name order - always check field labels in the document
+   - Identify the document type in Spanish (e.g., "Pasaporte", "Cédula de Ciudadanía", "Documento Nacional de Identidad")
+   - For foreign document types, translate to Spanish equivalents using this reference:
+     * Alemania: Personalausweis → documento de identidad personal
+     * Italia: Carta d'Identità → tarjeta de identidad
+     * Francia: Carte d'identité → tarjeta de identidad
+     * Reino Unido: Various types → Permiso de Residencia Biométrico, etc.
+     * Portugal: Cartão de Cidadão → tarjeta de ciudadano
+     * Holanda: Identiteitskaart → tarjeta de identidad
+     * Suecia/Noruega: ID-kort → tarjeta de identidad
+     * Polonia: Dowód osobisty → documento personal
+   - Extract identification number exactly as formatted in the document
+   - Determine both:
+     * country_issuer: the country that issued the document
+     * nationality: the country where the person was born (from place of birth field)
+
+4. Critical Distinctions:
+   - Differentiate between country_issuer and nationality:
+     * country_issuer is where the document was issued
+     * nationality is the country where person was born (from "Place of birth/Lugar de nacimiento" field)
+   - Examples:
+     * A Colombian residence permit (country_issuer: Colombia) for an Italian citizen (nationality: Italia)
+     * US passport for Venezuela-born person: country_issuer="Estados Unidos", nationality="Venezuela"
+     * Colombian cédula for Colombian-born person: country_issuer="Colombia", nationality="Colombia"
+   - Always check for multiple given names and surnames
+   - Pay attention to document headers and official stamps for country determination
+   - For nationality, extract the COUNTRY from place of birth, not just the city
+
+5. Image Document and OCR Considerations:
+   - Always attempt extraction regardless of document quality
+   - For image-based documents or photocopies:
+     * Look for text fragments in document structure
+     * Identify government seals/logos for country clues
+     * Extract visible dates/numbers matching ID patterns
+     * Use document layout heuristics for name positioning
+   - Be aware that documents may be scanned without OCR processing
+   - Look for context clues to correct potential recognition mistakes
+   - Pay special attention to similar-looking characters (0/O, 1/I, etc.)
+   - If extraction is severely limited by document quality:
+     * Extract whatever information is visible
+     * Document your reasoning for partial extraction
+
+6. Confidence Assessment:
+   - Evaluate certainty for each extracted value
+   - Note low-confidence extractions in your reasoning
+   - ALWAYS include scores in final output as a separate "confidenceScores" object
+   - Assign scores based on coverage and match quality, not just presence:
+     * For personal identification fields:
+       - Start with 100 for perfect matches
+       - Subtract 10 points for each field with partial/inferred data
+       - Cap at 90 if any fields contain obvious OCR noise
+     * For all fields:
+       - 90-100: Complete coverage with high match quality
+       - 70-89: Partial coverage or moderate match quality
+       - Below 70: Significant gaps requiring human review
+   - If you infer that any required field may be missing or incorrect, set its score ≤ 70 and explain why
+   - Flag any field with score <70 in your reasoning
+   - Recheck document for low-confidence fields
+   - For image-based documents or poor quality:
+     * Maximum score may be limited by document quality
+     * Document your reasoning for each score
+     * Prioritize extraction attempt over perfect accuracy
+
+7. Step-by-Step Extraction Process:
+   1. Generate the JSON output structure
+   2. Define data mapping from document to JSON fields
+   3. Define the data extraction approach for each field
+   4. Refine data extraction methods for complex fields
+   5. Extract and map data systematically
+   6. Extract and refine all data points
+   7. Refine data accuracy with validation checks
+   8. Extract and finalize all required data
+   9. Construct the final JSON output
+   10. Apply confidence scoring to each field
+
+# Required Output
+```json
+{
+  "path": "$pdf_path",
+  "result": {
+    "firstName": "",
+    "lastName": "",
+    "country_issuer": "",
+    "nationality": "",
+    "identificationType": "",
+    "identificationNumber": "",
+    "message": ""
+  },
+  "confidenceScores": {
+    "firstName": 95,
+    "lastName": 90,
+    "country_issuer": 85,
+    "nationality": 80,
+    "identificationType": 90,
+    "identificationNumber": 100
+  },
+  "document_type": "$document_type",
+  "document_number": "$document_number",
+  "category": "$category"
+}
+```
+
+Remember to provide detailed reasoning about how you extracted each field, especially for any fields where you had to make inferences or handle ambiguous data.
+
+Only return the data collected in the required JSON format.

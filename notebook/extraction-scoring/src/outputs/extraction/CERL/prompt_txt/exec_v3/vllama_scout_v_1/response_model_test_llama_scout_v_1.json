@@ -1,0 +1,33 @@
+{
+  "ResponseMetadata": {
+    "RequestId": "e05b672e-2dad-41fb-ac56-292c709bfd43",
+    "HTTPStatusCode": 200,
+    "HTTPHeaders": {
+      "date": "Wed, 04 Jun 2025 17:42:17 GMT",
+      "content-type": "application/json",
+      "content-length": "3392",
+      "connection": "keep-alive",
+      "x-amzn-requestid": "e05b672e-2dad-41fb-ac56-292c709bfd43"
+    },
+    "RetryAttempts": 0
+  },
+  "output": {
+    "message": {
+      "role": "assistant",
+      "content": [
+        {
+          "text": "Here's my step-by-step reasoning for extracting the company data from the provided document:\n\n1. **Document Analysis**: The document is in Spanish and appears to be a company registration certificate from the Cámara de Comercio de Bogotá. It has 6 pages.\n\n2. **Company Information**:\n   - **companyName**: \"GEOINTNETICS INTERNATIONAL, INC.\"\n   - **companyType**: Not explicitly stated, but it's a foreign company (Sucursal Extranjera)\n   - **country**: Colombia (implied by the document being from Cámara de Comercio de Bogotá)\n   - **taxId**: \"860006152-8\"\n   - **documentType**: \"Certificado de Existencia y Representación Legal\"\n\n3. **Address Composition**:\n   - **mainAddress**: \"Calle 100 N. 19 - 54 Oficina 604, Bogotá D.C., Municipio de Bogotá D.C.\"\n\n4. **Date Normalization**:\n   - **incorporationDate**: Not explicitly stated for the main company, but there's a mention of a power of attorney from 1998.\n   - **companyDuration**: \"Vigencia: hasta el 4 de febrero de 2462\" (indefinite duration)\n   - **documentIssueDate**: \"16 de Abril de 2009\"\n\n5. **Registration Details**:\n   - **registrationNumber**: \"Matricula: 10: C0018259 del 28 de Abril de 1972\"\n\n6. **Related Parties Handling**:\n   - Multiple related parties are mentioned, including:\n     - Jorge Enrique Rodriguez Rojas (C.C. 000000017144874) as Primer Suplente del Apoderado General Principal\n     - Narciso Manuel Chiquillo Conde (Cédula de Ciudadanía No. 17.124.736) as Representante Legal\n\n7. **Optional Fields Handling**:\n   - **embargoes** and **liquidations**: Not mentioned\n   - **lastRegistrationRenewalDate**: Not explicitly stated\n\n8. **Confidence Scoring**: Due to the complexity and the language barrier, some fields might have lower confidence scores.\n\n9. **Validation Checklist**:\n   - Mandatory fields are mostly present, but some require formatting.\n\n10. **Final JSON Construction**:\n\nHere's the extracted data in the required JSON format:\n\n```json\n{\n  \"companyName\": \"GEOINTNETICS INTERNATIONAL, INC.\",\n  \"companyType\": \"Sucursal Extranjera\",\n  \"country\": \"Colombia\",\n  \"document_pages\": 6,\n  \"documentType\": \"Certificado de Existencia y Representación Legal\",\n  \"taxId\": \"860006152-8\",\n  \"mainAddress\": \"Calle 100 N. 19 - 54 Oficina 604, Bogotá D.C., Municipio de Bogotá D.C.\",\n  \"incorporationDate\": \"\",\n  \"companyDuration\": \"Indefinida\",\n  \"registrationNumber\": \"C0018259\",\n  \"size\": \"\",\n  \"relatedParties\": [\n    {\n      \"firstName\": \"Jorge Enrique\",\n      \"lastName\": \"Rodriguez Rojas\",\n      \"identificationType\": \"C.C.\",\n      \"identificationNumber\": \"000000017144874\",\n      \"relationshipType\": \"Primer Suplente del Apoderado General Principal\"\n    },\n    {\n      \"firstName\": \"Narciso Manuel\",\n      \"lastName\": \"Chiquillo Conde\",\n      \"identificationType\": \"Cédula de Ciudadanía\",\n      \"identificationNumber\": \"17.124.736\",\n      \"relationshipType\": \"Representante Legal\"\n    }\n  ],\n  \"embargoes\": \"\",\n  \"liquidations\": \"\",\n  \"documentIssueDate\": \"2009-04-16\",\n  \"lastRegistrationRenewalDate\": \"\"\n}\n```"
+        }
+      ]
+    }
+  },
+  "stopReason": "end_turn",
+  "usage": {
+    "inputTokens": 18625,
+    "outputTokens": 776,
+    "totalTokens": 19401
+  },
+  "metrics": {
+    "latencyMs": 7267
+  }
+}

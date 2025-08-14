@@ -1,0 +1,184 @@
+# Version: 2.2.0
+# Date: 2025-01-11
+# Changes:
+#   - Universal multi-language document pattern system
+#   - Removed conflicting order-based rules
+#   - Added comprehensive field pattern examples
+#   - Enhanced validation with pattern verification
+#   - Added multi-field surname combination examples
+
+Extract personal identification data from the provided JSON document using universal language patterns. Follow these detailed guidelines:
+
+Show me your reasoning in numbered steps (how you decided what to extract, which patterns you detected, how you handled field combinations, etc.).
+Then output the final JSON with all extracted information.
+
+# Universal Extraction Requirements
+
+1. Document Processing:
+   - Input is a JSON with document_number, document_type, category, text, and path
+   - Documents may be in ANY language: Spanish, Portuguese, English, Italian, French, German, Dutch, Polish, etc.
+   - Use pattern-based field detection, NEVER assume field order or position
+   - Preserve original language terms in personal names with proper accents
+   - Translate document types to their Spanish equivalents
+
+2. Document Validation:
+   - Check that the document is an official identification document
+   - If the document doesn't correspond to an official identification document:
+     * Fill only the fields you can identify with confidence
+     * Add a message: "Necesita revisión manual, documento no corresponde a documento oficial de identificación"
+   - Look for official seals, headers, or other indicators of government issuance
+
+3. UNIVERSAL NAME EXTRACTION USING FIELD PATTERNS:
+
+   **CRITICAL: Always use field labels, NEVER text order or position**
+
+   a) **Surname Detection Process (using substring matching)**:
+   
+   **Step 1**: Scan for multi-field surname patterns containing key words:
+   ```
+   Spanish: "PRIMER APELLIDO: García" + "SEGUNDO APELLIDO: López" → lastName: "García López"
+   Spanish: "APELLIDO PATERNO: Hernández" + "APELLIDO MATERNO: Díaz" → lastName: "Hernández Díaz"
+   Spanish: "TERCER APELLIDO: Morales" (if exists) → include in lastName  
+   Portuguese: "PRIMEIRO SOBRENOME: Silva" + "SEGUNDO SOBRENOME: Santos" → lastName: "Silva Santos"
+   ```
+   
+   **Step 2**: If no multi-field, scan for single surname patterns:
+   ```
+   Spanish: Any field with "APELLIDO" → "APELLIDOS: Hernández Díaz" → lastName: "Hernández Díaz"
+   Portuguese: Any field with "SOBRENOME" or "APELIDO" → lastName: extracted value
+   English: "SURNAME: Adams" → lastName: "Adams"
+   French: "NOM: Dupont" → lastName: "Dupont"
+   Italian: "COGNOME: Rossi" → lastName: "Rossi"
+   German: Any field with "NACHNAME" → lastName: extracted value
+   ```
+
+   b) **Given Name Detection Process (using substring matching)**:
+   ```
+   Spanish: Any field with "NOMBRE" → firstName
+     - "NOMBRES: Luis Ignacio" → firstName: "Luis Ignacio"
+     - "PRENOMBRE: Carlos Alberto" → firstName: "Carlos Alberto"
+     - "PRIMER NOMBRE: María" → firstName: "María"
+     - "SEGUNDO NOMBRE: José" (combine if multiple) → firstName: "María José"
+   Portuguese: Any field with "NOME" → firstName
+     - "NOMES: João Carlos" → firstName: "João Carlos"  
+     - "PRENOME: Maria José" → firstName: "Maria José"
+   English: "GIVEN NAMES: Dirk Elric" → firstName: "Dirk Elric"
+   French: Any field with "PRÉNOM" → firstName: "Jean-Pierre"
+   Italian: Any field with "NOME" → firstName: "Marco Antonio"
+   German: Any field with "VORNAME" → firstName: "Hans Peter"
+   ```
+
+   c) **Field Combination Rules**:
+   - Multiple surname fields: Combine with single space in order found
+   - Single surname field: Use exactly as extracted
+   - Multiple given name fields: Combine all into firstName
+   - Preserve all accents, capitalization, and original formatting
+
+4. Document Type Translation:
+   - Identify the document type and translate to Spanish equivalents:
+     * Germany: Personalausweis → documento de identidad personal
+     * Italy: Carta d'Identità → tarjeta de identidad
+     * France: Carte d'identité → tarjeta de identidad
+     * UK: Various types → Permiso de Residencia Biométrico, etc.
+     * Portugal: Cartão de Cidadão → tarjeta de ciudadano
+     * Netherlands: Identiteitskaart → tarjeta de identidad
+     * Sweden/Norway: ID-kort → tarjeta de identidad
+     * Poland: Dowód osobisty → documento personal
+
+5. Country Field Extraction:
+   - Extract identification number exactly as formatted in the document
+   - Determine both fields carefully:
+     * country_issuer: the country that issued the document
+     * nationality: the country where the person was born (from place of birth field)
+
+6. Critical Pattern-Based Mapping:
+   - **NEVER use text order** to determine firstName vs lastName
+   - **ALWAYS use field labels** when available
+   - **Validate extraction** against detected patterns
+   - **Multi-language examples**:
+     
+     ```
+     Colombian Cédula:
+     Text: "APELLIDOS: HERNÁNDEZ DÍAZ NOMBRES: LUIS IGNACIO"
+     Correct mapping: firstName: "LUIS IGNACIO", lastName: "HERNÁNDEZ DÍAZ"
+     
+     Peruvian DNI:
+     Text: "PRIMER APELLIDO: GARCÍA SEGUNDO APELLIDO: LÓPEZ NOMBRES: CARLOS ALBERTO"
+     Correct mapping: firstName: "CARLOS ALBERTO", lastName: "GARCÍA LÓPEZ"
+     
+     US Passport:
+     Text: "Surname: ADAMS Given Names: DIRK ELRIC"
+     Correct mapping: firstName: "DIRK ELRIC", lastName: "ADAMS"
+     
+     Italian ID:
+     Text: "COGNOME: ROSSI NOME: MARCO ANTONIO"
+     Correct mapping: firstName: "MARCO ANTONIO", lastName: "ROSSI"
+     ```
+
+7. Mandatory Validation Process:
+   - After extraction, verify each field against detected patterns
+   - If firstName contains value that came from surname pattern, flag for review
+   - If lastName contains value that came from given name pattern, flag for review
+   - Document any corrections in the message field
+   - Assign confidence scores based on pattern detection success
+
+8. Image Document and OCR Considerations:
+   - Always attempt extraction regardless of document quality
+   - Look for field labels and patterns even in poor quality images
+   - Use document structure and layout to identify field relationships
+   - Prioritize pattern matching over text quality assumptions
+
+9. Confidence Assessment:
+   - Evaluate pattern detection success for each extracted value
+   - ALWAYS include scores in final output as a separate "confidenceScores" object
+   - Scoring based on pattern detection accuracy:
+     * 95-100: Clear field labels found, successful pattern matching
+     * 85-94: Field labels found but some extraction ambiguity
+     * 70-84: Partial pattern matching, some inference required
+     * Below 70: Poor pattern detection, requires manual review
+
+10. Step-by-Step Universal Extraction Process:
+    1. Scan document text for ALL possible surname field patterns
+    2. Scan document text for ALL possible given name field patterns
+    3. Identify which patterns are present in this specific document
+    4. Extract values using detected patterns (ignore text order/position)
+    5. Combine multi-field surnames if multiple surname patterns found
+    6. Validate extraction against pattern detection results
+    7. Apply confidence scoring based on pattern detection success
+    8. Generate final JSON with pattern validation notes
+
+# Required Output Format
+```json
+{
+  "path": "$pdf_path",
+  "result": {
+    "firstName": "",
+    "lastName": "",
+    "country_issuer": "",
+    "nationality": "",
+    "identificationType": "",
+    "identificationNumber": "",
+    "message": ""
+  },
+  "confidenceScores": {
+    "firstName": 95,
+    "lastName": 90,
+    "country_issuer": 85,
+    "nationality": 80,
+    "identificationType": 90,
+    "identificationNumber": 100
+  },
+  "document_type": "$document_type",
+  "document_number": "$document_number",
+  "category": "$category"
+}
+```
+
+Remember to provide detailed reasoning about:
+1. Which field patterns you detected in the document text
+2. How you mapped specific text sections to firstName/lastName using patterns
+3. Any multi-field combinations you performed
+4. Pattern validation checks you completed
+5. Why you assigned specific confidence scores
+
+Only return the data collected in the required JSON format after showing your pattern-based reasoning.

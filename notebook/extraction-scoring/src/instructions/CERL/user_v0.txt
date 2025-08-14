@@ -1,0 +1,69 @@
+Extract company data from the provided JSON document following these strict guidelines:
+
+# Extraction Requirements
+1. Document Processing:
+   - Input is a JSON with document_number, document_type, category, text, and path
+   - Documents may be in Spanish, Portuguese, or English
+   - Preserve original language terms in company names, addresses, and relationship types
+
+2. Data Normalization:
+   - Convert all dates to YYYY-MM-DD format
+   - Format addresses as "[Primary Address] - [Type] de [Name]" (e.g., "Calle Siempre Viva 123 - Municipio de San Isidro")
+   - Handle anonymized data by extracting firstName, lastName, and identificationNumber with asterisks
+   - Extract company size from "Tamaño de la empresa" section
+
+3. Related Party Handling:
+   - List each occurrence separately with complete information
+   - Preserve exact relationshipType terminology from document
+   - Include all occurrences when a person appears multiple times
+   - For anonymized entries (e.g., "ACEPTACION SIN**********"), split name components and preserve asterisks in identificationNumber
+
+4. Validation:
+   - Verify against CERL schema.json
+   - Ensure all required fields are present
+   - Confirm dates are properly formatted
+   - Check taxId follows the pattern ^[0-9.\-]+$$
+
+# Required Output
+```json
+{
+  "path": "$pdf_path",
+  "result": {
+    "companyName": "",
+    "companyType": "",
+    "country": "",
+    "documentType": "",
+    "taxId": "",
+    "mainAddress": "",
+    "incorporationDate": "",
+    "companyDuration": "",
+    "registrationNumber": "",
+    "size": "",
+    "relatedParties": [
+      {
+        "firstName": "",
+        "lastName": "",
+        "identificationType": "",
+        "identificationNumber": "",
+        "relationshipType": ""
+      }
+    ],
+    "embargoes": "",
+    "liquidations": "",
+    "documentIssueDate": "",
+    "lastRegistrationRenewalDate": ""
+  },
+  "document_type": "$document_type",
+  "document_number": "$document_number",
+  "category": "$category"
+}
+```
+
+Think step-by-step to ensure accurate extraction and proper JSON formatting:
+1. Analyze the document structure to identify key sections
+2. Extract company information systematically
+3. Process related parties one by one
+4. Validate the draft JSON against schema requirements
+5. Make necessary corrections before finalizing
+
+Only return the data collected in the required JSON format.

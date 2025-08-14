@@ -1,0 +1,33 @@
+{
+  "ResponseMetadata": {
+    "RequestId": "beead0bf-678b-42ee-917f-337016522ea0",
+    "HTTPStatusCode": 200,
+    "HTTPHeaders": {
+      "date": "Thu, 05 Jun 2025 16:26:00 GMT",
+      "content-type": "application/json",
+      "content-length": "2822",
+      "connection": "keep-alive",
+      "x-amzn-requestid": "beead0bf-678b-42ee-917f-337016522ea0"
+    },
+    "RetryAttempts": 0
+  },
+  "output": {
+    "message": {
+      "role": "assistant",
+      "content": [
+        {
+          "text": "Here's my step-by-step reasoning for extracting the required information:\n\n1. **Document Processing**: The input JSON contains a single document with a `document_content` field that holds the text of the document. The document appears to be a PDF file containing a Registro Único de Beneficiarios Finales (RUB) form.\n\n2. **Document Validation**: The document contains tabular data in a vertical layout, which is the expected format for RUB forms. The document also contains an official form header, indicating that it is an official document.\n\n3. **Company Information Extraction**:\n   - `companyName`: The company name is mentioned in the document as \"G4S SECURE SOLUTIONS COLOMBIA S A.\" (confidence score: 95)\n   - `documentType`: The document type is not explicitly mentioned, but based on the content, it appears to be a RUB form (confidence score: 90)\n   - `taxId`: The tax ID (NIT) is mentioned in the document as \"860013951\" (confidence score: 100)\n   - `country`: The country is not explicitly mentioned, but based on the document type and tax ID, it can be inferred that the country is Colombia (confidence score: 100)\n\n4. **Related Party Extraction**:\n   - There is only one related party mentioned in the document:\n     * `firstName`: \"DAVID ISAAC\"\n     * `lastName`: \"BUCKMAN\"\n     * `identificationType`: \"Cédula de Extranjería\"\n     * `identificationNumber`: \"19740758\"\n     * `noveltyType`: \"Registro\"\n     * `participationPercentage`: Not mentioned in the document (confidence score: 0)\n\n5. **Confidence Assessment**: The overall confidence score for the related party extraction is 85, as the participation percentage is not mentioned in the document.\n\nHere is the extracted data in the required JSON format:\n\n```json\n{\n  \"path\": \"../../shared/file_examples/RUB/860013951/374416_RUB_2024-08-20.pdf\",\n  \"result\": {\n    \"companyName\": \"G4S SECURE SOLUTIONS COLOMBIA S A.\",\n    \"country\": \"Colombia\",\n    \"documentType\": \"RUB\",\n    \"taxId\": \"860013951\",\n    \"relatedParties\": [\n      {\n        \"firstName\": \"DAVID ISAAC\",\n        \"lastName\": \"BUCKMAN\",\n        \"identificationType\": \"Cédula de Extranjería\",\n        \"identificationNumber\": \"19740758\",\n        \"noveltyType\": \"Registro\",\n        \"participationPercentage\": \"\"\n      }\n    ]\n  },\n  \"confidenceScores\": {\n    \"companyName\": 95,\n    \"documentType\": 90,\n    \"country\": 100,\n    \"taxId\": 100,\n    \"relatedParties\": 85\n  },\n  \"document_type\": \"company\",\n  \"document_number\": \"860013951\",\n  \"category\": \"RUB\"\n}\n```"
+        }
+      ]
+    }
+  },
+  "stopReason": "end_turn",
+  "usage": {
+    "inputTokens": 11510,
+    "outputTokens": 640,
+    "totalTokens": 12150
+  },
+  "metrics": {
+    "latencyMs": 13887
+  }
+}

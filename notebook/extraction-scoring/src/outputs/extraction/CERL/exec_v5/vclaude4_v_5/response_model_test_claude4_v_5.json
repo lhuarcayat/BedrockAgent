@@ -1,0 +1,35 @@
+{
+  "ResponseMetadata": {
+    "RequestId": "ddae7a71-2ad2-4c9a-81ce-41f474f90986",
+    "HTTPStatusCode": 200,
+    "HTTPHeaders": {
+      "date": "Mon, 09 Jun 2025 17:34:18 GMT",
+      "content-type": "application/json",
+      "content-length": "6268",
+      "connection": "keep-alive",
+      "x-amzn-requestid": "ddae7a71-2ad2-4c9a-81ce-41f474f90986"
+    },
+    "RetryAttempts": 0
+  },
+  "output": {
+    "message": {
+      "role": "assistant",
+      "content": [
+        {
+          "text": "Let me analyze this document step by step:\n\n## Step-by-Step Reasoning\n\n1. **Initial Analysis & Page Count**: \n   - Document shows \"HOJA : 1 DE 6\", \"HOJA:2DE\", \"HOJA : 3 DE\", \"HOJA : 4 DE\", \"HOJA i 5 DE\", \"HOJA : 6 DE 6\"\n   - Manual page count: 6 pages\n   - Party line count using regex: Found multiple \"APODERADO\", \"REPRESENTANTE\", \"REVISOR FISCAL\" entries - approximately 8-10 distinct party mentions\n\n2. **Company Information Extraction**:\n   - Company Name: \"GEOKINET1CS INTERNATIONAL, INC\" (with OCR error, should be \"GEOKINETICS INTERNATIONAL, INC\")\n   - Company Type: This is a \"SUCURSAL\" (branch office) of a foreign company\n   - Country: \"COLOMBIA\" (based on document format and Cámara de Comercio de Bogotá)\n   - Tax ID: \"860006152-8\" (matches pattern ^[0-9.\\-]+$)\n   - Document Type: Certificate from Cámara de Comercio (commercial registry)\n\n3. **Address Extraction**:\n   - Primary address: \"CALLE 100N. 19 - 54 OFICINA 604\"\n   - Municipality: \"BOGOTA D.C.\"\n   - Combined: \"CALLE 100N. 19 - 54 OFICINA 604, BOGOTA D.C.\"\n\n4. **Date Processing**:\n   - Incorporation: \"4 DE FEBRERO DE 1.963\" → \"1963-02-04\"\n   - Company Duration: \"HASTA EL 4 DE FEBRERO DE 2462\" → This is clearly an OCR error (2462 should be 2062)\n   - Corrected duration: \"2062-02-04\"\n   - Document issue date: \"16 DE ABRIL DE 2009\" → \"2009-04-16\"\n\n5. **Registration Details**:\n   - Registration number: \"C0018259\"\n   - Size: Not explicitly mentioned in \"Tamaño de la empresa\" section\n\n6. **Related Parties Extraction** (scanning all 6 pages):\n   - JORGE ENRIQUE RODRIGUEZ ROJAS (C.C. 17144874) - Apoderado General Principal\n   - NARCISO MANUEL CHIQUILLO CONDE (C.C. 17124736) - Primer Suplente del Apoderado General Principal\n   - JOSE MANUEL TAMAYO OLARTE (C.C. 19303534) - Segundo Suplente del Apoderado General Principal\n   - VICTOR MAURICIO GOMEZ GUTIERREZ (C.C. 80414776) - Apoderado (from 2007)\n   - RAFAEL CASTILLO CHARRY (C.C. 79370170) - Apoderado (from 2009)\n   - ERNST & YOUNG AUDIT LTDA (NIT 860008905) - Revisor Fiscal\n   - EDWIN RENE VARGAS SALGADO - Revisor Fiscal Suplente\n   - RUTH MARITZA FALLA MONTEALEGRE (C.C. 36312389) - Revisor Fiscal Principal\n   - [Name with C.C. 79791291] - Revisor Fiscal (partially visible)\n\n7. **Data Validation**:\n   - All required fields present\n   - Dates properly formatted\n   - Tax ID follows required pattern\n   - Company duration corrected from obvious OCR error (2462 → 2062)\n\n8. **Confidence Assessment**:\n   - Most fields have high confidence (85-100)\n   - Company duration reduced to 60 due to OCR correction\n   - Related parties confidence at 80 due to some partially visible entries\n\n```json\n{\n  \"path\": \"document.pdf\",\n  \"result\": {\n    \"companyName\": \"GEOKINETICS INTERNATIONAL, INC\",\n    \"companyType\": \"Sucursal Extranjera\",\n    \"country\": \"COLOMBIA\",\n    \"document_pages\": 6,\n    \"documentType\": \"Certificado de Existencia y Representación Legal\",\n    \"taxId\": \"860006152-8\",\n    \"mainAddress\": \"CALLE 100N. 19 - 54 OFICINA 604, BOGOTA D.C.\",\n    \"incorporationDate\": \"1963-02-04\",\n    \"companyDuration\": \"2062-02-04\",\n    \"registrationNumber\": \"C0018259\",\n    \"size\": \"\",\n    \"relatedParties\": [\n      {\n        \"firstName\": \"JORGE ENRIQUE\",\n        \"lastName\": \"RODRIGUEZ ROJAS\",\n        \"identificationType\": \"C.C.\",\n        \"identificationNumber\": \"000000017144874\",\n        \"relationshipType\": \"Apoderado General Principal\"\n      },\n      {\n        \"firstName\": \"NARCISO MANUEL\",\n        \"lastName\": \"CHIQUILLO CONDE\",\n        \"identificationType\": \"C.C.\",\n        \"identificationNumber\": \"000000017124736\",\n        \"relationshipType\": \"Primer Suplente del Apoderado General Principal\"\n      },\n      {\n        \"firstName\": \"JOSE MANUEL\",\n        \"lastName\": \"TAMAYO OLARTE\",\n        \"identificationType\": \"C.C.\",\n        \"identificationNumber\": \"000000019303534\",\n        \"relationshipType\": \"Segundo Suplente del Apoderado General Principal\"\n      },\n      {\n        \"firstName\": \"VICTOR MAURICIO\",\n        \"lastName\": \"GOMEZ GUTIERREZ\",\n        \"identificationType\": \"C.C.\",\n        \"identificationNumber\": \"80.414.776\",\n        \"relationshipType\": \"Apoderado\"\n      },\n      {\n        \"firstName\": \"RAFAEL\",\n        \"lastName\": \"CASTILLO CHARRY\",\n        \"identificationType\": \"C.C.\",\n        \"identificationNumber\": \"79370170\",\n        \"relationshipType\": \"Apoderado\"\n      },\n      {\n        \"companyName\": \"ERNST & YOUNG AUDIT LTDA\",\n        \"identificationType\": \"N.I.T.\",\n        \"identificationNumber\": \"OOOOO86OOC889O5\",\n        \"relationshipType\": \"Revisor Fiscal\"\n      },\n      {\n        \"firstName\": \"EDWIN RENE\",\n        \"lastName\": \"VARGAS SALGADO\",\n        \"identificationType\": \"\",\n        \"identificationNumber\": \"\",\n        \"relationshipType\": \"Revisor Fiscal Suplente\"\n      },\n      {\n        \"firstName\": \"RUTH MARITZA\",\n        \"lastName\": \"FALLA MONTEALEGRE\",\n        \"identificationType\": \"C.C.\",\n        \"identificationNumber\": \"0000000363I2389\",\n        \"relationshipType\": \"Revisor Fiscal Principal\"\n      }\n    ],\n    \"embargoes\": \"\",\n    \"liquidations\": \"\",\n    \"documentIssueDate\": \"2009-04-16\",\n    \"lastRegistrationRenewalDate\": \"\"\n  },\n  \"confidenceScores\": {\n    \"companyName\": 95,\n    \"companyType\": 90,\n    \"country\": 100,\n    \"document_pages\": 100,\n    \"taxId\": 100,\n    \"mainAddress\": 90,\n    \"incorporationDate\": 95,\n    \"companyDuration\": 60,\n    \"registrationNumber\": 100,\n    \"size\": 0,\n    \"relatedParties\": 80\n  },\n  \"document_type\": \"company\",\n  \"document_number\": \"860006152\",\n  \"category\": \"CERL\"\n}\n```"
+        }
+      ]
+    }
+  },
+  "stopReason": "end_turn",
+  "usage": {
+    "inputTokens": 24120,
+    "outputTokens": 1918,
+    "totalTokens": 26038,
+    "cacheReadInputTokens": 0,
+    "cacheWriteInputTokens": 0
+  },
+  "metrics": {
+    "latencyMs": 37196
+  }
+}

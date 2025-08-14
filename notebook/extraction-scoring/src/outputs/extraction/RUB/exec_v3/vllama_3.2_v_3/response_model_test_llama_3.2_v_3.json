@@ -1,0 +1,33 @@
+{
+  "ResponseMetadata": {
+    "RequestId": "d5af543b-cb37-466b-8e2d-f038e738fc20",
+    "HTTPStatusCode": 200,
+    "HTTPHeaders": {
+      "date": "Thu, 05 Jun 2025 16:40:29 GMT",
+      "content-type": "application/json",
+      "content-length": "5505",
+      "connection": "keep-alive",
+      "x-amzn-requestid": "d5af543b-cb37-466b-8e2d-f038e738fc20"
+    },
+    "RetryAttempts": 0
+  },
+  "output": {
+    "message": {
+      "role": "assistant",
+      "content": [
+        {
+          "text": "Here's my step-by-step reasoning for extracting the required information:\n\n1. **Document Processing**: The input JSON contains a single document with a content field that includes the text of the document. The document appears to be in Spanish.\n\n2. **Document Validation**: The document contains tabular data in a vertical layout, which is the only part we need to process. The document seems to be an official form, so we can proceed with extracting the required information.\n\n3. **Company Information Extraction**:\n   - **companyName**: The company name is mentioned in the text as \"PAR SERVICIOS INTEGRALES S A\".\n   - **documentType**: The document type is not explicitly mentioned, but based on the content, it appears to be a \"NIT\" document.\n   - **taxId**: The tax ID is mentioned in the text as \"830067329\".\n   - **country**: The country is not explicitly mentioned, but based on the document type \"NIT\", we can infer that the country is \"Colombia\" using the COMPANY_ID hash table.\n\n4. **Related Party Extraction**:\n   - We can see multiple rows in the table, each representing a related party. We will extract each party's information separately.\n   - For each party, we extract the following information:\n     * **firstName**: The first name is mentioned in the text, e.g., \"ANDRES LEONARDO\".\n     * **lastName**: The last name is mentioned in the text, e.g., \"RODRIGUEZ RAMIREZ\".\n     * **identificationType**: The identification type is mentioned in the text as \"Cédula de Ciudadanía\".\n     * **identificationNumber**: The identification number is mentioned in the text, e.g., \"80074122\".\n     * **noveltyType**: The novelty type is mentioned in the text as \"Capital y Derechos de Registro\".\n     * **participationPercentage**: The participation percentage is mentioned in the text, e.g., \"14.99\".\n\n5. **Data Normalization**:\n   - We convert the dates to the YYYY-MM-DD format, but there are no dates to convert in this case.\n   - We handle anonymized data by preserving asterisks in identificationNumber, but there are no anonymized identification numbers in this case.\n\n6. **Validation**:\n   - We compare our extraction against the RUB schema.json requirements and ensure that all required fields are present.\n\n7. **Confidence Assessment**:\n   - We evaluate the certainty of each extracted value and assign scores based on the confidence level.\n\nHere is the extracted data in the required JSON format:\n\n```json\n{\n  \"path\": \"../../shared/file_examples/RUB/830067329/377850_RUB_2024-11-05.pdf\",\n  \"result\": {\n    \"companyName\": \"PAR SERVICIOS INTEGRALES S A\",\n    \"country\": \"Colombia\",\n    \"documentType\": \"NIT\",\n    \"taxId\": \"830067329\",\n    \"relatedParties\": [\n      {\n        \"firstName\": \"ANDRES LEONARDO\",\n        \"lastName\": \"RODRIGUEZ RAMIREZ\",\n        \"identificationType\": \"Cédula de Ciudadanía\",\n        \"identificationNumber\": \"80074122\",\n        \"noveltyType\": \"Capital y Derechos de Registro\",\n        \"participationPercentage\": \"14.99\"\n      },\n      {\n        \"firstName\": \"LUIS ALBERTO\",\n        \"lastName\": \"RODRIGUEZ SAMUDIO\",\n        \"identificationType\": \"Cédula de Ciudadanía\",\n        \"identificationNumber\": \"19193304\",\n        \"noveltyType\": \"Capital y Derechos de Registro\",\n        \"participationPercentage\": \"29.98\"\n      },\n      {\n        \"firstName\": \"DIANA PAOLA\",\n        \"lastName\": \"RODRIGUEZ RAMIREZ\",\n        \"identificationType\": \"Cédula de Ciudadanía\",\n        \"identificationNumber\": \"52817177\",\n        \"noveltyType\": \"Capital y Derechos de Registro\",\n        \"participationPercentage\": \"14.99\"\n      },\n      {\n        \"firstName\": \"ESTEFANIA\",\n        \"lastName\": \"CORREDOR RODRIGUEZ\",\n        \"identificationType\": \"Cédula de Ciudadanía\",\n        \"identificationNumber\": \"1019026903\",\n        \"noveltyType\": \"Capital y Derechos de Registro\",\n        \"participationPercentage\": \"5.02\"\n      },\n      {\n        \"firstName\": \"LUIS MIGUEL\",\n        \"lastName\": \"ZUBIETA URIBE\",\n        \"identificationType\": \"Cédula de Ciudadanía\",\n        \"identificationNumber\": \"79939362\",\n        \"noveltyType\": \"Capital y Derechos de Registro\",\n        \"participationPercentage\": \"14.99\"\n      },\n      {\n        \"firstName\": \"CAROLINA\",\n        \"lastName\": \"CORREDOR RODRIGUEZ\",\n        \"identificationType\": \"Cédula de Ciudadanía\",\n        \"identificationNumber\": \"52799584\",\n        \"noveltyType\": \"Capital y Derechos de Registro\",\n        \"participationPercentage\": \"5.02\"\n      },\n      {\n        \"firstName\": \"ENRIQUE\",\n        \"lastName\": \"MERCADO IDARRAGA\",\n        \"identificationType\": \"Cédula de Ciudadanía\",\n        \"identificationNumber\": \"80134782\",\n        \"noveltyType\": \"Capital y Derechos de Registro\",\n        \"participationPercentage\": \"10.05\"\n      }\n    ]\n  },\n  \"confidenceScores\": {\n    \"companyName\": 95,\n    \"documentType\": 90,\n    \"country\": 100,\n    \"taxId\": 100,\n    \"relatedParties\": 85\n  },\n  \"document_type\": \"company\",\n  \"document_number\": \"830067329\",\n  \"category\": \"RUB\"\n}\n```"
+        }
+      ]
+    }
+  },
+  "stopReason": "end_turn",
+  "usage": {
+    "inputTokens": 7153,
+    "outputTokens": 1255,
+    "totalTokens": 8408
+  },
+  "metrics": {
+    "latencyMs": 22912
+  }
+}

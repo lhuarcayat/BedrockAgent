@@ -1,0 +1,33 @@
+{
+  "ResponseMetadata": {
+    "RequestId": "86dfe122-3add-4149-bda0-a99b1d635b79",
+    "HTTPStatusCode": 200,
+    "HTTPHeaders": {
+      "date": "Tue, 03 Jun 2025 20:13:55 GMT",
+      "content-type": "application/json",
+      "content-length": "4527",
+      "connection": "keep-alive",
+      "x-amzn-requestid": "86dfe122-3add-4149-bda0-a99b1d635b79"
+    },
+    "RetryAttempts": 0
+  },
+  "output": {
+    "message": {
+      "role": "assistant",
+      "content": [
+        {
+          "text": "To solve this task, I will follow the given guidelines step-by-step.\n\n1. **Document Analysis**:\n   - The document is a certificate of existence and legal representation issued by the Chamber of Commerce of Bogotá.\n   - It contains information about a company named \"GEOINETICS INTERNATIONAL, INC.\" with tax ID \"860006152-8\".\n\n2. **Company Information Extraction**:\n   - **Company Name**: \"GEOINETICS INTERNATIONAL, INC.\"\n   - **Company Type**: The document doesn't explicitly state the company type, but it mentions it's a \"SUCURSAL\" (branch) of a foreign company, indicating it's a foreign company branch or \"Sucursal Extranjera\".\n   - **Tax ID**: \"860006152-8\"\n   - **Country**: Colombia, as it's registered in the Chamber of Commerce of Bogotá.\n   - **Main Address**: \"CALLE 100 N. 19 - 54 OFICINA 604, BOGOTA D.C.\"\n   - **Incorporation Date**: The initial incorporation date is \"1972-04-28\" (date of registration), but the company has undergone several name changes and restructurings.\n\n3. **Date Normalization**:\n   - **Incorporation Date**: \"1972-04-28\" (YYYY-MM-DD format)\n   - **Company Duration**: \"2462-02-04\" (until February 4, 2462, as per the document)\n\n4. **Registration Details**:\n   - **Registration Number**: \"C0018259\"\n   - **Size**: Not explicitly mentioned.\n\n5. **Related Parties Handling**:\n   - The document lists several related parties with their roles:\n     - **Jorge Enrique Rodriguez Rojas**: Apoderado General Principal\n     - **Narciso Manuel Chiquillo Conde**: Primer Suplente del Apoderado General Principal\n     - **Jose Manuel Tamayo Olarte**: Segundo Suplente del Apoderado General Principal\n     - Various other individuals are mentioned as having been appointed as representatives or having powers granted to them at different times.\n\n6. **Optional Fields**:\n   - **Document Issue Date**: \"2009-04-16\" (date of the certificate)\n   - **Last Registration Renewal Date**: Not explicitly mentioned.\n\n7. **Validation and Confidence Scoring**:\n   - All mandatory fields are present or have been inferred.\n   - Dates are in the correct format.\n   - The tax ID matches the required pattern.\n\nGiven the information and following the required JSON format, here is the extracted data:\n\n```json\n{\n  \"companyName\": \"GEOINETICS INTERNATIONAL, INC.\",\n  \"companyType\": \"Sucursal Extranjera\",\n  \"country\": \"Colombia\",\n  \"document_pages\": 6,\n  \"documentType\": \"NIT\",\n  \"taxId\": \"860006152-8\",\n  \"mainAddress\": \"CALLE 100 N. 19 - 54 OFICINA 604 - Municipio de BOGOTA D.C.\",\n  \"incorporationDate\": \"1972-04-28\",\n  \"companyDuration\": \"2462-02-04\",\n  \"registrationNumber\": \"C0018259\",\n  \"size\": \"\",\n  \"relatedParties\": [\n    {\n      \"firstName\": \"Jorge Enrique\",\n      \"lastName\": \"Rodriguez Rojas\",\n      \"identificationType\": \"C.C.\",\n      \"identificationNumber\": \"17448874\",\n      \"relationshipType\": \"Apoderado General Principal\",\n      \"participationPercentage\": \"\"\n    },\n    {\n      \"firstName\": \"Narciso Manuel\",\n      \"lastName\": \"Chiquillo Conde\",\n      \"identificationType\": \"C.C.\",\n      \"identificationNumber\": \"17124736\",\n      \"relationshipType\": \"Primer Suplente del Apoderado General Principal\",\n      \"participationPercentage\": \"\"\n    },\n    {\n      \"firstName\": \"Jose Manuel\",\n      \"lastName\": \"Tamayo Olarte\",\n      \"identificationType\": \"C.C.\",\n      \"identificationNumber\": \"19303534\",\n      \"relationshipType\": \"Segundo Suplente del Apoderado General Principal\",\n      \"participationPercentage\": \"\"\n    },\n    {\n      \"firstName\": \"Rafael\",\n      \"lastName\": \"Castillo Charry\",\n      \"identificationType\": \"C.C.\",\n      \"identificationNumber\": \"79370120\",\n      \"relationshipType\": \"Apoderado\",\n      \"participationPercentage\": \"\"\n    },\n    {\n      \"firstName\": \"Victor\",\n      \"lastName\": \"Gomez Gutierrez\",\n      \"identificationType\": \"C.C.\",\n      \"identificationNumber\": \"80414776\",\n      \"relationshipType\": \"Apoderado\",\n      \"participationPercentage\": \"\"\n    }\n  ],\n  \"embargoes\": \"\",\n  \"liquidations\": \"\",\n  \"documentIssueDate\": \"2009-04-16\",\n  \"lastRegistrationRenewalDate\": \"\"\n}\n```"
+        }
+      ]
+    }
+  },
+  "stopReason": "end_turn",
+  "usage": {
+    "inputTokens": 18610,
+    "outputTokens": 1038,
+    "totalTokens": 19648
+  },
+  "metrics": {
+    "latencyMs": 6068
+  }
+}

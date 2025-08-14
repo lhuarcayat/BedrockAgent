@@ -1,0 +1,35 @@
+{
+  "ResponseMetadata": {
+    "RequestId": "807798f6-47fa-41b9-abf2-18592ddd85ce",
+    "HTTPStatusCode": 200,
+    "HTTPHeaders": {
+      "date": "Thu, 05 Jun 2025 16:26:23 GMT",
+      "content-type": "application/json",
+      "content-length": "2337",
+      "connection": "keep-alive",
+      "x-amzn-requestid": "807798f6-47fa-41b9-abf2-18592ddd85ce"
+    },
+    "RetryAttempts": 0
+  },
+  "output": {
+    "message": {
+      "role": "assistant",
+      "content": [
+        {
+          "text": "Looking at this document, I need to analyze it step by step to extract the required information.\n\n## Step-by-Step Reasoning:\n\n1. **Document Analysis**: This appears to be a RUB (Registro Único de Beneficiarios Finales) document from DIAN Colombia. The document contains both informational content and actual form data.\n\n2. **Page Structure**: The document has multiple sections - an informational \"ABECÉ\" section explaining what RUB is, followed by actual form data with tabular information.\n\n3. **Company Information Extraction**:\n   - **Company Name**: Found \"G4S SECURE SOLUTIONS COLOMBIA S A.\" in multiple places in the form\n   - **Tax ID**: Found \"860013951\" as the NIT number\n   - **Document Type**: \"NIT\" (standard for Colombian companies)\n   - **Country**: \"Colombia\" (inferred from NIT document type and DIAN context)\n\n4. **Related Parties Analysis**: \n   - Found one beneficiary in the tabular data: \"DAVID ISAAC BUCKMAN\"\n   - **Name parsing**: \"DAVID ISAAC\" as firstName, \"BUCKMAN\" as lastName\n   - **Identification**: \"Cédula de Extranjería\" type with number \"19740758\"\n   - **Novelty Type**: \"Registro\" (found in the detailed report section)\n   - **Participation**: \"0\" percent (explicitly shown in the detailed report)\n\n5. **Data Validation**: The document contains official tabular data with all required fields present, so this is a valid RUB document requiring full extraction.\n\n6. **Confidence Assessment**: High confidence for most fields as they are clearly stated in official form sections.\n\n```json\n{\n  \"companyName\": \"G4S SECURE SOLUTIONS COLOMBIA S A.\",\n  \"country\": \"Colombia\",\n  \"documentType\": \"NIT\",\n  \"taxId\": \"860013951\",\n  \"relatedParties\": [\n    {\n      \"firstName\": \"DAVID ISAAC\",\n      \"lastName\": \"BUCKMAN\",\n      \"identificationType\": \"Cédula de Extranjería\",\n      \"identificationNumber\": \"19740758\",\n      \"noveltyType\": \"Registro\",\n      \"participationPercentage\": \"0\"\n    }\n  ]\n}\n```"
+        }
+      ]
+    }
+  },
+  "stopReason": "end_turn",
+  "usage": {
+    "inputTokens": 12891,
+    "outputTokens": 542,
+    "totalTokens": 13433,
+    "cacheReadInputTokens": 0,
+    "cacheWriteInputTokens": 0
+  },
+  "metrics": {
+    "latencyMs": 21822
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "ResponseMetadata": {
+    "RequestId": "77893b96-712a-453a-b03d-984ef435b900",
+    "HTTPStatusCode": 200,
+    "HTTPHeaders": {
+      "date": "Thu, 05 Jun 2025 03:29:07 GMT",
+      "content-type": "application/json",
+      "content-length": "3690",
+      "connection": "keep-alive",
+      "x-amzn-requestid": "77893b96-712a-453a-b03d-984ef435b900"
+    },
+    "RetryAttempts": 0
+  },
+  "output": {
+    "message": {
+      "role": "assistant",
+      "content": [
+        {
+          "text": "Here's my step-by-step reasoning for extracting the company data from the provided JSON document:\n\n1. **Document Processing**: The input JSON contains a document with a single page. I will analyze the document structure to identify the relevant information.\n\n2. **Company Name Extraction**: I found the company name \"FARMACIA INSTITUCIONAL S A S\" in the document content.\n\n3. **Country Extraction**: I looked for explicit mentions of the country in the document and found \"COLOMBIA\". I will use this value as the country.\n\n4. **Document Type Extraction**: I found the document type \"NIT\" in the document content.\n\n5. **Tax ID Extraction**: I found the tax ID \"14699744621\" in the document content.\n\n6. **Verification Digit Extraction**: I found the verification digit \"X\" in the document content, which follows the tax ID.\n\n7. **Person Type Extraction**: I found the person type \"Persona Jurídica\" in the document content.\n\n8. **Address Extraction**: I found the address \"KM 34 AUT TUNJA ENTRADA NORTE VEREDA SAN MARTIN LT EL CHARCO DIAGONAL A LA FABRICA DE PAPEL, Gachancipa, Cundinamarca\" in the document content.\n\n9. **Document Generation Date Extraction**: I found the document generation date \"2021-02-08\" in the document content.\n\n10. **Related Parties Extraction**: Since the document has multiple pages, I will extract the related parties. I found several related parties, including \"TOVAR OSORIO ALEXANDER\", \"VALDERRAMA ESQUIVEL WILIAN ANDRES\", and others.\n\n11. **Validation**: I compared my extraction against the RUT schema.json requirements and ensured that all required fields are present.\n\n12. **Confidence Assessment**: I evaluated the certainty of each extracted value and assigned scores based on the confidence level.\n\nHere is the final JSON output with the extracted information:\n\n```json\n{\n  \"path\": \"\",\n  \"result\": {\n    \"companyName\": \"FARMACIA INSTITUCIONAL S A S\",\n    \"country\": \"COLOMBIA\",\n    \"documentType\": \"NIT\",\n    \"taxId\": \"14699744621\",\n    \"verificationDigit\": \"X\",\n    \"personType\": \"Persona Jurídica\",\n    \"relatedParties\": [\n      {\n        \"firstName\": \"TOVAR\",\n        \"lastName\": \"OSORIO ALEXANDER\",\n        \"identificationType\": \"Cédula de Ciudadanía\",\n        \"identificationNumber\": \"1380230151\",\n        \"relationshipType\": \"Representante legal\"\n      },\n      {\n        \"firstName\": \"VALDERRAMA\",\n        \"lastName\": \"ESQUIVEL WILIAN ANDRES\",\n        \"identificationType\": \"Cédula de Ciudadanía\",\n        \"identificationNumber\": \"1379663905\",\n        \"relationshipType\": \"Revisor Fiscal y Contador\"\n      },\n      {\n        \"firstName\": \"TAPIAS\",\n        \"lastName\": \"MENDIETA MILCIADES\",\n        \"identificationType\": \"Cédula de Ciudadanía\",\n        \"identificationNumber\": \"9150734\",\n        \"relationshipType\": \"Contador\"\n      }\n    ],\n    \"address\": \"KM 34 AUT TUNJA ENTRADA NORTE VEREDA SAN MARTIN LT EL CHARCO DIAGONAL A LA FABRICA DE PAPEL, Gachancipa, Cundinamarca\",\n    \"documentGenerationDate\": \"2021-02-08\"\n  },\n  \"confidenceScores\": {\n    \"companyName\": 100,\n    \"documentType\": 100,\n    \"country\": 100,\n    \"taxId\": 100,\n    \"verificationDigit\": 100,\n    \"personType\": 100,\n    \"address\": 100,\n    \"relatedParties\": 95\n  },\n  \"document_type\": \"company\",\n  \"document_number\": \"\",\n  \"category\": \"RUT\"\n}\n```"
+        }
+      ]
+    }
+  },
+  "stopReason": "end_turn",
+  "usage": {
+    "inputTokens": 11259,
+    "outputTokens": 850,
+    "totalTokens": 12109
+  },
+  "metrics": {
+    "latencyMs": 16422
+  }
+}

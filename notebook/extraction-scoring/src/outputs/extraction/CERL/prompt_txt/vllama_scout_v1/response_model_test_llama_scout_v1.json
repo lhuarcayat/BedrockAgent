@@ -1,0 +1,33 @@
+{
+  "ResponseMetadata": {
+    "RequestId": "c42f76fb-7247-4ee9-ba9e-ba322acdba74",
+    "HTTPStatusCode": 200,
+    "HTTPHeaders": {
+      "date": "Wed, 04 Jun 2025 14:56:59 GMT",
+      "content-type": "application/json",
+      "content-length": "5820",
+      "connection": "keep-alive",
+      "x-amzn-requestid": "c42f76fb-7247-4ee9-ba9e-ba322acdba74"
+    },
+    "RetryAttempts": 0
+  },
+  "output": {
+    "message": {
+      "role": "assistant",
+      "content": [
+        {
+          "text": "Here's my step-by-step reasoning for extracting the company data from the provided document:\n\n1. **Document Analysis**: The document appears to be a company registration certificate from the Chamber of Commerce of Bogotá, Colombia. It's written in Spanish.\n\n2. **Page Count**: The document has 6 pages.\n\n3. **Company Information**:\n   - **companyName**: \"GEOINTENETICS INTERNATIONAL, INC.\"\n   - **companyType**: Not explicitly stated, but it's a foreign company (Sucursal Extranjera).\n   - **country**: Colombia (implied by the Chamber of Commerce of Bogotá).\n   - **taxId**: \"860006152-8\"\n   - **documentType**: \"NIT\"\n\n4. **Address Composition**:\n   - **mainAddress**: \"Calle 100 N. 19 - 54 Oficina 604, Bogotá D.C., Municipio de Bogotá D.C.\"\n\n5. **Date Normalization**:\n   - **incorporationDate**: Not explicitly stated for the main company, but there's a mention of \"4 de Febrero de 1963\" for the parent company's establishment.\n   - **companyDuration**: \"Vigencia: hasta el 4 de Febrero de 2462\" (indefinite duration).\n   - **documentIssueDate**: \"16 de Abril de 2009\"\n\n6. **Registration Details**:\n   - **registrationNumber**: \"10: C0018259 del 28 de Abril de 1972\"\n\n7. **Related Parties Handling**:\n   - Multiple related parties are mentioned with their roles and identification numbers.\n\n8. **Optional Fields Handling**:\n   - **embargoes** and **liquidations**: Not mentioned.\n   - **lastRegistrationRenewalDate**: Not explicitly stated.\n\nHere's the extracted data in the required JSON format:\n\n```json\n{\n  \"companyName\": \"GEOINTENETICS INTERNATIONAL, INC.\",\n  \"companyType\": \"Sucursal Extranjera\",\n  \"country\": \"Colombia\",\n  \"document_pages\": 6,\n  \"documentType\": \"NIT\",\n  \"taxId\": \"860006152-8\",\n  \"mainAddress\": \"Calle 100 N. 19 - 54 Oficina 604, Bogotá D.C., Municipio de Bogotá D.C.\",\n  \"incorporationDate\": \"1963-02-04\",\n  \"companyDuration\": \"Indefinida\",\n  \"registrationNumber\": \"10: C0018259\",\n  \"size\": \"\",\n  \"relatedParties\": [\n    {\n      \"firstName\": \"JORGE ENRIQUE\",\n      \"lastName\": \"RODRIGUEZ ROJAS\",\n      \"identificationType\": \"C.C.\",\n      \"identificationNumber\": \"000000017144874\",\n      \"relationshipType\": \"Primer Suplente del Apoderado General Principal\"\n    },\n    {\n      \"firstName\": \"NARCISO MANUEL\",\n      \"lastName\": \"CHIGUILLO CONDE\",\n      \"identificationType\": \"C.C.\",\n      \"identificationNumber\": \"000000017124736\",\n      \"relationshipType\": \"Segundo Suplente del Apoderado General Principal\"\n    },\n    {\n      \"firstName\": \"TAMAYO OLARTE\",\n      \"lastName\": \"JOSE MANUEL\",\n      \"identificationType\": \"C.C.\",\n      \"identificationNumber\": \"000000019303534\",\n      \"relationshipType\": \"\"\n    },\n    {\n      \"firstName\": \"RODRIGUEZ ROJAS\",\n      \"lastName\": \"JORGE ENRIQUE\",\n      \"identificationType\": \"C.C.\",\n      \"identificationNumber\": \"000000017144874\",\n      \"relationshipType\": \"Representante Legal\"\n    },\n    {\n      \"firstName\": \"CHIGUILLO CONDE\",\n      \"lastName\": \"NARCISO MANUEL\",\n      \"identificationType\": \"C.C.\",\n      \"identificationNumber\": \"000000017124736\",\n      \"relationshipType\": \"Apoderado General Principal\"\n    },\n    {\n      \"firstName\": \"CHARRY\",\n      \"lastName\": \"RAFAEL CASIMIRO\",\n      \"identificationType\": \"Cédula de Ciudadanía\",\n      \"identificationNumber\": \"79370170\",\n      \"relationshipType\": \"\"\n    },\n    {\n      \"firstName\": \"NARCISO MANUEL\",\n      \"lastName\": \"CHIGUILLO CONDE\",\n      \"identificationType\": \"C.C.\",\n      \"identificationNumber\": \"17124736\",\n      \"relationshipType\": \"Representante Legal\"\n    },\n    {\n      \"firstName\": \"VICTOR\",\n      \"lastName\": \"LUCURCIO GOMEZ GUTIERREZ\",\n      \"identificationType\": \"Cédula de Ciudadanía\",\n      \"identificationNumber\": \"80414776\",\n      \"relationshipType\": \"\"\n    },\n    {\n      \"firstName\": \"JORGE\",\n      \"lastName\": \"RODRIGUEZ ROJAS\",\n      \"identificationType\": \"C.C.\",\n      \"identificationNumber\": \"17144874\",\n      \"relationshipType\": \"Apoderado General Principal\"\n    },\n    {\n      \"firstName\": \"JOSÉ MANUEL\",\n      \"lastName\": \"TAMAYO OLARTE\",\n      \"identificationType\": \"C.C.\",\n      \"identificationNumber\": \"19303534\",\n      \"relationshipType\": \"Suplente del Apoderado General Principal\"\n    },\n    {\n      \"firstName\": \"EDWIN\",\n      \"lastName\": \"VARGAS SALGADO\",\n      \"identificationType\": \"P.P.\",\n      \"identificationNumber\": \"\",\n      \"relationshipType\": \"Revisor Fiscal Suplente\"\n    },\n    {\n      \"firstName\": \"FALLA\",\n      \"lastName\": \"MONTEALEGRE BURITICA\",\n      \"identificationType\": \"C.C.\",\n      \"identificationNumber\": \"000000036373389\",\n      \"relationshipType\": \"Revisor Fiscal Principal\"\n    },\n    {\n      \"firstName\": \"ERNST & YOUNG\",\n      \"lastName\": \"AUDIT LTDA\",\n      \"identificationType\": \"\",\n      \"identificationNumber\": \"00008600088905\",\n      \"relationshipType\": \"Revisor Fiscal\"\n    },\n    {\n      \"firstName\": \"NARCISO\",\n      \"lastName\": \"MANUEL CHIGUILLO CONDE\",\n      \"identificationType\": \"C.C.\",\n      \"identificationNumber\": \"17124736\",\n      \"relationshipType\": \"Representante Legal\"\n    }\n  ],\n  \"embargoes\": \"\",\n  \"liquidations\": \"\",\n  \"documentIssueDate\": \"2009-04-16\",\n  \"lastRegistrationRenewalDate\": \"\"\n}\n```"
+        }
+      ]
+    }
+  },
+  "stopReason": "end_turn",
+  "usage": {
+    "inputTokens": 18436,
+    "outputTokens": 1425,
+    "totalTokens": 19861
+  },
+  "metrics": {
+    "latencyMs": 12080
+  }
+}

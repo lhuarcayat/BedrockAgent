@@ -1,0 +1,33 @@
+{
+  "ResponseMetadata": {
+    "RequestId": "27798af0-69cb-4b5e-9a0e-cfb2c3bd35d1",
+    "HTTPStatusCode": 200,
+    "HTTPHeaders": {
+      "date": "Wed, 04 Jun 2025 18:00:31 GMT",
+      "content-type": "application/json",
+      "content-length": "3250",
+      "connection": "keep-alive",
+      "x-amzn-requestid": "27798af0-69cb-4b5e-9a0e-cfb2c3bd35d1"
+    },
+    "RetryAttempts": 0
+  },
+  "output": {
+    "message": {
+      "role": "assistant",
+      "content": [
+        {
+          "text": "1. **Page Count**: The document seems to have 6 pages based on the indicators \"HOJA: 1 DE 6\", \"HOJA: 2 DE 6\", \"HOJA: 4 DE 6\", and \"HOJA: 6 DE 6\".\n\n2. **Company Information**:\n   - **Company Name**: \"GEOINTENETICS INTERNATIONAL, INC.\"\n   - **Company Type**: Not explicitly mentioned, but likely a foreign company given the name and address.\n   - **Country**: Likely \"Colombia\" based on the address and legal context.\n   - **Tax ID**: \"860006152-8\"\n   - **Document Type**: \"Certificado de Existencia y Representación Legal\"\n\n3. **Address Composition**:\n   - **Primary Address**: \"Calle 100 N. 19 - 54 Oficina 604\"\n   - **District/Municipio**: \"Bogotá D.C.\"\n\n4. **Dates**:\n   - **Incorporation Date**: Not directly found, but there are mentions of various dates related to registrations and documents.\n   - **Company Duration**: \"Vigencia: hasta el 4 de febrero de 2462\" seems to be an OCR error; likely \"2062\" based on context.\n   - **Document Issue Date**: \"16 de Abril de 2009\"\n\n5. **Registration Details**:\n   - **Registration Number**: Not explicitly found.\n\n6. **Related Parties**:\n   - Several legal representatives and apoderados are mentioned.\n\n### Detailed Extraction and Reasoning\n\n#### Company Information\n\n- **Company Name**: GEO¡iNETICS INTERN¡TiONAl,, I\\C\n- **Tax ID**: 860006152-8\n- **Country**: Bogotá D. C. (Colombia)\n- **Document Type**: CERTIFICADO DE EXISTENC]A Y REPRESENTACICN LEGAI,\n\n#### Address\n\n- **Main Address**: Calle 100N. 19 - 54 Oficina 6C4 - Municipio de Bogotá D.C.\n\n#### Dates\n\n- **Incorporation Date**: 1963-02-04 (from escritura pública número 361)\n- **Company Duration**: 2062-02-04 (corrected from 2462)\n- **Document Issue Date**: 2009-04-16\n\n#### Related Parties\n\n- **JORGE ENRIQUE RODRIGUEZ ROJAS**: Representante Legal\n- **NARCISO MANUEL CHIQUILLO CONDE**: Representante Legal\n\n### JSON Output\n\n```json\n{\n  \"companyName\": \"GEOINTENETICS INTERNATIONAL, INC.\",\n  \"companyType\": \"\",\n  \"country\": \"Colombia\",\n  \"document_pages\": 6,\n  \"documentType\": \"Certificado de Existencia y Representación Legal\",\n  \"taxId\": \"860006152-8\",\n  \"mainAddress\": \"Calle 100N. 19 - 54 Oficina 6C4 - Municipio de Bogotá D.C.\",\n  \"incorporationDate\": \"1963-02-04\",\n  \"companyDuration\": \"2062-02-04\",\n  \"registrationNumber\": \"\",\n  \"size\": \"\",\n  \"relatedParties\": [\n    {\n      \"firstName\": \"JORGE ENRIQUE\",\n      \"lastName\": \"RODRIGUEZ ROJAS\",\n      \"identificationType\": \"C.C.\",\n      \"identificationNumber\": \"00000001714487\",\n      \"relationshipType\": \"Representante Legal\"\n    },\n    {\n      \"firstName\": \"NARCISO MANUEL\",\n      \"lastName\": \"CHIQUILLO CONDE\",\n      \"identificationType\": \"C.C.\",\n      \"identificationNumber\": \"000000017124736\",\n      \"relationshipType\": \"Representante Legal\"\n    }\n  ],\n  \"embargoes\": \"\",\n  \"liquidations\": \"\",\n  \"documentIssueDate\": \"2009-04-16\",\n  \"lastRegistrationRenewalDate\": \"\"\n}\n```"
+        }
+      ]
+    }
+  },
+  "stopReason": "end_turn",
+  "usage": {
+    "inputTokens": 19499,
+    "outputTokens": 828,
+    "totalTokens": 20327
+  },
+  "metrics": {
+    "latencyMs": 7265
+  }
+}

@@ -1,0 +1,252 @@
+{
+  "document_key": "colombian_cedula",
+  "document_info": {
+    "name": "Colombian Cédula - Name Swap",
+    "description": "Should fix firstName/lastName parsing",
+    "s3_path": "s3://par-servicios-poc-qa-filling-desk/par-servicios-poc/CECRL/900397317/19200964_2020-02-29.pdf",
+    "expected_fixes": {
+      "firstName": "Luis Ignacio",
+      "lastName": "Hernández Díaz"
+    }
+  },
+  "timestamp": "2025-08-12T14:58:02.597676",
+  "versions": {
+    "v2.0.0": {
+      "success": true,
+      "data": {
+        "path": "s3://par-servicios-poc-qa-filling-desk/par-servicios-poc/CECRL/900397317/19200964_2020-02-29.pdf",
+        "result": {
+          "firstName": "Hernandez Diaz",
+          "lastName": "Luis Ignacio",
+          "country_issuer": "Colombia",
+          "nationality": "Colombia",
+          "identificationType": "Cédula de Ciudadanía",
+          "identificationNumber": "19.200.964",
+          "message": ""
+        },
+        "confidenceScores": {
+          "firstName": 95,
+          "lastName": 95,
+          "country_issuer": 100,
+          "nationality": 100,
+          "identificationType": 100,
+          "identificationNumber": 100
+        },
+        "document_type": "person",
+        "document_number": "test",
+        "category": "CECRL"
+      },
+      "raw_response": {
+        "ResponseMetadata": {
+          "RequestId": "b8973931-8440-431e-9368-6555f7977c64",
+          "HTTPStatusCode": 200,
+          "HTTPHeaders": {
+            "date": "Tue, 12 Aug 2025 19:58:08 GMT",
+            "content-type": "application/json",
+            "content-length": "923",
+            "connection": "keep-alive",
+            "x-amzn-requestid": "b8973931-8440-431e-9368-6555f7977c64"
+          },
+          "RetryAttempts": 0
+        },
+        "output": {
+          "message": {
+            "role": "assistant",
+            "content": [
+              {
+                "text": "```json\n{\n  \"path\": \"s3://par-servicios-poc-qa-filling-desk/par-servicios-poc/CECRL/900397317/19200964_2020-02-29.pdf\",\n  \"result\": {\n    \"firstName\": \"Hernandez Diaz\",\n    \"lastName\": \"Luis Ignacio\",\n    \"country_issuer\": \"Colombia\",\n    \"nationality\": \"Colombia\",\n    \"identificationType\": \"Cédula de Ciudadanía\",\n    \"identificationNumber\": \"19.200.964\",\n    \"message\": \"\"\n  },\n  \"confidenceScores\": {\n    \"firstName\": 95,\n    \"lastName\": 95,\n    \"country_issuer\": 100,\n    \"nationality\": 100,\n    \"identificationType\": 100,\n    \"identificationNumber\": 100\n  },\n  \"document_type\": \"person\",\n  \"document_number\": \"test\",\n  \"category\": \"CECRL\"\n}\n```"
+              }
+            ]
+          }
+        },
+        "stopReason": "end_turn",
+        "usage": {
+          "inputTokens": 4928,
+          "outputTokens": 240,
+          "totalTokens": 5168
+        },
+        "metrics": {
+          "latencyMs": 5430
+        }
+      },
+      "model_used": "us.amazon.nova-pro-v1:0"
+    },
+    "v2.1.0": {
+      "success": true,
+      "data": {
+        "path": "s3://par-servicios-poc-qa-filling-desk/par-servicios-poc/CECRL/900397317/19200964_2020-02-29.pdf",
+        "result": {
+          "firstName": "Hernandez Diaz",
+          "lastName": "Luis Ignacio",
+          "country_issuer": "Colombia",
+          "nationality": "Colombia",
+          "identificationType": "Cédula de Ciudadanía",
+          "identificationNumber": "19.200.964"
+        },
+        "confidenceScores": {
+          "firstName": 95,
+          "lastName": 95,
+          "country_issuer": 100,
+          "nationality": 100,
+          "identificationType": 100,
+          "identificationNumber": 100
+        },
+        "document_type": "person",
+        "document_number": "test",
+        "category": "CECRL"
+      },
+      "raw_response": {
+        "ResponseMetadata": {
+          "RequestId": "a342e091-7efd-44bf-92a7-4ecb9b97417c",
+          "HTTPStatusCode": 200,
+          "HTTPHeaders": {
+            "date": "Tue, 12 Aug 2025 19:58:14 GMT",
+            "content-type": "application/json",
+            "content-length": "899",
+            "connection": "keep-alive",
+            "x-amzn-requestid": "a342e091-7efd-44bf-92a7-4ecb9b97417c"
+          },
+          "RetryAttempts": 0
+        },
+        "output": {
+          "message": {
+            "role": "assistant",
+            "content": [
+              {
+                "text": "```json\n{\n  \"path\": \"s3://par-servicios-poc-qa-filling-desk/par-servicios-poc/CECRL/900397317/19200964_2020-02-29.pdf\",\n  \"result\": {\n    \"firstName\": \"Hernandez Diaz\",\n    \"lastName\": \"Luis Ignacio\",\n    \"country_issuer\": \"Colombia\",\n    \"nationality\": \"Colombia\",\n    \"identificationType\": \"Cédula de Ciudadanía\",\n    \"identificationNumber\": \"19.200.964\"\n  },\n  \"confidenceScores\": {\n    \"firstName\": 95,\n    \"lastName\": 95,\n    \"country_issuer\": 100,\n    \"nationality\": 100,\n    \"identificationType\": 100,\n    \"identificationNumber\": 100\n  },\n  \"document_type\": \"person\",\n  \"document_number\": \"test\",\n  \"category\": \"CECRL\"\n}\n```"
+              }
+            ]
+          }
+        },
+        "stopReason": "end_turn",
+        "usage": {
+          "inputTokens": 5366,
+          "outputTokens": 235,
+          "totalTokens": 5601
+        },
+        "metrics": {
+          "latencyMs": 5189
+        }
+      },
+      "model_used": "us.amazon.nova-pro-v1:0"
+    },
+    "v2.2.0": {
+      "success": true,
+      "data": {
+        "path": "s3://par-servicios-poc-qa-filling-desk/par-servicios-poc/CECRL/900397317/19200964_2020-02-29.pdf",
+        "result": {
+          "firstName": "Luis Ignacio",
+          "lastName": "Hernández Díaz",
+          "country_issuer": "Colombia",
+          "nationality": "Colombia",
+          "identificationType": "Cédula de Ciudadanía",
+          "identificationNumber": "19.200.964"
+        },
+        "confidenceScores": {
+          "firstName": 95,
+          "lastName": 95,
+          "country_issuer": 95,
+          "nationality": 90,
+          "identificationType": 95,
+          "identificationNumber": 100
+        },
+        "document_type": "person",
+        "document_number": "test",
+        "category": "CECRL"
+      },
+      "raw_response": {
+        "ResponseMetadata": {
+          "RequestId": "ff9260aa-eb8a-43e4-8d52-61de170dbf67",
+          "HTTPStatusCode": 200,
+          "HTTPHeaders": {
+            "date": "Tue, 12 Aug 2025 19:58:20 GMT",
+            "content-type": "application/json",
+            "content-length": "898",
+            "connection": "keep-alive",
+            "x-amzn-requestid": "ff9260aa-eb8a-43e4-8d52-61de170dbf67"
+          },
+          "RetryAttempts": 0
+        },
+        "output": {
+          "message": {
+            "role": "assistant",
+            "content": [
+              {
+                "text": "```json\n{\n  \"path\": \"s3://par-servicios-poc-qa-filling-desk/par-servicios-poc/CECRL/900397317/19200964_2020-02-29.pdf\",\n  \"result\": {\n    \"firstName\": \"Luis Ignacio\",\n    \"lastName\": \"Hernández Díaz\",\n    \"country_issuer\": \"Colombia\",\n    \"nationality\": \"Colombia\",\n    \"identificationType\": \"Cédula de Ciudadanía\",\n    \"identificationNumber\": \"19.200.964\"\n  },\n  \"confidenceScores\": {\n    \"firstName\": 95,\n    \"lastName\": 95,\n    \"country_issuer\": 95,\n    \"nationality\": 90,\n    \"identificationType\": 95,\n    \"identificationNumber\": 100\n  },\n  \"document_type\": \"person\",\n  \"document_number\": \"test\",\n  \"category\": \"CECRL\"\n}\n```"
+              }
+            ]
+          }
+        },
+        "stopReason": "end_turn",
+        "usage": {
+          "inputTokens": 6308,
+          "outputTokens": 232,
+          "totalTokens": 6540
+        },
+        "metrics": {
+          "latencyMs": 5193
+        }
+      },
+      "model_used": "us.amazon.nova-pro-v1:0"
+    },
+    "v2.2.1": {
+      "success": true,
+      "data": {
+        "path": "s3://par-servicios-poc-qa-filling-desk/par-servicios-poc/CECRL/900397317/19200964_2020-02-29.pdf",
+        "result": {
+          "firstName": "LUIS IGNACIO",
+          "lastName": "HERNANDEZ DIAZ",
+          "country_issuer": "Colombia",
+          "nationality": "Colombia",
+          "identificationType": "Cédula de Ciudadanía",
+          "identificationNumber": "19.200.964"
+        },
+        "confidenceScores": {
+          "firstName": 95,
+          "lastName": 95,
+          "country_issuer": 90,
+          "nationality": 85,
+          "identificationType": 90,
+          "identificationNumber": 100
+        },
+        "document_type": "person",
+        "document_number": "test",
+        "category": "CECRL"
+      },
+      "raw_response": {
+        "ResponseMetadata": {
+          "RequestId": "61e72ee9-4c9b-4515-b325-40e53c9a58f7",
+          "HTTPStatusCode": 200,
+          "HTTPHeaders": {
+            "date": "Tue, 12 Aug 2025 19:58:26 GMT",
+            "content-type": "application/json",
+            "content-length": "896",
+            "connection": "keep-alive",
+            "x-amzn-requestid": "61e72ee9-4c9b-4515-b325-40e53c9a58f7"
+          },
+          "RetryAttempts": 0
+        },
+        "output": {
+          "message": {
+            "role": "assistant",
+            "content": [
+              {
+                "text": "```json\n{\n  \"path\": \"s3://par-servicios-poc-qa-filling-desk/par-servicios-poc/CECRL/900397317/19200964_2020-02-29.pdf\",\n  \"result\": {\n    \"firstName\": \"LUIS IGNACIO\",\n    \"lastName\": \"HERNANDEZ DIAZ\",\n    \"country_issuer\": \"Colombia\",\n    \"nationality\": \"Colombia\",\n    \"identificationType\": \"Cédula de Ciudadanía\",\n    \"identificationNumber\": \"19.200.964\"\n  },\n  \"confidenceScores\": {\n    \"firstName\": 95,\n    \"lastName\": 95,\n    \"country_issuer\": 90,\n    \"nationality\": 85,\n    \"identificationType\": 90,\n    \"identificationNumber\": 100\n  },\n  \"document_type\": \"person\",\n  \"document_number\": \"test\",\n  \"category\": \"CECRL\"\n}\n```"
+              }
+            ]
+          }
+        },
+        "stopReason": "end_turn",
+        "usage": {
+          "inputTokens": 5774,
+          "outputTokens": 237,
+          "totalTokens": 6011
+        },
+        "metrics": {
+          "latencyMs": 5081
+        }
+      },
+      "model_used": "us.amazon.nova-pro-v1:0"
+    }
+  }
+}

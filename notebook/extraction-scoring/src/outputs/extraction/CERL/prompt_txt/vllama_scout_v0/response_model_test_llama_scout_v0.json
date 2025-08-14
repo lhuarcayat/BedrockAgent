@@ -1,0 +1,33 @@
+{
+  "ResponseMetadata": {
+    "RequestId": "e1474dd5-f207-4548-b98b-d2a59e1d90ef",
+    "HTTPStatusCode": 200,
+    "HTTPHeaders": {
+      "date": "Wed, 04 Jun 2025 14:42:37 GMT",
+      "content-type": "application/json",
+      "content-length": "5039",
+      "connection": "keep-alive",
+      "x-amzn-requestid": "e1474dd5-f207-4548-b98b-d2a59e1d90ef"
+    },
+    "RetryAttempts": 0
+  },
+  "output": {
+    "message": {
+      "role": "assistant",
+      "content": [
+        {
+          "text": "Here's my step-by-step reasoning for extracting the company data from the provided document:\n\n1. **Document Analysis**: The document appears to be a company registration certificate from the Chamber of Commerce of Bogotá, Colombia. It's written in Spanish.\n\n2. **Page Count**: The document has 6 pages.\n\n3. **Company Information**:\n   - **companyName**: \"GEOINTENETICS INTERNATIONAL, INC.\"\n   - **companyType**: Not explicitly stated, but it's a foreign company (Sucursal Extranjera).\n   - **country**: Colombia (implied by the Chamber of Commerce of Bogotá).\n   - **taxId**: \"860006152-8\"\n   - **documentType**: \"NIT\"\n\n4. **Address Composition**:\n   - **mainAddress**: \"Calle 100 N. 19 - 54 Oficina 604, Bogotá D.C., Municipio de Bogotá D.C.\"\n\n5. **Date Normalization**:\n   - **incorporationDate**: Not explicitly stated for the main company, but there's a mention of the parent company's incorporation date in Pasadena, which is not directly relevant.\n   - **companyDuration**: \"hasta el 4 de febrero de 2462\" (indefinite duration, but with an end date)\n\n6. **Registration Details**:\n   - **registrationNumber**: \"10: C0018259 del 28 de abril de 1972\"\n   - **size**: Not explicitly stated.\n\n7. **Related Parties Handling**:\n   - Several related parties are mentioned with their roles and identification numbers.\n\nGiven the information available and following the guidelines, here's the extracted data in the required JSON format:\n\n```json\n{\n  \"companyName\": \"GEOINTENETICS INTERNATIONAL, INC.\",\n  \"companyType\": \"Sucursal Extranjera\",\n  \"country\": \"Colombia\",\n  \"document_pages\": 6,\n  \"documentType\": \"NIT\",\n  \"taxId\": \"860006152-8\",\n  \"mainAddress\": \"Calle 100 N. 19 - 54 Oficina 604, Bogotá D.C. - Municipio de Bogotá D.C.\",\n  \"incorporationDate\": \"\",\n  \"companyDuration\": \"Indefinida\",\n  \"registrationNumber\": \"10: C0018259\",\n  \"size\": \"\",\n  \"relatedParties\": [\n    {\n      \"firstName\": \"JORGE ENRIQUE\",\n      \"lastName\": \"RODRIGUEZ ROJAS\",\n      \"identificationType\": \"C.C.\",\n      \"identificationNumber\": \"000000017144874\",\n      \"relationshipType\": \"Primer Suplente del Apoderado General Principal\"\n    },\n    {\n      \"firstName\": \"NARCISO MANUEL\",\n      \"lastName\": \"CHIGUILLO CONDE\",\n      \"identificationType\": \"C.C.\",\n      \"identificationNumber\": \"000000017124736\",\n      \"relationshipType\": \"Segundo Suplente del Apoderado General Principal\"\n    },\n    {\n      \"firstName\": \"TAMAYO OLARTE\",\n      \"lastName\": \"JOSE MANUEL\",\n      \"identificationType\": \"C.C.\",\n      \"identificationNumber\": \"000000019303534\",\n      \"relationshipType\": \"\"\n    },\n    {\n      \"firstName\": \"RODRIGUEZ ROJAS\",\n      \"lastName\": \"JORGE ENRIQUE\",\n      \"identificationType\": \"C.C.\",\n      \"identificationNumber\": \"000000017144874\",\n      \"relationshipType\": \"Representante Legal\"\n    },\n    {\n      \"firstName\": \"CHIGUILLO CONDE\",\n      \"lastName\": \"NARCISO MANUEL\",\n      \"identificationType\": \"C.C.\",\n      \"identificationNumber\": \"000000017124736\",\n      \"relationshipType\": \"Apoderado General Principal\"\n    },\n    {\n      \"firstName\": \"CHARRY\",\n      \"lastName\": \"RAFAEL CASIMIRO\",\n      \"identificationType\": \"Cédula de Ciudadanía\",\n      \"identificationNumber\": \"79370170\",\n      \"relationshipType\": \"\"\n    },\n    {\n      \"firstName\": \"VARGAS SALGADO\",\n      \"lastName\": \"EDWIN RENZO\",\n      \"identificationType\": \"PP\",\n      \"identificationNumber\": \"\",\n      \"relationshipType\": \"Revisor Fiscal Suplente\"\n    },\n    {\n      \"firstName\": \"MONTENEGRE BUITRAGO\",\n      \"lastName\": \"FALLA MANUELA\",\n      \"identificationType\": \"C.C.\",\n      \"identificationNumber\": \"000000036373389\",\n      \"relationshipType\": \"Revisor Fiscal Principal\"\n    },\n    {\n      \"firstName\": \"CHIGUILLO CONDE\",\n      \"lastName\": \"NARCISO MANUEL\",\n      \"identificationType\": \"Cédula de Ciudadanía\",\n      \"identificationNumber\": \"17124736\",\n      \"relationshipType\": \"Representante Legal de la Sociedad Matriz\"\n    },\n    {\n      \"firstName\": \"TAMAYO\",\n      \"lastName\": \"OLARTE JOSE MANUEL\",\n      \"identificationType\": \"C.C.\",\n      \"identificationNumber\": \"19303534\",\n      \"relationshipType\": \"Apoderado\"\n    },\n    {\n      \"firstName\": \"GOMEZ GUTIERREZ\",\n      \"lastName\": \"VICTOR URIEL\",\n      \"identificationType\": \"Cédula de Ciudadanía\",\n      \"identificationNumber\": \"80414776\",\n      \"relationshipType\": \"Apoderado\"\n    }\n  ],\n  \"embargoes\": \"\",\n  \"liquidations\": \"\",\n  \"documentIssueDate\": \"\",\n  \"lastRegistrationRenewalDate\": \"\"\n}\n```"
+        }
+      ]
+    }
+  },
+  "stopReason": "end_turn",
+  "usage": {
+    "inputTokens": 18436,
+    "outputTokens": 1208,
+    "totalTokens": 19644
+  },
+  "metrics": {
+    "latencyMs": 13439
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "ResponseMetadata": {
+    "RequestId": "ce424552-1427-4c1c-9709-117e5de73790",
+    "HTTPStatusCode": 200,
+    "HTTPHeaders": {
+      "date": "Tue, 27 May 2025 16:47:56 GMT",
+      "content-type": "application/json",
+      "content-length": "2843",
+      "connection": "keep-alive",
+      "x-amzn-requestid": "ce424552-1427-4c1c-9709-117e5de73790"
+    },
+    "RetryAttempts": 0
+  },
+  "output": {
+    "message": {
+      "role": "assistant",
+      "content": [
+        {
+          "text": "Here is an example of the output I expect:\n\n```json\n{\n  \"companyName\": \"BUSINESS PROCESS MANAGEMENT LATINOAMERICA\",\n  \"documentType\": \"NIT\",\n  \"taxId\": \"900.266.513-3\",\n  \"relatedParties\": [\n    {\n      \"firstName\": \"Mauricio\",\n      \"lastName\": \"Obregon Gutierrez\",\n      \"identificationType\": \"CC\",\n      \"identificationNumber\": \"79.425.769\",\n      \"relationshipType\": \"Shareholder\",\n      \"participationPercentage\": \"80.0\"\n    },\n    {\n      \"firstName\": \"Monica María\",\n      \"lastName\": \"Gutierrez Obregon\",\n      \"identificationType\": \"CC\",\n      \"identificationNumber\": \"79.425.769\",\n      \"relationshipType\": \"Shareholder\",\n      \"participationPercentage\": \"20.0\"\n    }\n  ]\n}\n```\n\nNow, please process the following PDF and extract the company data according to the ACC schema:\n\n- PDF to process: `../../shared/file_examples/ACC/800216686/231_CA_2020-02-29.pdf`\n- Classification metadata:\n  - document_number: `800216686`\n  - document_type: `company`\n  - category: `ACC`\n\n**Expected output:**\nSave a JSON file at `ACC/{document_number}/ACC_{document_number}.json` with this exact structure:\n\n```json\n{\n  \"path\": \"../../shared/file_examples/ACC/800216686/231_CA_2020-02-29.pdf\",\n  \"result\": {\n    \"companyName\": \"AEROSUPPORT S.A.S.\",\n    \"documentType\": \"NIT\",\n    \"taxId\": \"800.216.686-2\",\n    \"relatedParties\": [\n      {\n        \"companyName\": \"GERMAN SALGADO VERGARA\",\n        \"identificationType\": \"C.C.\",\n        \"identificationNumber\": \"19.306.991\",\n        \"relationshipType\": \"Shareholder\",\n        \"participationPercentage\": \"49.50\"\n      },\n      {\n        \"companyName\": \"GLOBAL AVIATION SUPPORT CORP\",\n        \"identificationType\": \"NIT\",\n        \"identificationNumber\": \"1045179-1-546162\",\n        \"relationshipType\": \"Shareholder\",\n        \"participationPercentage\": \"49.00\"\n      },\n      {\n        \"firstName\": \"ADRIANA\",\n        \"lastName\": \"ARANGO JARAMILLO\",\n        \"identificationType\": \"C.C.\",\n        \"identificationNumber\": \"35469632\",\n        \"relationshipType\": \"Shareholder\",\n        \"participationPercentage\": \"1.00\"\n      },\n      {\n        \"companyName\": \"NICOLAS SALGADO ARANGO\",\n        \"identificationType\": \"C.C.\",\n        \"identificationNumber\": \"1020763136\",\n        \"relationshipType\": \"Shareholder\",\n        \"participationPercentage\": \"0.50\"\n      }\n    ]\n  },\n  \"document_type\": \"company\",\n  \"document_number\": \"800216686\",\n  \"category\": \"ACC\"\n}\n```"
+        }
+      ]
+    }
+  },
+  "stopReason": "end_turn",
+  "usage": {
+    "inputTokens": 3530,
+    "outputTokens": 751,
+    "totalTokens": 4281
+  },
+  "metrics": {
+    "latencyMs": 12385
+  }
+}

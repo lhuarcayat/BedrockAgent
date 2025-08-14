@@ -1,0 +1,117 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "RUT – Registro Único Tributario (DIAN)",
+  "type": "object",
+  "properties": {
+    "companyName": {
+      "type": "string",
+      "description": "Razón Social"
+    },
+    "country": {
+      "type": "string",
+      "description": "País de la empresa"
+    },
+    "documentType": {
+      "type": "string",
+      "description": "Document name (NIT, RUC)"
+    },
+    "taxId": {
+      "type": "string",
+      "pattern": "^[0-9.\\-]+$"
+    },
+    "verificationDigit": {
+      "type": "string",
+      "description": "Dígito de Verificación field 6",
+      "pattern": "^[0-9X]$"
+    },
+    "personType": {
+      "type": "string",
+      "description": "Tipo de Persona",
+      "enum": ["Persona Natural", "Persona Jurídica"]
+    },
+    "relatedParties": {
+      "type": "array",
+      "description": "Representacion, Socios y/o Miembros de Juntas Directivas, Consorcios, Uniones Temporales, Revisor Fiscal y Contador",
+      "items": {
+        "oneOf": [
+          { "$ref": "#/$defs/PersonRelatedParty" },
+          { "$ref": "#/$defs/CompanyRelatedParty" }
+        ]
+      }
+    },
+    "address": {
+      "type": "string",
+      "description": "Dirección junto a municipio y provincia"
+    },
+    "documentGenerationDate": {
+      "type": "string",
+      "format": "date",
+      "description": "Fecha de generación del documento PDF"
+    }
+  },
+  "required": [
+    "companyName",
+    "documentType",
+    "taxId",
+    "verificationDigit",
+    "personType"
+  ],
+  "additionalProperties": false,
+    "$defs": {
+    "CommonFields": {
+      "type": "object",
+      "properties": {
+        "identificationType": {
+          "type": "string",
+          "description": "Tipo de identificación (field 111 or 100)"
+        },
+        "identificationNumber": {
+          "type": "string",
+          "pattern": "^[0-9A-Za-z.\\-]+$",
+          "description": "Número de identificación (field 112 or 101)"
+        },
+        "relationshipType": {
+          "type": "string",
+          "description": "Representacion, Socios y/o Miembros de Juntas Directivas, Consorcios, Uniones Temporales, Revisor Fiscal y Contador"
+        }
+      },
+      "required": [
+        "relationshipType"
+      ],
+      "additionalProperties": false
+    },
+    "PersonRelatedParty": {
+      "allOf": [
+        { "$ref": "#/$defs/CommonFields" },
+        {
+          "type": "object",
+          "properties": {
+            "firstName": {
+              "type": "string",
+              "description": "Primer nombre (field 117 or 106) and otros nombres (field 118 or 107)"
+            },
+            "lastName":  {
+            "type": "string",
+            "description": "Primer apellido (field 115 or 104) and Segundo apellido (field 116 or 105)"
+          }
+          },
+          "required": ["firstName", "lastName"],
+          "additionalProperties": false
+        }
+      ]
+    },
+    "CompanyRelatedParty": {
+      "allOf": [
+        { "$ref": "#/$defs/CommonFields" },
+        {
+          "type": "object",
+          "properties": {
+            "companyName": { "type": "string" }
+          },
+          "required": ["companyName"],
+          "additionalProperties": false
+        }
+      ]
+    }
+  }
+}

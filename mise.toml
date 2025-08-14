@@ -1,8 +1,25 @@
 [env]
 # Automatically create and use a virtual environment in the .venv directory
-_.python.venv = { path = ".venv", create = true }
+_.python.venv = { path = ".venv", create = true}
+
+[tools]
+python = "3.12"
+uv     = "latest"
 
 [tasks.install]
-description = "Install dependencies"
+description = "Install dependencies and ensure terraform-aws-lambda compatibility"
 alias = "i"
-run = "uv pip install -r requirements.txt"
+run = [
+  "python -m ensurepip --upgrade --quiet || true",
+  "uv pip install -r requirements.txt"
+]
+
+[tasks.dep]
+description = "Install individual dependencies"
+alias = "dep"
+run = "uv pip install PyPDF2 pydantic python-dotenv"
+
+[tasks.freeze]
+description = "Freeze dependencies"
+alias = "freeze"
+run = "uv pip freeze > requirements.txt"

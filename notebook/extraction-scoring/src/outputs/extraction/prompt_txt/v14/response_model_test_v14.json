@@ -1,0 +1,33 @@
+{
+  "ResponseMetadata": {
+    "RequestId": "20d4fda6-ccb6-427c-ab48-b7842a7070ec",
+    "HTTPStatusCode": 200,
+    "HTTPHeaders": {
+      "date": "Wed, 28 May 2025 21:03:50 GMT",
+      "content-type": "application/json",
+      "content-length": "3204",
+      "connection": "keep-alive",
+      "x-amzn-requestid": "20d4fda6-ccb6-427c-ab48-b7842a7070ec"
+    },
+    "RetryAttempts": 0
+  },
+  "output": {
+    "message": {
+      "role": "assistant",
+      "content": [
+        {
+          "text": "For example:\n```json\n{\n  \"companyName\": \"Siemens S.A.S\",\n  \"documentType\": \"NIT\",\n  \"taxId\": \"860.031.028-9\",\n  \"relatedParties\": [\n    {\n      \"companyName\": \"Siemens International Holding B.V.\",\n      \"identificationType\": \"NIT\",\n      \"identificationNumber\": \"860.031.028-9\",\n      \"relationshipType\": \"Shareholder\",\n      \"participationPercentage\": \"100.0\"\n    }\n  ]\n}\n```\n\nNow, process the following PDF and extract the company data according to the ACC schema:\n**Do not** include any examples, commentary, or markdown. Only return the raw JSON below.\n\n1. Extract the json\n- PDF to process: `../../shared/file_examples/ACC/800216686/231_CA_2020-02-29.pdf`\n- Classification metadata:\n  - document_number: `800216686`\n  - document_type: `company`\n  - category: `ACC`\n\n2. Validate your draft JSON against:\n   - The JSON schema in `schema.json`.\n   - The PERSON_ID / COMPANY_ID lookup rules for documentCountry.\n   If you spot any missing/extra fields or mis-classified parties, **fix** them now.\n\n3. **Return exactly this JSON structure** (with your substituted values and the fields defined in schema.json):\n\n```json\n{\n  \"path\": \"../../shared/file_examples/ACC/800216686/231_CA_2020-02-29.pdf\",\n  \"result\": {\n    /* companyName, documentType, taxId, relatedParties */\n  },\n  \"document_type\": \"company\",\n  \"document_number\": \"800216686\",\n  \"category\": \"ACC\",\n  \"country\": \"<country identified>\"\n}\n```\n```json\n{\n  \"path\": \"../../shared/file_examples/ACC/800216686/231_CA_2020-02-29.pdf\",\n  \"result\": {\n    \"companyName\": \"AEROSUPPORT S.A.S.\",\n    \"documentType\": \"NIT\",\n    \"taxId\": \"800.216.686-2\",\n    \"relatedParties\": [\n      {\n        \"companyName\": \"GERMAN SALGADO VERGARA\",\n        \"identificationType\": \"C.C.\",\n        \"identificationNumber\": \"19.306.991\",\n        \"relationshipType\": \"Shareholder\",\n        \"participationPercentage\": \"49.50\"\n      },\n      {\n        \"companyName\": \"GLOBAL AVIATION SUPPORT CORP\",\n        \"identificationType\": \"NIT\",\n        \"identificationNumber\": \"1045179-1-546162\",\n        \"relationshipType\": \"Shareholder\",\n        \"participationPercentage\": \"49.00\"\n      },\n      {\n        \"firstName\": \"ADRIANA\",\n        \"lastName\": \"ARANGO JARAMILLO\",\n        \"identificationType\": \"C.C.\",\n        \"identificationNumber\": \"35469632\",\n        \"relationshipType\": \"Shareholder\",\n        \"participationPercentage\": \"1.00\"\n      },\n      {\n        \"firstName\": \"NICOLAS\",\n        \"lastName\": \"SALGADO ARANGO\",\n        \"identificationType\": \"C.C.\",\n        \"identificationNumber\": \"1020763136\",\n        \"relationshipType\": \"Shareholder\",\n        \"participationPercentage\": \"0.50\"\n      }\n    ]\n  },\n  \"document_type\": \"company\",\n  \"document_number\": \"800216686\",\n  \"category\": \"ACC\",\n  \"country\": \"Colombia\"\n}\n```"
+        }
+      ]
+    }
+  },
+  "stopReason": "end_turn",
+  "usage": {
+    "inputTokens": 3888,
+    "outputTokens": 871,
+    "totalTokens": 4759
+  },
+  "metrics": {
+    "latencyMs": 13913
+  }
+}

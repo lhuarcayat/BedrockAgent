@@ -1,0 +1,107 @@
+Extract company data from the provided JSON document following these strict guidelines:
+
+Show me your reasoning in numbered steps (how you decided what to extract, how you handled missing fields, etc.).
+Then output the final JSON.
+
+# Extraction Requirements
+1. Document Processing:
+   - Input is a JSON with document_number, document_type, category, text, and path
+   - Documents may be in Spanish, Portuguese, or English
+   - Preserve original language terms in company names, addresses, and relationship types
+
+2. Data Normalization:
+   - Convert all dates to YYYY-MM-DD format
+   - Format addresses as "[Primary Address] - [Type] de [Name]" (e.g., "Calle Siempre Viva 123 - Municipio de San Isidro")
+   - Handle anonymized data by extracting firstName, lastName, and identificationNumber with asterisks
+   - Extract company size from "Tamaño de la empresa" section
+   - Look for companyDuration in sections like "Vigencia", "Término de Duración", "Certifica - Vigencia", "Duración de la Sociedad", or "Plazo de Constitución"
+   - Validate companyDuration by checking if it's more than 80 years from current date, and if so, verify its accuracy
+
+3. Related Party Handling:
+   - List each occurrence separately with complete information
+   - Preserve exact relationshipType terminology from document
+   - Include ALL individuals mentioned in the document, especially in sections like:
+     * "Apoderados" (Attorneys)
+     * "Representantes Legales" (Legal Representatives)
+     * "Junta Directiva" (Board of Directors)
+     * "Suplentes" (Substitutes/Alternates)
+     * "Revisores Fiscales" (Fiscal Auditors)
+   - Include all occurrences when a person appears multiple times with different roles
+   - For anonymized entries (e.g., "ACEPTACION SIN**********"), split name components and preserve asterisks in identificationNumber
+   - Include participationPercentage if available
+
+4. Validation:
+   - Verify against CERL schema.json
+   - Ensure all required fields are present
+   - Confirm dates are properly formatted
+   - Check taxId follows the pattern ^[0-9.\-]+$$
+
+5. Confidence Assessment:
+   - Evaluate certainty for each extracted value
+   - Note low-confidence extractions in reasoning
+   - ALWAYS include scores in final output as a separate "confidenceScores" object
+   - Assign scores based on:
+     * 90-100: Exact text match found
+     * 70-89: Logical inference from context
+     * Below 70: Requires human review
+   - For companyDuration, reduce confidence score if date is unusually far in the future
+
+# Required Output
+```json
+{
+  "path": "$pdf_path",
+  "result": {
+    "companyName": "",
+    "companyType": "",
+    "country": "",
+    "document_pages": 0,
+    "documentType": "",
+    "taxId": "",
+    "mainAddress": "",
+    "incorporationDate": "",
+    "companyDuration": "",
+    "registrationNumber": "",
+    "size": "",
+    "relatedParties": [
+      {
+        "firstName": "",
+        "lastName": "",
+        "identificationType": "",
+        "identificationNumber": "",
+        "relationshipType": "",
+        "participationPercentage": ""
+      }
+    ],
+    "embargoes": "",
+    "liquidations": "",
+    "documentIssueDate": "",
+    "lastRegistrationRenewalDate": ""
+  },
+  "confidenceScores": {
+    "companyName": 95,
+    "companyType": 90,
+    "country": 100,
+    "taxId": 100,
+    "mainAddress": 85,
+    "incorporationDate": 90,
+    "companyDuration": 80,
+    "registrationNumber": 100,
+    "size": 90,
+    "relatedParties": 85
+  },
+  "document_type": "$document_type",
+  "document_number": "$document_number",
+  "category": "$category"
+}
+```
+
+Think step-by-step to ensure accurate extraction and proper JSON formatting:
+1. Count the total number of pages in the document (do not extract this from the document text)
+2. Analyze the document structure to identify key sections
+3. Extract company information systematically
+4. Process related parties one by one
+5. Validate the draft JSON against schema requirements
+6. Assign confidence scores to each extracted field
+7. Make necessary corrections before finalizing
+
+Only return the data collected in the required JSON format.

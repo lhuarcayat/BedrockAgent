@@ -1,0 +1,33 @@
+{
+  "ResponseMetadata": {
+    "RequestId": "82b788a4-8b67-48b3-95d9-45edbdb3fcb0",
+    "HTTPStatusCode": 200,
+    "HTTPHeaders": {
+      "date": "Wed, 04 Jun 2025 15:03:42 GMT",
+      "content-type": "application/json",
+      "content-length": "5896",
+      "connection": "keep-alive",
+      "x-amzn-requestid": "82b788a4-8b67-48b3-95d9-45edbdb3fcb0"
+    },
+    "RetryAttempts": 0
+  },
+  "output": {
+    "message": {
+      "role": "assistant",
+      "content": [
+        {
+          "text": "Here's my step-by-step reasoning for extracting the company data from the provided JSON document:\n\n1. **Page Counting**: I manually counted the pages by analyzing the document structure. The document has 6 pages.\n\n2. **Company Information Extraction**:\n   - **companyName**: I extracted the company name from the text: \"GEOKINETICS INTERNACIONAL, INC.\"\n   - **companyType**: I extracted the company type from the text: \"Sociedad por Acciones Simplificada\"\n   - **country**: I extracted the country from the text: \"COLOMBIA\"\n   - **document_pages**: I manually counted the pages: 6\n   - **documentType**: I extracted the document type from the text: \"NIT\"\n   - **taxId**: I extracted the tax ID from the text: \"860006152-8\"\n   - **mainAddress**: I extracted the main address from the text: \"CALLE 100N. 19 - 54 OFICINA 604, BOGOTA D.C.\"\n   - **incorporationDate**: I extracted the incorporation date from the text and converted it to YYYY-MM-DD format: \"1963-02-21\"\n   - **companyDuration**: I extracted the company duration from the text and converted it to YYYY-MM-DD format. However, the date \"2462\" is likely an OCR error, so I corrected it to \"2062\" and reduced the confidence score to 60.\n   - **registrationNumber**: I extracted the registration number from the text: \"0018259\"\n   - **size**: I extracted the company size from the text: \"MEDIANA EMPRESA\"\n\n3. **Related Party Extraction**:\n   - I extracted the related parties from the text, including their first name, last name, identification type, identification number, relationship type, and participation percentage.\n   - I preserved the exact relationship type terminology from the document.\n   - I included all occurrences when a person appears multiple times with different roles.\n   - For anonymized entries, I split the name components and preserved the asterisks in the identification number.\n\n4. **Validation**:\n   - I verified the extracted data against the CERL schema.json.\n   - I ensured all required fields are present.\n   - I confirmed all dates, including companyDuration, are properly formatted as YYYY-MM-DD.\n   - I checked that the tax ID follows the pattern ^[0-9.\\-]+$.\n\n5. **Confidence Assessment**:\n   - I evaluated the certainty for each extracted value.\n   - I noted low-confidence extractions in my reasoning.\n   - I assigned scores based on the guidelines provided.\n\nHere is the final JSON output:\n\n```json\n{\n  \"path\": \"../../shared/file_examples/CERL/860006752/22_CamCom_2020-02-28.pdf\",\n  \"result\": {\n    \"companyName\": \"GEOKINETICS INTERNACIONAL, INC.\",\n    \"companyType\": \"Sociedad por Acciones Simplificada\",\n    \"country\": \"COLOMBIA\",\n    \"document_pages\": 6,\n    \"documentType\": \"NIT\",\n    \"taxId\": \"860006152-8\",\n    \"mainAddress\": \"CALLE 100N. 19 - 54 OFICINA 604, BOGOTA D.C.\",\n    \"incorporationDate\": \"1963-02-21\",\n    \"companyDuration\": \"2062-02-04\",\n    \"registrationNumber\": \"0018259\",\n    \"size\": \"MEDIANA EMPRESA\",\n    \"relatedParties\": [\n      {\n        \"firstName\": \"JORGE\",\n        \"lastName\": \"RODRIGUEZ ROJAS\",\n        \"identificationType\": \"C.C.\",\n        \"identificationNumber\": \"17144414\",\n        \"relationshipType\": \"REPRESENTANTE LEGAL\",\n        \"participationPercentage\": \"\"\n      },\n      {\n        \"firstName\": \"NARCISO\",\n        \"lastName\": \"MANUEL CHIQUILLO CONDE\",\n        \"identificationType\": \"C.C.\",\n        \"identificationNumber\": \"17124736\",\n        \"relationshipType\": \"REPRESENTANTE LEGAL\",\n        \"participationPercentage\": \"\"\n      },\n      {\n        \"firstName\": \"VICTOR\",\n        \"lastName\": \"UCURICIO GOMEZ GUTIERREZ\",\n        \"identificationType\": \"C.C.\",\n        \"identificationNumber\": \"8041476\",\n        \"relationshipType\": \"APODERADO GENERAL\",\n        \"participationPercentage\": \"\"\n      },\n      {\n        \"firstName\": \"RAFAEL\",\n        \"lastName\": \"CASILLO CHARRY\",\n        \"identificationType\": \"C.C.\",\n        \"identificationNumber\": \"79370170\",\n        \"relationshipType\": \"APODERADO GENERAL\",\n        \"participationPercentage\": \"\"\n      },\n      {\n        \"firstName\": \"ERNST & YOUNG AUDIT\",\n        \"lastName\": \"\",\n        \"identificationType\": \"\",\n        \"identificationNumber\": \"000008600088905\",\n        \"relationshipType\": \"REVISOR FISCAL\",\n        \"participationPercentage\": \"\"\n      },\n      {\n        \"firstName\": \"FALLA\",\n        \"lastName\": \"MONTEALEGRE BUENAVENTURA\",\n        \"identificationType\": \"C.C.\",\n        \"identificationNumber\": \"36373989\",\n        \"relationshipType\": \"REVISOR FISCAL PRINCIPAL\",\n        \"participationPercentage\": \"\"\n      },\n      {\n        \"firstName\": \"EDWIN\",\n        \"lastName\": \"VARGAS SALGADO\",\n        \"identificationType\": \"C.C.\",\n        \"identificationNumber\": \"000000079791291\",\n        \"relationshipType\": \"REVISOR FISCAL SUPLENTE\",\n        \"participationPercentage\": \"\"\n      }\n    ],\n    \"embargoes\": \"\",\n    \"liquidations\": \"\",\n    \"documentIssueDate\": \"\",\n    \"lastRegistrationRenewalDate\": \"\"\n  },\n  \"confidenceScores\": {\n    \"companyName\": 95,\n    \"companyType\": 90,\n    \"country\": 100,\n    \"document_pages\": 100,\n    \"taxId\": 100,\n    \"mainAddress\": 85,\n    \"incorporationDate\": 90,\n    \"companyDuration\": 60,\n    \"registrationNumber\": 100,\n    \"size\": 90,\n    \"relatedParties\": 85\n  },\n  \"document_type\": \"company\",\n  \"document_number\": \"860006752\",\n  \"category\": \"CERL\"\n}\n```"
+        }
+      ]
+    }
+  },
+  "stopReason": "end_turn",
+  "usage": {
+    "inputTokens": 20067,
+    "outputTokens": 1371,
+    "totalTokens": 21438
+  },
+  "metrics": {
+    "latencyMs": 27010
+  }
+}

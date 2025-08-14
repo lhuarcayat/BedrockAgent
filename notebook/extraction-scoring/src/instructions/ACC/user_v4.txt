@@ -1,0 +1,61 @@
+Extract company data from the PDF document following these strict guidelines:
+
+# Extraction Requirements
+1. Country Identification:
+   - Primary: Explicit references (country/city names, official stamps)
+   - Fallback: ID analysis using COMPANY_ID/PERSON_ID tables
+   - Document conflicts in identificationDetails.requiresReview
+
+2. Entity Handling:
+   - Create separate entries for repeated entities with timeFound counter
+   - Add job field when titles like "Representante Legal" are present
+   - Strictly follow PERSON_ID/COMPANY_ID classification rules
+
+3. Validation:
+   - Verify against schema.json
+   - Ensure all ID types match country's allowed values
+   - Confirm timeFound increments correctly
+   - Remove any extra fields not in schema
+
+# Required Output
+```json
+{
+  "path": "$pdf_path",
+  "result": {
+    "companyName": "(extracted legal name)",
+    "documentType": "Equity Composition",
+    "taxId": "(validated tax ID)",
+    "country": "(detected country)",
+    "identificationDetails": {
+      "source": "text_reference|id_analysis",
+      "indicators": ["..."],
+      "conflictingSources": {"source_type": "value"} // if conflicts
+    },
+    "relatedParties": [
+      // PERSON_ID match:
+      {
+        "firstName": "...",
+        "lastName": "...",
+        "identificationType": "(validated)",
+        "identificationNumber": "...",
+        "relationshipType": "...",
+        "participationPercentage": "...",
+        "timeFound": 1,
+        "job": "(if present)"
+      },
+      // COMPANY_ID match:
+      {
+        "companyName": "...",
+        "identificationType": "(validated)",
+        "identificationNumber": "...",
+        "relationshipType": "..."
+      }
+    ]
+  },
+  "document_type": "$document_type",
+  "document_number": "$document_number",
+  "category": "$category"
+}
+```
+
+Think step-by-step and Do NOT include examples or commentary. Return only valid JSON matching the schema.
