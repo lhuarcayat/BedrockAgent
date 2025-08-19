@@ -220,11 +220,9 @@ def _build_extraction_request(payload: Dict[str, Any]) -> Dict[str, Any]:
     document_type = payload['document_type']
     category = payload['category']
 
-    # Extract bucket and key from S3 URI
+    # Extract bucket and key from S3 URI (no download needed with S3 direct access)
     source_bucket, source_key = extract_s3_path(pdf_path)
-
-    # Get the PDF from S3
-    pdf_bytes = get_pdf_from_s3(source_bucket, source_key)
+    logger.info(f"Using S3 direct access for {pdf_path} (optimized - no download needed)")
 
     # Build the prompts
     task_root = os.environ.get("LAMBDA_TASK_ROOT", os.getcwd())
@@ -248,8 +246,8 @@ def _build_extraction_request(payload: Dict[str, Any]) -> Dict[str, Any]:
         category=category
     )
 
-    # Create request parameters
-    messages = [create_message(user_message, "user", pdf_bytes, pdf_path)]
+    # Create request parameters using S3 direct access (optimized)
+    messages = [create_message(user_message, "user", pdf_path=pdf_path, s3_uri=pdf_path)]
     system_parameter = [{"text": system_message}]
     cfg = set_model_params(BEDROCK_MODEL, 8192, 0.9, 0.1)
 

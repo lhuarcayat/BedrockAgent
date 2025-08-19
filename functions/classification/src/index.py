@@ -1,7 +1,6 @@
 import json, logging, os, re
 from urllib.parse import unquote_plus
 from collections import namedtuple
-from shared.models import ClassMeta
 from shared.sqs_handler import build_payload, send_to_extraction_queue
 from shared.helper import load_env
 from shared.processing_result import save_processing_to_s3
@@ -29,12 +28,12 @@ ClassificationResult = namedtuple('ClassificationResult', [
 ])
 
 
-def process_pdf(pdf_bytes, folder_path):
+def process_pdf(pdf_bytes=None, folder_path=None, s3_uri=None):
     """
     Main orchestrator - coordinates the classification workflow.
     """
-    # 1. Setup classification request
-    bedrock, messages, system_parameter, models = setup_classification_request(pdf_bytes, folder_path)
+    # 1. Setup classification request with S3 direct access support
+    bedrock, messages, system_parameter, models = setup_classification_request(pdf_bytes=pdf_bytes, folder_path=folder_path, s3_uri=s3_uri)
 
     # 2. Classify with fallback
     classification_result, raw_responses = classify_with_fallback(bedrock, messages, system_parameter, models, folder_path, ClassificationResult)
@@ -42,13 +41,7 @@ def process_pdf(pdf_bytes, folder_path):
     # 3. Convert result to dict for backward compatibility
     meta_dict = result_to_dict(classification_result, folder_path, raw_responses, EXTRACTABLE_CATEGORIES)
 
-    # 4. Validate with Pydantic if classification succeeded
-    if not meta_dict.get('processing_failed', False):
-        try:
-            ClassMeta.model_validate(meta_dict)
-        except Exception as validation_error:
-            logger.warning(f"Pydantic validation failed: {validation_error}, proceeding with raw dict")
-            meta_dict['validation_error'] = str(validation_error)
+    # 4. Optional validation removed - proceed with raw dict for better Lambda compatibility
 
     # 5. Build payload with fallback information
     payload = build_payload(meta_dict)
@@ -135,12 +128,11 @@ def process_single_s3_record(s3_record, message_id, s3_client, dynamodb_client):
 
     processing_success = False
     try:
-        # Get the PDF from S3
-        response = s3_client.get_object(Bucket=bucket, Key=key)
-        pdf_bytes = response['Body'].read()
+        # Use S3 direct access (no download needed for classification)
+        logger.info(f"Using S3 direct access for classification: {folder_path} (optimized)")
 
-        # Process the PDF
-        payload = process_pdf(pdf_bytes, folder_path)
+        # Process the PDF with S3 direct access
+        payload = process_pdf(s3_uri=folder_path, folder_path=folder_path)
         result = {
             'messageId': message_id,
             'key': key,

@@ -8,7 +8,7 @@
       "nationality": "Venezuela"
     }
   },
-  "timestamp": "2025-08-12T14:57:09.685485",
+  "timestamp": "2025-08-15T15:38:12.068138",
   "versions": {
     "v2.0.0": {
       "success": true,
@@ -37,14 +37,14 @@
       },
       "raw_response": {
         "ResponseMetadata": {
-          "RequestId": "81f2a5d6-a436-4521-8016-b68d738c5f8c",
+          "RequestId": "d9d8ee43-1463-42ed-b697-cfa59ebf0ef5",
           "HTTPStatusCode": 200,
           "HTTPHeaders": {
-            "date": "Tue, 12 Aug 2025 19:57:23 GMT",
+            "date": "Fri, 15 Aug 2025 20:38:18 GMT",
             "content-type": "application/json",
-            "content-length": "2453",
+            "content-length": "904",
             "connection": "keep-alive",
-            "x-amzn-requestid": "81f2a5d6-a436-4521-8016-b68d738c5f8c"
+            "x-amzn-requestid": "d9d8ee43-1463-42ed-b697-cfa59ebf0ef5"
           },
           "RetryAttempts": 0
         },
@@ -53,7 +53,7 @@
             "role": "assistant",
             "content": [
               {
-                "text": "```json\n{\n  \"path\": \"s3://par-servicios-poc-qa-filling-desk/par-servicios-poc/CECRL/984174004/_2022-01-06.pdf\",\n  \"result\": {\n    \"firstName\": \"Dirk Elric\",\n    \"lastName\": \"Adams\",\n    \"country_issuer\": \"Estados Unidos\",\n    \"nationality\": \"Estados Unidos\",\n    \"identificationType\": \"Pasaporte\",\n    \"identificationNumber\": \"566784278\",\n    \"message\": \"\"\n  },\n  \"confidenceScores\": {\n    \"firstName\": 100,\n    \"lastName\": 100,\n    \"country_issuer\": 100,\n    \"nationality\": 100,\n    \"identificationType\": 100,\n    \"identificationNumber\": 100\n  },\n  \"document_type\": \"person\",\n  \"document_number\": \"test\",\n  \"category\": \"CECRL\"\n}\n```\n\n### Reasoning:\n1. **Document Processing**:\n   - The document is a passport from the United States, which is an official identification document.\n   - The text is primarily in English, but the extraction requirements allow for processing in multiple languages.\n\n2. **Document Validation**:\n   - The document is validated as an official identification document due to the presence of the United States Department of State seal and the structured format typical of passports.\n\n3. **Data Extraction and Normalization**:\n   - **firstName**: Extracted as \"Dirk Elric\" from the \"Given Names\" field.\n   - **lastName**: Extracted as \"Adams\" from the \"Surname\" field.\n   - **country_issuer**: Identified as \"Estados Unidos\" (United States) from the issuing authority and document type.\n   - **nationality**: Identified as \"Estados Unidos\" (United States) from the nationality field.\n   - **identificationType**: Translated from \"Passport\" to \"Pasaporte\".\n   - **identificationNumber**: Extracted as \"566784278\" from the passport number field.\n\n4. **Critical Distinctions**:\n   - Differentiated between `country_issuer` (United States) and `nationality` (United States), both of which are the same in this case.\n\n5. **Confidence Assessment**:\n   - All fields were extracted with high confidence (100) due to the clear and unambiguous nature of the information on the passport.\n\n6. **Step-by-Step Extraction Process**:\n   - Followed the defined extraction process to map document contents to JSON fields accurately."
+                "text": "```json\n{\n  \"path\": \"s3://par-servicios-poc-qa-filling-desk/par-servicios-poc/CECRL/984174004/_2022-01-06.pdf\",\n  \"result\": {\n    \"firstName\": \"Dirk Elric\",\n    \"lastName\": \"Adams\",\n    \"country_issuer\": \"Estados Unidos\",\n    \"nationality\": \"Estados Unidos\",\n    \"identificationType\": \"Pasaporte\",\n    \"identificationNumber\": \"566784278\",\n    \"message\": \"\"\n  },\n  \"confidenceScores\": {\n    \"firstName\": 100,\n    \"lastName\": 100,\n    \"country_issuer\": 100,\n    \"nationality\": 100,\n    \"identificationType\": 100,\n    \"identificationNumber\": 100\n  },\n  \"document_type\": \"person\",\n  \"document_number\": \"test\",\n  \"category\": \"CECRL\"\n}\n```"
               }
             ]
           }
@@ -61,11 +61,11 @@
         "stopReason": "end_turn",
         "usage": {
           "inputTokens": 5052,
-          "outputTokens": 575,
-          "totalTokens": 5627
+          "outputTokens": 234,
+          "totalTokens": 5286
         },
         "metrics": {
-          "latencyMs": 12280
+          "latencyMs": 5651
         }
       },
       "model_used": "us.amazon.nova-pro-v1:0"
@@ -80,7 +80,8 @@
           "country_issuer": "Estados Unidos",
           "nationality": "Venezuela",
           "identificationType": "Pasaporte",
-          "identificationNumber": "566784278"
+          "identificationNumber": "566784278",
+          "message": ""
         },
         "confidenceScores": {
           "firstName": 100,
@@ -96,14 +97,14 @@
       },
       "raw_response": {
         "ResponseMetadata": {
-          "RequestId": "25a01edd-35cb-4c04-825e-a599709b449a",
+          "RequestId": "dc5d64ee-44ee-4583-9a2e-b357f637d930",
           "HTTPStatusCode": 200,
           "HTTPHeaders": {
-            "date": "Tue, 12 Aug 2025 19:57:29 GMT",
+            "date": "Fri, 15 Aug 2025 20:38:25 GMT",
             "content-type": "application/json",
-            "content-length": "875",
+            "content-length": "899",
             "connection": "keep-alive",
-            "x-amzn-requestid": "25a01edd-35cb-4c04-825e-a599709b449a"
+            "x-amzn-requestid": "dc5d64ee-44ee-4583-9a2e-b357f637d930"
           },
           "RetryAttempts": 0
         },
@@ -112,7 +113,7 @@
             "role": "assistant",
             "content": [
               {
-                "text": "```json\n{\n  \"path\": \"s3://par-servicios-poc-qa-filling-desk/par-servicios-poc/CECRL/984174004/_2022-01-06.pdf\",\n  \"result\": {\n    \"firstName\": \"Dirk Elric\",\n    \"lastName\": \"Adams\",\n    \"country_issuer\": \"Estados Unidos\",\n    \"nationality\": \"Venezuela\",\n    \"identificationType\": \"Pasaporte\",\n    \"identificationNumber\": \"566784278\"\n  },\n  \"confidenceScores\": {\n    \"firstName\": 100,\n    \"lastName\": 100,\n    \"country_issuer\": 100,\n    \"nationality\": 100,\n    \"identificationType\": 100,\n    \"identificationNumber\": 100\n  },\n  \"document_type\": \"person\",\n  \"document_number\": \"test\",\n  \"category\": \"CECRL\"\n}\n```"
+                "text": "```json\n{\n  \"path\": \"s3://par-servicios-poc-qa-filling-desk/par-servicios-poc/CECRL/984174004/_2022-01-06.pdf\",\n  \"result\": {\n    \"firstName\": \"Dirk Elric\",\n    \"lastName\": \"Adams\",\n    \"country_issuer\": \"Estados Unidos\",\n    \"nationality\": \"Venezuela\",\n    \"identificationType\": \"Pasaporte\",\n    \"identificationNumber\": \"566784278\",\n    \"message\": \"\"\n  },\n  \"confidenceScores\": {\n    \"firstName\": 100,\n    \"lastName\": 100,\n    \"country_issuer\": 100,\n    \"nationality\": 100,\n    \"identificationType\": 100,\n    \"identificationNumber\": 100\n  },\n  \"document_type\": \"person\",\n  \"document_number\": \"test\",\n  \"category\": \"CECRL\"\n}\n```"
               }
             ]
           }
@@ -120,11 +121,11 @@
         "stopReason": "end_turn",
         "usage": {
           "inputTokens": 5490,
-          "outputTokens": 227,
-          "totalTokens": 5717
+          "outputTokens": 232,
+          "totalTokens": 5722
         },
         "metrics": {
-          "latencyMs": 5085
+          "latencyMs": 6147
         }
       },
       "model_used": "us.amazon.nova-pro-v1:0"
@@ -136,18 +137,17 @@
         "result": {
           "firstName": "DIRK ELRIC",
           "lastName": "ADAMS",
-          "country_issuer": "United States of America",
-          "nationality": "VENEZUELA",
-          "identificationType": "Passport",
-          "identificationNumber": "566784278",
-          "message": ""
+          "country_issuer": "Estados Unidos",
+          "nationality": "Venezuela",
+          "identificationType": "Pasaporte",
+          "identificationNumber": "566784278"
         },
         "confidenceScores": {
           "firstName": 95,
           "lastName": 95,
-          "country_issuer": 95,
-          "nationality": 90,
-          "identificationType": 95,
+          "country_issuer": 85,
+          "nationality": 85,
+          "identificationType": 90,
           "identificationNumber": 100
         },
         "document_type": "person",
@@ -156,14 +156,14 @@
       },
       "raw_response": {
         "ResponseMetadata": {
-          "RequestId": "f360f0ae-390a-470a-8732-7a5be1b1a06b",
+          "RequestId": "3953b6ae-b60b-4944-a0c4-b95ee57ffd90",
           "HTTPStatusCode": 200,
           "HTTPHeaders": {
-            "date": "Tue, 12 Aug 2025 19:57:39 GMT",
+            "date": "Fri, 15 Aug 2025 20:38:37 GMT",
             "content-type": "application/json",
-            "content-length": "2482",
+            "content-length": "2188",
             "connection": "keep-alive",
-            "x-amzn-requestid": "f360f0ae-390a-470a-8732-7a5be1b1a06b"
+            "x-amzn-requestid": "3953b6ae-b60b-4944-a0c4-b95ee57ffd90"
           },
           "RetryAttempts": 0
         },
@@ -172,7 +172,7 @@
             "role": "assistant",
             "content": [
               {
-                "text": "Here is the detailed reasoning and the final JSON output based on the provided image of a US passport:\n\n### Reasoning:\n\n1. **Detected Field Patterns:**\n   - **Surname:** \"Surname / Nom / Apellidos\"\n   - **Given Name:** \"Given Names / Prénoms / Nombres\"\n   - **Country Issuer:** \"United States of America\"\n   - **Nationality:** \"Place of birth / Lieu de naissance / Lugar de nacimiento\" (Venezuela)\n   - **Identification Type:** \"Passport\"\n   - **Identification Number:** \"566784278\"\n\n2. **Mapping to JSON Fields:**\n   - **Surname:** \"ADAMS\" → \"lastName\"\n   - **Given Name:** \"DIRK ELRIC\" → \"firstName\"\n   - **Country Issuer:** \"United States of America\" → \"country_issuer\"\n   - **Nationality:** \"VENEZUELA\" → \"nationality\"\n   - **Identification Type:** \"Passport\" → \"identificationType\"\n   - **Identification Number:** \"566784278\" → \"identificationNumber\"\n\n3. **Multi-field Combinations:**\n   - No multi-field surname combination needed as only one surname field was detected.\n   - Given names \"DIRK ELRIC\" were combined into \"firstName\".\n\n4. **Validation Checks:**\n   - Verified that \"lastName\" came from the \"Surname\" field.\n   - Verified that \"firstName\" came from the \"Given Names\" field.\n   - Ensured no swap between first and last names.\n   - Confirmed the country_issuer and nationality fields were correctly extracted.\n\n5. **Confidence Scores:**\n   - High confidence in all extracted fields due to clear field labels and successful pattern matching.\n\n### Final JSON Output:\n\n```json\n{\n  \"path\": \"s3://par-servicios-poc-qa-filling-desk/par-servicios-poc/CECRL/984174004/_2022-01-06.pdf\",\n  \"result\": {\n    \"firstName\": \"DIRK ELRIC\",\n    \"lastName\": \"ADAMS\",\n    \"country_issuer\": \"United States of America\",\n    \"nationality\": \"VENEZUELA\",\n    \"identificationType\": \"Passport\",\n    \"identificationNumber\": \"566784278\",\n    \"message\": \"\"\n  },\n  \"confidenceScores\": {\n    \"firstName\": 95,\n    \"lastName\": 95,\n    \"country_issuer\": 95,\n    \"nationality\": 90,\n    \"identificationType\": 95,\n    \"identificationNumber\": 100\n  },\n  \"document_type\": \"person\",\n  \"document_number\": \"test\",\n  \"category\": \"CECRL\"\n}\n```"
+                "text": "Here is the detailed reasoning and the final JSON output based on the provided image of a US passport:\n\n### Reasoning:\n\n1. **Surname Detection:**\n   - The document contains the field \"Surname: ADAMS\".\n   - This matches the English pattern for surname detection.\n   - Extracted lastName: \"ADAMS\".\n\n2. **Given Name Detection:**\n   - The document contains the field \"Given Names: DIRK ELRIC\".\n   - This matches the English pattern for given name detection.\n   - Extracted firstName: \"DIRK ELRIC\".\n\n3. **Document Type Translation:**\n   - The document type is \"PASSPORT\".\n   - Translated to Spanish: \"Pasaporte\".\n\n4. **Country Field Extraction:**\n   - The country issuer is \"UNITED STATES OF AMERICA\".\n   - The nationality is \"VENEZUELA\" (extracted from \"Place of birth: VENEZUELA\").\n\n5. **Identification Number:**\n   - The identification number is \"566784278\".\n\n6. **Pattern Validation:**\n   - Verified that \"ADAMS\" came from the \"Surname\" field.\n   - Verified that \"DIRK ELRIC\" came from the \"Given Names\" field.\n\n7. **Confidence Scoring:**\n   - High confidence in surname and given name extraction due to clear field labels.\n   - Moderate confidence in country and nationality extraction due to clear but less common field labels.\n\n### Final JSON Output:\n\n```json\n{\n  \"path\": \"s3://par-servicios-poc-qa-filling-desk/par-servicios-poc/CECRL/984174004/_2022-01-06.pdf\",\n  \"result\": {\n    \"firstName\": \"DIRK ELRIC\",\n    \"lastName\": \"ADAMS\",\n    \"country_issuer\": \"Estados Unidos\",\n    \"nationality\": \"Venezuela\",\n    \"identificationType\": \"Pasaporte\",\n    \"identificationNumber\": \"566784278\"\n  },\n  \"confidenceScores\": {\n    \"firstName\": 95,\n    \"lastName\": 95,\n    \"country_issuer\": 85,\n    \"nationality\": 85,\n    \"identificationType\": 90,\n    \"identificationNumber\": 100\n  },\n  \"document_type\": \"person\",\n  \"document_number\": \"test\",\n  \"category\": \"CECRL\"\n}\n```"
               }
             ]
           }
@@ -180,11 +180,11 @@
         "stopReason": "end_turn",
         "usage": {
           "inputTokens": 6432,
-          "outputTokens": 610,
-          "totalTokens": 7042
+          "outputTokens": 528,
+          "totalTokens": 6960
         },
         "metrics": {
-          "latencyMs": 9746
+          "latencyMs": 10890
         }
       },
       "model_used": "us.amazon.nova-pro-v1:0"
@@ -194,11 +194,11 @@
       "data": {
         "path": "s3://par-servicios-poc-qa-filling-desk/par-servicios-poc/CECRL/984174004/_2022-01-06.pdf",
         "result": {
-          "firstName": "Dirk Elric",
-          "lastName": "Adams",
-          "country_issuer": "United States of America",
-          "nationality": "Venezuela",
-          "identificationType": "Passport",
+          "firstName": "DIRK ELRIC",
+          "lastName": "ADAMS",
+          "country_issuer": "UNITED STATES OF AMERICA",
+          "nationality": "VENEZUELA",
+          "identificationType": "PASSPORT",
           "identificationNumber": "566784278",
           "message": ""
         },
@@ -216,14 +216,14 @@
       },
       "raw_response": {
         "ResponseMetadata": {
-          "RequestId": "f818f8f9-76e7-4278-97ab-f0813fb2bdb2",
+          "RequestId": "d161a5e7-4597-4fe4-b38f-b7aa0dab575f",
           "HTTPStatusCode": 200,
           "HTTPHeaders": {
-            "date": "Tue, 12 Aug 2025 19:57:45 GMT",
+            "date": "Fri, 15 Aug 2025 20:38:45 GMT",
             "content-type": "application/json",
             "content-length": "903",
             "connection": "keep-alive",
-            "x-amzn-requestid": "f818f8f9-76e7-4278-97ab-f0813fb2bdb2"
+            "x-amzn-requestid": "d161a5e7-4597-4fe4-b38f-b7aa0dab575f"
           },
           "RetryAttempts": 0
         },
@@ -232,7 +232,7 @@
             "role": "assistant",
             "content": [
               {
-                "text": "```json\n{\n  \"path\": \"s3://par-servicios-poc-qa-filling-desk/par-servicios-poc/CECRL/984174004/_2022-01-06.pdf\",\n  \"result\": {\n    \"firstName\": \"Dirk Elric\",\n    \"lastName\": \"Adams\",\n    \"country_issuer\": \"United States of America\",\n    \"nationality\": \"Venezuela\",\n    \"identificationType\": \"Passport\",\n    \"identificationNumber\": \"566784278\",\n    \"message\": \"\"\n  },\n  \"confidenceScores\": {\n    \"firstName\": 95,\n    \"lastName\": 95,\n    \"country_issuer\": 95,\n    \"nationality\": 90,\n    \"identificationType\": 95,\n    \"identificationNumber\": 100\n  },\n  \"document_type\": \"person\",\n  \"document_number\": \"test\",\n  \"category\": \"CECRL\"\n}\n```"
+                "text": "```json\n{\n  \"path\": \"s3://par-servicios-poc-qa-filling-desk/par-servicios-poc/CECRL/984174004/_2022-01-06.pdf\",\n  \"result\": {\n    \"firstName\": \"DIRK ELRIC\",\n    \"lastName\": \"ADAMS\",\n    \"country_issuer\": \"UNITED STATES OF AMERICA\",\n    \"nationality\": \"VENEZUELA\",\n    \"identificationType\": \"PASSPORT\",\n    \"identificationNumber\": \"566784278\",\n    \"message\": \"\"\n  },\n  \"confidenceScores\": {\n    \"firstName\": 95,\n    \"lastName\": 95,\n    \"country_issuer\": 95,\n    \"nationality\": 90,\n    \"identificationType\": 95,\n    \"identificationNumber\": 100\n  },\n  \"document_type\": \"person\",\n  \"document_number\": \"test\",\n  \"category\": \"CECRL\"\n}\n```"
               }
             ]
           }
@@ -240,11 +240,11 @@
         "stopReason": "end_turn",
         "usage": {
           "inputTokens": 5898,
-          "outputTokens": 227,
-          "totalTokens": 6125
+          "outputTokens": 231,
+          "totalTokens": 6129
         },
         "metrics": {
-          "latencyMs": 5042
+          "latencyMs": 6441
         }
       },
       "model_used": "us.amazon.nova-pro-v1:0"

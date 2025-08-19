@@ -1,0 +1,85 @@
+# CERL Document Test Configuration
+# Colombian citizenship and identity documents
+
+documents:
+  colombian_cedula_basic:
+    name: "Colombian Cédula - Basic Extraction"
+    s3_path: "s3://par-servicios-poc-qa-filling-desk/par-servicios-poc/CERL/900123456/123456789_2020-05-15.pdf"
+    type: "CERL"
+    test_type: "field_accuracy"
+    enabled: true
+    
+    test_config:
+      prompts_to_test: ["v2.1.0", "v2.2.1"]
+      description: "Basic Colombian cédula extraction with standard fields"
+      
+      expected_results:
+        firstName: "Maria Elena"
+        lastName: "Rodriguez Gonzalez"
+        country_issuer: "Colombia"
+        nationality: "Colombia"
+        identificationType: "Cédula de Ciudadanía"
+        identificationNumber: "123456789"
+        
+      issue_result:
+        firstName: "Elena Maria"  # Name order confusion
+        lastName: "Gonzalez Rodriguez"
+
+  colombian_cedula_special_chars:
+    name: "Colombian Cédula - Special Characters"
+    s3_path: "s3://par-servicios-poc-qa-filling-desk/par-servicios-poc/CERL/900234567/987654321_2021-03-10.pdf"
+    type: "CERL"
+    test_type: "field_accuracy"
+    enabled: true
+    
+    test_config:
+      prompts_to_test: ["v2.2.0", "v2.2.1"]
+      description: "Test extraction with special characters (ñ, ü, accents)"
+      
+      expected_results:
+        firstName: "José Andrés"
+        lastName: "Peña Muñoz"
+        country_issuer: "Colombia"
+        nationality: "Colombia"
+        identificationType: "Cédula de Ciudadanía"
+        identificationNumber: "987654321"
+        
+      issue_result:
+        firstName: "Jose Andres"  # Missing accents
+        lastName: "Pena Munoz"
+
+  colombian_cedula_blank:
+    name: "Colombian Cédula - Blank Detection Test"
+    s3_path: "s3://par-servicios-poc-qa-filling-desk/par-servicios-poc/CERL/900345678/blank_document_2022-01-20.pdf"
+    type: "CERL"
+    test_type: "blank_detection"
+    enabled: true
+    
+    test_config:
+      prompts_to_test: ["v2.1.0", "v2.2.1"]
+      description: "Document has clear data but model returns blank fields"
+      
+      expected_behavior: "extract_data"
+      actual_behavior: "blank"
+
+  foreign_resident_card:
+    name: "Foreign Resident Card - Colombia"
+    s3_path: "s3://par-servicios-poc-qa-filling-desk/par-servicios-poc/CERL/900456789/foreign_resident_456789_2023-06-12.pdf"
+    type: "CERL"
+    test_type: "field_accuracy"
+    enabled: true
+    
+    test_config:
+      prompts_to_test: ["v2.2.1"]
+      description: "Foreign resident in Colombia - nationality vs issuer country"
+      
+      expected_results:
+        firstName: "Hans"
+        lastName: "Mueller"
+        country_issuer: "Colombia"
+        nationality: "Alemania"  # Birth country
+        identificationType: "Cédula de Extranjería"
+        identificationNumber: "456789123"
+        
+      issue_result:
+        nationality: "Colombia"  # Confusion with issuer country

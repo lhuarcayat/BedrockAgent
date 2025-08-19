@@ -62,7 +62,7 @@ def load_prompt_files(version: str) -> Tuple[str, str]:
         Tuple[system_prompt, user_prompt]
     """
     try:
-        base_path = Path(f"prompts/{version}")
+        base_path = Path(f"prompts/CECRL/{version}")
         
         system_path = base_path / "system.txt"
         user_path = base_path / "user.txt"

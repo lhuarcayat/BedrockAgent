@@ -25,12 +25,27 @@ Based on `terraform/variables.tf`, the following variables are required:
 ## Example Files
 
 - `dev.tfvars.example` - Development environment template
-- `qa.tfvars.example` - QA environment template  
+- `qa.tfvars.example` - QA environment template
 - `prod.tfvars.example` - Production environment template
 
 ## Required Models
 
-The `bedrock_model` and `fallback_model` variables must be set to valid AWS Bedrock model IDs, such as:
-- `us.amazon.nova-pro-v1:0`
-- `us.mistral.pixtral-large-2502-v1:0`
-- `us.anthropic.claude-sonnet-4-20250514-v1:0`
+The `bedrock_model` and `fallback_model` variables must be set to valid AWS Bedrock model IDs.
+
+**Production Models (Cross-Region Inference Profiles):**
+
+- `us.amazon.nova-pro-v1:0` - Supports on-demand throughput, uses bytes approach
+- `us.anthropic.claude-sonnet-4-20250514-v1:0` - Supports on-demand throughput, uses bytes approach
+- `us.mistral.pixtral-large-2502-v1:0` - Alternative fallback option
+
+**Development/Testing Models (Region-Specific - Local Only):**
+
+- `amazon.nova-pro-v1:0` - Works with S3 direct access in development environment
+- `anthropic.claude-sonnet-4-20250514-v1:0` - Works with S3 direct access in development environment
+
+**⚠️ AWS Bedrock Limitations:**
+
+- **Production Lambda**: Region-specific models (`amazon.nova-pro-v1:0`) fail with on-demand throughput ("not supported")
+- **Local Development**: Same models work fine with S3 direct access
+- **Root Cause**: Environment/account differences in Bedrock model access
+- **Solution**: Use inference profiles (`us.*`) for production, region-specific for local testing

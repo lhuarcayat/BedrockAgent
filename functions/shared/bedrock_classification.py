@@ -13,16 +13,16 @@ from shared.prompts import get_instructions, add_now_process
 
 logger = logging.getLogger(__name__)
 
-def setup_classification_request(pdf_bytes, folder_path):
+def setup_classification_request(pdf_bytes=None, folder_path=None, s3_uri=None):
     """
     Prepare everything needed for classification.
     Returns bedrock client, messages, system parameter, and model config.
+    
+    Args:
+        pdf_bytes: PDF content as bytes (legacy approach)
+        folder_path: S3 folder path for naming
+        s3_uri: S3 URI for direct access (preferred)
     """
-    # PDF processing
-    first_page = get_first_pdf_page(pdf_bytes)
-    is_scanned = detect_scanned_pdf(pdf_bytes)
-    logger.info(f"PDF type detected: {'scanned image' if is_scanned else 'has text'}")
-
     # Bedrock setup
     bedrock = create_bedrock_client()
 
@@ -38,7 +38,18 @@ def setup_classification_request(pdf_bytes, folder_path):
     system_parameter = [{"text": system_prompt}]
     logger.info(f"System parameter structure: {system_parameter}")
 
-    messages = [create_message(user_prompt, "user", first_page, folder_path)]
+    # Create messages with S3 direct access support
+    if s3_uri:
+        # Optimized: use S3 direct access (no PDF processing needed)
+        messages = [create_message(user_prompt, "user", pdf_path=folder_path, s3_uri=s3_uri)]
+        logger.info(f"Using S3 direct access for classification: {s3_uri} (optimized)")
+    else:
+        # Fallback: use bytes with PDF processing
+        first_page = get_first_pdf_page(pdf_bytes)
+        is_scanned = detect_scanned_pdf(pdf_bytes)
+        logger.info(f"PDF type detected: {'scanned image' if is_scanned else 'has text'}")
+        messages = [create_message(user_prompt, "user", first_page, folder_path)]
+        logger.info(f"Using bytes approach with first page extraction (fallback)")
     
     # Model configuration
     models = {

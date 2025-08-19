@@ -24,29 +24,53 @@ def sanitize_name(raw_name: str) -> str:
 def create_message(prompt: str,
                    role: str,
                    pdf_bytes: bytes | None = None,
-                   pdf_path: str | None = None):
+                   pdf_path: str | None = None,
+                   s3_uri: str | None = None,
+                   s3_bucket_owner: str | None = None):
     """
     Build a single Bedrock message that contains:
         • main prompt (instructions + result envelope)
         • optional PDF document block
+    
+    Args:
+        prompt: Text prompt for the message
+        role: Message role (user, assistant, etc.)
+        pdf_bytes: PDF content as bytes (legacy approach)
+        pdf_path: Path/name for the PDF (for naming)
+        s3_uri: S3 URI for direct access (e.g., "s3://bucket/path/file.pdf")
+        s3_bucket_owner: AWS account ID that owns the S3 bucket (optional if same account)
+    
+    Note: If both pdf_bytes and s3_uri are provided, s3_uri takes precedence for efficiency.
     """
     content = []
     content.append({"text": prompt})
 
-    # Optional PDF document
-    if pdf_bytes is not None:
+    # Optional PDF document - prefer S3 direct access over bytes
+    if s3_uri or pdf_bytes is not None:
         raw_name = pdf_path or "document.pdf"
         name = sanitize_name(raw_name)
 
-        content.append({
+        document_block = {
             "document": {
                 "name": name,
                 "format": "pdf",
-                "source": {
-                    "bytes": pdf_bytes
-                }
+                "source": {}
             }
-        })
+        }
+
+        # Use S3 direct access if URI provided (more efficient)
+        if s3_uri:
+            document_block["document"]["source"]["s3Location"] = {
+                "uri": s3_uri
+            }
+            # Add bucket owner if specified (required for cross-account access)
+            if s3_bucket_owner:
+                document_block["document"]["source"]["s3Location"]["bucketOwner"] = s3_bucket_owner
+        else:
+            # Fallback to bytes approach (maintains backward compatibility)
+            document_block["document"]["source"]["bytes"] = pdf_bytes
+
+        content.append(document_block)
 
     # Assemble the message envelope Bedrock expects
     msg = {"role": role, "content": content}

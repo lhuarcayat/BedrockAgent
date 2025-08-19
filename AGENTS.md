@@ -7,9 +7,28 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 ### Python Environment
 
 - **Setup:** `mise install` - Installs Python 3.12 and uv package manager
-- **Install dependencies:** `mise run install` (alias: `mise run i`) - Installs from requirements.txt using uv
+- **Install dependencies:** `mise run install` (alias: `mise run i`) - Installs from requirements.txt using uv AND ensures pip compatibility for terraform-aws-lambda
 - **Add dependencies:** `mise run dep` - Installs specific packages (PyPDF2, pydantic, python-dotenv)
 - **Freeze dependencies:** `mise run freeze` - Updates requirements.txt with current installed packages
+
+### Package Manager Compatibility
+
+This project uses **uv** for development and **pip** for Lambda packaging:
+
+- **Development**: `uv pip install` (faster, better dependency resolution)
+- **Lambda Packaging**: `python -m pip install` (required by terraform-aws-lambda)
+
+**Key Points:**
+
+- The `mise run install` task automatically installs both uv and standard pip
+- This ensures terraform-aws-lambda can package Lambda functions with dependencies
+- No manual intervention needed - the setup handles compatibility automatically
+
+**Alternative Environments:**
+
+- **conda users**: Must install pip in conda environment (`conda install pip`)
+- **Windows users**: Consider WSL2 for better terraform-aws-lambda compatibility
+- **Docker option**: Use Docker-based packaging for cross-platform reliability
 
 ### Terraform Infrastructure
 
@@ -93,9 +112,12 @@ This is a **serverless document processing system** using AWS services and Amazo
 - **Project prefix:** `par-servicios-poc`
 - **Environments:** dev, qa (configured via tfvars)
 - **AWS Region:** us-east-2 (Ohio)
-- **Bedrock Models:**
-  - Primary: `us.amazon.nova-pro-v1:0`
-  - Fallback: `us.anthropic.claude-sonnet-4-20250514-v1:0`
+- **Bedrock Models (Production - Cross-Region Inference Profiles):**
+  - Primary: `us.amazon.nova-pro-v1:0` (supports on-demand throughput, uses bytes approach)
+  - Fallback: `us.anthropic.claude-sonnet-4-20250514-v1:0` (supports on-demand throughput, uses bytes approach)
+- **Development/Testing Models (Local Environment Only):**
+  - Primary: `amazon.nova-pro-v1:0` (works with S3 direct access locally)
+  - Fallback: `anthropic.claude-sonnet-4-20250514-v1:0` (works with S3 direct access locally)
 
 ### Key Files to Understand
 
@@ -144,12 +166,15 @@ Each document type (CERL, CECRL, RUT, RUB, ACC) has:
 
 ### Key Architectural Patterns
 
+- **Hybrid S3 Access Pattern:** S3 direct access in development, bytes approach in production
+- **Cross-Region Inference Profiles:** Production uses `us.*` model IDs for on-demand throughput compatibility
 - **Parameter Handling:** Automatic format conversion for different Bedrock models (Nova/Claude/Mistral)
 - **API Routing:** Converse API for all models with provider-specific parameter placement
 - **Exception Separation:** Parse errors vs S3 save errors handled independently
 - **Fallback-First Processing:** When classification uses fallback, extraction tries fallback first
 - **SQS Batch Processing:** Optimized Lambda invocations via message batching (3-second windows)
 - **DynamoDB Atomic Locking:** Exactly-once processing guarantees using conditional writes
+- **Environment-Specific Models:** Region-specific models for local testing, inference profiles for production
 
 ### Manual Review System
 
@@ -207,3 +232,105 @@ GSI (DocumentIndex):
 - Colombian Cédula with explicit labels: `s3://par-servicios-poc-qa-filling-desk/par-servicios-poc/CECRL/900397317/19200964_2020-02-29.pdf`
 - Colombian Cédula without explicit labels: `s3://par-servicios-poc-qa-filling-desk/par-servicios-poc/CECRL/900397317/80163642_2020-02-29.pdf`
 - US Passport with Venezuela birth: `s3://par-servicios-poc-qa-filling-desk/par-servicios-poc/CECRL/984174004/_2022-01-06.pdf`
+
+## Common Deployment Issues & Solutions
+
+### "No module named pip" during terraform deployment
+
+**Error:**
+
+```bash
+python3.12: No module named pip
+subprocess.CalledProcessError: Command '['python3.12', '-m', 'pip', 'install'...
+```
+
+**Root Cause:** terraform-aws-lambda requires standard pip module, but mise+uv or conda environments may not have it installed.
+
+**Solutions:**
+
+**For mise users:**
+
+- Should be automatically handled by `mise run install`
+- If still occurs: `python -m ensurepip --upgrade`
+
+**For conda users:**
+
+- `conda install pip`
+- Or: `python -m ensurepip --upgrade`
+
+**For Windows users:**
+
+- Use WSL2 for better compatibility
+- Or ensure conda environment has pip: `conda install pip python=3.12`
+
+### Lambda Dependencies Not Installing
+
+**Symptoms:** Lambda ZIP files are small (~100KB instead of ~2-7MB) and runtime shows import errors.
+
+**Root Cause:** Missing `pip_requirements = true` in Lambda module configuration.
+
+**Solution:** Ensure all Lambda modules in `terraform/main.tf` have:
+
+```hcl
+module "classification_lambda" {
+  source = "./modules/lambda-wrapper"
+  # ... other config ...
+  pip_requirements = true  # This line is required
+}
+```
+
+### Windows Path Issues with terraform-aws-lambda
+
+**Symptoms:** Path-related errors during Lambda packaging on Windows.
+
+**Solutions:**
+
+1. **WSL2 (Recommended):** Use Windows Subsystem for Linux
+2. **Docker packaging:** Add Docker build args to Lambda config
+3. **Conda with proper PATH:** Ensure conda environment is properly activated
+
+### Package Manager Conflicts
+
+**Issue:** Conflicts between development packages (uv/conda) and deployment packaging (pip).
+
+**Best Practices:**
+
+- Keep development and deployment package managers separate
+- Use virtual environments consistently
+- Let terraform-aws-lambda use its own pip installation process
+- Don't manually install packages in both uv and pip simultaneously
+
+### Debug Lambda Packaging Issues
+
+**Enable debug logging:**
+
+```bash
+export TF_LAMBDA_PACKAGE_LOG_LEVEL=DEBUG2
+terraform plan  # Will show detailed packaging logs
+```
+
+**Check build artifacts:**
+
+```bash
+# Examine build plans and ZIP contents
+ls terraform/builds/
+unzip -l terraform/builds/<hash>.zip | head -20
+```
+
+### Development Environment Setup Verification
+
+**Quick verification script:**
+
+```bash
+# Verify all components are working
+python --version          # Should show 3.12.x
+uv --version             # Should show uv version
+python -m pip --version  # Should show pip version
+mise run install         # Should complete without errors
+```
+
+**If any component fails:**
+
+1. Run `mise doctor` to check mise setup
+2. Run `mise install` to reinstall tools
+3. Run `python -m ensurepip --upgrade` if pip is missing

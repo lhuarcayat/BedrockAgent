@@ -1,0 +1,111 @@
+# RUB Document Test Configuration
+# Colombian business registry documents (Registro Único de Beneficiarios)
+
+documents:
+  rub_sociedad_anonima:
+    name: "RUB Sociedad Anónima - Corporate Structure"
+    s3_path: "s3://par-servicios-poc-qa-filling-desk/par-servicios-poc/RUB/890123456/rub_sa_890123456_2023-02-28.pdf"
+    type: "RUB"
+    test_type: "count_validation"
+    enabled: true
+    
+    test_config:
+      prompts_to_test: ["v1.0.0", "v1.2.0"]
+      description: "Corporate structure with multiple beneficial owners"
+      
+      expected_count: 5
+      actual_count: 3
+      count_field: "beneficialOwners"
+      tolerance: 1
+
+  rub_beneficiarios_extranjeros:
+    name: "RUB Foreign Beneficiaries - Name Extraction"
+    s3_path: "s3://par-servicios-poc-qa-filling-desk/par-servicios-poc/RUB/890234567/rub_foreign_owners_2022-09-12.pdf"
+    type: "RUB"
+    test_type: "field_accuracy"
+    enabled: true
+    
+    test_config:
+      prompts_to_test: ["v1.1.0", "v1.2.0"]
+      description: "Foreign beneficial owners with non-Spanish names"
+      
+      expected_results:
+        primaryOwner: "Michael O'Connor"
+        ownerNationality: "Estados Unidos"
+        ownershipPercentage: "45.5%"
+        ownerType: "Persona Natural"
+        
+      issue_result:
+        primaryOwner: "Michael O Connor"  # Missing apostrophe
+        ownershipPercentage: "45.5"  # Missing percentage symbol
+
+  rub_estructura_compleja:
+    name: "RUB Complex Structure - Nested Ownership"
+    s3_path: "s3://par-servicios-poc-qa-filling-desk/par-servicios-poc/RUB/890345678/rub_complex_structure_2023-07-19.pdf"
+    type: "RUB"
+    test_type: "field_accuracy"
+    enabled: true
+    
+    test_config:
+      prompts_to_test: ["v1.2.0"]
+      description: "Complex corporate structure with nested beneficial ownership"
+      
+      expected_results:
+        parentCompany: "Holding Internacional S.A."
+        subsidiaryLevel: "2"
+        ultimateBeneficiary: "Foundation Trust Group"
+        controlType: "Indirecto"
+        
+      issue_result:
+        controlType: "Indirect"  # Language mixing
+        subsidiaryLevel: "Segundo"  # Number vs text
+
+  rub_porcentajes_participacion:
+    name: "RUB Ownership Percentages - Calculation Validation"
+    s3_path: "s3://par-servicios-poc-qa-filling-desk/par-servicios-poc/RUB/890456789/rub_percentages_2023-04-03.pdf"
+    type: "RUB"
+    test_type: "field_accuracy"
+    enabled: true
+    
+    test_config:
+      prompts_to_test: ["v1.0.0", "v1.2.0"]
+      description: "Ownership percentage calculations and validation"
+      
+      expected_results:
+        owner1Percentage: "35.0%"
+        owner2Percentage: "25.0%"
+        owner3Percentage: "40.0%"
+        totalPercentage: "100.0%"
+        
+      issue_result:
+        totalPercentage: "100%"  # Inconsistent decimal formatting
+
+  rub_personas_juridicas:
+    name: "RUB Legal Entities - Corporate Beneficiaries"
+    s3_path: "s3://par-servicios-poc-qa-filling-desk/par-servicios-poc/RUB/890567890/rub_corporate_beneficiaries_2022-12-15.pdf"
+    type: "RUB"
+    test_type: "count_validation"
+    enabled: true
+    
+    test_config:
+      prompts_to_test: ["v1.1.0", "v1.2.0"]
+      description: "Multiple corporate entities as beneficial owners"
+      
+      expected_count: 3
+      actual_count: 1
+      count_field: "corporateBeneficiaries"
+      tolerance: 0
+
+  rub_documento_incompleto:
+    name: "RUB Incomplete Document - Blank Detection"
+    s3_path: "s3://par-servicios-poc-qa-filling-desk/par-servicios-poc/RUB/890678901/rub_incomplete_2023-01-30.pdf"
+    type: "RUB"
+    test_type: "blank_detection"
+    enabled: true
+    
+    test_config:
+      prompts_to_test: ["v1.0.0", "v1.2.0"]
+      description: "Document with missing beneficial owner information"
+      
+      expected_behavior: "extract_data"
+      actual_behavior: "blank"

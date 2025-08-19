@@ -1,0 +1,107 @@
+# =============================================================================
+# CECRL DOCUMENT DEFINITIONS - Document-Centric Approach
+# =============================================================================
+# Purpose: Each document defines its own test problem, prompts, and expectations
+# Usage: Framework loads this and knows exactly what to test for each document
+
+documents:
+  # Field Accuracy Tests - Wrong field values that need fixing
+  us_passport_venezuela:
+    name: "US Passport Venezuela Birth"
+    s3_path: "s3://par-servicios-poc-qa-filling-desk/par-servicios-poc/CECRL/984174004/_2022-01-06.pdf"
+    type: "CECRL"
+    test_type: "field_accuracy"
+    enabled: true
+    
+    test_config:
+      prompts_to_test: ["v2.0.0", "v2.1.0", "v2.2.1"]
+      description: "Nationality should be birth place (Venezuela) not issuer country (Estados Unidos)"
+      
+      expected_results:
+        firstName: "Dirk Elric"
+        lastName: "Adams"
+        nationality: "Venezuela"        # CORRECT: Should extract from birth place
+        country_issuer: "Estados Unidos" # Country that issued the passport
+        
+      issue_result:
+        firstName: "Dirk Elric"
+        lastName: "Adams"  
+        nationality: "Estados Unidos"    # WRONG: Gets issuer country instead of birth place
+        country_issuer: "Estados Unidos"
+
+  colombian_cedula_name_swap:
+    name: "Colombian Cédula Name Swap"
+    s3_path: "s3://par-servicios-poc-qa-filling-desk/par-servicios-poc/CECRL/900397317/19200964_2020-02-29.pdf"
+    type: "CECRL"
+    test_type: "field_accuracy"
+    enabled: true
+    
+    test_config:
+      prompts_to_test: ["v2.2.0", "v2.2.1"]
+      description: "firstName/lastName were swapped in v2.2.0, fixed in v2.2.1"
+      
+      expected_results:
+        firstName: "Luis Ignacio"       # CORRECT: First name in firstName field
+        lastName: "Hernández Díaz"     # CORRECT: Last name in lastName field
+        identificationType: "Cédula de Ciudadanía"
+        identificationNumber: "19200964"
+        
+      issue_result:
+        firstName: "Hernández Díaz"     # WRONG: Last name in firstName field
+        lastName: "Luis Ignacio"       # WRONG: First name in lastName field
+        identificationType: "Cédula de Ciudadanía"
+        identificationNumber: "19200964"
+
+  colombian_cedula_no_labels:
+    name: "Colombian Cédula No Labels"
+    s3_path: "s3://par-servicios-poc-qa-filling-desk/par-servicios-poc/CECRL/900397317/80163642_2020-02-29.pdf"
+    type: "CECRL"
+    test_type: "field_accuracy"
+    enabled: true
+    
+    test_config:
+      prompts_to_test: ["v2.2.0", "v2.2.1"]
+      description: "Document without explicit APELLIDOS:/NOMBRES: labels - should still extract correctly"
+      
+      expected_results:
+        firstName: "Luis Dario"         # CORRECT: Should extract without explicit labels
+        lastName: "Hernandez Ramirez"  # CORRECT: Should extract without explicit labels
+        identificationType: "Cédula de Ciudadanía"
+        identificationNumber: "80163642"
+        
+      issue_result:
+        firstName: ""                   # WRONG: Fails to extract without labels
+        lastName: ""                    # WRONG: Fails to extract without labels
+        identificationType: "Cédula de Ciudadanía" 
+        identificationNumber: "80163642"
+
+  # Blank Detection Tests - Documents that should extract data but return blank
+  blank_document_example:
+    name: "Document With Blank Problem"
+    s3_path: "s3://bucket/blank-doc.pdf"
+    type: "CECRL"
+    test_type: "blank_detection"
+    enabled: false  # Disabled - no real document yet
+    
+    test_config:
+      prompts_to_test: ["v2.2.0", "v2.2.1"]
+      description: "Document has data but v2.2.0 returns blank, v2.2.1 should extract"
+      
+      expected_behavior: "extract_data"  # Should extract actual field values
+      actual_behavior: "blank"           # Currently returns empty/blank response
+
+  # Count Validation Tests - Wrong count of entities/people
+  count_problem_document:
+    name: "Company With 5 Representatives"
+    s3_path: "s3://bucket/company.pdf"
+    type: "CECRL"
+    test_type: "count_validation"
+    enabled: false  # Disabled - no real document yet
+    
+    test_config:
+      prompts_to_test: ["v1.0.0", "v1.1.0"]
+      description: "Should find exactly 5 people, v1.0.0 finds 3"
+      
+      expected_count: 5               # CORRECT: Should find 5 representatives
+      actual_count: 3                 # WRONG: Only finds 3 representatives
+      count_field: "relatedParties"   # Array field to count
