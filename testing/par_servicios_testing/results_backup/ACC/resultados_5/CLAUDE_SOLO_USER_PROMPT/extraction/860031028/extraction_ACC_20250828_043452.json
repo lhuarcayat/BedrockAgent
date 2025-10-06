@@ -1,0 +1,108 @@
+{
+  "extraction_data": {
+    "path": "ACC/860031028/Compisicion_accionaria_S_A__Mayo_2023.pdf",
+    "result": {
+      "companyName": "Siemens Sociedad por Acciones Simplificada",
+      "documentCategory": "Equity Composition",
+      "taxId": "860.031.028-9",
+      "country": "Colombia",
+      "identificationDetails": {
+        "source": "text_reference",
+        "indicators": [
+          "Bogotá D.C.",
+          "NIT format"
+        ],
+        "conflictingSources": [],
+        "requiresReview": "false"
+      },
+      "relatedParties": [
+        {
+          "type": "company",
+          "companyName": "Siemens International Holding B.V.",
+          "identificationType": "NIT",
+          "identificationNumber": "NL001781029B01",
+          "relationshipType": "Shareholder",
+          "participationPercentage": "100",
+          "timeFound": "1",
+          "job": ""
+        }
+      ]
+    },
+    "documentType": "company",
+    "documentNumber": "860031028",
+    "category": "ACC"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "```json { \"result\": { \"companyName\": \"Siemens Sociedad por Acciones Simplificada\", \"documentCategory\": \"Equity Composition\", \"taxId\": \"860.031.028-9\", \"country\": \"Colombia\", \"identificationDetails\": { \"source\": \"text_reference\", \"indicators\": [ \"Bogotá D.C.\", \"NIT format\" ], \"conflictingSources\": [], \"requiresReview\": \"false\" }, \"relatedParties\": [ { \"type\": \"company\", \"companyName\": \"Siemens International Holding B.V.\", \"identificationType\": \"NIT\", \"identificationNumber\": \"NL001781029B01\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"100\", \"timeFound\": \"1\", \"job\": \"\" } ] }, \"documentType\": \"company\", \"category\": \"ACC\" } ```"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 9,
+      "cache_creation_input_tokens": 7122,
+      "cache_read_input_tokens": 0,
+      "output_tokens": 809
+    },
+    "ResponseMetadata": {
+      "RequestId": "ff78f3f6-a667-4cd9-bf59-c14542670e5d",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Thu, 28 Aug 2025 09:34:52 GMT",
+        "content-type": "application/json",
+        "content-length": "3323",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "ff78f3f6-a667-4cd9-bf59-c14542670e5d",
+        "x-amzn-bedrock-invocation-latency": "18687",
+        "x-amzn-bedrock-cache-write-input-token-count": "7122",
+        "x-amzn-bedrock-cache-read-input-token-count": "0",
+        "x-amzn-bedrock-output-token-count": "809",
+        "x-amzn-bedrock-input-token-count": "9"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_01764WQmjNtQmS3FvTkr3NHx",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-3-7-sonnet-20250219",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Let me analyze this document step by step according to the provided workflow: ## Step 1: Document Analysis This appears to be a certification issued by a fiscal auditor (Revisor Fiscal) from Ernst & Young Audit S.A.S. regarding the shareholder composition of Siemens Sociedad por Acciones Simplificada (Siemens S.A.S.). The document is in Spanish and contains information about: - The main reporting company: Siemens S.A.S. - Location: Bogotá, D.C. (Colombia) - Tax ID (NIT): 860.031.028-9 - Shareholder information as of May 31, 2023 - The document is dated June 7, 2023 ## Step 2: Root Level Extraction - **companyName**: Siemens Sociedad por Acciones Simplificada (also appears as Siemens S.A.S.) - **taxId**: 860.031.028-9 (clearly stated in the document) - **country**: Colombia (evident from the mention of Bogotá D.C., Colombia's capital) - **identificationDetails**: - source: \"text_reference\" - indicators: [\"Bogotá D.C.\", \"Colombia\", \"NIT format\"] - conflictingSources: [] (no conflicts found) - requiresReview: \"false\" (all information is clear) ## Step 3: Related Parties Processing The document clearly shows one shareholder: - Siemens International Holding B.V. - NIT/ID: NL001781029B01 - Shares: 5,468,220 - Value: $95,693,850,000 Colombian pesos - Participation: 100% This is a company (not a person) since it has \"B.V.\" (Besloten Vennootschap) in its name, which is a Dutch private limited company designation. ## Step 4: Validation & Cross-checking - The tax ID format (NIT) aligns with Colombia - The participation percentage is 100%, which makes sense as the only shareholder - All required fields are present - No conflicts found Now I'll create the JSON output following the provided schema:",
+          "signature": "ErcBCkgIBxABGAIiQN8II4s4Vuq6d2rTPtZonOJhNeJFA2zb2isz0F/fXXTQSa5iqd7xmp+olQQcVjxX61eKp/6zioz1noBwAxCLimISDPNJqtzHsdj8SlBi3hoMXf5TXvw57sfwSUGRIjBuFFoAj4I1vGWG2UTcnHwvVT9BBoiVVCjXZNJXTBJ5SS4cDoHs2d2/blD9c8XEszwqHQP9f7W/B1sVKprJTXEAJfO5rUe3iQutymXWPqkXGAI="
+        },
+        {
+          "type": "text",
+          "text": "```json { \"result\": { \"companyName\": \"Siemens Sociedad por Acciones Simplificada\", \"documentCategory\": \"Equity Composition\", \"taxId\": \"860.031.028-9\", \"country\": \"Colombia\", \"identificationDetails\": { \"source\": \"text_reference\", \"indicators\": [ \"Bogotá D.C.\", \"NIT format\" ], \"conflictingSources\": [], \"requiresReview\": \"false\" }, \"relatedParties\": [ { \"type\": \"company\", \"companyName\": \"Siemens International Holding B.V.\", \"identificationType\": \"NIT\", \"identificationNumber\": \"NL001781029B01\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"100\", \"timeFound\": \"1\", \"job\": \"\" } ] }, \"documentType\": \"company\", \"category\": \"ACC\" } ```"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 9,
+        "cache_creation_input_tokens": 7122,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 809
+      }
+    },
+    "model_id": "us.anthropic.claude-3-7-sonnet-20250219-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 8000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "model_used": "us.anthropic.claude-3-7-sonnet-20250219-v1:0",
+  "api_used": "invoke_model"
+}

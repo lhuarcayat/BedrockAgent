@@ -1,0 +1,117 @@
+{
+  "extraction_data": {
+    "result": {
+      "companyName": "CONSTRUCTORA E INMOBILIARIA RIVERA INCORA SAS",
+      "documentCategory": "Equity Composition",
+      "taxId": "901.106.859-4",
+      "country": "Colombia",
+      "identificationDetails": {
+        "source": "text_reference",
+        "indicators": [
+          "Bogotá"
+        ],
+        "conflictingSources": [],
+        "requiresReview": "false"
+      },
+      "relatedParties": [
+        {
+          "type": "person",
+          "firstName": "Leowilston",
+          "lastName": "Rivera Mendez",
+          "identificationType": "C.C.",
+          "identificationNumber": "80.057.686",
+          "relationshipType": "Shareholder",
+          "participationPercentage": "49%",
+          "timeFound": "1",
+          "job": ""
+        },
+        {
+          "type": "person",
+          "firstName": "Marcos Jair",
+          "lastName": "Cuervo Mendez",
+          "identificationType": "C.C.",
+          "identificationNumber": "1.022.372.943",
+          "relationshipType": "Shareholder",
+          "participationPercentage": "51%",
+          "timeFound": "1",
+          "job": ""
+        }
+      ]
+    },
+    "documentType": "company",
+    "category": "ACC"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "{ \"result\": { \"companyName\": \"CONSTRUCTORA E INMOBILIARIA RIVERA INCORA SAS\", \"documentCategory\": \"Equity Composition\", \"taxId\": \"901.106.859-4\", \"country\": \"Colombia\", \"identificationDetails\": { \"source\": \"text_reference\", \"indicators\": [ \"Bogotá\" ], \"conflictingSources\": [], \"requiresReview\": \"false\" }, \"relatedParties\": [ { \"type\": \"person\", \"firstName\": \"Leowilston\", \"lastName\": \"Rivera Mendez\", \"identificationType\": \"C.C.\", \"identificationNumber\": \"80.057.686\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"49%\", \"timeFound\": \"1\", \"job\": \"\" }, { \"type\": \"person\", \"firstName\": \"Marcos Jair\", \"lastName\": \"Cuervo Mendez\", \"identificationType\": \"C.C.\", \"identificationNumber\": \"1.022.372.943\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"51%\", \"timeFound\": \"1\", \"job\": \"\" } ] }, \"documentType\": \"company\", \"category\": \"ACC\" }"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 9,
+      "cache_creation_input_tokens": 6073,
+      "cache_read_input_tokens": 0,
+      "output_tokens": 962
+    },
+    "ResponseMetadata": {
+      "RequestId": "1af2bba7-777e-4b58-aa32-1757ab0b822c",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Fri, 29 Aug 2025 19:56:16 GMT",
+        "content-type": "application/json",
+        "content-length": "6527",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "1af2bba7-777e-4b58-aa32-1757ab0b822c",
+        "x-amzn-bedrock-invocation-latency": "17590",
+        "x-amzn-bedrock-cache-write-input-token-count": "6073",
+        "x-amzn-bedrock-cache-read-input-token-count": "0",
+        "x-amzn-bedrock-output-token-count": "962",
+        "x-amzn-bedrock-input-token-count": "9"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_01V46XJc7FkxoUwpa8qSQktE",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-sonnet-4-20250514",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Let me analyze this equity composition document step by step. **Step 1: Document Analysis** - This appears to be a \"COMPOSICION ACCIONARIA\" (Equity Composition) document - It's issued by a public accountant (ASTRID ROCIO LOZANO) about the company CONSTRUCTORA E INMOBILIARIA RIVERA INCORA SAS - The document is in Spanish and appears to be Colombian based on the format and structure **Step 2: Root Level Extraction** *Company Name*: Looking at the document, the main company being reported on is \"CONSTRUCTORA E INMOBILIARIA RIVERA INCORA SAS\" with NIT 901.106.859-4 *Tax ID*: NIT 901.106.859-4 *Country*: The document mentions \"ciudad de Bogotá\" which indicates Colombia. Also, the use of \"NIT\" confirms Colombia. *Identification Details*: - Source: text_reference (Bogotá mentioned explicitly) - Indicators: [\"Bogotá\"] - The NIT format also aligns with Colombian tax ID patterns **Step 3: Related Parties Processing** Looking at the shareholder table: 1. LEOWILSTON RIVERA MENDEZ - Document: 80.057.686 - Percentage: 49% - Value: $98.000.000 - Shares: 196 2. MARCOS JAIR CUERVO MENDEZ - Document: 1.022.372.943 - Percentage: 51% - Value: $102.000.000 - Shares: 204 Both appear to be individuals based on their names and document numbers. Let me analyze their identification types: For LEOWILSTON RIVERA MENDEZ: 80.057.686 - This is 8 digits, fits Colombian C.C. pattern (4-10 digits, starts with non-zero) - Confirms individual identification type for Colombian citizen For MARCOS JAIR CUERVO MENDEZ: 1.022.372.943 - 10-digit identification number matching Colombian C.C. format - Validates as a standard citizen identification document **Step 4: Validation & Cross-checking** I've confirmed several key aspects of the document: - Precise alignment of tax and identification documentation - Complete ownership breakdown between two shareholders - Consistent Colombian administrative documentation - No discrepancies in share allocation or financial details The document provides a comprehensive snapshot of the company's equity composition, verifying all critical financial and identification parameters.",
+          "signature": "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"
+        },
+        {
+          "type": "text",
+          "text": "{ \"result\": { \"companyName\": \"CONSTRUCTORA E INMOBILIARIA RIVERA INCORA SAS\", \"documentCategory\": \"Equity Composition\", \"taxId\": \"901.106.859-4\", \"country\": \"Colombia\", \"identificationDetails\": { \"source\": \"text_reference\", \"indicators\": [ \"Bogotá\" ], \"conflictingSources\": [], \"requiresReview\": \"false\" }, \"relatedParties\": [ { \"type\": \"person\", \"firstName\": \"Leowilston\", \"lastName\": \"Rivera Mendez\", \"identificationType\": \"C.C.\", \"identificationNumber\": \"80.057.686\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"49%\", \"timeFound\": \"1\", \"job\": \"\" }, { \"type\": \"person\", \"firstName\": \"Marcos Jair\", \"lastName\": \"Cuervo Mendez\", \"identificationType\": \"C.C.\", \"identificationNumber\": \"1.022.372.943\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"51%\", \"timeFound\": \"1\", \"job\": \"\" } ] }, \"documentType\": \"company\", \"category\": \"ACC\" }"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 9,
+        "cache_creation_input_tokens": 6073,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 962
+      }
+    },
+    "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 8000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+  "api_used": "invoke_model"
+}

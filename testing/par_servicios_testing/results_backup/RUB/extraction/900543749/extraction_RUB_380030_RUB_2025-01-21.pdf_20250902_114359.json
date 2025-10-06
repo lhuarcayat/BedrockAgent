@@ -1,0 +1,105 @@
+{
+  "extraction_data": {
+    "result": {
+      "CompanyName": "VATCO GROUP LTDA",
+      "TaxId": "9 0 0 5 4 3 7 4 9",
+      "IdentificationType": "NIT",
+      "Country": "Colombia",
+      "ConflictingSources": [],
+      "RequiresReview": "false"
+    },
+    "RelatedParties": [
+      {
+        "FirstName": "DIANA MARIA",
+        "LastName": "LONDOÑO MONSALVE",
+        "IdType": "NIT",
+        "IdNumber": "4 3 5 4 7 6 9 8",
+        "NoveltyType": "Registro",
+        "ParticipationPercentage": "95"
+      },
+      {
+        "FirstName": "EDITH ESPERANZA",
+        "LastName": "CASTELLANOS BAUTISTA",
+        "IdType": "NIT",
+        "IdNumber": "4 1 7 5 2 0 7 5",
+        "NoveltyType": "Registro",
+        "ParticipationPercentage": "5"
+      }
+    ],
+    "DocumentType": "company",
+    "Category": "RUB"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "```json { \"result\": { \"CompanyName\": \"VATCO GROUP LTDA\", \"TaxId\": \"9 0 0 5 4 3 7 4 9\", \"IdentificationType\": \"NIT\", \"Country\": \"Colombia\", \"ConflictingSources\": [], \"RequiresReview\": \"false\" }, \"RelatedParties\": [ { \"FirstName\": \"DIANA MARIA\", \"LastName\": \"LONDOÑO MONSALVE\", \"IdType\": \"NIT\", \"IdNumber\": \"4 3 5 4 7 6 9 8\", \"NoveltyType\": \"Registro\", \"ParticipationPercentage\": \"95\" }, { \"FirstName\": \"EDITH ESPERANZA\", \"LastName\": \"CASTELLANOS BAUTISTA\", \"IdType\": \"NIT\", \"IdNumber\": \"4 1 7 5 2 0 7 5\", \"NoveltyType\": \"Registro\", \"ParticipationPercentage\": \"5\" } ], \"DocumentType\": \"company\", \"Category\": \"RUB\" } ```"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 5056,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 2039,
+      "output_tokens": 906
+    },
+    "ResponseMetadata": {
+      "RequestId": "04c03c30-e924-4136-b521-c5a9eb2c0309",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Tue, 02 Sep 2025 16:43:59 GMT",
+        "content-type": "application/json",
+        "content-length": "5114",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "04c03c30-e924-4136-b521-c5a9eb2c0309",
+        "x-amzn-bedrock-invocation-latency": "15682",
+        "x-amzn-bedrock-cache-write-input-token-count": "0",
+        "x-amzn-bedrock-cache-read-input-token-count": "2039",
+        "x-amzn-bedrock-output-token-count": "906",
+        "x-amzn-bedrock-input-token-count": "5056"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_0197CesSjkLRB61TMRBknPWT",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-sonnet-4-20250514",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Let me analyze this document carefully. This appears to be a Colombian \"Reporte de Beneficiarios Finales\" (Final Beneficiaries Report) issued by DIAN. Let me extract the required information: **Company Information:** From the document, I can see: - Cell \"11. Denominación o razón social\": VATCO GROUP LTDA - Cell \"18. Número de identificación\": 9 0 0 5 4 3 7 4 9 (in the top section and confirmed on page 1) - This is a DIAN document, so Country is Colombia and IdentificationType is NIT **Related Parties:** Looking at the \"Datos beneficiarios finales\" section on page 2, I can see two beneficiaries: **First Beneficiary:** - 34. Primer apellido: LONDOÑO - 35. Segundo apellido: MONSALVE - 36. Primer nombre: DIANA - 37. Otros nombres: MARIA - 30. Número de identificación: 4 3 5 4 7 6 9 8 - 32. Número de Identificación Tributaria - NIT: 4 3 5 4 7 6 9 8 (matches) - 57. Porcentaje de participación: 95 - 61. Tipo de novedad: Registro (code 1) **Second Beneficiary:** - 34. Primer apellido: CASTELLANOS - 35. Segundo apellido: BAUTISTA - 36. Primer nombre: EDITH - 37. Otros nombres: ESPERANZA - 30. Número de identificación: 4 1 7 5 2 0 7 5 - 32. Número de Identificación Tributaria - NIT: 4 1 7 5 2 0 7 5 (matches) - 57. Porcentaje de participación: 5 - 61. Tipo de novedad: Registro (code 1) I confirm the document's details match perfectly. The two beneficiaries have distinct identification numbers, with participation percentages totaling 100%. No further review is necessary.",
+          "signature": "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"
+        },
+        {
+          "type": "text",
+          "text": "```json { \"result\": { \"CompanyName\": \"VATCO GROUP LTDA\", \"TaxId\": \"9 0 0 5 4 3 7 4 9\", \"IdentificationType\": \"NIT\", \"Country\": \"Colombia\", \"ConflictingSources\": [], \"RequiresReview\": \"false\" }, \"RelatedParties\": [ { \"FirstName\": \"DIANA MARIA\", \"LastName\": \"LONDOÑO MONSALVE\", \"IdType\": \"NIT\", \"IdNumber\": \"4 3 5 4 7 6 9 8\", \"NoveltyType\": \"Registro\", \"ParticipationPercentage\": \"95\" }, { \"FirstName\": \"EDITH ESPERANZA\", \"LastName\": \"CASTELLANOS BAUTISTA\", \"IdType\": \"NIT\", \"IdNumber\": \"4 1 7 5 2 0 7 5\", \"NoveltyType\": \"Registro\", \"ParticipationPercentage\": \"5\" } ], \"DocumentType\": \"company\", \"Category\": \"RUB\" } ```"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 5056,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 2039,
+        "output_tokens": 906
+      }
+    },
+    "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 9000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+  "api_used": "invoke_model"
+}

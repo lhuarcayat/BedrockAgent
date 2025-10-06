@@ -1,0 +1,97 @@
+{
+  "extraction_data": {
+    "result": {
+      "CompanyName": "PROYECTELECTRIC S.A.S.",
+      "TaxId": "901677879",
+      "IdentificationType": "NIT",
+      "Country": "Colombia",
+      "ConflictingSources": [],
+      "RequiresReview": "false"
+    },
+    "RelatedParties": [
+      {
+        "FirstName": "JAVIER",
+        "LastName": "SANCHEZ LOSADA",
+        "IdType": "NIT",
+        "IdNumber": "7700020",
+        "NoveltyType": "Actualización",
+        "ParticipationPercentage": "100"
+      }
+    ],
+    "DocumentType": "company",
+    "Category": "RUB"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "{ \"result\": { \"CompanyName\": \"PROYECTELECTRIC S.A.S.\", \"TaxId\": \"901677879\", \"IdentificationType\": \"NIT\", \"Country\": \"Colombia\", \"ConflictingSources\": [], \"RequiresReview\": \"false\" }, \"RelatedParties\": [ { \"FirstName\": \"JAVIER\", \"LastName\": \"SANCHEZ LOSADA\", \"IdType\": \"NIT\", \"IdNumber\": \"7700020\", \"NoveltyType\": \"Actualización\", \"ParticipationPercentage\": \"100\" } ], \"DocumentType\": \"company\", \"Category\": \"RUB\" }"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 4801,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 2039,
+      "output_tokens": 954
+    },
+    "ResponseMetadata": {
+      "RequestId": "6670798d-9c0b-4eea-b932-0d640b25a138",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Tue, 02 Sep 2025 16:46:43 GMT",
+        "content-type": "application/json",
+        "content-length": "6307",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "6670798d-9c0b-4eea-b932-0d640b25a138",
+        "x-amzn-bedrock-invocation-latency": "20125",
+        "x-amzn-bedrock-cache-write-input-token-count": "0",
+        "x-amzn-bedrock-cache-read-input-token-count": "2039",
+        "x-amzn-bedrock-output-token-count": "954",
+        "x-amzn-bedrock-input-token-count": "4801"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_01SvErE5YDbvrWrmuGXHUrAC",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-sonnet-4-20250514",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Let me analyze this DIAN Final Beneficiaries Report (RUB) document to extract the required information. Looking at the document, I can see: 1. This is a Colombian \"Reporte de Beneficiarios Finales\" (Final Beneficiaries Report) issued by DIAN 2. From page 1, I can see: - Cell \"11. Denominación o razón social\": \"PROYECTELECTRIC S.A.S.\" - Cell \"18. Número de identificación\": \"901677879\" - The document type should be \"NIT\" based on the format - Country is Colombia (DIAN document) 3. For the Related Parties section, I need to look at the \"Datos beneficiarios finales\" section on page 2: - Cell \"30. Número de identificación\": \"7700020\" - Cell \"32. Número de Identificación Tributaria - NIT\": \"7700020\" (matches) - Cell \"34. Primer apellido\": \"SANCHEZ\" - Cell \"35. Segundo apellido\": \"LOSADA\" - Cell \"36. Primer nombre\": \"JAVIER\" - Cell \"37. Otros nombres\": appears empty - Cell \"57. Porcentaje de participación\": \"100\" - Cell \"61. Tipo de novedad\": \"Actualización\" Let me verify the data: - Company Name: \"PROYECTELECTRIC S.A.S.\" - Tax ID: \"901677879\" (with DV \"1\" shown separately, but based on the rules I should preserve original format) - Actually, let me look more carefully. I see \"901677879\" in cell 18, but there's also a DV field with \"1\". However, the rules say to preserve original format, so I'll use \"901677879\". - Country: Colombia - Identification Type: NIT - Beneficiary Details: JAVIER SANCHEZ LOSADA, holding 100% participation, with NIT \"7700020\" - Novelty Type is an update to the existing record - Carefully verified Tax ID in cell 18, confirming \"901677879\" as the primary identification number - Multiple document references checked, with final confirmation on identification details",
+          "signature": "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"
+        },
+        {
+          "type": "text",
+          "text": "{ \"result\": { \"CompanyName\": \"PROYECTELECTRIC S.A.S.\", \"TaxId\": \"901677879\", \"IdentificationType\": \"NIT\", \"Country\": \"Colombia\", \"ConflictingSources\": [], \"RequiresReview\": \"false\" }, \"RelatedParties\": [ { \"FirstName\": \"JAVIER\", \"LastName\": \"SANCHEZ LOSADA\", \"IdType\": \"NIT\", \"IdNumber\": \"7700020\", \"NoveltyType\": \"Actualización\", \"ParticipationPercentage\": \"100\" } ], \"DocumentType\": \"company\", \"Category\": \"RUB\" }"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 4801,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 2039,
+        "output_tokens": 954
+      }
+    },
+    "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 9000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+  "api_used": "invoke_model"
+}

@@ -1,0 +1,87 @@
+{
+  "classification_data": {
+    "category": "CECRL",
+    "text": "REPUBLICA DE COLOMBIA IDENTIFICACION PERSONAL CEDULA DE CIUDADANIA 3.350.169 NUMERO HOYOS ROJAS APELLIDOS JOSE MANUEL FECHA DE NACIMIENTO 19-ABR-1958 EL COLEGIO (CUNDINAMARCA) LUGAR DE NACIMIENTO 1.75 O+ M ESTATURA G.S. RH SEXO 03-MAR-1979 EL COLEGIO FECHA Y LUGAR DE EXPEDICION INDICE DERECHO A-46540060-70135593-M-000250169-200050705 D62073051888 02 147552563",
+    "document_number": "3250169",
+    "path": "CECRL/3250169/3250169_2020-02-29.pdf"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "```json { \"category\": \"CECRL\", \"text\": \"REPUBLICA DE COLOMBIA\\nIDENTIFICACION PERSONAL\\nCEDULA DE CIUDADANIA\\n3.350.169\\nNUMERO\\nHOYOS ROJAS\\nAPELLIDOS\\nJOSE MANUEL\\nFECHA DE NACIMIENTO 19-ABR-1958\\nEL COLEGIO\\n(CUNDINAMARCA)\\nLUGAR DE NACIMIENTO\\n1.75\\nO+\\nM\\nESTATURA\\nG.S. RH\\nSEXO\\n03-MAR-1979 EL COLEGIO\\nFECHA Y LUGAR DE EXPEDICION\\nINDICE DERECHO\\nA-46540060-70135593-M-000250169-200050705\\nD62073051888 02 147552563\" } ```"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 1584,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 3150,
+      "output_tokens": 891
+    },
+    "ResponseMetadata": {
+      "RequestId": "f8025f81-8115-4f13-8c22-ed2ce22da4d9",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Sun, 31 Aug 2025 21:31:56 GMT",
+        "content-type": "application/json",
+        "content-length": "5667",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "f8025f81-8115-4f13-8c22-ed2ce22da4d9",
+        "x-amzn-bedrock-invocation-latency": "13364",
+        "x-amzn-bedrock-cache-write-input-token-count": "0",
+        "x-amzn-bedrock-cache-read-input-token-count": "3150",
+        "x-amzn-bedrock-output-token-count": "891",
+        "x-amzn-bedrock-input-token-count": "1584"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_013h9jdo4FaqHVwuzuLnmweQ",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-sonnet-4-20250514",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Let me analyze the document following the classification workflow: 1. **TEXT EXTRACTION**: I can see the following text in the document: - \"REPUBLICA DE COLOMBIA\" - \"IDENTIFICACION PERSONAL\" - \"CEDULA DE CIUDADANIA\" - \"NUMERO\" - Number \"3.350.169\" - \"HOYOS ROJAS\" - \"APELLIDOS\" - \"JOSE MANUEL\" - There's a signature and a photograph - \"FECHA DE NACIMIENTO\" \"19-ABR-1958\" - \"EL COLEGIO\" - \"(CUNDINAMARCA)\" - \"LUGAR DE NACIMIENTO\" - \"1.75\" - \"O+\" - \"M\" (gender) - \"ESTATURA\" - \"G.S. RH\" - \"SEXO\" - \"03-MAR-1979 EL COLEGIO\" - \"FECHA Y LUGAR DE EXPEDICION\" - A fingerprint - \"INDICE DERECHO\" - A barcode at the bottom - Some registration numbers 2. **PRIORITY CHECKS**: This is not blank and not link-only. It has substantial content. 3. **DOCUMENT FUNCTION ANALYSIS**: - What is the main purpose? This is clearly a personal identification document - It's a \"CÉDULA DE CIUDADANÍA\" (citizenship card) from Colombia - It contains personal biographical data: name, date of birth, place of birth, blood type, sex, height - It has a photograph, signature, and fingerprint - It has a government-issued identification number (3.350.169) 4. **ISSUER IDENTIFICATION**: - This is issued by the Colombian government (\"REPÚBLICA DE COLOMBIA\") 5. **CATEGORY CLASSIFICATION**: I verify this as an official Colombian national identification document with comprehensive personal verification features. The card contains critical identifying elements like unique numerical identifier, biometric data, and official government markings that confirm its authenticity as a primary personal identification instrument.",
+          "signature": "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"
+        },
+        {
+          "type": "text",
+          "text": "```json { \"category\": \"CECRL\", \"text\": \"REPUBLICA DE COLOMBIA\\nIDENTIFICACION PERSONAL\\nCEDULA DE CIUDADANIA\\n3.350.169\\nNUMERO\\nHOYOS ROJAS\\nAPELLIDOS\\nJOSE MANUEL\\nFECHA DE NACIMIENTO 19-ABR-1958\\nEL COLEGIO\\n(CUNDINAMARCA)\\nLUGAR DE NACIMIENTO\\n1.75\\nO+\\nM\\nESTATURA\\nG.S. RH\\nSEXO\\n03-MAR-1979 EL COLEGIO\\nFECHA Y LUGAR DE EXPEDICION\\nINDICE DERECHO\\nA-46540060-70135593-M-000250169-200050705\\nD62073051888 02 147552563\" } ```"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 1584,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 3150,
+        "output_tokens": 891
+      }
+    },
+    "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 8000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "expected_category": "CECRL",
+  "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+  "api_used": "invoke_model",
+  "pdf_info": {
+    "original_size": 176920,
+    "first_page_size": 175337,
+    "is_scanned": true
+  }
+}

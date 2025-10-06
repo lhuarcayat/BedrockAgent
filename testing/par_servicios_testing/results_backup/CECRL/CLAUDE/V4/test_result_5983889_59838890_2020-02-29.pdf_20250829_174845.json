@@ -1,0 +1,183 @@
+{
+  "document_name": "59838890_2020-02-29.pdf",
+  "category": "CECRL",
+  "classification_success": true,
+  "extraction_success": true,
+  "overall_success": true,
+  "timestamp": "2025-08-29T17:48:19.968953",
+  "classification_result": {
+    "classification_data": {
+      "category": "CECRL",
+      "text": "REPUBLICA DE COLOMBIA IDENTIFICACION PERSONAL CEDULA DE CIUDADANIA NUMERO 59535656 CORTESARIAS APELLIDOS LUIS HERNANDO NOMBRES FIRMA FECHA DE NACIMIENTO 18-MAY-1956 PURIFICACION (TOLIMA) LUGAR DE NACIMIENTO 1.56 O+ M ESTATURA G.S. RH SEXO 17-ENE-1976 PURIFICACION FECHA Y LUGAR DE EXPEDICION INDICE DERECHO REGISTRADURIA NACIONAL DEL ESTADO CIVIL",
+      "document_number": "5983889",
+      "path": "CECRL/5983889/59838890_2020-02-29.pdf"
+    },
+    "raw_response": {
+      "output": {
+        "message": {
+          "content": [
+            {
+              "text": "```json { \"category\": \"CECRL\", \"text\": \"REPUBLICA DE COLOMBIA IDENTIFICACION PERSONAL CEDULA DE CIUDADANIA NUMERO 59535656 CORTESARIAS APELLIDOS LUIS HERNANDO NOMBRES FIRMA FECHA DE NACIMIENTO 18-MAY-1956 PURIFICACION (TOLIMA) LUGAR DE NACIMIENTO 1.56 O+ M ESTATURA G.S. RH SEXO 17-ENE-1976 PURIFICACION FECHA Y LUGAR DE EXPEDICION INDICE DERECHO REGISTRADURIA NACIONAL DEL ESTADO CIVIL\" } ```"
+            }
+          ]
+        }
+      },
+      "stopReason": "end_turn",
+      "usage": {
+        "input_tokens": 9,
+        "cache_creation_input_tokens": 4753,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 795
+      },
+      "ResponseMetadata": {
+        "RequestId": "a4d627e9-16a6-4dcc-b7f0-2e6cd93185ca",
+        "HTTPStatusCode": 200,
+        "HTTPHeaders": {
+          "date": "Fri, 29 Aug 2025 22:48:36 GMT",
+          "content-type": "application/json",
+          "content-length": "6046",
+          "connection": "keep-alive",
+          "x-amzn-requestid": "a4d627e9-16a6-4dcc-b7f0-2e6cd93185ca",
+          "x-amzn-bedrock-invocation-latency": "15656",
+          "x-amzn-bedrock-cache-write-input-token-count": "4753",
+          "x-amzn-bedrock-cache-read-input-token-count": "0",
+          "x-amzn-bedrock-output-token-count": "795",
+          "x-amzn-bedrock-input-token-count": "9"
+        },
+        "RetryAttempts": 0
+      },
+      "raw_anthropic_response": {
+        "id": "msg_bdrk_01K2PEtURkbgi8s93iefpH47",
+        "type": "message",
+        "role": "assistant",
+        "model": "claude-sonnet-4-20250514",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "Let me analyze this PDF document step by step following the classification workflow. 1. **TEXT EXTRACTION** Looking at the document, I can see: - \"REPUBLICA DE COLOMBIA\" - \"IDENTIFICACION PERSONAL\" - \"CEDULA DE CIUDADANIA\" - Numbers: \"59535656\" - \"CORTESARIAS\" - \"LUIS HERNANDO\" - Signature area - There's a person's silhouette photo - Lower section shows: - \"FECHA DE NACIMIENTO 18-MAY-1956\" - \"PURIFICACION\" - \"(TOLIMA)\" - \"LUGAR DE NACIMIENTO\" - \"1.56 O+ M\" (appears to be height, blood type, sex) - \"ESTATURA G.S. RH SEXO\" - \"17-ENE-1976 PURIFICACIÓN\" - \"FECHA Y LUGAR DE EXPEDICIÓN\" - There's a fingerprint image - Various reference numbers and barcodes at the bottom 2. **PRIORITY CHECKS** - This is not BLANK - there's substantial content - This is not LINK_ONLY - no URLs or redirects 3. **DOCUMENT FUNCTION ANALYSIS** This document's PRIMARY PURPOSE is personal identification. It contains: - Individual identification data for one person (Luis Hernando Cortesarias) - Personal biographical data: birth date (18-MAY-1956), birth place (Purificación, Tolima) - Physical characteristics: height (1.56), blood type (O+), sex (M) - Individual photo (silhouette) - Signature area - Fingerprint - Government ID number (59535656) - Issued by Colombian government identification authority 4. **ISSUER IDENTIFICATION** This is issued by the Republic of Colombia government identification authority, not DIAN or Chamber of Commerce. 5. **CATEGORY CLASSIFICATION** The document definitively matches CECRL classification. It's a comprehensive personal identification card with robust government-issued credentials. Multiple security features confirm its authenticity: photo, signature, fingerprint, and official barcodes validate the individual's identity comprehensively. 6. **CONFIDENCE VALIDATION** Extremely high confidence in CECRL classification due to overwhelming documentary evidence and standard government identification document characteristics.",
+            "signature": "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"
+          },
+          {
+            "type": "text",
+            "text": "```json { \"category\": \"CECRL\", \"text\": \"REPUBLICA DE COLOMBIA IDENTIFICACION PERSONAL CEDULA DE CIUDADANIA NUMERO 59535656 CORTESARIAS APELLIDOS LUIS HERNANDO NOMBRES FIRMA FECHA DE NACIMIENTO 18-MAY-1956 PURIFICACION (TOLIMA) LUGAR DE NACIMIENTO 1.56 O+ M ESTATURA G.S. RH SEXO 17-ENE-1976 PURIFICACION FECHA Y LUGAR DE EXPEDICION INDICE DERECHO REGISTRADURIA NACIONAL DEL ESTADO CIVIL\" } ```"
+          }
+        ],
+        "stop_reason": "end_turn",
+        "stop_sequence": null,
+        "usage": {
+          "input_tokens": 9,
+          "cache_creation_input_tokens": 4753,
+          "cache_read_input_tokens": 0,
+          "output_tokens": 795
+        }
+      },
+      "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+      "api_used": "invoke_model",
+      "model_params": {
+        "max_tokens": 8000,
+        "top_p": 1,
+        "temperature": 1,
+        "thinking": {
+          "type": "enabled",
+          "budget_tokens": 4096
+        }
+      }
+    },
+    "expected_category": "CECRL",
+    "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model",
+    "pdf_info": {
+      "original_size": 126810,
+      "first_page_size": 125227,
+      "is_scanned": true
+    }
+  },
+  "extraction_result": {
+    "extraction_data": {
+      "result": {
+        "firstName": "LUIS HERNANDO",
+        "lastName": "CORTES ARIAS",
+        "country_issuer": "Colombia",
+        "nationality": "Colombia",
+        "identificationType": "Cédula de Ciudadanía",
+        "identificationNumber": "59838308",
+        "message": ""
+      },
+      "document_type": "person",
+      "category": "CECRL"
+    },
+    "raw_response": {
+      "output": {
+        "message": {
+          "content": [
+            {
+              "text": "```json { \"result\": { \"firstName\": \"LUIS HERNANDO\", \"lastName\": \"CORTES ARIAS\", \"country_issuer\": \"Colombia\", \"nationality\": \"Colombia\", \"identificationType\": \"Cédula de Ciudadanía\", \"identificationNumber\": \"59838308\", \"message\": \"\" }, \"document_type\": \"person\", \"category\": \"CECRL\" } ```"
+            }
+          ]
+        }
+      },
+      "stopReason": "end_turn",
+      "usage": {
+        "input_tokens": 10,
+        "cache_creation_input_tokens": 6419,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 542
+      },
+      "ResponseMetadata": {
+        "RequestId": "e70e0b49-8c51-409e-8d90-277a4b73e915",
+        "HTTPStatusCode": 200,
+        "HTTPHeaders": {
+          "date": "Fri, 29 Aug 2025 22:48:45 GMT",
+          "content-type": "application/json",
+          "content-length": "4330",
+          "connection": "keep-alive",
+          "x-amzn-requestid": "e70e0b49-8c51-409e-8d90-277a4b73e915",
+          "x-amzn-bedrock-invocation-latency": "9302",
+          "x-amzn-bedrock-cache-write-input-token-count": "6419",
+          "x-amzn-bedrock-cache-read-input-token-count": "0",
+          "x-amzn-bedrock-output-token-count": "542",
+          "x-amzn-bedrock-input-token-count": "10"
+        },
+        "RetryAttempts": 0
+      },
+      "raw_anthropic_response": {
+        "id": "msg_bdrk_01LNFc3PZZ3bQuYu7Y51QMUT",
+        "type": "message",
+        "role": "assistant",
+        "model": "claude-sonnet-4-20250514",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "Let me analyze this Colombian identification document step by step. Looking at the document, I can see: 1. Document Structure Analysis: - This appears to be a Colombian Cédula de Ciudadanía (citizenship ID) - I can see \"REPÚBLICA DE COLOMBIA\" at the top - \"IDENTIFICACIÓN PERSONAL\" and \"CÉDULA DE CIUDADANÍA\" - There's an ID number visible: 59838308 2. Name Information: - I can see \"NOMBRES:\" but the text after it appears to be \"LUIS HERNANDO\" - I can see \"APELLIDOS:\" but need to identify what comes after it - it appears to say \"CORTES ARIAS\" 3. Other Information: - Date of birth: 18-MAY-1956 (FECHA DE NACIMIENTO) - Location appears to be Tolima - Height: 1.56 - Gender: M (male) Let me extract the specific fields: firstName: Looking for \"NOMBRES:\" - I can see \"LUIS HERNANDO\" lastName: Looking for \"APELLIDOS:\" - I can see \"CORTES ARIAS\" country_issuer: This is clearly Colombia based on \"REPÚBLICA DE COLOMBIA\" nationality: Since this is a Colombian cédula and no other nationality is mentioned, this would be Colombia identificationType: This is a \"Cédula de Ciudadanía\" identificationNumber: I can see the number 59838308 message: The document appears to be a legitimate Colombian ID Let me double-check the names: - Under \"NOMBRES:\" I can see \"LUIS HERNANDO\" - Under \"APELLIDOS:\" I can see \"CORTES ARIAS\" The document appears to be legitimate government-issued ID from Colombia.",
+            "signature": "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"
+          },
+          {
+            "type": "text",
+            "text": "```json { \"result\": { \"firstName\": \"LUIS HERNANDO\", \"lastName\": \"CORTES ARIAS\", \"country_issuer\": \"Colombia\", \"nationality\": \"Colombia\", \"identificationType\": \"Cédula de Ciudadanía\", \"identificationNumber\": \"59838308\", \"message\": \"\" }, \"document_type\": \"person\", \"category\": \"CECRL\" } ```"
+          }
+        ],
+        "stop_reason": "end_turn",
+        "stop_sequence": null,
+        "usage": {
+          "input_tokens": 10,
+          "cache_creation_input_tokens": 6419,
+          "cache_read_input_tokens": 0,
+          "output_tokens": 542
+        }
+      },
+      "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+      "api_used": "invoke_model",
+      "model_params": {
+        "max_tokens": 8000,
+        "top_p": 1,
+        "temperature": 1,
+        "thinking": {
+          "type": "enabled",
+          "budget_tokens": 4096
+        }
+      }
+    },
+    "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model"
+  }
+}

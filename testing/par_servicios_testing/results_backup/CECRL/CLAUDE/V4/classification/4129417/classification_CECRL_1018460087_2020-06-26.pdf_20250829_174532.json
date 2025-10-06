@@ -1,0 +1,87 @@
+{
+  "classification_data": {
+    "category": "CECRL",
+    "text": "REPUBLICA DE COLOMBIA IDENTIFICACION PERSONAL CEDULA DE CIUDADANIA NUMERO: 1.018.460.087 OVALLE BAYER APELLIDOS DIEGO FERNANDO NOMBRES FIRMA FECHA DE NACIMIENTO: 16-JUN-1993 MANI (CASANARE) LUGAR DE NACIMIENTO 1.73 O+ M ESTATURA G.S. RH SEXO 20-JUN-2011 BOGOTA D.C FECHA Y LUGAR DE EXPEDICION REGISTRADOR NACIONAL CARLOS ARIEL SANCHEZ TORRES INDICE DERECHO P-1500150-00313681-M-1018460087-20110713 00271996479A 1 36822300",
+    "document_number": "UNKNOWN",
+    "path": "CECRL/4129417_1018460087_2020-06-26/1018460087_2020-06-26.pdf"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "```json { \"category\": \"CECRL\", \"text\": \"REPUBLICA DE COLOMBIA\\nIDENTIFICACION PERSONAL\\nCEDULA DE CIUDADANIA\\nNUMERO: 1.018.460.087\\nOVALLE BAYER\\nAPELLIDOS\\nDIEGO FERNANDO\\nNOMBRES\\nFIRMA\\n\\nFECHA DE NACIMIENTO: 16-JUN-1993\\nMANI\\n(CASANARE)\\nLUGAR DE NACIMIENTO\\n1.73 O+ M\\nESTATURA G.S. RH SEXO\\n20-JUN-2011 BOGOTA D.C\\nFECHA Y LUGAR DE EXPEDICION\\nREGISTRADOR NACIONAL\\nCARLOS ARIEL SANCHEZ TORRES\\nINDICE DERECHO\\nP-1500150-00313681-M-1018460087-20110713 00271996479A 1 36822300\" } ```"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 9,
+      "cache_creation_input_tokens": 4753,
+      "cache_read_input_tokens": 0,
+      "output_tokens": 1083
+    },
+    "ResponseMetadata": {
+      "RequestId": "a1c32912-8597-4a4f-9644-460d8fcf9f73",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Fri, 29 Aug 2025 22:45:17 GMT",
+        "content-type": "application/json",
+        "content-length": "6965",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "a1c32912-8597-4a4f-9644-460d8fcf9f73",
+        "x-amzn-bedrock-invocation-latency": "17264",
+        "x-amzn-bedrock-cache-write-input-token-count": "4753",
+        "x-amzn-bedrock-cache-read-input-token-count": "0",
+        "x-amzn-bedrock-output-token-count": "1083",
+        "x-amzn-bedrock-input-token-count": "9"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_01GH6Rq7kDNfSe59nSi7QTyd",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-sonnet-4-20250514",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Let me analyze this document step by step according to the workflow. 1. **TEXT EXTRACTION** Looking at the document, I can see: - This is a Colombian identity document (\"REPUBLICA DE COLOMBIA IDENTIFICACION PERSONAL CEDULA DE CIUDADANIA\") - Number: 1.018.460.087 - Name: OVALLE BAYER (last names) DIEGO FERNANDO (first names) - There's a signature - There's a photo of the individual - The back shows: - Birth date: 16-JUN-1993 - Place of birth: MANI (CASANARE) - Height: 1.73 - Blood type: O+ - Sex: M - Issue date: 20-JUN-2011 BOGOTA D.C - There's a fingerprint - Barcode and other security elements 2. **PRIORITY CHECKS** - Not BLANK - has substantial meaningful content - Not LINK_ONLY - no hyperlinks, this is a complete document 3. **DOCUMENT FUNCTION ANALYSIS** The PRIMARY PURPOSE of this document is individual personal identification. It contains: - Personal biographical data (birth date, place of birth) - Physical characteristics (height, blood type, sex) - Individual photo - Individual fingerprint - Government-issued personal ID number with individual name - Security elements (barcodes, official seals) This is clearly a personal identification document for one individual person. 4. **ISSUER IDENTIFICATION** This is issued by the Colombian government identification authority (República de Colombia), not DIAN or Chamber of Commerce. 5. **CATEGORY CLASSIFICATION** This matches CECRL perfectly: - Individual identification terminology: \"CEDULA DE CIUDADANIA\" - Personal biographical data: birth date (16-JUN-1993), birth place (MANI CASANARE), blood type (O+), gender (M), physical characteristics (height 1.73) - Unique personal identifiers confirm the document's authenticity - Comprehensive visual and biometric markers validate individual identity 6. **CONFIDENCE VALIDATION** Strong evidence: All CECRL indicators are present, this is unambiguously a personal identification document with multiple layers of verification. The document contains detailed personal information, including physical characteristics, birthplace, and official registration details. Signature, fingerprint, and government-issued identification number provide robust proof of individual identity.",
+          "signature": "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"
+        },
+        {
+          "type": "text",
+          "text": "```json { \"category\": \"CECRL\", \"text\": \"REPUBLICA DE COLOMBIA\\nIDENTIFICACION PERSONAL\\nCEDULA DE CIUDADANIA\\nNUMERO: 1.018.460.087\\nOVALLE BAYER\\nAPELLIDOS\\nDIEGO FERNANDO\\nNOMBRES\\nFIRMA\\n\\nFECHA DE NACIMIENTO: 16-JUN-1993\\nMANI\\n(CASANARE)\\nLUGAR DE NACIMIENTO\\n1.73 O+ M\\nESTATURA G.S. RH SEXO\\n20-JUN-2011 BOGOTA D.C\\nFECHA Y LUGAR DE EXPEDICION\\nREGISTRADOR NACIONAL\\nCARLOS ARIEL SANCHEZ TORRES\\nINDICE DERECHO\\nP-1500150-00313681-M-1018460087-20110713 00271996479A 1 36822300\" } ```"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 9,
+        "cache_creation_input_tokens": 4753,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 1083
+      }
+    },
+    "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 8000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "expected_category": "CECRL",
+  "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+  "api_used": "invoke_model",
+  "pdf_info": {
+    "original_size": 478149,
+    "first_page_size": 478039,
+    "is_scanned": true
+  }
+}

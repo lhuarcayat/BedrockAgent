@@ -1,0 +1,87 @@
+{
+  "classification_data": {
+    "category": "CECRL",
+    "text": "ryry - ü'#-lu* r\\PFLi-iDC$ ,tAMüt* l'\"t:,i]il. 'ltS . t.,,,, t t ''t: REPUBLICA DE COLOMBIA IDENTIFICACION PERSONAL CEDULA DE CIUDADANIA NUMERO 4.951.616 ROJAS SALAZAR APELLIDOS CAMILO NOMBRES FIRMA",
+    "document_number": "4951616",
+    "path": "CECRL/4951616/4951616_2020-02-29.pdf"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "```json { \"category\": \"CECRL\", \"text\": \"ryry - ü'#-lu* r\\\\PFLi-iDC$ ,tAMüt* l'\\\"t:,i]il. 'ltS . t.,,,, t t ''t: REPUBLICA DE COLOMBIA IDENTIFICACION PERSONAL CEDULA DE CIUDADANIA NUMERO 4.951.616 ROJAS SALAZAR APELLIDOS CAMILO NOMBRES FIRMA\" } ```"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 9,
+      "cache_creation_input_tokens": 4655,
+      "cache_read_input_tokens": 0,
+      "output_tokens": 719
+    },
+    "ResponseMetadata": {
+      "RequestId": "16438063-fa49-4171-ac31-52eecdcc0184",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Fri, 29 Aug 2025 15:39:26 GMT",
+        "content-type": "application/json",
+        "content-length": "5712",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "16438063-fa49-4171-ac31-52eecdcc0184",
+        "x-amzn-bedrock-invocation-latency": "15660",
+        "x-amzn-bedrock-cache-write-input-token-count": "4655",
+        "x-amzn-bedrock-cache-read-input-token-count": "0",
+        "x-amzn-bedrock-output-token-count": "719",
+        "x-amzn-bedrock-input-token-count": "9"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_01Nob1DnvZMhDP4qQdTCqDwi",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-sonnet-4-20250514",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Let me analyze this document step by step. 1. **TEXT EXTRACTION** Looking at the document, I can see: - Some garbled text at the top: \"ryry\", \"ü'#-lu*\", \"r\\PFLi-iDC$\", \",tAMüt*\", \"l'\"t:,i]il.\", \"'ltS\", \"t.,,,, t t ''t:\" - The main content appears to be a Colombian identification document with the following visible text: - \"REPUBLICA DE COLOMBIA\" - \"IDENTIFICACION PERSONAL\" - \"CEDULA DE CIUDADANIA\" - \"NUMERO 4.951.616\" - \"ROJAS SALAZAR\" - \"APELLIDOS\" - \"CAMILO\" - \"NOMBRES\" - \"FIRMA\" (with what appears to be a signature) - There's also a photo of a person on the right side 2. **PRIORITY CHECKS** - This is not BLANK - there's substantial meaningful content - This is not LINK_ONLY - no URLs or hyperlinks present 3. **ISSUER IDENTIFICATION** This appears to be issued by the Colombian government (\"REPUBLICA DE COLOMBIA\") as a personal identification document, not by DIAN or Chamber of Commerce. 4. **DOCUMENT FUNCTION ANALYSIS** This is clearly a personal identification document (cédula de ciudadania) for an individual person named Camilo Rojas Salazar with ID number 4.951.616. It contains: - Individual identification terminology (\"CEDULA DE CIUDADANIA\", \"IDENTIFICACION PERSONAL\") - Personal biographical data (name: Camilo Rojas Salazar) - Individual photo - Individual ID number (4.951.616) - Signature area (\"FIRMA\") - Government-issued format with official headers 5. **CATEGORY CLASSIFICATION** The document definitively matches the CECRL category, presenting all key characteristics of an official personal identification document. The Colombian government-issued format, comprehensive personal details, and standard ID layout provide clear validation. 6. **CONFIDENCE VALIDATION** I'm confident this is a genuine personal identification document with robust evidence supporting its authenticity and classification. I'll proceed with extracting all readable text, including the unusual characters at the top of the document.",
+          "signature": "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"
+        },
+        {
+          "type": "text",
+          "text": "```json { \"category\": \"CECRL\", \"text\": \"ryry - ü'#-lu* r\\\\PFLi-iDC$ ,tAMüt* l'\\\"t:,i]il. 'ltS . t.,,,, t t ''t: REPUBLICA DE COLOMBIA IDENTIFICACION PERSONAL CEDULA DE CIUDADANIA NUMERO 4.951.616 ROJAS SALAZAR APELLIDOS CAMILO NOMBRES FIRMA\" } ```"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 9,
+        "cache_creation_input_tokens": 4655,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 719
+      }
+    },
+    "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 8000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "expected_category": "CECRL",
+  "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+  "api_used": "invoke_model",
+  "pdf_info": {
+    "original_size": 958761,
+    "first_page_size": 608654,
+    "is_scanned": false
+  }
+}

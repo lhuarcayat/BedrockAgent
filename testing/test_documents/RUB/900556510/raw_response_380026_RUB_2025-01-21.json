@@ -1,0 +1,33 @@
+{
+  "ResponseMetadata": {
+    "RequestId": "6778985f-3b8d-4455-b620-3ea4b3a8ff38",
+    "HTTPStatusCode": 200,
+    "HTTPHeaders": {
+      "date": "Tue, 17 Jun 2025 14:27:55 GMT",
+      "content-type": "application/json",
+      "content-length": "1333",
+      "connection": "keep-alive",
+      "x-amzn-requestid": "6778985f-3b8d-4455-b620-3ea4b3a8ff38"
+    },
+    "RetryAttempts": 0
+  },
+  "output": {
+    "message": {
+      "role": "assistant",
+      "content": [
+        {
+          "text": "```json\n{\n  \"path\": \"s3://par-servicios-poc-dev-filling-desk/par-servicios-poc/RUB/900556510/380026_RUB_2025-01-21.pdf\",\n  \"result\": {\n    \"companyName\": \"M&M ENERGY SOLUTIONS SAS\",\n    \"country\": \"Colombia\",\n    \"documentType\": \"NIT\",\n    \"taxId\": \"900556510\",\n    \"relatedParties\": [\n      {\n        \"firstName\": \"LOPEZ\",\n        \"lastName\": \"VANEGAS\",\n        \"identificationType\": \"NIT\",\n        \"identificationNumber\": \"1120355643\",\n        \"noveltyType\": \"Registro\",\n        \"participationPercentage\": \"10\"\n      },\n      {\n        \"firstName\": \"MOSQUERA\",\n        \"lastName\": \"GUTIERREZ MILTON JESUS\",\n        \"identificationType\": \"NIT\",\n        \"identificationNumber\": \"86012141\",\n        \"noveltyType\": \"Registro\",\n        \"participationPercentage\": \"90\"\n      }\n    ]\n  },\n  \"confidenceScores\": {\n    \"companyName\": 95,\n    \"documentType\": 90,\n    \"country\": 100,\n    \"taxId\": 100,\n    \"relatedParties\": 85\n  },\n  \"document_type\": \"company\",\n  \"document_number\": \"900556510\",\n  \"category\": \"RUB\"\n}\n```"
+        }
+      ]
+    }
+  },
+  "stopReason": "end_turn",
+  "usage": {
+    "inputTokens": 8126,
+    "outputTokens": 355,
+    "totalTokens": 8481
+  },
+  "metrics": {
+    "latencyMs": 8882
+  }
+}

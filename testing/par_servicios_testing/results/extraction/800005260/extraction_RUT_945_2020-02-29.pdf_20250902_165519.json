@@ -1,0 +1,92 @@
+{
+  "extraction_data": {
+    "result": {
+      "CompanyName": "INDUSTRIAS INVERSIONES Y SERVICIOS DELRIO S A S",
+      "Country": "COLOMBIA",
+      "TaxId": "800005260",
+      "VerificationDigit": "3",
+      "IdentificationType": "NIT",
+      "PersonType": "Persona jurídica",
+      "ConflictingSources": [],
+      "RequiresReview": "false"
+    },
+    "RelatedParties": [],
+    "Address": "CR 11 94 47 P 8 BRR EL CHICO, Bogotá, D.C., Bogotá D.C.",
+    "DocumentGenerationDate": "09-02-2024 12:23:32PM",
+    "DocumentType": "company",
+    "Category": "RUT"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "```json { \"result\": { \"CompanyName\": \"INDUSTRIAS INVERSIONES Y SERVICIOS DELRIO S A S\", \"Country\": \"COLOMBIA\", \"TaxId\": \"800005260\", \"VerificationDigit\": \"3\", \"IdentificationType\": \"NIT\", \"PersonType\": \"Persona jurídica\", \"ConflictingSources\": [], \"RequiresReview\": \"false\" }, \"RelatedParties\": [], \"Address\": \"CR 11 94 47 P 8 BRR EL CHICO, Bogotá, D.C., Bogotá D.C.\", \"DocumentGenerationDate\": \"09-02-2024 12:23:32PM\", \"DocumentType\": \"company\", \"Category\": \"RUT\" } ```"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 2703,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 2990,
+      "output_tokens": 800
+    },
+    "ResponseMetadata": {
+      "RequestId": "ebbec017-4338-412e-854b-69001dedb094",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Tue, 02 Sep 2025 21:55:19 GMT",
+        "content-type": "application/json",
+        "content-length": "5447",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "ebbec017-4338-412e-854b-69001dedb094",
+        "x-amzn-bedrock-invocation-latency": "14957",
+        "x-amzn-bedrock-cache-write-input-token-count": "0",
+        "x-amzn-bedrock-cache-read-input-token-count": "2990",
+        "x-amzn-bedrock-output-token-count": "800",
+        "x-amzn-bedrock-input-token-count": "2703"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_0184zFdS6UjgRN8vGdbgMN2c",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-sonnet-4-20250514",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Let me carefully extract information from this Colombian RUT (Registro Único Tributario) document issued by DIAN. Looking at the document: 1. CompanyName: Found in cell \"35. Razón social\" - \"INDUSTRIAS INVERSIONES Y SERVICIOS DELRIO S A S\" 2. Country: Found in cell \"38. País\" - \"COLOMBIA\" 3. TaxId: Found in cell \"5. Número de Identificación Tributaria (NIT)\" - \"800005260\" 4. VerificationDigit: Found in cell \"6. DV\" - \"3\" 5. IdentificationType: For RUT documents, this is always \"NIT\" 6. PersonType: Found in cell \"24. Tipo de contribuyente\" - \"Persona jurídica\" 7. Address: Composed of cells \"41. Dirección principal\", \"40. Ciudad/Municipio\", \"39. Departamento\": - \"41. Dirección principal\": \"CR 11 94 47 P 8 BRR EL CHICO\" - \"40. Ciudad/Municipio\": \"Bogotá, D.C.\" - \"39. Departamento\": \"Bogotá D.C.\" 8. DocumentGenerationDate: Found at bottom - \"Fecha generación documento PDF: 09-02-2024 12:23:32PM\" 9. RelatedParties: Looking at the document, I can see there's a signature section with \"VILLABONA REYES OSCAR HERNANDO\" listed as \"Representante Legal Suplente Certificado\", but I don't see the specific sections for \"Socios y/o miembros de Juntas Directivas, Consorcios, Uniones Temporales\" and \"Revisor Fiscal y contador\" that would contain the detailed information with the specific cell numbers mentioned in the rules. I notice this is likely page 1 of a multi-page document. Without full visibility into all pages, I'll set RelatedParties as an empty array to ensure accuracy. The document contains no apparent conflicts, and all key information can be confidently extracted. The RUT provides a comprehensive overview of the company's basic details and registration information.",
+          "signature": "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"
+        },
+        {
+          "type": "text",
+          "text": "```json { \"result\": { \"CompanyName\": \"INDUSTRIAS INVERSIONES Y SERVICIOS DELRIO S A S\", \"Country\": \"COLOMBIA\", \"TaxId\": \"800005260\", \"VerificationDigit\": \"3\", \"IdentificationType\": \"NIT\", \"PersonType\": \"Persona jurídica\", \"ConflictingSources\": [], \"RequiresReview\": \"false\" }, \"RelatedParties\": [], \"Address\": \"CR 11 94 47 P 8 BRR EL CHICO, Bogotá, D.C., Bogotá D.C.\", \"DocumentGenerationDate\": \"09-02-2024 12:23:32PM\", \"DocumentType\": \"company\", \"Category\": \"RUT\" } ```"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 2703,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 2990,
+        "output_tokens": 800
+      }
+    },
+    "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 9000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+  "api_used": "invoke_model"
+}

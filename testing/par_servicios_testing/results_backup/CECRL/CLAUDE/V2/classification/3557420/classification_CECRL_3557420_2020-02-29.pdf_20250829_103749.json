@@ -1,0 +1,87 @@
+{
+  "classification_data": {
+    "category": "CECRL",
+    "text": "REPUBLICA DE COLOMBIA IDENTIFICACION PERSONAL CEDULA DE CIUDADANIA NUMERO: 3.357.420 SANCHEZ DUARTE APELLIDOS DARIO NOMBRES FECHA DE RACIMIENTO: 01-AGO-1962 YONDO - CASABE YONDO (ANTIOQUIA) LUGAR DE NACIMIENTO 1.75 ESTATURA O+ RH M SEXO 13-ABR-1991 YONDO FECHA Y LUGAR DE EXPEDICION REGISTRADURIA NACIONAL DEL ESTADO CIVIL",
+    "document_number": "3557420",
+    "path": "CECRL/3557420/3557420_2020-02-29.pdf"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "```json { \"category\": \"CECRL\", \"text\": \"REPUBLICA DE COLOMBIA\\nIDENTIFICACION PERSONAL\\nCEDULA DE CIUDADANIA\\nNUMERO: 3.357.420\\nSANCHEZ DUARTE\\nAPELLIDOS\\nDARIO\\nNOMBRES\\nFECHA DE RACIMIENTO: 01-AGO-1962\\nYONDO - CASABE\\nYONDO (ANTIOQUIA)\\nLUGAR DE NACIMIENTO\\n1.75\\nESTATURA\\nO+\\nRH\\nM\\nSEXO\\n13-ABR-1991 YONDO\\nFECHA Y LUGAR DE EXPEDICION\\nREGISTRADURIA NACIONAL\\nDEL ESTADO CIVIL\" } ```"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 9,
+      "cache_creation_input_tokens": 4549,
+      "cache_read_input_tokens": 0,
+      "output_tokens": 778
+    },
+    "ResponseMetadata": {
+      "RequestId": "35967c6d-5527-4934-8f92-85086b0bf6b6",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Fri, 29 Aug 2025 15:37:37 GMT",
+        "content-type": "application/json",
+        "content-length": "5567",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "35967c6d-5527-4934-8f92-85086b0bf6b6",
+        "x-amzn-bedrock-invocation-latency": "12399",
+        "x-amzn-bedrock-cache-write-input-token-count": "4549",
+        "x-amzn-bedrock-cache-read-input-token-count": "0",
+        "x-amzn-bedrock-output-token-count": "778",
+        "x-amzn-bedrock-input-token-count": "9"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_019eqEYpWsQf8p3dZRS2mFUN",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-sonnet-4-20250514",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Let me analyze this document carefully following the classification workflow: 1. **TEXT EXTRACTION**: Looking at the document, I can see: - \"REPUBLICA DE COLOMBIA\" - \"IDENTIFICACION PERSONAL\" - \"CEDULA DE CIUDADANIA\" - Number: \"3.357.420\" - Name: \"SANCHEZ DUARTE\" - First name: \"DARIO\" - There's a photo of a person - A signature - Date: \"01-AGO-1962\" - Place: \"YONDO - CASABE\" - \"YONDO (ANTIOQUIA)\" - Height: \"1.75\" - Blood type: \"O+\" - Gender: \"M\" - Date: \"13-ABR-1991 YONDO\" - There's a fingerprint - There's a barcode at the bottom 2. **PRIORITY CHECKS**: - Not BLANK - has meaningful content - Not LINK_ONLY - no hyperlinks, substantial document content 3. **ISSUER IDENTIFICATION**: This appears to be issued by government identification authorities (República de Colombia), not DIAN or Chamber of Commerce. 4. **DOCUMENT FUNCTION ANALYSIS**: This is clearly a personal identification document (Cédula de Ciudadanía from Colombia). It contains: - Personal biographical data (birth date, birth place, blood type, gender, height) - Individual photo - Signature - Fingerprint - Government-issued personal ID number with individual name - Security elements (barcode, official format) 5. **CATEGORY CLASSIFICATION**: This fits perfectly into CECRL: - It's an official personal identification document (\"CEDULA DE CIUDADANIA\") - Contains individual identification terminology - Has personal biographical data (birth date/place, blood type, gender, height) - Has individual photo, signature, fingerprint - Government-issued personal ID number with individual name - Robust security features confirm official government documentation - Uniquely identifies Dario Sanchez Duarte with comprehensive personal details 6. **CONFIDENCE VALIDATION**: Strong evidence confirms this is a legitimate personal identification document with comprehensive verification elements.",
+          "signature": "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"
+        },
+        {
+          "type": "text",
+          "text": "```json { \"category\": \"CECRL\", \"text\": \"REPUBLICA DE COLOMBIA\\nIDENTIFICACION PERSONAL\\nCEDULA DE CIUDADANIA\\nNUMERO: 3.357.420\\nSANCHEZ DUARTE\\nAPELLIDOS\\nDARIO\\nNOMBRES\\nFECHA DE RACIMIENTO: 01-AGO-1962\\nYONDO - CASABE\\nYONDO (ANTIOQUIA)\\nLUGAR DE NACIMIENTO\\n1.75\\nESTATURA\\nO+\\nRH\\nM\\nSEXO\\n13-ABR-1991 YONDO\\nFECHA Y LUGAR DE EXPEDICION\\nREGISTRADURIA NACIONAL\\nDEL ESTADO CIVIL\" } ```"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 9,
+        "cache_creation_input_tokens": 4549,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 778
+      }
+    },
+    "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 8000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "expected_category": "CECRL",
+  "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+  "api_used": "invoke_model",
+  "pdf_info": {
+    "original_size": 168469,
+    "first_page_size": 163968,
+    "is_scanned": true
+  }
+}

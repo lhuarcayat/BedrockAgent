@@ -1,0 +1,33 @@
+{
+  "ResponseMetadata": {
+    "RequestId": "16e38627-5f09-47ae-9c56-4a640bc044a8",
+    "HTTPStatusCode": 200,
+    "HTTPHeaders": {
+      "date": "Wed, 04 Jun 2025 17:35:44 GMT",
+      "content-type": "application/json",
+      "content-length": "4710",
+      "connection": "keep-alive",
+      "x-amzn-requestid": "16e38627-5f09-47ae-9c56-4a640bc044a8"
+    },
+    "RetryAttempts": 0
+  },
+  "output": {
+    "message": {
+      "role": "assistant",
+      "content": [
+        {
+          "text": "To extract the required data from the provided document, I will follow the given guidelines step-by-step.\n\n1. **Document Processing**: The input document is a PDF file containing text in Spanish. The total number of pages in the document needs to be counted.\n\n2. **Data Extraction**:\n   - **Company Information**:\n     - `companyName`: \"GEOINETICS INTERNATIONAL, INC.\"\n     - `companyType`: The document mentions it's a \"SUCURSAL\" (branch) of a foreign company, indicating it's not a locally incorporated company but a branch.\n     - `country`: \"Colombia\" (since it's a branch operating in Colombia)\n     - `document_pages`: Counted from the document, it's 6 pages.\n     - `documentType`: \"CERTIFICADO DE EXISTENCIA Y REPRESENTACIÓN LEGAL\" (Certificate of Existence and Legal Representation)\n     - `taxId`: \"860006152-8\"\n     - `mainAddress`: \"CALLE 100 N. 19 - 54 OFICINA 604, BOGOTA D.C.\"\n   \n   - **Address Composition**:\n     - Primary address: \"CALLE 100 N. 19 - 54 OFICINA 604\"\n     - Type and Name: \"MUNICIPIO\" and \"BOGOTA D.C.\"\n     - `mainAddress`: \"CALLE 100 N. 19 - 54 OFICINA 604 - Municipio de BOGOTA D.C.\"\n\n   - **Dates**:\n     - `incorporationDate`: \"1963-02-21\" (date of registration)\n     - `companyDuration`: \"2462-02-04\" (until February 4, 2462)\n\n   - **Registration Details**:\n     - `registrationNumber`: \"C0018259\"\n     - `size`: Not explicitly mentioned.\n\n   - **Related Parties**:\n     - Multiple related parties are mentioned with their roles and identification details.\n\n3. **Related Party Handling**:\n   - Extracting related parties:\n     1. Jorge Enrique Rodriguez Rojas - Apoderado General Principal\n     2. Narciso Manuel Chiquillo Conde - Primer Suplente del Apoderado General Principal\n     3. Jose Manuel Tamayo Olarte - Segundo Suplente del Apoderado General Principal\n     4. Edwin Rene Vargas Salgado - Revisor Fiscal Suplente\n     5. Ernst & Young Audit Ltda. - Revisor Fiscal\n     6. Buena Ventura Falla Montealegre - Revisor Fiscal Principal\n\n4. **Data Normalization**:\n   - Dates are converted to YYYY-MM-DD format.\n   - Addresses are formatted as required.\n\n5. **Validation**:\n   - Checking against the CERL schema.json for required fields.\n   - Ensuring all dates are properly formatted.\n   - Verifying the taxId pattern.\n\nHere's the extracted data in the required JSON format:\n\n```json\n{\n  \"companyName\": \"GEOINETICS INTERNATIONAL, INC.\",\n  \"companyType\": \"Sucursal\",\n  \"country\": \"Colombia\",\n  \"document_pages\": 6,\n  \"documentType\": \"CERTIFICADO DE EXISTENCIA Y REPRESENTACIÓN LEGAL\",\n  \"taxId\": \"860006152-8\",\n  \"mainAddress\": \"CALLE 100 N. 19 - 54 OFICINA 604 - Municipio de BOGOTA D.C.\",\n  \"incorporationDate\": \"1963-02-21\",\n  \"companyDuration\": \"2462-02-04\",\n  \"registrationNumber\": \"C0018259\",\n  \"size\": \"\",\n  \"relatedParties\": [\n    {\n      \"firstName\": \"Jorge Enrique\",\n      \"lastName\": \"Rodriguez Rojas\",\n      \"identificationType\": \"C.C.\",\n      \"identificationNumber\": \"17448874\",\n      \"relationshipType\": \"Apoderado General Principal\"\n    },\n    {\n      \"firstName\": \"Narciso Manuel\",\n      \"lastName\": \"Chiquillo Conde\",\n      \"identificationType\": \"C.C.\",\n      \"identificationNumber\": \"17124736\",\n      \"relationshipType\": \"Primer Suplente del Apoderado General Principal\"\n    },\n    {\n      \"firstName\": \"Jose Manuel\",\n      \"lastName\": \"Tamayo Olarte\",\n      \"identificationType\": \"C.C.\",\n      \"identificationNumber\": \"19303534\",\n      \"relationshipType\": \"Segundo Suplente del Apoderado General Principal\"\n    },\n    {\n      \"firstName\": \"Edwin Rene\",\n      \"lastName\": \"Vargas Salgado\",\n      \"identificationType\": \"\",\n      \"identificationNumber\": \"\",\n      \"relationshipType\": \"Revisor Fiscal Suplente\"\n    },\n    {\n      \"companyName\": \"Ernst & Young Audit Ltda.\",\n      \"identificationType\": \"N.I.T.\",\n      \"identificationNumber\": \"86088905\",\n      \"relationshipType\": \"Revisor Fiscal\"\n    },\n    {\n      \"firstName\": \"Buena Ventura\",\n      \"lastName\": \"Falla Montealegre\",\n      \"identificationType\": \"C.C.\",\n      \"identificationNumber\": \"3637389\",\n      \"relationshipType\": \"Revisor Fiscal Principal\"\n    }\n  ],\n  \"embargoes\": \"\",\n  \"liquidations\": \"\",\n  \"documentIssueDate\": \"2009-04-16\",\n  \"lastRegistrationRenewalDate\": \"\"\n}\n```"
+        }
+      ]
+    }
+  },
+  "stopReason": "end_turn",
+  "usage": {
+    "inputTokens": 18605,
+    "outputTokens": 1137,
+    "totalTokens": 19742
+  },
+  "metrics": {
+    "latencyMs": 6503
+  }
+}

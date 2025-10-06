@@ -1,0 +1,33 @@
+{
+  "ResponseMetadata": {
+    "RequestId": "7eaf0ae8-4a46-45a2-8623-678887ea1861",
+    "HTTPStatusCode": 200,
+    "HTTPHeaders": {
+      "date": "Wed, 04 Jun 2025 17:35:54 GMT",
+      "content-type": "application/json",
+      "content-length": "3879",
+      "connection": "keep-alive",
+      "x-amzn-requestid": "7eaf0ae8-4a46-45a2-8623-678887ea1861"
+    },
+    "RetryAttempts": 0
+  },
+  "output": {
+    "message": {
+      "role": "assistant",
+      "content": [
+        {
+          "text": "Here's my step-by-step reasoning for extracting the company data from the provided document:\n\n1. **Document Analysis**: The document appears to be in Spanish and is a certificate of existence and legal representation from the Chamber of Commerce of Bogotá.\n\n2. **Page Count**: The document has 6 pages.\n\n3. **Company Information**:\n   - **companyName**: \"GEOINTENETICS INTERNATIONAL, INC.\"\n   - **companyType**: Not explicitly mentioned, but it's a foreign company with a Colombian branch.\n   - **country**: \"COLOMBIA\" (implied, not explicitly stated)\n   - **taxId**: \"860006152-8\"\n   - **documentType**: \"NIT\"\n\n4. **Address Composition**:\n   - **mainAddress**: \"Calle 100 N. 19 - 54 Oficina 604, Bogotá D.C.\"\n\n5. **Date Normalization**:\n   - **incorporationDate**: Not explicitly mentioned for the main company, but there's a mention of the branch's establishment in Colombia in 1963.\n   - **companyDuration**: \"hasta el 4 de febrero de 2462\" (indefinite duration, but a specific date far in the future)\n\n6. **Registration Details**:\n   - **registrationNumber**: \"10: C0018259 del 28 de abril de 1972\"\n   - **size**: Not explicitly mentioned.\n\n7. **Related Parties Handling**:\n   - Several related parties are mentioned with their roles and identification numbers.\n\n8. **Optional Fields Handling**:\n   - **embargoes** and **liquidations**: Empty strings.\n\n9. **Confidence Scoring**: Not explicitly calculated, but observations suggest high confidence in most extractions.\n\n10. **Validation Checklist**: Most required fields are present, but some (like company size) are missing.\n\nNow, let's construct the final JSON:\n\n```json\n{\n  \"companyName\": \"GEOINTENETICS INTERNATIONAL, INC.\",\n  \"companyType\": \"\",\n  \"country\": \"Colombia\",\n  \"document_pages\": 6,\n  \"documentType\": \"NIT\",\n  \"taxId\": \"860006152-8\",\n  \"mainAddress\": \"Calle 100 N. 19 - 54 Oficina 604, Bogotá D.C.\",\n  \"incorporationDate\": \"\",\n  \"companyDuration\": \"Indefinida\",\n  \"registrationNumber\": \"C0018259\",\n  \"size\": \"\",\n  \"relatedParties\": [\n    {\n      \"firstName\": \"JORGE ENRIQUE\",\n      \"lastName\": \"RODRIGUEZ ROJAS\",\n      \"identificationType\": \"C.C.\",\n      \"identificationNumber\": \"000000017144874\",\n      \"relationshipType\": \"Primer Suplente del Apoderado General Principal\"\n    },\n    {\n      \"firstName\": \"NARCISO MANUEL\",\n      \"lastName\": \"CHIGUILLO CONDE\",\n      \"identificationType\": \"C.C.\",\n      \"identificationNumber\": \"000000017124736\",\n      \"relationshipType\": \"Segundo Suplente del Apoderado General Principal\"\n    },\n    {\n      \"firstName\": \"TAMAYO OLARTE\",\n      \"lastName\": \"JOSE MANUEL\",\n      \"identificationType\": \"C.C.\",\n      \"identificationNumber\": \"000000019303534\",\n      \"relationshipType\": \"\"\n    },\n    {\n      \"firstName\": \"VICTOR\",\n      \"lastName\": \"LUCURCIO GOMEZ GUTIERREZ\",\n      \"identificationType\": \"Cédula\",\n      \"identificationNumber\": \"80.414.776\",\n      \"relationshipType\": \"\"\n    },\n    {\n      \"firstName\": \"NARCISO MANUEL\",\n      \"lastName\": \"CHIGUILLO CONDE\",\n      \"identificationType\": \"C.C.\",\n      \"identificationNumber\": \"17.124.736\",\n      \"relationshipType\": \"\"\n    },\n    {\n      \"firstName\": \"JCS' MANUEL\",\n      \"lastName\": \"TAMAYO OLARTE\",\n      \"identificationType\": \"C.C.\",\n      \"identificationNumber\": \"19.303.534\",\n      \"relationshipType\": \"\"\n    }\n  ],\n  \"embargoes\": \"\",\n  \"liquidations\": \"\",\n  \"documentIssueDate\": \"\",\n  \"lastRegistrationRenewalDate\": \"\"\n}\n```"
+        }
+      ]
+    }
+  },
+  "stopReason": "end_turn",
+  "usage": {
+    "inputTokens": 18605,
+    "outputTokens": 915,
+    "totalTokens": 19520
+  },
+  "metrics": {
+    "latencyMs": 8224
+  }
+}

@@ -1,0 +1,94 @@
+{
+  "extraction_data": {
+    "result": {
+      "CompanyName": "ForReview",
+      "Country": "ForReview",
+      "TaxId": "ForReview",
+      "VerificationDigit": "ForReview",
+      "IdentificationType": "ForReview",
+      "PersonType": "ForReview",
+      "ConflictingSources": [
+        "This document is not a Colombian RUT (Registro Único Tributario) issued by DIAN. It appears to be a German tax certificate (Bescheinigung in Steuersachen) from Finanzamt Steinfurt. The document structure and content do not match the expected Colombian RUT format specified in the extraction rules."
+      ],
+      "RequiresReview": "true"
+    },
+    "RelatedParties": [],
+    "Address": "ForReview",
+    "DocumentGenerationDate": "ForReview",
+    "DocumentType": "company",
+    "Category": "RUT"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "{ \"result\": { \"CompanyName\": \"ForReview\", \"Country\": \"ForReview\", \"TaxId\": \"ForReview\", \"VerificationDigit\": \"ForReview\", \"IdentificationType\": \"ForReview\", \"PersonType\": \"ForReview\", \"ConflictingSources\": [ \"This document is not a Colombian RUT (Registro Único Tributario) issued by DIAN. It appears to be a German tax certificate (Bescheinigung in Steuersachen) from Finanzamt Steinfurt. The document structure and content do not match the expected Colombian RUT format specified in the extraction rules.\" ], \"RequiresReview\": \"true\" }, \"RelatedParties\": [], \"Address\": \"ForReview\", \"DocumentGenerationDate\": \"ForReview\", \"DocumentType\": \"company\", \"Category\": \"RUT\" }"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 6324,
+      "cache_creation_input_tokens": 2990,
+      "cache_read_input_tokens": 0,
+      "output_tokens": 635
+    },
+    "ResponseMetadata": {
+      "RequestId": "11a36b84-51c2-4379-9f79-fea2204bf516",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Tue, 02 Sep 2025 21:52:14 GMT",
+        "content-type": "application/json",
+        "content-length": "4799",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "11a36b84-51c2-4379-9f79-fea2204bf516",
+        "x-amzn-bedrock-invocation-latency": "13118",
+        "x-amzn-bedrock-cache-write-input-token-count": "2990",
+        "x-amzn-bedrock-cache-read-input-token-count": "0",
+        "x-amzn-bedrock-output-token-count": "635",
+        "x-amzn-bedrock-input-token-count": "6324"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_01WFFzhbNjjhttfzmKDNnpvk",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-sonnet-4-20250514",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "This document appears to be in German, not Spanish, and it looks like a tax certificate from Germany (specifically from \"Finanzamt Steinfurt\"). This is not a Colombian RUT (Registro Único Tributario) document from DIAN. Looking at the document: 1. It's titled \"Bescheinigung in Steuersachen\" (Certificate in Tax Matters) 2. It's from \"Finanzamt Steinfurt\" (Tax Office Steinfurt) in Germany 3. The company mentioned is \"PROGNOST Systems GmbH\" 4. The address is \"Daimlerstr. 10, 48432 Rheine\" (which is in Germany) 5. The tax number appears to be \"311/5872/2566\" 6. There's a document generation date \"27.01.2021\" This is clearly not a Colombian RUT document, so I cannot extract the information according to the Colombian RUT format specified in the rules. The document is from Germany and follows a completely different structure. Since this is not a Colombian RUT document issued by DIAN, I should set most fields to \"ForReview\" and note in ConflictingSources that this is not the expected document type. However, I can extract some basic information: - Company name: PROGNOST Systems GmbH - Country: Germany (based on the document source and address) - Tax ID: 311/5872/2566 (this appears to be a German tax identification) - Address: from the German address shown - Document generation date: 27.01.2021 But since this doesn't follow the Colombian RUT format specified in the field rules, I should mark most fields as requiring review.",
+          "signature": "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"
+        },
+        {
+          "type": "text",
+          "text": "{ \"result\": { \"CompanyName\": \"ForReview\", \"Country\": \"ForReview\", \"TaxId\": \"ForReview\", \"VerificationDigit\": \"ForReview\", \"IdentificationType\": \"ForReview\", \"PersonType\": \"ForReview\", \"ConflictingSources\": [ \"This document is not a Colombian RUT (Registro Único Tributario) issued by DIAN. It appears to be a German tax certificate (Bescheinigung in Steuersachen) from Finanzamt Steinfurt. The document structure and content do not match the expected Colombian RUT format specified in the extraction rules.\" ], \"RequiresReview\": \"true\" }, \"RelatedParties\": [], \"Address\": \"ForReview\", \"DocumentGenerationDate\": \"ForReview\", \"DocumentType\": \"company\", \"Category\": \"RUT\" }"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 6324,
+        "cache_creation_input_tokens": 2990,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 635
+      }
+    },
+    "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 9000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+  "api_used": "invoke_model"
+}

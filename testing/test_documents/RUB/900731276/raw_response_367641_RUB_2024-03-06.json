@@ -1,0 +1,33 @@
+{
+  "ResponseMetadata": {
+    "RequestId": "294c4276-6cb2-455f-a96e-1681378fcfc9",
+    "HTTPStatusCode": 200,
+    "HTTPHeaders": {
+      "date": "Tue, 17 Jun 2025 14:27:55 GMT",
+      "content-type": "application/json",
+      "content-length": "1060",
+      "connection": "keep-alive",
+      "x-amzn-requestid": "294c4276-6cb2-455f-a96e-1681378fcfc9"
+    },
+    "RetryAttempts": 0
+  },
+  "output": {
+    "message": {
+      "role": "assistant",
+      "content": [
+        {
+          "text": "```json\n{\n  \"path\": \"s3://par-servicios-poc-dev-filling-desk/par-servicios-poc/RUB/900731276/367641_RUB_2024-03-06.pdf\",\n  \"result\": {\n    \"companyName\": \"ALCUBO PRODUCCIONES SAS\",\n    \"country\": \"Colombia\",\n    \"documentType\": \"NIT\",\n    \"taxId\": \"91262818\",\n    \"relatedParties\": [\n      {\n        \"firstName\": \"CUADROS\",\n        \"lastName\": \"ROMERO EDGAR HERNAN\",\n        \"identificationType\": \"NIT\",\n        \"identificationNumber\": \"91262818\",\n        \"noveltyType\": \"Registro\",\n        \"participationPercentage\": \"100\"\n      }\n    ]\n  },\n  \"confidenceScores\": {\n    \"companyName\": 95,\n    \"documentType\": 90,\n    \"country\": 100,\n    \"taxId\": 100,\n    \"relatedParties\": 85\n  },\n  \"document_type\": \"company\",\n  \"document_number\": \"900731276\",\n  \"category\": \"RUB\"\n}\n```"
+        }
+      ]
+    }
+  },
+  "stopReason": "end_turn",
+  "usage": {
+    "inputTokens": 8126,
+    "outputTokens": 290,
+    "totalTokens": 8416
+  },
+  "metrics": {
+    "latencyMs": 7753
+  }
+}

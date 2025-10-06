@@ -1,0 +1,107 @@
+{
+  "extraction_data": {
+    "result": {
+      "companyName": "PUBLIART COLORS SAS",
+      "documentCategory": "Equity Composition",
+      "taxId": "900.523.022-1",
+      "country": "Colombia",
+      "identificationDetails": {
+        "source": "text_reference",
+        "indicators": [
+          "Bogotá D.C.",
+          "Colombia"
+        ],
+        "conflictingSources": [],
+        "requiresReview": "false"
+      },
+      "relatedParties": [
+        {
+          "type": "person",
+          "firstName": "JOHN FABIO",
+          "lastName": "MARTINEZ LIEVANO",
+          "identificationType": "C.C.",
+          "identificationNumber": "1.010.168.875",
+          "relationshipType": "Shareholder",
+          "participationPercentage": "100%",
+          "timeFound": "1",
+          "job": "GERENTE"
+        }
+      ]
+    },
+    "documentType": "company",
+    "category": "ACC"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "{ \"result\": { \"companyName\": \"PUBLIART COLORS SAS\", \"documentCategory\": \"Equity Composition\", \"taxId\": \"900.523.022-1\", \"country\": \"Colombia\", \"identificationDetails\": { \"source\": \"text_reference\", \"indicators\": [ \"Bogotá D.C.\", \"Colombia\" ], \"conflictingSources\": [], \"requiresReview\": \"false\" }, \"relatedParties\": [ { \"type\": \"person\", \"firstName\": \"JOHN FABIO\", \"lastName\": \"MARTINEZ LIEVANO\", \"identificationType\": \"C.C.\", \"identificationNumber\": \"1.010.168.875\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"100%\", \"timeFound\": \"1\", \"job\": \"GERENTE\" } ] }, \"documentType\": \"company\", \"category\": \"ACC\" }"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 9,
+      "cache_creation_input_tokens": 6073,
+      "cache_read_input_tokens": 0,
+      "output_tokens": 885
+    },
+    "ResponseMetadata": {
+      "RequestId": "5a4a7549-f6e7-474a-974f-2095aa07ab72",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Fri, 29 Aug 2025 17:00:58 GMT",
+        "content-type": "application/json",
+        "content-length": "6113",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "5a4a7549-f6e7-474a-974f-2095aa07ab72",
+        "x-amzn-bedrock-invocation-latency": "13743",
+        "x-amzn-bedrock-cache-write-input-token-count": "6073",
+        "x-amzn-bedrock-cache-read-input-token-count": "0",
+        "x-amzn-bedrock-output-token-count": "885",
+        "x-amzn-bedrock-input-token-count": "9"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_01LBsQSaUFPU1SbeCHaQ2VfF",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-sonnet-4-20250514",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Let me analyze this Spanish document step by step. **Step 1: Document Analysis** - This is a certification from Bogotá D.C. - It's issued by a public accountant (Contador Público) for PUBLIART COLORS SAS - The document certifies the company's shareholding composition (composición accionaria) **Step 2: Root Level Extraction** **companyName**: The document is about \"PUBLIART COLORS SAS\" - this is mentioned as \"El suscrito Contador Público de PUBLIART COLORS SAS\" **taxId**: The document states \"identificada con Nit No. 900.523.022-1\" - so the NIT is 900.523.022-1 **country**: The document header shows \"Bogotá D.C.\" and mentions \"Colombia\" in the text \"aceptadas en Colombia\" - clear indicators this is Colombia **Step 3: Related Parties Processing** Looking at the table: - NOMBRE: JOHN FABIO MARTINEZ LIEVANO - NUMERO DE DOCUMENTO: 1.010.168.875 - CARGO: GERENTE - % PARTICIPACION: 100% - TIPO DE DOCUMENTO: C.C - NACIONALIDAD: COLOMBIANO This is clearly a person (individual name, C.C. document type which is Colombian citizen ID). **Name splitting**: - firstName: \"JOHN FABIO\" (two given names) - lastName: \"MARTINEZ LIEVANO\" (two family names) **identificationType**: \"C.C.\" - this matches Colombia's PERSON_ID hash table **identificationNumber**: \"1.010.168.875\" - preserving the format with dots **participationPercentage**: \"100%\" from the table **job**: \"GERENTE\" from the CARGO column **timeFound**: This person appears once in the document, so \"1\" I've verified the document's key details and cross-checked critical information. The validation confirms all critical elements align perfectly. The single shareholder's details match official Colombian identification standards, with no discrepancies detected. The document's source is credible, originating from Bogotá D.C. and explicitly referencing Colombian regulations. All required fields are present and consistent.",
+          "signature": "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"
+        },
+        {
+          "type": "text",
+          "text": "{ \"result\": { \"companyName\": \"PUBLIART COLORS SAS\", \"documentCategory\": \"Equity Composition\", \"taxId\": \"900.523.022-1\", \"country\": \"Colombia\", \"identificationDetails\": { \"source\": \"text_reference\", \"indicators\": [ \"Bogotá D.C.\", \"Colombia\" ], \"conflictingSources\": [], \"requiresReview\": \"false\" }, \"relatedParties\": [ { \"type\": \"person\", \"firstName\": \"JOHN FABIO\", \"lastName\": \"MARTINEZ LIEVANO\", \"identificationType\": \"C.C.\", \"identificationNumber\": \"1.010.168.875\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"100%\", \"timeFound\": \"1\", \"job\": \"GERENTE\" } ] }, \"documentType\": \"company\", \"category\": \"ACC\" }"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 9,
+        "cache_creation_input_tokens": 6073,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 885
+      }
+    },
+    "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 8000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+  "api_used": "invoke_model"
+}

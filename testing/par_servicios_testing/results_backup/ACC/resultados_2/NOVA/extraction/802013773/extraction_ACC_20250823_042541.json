@@ -1,0 +1,84 @@
+{
+  "extraction_data": {
+    "path": "$pdf_path",
+    "result": {
+      "companyName": "S & T INGENERIA Y CONSULTORIA SAS",
+      "documentType": "Equity Composition",
+      "taxId": "802,013,773-0",
+      "country": "Colombia",
+      "identificationDetails": {
+        "source": "id_analysis",
+        "indicators": [
+          "NIT"
+        ],
+        "conflictingSources": [],
+        "requiresReview": false
+      },
+      "relatedParties": [
+        {
+          "firstName": "TANIA ELENA",
+          "lastName": "CHEMAS AVENDANO",
+          "identificationType": "C.C.",
+          "identificationNumber": "32.728.993",
+          "relationshipType": "Shareholder",
+          "participationPercentage": "50.00%",
+          "timeFound": 1,
+          "job": ""
+        },
+        {
+          "firstName": "FARID EDUARDO",
+          "lastName": "RADI SAGBINI",
+          "identificationType": "C.C.",
+          "identificationNumber": "77.025.796",
+          "relationshipType": "Shareholder",
+          "participationPercentage": "50.00%",
+          "timeFound": 1,
+          "job": ""
+        }
+      ]
+    },
+    "document_type": "company",
+    "document_number": "8020137730",
+    "category": "ACC",
+    "confidenceScores": {
+      "companyName": 95,
+      "taxId": 95,
+      "country": 95,
+      "relatedParties": 90
+    }
+  },
+  "raw_response": {
+    "ResponseMetadata": {
+      "RequestId": "1685be7a-9695-4ca2-b5dd-85bd387a5f8a",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Sat, 23 Aug 2025 09:25:41 GMT",
+        "content-type": "application/json",
+        "content-length": "1582",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "1685be7a-9695-4ca2-b5dd-85bd387a5f8a"
+      },
+      "RetryAttempts": 0
+    },
+    "output": {
+      "message": {
+        "role": "assistant",
+        "content": [
+          {
+            "text": "```json\n{\n  \"path\": \"$pdf_path\",\n  \"result\": {\n    \"companyName\": \"S & T INGENERIA Y CONSULTORIA SAS\",\n    \"documentType\": \"Equity Composition\",\n    \"taxId\": \"802,013,773-0\",\n    \"country\": \"Colombia\",\n    \"identificationDetails\": {\n      \"source\": \"id_analysis\",\n      \"indicators\": [\n        \"NIT\"\n      ],\n      \"conflictingSources\": [],\n      \"requiresReview\": false\n    },\n    \"relatedParties\": [\n      {\n        \"firstName\": \"TANIA ELENA\",\n        \"lastName\": \"CHEMAS AVENDANO\",\n        \"identificationType\": \"C.C.\",\n        \"identificationNumber\": \"32.728.993\",\n        \"relationshipType\": \"Shareholder\",\n        \"participationPercentage\": \"50.00%\",\n        \"timeFound\": 1,\n        \"job\": \"\"\n      },\n      {\n        \"firstName\": \"FARID EDUARDO\",\n        \"lastName\": \"RADI SAGBINI\",\n        \"identificationType\": \"C.C.\",\n        \"identificationNumber\": \"77.025.796\",\n        \"relationshipType\": \"Shareholder\",\n        \"participationPercentage\": \"50.00%\",\n        \"timeFound\": 1,\n        \"job\": \"\"\n      }\n    ]\n  },\n  \"document_type\": \"company\",\n  \"document_number\": \"8020137730\",\n  \"category\": \"ACC\",\n  \"confidenceScores\": {\n    \"companyName\": 95,\n    \"taxId\": 95,\n    \"country\": 95,\n    \"relatedParties\": 90\n  }\n}\n```"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "inputTokens": 8527,
+      "outputTokens": 382,
+      "totalTokens": 8909
+    },
+    "metrics": {
+      "latencyMs": 6790
+    }
+  },
+  "model_used": "us.amazon.nova-pro-v1:0"
+}

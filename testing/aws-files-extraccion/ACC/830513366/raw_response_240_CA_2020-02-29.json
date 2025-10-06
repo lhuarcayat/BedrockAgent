@@ -1,0 +1,33 @@
+{
+  "ResponseMetadata": {
+    "RequestId": "96767e0d-eca2-4e5e-8fba-7abf80a11588",
+    "HTTPStatusCode": 200,
+    "HTTPHeaders": {
+      "date": "Mon, 16 Jun 2025 20:49:22 GMT",
+      "content-type": "application/json",
+      "content-length": "1867",
+      "connection": "keep-alive",
+      "x-amzn-requestid": "96767e0d-eca2-4e5e-8fba-7abf80a11588"
+    },
+    "RetryAttempts": 0
+  },
+  "output": {
+    "message": {
+      "role": "assistant",
+      "content": [
+        {
+          "text": "```json\n{\n  \"path\": \"s3://par-servicios-poc-dev-filling-desk/par-servicios-poc/ACC/830513366/240_CA_2020-02-29.pdf\",\n  \"result\": {\n    \"companyName\": \"NEWSAT S.A.S.\",\n    \"documentType\": \"Equity Composition\",\n    \"taxId\": \"830.513.366-3\",\n    \"country\": \"Colombia\",\n    \"identificationDetails\": {\n      \"source\": \"text_reference\",\n      \"indicators\": [\"Colombia\"],\n      \"requiresReview\": false\n    },\n    \"relatedParties\": [\n      {\n        \"firstName\": \"CARLOS ENRIQUE\",\n        \"lastName\": \"ROSERO CERON\",\n        \"identificationType\": \"CC\",\n        \"identificationNumber\": \"6386024\",\n        \"relationshipType\": \"Shareholder\",\n        \"participationPercentage\": \"40\",\n        \"timeFound\": 1\n      },\n      {\n        \"firstName\": \"SHAI\",\n        \"lastName\": \"BERCOVICH\",\n        \"identificationType\": \"CC\",\n        \"identificationNumber\": \"301680\",\n        \"relationshipType\": \"Shareholder\",\n        \"participationPercentage\": \"40\",\n        \"timeFound\": 1\n      },\n      {\n        \"firstName\": \"DIEGO ALEJANDRO\",\n        \"lastName\": \"SALAZAR VASQUEZ\",\n        \"identificationType\": \"CC\",\n        \"identificationNumber\": \"91499446\",\n        \"relationshipType\": \"Shareholder\",\n        \"participationPercentage\": \"20\",\n        \"timeFound\": 1\n      }\n    ]\n  },\n  \"document_type\": \"company\",\n  \"document_number\": \"830513366\",\n  \"category\": \"ACC\",\n  \"confidenceScores\": {\n    \"companyName\": 95,\n    \"documentType\": 100,\n    \"taxId\": 95,\n    \"country\": 95,\n    \"relatedParties\": 90\n  }\n}\n```"
+        }
+      ]
+    }
+  },
+  "stopReason": "end_turn",
+  "usage": {
+    "inputTokens": 5435,
+    "outputTokens": 470,
+    "totalTokens": 5905
+  },
+  "metrics": {
+    "latencyMs": 8931
+  }
+}

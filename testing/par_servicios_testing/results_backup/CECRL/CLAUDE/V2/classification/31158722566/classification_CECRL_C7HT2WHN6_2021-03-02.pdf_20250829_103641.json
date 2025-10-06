@@ -1,0 +1,87 @@
+{
+  "classification_data": {
+    "category": "CECRL",
+    "text": "DEUTSCHLAND Pass-Nr./Passport No. C7HT2WHN6 TYP/TYPE/TYPE P LAND/CODE/CODE D NAME/SURNAME/NOM DREWES VORNAMEN/GIVEN NAMES/PRÉNOMS EIKE HERMANN RICHARD STAATSANGEHÖRIGKEIT/NATIONALITY/NATIONALITÉ DEUTSCH GEBURTSDATUM/DATE OF BIRTH/DATE DE NAISSANCE 28.05.1974 GESCHLECHT/SEX/SEXE M GEBURTSORT/PLACE OF BIRTH/LIEU DE NAISSANCE OLDENBURG (OLDB) AUSSSTELLUNGSDATUM/DATE OF ISSUE/DATE DE DÉLIVRANCE 04.04.2016 GÜLTIG BIS/DATE OF EXPIRY/DATE D'EXPIRATION 03.04.2026 AUSSTELLENDE BEHÖRDE/AUTHORITY/AUTORITÉ STADT RHEINE P<D<<DREWES<<EIKE<HERMANN<RICHARD<<<<<<<<<<< C7HT2WHN67D<<7405280M2604033<<<<<<<<<<<<<4",
+    "document_number": "UNKNOWN",
+    "path": "CECRL/31158722566_C7HT2WHN6_2021-03-02/C7HT2WHN6_2021-03-02.pdf"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "```json { \"category\": \"CECRL\", \"text\": \"DEUTSCHLAND\\nPass-Nr./Passport No. C7HT2WHN6\\nTYP/TYPE/TYPE P\\nLAND/CODE/CODE D\\nNAME/SURNAME/NOM DREWES\\nVORNAMEN/GIVEN NAMES/PRÉNOMS EIKE HERMANN RICHARD\\nSTAATSANGEHÖRIGKEIT/NATIONALITY/NATIONALITÉ DEUTSCH\\nGEBURTSDATUM/DATE OF BIRTH/DATE DE NAISSANCE 28.05.1974\\nGESCHLECHT/SEX/SEXE M\\nGEBURTSORT/PLACE OF BIRTH/LIEU DE NAISSANCE OLDENBURG (OLDB)\\nAUSSSTELLUNGSDATUM/DATE OF ISSUE/DATE DE DÉLIVRANCE 04.04.2016\\nGÜLTIG BIS/DATE OF EXPIRY/DATE D'EXPIRATION 03.04.2026\\nAUSSTELLENDE BEHÖRDE/AUTHORITY/AUTORITÉ STADT RHEINE\\nP<D<<DREWES<<EIKE<HERMANN<RICHARD<<<<<<<<<<<\\nC7HT2WHN67D<<7405280M2604033<<<<<<<<<<<<<4\" } ```"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 9,
+      "cache_creation_input_tokens": 4570,
+      "cache_read_input_tokens": 0,
+      "output_tokens": 883
+    },
+    "ResponseMetadata": {
+      "RequestId": "85c992ee-1ef2-4749-a911-f9132ab76605",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Fri, 29 Aug 2025 15:36:30 GMT",
+        "content-type": "application/json",
+        "content-length": "5807",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "85c992ee-1ef2-4749-a911-f9132ab76605",
+        "x-amzn-bedrock-invocation-latency": "16209",
+        "x-amzn-bedrock-cache-write-input-token-count": "4570",
+        "x-amzn-bedrock-cache-read-input-token-count": "0",
+        "x-amzn-bedrock-output-token-count": "883",
+        "x-amzn-bedrock-input-token-count": "9"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_01VWMX48oGgt4RCHmj8nEq4i",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-sonnet-4-20250514",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Let me examine this document carefully. Looking at the image, I can see this is a passport or ID document. Let me extract the visible text: The document appears to be a German passport based on the visible elements: 1. I can see \"DEUTSCHLAND\" which means Germany 2. There's \"Pass-Nr./Passport No.\" followed by \"C7HT2WHN6\" 3. I can see personal information including: - A name: \"DREWES\" and \"EIKE HERMANN RICHARD\" - Birth date: \"28.05.1974\" - Birth place: \"OLDENBURG (OLDB)\" - Nationality: \"DEUTSCH\" (German) - Gender appears to be \"M\" - There's an expiration date: \"03.04.2026\" - Issue date appears to be \"04.04.2016\" - There's a signature visible 4. At the bottom I can see the machine-readable zone (MRZ): \"P<D<<DREWES<<EIKE<HERMANN<RICHARD<<<<<<<<<<<<\" \"C7HT2WHN67D<<7405280M2604033<<<<<<<<<<<<<4\" 5. There's a photo of a man with glasses 6. There's what appears to be \"STADT RHEINE\" as the issuing authority This is clearly a personal identification document - specifically a German passport. According to the classification system: This falls under CECRL category because: - It's an official personal identification document (passport) - Contains individual identification with personal biographical data (birth date, place, nationality) - Has an individual photo and signature - Is government-issued with official security elements - Contains personal ID numbers with individual names - Has security features typical of official ID documents This is definitely not: - BLANK (has substantial content) - LINK_ONLY (no URLs) - RUT (not a DIAN tax document) - CERL (not a Chamber of Commerce certificate) - ACC (not about shareholding) - RUB (not about beneficial ownership) I confirm this is a standard personal identification document matching the CECRL classification precisely. The passport contains comprehensive personal details with official government validation.",
+          "signature": "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"
+        },
+        {
+          "type": "text",
+          "text": "```json { \"category\": \"CECRL\", \"text\": \"DEUTSCHLAND\\nPass-Nr./Passport No. C7HT2WHN6\\nTYP/TYPE/TYPE P\\nLAND/CODE/CODE D\\nNAME/SURNAME/NOM DREWES\\nVORNAMEN/GIVEN NAMES/PRÉNOMS EIKE HERMANN RICHARD\\nSTAATSANGEHÖRIGKEIT/NATIONALITY/NATIONALITÉ DEUTSCH\\nGEBURTSDATUM/DATE OF BIRTH/DATE DE NAISSANCE 28.05.1974\\nGESCHLECHT/SEX/SEXE M\\nGEBURTSORT/PLACE OF BIRTH/LIEU DE NAISSANCE OLDENBURG (OLDB)\\nAUSSSTELLUNGSDATUM/DATE OF ISSUE/DATE DE DÉLIVRANCE 04.04.2016\\nGÜLTIG BIS/DATE OF EXPIRY/DATE D'EXPIRATION 03.04.2026\\nAUSSTELLENDE BEHÖRDE/AUTHORITY/AUTORITÉ STADT RHEINE\\nP<D<<DREWES<<EIKE<HERMANN<RICHARD<<<<<<<<<<<\\nC7HT2WHN67D<<7405280M2604033<<<<<<<<<<<<<4\" } ```"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 9,
+        "cache_creation_input_tokens": 4570,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 883
+      }
+    },
+    "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 8000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "expected_category": "CECRL",
+  "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+  "api_used": "invoke_model",
+  "pdf_info": {
+    "original_size": 732916,
+    "first_page_size": 729064,
+    "is_scanned": true
+  }
+}

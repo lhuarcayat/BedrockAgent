@@ -1,0 +1,87 @@
+{
+  "classification_data": {
+    "category": "CECRL",
+    "text": "REPUBLICA DE COLOMBIA IDENTIFICACION PERSONAL CEDULA DE CIUDADANIA NUMERO 52.713.382 CORDON SALAZAR APELLIDOS MARIA DEL ROSARIO NOMBRES FIRMA FECHA DE NACIMIENTO 10-JUL-1981 SAN MATEO (BOYACA) LUGAR DE NACIMIENTO 1.51 O+ F ESTATURA G.S. RH SEXO 21-JUL-1999 BOGOTA D.C. FECHA Y LUGAR DE EXPEDICION INDICE DERECHO REGISTRADOR NACIONAL CARLOS ARIEL SANCHEZ TORRES A-1500150-00180668-F-005271338Z-20000024 0018501767A1 128010762",
+    "document_number": "UNKNOWN",
+    "path": "CECRL/900475077_52713382_2024-07-19/52713382_2024-07-19.pdf"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "```json { \"category\": \"CECRL\", \"text\": \"REPUBLICA DE COLOMBIA\\nIDENTIFICACION PERSONAL\\nCEDULA DE CIUDADANIA\\nNUMERO 52.713.382\\nCORDON SALAZAR\\nAPELLIDOS\\nMARIA DEL ROSARIO\\nNOMBRES\\nFIRMA\\nFECHA DE NACIMIENTO 10-JUL-1981\\nSAN MATEO\\n(BOYACA)\\nLUGAR DE NACIMIENTO\\n1.51 O+ F\\nESTATURA G.S. RH SEXO\\n21-JUL-1999 BOGOTA D.C.\\nFECHA Y LUGAR DE EXPEDICION\\nINDICE DERECHO\\nREGISTRADOR NACIONAL\\nCARLOS ARIEL SANCHEZ TORRES\\nA-1500150-00180668-F-005271338Z-20000024\\n0018501767A1\\n128010762\" } ```"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 9,
+      "cache_creation_input_tokens": 4774,
+      "cache_read_input_tokens": 0,
+      "output_tokens": 998
+    },
+    "ResponseMetadata": {
+      "RequestId": "5aa9cbe6-7c34-4482-9d4c-494face7e7b9",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Fri, 29 Aug 2025 23:00:49 GMT",
+        "content-type": "application/json",
+        "content-length": "6526",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "5aa9cbe6-7c34-4482-9d4c-494face7e7b9",
+        "x-amzn-bedrock-invocation-latency": "19475",
+        "x-amzn-bedrock-cache-write-input-token-count": "4774",
+        "x-amzn-bedrock-cache-read-input-token-count": "0",
+        "x-amzn-bedrock-output-token-count": "998",
+        "x-amzn-bedrock-input-token-count": "9"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_01Rvf6L9DFDS63f4YFKcEo98",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-sonnet-4-20250514",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Let me analyze this document step by step following the classification workflow: 1. **TEXT EXTRACTION** Looking at the document, I can see it's a Colombian identification card. I can extract: Front side: - REPUBLICA DE COLOMBIA - IDENTIFICACION PERSONAL - CEDULA DE CIUDADANIA - NUMERO 52.713.382 - CORDON SALAZAR - APELLIDOS - MARIA DEL ROSARIO - NOMBRES - FIRMA (signature area) - Photo of a person Back side: - FECHA DE NACIMIENTO 10-JUL-1981 - SAN MATEO - (BOYACA) - LUGAR DE NACIMIENTO - 1.51 O+ F - ESTATURA G.S. RH SEXO - 21-JUL-1999 BOGOTA D.C. - FECHA Y LUGAR DE EXPEDICION - INDICE DERECHO (fingerprint area) - REGISTRADOR NACIONAL - CARLOS ARIEL SANCHEZ TORRES - Barcode and identification numbers at bottom 2. **PRIORITY CHECKS** - This is not BLANK - it has substantial meaningful content - This is not LINK_ONLY - no hyperlinks or URLs 3. **DOCUMENT FUNCTION ANALYSIS** - PRIMARY PURPOSE: This is a personal identification document - SPECIFIC INFORMATION: Individual identification data including name, ID number, birth date, birth place, physical characteristics (height, blood type), photo, signature, fingerprint - This is personal identification vs. corporate documentation - Individual records vs. entity relationships 4. **ISSUER IDENTIFICATION** - This is issued by \"REPUBLICA DE COLOMBIA\" - government identification authority - This is a \"CEDULA DE CIUDADANIA\" (citizenship card) - Not DIAN, not Chamber of Commerce, but government ID authority 5. **CATEGORY CLASSIFICATION** Verifying against CECRL standards, the document meets all key identification criteria. It contains comprehensive personal details with official government validation, including unique identifiers, biometric references, and core biographical information. The card represents a robust form of individual identification with multiple security and verification elements. The document's comprehensive profile and authoritative Colombian government issuance confirm its classification as a standard CECRL personal identification credential.",
+          "signature": "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"
+        },
+        {
+          "type": "text",
+          "text": "```json { \"category\": \"CECRL\", \"text\": \"REPUBLICA DE COLOMBIA\\nIDENTIFICACION PERSONAL\\nCEDULA DE CIUDADANIA\\nNUMERO 52.713.382\\nCORDON SALAZAR\\nAPELLIDOS\\nMARIA DEL ROSARIO\\nNOMBRES\\nFIRMA\\nFECHA DE NACIMIENTO 10-JUL-1981\\nSAN MATEO\\n(BOYACA)\\nLUGAR DE NACIMIENTO\\n1.51 O+ F\\nESTATURA G.S. RH SEXO\\n21-JUL-1999 BOGOTA D.C.\\nFECHA Y LUGAR DE EXPEDICION\\nINDICE DERECHO\\nREGISTRADOR NACIONAL\\nCARLOS ARIEL SANCHEZ TORRES\\nA-1500150-00180668-F-005271338Z-20000024\\n0018501767A1\\n128010762\" } ```"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 9,
+        "cache_creation_input_tokens": 4774,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 998
+      }
+    },
+    "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 8000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "expected_category": "CECRL",
+  "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+  "api_used": "invoke_model",
+  "pdf_info": {
+    "original_size": 185016,
+    "first_page_size": 184840,
+    "is_scanned": true
+  }
+}

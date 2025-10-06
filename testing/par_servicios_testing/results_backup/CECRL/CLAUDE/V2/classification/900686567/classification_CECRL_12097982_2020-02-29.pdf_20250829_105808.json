@@ -1,0 +1,87 @@
+{
+  "classification_data": {
+    "category": "CECRL",
+    "text": "REPUBLICA DE COLOMBIA IDENTIFICACION PERSONAL CEDULA DE CIUDADANIA NUMERO: 12.097.982 POLANIA ANDRADE APELLIDOS: ENRIQUE NOMBRES: FIRMA FECHA DE NACIMIENTO: 04-DIC-1947 NEIVA (HUILA) LUGAR DE NACIMIENTO 1.69 O+ M ESTATURA G.S. RH SEXO 10-ABR-1969 NEIVA FECHA Y LUGAR DE EXPEDICION REGISTRADOR NACIONAL CARLOS ARIEL SANCHEZ TORRES INDICE DERECHO A 19030000163502-M-0012070982-200801722 0013717771A 7120005800",
+    "document_number": "900686567",
+    "path": "CECRL/900686567/12097982_2020-02-29.pdf"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "```json { \"category\": \"CECRL\", \"text\": \"REPUBLICA DE COLOMBIA\\nIDENTIFICACION PERSONAL\\nCEDULA DE CIUDADANIA\\n\\nNUMERO: 12.097.982\\nPOLANIA ANDRADE\\nAPELLIDOS: ENRIQUE\\nNOMBRES:\\n\\nFIRMA\\n\\nFECHA DE NACIMIENTO: 04-DIC-1947\\nNEIVA\\n(HUILA)\\nLUGAR DE NACIMIENTO\\n\\n1.69 O+ M\\nESTATURA G.S. RH SEXO\\n\\n10-ABR-1969 NEIVA\\nFECHA Y LUGAR DE EXPEDICION\\n\\nREGISTRADOR NACIONAL\\nCARLOS ARIEL SANCHEZ TORRES\\n\\nINDICE DERECHO\\n\\nA 19030000163502-M-0012070982-200801722 0013717771A 7120005800\" } ```"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 9,
+      "cache_creation_input_tokens": 4559,
+      "cache_read_input_tokens": 0,
+      "output_tokens": 1015
+    },
+    "ResponseMetadata": {
+      "RequestId": "e06b7cb5-22c8-477d-ab9c-3d57d1af053d",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Fri, 29 Aug 2025 15:57:21 GMT",
+        "content-type": "application/json",
+        "content-length": "6689",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "e06b7cb5-22c8-477d-ab9c-3d57d1af053d",
+        "x-amzn-bedrock-invocation-latency": "20475",
+        "x-amzn-bedrock-cache-write-input-token-count": "4559",
+        "x-amzn-bedrock-cache-read-input-token-count": "0",
+        "x-amzn-bedrock-output-token-count": "1015",
+        "x-amzn-bedrock-input-token-count": "9"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_01AQD2oz98nzfabSeD49S6aF",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-sonnet-4-20250514",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Let me analyze this document carefully following the classification workflow: 1. **TEXT EXTRACTION** Looking at the document, I can see this is an ID card from Colombia. Let me extract the text: REPUBLICA DE COLOMBIA IDENTIFICACION PERSONAL CEDULA DE CIUDADANIA NUMERO: 12.097.982 POLANIA ANDRADE APELLIDOS: ENRIQUE NOMBRES: [appears to be partially visible/signed] FIRMA FECHA DE NACIMIENTO: 04-DIC-1947 NEIVA (HUILA) LUGAR DE NACIMIENTO 1.69 O+ M ESTATURA G.S. RH SEXO 10-ABR-1969 NEIVA FECHA Y LUGAR DE EXPEDICION [signature appears here] REGISTRADOR NACIONAL CARLOS ARIEL SANCHEZ TORRES [There's also a barcode at the bottom and what appears to be fingerprint data] 2. **PRIORITY CHECKS** - Not BLANK - has meaningful content - Not LINK_ONLY - no hyperlinks/URLs 3. **ISSUER IDENTIFICATION** This is issued by \"REPUBLICA DE COLOMBIA\" - a government identification authority for personal identification documents. 4. **DOCUMENT FUNCTION ANALYSIS** This is clearly a personal identification document - specifically a Colombian \"cedula de ciudadania\" (citizenship card). It contains: - Individual identification: cedula number 12.097.982 - Personal name: POLANIA ANDRADE, ENRIQUE - Personal biographical data: birth date (04-DIC-1947), birth place (NEIVA, HUILA) - Physical characteristics: height (1.69), blood type (O+), gender (M) - Photo of individual - Signature area - Fingerprint - Issue date and place (10-ABR-1969 NEIVA) - Security elements (barcode, official format) 5. **CATEGORY CLASSIFICATION** I confirm this document meets core identification criteria with distinctive Colombian government markers. The card contains comprehensive personal verification elements typical of official national identification, including unique government-issued identifiers, comprehensive personal details, and multiple security features. The document definitively represents an individual's official personal identification, with precise governmental authentication mechanisms embedded throughout its design.",
+          "signature": "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"
+        },
+        {
+          "type": "text",
+          "text": "```json { \"category\": \"CECRL\", \"text\": \"REPUBLICA DE COLOMBIA\\nIDENTIFICACION PERSONAL\\nCEDULA DE CIUDADANIA\\n\\nNUMERO: 12.097.982\\nPOLANIA ANDRADE\\nAPELLIDOS: ENRIQUE\\nNOMBRES:\\n\\nFIRMA\\n\\nFECHA DE NACIMIENTO: 04-DIC-1947\\nNEIVA\\n(HUILA)\\nLUGAR DE NACIMIENTO\\n\\n1.69 O+ M\\nESTATURA G.S. RH SEXO\\n\\n10-ABR-1969 NEIVA\\nFECHA Y LUGAR DE EXPEDICION\\n\\nREGISTRADOR NACIONAL\\nCARLOS ARIEL SANCHEZ TORRES\\n\\nINDICE DERECHO\\n\\nA 19030000163502-M-0012070982-200801722 0013717771A 7120005800\" } ```"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 9,
+        "cache_creation_input_tokens": 4559,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 1015
+      }
+    },
+    "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 8000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "expected_category": "CECRL",
+  "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+  "api_used": "invoke_model",
+  "pdf_info": {
+    "original_size": 775594,
+    "first_page_size": 773947,
+    "is_scanned": true
+  }
+}

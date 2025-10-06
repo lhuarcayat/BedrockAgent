@@ -1,0 +1,83 @@
+{
+  "extraction_data": {
+    "path": "ACC/900523022/201_CA_2020-02-29.pdf",
+    "result": {
+      "companyName": "PUBLIART COLORS SAS",
+      "documentType": "Equity Composition",
+      "taxId": "900.523.022-1",
+      "country": "Colombia",
+      "identificationDetails": {
+        "source": "text_reference",
+        "indicators": [
+          "Bogotá D.C.",
+          "Colombia"
+        ],
+        "conflictingSources": [],
+        "requiresReview": false
+      },
+      "relatedParties": [
+        {
+          "firstName": "John Fabio",
+          "lastName": "Martínez Lievano",
+          "identificationType": "CC",
+          "identificationNumber": "1.010.168.875",
+          "relationshipType": "Shareholder",
+          "participationPercentage": "100%",
+          "timeFound": 1,
+          "job": ""
+        }
+      ]
+    },
+    "document_type": "company",
+    "document_number": "900523022",
+    "category": "ACC",
+    "confidenceScores": {
+      "companyName": 95,
+      "taxId": 95,
+      "country": 98,
+      "relatedParties": 90
+    }
+  },
+  "raw_response": {
+    "ResponseMetadata": {
+      "RequestId": "1d40b3e4-13c2-413d-ab05-fa7b7039bb47",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Mon, 25 Aug 2025 06:03:57 GMT",
+        "content-type": "application/json",
+        "content-length": "1283",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "1d40b3e4-13c2-413d-ab05-fa7b7039bb47"
+      },
+      "RetryAttempts": 0
+    },
+    "output": {
+      "message": {
+        "role": "assistant",
+        "content": [
+          {
+            "text": "```json { \"path\": \"ACC/900523022/201_CA_2020-02-29.pdf\", \"result\": { \"companyName\": \"PUBLIART COLORS SAS\", \"documentType\": \"Equity Composition\", \"taxId\": \"900.523.022-1\", \"country\": \"Colombia\", \"identificationDetails\": { \"source\": \"text_reference\", \"indicators\": [ \"Bogotá D.C.\", \"Colombia\" ], \"conflictingSources\": [], \"requiresReview\": false }, \"relatedParties\": [ { \"firstName\": \"John Fabio\", \"lastName\": \"Martínez Lievano\", \"identificationType\": \"CC\", \"identificationNumber\": \"1.010.168.875\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"100%\", \"timeFound\": 1, \"job\": \"\" } ] }, \"document_type\": \"company\", \"document_number\": \"900523022\", \"category\": \"ACC\", \"confidenceScores\": { \"companyName\": 95, \"taxId\": 95, \"country\": 98, \"relatedParties\": 90 } } ```"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "inputTokens": 8569,
+      "outputTokens": 322,
+      "totalTokens": 8891
+    },
+    "metrics": {
+      "latencyMs": 6906
+    },
+    "model_id": "us.amazon.nova-pro-v1:0",
+    "api_used": "converse",
+    "model_params": {
+      "maxTokens": 8200,
+      "topP": 1,
+      "temperature": 0.1
+    }
+  },
+  "model_used": "us.amazon.nova-pro-v1:0",
+  "api_used": "converse"
+}

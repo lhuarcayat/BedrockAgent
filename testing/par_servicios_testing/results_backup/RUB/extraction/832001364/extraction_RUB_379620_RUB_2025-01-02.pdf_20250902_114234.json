@@ -1,0 +1,121 @@
+{
+  "extraction_data": {
+    "result": {
+      "CompanyName": "MULTISERVICIOS GUAVIO SAS",
+      "TaxId": "832001364-9",
+      "IdentificationType": "NIT",
+      "Country": "Colombia",
+      "ConflictingSources": [],
+      "RequiresReview": "false"
+    },
+    "RelatedParties": [
+      {
+        "FirstName": "MARTIN MANUEL",
+        "LastName": "MARTINEZ",
+        "IdType": "NIT",
+        "IdNumber": "19151568",
+        "NoveltyType": "Registro",
+        "ParticipationPercentage": "29"
+      },
+      {
+        "FirstName": "SANDRA MATILDE",
+        "LastName": "MARTINEZ SORZA",
+        "IdType": "NIT",
+        "IdNumber": "52425404",
+        "NoveltyType": "Registro",
+        "ParticipationPercentage": "23"
+      },
+      {
+        "FirstName": "GUIOVANNI ALFREDO",
+        "LastName": "MARTINEZ SORZA",
+        "IdType": "NIT",
+        "IdNumber": "79952642",
+        "NoveltyType": "Registro",
+        "ParticipationPercentage": "23"
+      },
+      {
+        "FirstName": "ANA STELLA",
+        "LastName": "SORZA DE MARTINEZ",
+        "IdType": "NIT",
+        "IdNumber": "51660997",
+        "NoveltyType": "Registro",
+        "ParticipationPercentage": "25"
+      }
+    ],
+    "DocumentType": "company",
+    "Category": "RUB"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "{ \"result\": { \"CompanyName\": \"MULTISERVICIOS GUAVIO SAS\", \"TaxId\": \"832001364-9\", \"IdentificationType\": \"NIT\", \"Country\": \"Colombia\", \"ConflictingSources\": [], \"RequiresReview\": \"false\" }, \"RelatedParties\": [ { \"FirstName\": \"MARTIN MANUEL\", \"LastName\": \"MARTINEZ\", \"IdType\": \"NIT\", \"IdNumber\": \"19151568\", \"NoveltyType\": \"Registro\", \"ParticipationPercentage\": \"29\" }, { \"FirstName\": \"SANDRA MATILDE\", \"LastName\": \"MARTINEZ SORZA\", \"IdType\": \"NIT\", \"IdNumber\": \"52425404\", \"NoveltyType\": \"Registro\", \"ParticipationPercentage\": \"23\" }, { \"FirstName\": \"GUIOVANNI ALFREDO\", \"LastName\": \"MARTINEZ SORZA\", \"IdType\": \"NIT\", \"IdNumber\": \"79952642\", \"NoveltyType\": \"Registro\", \"ParticipationPercentage\": \"23\" }, { \"FirstName\": \"ANA STELLA\", \"LastName\": \"SORZA DE MARTINEZ\", \"IdType\": \"NIT\", \"IdNumber\": \"51660997\", \"NoveltyType\": \"Registro\", \"ParticipationPercentage\": \"25\" } ], \"DocumentType\": \"company\", \"Category\": \"RUB\" }"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 7979,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 2039,
+      "output_tokens": 1365
+    },
+    "ResponseMetadata": {
+      "RequestId": "33775754-c17d-4834-b972-fff89264dfc5",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Tue, 02 Sep 2025 16:42:34 GMT",
+        "content-type": "application/json",
+        "content-length": "8153",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "33775754-c17d-4834-b972-fff89264dfc5",
+        "x-amzn-bedrock-invocation-latency": "21238",
+        "x-amzn-bedrock-cache-write-input-token-count": "0",
+        "x-amzn-bedrock-cache-read-input-token-count": "2039",
+        "x-amzn-bedrock-output-token-count": "1365",
+        "x-amzn-bedrock-input-token-count": "7979"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_01GM4qibhEeXfWLG9br6HLKt",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-sonnet-4-20250514",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Let me analyze this Final Beneficiaries Report (RUB) from DIAN, Colombia to extract the required information. First, let me identify the basic company information: From the document, I can see this is a \"Reporte de Beneficiarios Finales\" issued by DIAN, which confirms it's Colombian. **Company Information:** - CompanyName: From cell \"11. Denominación o razón social\" = \"MULTISERVICIOS GUAVIO SAS\" - TaxId: From cell \"18. Número de identificación\" = \"832001364\" with DV \"9\" - IdentificationType: Since this is a Colombian DIAN Final Beneficiaries Report, this is \"NIT\" - Country: Since this is issued by DIAN, this is \"Colombia\" Let me now extract the related parties from the \"Datos beneficiarios finales\" section: **First Beneficiary:** - FirstName: From cells \"36. Primer nombre\" = \"MARTIN\" and \"37. Otros nombres\" = \"MANUEL\" → \"MARTIN MANUEL\" - LastName: From cells \"34. Primer apellido\" = \"MARTINEZ\" and \"35. Segundo apellido\" = \"\" → \"MARTINEZ\" - IdType: For DIAN reports this is \"NIT\" - IdNumber: From cell \"30. Número de identificación\" = \"19151568\" - NoveltyType: From cell \"61. Tipo de novedad\" = \"Registro\" (code 1) - ParticipationPercentage: From cell \"57. Porcentaje de participación\" = \"29\" **Second Beneficiary:** - FirstName: From cells \"36. Primer nombre\" = \"SANDRA\" and \"37. Otros nombres\" = \"MATILDE\" → \"SANDRA MATILDE\" - LastName: From cells \"34. Primer apellido\" = \"MARTINEZ\" and \"35. I'll continue extracting the details for the second beneficiary, noting her full last name as \"MARTINEZ SORZA\" with an identification number of \"52425404\". Her participation percentage is 23%, and the novelty type is \"Registro\". **Third Beneficiary:** - FirstName: From cells \"36. Primer nombre\" = \"GUIOVANNI\" and \"37. Otros nombres\" = \"ALFREDO\" → \"GUIOVANNI ALFREDO\" - LastName: From cells \"34. Primer apellido\" = \"MARTINEZ\" and \"35. Segundo apelli The next beneficiary has a NIT identification with number \"79952642\", also registering 23% participation. Her full name is \"ANA STELLA\" with the last name \"SORZA DE MARTINEZ\", maintaining the consistent pattern of identification and registration details. I verify the participation percentages, confirming they total 100% across all beneficiaries. Each individual has a distinct identification number, and all required information is complete. No validation concerns emerge that would necessitate a \"ForReview\" status.",
+          "signature": "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"
+        },
+        {
+          "type": "text",
+          "text": "{ \"result\": { \"CompanyName\": \"MULTISERVICIOS GUAVIO SAS\", \"TaxId\": \"832001364-9\", \"IdentificationType\": \"NIT\", \"Country\": \"Colombia\", \"ConflictingSources\": [], \"RequiresReview\": \"false\" }, \"RelatedParties\": [ { \"FirstName\": \"MARTIN MANUEL\", \"LastName\": \"MARTINEZ\", \"IdType\": \"NIT\", \"IdNumber\": \"19151568\", \"NoveltyType\": \"Registro\", \"ParticipationPercentage\": \"29\" }, { \"FirstName\": \"SANDRA MATILDE\", \"LastName\": \"MARTINEZ SORZA\", \"IdType\": \"NIT\", \"IdNumber\": \"52425404\", \"NoveltyType\": \"Registro\", \"ParticipationPercentage\": \"23\" }, { \"FirstName\": \"GUIOVANNI ALFREDO\", \"LastName\": \"MARTINEZ SORZA\", \"IdType\": \"NIT\", \"IdNumber\": \"79952642\", \"NoveltyType\": \"Registro\", \"ParticipationPercentage\": \"23\" }, { \"FirstName\": \"ANA STELLA\", \"LastName\": \"SORZA DE MARTINEZ\", \"IdType\": \"NIT\", \"IdNumber\": \"51660997\", \"NoveltyType\": \"Registro\", \"ParticipationPercentage\": \"25\" } ], \"DocumentType\": \"company\", \"Category\": \"RUB\" }"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 7979,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 2039,
+        "output_tokens": 1365
+      }
+    },
+    "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 9000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+  "api_used": "invoke_model"
+}

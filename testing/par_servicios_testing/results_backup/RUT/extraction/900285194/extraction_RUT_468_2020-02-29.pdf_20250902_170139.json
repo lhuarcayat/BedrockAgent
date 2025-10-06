@@ -1,0 +1,107 @@
+{
+  "extraction_data": {
+    "result": {
+      "CompanyName": "FARMACIA INSTITUCIONAL S A S",
+      "Country": "COLOMBIA",
+      "TaxId": "900285194",
+      "VerificationDigit": "8",
+      "IdentificationType": "NIT",
+      "PersonType": "Persona jurídica",
+      "ConflictingSources": [],
+      "RequiresReview": "false"
+    },
+    "RelatedParties": [
+      {
+        "FirstName": "WILIAN ANDRES",
+        "LastName": "VALDERRAMA ESQUIVEL",
+        "IdType": "Cédula de Ciudadanía",
+        "IdNumber": "80230151",
+        "RelationshipType": "Revisor fiscal principal"
+      },
+      {
+        "FirstName": "MILCIADES",
+        "LastName": "TAPIAS MENDIETA",
+        "IdType": "Cédula de Ciudadanía",
+        "IdNumber": "79663905",
+        "RelationshipType": "Contador"
+      }
+    ],
+    "Address": "TV 93 53 32 IN 9, Bogotá, D.C., Bogotá D.C.",
+    "DocumentGenerationDate": "08-02-2021 08:23:29AM",
+    "DocumentType": "company",
+    "Category": "RUT"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "{ \"result\": { \"CompanyName\": \"FARMACIA INSTITUCIONAL S A S\", \"Country\": \"COLOMBIA\", \"TaxId\": \"900285194\", \"VerificationDigit\": \"8\", \"IdentificationType\": \"NIT\", \"PersonType\": \"Persona jurídica\", \"ConflictingSources\": [], \"RequiresReview\": \"false\" }, \"RelatedParties\": [ { \"FirstName\": \"WILIAN ANDRES\", \"LastName\": \"VALDERRAMA ESQUIVEL\", \"IdType\": \"Cédula de Ciudadanía\", \"IdNumber\": \"80230151\", \"RelationshipType\": \"Revisor fiscal principal\" }, { \"FirstName\": \"MILCIADES\", \"LastName\": \"TAPIAS MENDIETA\", \"IdType\": \"Cédula de Ciudadanía\", \"IdNumber\": \"79663905\", \"RelationshipType\": \"Contador\" } ], \"Address\": \"TV 93 53 32 IN 9, Bogotá, D.C., Bogotá D.C.\", \"DocumentGenerationDate\": \"08-02-2021 08:23:29AM\", \"DocumentType\": \"company\", \"Category\": \"RUT\" }"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 18826,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 2990,
+      "output_tokens": 1451
+    },
+    "ResponseMetadata": {
+      "RequestId": "47eadb55-0b70-4153-895f-10d70b7579a6",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Tue, 02 Sep 2025 22:01:39 GMT",
+        "content-type": "application/json",
+        "content-length": "8276",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "47eadb55-0b70-4153-895f-10d70b7579a6",
+        "x-amzn-bedrock-invocation-latency": "22826",
+        "x-amzn-bedrock-cache-write-input-token-count": "0",
+        "x-amzn-bedrock-cache-read-input-token-count": "2990",
+        "x-amzn-bedrock-output-token-count": "1451",
+        "x-amzn-bedrock-input-token-count": "18826"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_01UBC7wtH9USxshGNuPARdXE",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-sonnet-4-20250514",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Let me analyze this Colombian RUT (Registro Único Tributario) document issued by DIAN. I need to extract information according to the schema provided. From page 1, I can see: - Cell 5 \"Número de Identificación Tributaria (NIT)\": 900285194 - Cell 6 \"DV\": 8 - Cell 35 \"Razón social\": FARMACIA INSTITUCIONAL S A S - Cell 38 \"País\": COLOMBIA (I can see \"169\" which likely refers to Colombia) - Cell 24 \"Tipo de contribuyente\": Persona jurídica (1) - Cell 41 \"Dirección principal\": TV 93 53 32 IN 9 - Cell 40 \"Ciudad/Municipio\": Bogotá, D.C. (001) - Cell 39 \"Departamento\": Bogotá D.C. (11) From page 3 (Representación section), I can see related parties: - TOVAR OSORIO ALEXANDER - Cédula de Ciudadanía 79474197 - REPRS LEGAL PRIN (Representante legal principal) - RUGE LEON OLGA LUCIA - Cédula de Ciudadanía 52053354 - REPRS LEGAL SUPL (Representante legal suplente) From page 4 (Revisor Fiscal y Contador section), I can see: - Revisor fiscal principal: VALDERRAMA ESQUIVEL WILIAN ANDRES - Cédula de Ciudadanía 80230151 - Revisor fiscal suplente: (No information provided) - Contador: TAPIAS MENDIETA MILCIADES - Cédula de Ciudadanía 79663905 The document generation date appears at the bottom: \"Fecha generación documento PDF: 08-02-2021 08:23:29AM\" I'm focusing on structuring the related parties carefully. The representation section reveals two key legal representatives with specific roles. I'll need to map their identification numbers and roles precisely to ensure accurate data extraction. The address requires combining multiple fields to create a complete location profile. The schema demands meticulous cell mapping for different party categories. I'll verify each section's specific cell ranges, paying close attention to the Revisor Fiscal and Contador details. Precise cell identification is critical for maintaining data integrity and meeting reporting requirements. I'm extracting key identification information for the Revisor Fiscal principal, focusing on document type, identification number, and name components across the specified cells. The data reveals consistent use of Cédula de Ciudadanía as the document type for these professional roles. For the Revisor Fiscal principal, I've identified WILIAN ANDRES VALDERRAMA ESQUIVEL with ID 80230151, and now I'm noting the additional professional, MILCIADES TAPIAS MENDIETA with ID 79663905.",
+          "signature": "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"
+        },
+        {
+          "type": "text",
+          "text": "{ \"result\": { \"CompanyName\": \"FARMACIA INSTITUCIONAL S A S\", \"Country\": \"COLOMBIA\", \"TaxId\": \"900285194\", \"VerificationDigit\": \"8\", \"IdentificationType\": \"NIT\", \"PersonType\": \"Persona jurídica\", \"ConflictingSources\": [], \"RequiresReview\": \"false\" }, \"RelatedParties\": [ { \"FirstName\": \"WILIAN ANDRES\", \"LastName\": \"VALDERRAMA ESQUIVEL\", \"IdType\": \"Cédula de Ciudadanía\", \"IdNumber\": \"80230151\", \"RelationshipType\": \"Revisor fiscal principal\" }, { \"FirstName\": \"MILCIADES\", \"LastName\": \"TAPIAS MENDIETA\", \"IdType\": \"Cédula de Ciudadanía\", \"IdNumber\": \"79663905\", \"RelationshipType\": \"Contador\" } ], \"Address\": \"TV 93 53 32 IN 9, Bogotá, D.C., Bogotá D.C.\", \"DocumentGenerationDate\": \"08-02-2021 08:23:29AM\", \"DocumentType\": \"company\", \"Category\": \"RUT\" }"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 18826,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 2990,
+        "output_tokens": 1451
+      }
+    },
+    "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 9000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+  "api_used": "invoke_model"
+}

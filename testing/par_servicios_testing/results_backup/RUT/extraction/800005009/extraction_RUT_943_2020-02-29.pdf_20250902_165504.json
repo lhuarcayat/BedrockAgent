@@ -1,0 +1,92 @@
+{
+  "extraction_data": {
+    "result": {
+      "CompanyName": "SFM COMPRESORES SAS",
+      "Country": "COLOMBIA",
+      "TaxId": "800005009",
+      "VerificationDigit": "0",
+      "IdentificationType": "NIT",
+      "PersonType": "Persona jurídica",
+      "ConflictingSources": [],
+      "RequiresReview": "false"
+    },
+    "RelatedParties": [],
+    "Address": "CR 28 65 77, Bogotá, D.C., Bogotá D.C",
+    "DocumentGenerationDate": "18-01-2018 10:13:23AM",
+    "DocumentType": "company",
+    "Category": "RUT"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "{ \"result\": { \"CompanyName\": \"SFM COMPRESORES SAS\", \"Country\": \"COLOMBIA\", \"TaxId\": \"800005009\", \"VerificationDigit\": \"0\", \"IdentificationType\": \"NIT\", \"PersonType\": \"Persona jurídica\", \"ConflictingSources\": [], \"RequiresReview\": \"false\" }, \"RelatedParties\": [], \"Address\": \"CR 28 65 77, Bogotá, D.C., Bogotá D.C\", \"DocumentGenerationDate\": \"18-01-2018 10:13:23AM\", \"DocumentType\": \"company\", \"Category\": \"RUT\" }"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 1605,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 2990,
+      "output_tokens": 657
+    },
+    "ResponseMetadata": {
+      "RequestId": "0a733d83-895b-449a-b386-c1301a7e0a77",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Tue, 02 Sep 2025 21:55:04 GMT",
+        "content-type": "application/json",
+        "content-length": "4507",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "0a733d83-895b-449a-b386-c1301a7e0a77",
+        "x-amzn-bedrock-invocation-latency": "12464",
+        "x-amzn-bedrock-cache-write-input-token-count": "0",
+        "x-amzn-bedrock-cache-read-input-token-count": "2990",
+        "x-amzn-bedrock-output-token-count": "657",
+        "x-amzn-bedrock-input-token-count": "1605"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_01VpPuoWNmHpTKbWuZDpWN1c",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-sonnet-4-20250514",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Let me analyze this Colombian RUT (Registro Único Tributario) document from DIAN to extract the required information. Looking at the document: 1. **CompanyName**: From cell \"35. Razón social\" I can see \"SFM COMPRESORES SAS\" 2. **Country**: This is a DIAN document (Colombian tax authority), so the country is Colombia. I can also see cell \"38. País\" shows \"COLOMBIA\" 3. **TaxId**: From cell \"5. Número de Identificación Tributaria (NIT)\" I can see \"800005009\" 4. **VerificationDigit**: From cell \"6. DV\" I can see \"0\" 5. **IdentificationType**: Since this is a DIAN RUT document, this should be \"NIT\" 6. **PersonType**: From cell \"24. Tipo de contribuyente\" I can see \"1\" (which appears to be \"Persona jurídica\") 7. **Address**: I need to combine values from: - Cell \"41. Dirección principal\": \"CR 28 65 77\" - Cell \"40. Ciudad/Municipio\": \"Bogotá, D.C.\" - Cell \"39. Departamento\": \"Bogotá D.C\" 8. **DocumentGenerationDate**: At the bottom I can see \"Fecha generación documento PDF: 18-01-2018 10:13:23AM\" 9. **RelatedParties**: I need to look for information in the \"Socios y/o miembros de Juntas Directivas, Consorcios, Uniones Temporales\" and \"Revisor Fiscal y contador\" sections. However, I don't see these sections clearly filled out in this page, so RelatedParties would be empty. 10. **DocumentType**: Always \"company\" 11. **Category**: Always \"RUT\" Let me format this properly:",
+          "signature": "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"
+        },
+        {
+          "type": "text",
+          "text": "{ \"result\": { \"CompanyName\": \"SFM COMPRESORES SAS\", \"Country\": \"COLOMBIA\", \"TaxId\": \"800005009\", \"VerificationDigit\": \"0\", \"IdentificationType\": \"NIT\", \"PersonType\": \"Persona jurídica\", \"ConflictingSources\": [], \"RequiresReview\": \"false\" }, \"RelatedParties\": [], \"Address\": \"CR 28 65 77, Bogotá, D.C., Bogotá D.C\", \"DocumentGenerationDate\": \"18-01-2018 10:13:23AM\", \"DocumentType\": \"company\", \"Category\": \"RUT\" }"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 1605,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 2990,
+        "output_tokens": 657
+      }
+    },
+    "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 9000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+  "api_used": "invoke_model"
+}

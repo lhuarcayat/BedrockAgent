@@ -1,0 +1,90 @@
+{
+  "extraction_data": {
+    "path": "CECRL/860069265/CC_Tatiana_Fonseca.pdf",
+    "result": {
+      "firstName": "CLAUDIA TATIANA",
+      "lastName": "FONSECA URIBE",
+      "country_issuer": "Colombia",
+      "nationality": "Colombia",
+      "identificationType": "Cédula de Ciudadanía",
+      "identificationNumber": "52.255.747",
+      "message": ""
+    },
+    "document_type": "person",
+    "documentNumber": "860069265",
+    "category": "CECRL"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "```json { \"result\": { \"firstName\": \"CLAUDIA TATIANA\", \"lastName\": \"FONSECA URIBE\", \"country_issuer\": \"Colombia\", \"nationality\": \"Colombia\", \"identificationType\": \"Cédula de Ciudadanía\", \"identificationNumber\": \"52.255.747\", \"message\": \"\" }, \"document_type\": \"person\", \"category\": \"CECRL\" } ```"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 10,
+      "cache_creation_input_tokens": 5982,
+      "cache_read_input_tokens": 0,
+      "output_tokens": 525
+    },
+    "ResponseMetadata": {
+      "RequestId": "12db1a52-74db-47a1-a19f-df2e61438d13",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Thu, 28 Aug 2025 15:44:46 GMT",
+        "content-type": "application/json",
+        "content-length": "2537",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "12db1a52-74db-47a1-a19f-df2e61438d13",
+        "x-amzn-bedrock-invocation-latency": "13042",
+        "x-amzn-bedrock-cache-write-input-token-count": "5982",
+        "x-amzn-bedrock-cache-read-input-token-count": "0",
+        "x-amzn-bedrock-output-token-count": "525",
+        "x-amzn-bedrock-input-token-count": "10"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_01Y2UbVyCw3kLXCcuMmu3qMo",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-3-7-sonnet-20250219",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "I need to extract information from the Colombian identification document provided. Let me analyze it systematically using the structured field detection approach. Looking at the document, I can clearly see this is a \"Cédula de Ciudadanía\" from Colombia (República de Colombia). Let me extract all the required fields: 1. **firstName**: Looking at the field labeled \"NOMBRES\" I can see \"CLAUDIA TATIANA\" 2. **lastName**: Looking at the field labeled \"APELLIDOS\" I can see \"FONSECA URIBE\" 3. **country_issuer**: The document header states \"REPUBLICA DE COLOMBIA\" so the issuing country is Colombia 4. **nationality**: No explicit nationality field is shown, but since this is a \"Cédula de Ciudadanía\" (citizenship ID card) from Colombia, the nationality is Colombia 5. **identificationType**: The document clearly states \"CÉDULA DE CIUDADANÍA\" which is the official Colombian national ID card 6. **identificationNumber**: The field labeled \"NUMERO\" shows \"52.255.747\" 7. **message**: No issues with extraction, all fields are clear and this is definitely an official government ID Additional information I can see: - Birth date: \"15-SEP-1974\" - Birth place: \"BOGOTA D.C. (CUNDINAMARCA)\" - Height: \"1.70\" - Blood type: \"A-\" - Sex: \"F\" - Issue date and place: \"15-JUL-1993 BOGOTA D.C.\" This is clearly a valid government ID document and I've been able to extract all required information without any problems. Now I'll format this according to the required JSON schema:",
+          "signature": "ErcBCkgIBxABGAIiQLCk3e8+J01s9wx03FRj1PKSJ7OCkoFVrfwRMhQ1RhxKCeqGbJR51dVDGT3nnsM/Z1qKQfshBlnSgO2IDL/B0AMSDLSBIhimsjMwvy6yPxoMR5IDC9o4nQ8CLf8tIjByT7NX2lDesznrpo5HhIORxzwAsTPkgdQkoq7987nbHb/21p8maB+SYlo9tX9PDnsqHSZwLNdMlCXXpKTTXvlgpk26cU+8Ew5G/gq6ezeZGAI="
+        },
+        {
+          "type": "text",
+          "text": "```json { \"result\": { \"firstName\": \"CLAUDIA TATIANA\", \"lastName\": \"FONSECA URIBE\", \"country_issuer\": \"Colombia\", \"nationality\": \"Colombia\", \"identificationType\": \"Cédula de Ciudadanía\", \"identificationNumber\": \"52.255.747\", \"message\": \"\" }, \"document_type\": \"person\", \"category\": \"CECRL\" } ```"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 10,
+        "cache_creation_input_tokens": 5982,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 525
+      }
+    },
+    "model_id": "us.anthropic.claude-3-7-sonnet-20250219-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 8000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "model_used": "us.anthropic.claude-3-7-sonnet-20250219-v1:0",
+  "api_used": "invoke_model"
+}

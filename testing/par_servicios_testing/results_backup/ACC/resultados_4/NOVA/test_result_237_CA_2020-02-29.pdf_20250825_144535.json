@@ -1,0 +1,149 @@
+{
+  "document_name": "237_CA_2020-02-29.pdf",
+  "category": "ACC",
+  "classification_success": true,
+  "extraction_success": true,
+  "overall_success": true,
+  "timestamp": "2025-08-25T14:45:20.232688",
+  "classification_result": {
+    "classification_data": {
+      "category": "ACC",
+      "text": "CERTIFICACIÓN COMPOSICIÓN ACCIONARIA PROCESS POINT COLOMBIA S.A.S. Nlt. 901.304.620-0 Yo, JAVIER HERNÄN BECERRA RODRIGUEZ, identificado con cédula de ciudadanía No. 79.717.267, actuando en calidad de Contador de la sociedad PROCESS POINT COLOMBIA S.A.S., con Nlt. 901.304.620-0, por medio de la presente, certifico que a la fecha la composición accionaria de la sociedad es la siguiente: ACCIONISTA ÚNICO ACCIONES PORCENTAJE TODD RUDERFORTH 696 100% TOTAL 696 100% JAMIE TODD RUTHERFORD con domicilio en Texas, Estados Unidos de América; al ser el único accionista cuenta con el porcentaje de participación del 100% en la sociedad PROCESS POINT COLOMBIA S.A.S. La presente certificación se expide en Bogotá D.C., a los siete (7) días del mes de enero de 2020. JAVIER HERNÁN BECERRA RODRIGUEZ Contador C.C. 79.717.267 de Bogotá D.C. T.P. 109.035-T",
+      "document_number": "901304620",
+      "path": "ACC/901304620/237_CA_2020-02-29.pdf"
+    },
+    "raw_response": {
+      "ResponseMetadata": {
+        "RequestId": "7cfefcd6-e7f6-42a8-8c02-e184835a6f1c",
+        "HTTPStatusCode": 200,
+        "HTTPHeaders": {
+          "date": "Mon, 25 Aug 2025 19:45:27 GMT",
+          "content-type": "application/json",
+          "content-length": "1226",
+          "connection": "keep-alive",
+          "x-amzn-requestid": "7cfefcd6-e7f6-42a8-8c02-e184835a6f1c"
+        },
+        "RetryAttempts": 0
+      },
+      "output": {
+        "message": {
+          "role": "assistant",
+          "content": [
+            {
+              "text": "```json { \"category\": \"ACC\", \"text\": \"CERTIFICACIÓN COMPOSICIÓN ACCIONARIA PROCESS POINT COLOMBIA S.A.S. Nlt. 901.304.620-0 Yo, JAVIER HERNÄN BECERRA RODRIGUEZ, identificado con cédula de ciudadanía No. 79.717.267, actuando en calidad de Contador de la sociedad PROCESS POINT COLOMBIA S.A.S., con Nlt. 901.304.620-0, por medio de la presente, certifico que a la fecha la composición accionaria de la sociedad es la siguiente: ACCIONISTA ÚNICO ACCIONES PORCENTAJE TODD RUDERFORTH 696 100% TOTAL 696 100% JAMIE TODD RUTHERFORD con domicilio en Texas, Estados Unidos de América; al ser el único accionista cuenta con el porcentaje de participación del 100% en la sociedad PROCESS POINT COLOMBIA S.A.S. La presente certificación se expide en Bogotá D.C., a los siete (7) días del mes de enero de 2020. JAVIER HERNÁN BECERRA RODRIGUEZ Contador C.C. 79.717.267 de Bogotá D.C. T.P. 109.035-T\" } ```"
+            }
+          ]
+        }
+      },
+      "stopReason": "end_turn",
+      "usage": {
+        "inputTokens": 1922,
+        "outputTokens": 333,
+        "totalTokens": 4399,
+        "cacheReadInputTokens": 2144,
+        "cacheWriteInputTokens": 0
+      },
+      "metrics": {
+        "latencyMs": 7594
+      },
+      "model_id": "us.amazon.nova-pro-v1:0",
+      "api_used": "converse",
+      "model_params": {
+        "maxTokens": 8000,
+        "topP": 1,
+        "temperature": 0
+      }
+    },
+    "expected_category": "ACC",
+    "model_used": "us.amazon.nova-pro-v1:0",
+    "api_used": "converse",
+    "pdf_info": {
+      "original_size": 839432,
+      "first_page_size": 839369,
+      "is_scanned": true
+    }
+  },
+  "extraction_result": {
+    "extraction_data": {
+      "path": "ACC/901304620/237_CA_2020-02-29.pdf",
+      "result": {
+        "companyName": "PROCESS POINT COLOMBIA S.A.S.",
+        "documentType": "Equity Composition",
+        "taxId": "901.304.620-0",
+        "country": "Colombia",
+        "identificationDetails": {
+          "source": "text_reference",
+          "indicators": [
+            "Colombia",
+            "Bogotá"
+          ],
+          "conflictingSources": [],
+          "requiresReview": false
+        },
+        "relatedParties": [
+          {
+            "firstName": "Todd",
+            "lastName": "Ruderforth",
+            "identificationType": "POR REVISAR",
+            "identificationNumber": "POR REVISAR",
+            "relationshipType": "Shareholder",
+            "participationPercentage": "100%",
+            "timeFound": 1,
+            "job": ""
+          }
+        ]
+      },
+      "document_type": "company",
+      "document_number": "901304620",
+      "category": "ACC",
+      "confidenceScores": {
+        "companyName": 95,
+        "taxId": 95,
+        "country": 98,
+        "relatedParties": "<70"
+      }
+    },
+    "raw_response": {
+      "ResponseMetadata": {
+        "RequestId": "6c32f220-0b3e-4b23-8a54-8a43cb8314d7",
+        "HTTPStatusCode": 200,
+        "HTTPHeaders": {
+          "date": "Mon, 25 Aug 2025 19:45:34 GMT",
+          "content-type": "application/json",
+          "content-length": "1287",
+          "connection": "keep-alive",
+          "x-amzn-requestid": "6c32f220-0b3e-4b23-8a54-8a43cb8314d7"
+        },
+        "RetryAttempts": 0
+      },
+      "output": {
+        "message": {
+          "role": "assistant",
+          "content": [
+            {
+              "text": "```json { \"path\": \"ACC/901304620/237_CA_2020-02-29.pdf\", \"result\": { \"companyName\": \"PROCESS POINT COLOMBIA S.A.S.\", \"documentType\": \"Equity Composition\", \"taxId\": \"901.304.620-0\", \"country\": \"Colombia\", \"identificationDetails\": { \"source\": \"text_reference\", \"indicators\": [ \"Colombia\", \"Bogotá\" ], \"conflictingSources\": [], \"requiresReview\": false }, \"relatedParties\": [ { \"firstName\": \"Todd\", \"lastName\": \"Ruderforth\", \"identificationType\": \"POR REVISAR\", \"identificationNumber\": \"POR REVISAR\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"100%\", \"timeFound\": 1, \"job\": \"\" } ] }, \"document_type\": \"company\", \"document_number\": \"901304620\", \"category\": \"ACC\", \"confidenceScores\": { \"companyName\": 95, \"taxId\": 95, \"country\": 98, \"relatedParties\": \"<70\" } } ```"
+            }
+          ]
+        }
+      },
+      "stopReason": "end_turn",
+      "usage": {
+        "inputTokens": 8701,
+        "outputTokens": 314,
+        "totalTokens": 9015
+      },
+      "metrics": {
+        "latencyMs": 6905
+      },
+      "model_id": "us.amazon.nova-pro-v1:0",
+      "api_used": "converse",
+      "model_params": {
+        "maxTokens": 8000,
+        "topP": 1,
+        "temperature": 0
+      }
+    },
+    "model_used": "us.amazon.nova-pro-v1:0",
+    "api_used": "converse"
+  }
+}

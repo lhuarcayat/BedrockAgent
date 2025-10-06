@@ -1,0 +1,117 @@
+{
+  "extraction_data": {
+    "result": {
+      "companyName": "MEGASERVICIOS DE INGENIERIA S.A.S.",
+      "documentCategory": "Equity Composition",
+      "taxId": "805.031.602-7",
+      "country": "Colombia",
+      "identificationDetails": {
+        "source": "text_reference",
+        "indicators": [
+          "Santiago de Cali"
+        ],
+        "conflictingSources": [],
+        "requiresReview": "false"
+      },
+      "relatedParties": [
+        {
+          "type": "person",
+          "firstName": "DORA MATILDE",
+          "lastName": "TREJOS PUERTA",
+          "identificationType": "C.C.",
+          "identificationNumber": "31.953.854",
+          "relationshipType": "Shareholder",
+          "participationPercentage": "50%",
+          "timeFound": "1",
+          "job": ""
+        },
+        {
+          "type": "person",
+          "firstName": "JUAN CARLOS",
+          "lastName": "ESCOBAR WELSCH",
+          "identificationType": "C.C.",
+          "identificationNumber": "16.733.280",
+          "relationshipType": "Shareholder",
+          "participationPercentage": "50%",
+          "timeFound": "1",
+          "job": "Representante Legal"
+        }
+      ]
+    },
+    "documentType": "company",
+    "category": "ACC"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "{ \"result\": { \"companyName\": \"MEGASERVICIOS DE INGENIERIA S.A.S.\", \"documentCategory\": \"Equity Composition\", \"taxId\": \"805.031.602-7\", \"country\": \"Colombia\", \"identificationDetails\": { \"source\": \"text_reference\", \"indicators\": [ \"Santiago de Cali\" ], \"conflictingSources\": [], \"requiresReview\": \"false\" }, \"relatedParties\": [ { \"type\": \"person\", \"firstName\": \"DORA MATILDE\", \"lastName\": \"TREJOS PUERTA\", \"identificationType\": \"C.C.\", \"identificationNumber\": \"31.953.854\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"50%\", \"timeFound\": \"1\", \"job\": \"\" }, { \"type\": \"person\", \"firstName\": \"JUAN CARLOS\", \"lastName\": \"ESCOBAR WELSCH\", \"identificationType\": \"C.C.\", \"identificationNumber\": \"16.733.280\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"50%\", \"timeFound\": \"1\", \"job\": \"Representante Legal\" } ] }, \"documentType\": \"company\", \"category\": \"ACC\" }"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 9,
+      "cache_creation_input_tokens": 6107,
+      "cache_read_input_tokens": 0,
+      "output_tokens": 1178
+    },
+    "ResponseMetadata": {
+      "RequestId": "dfaac7b3-735c-40bb-a408-140ccb45a9a0",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Fri, 29 Aug 2025 16:52:42 GMT",
+        "content-type": "application/json",
+        "content-length": "7888",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "dfaac7b3-735c-40bb-a408-140ccb45a9a0",
+        "x-amzn-bedrock-invocation-latency": "19225",
+        "x-amzn-bedrock-cache-write-input-token-count": "6107",
+        "x-amzn-bedrock-cache-read-input-token-count": "0",
+        "x-amzn-bedrock-output-token-count": "1178",
+        "x-amzn-bedrock-input-token-count": "9"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_01MzjwJv3GfMy97Zgu79hCp2",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-sonnet-4-20250514",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Let me analyze this document step by step according to the rules provided. **Step 1: Document Analysis** This is a Colombian document - I can see \"SANTIAGO DE CALI\" mentioned, and the document is from a certified public accountant (Contador Público) certifying the shareholding composition. The document is in Spanish and has Colombian formatting. **Step 2: Root Level Extraction** - **companyName**: Looking at the document, I need to identify the main reporting company. From the text, I can see \"la composición Accionaria de la sociedad MEGASERVICIOS DE INGENIERIA S.A.S., con NIT: 805.031.602 – 7\". So the company is \"MEGASERVICIOS DE INGENIERIA S.A.S.\" - **taxId**: The NIT is \"805.031.602 – 7\" - I should preserve the formatting including the dash. - **country**: This is clearly Colombia - I can see \"ciudad de Cali\" mentioned, and the NIT format confirms this is Colombian. - **identificationDetails**: - source: \"text_reference\" (found explicit city reference) - indicators: [\"Santiago de Cali\", \"Colombia\"] - though \"Colombia\" isn't explicitly mentioned, \"Santiago de Cali\" clearly indicates Colombia - conflictingSources: I need to check for conflicts - requiresReview: Will determine after checking all fields **Step 3: Related Parties Processing** Looking at the shareholding table: 1. **DORA MATILDE TREJOS PUERTA, C.C. 31.953.854** - Type: person (clear personal name) - firstName: \"DORA MATILDE\" - lastName: \"TREJOS PUERTA\" - identificationType: \"C.C.\" (this is Colombian cédula de ciudadanía) - identificationNumber: \"31.953.854\" - participationPercentage: \"50%\" (from the table) - timeFound: \"1\" (appears once) - job: \"\" (no role mentioned) 2. **JUAN CARLOS ESCOBAR WELSCH, C.C. 16.733.280** - Type: person (clear personal name) - firstName: \"JUAN CARLOS\" - lastName: \"ESCOBAR WELSCH\" - identificationType: \"C.C.\" - identificationNumber: \"16.733.280\" - participationPercentage: \"50%\" (from the table) - timeFound: \"1\" I notice both shareholders have equal 50% ownership in the company. Each shareholder is a Colombian citizen identified by their cédula de ciudadanía, with no additional role information provided in the document. The validation confirms no conflicts exist. All required fields are complete, and the ownership percentages perfectly balance at 100%. This means the record does not require further review, and can be processed as a standard corporate registration.",
+          "signature": "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"
+        },
+        {
+          "type": "text",
+          "text": "{ \"result\": { \"companyName\": \"MEGASERVICIOS DE INGENIERIA S.A.S.\", \"documentCategory\": \"Equity Composition\", \"taxId\": \"805.031.602-7\", \"country\": \"Colombia\", \"identificationDetails\": { \"source\": \"text_reference\", \"indicators\": [ \"Santiago de Cali\" ], \"conflictingSources\": [], \"requiresReview\": \"false\" }, \"relatedParties\": [ { \"type\": \"person\", \"firstName\": \"DORA MATILDE\", \"lastName\": \"TREJOS PUERTA\", \"identificationType\": \"C.C.\", \"identificationNumber\": \"31.953.854\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"50%\", \"timeFound\": \"1\", \"job\": \"\" }, { \"type\": \"person\", \"firstName\": \"JUAN CARLOS\", \"lastName\": \"ESCOBAR WELSCH\", \"identificationType\": \"C.C.\", \"identificationNumber\": \"16.733.280\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"50%\", \"timeFound\": \"1\", \"job\": \"Representante Legal\" } ] }, \"documentType\": \"company\", \"category\": \"ACC\" }"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 9,
+        "cache_creation_input_tokens": 6107,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 1178
+      }
+    },
+    "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 8000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+  "api_used": "invoke_model"
+}

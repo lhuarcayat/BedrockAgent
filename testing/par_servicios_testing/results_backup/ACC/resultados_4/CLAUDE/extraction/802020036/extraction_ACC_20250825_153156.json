@@ -1,0 +1,144 @@
+{
+  "extraction_data": {
+    "path": "",
+    "result": {
+      "companyName": "V.P. GLOBAL LTDA.",
+      "documentType": "Equity Composition",
+      "taxId": "POR REVISAR",
+      "country": "Colombia",
+      "identificationDetails": {
+        "source": "text_reference",
+        "indicators": [
+          "Barranquilla",
+          "CC (Colombian ID type)"
+        ],
+        "conflictingSources": [],
+        "requiresReview": true
+      },
+      "relatedParties": [
+        {
+          "firstName": "JOSE MIGUEL",
+          "lastName": "VILLAFAÑEZ PLANELLS",
+          "identificationType": "CC",
+          "identificationNumber": "7474165",
+          "relationshipType": "Shareholder",
+          "participationPercentage": "49,00%",
+          "timeFound": 1,
+          "job": ""
+        },
+        {
+          "firstName": "VILMA LEONOR",
+          "lastName": "JABBA GALINDO",
+          "identificationType": "CC",
+          "identificationNumber": "22430683",
+          "relationshipType": "Shareholder",
+          "participationPercentage": "49,00%",
+          "timeFound": 1,
+          "job": ""
+        },
+        {
+          "firstName": "JOSE ELIAS",
+          "lastName": "VILLAFAÑEZ JABBA",
+          "identificationType": "CC",
+          "identificationNumber": "72302912",
+          "relationshipType": "Shareholder",
+          "participationPercentage": "1,00%",
+          "timeFound": 1,
+          "job": ""
+        },
+        {
+          "firstName": "ANDRES FELIPE",
+          "lastName": "VILLAFAÑEZ JABBA",
+          "identificationType": "CC",
+          "identificationNumber": "1129577148",
+          "relationshipType": "Shareholder",
+          "participationPercentage": "1,00%",
+          "timeFound": 1,
+          "job": ""
+        }
+      ]
+    },
+    "document_type": "company",
+    "document_number": "",
+    "category": "ACC",
+    "confidenceScores": {
+      "companyName": 95,
+      "taxId": 60,
+      "country": 95,
+      "relatedParties": 90
+    }
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "```json { \"path\": \"\", \"result\": { \"companyName\": \"V.P. GLOBAL LTDA.\", \"documentType\": \"Equity Composition\", \"taxId\": \"POR REVISAR\", \"country\": \"Colombia\", \"identificationDetails\": { \"source\": \"text_reference\", \"indicators\": [ \"Barranquilla\", \"CC (Colombian ID type)\" ], \"conflictingSources\": [], \"requiresReview\": true }, \"relatedParties\": [ { \"firstName\": \"JOSE MIGUEL\", \"lastName\": \"VILLAFAÑEZ PLANELLS\", \"identificationType\": \"CC\", \"identificationNumber\": \"7474165\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"49,00%\", \"timeFound\": 1, \"job\": \"\" }, { \"firstName\": \"VILMA LEONOR\", \"lastName\": \"JABBA GALINDO\", \"identificationType\": \"CC\", \"identificationNumber\": \"22430683\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"49,00%\", \"timeFound\": 1, \"job\": \"\" }, { \"firstName\": \"JOSE ELIAS\", \"lastName\": \"VILLAFAÑEZ JABBA\", \"identificationType\": \"CC\", \"identificationNumber\": \"72302912\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"1,00%\", \"timeFound\": 1, \"job\": \"\" }, { \"firstName\": \"ANDRES FELIPE\", \"lastName\": \"VILLAFAÑEZ JABBA\", \"identificationType\": \"CC\", \"identificationNumber\": \"1129577148\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"1,00%\", \"timeFound\": 1, \"job\": \"\" } ] }, \"document_type\": \"company\", \"document_number\": \"\", \"category\": \"ACC\", \"confidenceScores\": { \"companyName\": 95, \"taxId\": 60, \"country\": 95, \"relatedParties\": 90 } } ```"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 496,
+      "cache_creation_input_tokens": 9452,
+      "cache_read_input_tokens": 0,
+      "output_tokens": 1500
+    },
+    "ResponseMetadata": {
+      "RequestId": "76438c4a-5c6c-46bc-a477-7be467a38c6a",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Mon, 25 Aug 2025 20:31:55 GMT",
+        "content-type": "application/json",
+        "content-length": "8549",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "76438c4a-5c6c-46bc-a477-7be467a38c6a",
+        "x-amzn-bedrock-invocation-latency": "21195",
+        "x-amzn-bedrock-cache-write-input-token-count": "9452",
+        "x-amzn-bedrock-cache-read-input-token-count": "0",
+        "x-amzn-bedrock-output-token-count": "1500",
+        "x-amzn-bedrock-input-token-count": "496"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_015ZpgaW2VKFQCRzhzSVJVuC",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-sonnet-4-20250514",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Let me carefully analyze this PDF document following the extraction rules. Looking at the document: 1. **Header**: \"VP GLOBAL\" at the top with \"Empresa de Vigilancia y Seguridad Privada\" 2. **Document Title**: \"CERTIFICACION DE PARTICIPACION ACCIONARIA\" 3. **Main Company**: \"V.P. GLOBAL LTDA.\" 4. **Main table showing shareholders**: Looking at the table structure: - Header shows \"V.P. GLOBAL LTDA.\" - Table contains shareholders with CC (Colombian ID numbers) - Participation percentages shown - Document signed in \"Barranquilla\" on April 23, 2021 Let me extract step by step: **1. Country Identification:** - \"Barranquilla\" is mentioned - this is a Colombian city - \"CC\" (Cédula de Ciudadanía) is used for identification - this is Colombian - Based on explicit city reference and ID types, this is Colombia **2. Root-Level Company:** - Company Name: \"V.P. GLOBAL LTDA.\" (from the table header) - Tax ID: Not explicitly shown in the document for the main company - Country: Colombia **3. Related Parties from the table:** Row 1: VILLAFAÑEZ PLANELLS JOSE MIGUEL - CC: 7474165 - 189.140 cuotas - 1.891.400.000 valor total - 49,00% participation - Colombian nationality Row 2: JABBA GALINDO VILMA LEONOR - CC: 22430683 - 189.140 cuotas - 1.891.400.000 valor total - 49,00% participation - Colombian nationality Row 3: VILLAFAÑEZ JABBA JOSE ELIAS - CC: 72302912 - 3.860 cuotas - 38.600.000 valor total - 1,00% participation - Colombian nationality I'll continue analyzing the remaining shareholder details and complete the ownership breakdown. The document reveals a family-owned business structure with four shareholders, predominantly owned by two main parties with nearly equal stakes, and two additional family members holding smaller percentages. The total ownership shows a complete 100% participation across four individuals, all with Colombian nationality and connected through family relationships. I notice critical missing documentation, specifically the company's tax identification number, which requires further investigation and verification. The low confidence in the tax ID necessitates marking the record for review, ensuring data integrity and completeness. Setting the taxId to \"POR REVISAR\" signals the need for additional validation before finalizing the company's registration details.",
+          "signature": "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"
+        },
+        {
+          "type": "text",
+          "text": "```json { \"path\": \"\", \"result\": { \"companyName\": \"V.P. GLOBAL LTDA.\", \"documentType\": \"Equity Composition\", \"taxId\": \"POR REVISAR\", \"country\": \"Colombia\", \"identificationDetails\": { \"source\": \"text_reference\", \"indicators\": [ \"Barranquilla\", \"CC (Colombian ID type)\" ], \"conflictingSources\": [], \"requiresReview\": true }, \"relatedParties\": [ { \"firstName\": \"JOSE MIGUEL\", \"lastName\": \"VILLAFAÑEZ PLANELLS\", \"identificationType\": \"CC\", \"identificationNumber\": \"7474165\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"49,00%\", \"timeFound\": 1, \"job\": \"\" }, { \"firstName\": \"VILMA LEONOR\", \"lastName\": \"JABBA GALINDO\", \"identificationType\": \"CC\", \"identificationNumber\": \"22430683\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"49,00%\", \"timeFound\": 1, \"job\": \"\" }, { \"firstName\": \"JOSE ELIAS\", \"lastName\": \"VILLAFAÑEZ JABBA\", \"identificationType\": \"CC\", \"identificationNumber\": \"72302912\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"1,00%\", \"timeFound\": 1, \"job\": \"\" }, { \"firstName\": \"ANDRES FELIPE\", \"lastName\": \"VILLAFAÑEZ JABBA\", \"identificationType\": \"CC\", \"identificationNumber\": \"1129577148\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"1,00%\", \"timeFound\": 1, \"job\": \"\" } ] }, \"document_type\": \"company\", \"document_number\": \"\", \"category\": \"ACC\", \"confidenceScores\": { \"companyName\": 95, \"taxId\": 60, \"country\": 95, \"relatedParties\": 90 } } ```"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 496,
+        "cache_creation_input_tokens": 9452,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 1500
+      }
+    },
+    "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 8000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+  "api_used": "invoke_model"
+}

@@ -1,0 +1,88 @@
+{
+  "extraction_data": {
+    "result": {
+      "FirstName": "KELLY ANDREA",
+      "LastName": "HERNANDEZ RAMIREZ",
+      "CountryIssuer": "Colombia",
+      "Nationality": "colombiana",
+      "IdentificationType": "Cédula de Ciudadanía",
+      "IdentificationNumber": "52.862.237",
+      "Message": ""
+    },
+    "document_type": "person",
+    "category": "CECRL"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "```json { \"result\": { \"FirstName\": \"KELLY ANDREA\", \"LastName\": \"HERNANDEZ RAMIREZ\", \"CountryIssuer\": \"Colombia\", \"Nationality\": \"colombiana\", \"IdentificationType\": \"Cédula de Ciudadanía\", \"IdentificationNumber\": \"52.862.237\", \"Message\": \"\" }, \"document_type\": \"person\", \"category\": \"CECRL\" } ```"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 1731,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 4300,
+      "output_tokens": 736
+    },
+    "ResponseMetadata": {
+      "RequestId": "df53c2d3-b8f2-438f-8008-cfdf13d17476",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Sun, 31 Aug 2025 21:46:31 GMT",
+        "content-type": "application/json",
+        "content-length": "5880",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "df53c2d3-b8f2-438f-8008-cfdf13d17476",
+        "x-amzn-bedrock-invocation-latency": "14263",
+        "x-amzn-bedrock-cache-write-input-token-count": "0",
+        "x-amzn-bedrock-cache-read-input-token-count": "4300",
+        "x-amzn-bedrock-output-token-count": "736",
+        "x-amzn-bedrock-input-token-count": "1731"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_01VkZJyheEaUeSXS7HNjkcSr",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-sonnet-4-20250514",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "I need to analyze this Colombian identification document and extract the information following the specific methodology provided. Let me examine the document carefully. From the image, I can see this is a Colombian \"CEDULA DE CIUDADANIA\" (citizenship card). Let me identify the key elements: 1. **Header**: \"REPUBLICA DE COLOMBIA IDENTIFICACION PERSONAL CEDULA DE CIUDADANIA\" 2. **Document number**: \"52.862.237\" appears under \"NUMERO\" 3. **Names and surnames section**: I can see: - \"HERNANDEZ RAMIREZ\" appears after what looks like \"APELLIDOS\" - \"KELLY ANDREA\" appears after what looks like \"NOMBRES\" 4. **Birth information**: - \"FECHA DE NACIMIENTO: 21-ABR-1981\" - \"BOGOTA D.C.\" appears as place of birth - \"CUNDINAMARCA\" appears as well Let me apply the extraction methodology: 1. **FirstName**: I can see \"KELLY ANDREA\" which appears to be associated with the names section 2. **LastName**: I can see \"HERNANDEZ RAMIREZ\" which appears to be the surnames 3. **CountryIssuer**: This is clearly a Colombian document (\"REPUBLICA DE COLOMBIA\") 4. **Nationality**: Since this is a Colombian citizenship card and the person was born in Bogotá D.C., Colombia, the nationality would be Colombian 5. **IdentificationType**: This is a \"CEDULA DE CIUDADANIA\" which translates to \"Cédula de Ciudadanía\" 6. **IdentificationNumber**: \"52.862.237\" Let me double-check this follows the Colombian document pattern mentioned in the methodology. The methodology mentions that Colombian documents can be \"misaligned\" where surnames appear first, then \"APELLIDOS\" label, then first names, then \"NOMBRES\" label. Looking at the document more carefully, I can see the structure appears to be: The document layout confirms the standard format, with the identification number, surnames, and first names clearly positioned in their expected locations. The translations align with the standard requirements, converting official terms to their proper format.",
+          "signature": "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"
+        },
+        {
+          "type": "text",
+          "text": "```json { \"result\": { \"FirstName\": \"KELLY ANDREA\", \"LastName\": \"HERNANDEZ RAMIREZ\", \"CountryIssuer\": \"Colombia\", \"Nationality\": \"colombiana\", \"IdentificationType\": \"Cédula de Ciudadanía\", \"IdentificationNumber\": \"52.862.237\", \"Message\": \"\" }, \"document_type\": \"person\", \"category\": \"CECRL\" } ```"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 1731,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 4300,
+        "output_tokens": 736
+      }
+    },
+    "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 8000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+  "api_used": "invoke_model"
+}

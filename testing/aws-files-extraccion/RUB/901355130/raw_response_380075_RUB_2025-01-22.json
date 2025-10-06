@@ -1,0 +1,33 @@
+{
+  "ResponseMetadata": {
+    "RequestId": "ad4b9295-f71c-4eab-b432-ef2a69d6f728",
+    "HTTPStatusCode": 200,
+    "HTTPHeaders": {
+      "date": "Tue, 17 Jun 2025 14:28:00 GMT",
+      "content-type": "application/json",
+      "content-length": "1866",
+      "connection": "keep-alive",
+      "x-amzn-requestid": "ad4b9295-f71c-4eab-b432-ef2a69d6f728"
+    },
+    "RetryAttempts": 0
+  },
+  "output": {
+    "message": {
+      "role": "assistant",
+      "content": [
+        {
+          "text": "```json\n{\n  \"path\": \"s3://par-servicios-poc-dev-filling-desk/par-servicios-poc/RUB/901355130/380075_RUB_2025-01-22.pdf\",\n  \"result\": {\n    \"companyName\": \"NECONSER SAS\",\n    \"country\": \"Colombia\",\n    \"documentType\": \"NIT\",\n    \"taxId\": \"901355130\",\n    \"relatedParties\": [\n      {\n        \"firstName\": \"HERNANDEZ\",\n        \"lastName\": \"DIAZ\",\n        \"identificationType\": \"CC\",\n        \"identificationNumber\": \"1022418631\",\n        \"noveltyType\": \"Actualización\",\n        \"participationPercentage\": \"35\"\n      },\n      {\n        \"firstName\": \"GUERRA\",\n        \"lastName\": \"QUINONES\",\n        \"identificationType\": \"CC\",\n        \"identificationNumber\": \"1022369773\",\n        \"noveltyType\": \"Actualización\",\n        \"participationPercentage\": \"60\"\n      },\n      {\n        \"firstName\": \"GUERRA\",\n        \"lastName\": \"QUINONES\",\n        \"identificationType\": \"CC\",\n        \"identificationNumber\": \"1018416174\",\n        \"noveltyType\": \"Actualización\",\n        \"participationPercentage\": \"5\"\n      },\n      {\n        \"firstName\": \"CARLOS\",\n        \"lastName\": \"ANDRES\",\n        \"identificationType\": \"CC\",\n        \"identificationNumber\": \"1018416174\",\n        \"noveltyType\": \"Actualización\",\n        \"participationPercentage\": \"0\"\n      }\n    ]\n  },\n  \"confidenceScores\": {\n    \"companyName\": 95,\n    \"documentType\": 90,\n    \"country\": 100,\n    \"taxId\": 100,\n    \"relatedParties\": 85\n  },\n  \"document_type\": \"company\",\n  \"document_number\": \"901355130\",\n  \"category\": \"RUB\"\n}\n```"
+        }
+      ]
+    }
+  },
+  "stopReason": "end_turn",
+  "usage": {
+    "inputTokens": 9736,
+    "outputTokens": 474,
+    "totalTokens": 10210
+  },
+  "metrics": {
+    "latencyMs": 11210
+  }
+}

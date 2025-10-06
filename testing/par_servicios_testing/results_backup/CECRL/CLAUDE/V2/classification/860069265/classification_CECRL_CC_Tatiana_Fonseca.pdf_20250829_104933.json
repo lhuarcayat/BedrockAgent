@@ -1,0 +1,87 @@
+{
+  "classification_data": {
+    "category": "CECRL",
+    "text": "REPUBLICA DE COLOMBIA IDENTIFICACION PERSONAL CEDULA DE CIUDADANIA NUMERO 52.255.747 FONSECA URIBE APELLIDOS CLAUDIA TATIANA NOMBRES FIRMA FECHA DE NACIMIENTO 15-SEP-1974 BOGOTA D.C. (CUNDINAMARCA) LUGAR DE NACIMIENTO 1.70 A- F ESTATURA G.S. RH SEXO 15-JUL-1993 BOGOTA D.C. FECHA Y LUGAR DE EXPEDICION REGISTRADOR NACIONAL INDICE DERECHO A-1500101-47154892-F-005255747-20071026 04466072980 02 22703132",
+    "document_number": "860069265",
+    "path": "CECRL/860069265/CC_Tatiana_Fonseca.pdf"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "```json { \"category\": \"CECRL\", \"text\": \"REPUBLICA DE COLOMBIA\\nIDENTIFICACION PERSONAL\\nCEDULA DE CIUDADANIA\\nNUMERO 52.255.747\\nFONSECA URIBE\\nAPELLIDOS\\nCLAUDIA TATIANA\\nNOMBRES\\nFIRMA\\nFECHA DE NACIMIENTO 15-SEP-1974\\nBOGOTA D.C.\\n(CUNDINAMARCA)\\nLUGAR DE NACIMIENTO\\n1.70 A- F\\nESTATURA G.S. RH SEXO\\n15-JUL-1993 BOGOTA D.C.\\nFECHA Y LUGAR DE EXPEDICION\\nREGISTRADOR NACIONAL\\nINDICE DERECHO\\nA-1500101-47154892-F-005255747-20071026\\n04466072980 02 22703132\" } ```"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 9,
+      "cache_creation_input_tokens": 4549,
+      "cache_read_input_tokens": 0,
+      "output_tokens": 820
+    },
+    "ResponseMetadata": {
+      "RequestId": "b91cd6db-2d85-49e9-a48a-e10ad4c1cd69",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Fri, 29 Aug 2025 15:49:20 GMT",
+        "content-type": "application/json",
+        "content-length": "5722",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "b91cd6db-2d85-49e9-a48a-e10ad4c1cd69",
+        "x-amzn-bedrock-invocation-latency": "26391",
+        "x-amzn-bedrock-cache-write-input-token-count": "4549",
+        "x-amzn-bedrock-cache-read-input-token-count": "0",
+        "x-amzn-bedrock-output-token-count": "820",
+        "x-amzn-bedrock-input-token-count": "9"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_01TymxYWFnWA68BYGfQLwv25",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-sonnet-4-20250514",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Let me analyze this document according to the classification workflow: 1. **TEXT EXTRACTION** Looking at the document, I can see it's a Colombian identification document. The readable text includes: - REPUBLICA DE COLOMBIA - IDENTIFICACION PERSONAL - CEDULA DE CIUDADANIA - NUMERO: 52.255.747 - FONSECA URIBE - APELLIDOS - CLAUDIA TATIANA - NOMBRES - A signature - FECHA DE NACIMIENTO: 15-SEP-1974 - BOGOTA D.C. (CUNDINAMARCA) - LUGAR DE NACIMIENTO - 1.70 A- F - ESTATURA G.S. RH SEXO - 15-JUL-1993 BOGOTA D.C. - FECHA Y LUGAR DE EXPEDICION - INDICE DERECHO (with fingerprint image) - Various official codes and barcodes at bottom 2. **PRIORITY CHECKS** This is not BLANK (has substantial content) and not LINK_ONLY (no redirecting URLs). 3. **ISSUER IDENTIFICATION** This is issued by the Republic of Colombia government identification authority, not DIAN or Chamber of Commerce. 4. **DOCUMENT FUNCTION ANALYSIS** This is clearly a personal identification document - specifically a Colombian national ID card (Cédula de Ciudadanía). It identifies one individual person (Claudia Tatiana Fonseca Uribe) with all the typical biographical and biometric data. 5. **CATEGORY CLASSIFICATION** This fits CECRL perfectly: - Individual identification terminology: \"IDENTIFICACION PERSONAL\", \"CEDULA DE CIUDADANIA\" - Personal biographical data: birth date (15-SEP-1974), birth place (BOGOTA D.C.), gender (F), blood type (A-), height (1.70) - Individual photo, signature, fingerprint - Government-issued personal ID number (52.255.747) with individual name - Security elements: official seals, barcodes - Issued by government identification authority (Republic of Colombia) 6. **CONFIDENCE VALIDATION** Strong evidence - this is unambiguously a Colombian national ID card with all required indicators present. I confirm this is a comprehensive personal identification document with multiple verification elements. The card provides definitive proof of identity for Claudia Tatiana Fonseca Uribe, containing official government authentication and biometric identifiers.",
+          "signature": "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"
+        },
+        {
+          "type": "text",
+          "text": "```json { \"category\": \"CECRL\", \"text\": \"REPUBLICA DE COLOMBIA\\nIDENTIFICACION PERSONAL\\nCEDULA DE CIUDADANIA\\nNUMERO 52.255.747\\nFONSECA URIBE\\nAPELLIDOS\\nCLAUDIA TATIANA\\nNOMBRES\\nFIRMA\\nFECHA DE NACIMIENTO 15-SEP-1974\\nBOGOTA D.C.\\n(CUNDINAMARCA)\\nLUGAR DE NACIMIENTO\\n1.70 A- F\\nESTATURA G.S. RH SEXO\\n15-JUL-1993 BOGOTA D.C.\\nFECHA Y LUGAR DE EXPEDICION\\nREGISTRADOR NACIONAL\\nINDICE DERECHO\\nA-1500101-47154892-F-005255747-20071026\\n04466072980 02 22703132\" } ```"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 9,
+        "cache_creation_input_tokens": 4549,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 820
+      }
+    },
+    "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 8000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "expected_category": "CECRL",
+  "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+  "api_used": "invoke_model",
+  "pdf_info": {
+    "original_size": 226738,
+    "first_page_size": 223294,
+    "is_scanned": true
+  }
+}

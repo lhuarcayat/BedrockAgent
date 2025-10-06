@@ -1,0 +1,117 @@
+{
+  "extraction_data": {
+    "result": {
+      "CompanyName": "GEOESTUDIOS LTDA",
+      "CompanyType": "LTDA",
+      "Country": "Colombia",
+      "DocumentPages": "3",
+      "DocumentType": "CERTIFICADO DE EXISTENCIA Y REPRESENTACION LEGAL",
+      "TaxId": "860.058.756-1",
+      "MainAddress": "AK 9 NO. 127 C - 60 OF 213, BOGOTÁ D.C.",
+      "IncorporationDate": "1978-05-09",
+      "CompanyDuration": "2028-04-18",
+      "RegistrationNumber": "00102134",
+      "Size": "MICROEMPRESA",
+      "RelatedParties": [
+        {
+          "FirstName": "JUAN CARLOS",
+          "LastName": "MARTINEZ HERNANDEZ",
+          "IdType": "CC",
+          "IdNumber": "000000079378353",
+          "RelationshipType": "GERENTE"
+        },
+        {
+          "FirstName": "JOSE TAISSIR",
+          "LastName": "KASSEM BUSTAMANTE",
+          "IdType": "CC",
+          "IdNumber": "000000017020290",
+          "RelationshipType": "REPRESENTANTE LEGAL"
+        },
+        {
+          "FirstName": "LEILA MARIA",
+          "LastName": "KASSEM LLANO",
+          "IdType": "CC",
+          "IdNumber": "000000052451572",
+          "RelationshipType": "REPRESENTANTE LEGAL SUPLENTE"
+        }
+      ],
+      "Embargoes": "",
+      "Liquidations": "",
+      "DocumentIssueDate": "2022-03-08",
+      "LastRegistrationRenewalDate": "2021-03-31"
+    }
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "```json { \"result\": { \"CompanyName\": \"GEOESTUDIOS LTDA\", \"CompanyType\": \"LTDA\", \"Country\": \"Colombia\", \"DocumentPages\": \"3\", \"DocumentType\": \"CERTIFICADO DE EXISTENCIA Y REPRESENTACION LEGAL\", \"TaxId\": \"860.058.756-1\", \"MainAddress\": \"AK 9 NO. 127 C - 60 OF 213, BOGOTÁ D.C.\", \"IncorporationDate\": \"1978-05-09\", \"CompanyDuration\": \"2028-04-18\", \"RegistrationNumber\": \"00102134\", \"Size\": \"MICROEMPRESA\", \"RelatedParties\": [ { \"FirstName\": \"JUAN CARLOS\", \"LastName\": \"MARTINEZ HERNANDEZ\", \"IdType\": \"CC\", \"IdNumber\": \"000000079378353\", \"RelationshipType\": \"GERENTE\" }, { \"FirstName\": \"JOSE TAISSIR\", \"LastName\": \"KASSEM BUSTAMANTE\", \"IdType\": \"CC\", \"IdNumber\": \"000000017020290\", \"RelationshipType\": \"REPRESENTANTE LEGAL\" }, { \"FirstName\": \"LEILA MARIA\", \"LastName\": \"KASSEM LLANO\", \"IdType\": \"CC\", \"IdNumber\": \"000000052451572\", \"RelationshipType\": \"REPRESENTANTE LEGAL SUPLENTE\" } ], \"Embargoes\": \"\", \"Liquidations\": \"\", \"DocumentIssueDate\": \"2022-03-08\", \"LastRegistrationRenewalDate\": \"2021-03-31\" } } ```"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 15127,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 2304,
+      "output_tokens": 1506
+    },
+    "ResponseMetadata": {
+      "RequestId": "8bce8c01-d402-4195-af36-f5cee1c2e0d1",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Mon, 01 Sep 2025 06:28:22 GMT",
+        "content-type": "application/json",
+        "content-length": "7628",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "8bce8c01-d402-4195-af36-f5cee1c2e0d1",
+        "x-amzn-bedrock-invocation-latency": "20744",
+        "x-amzn-bedrock-cache-write-input-token-count": "0",
+        "x-amzn-bedrock-cache-read-input-token-count": "2304",
+        "x-amzn-bedrock-output-token-count": "1506",
+        "x-amzn-bedrock-input-token-count": "15127"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_01HHjkhomrSdQ5mrUH1QqZxT",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-sonnet-4-20250514",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Let me analyze this document carefully. It's a Colombian \"Certificado de Existencia y Representación Legal\" from the Cámara de Comercio de Bogotá. Let me go through each field: 1. DocumentPages: Looking at the document, I can see it says \"PÁGINA: 1 DE 3\", \"PÁGINA: 2 DE 3\", \"PÁGINA: 3 DE 3\" at different pages. So it's a 3-page document. 2. CompanyName: Looking for the company name, I see \"NOMBRE : GEOESTUDIOS LTDA\" in the first page. 3. CompanyType: From the company name \"GEOESTUDIOS LTDA\", the type is \"LTDA\". 4. Country: This is from \"CAMARA DE COMERCIO DE BOGOTA\", so it's Colombia. 5. TaxId: I see \"N.I.T. : 860.058.756-1\" 6. IdentificationType: For Colombian documents, it's \"NIT\" as mentioned. 7. MainAddress: Looking for address information, I see \"DIRECCION COMERCIAL : AK 9 NO. 127 C - 60 OF 213\" and \"MUNICIPIO : BOGOTÁ D.C.\" So the MainAddress would be \"AK 9 NO. 127 C - 60 OF 213, BOGOTÁ D.C.\" 8. IncorporationDate: I see \"MATRICULA NO: 00102134 DEL 9 DE MAYO DE 1978\", so the incorporation date is May 9, 1978, which in YYYY-MM-DD format is \"1978-05-09\". 9. CompanyDuration: I see \"DURACION HASTA EL 18 DE ABRIL DEL 2028\", so it's \"2028-04-18\". 10. DocumentIssueDate: I see \"8 DE MARZO DE 2022\" which is \"2022-03-08\". I continue extracting key details from the document. The last registration renewal occurred on March 31, 2021, with the registration number 00102134. The company is classified as a microenterprise, with Juan Carlos Martinez Hernandez serving as the general manager. The document reveals additional representatives: Jose Taissir Kassem Bustamante as legal representative and Leila Maria Kassem Llano as alternate legal representative. No embargoes or liquidations are noted in the document.",
+          "signature": "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"
+        },
+        {
+          "type": "text",
+          "text": "```json { \"result\": { \"CompanyName\": \"GEOESTUDIOS LTDA\", \"CompanyType\": \"LTDA\", \"Country\": \"Colombia\", \"DocumentPages\": \"3\", \"DocumentType\": \"CERTIFICADO DE EXISTENCIA Y REPRESENTACION LEGAL\", \"TaxId\": \"860.058.756-1\", \"MainAddress\": \"AK 9 NO. 127 C - 60 OF 213, BOGOTÁ D.C.\", \"IncorporationDate\": \"1978-05-09\", \"CompanyDuration\": \"2028-04-18\", \"RegistrationNumber\": \"00102134\", \"Size\": \"MICROEMPRESA\", \"RelatedParties\": [ { \"FirstName\": \"JUAN CARLOS\", \"LastName\": \"MARTINEZ HERNANDEZ\", \"IdType\": \"CC\", \"IdNumber\": \"000000079378353\", \"RelationshipType\": \"GERENTE\" }, { \"FirstName\": \"JOSE TAISSIR\", \"LastName\": \"KASSEM BUSTAMANTE\", \"IdType\": \"CC\", \"IdNumber\": \"000000017020290\", \"RelationshipType\": \"REPRESENTANTE LEGAL\" }, { \"FirstName\": \"LEILA MARIA\", \"LastName\": \"KASSEM LLANO\", \"IdType\": \"CC\", \"IdNumber\": \"000000052451572\", \"RelationshipType\": \"REPRESENTANTE LEGAL SUPLENTE\" } ], \"Embargoes\": \"\", \"Liquidations\": \"\", \"DocumentIssueDate\": \"2022-03-08\", \"LastRegistrationRenewalDate\": \"2021-03-31\" } } ```"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 15127,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 2304,
+        "output_tokens": 1506
+      }
+    },
+    "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 8000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+  "api_used": "invoke_model"
+}

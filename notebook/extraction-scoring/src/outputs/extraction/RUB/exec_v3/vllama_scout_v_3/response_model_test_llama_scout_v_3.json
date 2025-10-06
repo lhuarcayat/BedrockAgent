@@ -1,0 +1,33 @@
+{
+  "ResponseMetadata": {
+    "RequestId": "533969b8-92b9-471b-8901-e14f8abf48d9",
+    "HTTPStatusCode": 200,
+    "HTTPHeaders": {
+      "date": "Thu, 05 Jun 2025 16:40:05 GMT",
+      "content-type": "application/json",
+      "content-length": "3979",
+      "connection": "keep-alive",
+      "x-amzn-requestid": "533969b8-92b9-471b-8901-e14f8abf48d9"
+    },
+    "RetryAttempts": 0
+  },
+  "output": {
+    "message": {
+      "role": "assistant",
+      "content": [
+        {
+          "text": "### Detailed Reasoning and Extraction Process\n\n1. **Document Analysis**:\n   - The document provided is in Spanish and appears to be an official form for reporting beneficial owners (RUB) in Colombia.\n   - The document contains multiple pages, but the relevant information is extracted from the tables.\n\n2. **Company Information Extraction**:\n   - **companyName**: Extracted as \"PAR SERVICIOS INTEGRALES S A\" from the document.\n   - **documentType**: Identified as \"NIT\" based on the context and the COMPANY_ID hash table.\n   - **taxId**: Extracted as \"830067329\".\n   - **country**: Determined as \"Colombia\" based on the documentType \"NIT\" and explicit mentions in the document.\n\n3. **Related Parties Extraction**:\n   - Each related party is extracted from separate rows in the table.\n   - For each related party:\n     - **firstName** and **lastName**: Extracted from the \"Otros nombres\" and \"Primer apellido\" and \"Segundo apellido\" fields.\n     - **identificationType**: Extracted as \"Cédula de Ciudadanía\" or similar.\n     - **identificationNumber**: Extracted with asterisks if anonymized.\n     - **noveltyType**: Extracted as \"Actualización\" or similar.\n     - **participationPercentage**: Extracted as a percentage value.\n\n4. **Date Normalization**:\n   - Dates are converted to YYYY-MM-DD format.\n\n5. **Validation and Confidence Scoring**:\n   - The extraction is validated against the provided schema.\n   - Confidence scores are assigned based on the extraction certainty.\n\n### Extracted Data\n\n```json\n{\n  \"companyName\": \"PAR SERVICIOS INTEGRALES S A\",\n  \"documentType\": \"NIT\",\n  \"taxId\": \"830067329\",\n  \"country\": \"Colombia\",\n  \"relatedParties\": [\n    {\n      \"firstName\": \"ANDRES LEONARDO\",\n      \"lastName\": \"RODRIGUEZ RAMIREZ\",\n      \"identificationType\": \"Cédula de Ciudadanía\",\n      \"identificationNumber\": \"80074122\",\n      \"noveltyType\": \"Actualización\",\n      \"participationPercentage\": \"14.99\"\n    },\n    {\n      \"firstName\": \"LUIS ALBERTO\",\n      \"lastName\": \"RODRIGUEZ SAMUDIO\",\n      \"identificationType\": \"Cédula de Ciudadanía\",\n      \"identificationNumber\": \"19193304\",\n      \"noveltyType\": \"Actualización\",\n      \"participationPercentage\": \"29.98\"\n    },\n    {\n      \"firstName\": \"DIANA PAOLA\",\n      \"lastName\": \"RODRIGUEZ RAMIREZ\",\n      \"identificationType\": \"Cédula de Ciudadanía\",\n      \"identificationNumber\": \"52817177\",\n      \"noveltyType\": \"Actualización\",\n      \"participationPercentage\": \"14.99\"\n    },\n    {\n      \"firstName\": \"ESTEFANIA\",\n      \"lastName\": \"CORREDOR RODRIGUEZ\",\n      \"identificationType\": \"Cédula de Ciudadanía\",\n      \"identificationNumber\": \"1019026903\",\n      \"noveltyType\": \"Actualización\",\n      \"participationPercentage\": \"5.02\"\n    },\n    {\n      \"firstName\": \"LUIS MIGUEL\",\n      \"lastName\": \"ZUBIETA URIBE\",\n      \"identificationType\": \"Cédula de Ciudadanía\",\n      \"identificationNumber\": \"79939362\",\n      \"noveltyType\": \"Actualización\",\n      \"participationPercentage\": \"14.99\"\n    },\n    {\n      \"firstName\": \"CAROLINA\",\n      \"lastName\": \"CORREDOR RODRIGUEZ\",\n      \"identificationType\": \"Cédula de Ciudadanía\",\n      \"identificationNumber\": \"52799584\",\n      \"noveltyType\": \"Actualización\",\n      \"participationPercentage\": \"5.02\"\n    },\n    {\n      \"firstName\": \"ENRIQUE\",\n      \"lastName\": \"MERCADO IDARRAGA\",\n      \"identificationType\": \"Cédula de Ciudadanía\",\n      \"identificationNumber\": \"80134782\",\n      \"noveltyType\": \"Actualización\",\n      \"participationPercentage\": \"10.05\"\n    }\n  ]\n}\n```"
+        }
+      ]
+    }
+  },
+  "stopReason": "end_turn",
+  "usage": {
+    "inputTokens": 6987,
+    "outputTokens": 925,
+    "totalTokens": 7912
+  },
+  "metrics": {
+    "latencyMs": 7953
+  }
+}

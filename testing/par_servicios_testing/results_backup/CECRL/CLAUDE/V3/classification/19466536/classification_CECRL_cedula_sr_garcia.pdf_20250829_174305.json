@@ -1,0 +1,87 @@
+{
+  "classification_data": {
+    "category": "CECRL",
+    "text": "REPUBLICA DE COLOMBIA IDENTIFICACION PERSONAL CEDULA DE CIUDADANIA NUMERO 19.466.536 GARCIA GONZALEZ APELLIDOS JOSE REINALDO NOMBRES FECHA DE NACIMIENTO 14-FEB-1962 BOGOTA D.C. (CUNDINAMARCA) LUGAR DE NACIMIENTO 1.80 O+ M ESTATURA G.S. RH SEXO 20-JUN-1980 BOGOTA D.C. FECHA Y LUGAR DE EXPEDICION REGISTRADOR NACIONAL CARLOS ARIEL SANCHEZ TORRES INDICE DERECHO A-1500150-00014462-M-001946536536-20080618 0000515354A 1 1250021543",
+    "document_number": "19466536",
+    "path": "CECRL/19466536/cedula sr garcia.pdf"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "```json { \"category\": \"CECRL\", \"text\": \"REPUBLICA DE COLOMBIA\\nIDENTIFICACION PERSONAL\\nCEDULA DE CIUDADANIA\\n\\nNUMERO 19.466.536\\nGARCIA GONZALEZ\\nAPELLIDOS\\nJOSE REINALDO\\nNOMBRES\\n\\nFECHA DE NACIMIENTO 14-FEB-1962\\nBOGOTA D.C.\\n(CUNDINAMARCA)\\nLUGAR DE NACIMIENTO\\n1.80 O+ M\\nESTATURA G.S. RH SEXO\\n20-JUN-1980 BOGOTA D.C.\\nFECHA Y LUGAR DE EXPEDICION\\nREGISTRADOR NACIONAL\\nCARLOS ARIEL SANCHEZ TORRES\\n\\nINDICE DERECHO\\n\\nA-1500150-00014462-M-001946536536-20080618 0000515354A 1 1250021543\" } ```"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 9,
+      "cache_creation_input_tokens": 4774,
+      "cache_read_input_tokens": 0,
+      "output_tokens": 929
+    },
+    "ResponseMetadata": {
+      "RequestId": "19c570a3-ec9b-4d64-875c-06cac50de44e",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Fri, 29 Aug 2025 22:42:53 GMT",
+        "content-type": "application/json",
+        "content-length": "6384",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "19c570a3-ec9b-4d64-875c-06cac50de44e",
+        "x-amzn-bedrock-invocation-latency": "19698",
+        "x-amzn-bedrock-cache-write-input-token-count": "4774",
+        "x-amzn-bedrock-cache-read-input-token-count": "0",
+        "x-amzn-bedrock-output-token-count": "929",
+        "x-amzn-bedrock-input-token-count": "9"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_019b5eRupGazYgn5Wb1yDxYW",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-sonnet-4-20250514",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Let me analyze this document step by step following the workflow: 1. **TEXT EXTRACTION** Looking at the PDF document, I can see: - Top section: \"REPUBLICA DE COLOMBIA\", \"IDENTIFICACION PERSONAL\", \"CEDULA DE CIUDADANIA\", \"NUMERO 19.466.536\", \"GARCIA GONZALEZ\", \"APELLIDOS\", \"JOSE REINALDO\", \"NOMBRES\", and a signature. - This appears to be a Colombian ID card (Cédula de Ciudadanía) - Bottom section shows additional information including: \"FECHA DE NACIMIENTO 14-FEB-1962\", \"BOGOTA D.C. (CUNDINAMARCA)\", \"LUGAR DE NACIMIENTO\", \"1.80\", \"O+\", \"M\", \"ESTATURA\", \"G.S. RH\", \"SEXO\", \"20-JUN-1980 BOGOTA D.C.\", \"FECHA Y LUGAR DE EXPEDICION\", and what appears to be a barcode and other reference numbers. 2. **PRIORITY CHECKS** - Not BLANK - there is meaningful content - Not LINK_ONLY - no hyperlinks, this is a complete document 3. **DOCUMENT FUNCTION ANALYSIS** The PRIMARY PURPOSE of this document is personal identification. It's a Colombian national ID card (Cédula de Ciudadanía) that identifies an individual person named Jose Reinaldo Garcia Gonzalez. The main value it provides is official identification of a specific person with their biographical data. 4. **ISSUER IDENTIFICATION** This is issued by the Republic of Colombia government identification authority, not DIAN or Chamber of Commerce. 5. **CATEGORY CLASSIFICATION** This clearly fits CECRL category: - It's an official personal identification document (Cédula de Ciudadanía) - Contains individual identification terminology: \"IDENTIFICACION PERSONAL\", \"CEDULA DE CIUDADANIA\" - Comprehensive personal details confirm its identification purpose - Includes unique government-issued identifier - Verifies individual's core biographical information 6. **CONFIDENCE VALIDATION** The document provides robust identification evidence with multiple verification elements. Personal photo, signature, and detailed biographical data create a comprehensive identification profile for Jose Reinaldo Garcia Gonzalez. Security features like the barcode further authenticate the document's official status.",
+          "signature": "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"
+        },
+        {
+          "type": "text",
+          "text": "```json { \"category\": \"CECRL\", \"text\": \"REPUBLICA DE COLOMBIA\\nIDENTIFICACION PERSONAL\\nCEDULA DE CIUDADANIA\\n\\nNUMERO 19.466.536\\nGARCIA GONZALEZ\\nAPELLIDOS\\nJOSE REINALDO\\nNOMBRES\\n\\nFECHA DE NACIMIENTO 14-FEB-1962\\nBOGOTA D.C.\\n(CUNDINAMARCA)\\nLUGAR DE NACIMIENTO\\n1.80 O+ M\\nESTATURA G.S. RH SEXO\\n20-JUN-1980 BOGOTA D.C.\\nFECHA Y LUGAR DE EXPEDICION\\nREGISTRADOR NACIONAL\\nCARLOS ARIEL SANCHEZ TORRES\\n\\nINDICE DERECHO\\n\\nA-1500150-00014462-M-001946536536-20080618 0000515354A 1 1250021543\" } ```"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 9,
+        "cache_creation_input_tokens": 4774,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 929
+      }
+    },
+    "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 8000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "expected_category": "CECRL",
+  "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+  "api_used": "invoke_model",
+  "pdf_info": {
+    "original_size": 88839,
+    "first_page_size": 88628,
+    "is_scanned": true
+  }
+}

@@ -1,0 +1,129 @@
+{
+  "extraction_data": {
+    "result": {
+      "CompanyName": "AINECOL S A S",
+      "TaxId": "8001206772-3",
+      "IdentificationType": "NIT",
+      "Country": "Colombia",
+      "ConflictingSources": [],
+      "RequiresReview": "false"
+    },
+    "RelatedParties": [
+      {
+        "FirstName": "RAMIRO ANDRES",
+        "LastName": "ESCOBAR PUENTES",
+        "IdType": "NIT",
+        "IdNumber": "1075214370",
+        "NoveltyType": "Actualización",
+        "ParticipationPercentage": "15"
+      },
+      {
+        "FirstName": "MARIA XIMENA",
+        "LastName": "ESCOBAR PUENTES",
+        "IdType": "NIT",
+        "IdNumber": "26421587",
+        "NoveltyType": "Actualización",
+        "ParticipationPercentage": "15"
+      },
+      {
+        "FirstName": "ESCOBAR SEBASTIAN",
+        "LastName": "JUAN PUENTES",
+        "IdType": "NIT",
+        "IdNumber": "1075311830",
+        "NoveltyType": "Actualización",
+        "ParticipationPercentage": "8"
+      },
+      {
+        "FirstName": "RAMIRO",
+        "LastName": "ESCOBAR PUENTES",
+        "IdType": "NIT",
+        "IdNumber": "12124202",
+        "NoveltyType": "Actualización",
+        "ParticipationPercentage": "52"
+      },
+      {
+        "FirstName": "OLGA PATRICIA",
+        "LastName": "PUENTES SANDINO",
+        "IdType": "NIT",
+        "IdNumber": "36173009",
+        "NoveltyType": "Actualización",
+        "ParticipationPercentage": "10"
+      }
+    ],
+    "DocumentType": "company",
+    "Category": "RUB"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "```json { \"result\": { \"CompanyName\": \"AINECOL S A S\", \"TaxId\": \"8001206772-3\", \"IdentificationType\": \"NIT\", \"Country\": \"Colombia\", \"ConflictingSources\": [], \"RequiresReview\": \"false\" }, \"RelatedParties\": [ { \"FirstName\": \"RAMIRO ANDRES\", \"LastName\": \"ESCOBAR PUENTES\", \"IdType\": \"NIT\", \"IdNumber\": \"1075214370\", \"NoveltyType\": \"Actualización\", \"ParticipationPercentage\": \"15\" }, { \"FirstName\": \"MARIA XIMENA\", \"LastName\": \"ESCOBAR PUENTES\", \"IdType\": \"NIT\", \"IdNumber\": \"26421587\", \"NoveltyType\": \"Actualización\", \"ParticipationPercentage\": \"15\" }, { \"FirstName\": \"ESCOBAR SEBASTIAN\", \"LastName\": \"JUAN PUENTES\", \"IdType\": \"NIT\", \"IdNumber\": \"1075311830\", \"NoveltyType\": \"Actualización\", \"ParticipationPercentage\": \"8\" }, { \"FirstName\": \"RAMIRO\", \"LastName\": \"ESCOBAR PUENTES\", \"IdType\": \"NIT\", \"IdNumber\": \"12124202\", \"NoveltyType\": \"Actualización\", \"ParticipationPercentage\": \"52\" }, { \"FirstName\": \"OLGA PATRICIA\", \"LastName\": \"PUENTES SANDINO\", \"IdType\": \"NIT\", \"IdNumber\": \"36173009\", \"NoveltyType\": \"Actualización\", \"ParticipationPercentage\": \"10\" } ], \"DocumentType\": \"company\", \"Category\": \"RUB\" } ```"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 10619,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 2039,
+      "output_tokens": 1590
+    },
+    "ResponseMetadata": {
+      "RequestId": "52ddde49-a9d7-48f8-9620-b46910a0be55",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Tue, 02 Sep 2025 16:40:34 GMT",
+        "content-type": "application/json",
+        "content-length": "8608",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "52ddde49-a9d7-48f8-9620-b46910a0be55",
+        "x-amzn-bedrock-invocation-latency": "24179",
+        "x-amzn-bedrock-cache-write-input-token-count": "0",
+        "x-amzn-bedrock-cache-read-input-token-count": "2039",
+        "x-amzn-bedrock-output-token-count": "1590",
+        "x-amzn-bedrock-input-token-count": "10619"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_017AYLPQBC5XNURzitiU6TxD",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-sonnet-4-20250514",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Let me analyze this document step by step, following the field rules and schema provided. This is a Colombian \"Final Beneficiaries Report\" (RUB - Reporte de Beneficiarios Finales) issued by DIAN. I can identify this from the header \"Reporte de Beneficiarios Finales\" and the DIAN logo. Now I need to extract the required information: 1. **CompanyName**: According to the rule, for RUB from DIAN this is in cell \"11. Denominación o razón social\". Looking at the document, I can see \"AINECOL S A S\" in cell 11. 2. **TaxId**: For RUB from DIAN, this is in cell \"18. Número de identificación\". I can see \"8001206773-2\" or similar. Let me look more carefully... I see \"8001206772-3\" in cell 18. 3. **IdentificationType**: For RUB from DIAN, this is \"NIT\". 4. **Country**: Since this is RUB from DIAN, the country is \"Colombia\". Now for the RelatedParties, I need to look at the \"Datos beneficiarios finales\" section from page 2 onwards. I can see several beneficiaries: From page 2: - First beneficiary: ESCOBAR PUENTES, RAMIRO ANDRES, ID: 1075214370, Participation: 15% - Second beneficiary: ESCOBAR PUENTES, MARIA XIMENA, ID: 26421587, Participation: 15% From page 3: - Third beneficiary: JUAN ESCOBAR, SEBASTIAN, ID: 1075311830, Participation: 8% - Fourth beneficiary: ESCOBAR PUENTES, RAMIRO, ID: 12124202, Participation: 52% - Fifth beneficiary: PUENTES SANDINO, OLGA PATRICIA, ID: 36173009, Participation: 10% I've confirmed the participation percentages total 100%, validating the beneficiary information. I'll now focus on extracting detailed information for the first beneficiary, starting with the name components from specific cells. The first beneficiary is RAMIRO ANDRES ESCOBAR PUENTES, with identification number 1075214370. His participation is 15%, and the record indicates an update status. The NIT matches his identification number, suggesting consistent documentation. The second beneficiary shares the family name ESCOBAR PUENTES - MARIA XIMENA - with identification 26421587. Her participation is also 15%, and her record similarly shows an update status. For the third beneficiary, I notice some incomplete information, with only first and last names partially recorded. The fourth beneficiary is RAMIRO ESCOBAR PUENTES, identified by 12124202. His participation increases to 52%, maintaining an update status. The fifth beneficiary appears to be OLGA PATRICIA PUENTES SANDINO, with an identification number beginning with 36173009, though the record seems partially truncated. All beneficiaries are classified under the NIT identification type according to DIAN's regulatory framework.",
+          "signature": "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"
+        },
+        {
+          "type": "text",
+          "text": "```json { \"result\": { \"CompanyName\": \"AINECOL S A S\", \"TaxId\": \"8001206772-3\", \"IdentificationType\": \"NIT\", \"Country\": \"Colombia\", \"ConflictingSources\": [], \"RequiresReview\": \"false\" }, \"RelatedParties\": [ { \"FirstName\": \"RAMIRO ANDRES\", \"LastName\": \"ESCOBAR PUENTES\", \"IdType\": \"NIT\", \"IdNumber\": \"1075214370\", \"NoveltyType\": \"Actualización\", \"ParticipationPercentage\": \"15\" }, { \"FirstName\": \"MARIA XIMENA\", \"LastName\": \"ESCOBAR PUENTES\", \"IdType\": \"NIT\", \"IdNumber\": \"26421587\", \"NoveltyType\": \"Actualización\", \"ParticipationPercentage\": \"15\" }, { \"FirstName\": \"ESCOBAR SEBASTIAN\", \"LastName\": \"JUAN PUENTES\", \"IdType\": \"NIT\", \"IdNumber\": \"1075311830\", \"NoveltyType\": \"Actualización\", \"ParticipationPercentage\": \"8\" }, { \"FirstName\": \"RAMIRO\", \"LastName\": \"ESCOBAR PUENTES\", \"IdType\": \"NIT\", \"IdNumber\": \"12124202\", \"NoveltyType\": \"Actualización\", \"ParticipationPercentage\": \"52\" }, { \"FirstName\": \"OLGA PATRICIA\", \"LastName\": \"PUENTES SANDINO\", \"IdType\": \"NIT\", \"IdNumber\": \"36173009\", \"NoveltyType\": \"Actualización\", \"ParticipationPercentage\": \"10\" } ], \"DocumentType\": \"company\", \"Category\": \"RUB\" } ```"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 10619,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 2039,
+        "output_tokens": 1590
+      }
+    },
+    "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 9000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+  "api_used": "invoke_model"
+}

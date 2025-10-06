@@ -1,0 +1,85 @@
+{
+  "extraction_data": {
+    "path": "$pdf_path",
+    "result": {
+      "companyName": "PROCESS POINT COLOMBIA S.A.S.",
+      "documentType": "Equity Composition",
+      "taxId": "901.304.620-0",
+      "country": "Colombia",
+      "identificationDetails": {
+        "source": "text_reference",
+        "indicators": [
+          "Colombia",
+          "Bogotá D.C."
+        ],
+        "conflictingSources": [],
+        "requiresReview": false
+      },
+      "relatedParties": [
+        {
+          "firstName": "Javier Hernán",
+          "lastName": "Becerra Rodríguez",
+          "identificationType": "C.C.",
+          "identificationNumber": "79.717.267",
+          "relationshipType": "Shareholder",
+          "participationPercentage": "0%",
+          "timeFound": 1,
+          "job": "Contador"
+        },
+        {
+          "firstName": "Jamie Todd",
+          "lastName": "Rutherford",
+          "identificationType": "POR REVISAR",
+          "identificationNumber": "POR REVISAR",
+          "relationshipType": "Shareholder",
+          "participationPercentage": "100%",
+          "timeFound": 1,
+          "job": ""
+        }
+      ]
+    },
+    "document_type": "company",
+    "document_number": "901304620",
+    "category": "ACC",
+    "confidenceScores": {
+      "companyName": 95,
+      "taxId": 95,
+      "country": 98,
+      "relatedParties": 70
+    }
+  },
+  "raw_response": {
+    "ResponseMetadata": {
+      "RequestId": "29bb6154-c000-4dd8-b843-5d09812a0951",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Sat, 23 Aug 2025 09:31:33 GMT",
+        "content-type": "application/json",
+        "content-length": "1623",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "29bb6154-c000-4dd8-b843-5d09812a0951"
+      },
+      "RetryAttempts": 0
+    },
+    "output": {
+      "message": {
+        "role": "assistant",
+        "content": [
+          {
+            "text": "```json\n{\n  \"path\": \"$pdf_path\",\n  \"result\": {\n    \"companyName\": \"PROCESS POINT COLOMBIA S.A.S.\",\n    \"documentType\": \"Equity Composition\",\n    \"taxId\": \"901.304.620-0\",\n    \"country\": \"Colombia\",\n    \"identificationDetails\": {\n      \"source\": \"text_reference\",\n      \"indicators\": [\n        \"Colombia\",\n        \"Bogotá D.C.\"\n      ],\n      \"conflictingSources\": [],\n      \"requiresReview\": false\n    },\n    \"relatedParties\": [\n      {\n        \"firstName\": \"Javier Hernán\",\n        \"lastName\": \"Becerra Rodríguez\",\n        \"identificationType\": \"C.C.\",\n        \"identificationNumber\": \"79.717.267\",\n        \"relationshipType\": \"Shareholder\",\n        \"participationPercentage\": \"0%\",\n        \"timeFound\": 1,\n        \"job\": \"Contador\"\n      },\n      {\n        \"firstName\": \"Jamie Todd\",\n        \"lastName\": \"Rutherford\",\n        \"identificationType\": \"POR REVISAR\",\n        \"identificationNumber\": \"POR REVISAR\",\n        \"relationshipType\": \"Shareholder\",\n        \"participationPercentage\": \"100%\",\n        \"timeFound\": 1,\n        \"job\": \"\"\n      }\n    ]\n  },\n  \"document_type\": \"company\",\n  \"document_number\": \"901304620\",\n  \"category\": \"ACC\",\n  \"confidenceScores\": {\n    \"companyName\": 95,\n    \"taxId\": 95,\n    \"country\": 98,\n    \"relatedParties\": 70\n  }\n}\n```"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "inputTokens": 8668,
+      "outputTokens": 374,
+      "totalTokens": 9042
+    },
+    "metrics": {
+      "latencyMs": 7587
+    }
+  },
+  "model_used": "us.amazon.nova-pro-v1:0"
+}

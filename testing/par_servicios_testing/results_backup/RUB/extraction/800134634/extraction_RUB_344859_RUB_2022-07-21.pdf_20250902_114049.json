@@ -1,0 +1,97 @@
+{
+  "extraction_data": {
+    "result": {
+      "CompanyName": "INTERLAN S.A.S.",
+      "TaxId": "8001346341",
+      "IdentificationType": "NIT",
+      "Country": "Colombia",
+      "ConflictingSources": [],
+      "RequiresReview": "false"
+    },
+    "RelatedParties": [
+      {
+        "FirstName": "JUAN CARLOS",
+        "LastName": "ALVAREZ MESA",
+        "IdType": "NIT",
+        "IdNumber": "70564020",
+        "NoveltyType": "Registro",
+        "ParticipationPercentage": "100"
+      }
+    ],
+    "DocumentType": "company",
+    "Category": "RUB"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "{ \"result\": { \"CompanyName\": \"INTERLAN S.A.S.\", \"TaxId\": \"8001346341\", \"IdentificationType\": \"NIT\", \"Country\": \"Colombia\", \"ConflictingSources\": [], \"RequiresReview\": \"false\" }, \"RelatedParties\": [ { \"FirstName\": \"JUAN CARLOS\", \"LastName\": \"ALVAREZ MESA\", \"IdType\": \"NIT\", \"IdNumber\": \"70564020\", \"NoveltyType\": \"Registro\", \"ParticipationPercentage\": \"100\" } ], \"DocumentType\": \"company\", \"Category\": \"RUB\" }"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 4797,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 2039,
+      "output_tokens": 727
+    },
+    "ResponseMetadata": {
+      "RequestId": "b7f06045-e47d-49f0-811e-64666876e785",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Tue, 02 Sep 2025 16:40:49 GMT",
+        "content-type": "application/json",
+        "content-length": "5037",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "b7f06045-e47d-49f0-811e-64666876e785",
+        "x-amzn-bedrock-invocation-latency": "14832",
+        "x-amzn-bedrock-cache-write-input-token-count": "0",
+        "x-amzn-bedrock-cache-read-input-token-count": "2039",
+        "x-amzn-bedrock-output-token-count": "727",
+        "x-amzn-bedrock-input-token-count": "4797"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_017BYpnC2i2K8MA2VDsULQvq",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-sonnet-4-20250514",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Let me analyze this document step by step to extract the required information. This appears to be a Colombian Final Beneficiaries Report (RUB) issued by DIAN. Let me identify the key fields: 1. **CompanyName**: Looking at cell \"11. Denominación o razón social\", I can see \"INTERLAN S.A.S.\" 2. **Country**: This is a DIAN document from Colombia, so Country = \"Colombia\" 3. **TaxId**: Looking at cell \"18. Número de identificación\", I can see \"8001346341\" 4. **IdentificationType**: For DIAN Final Beneficiaries Report, this should be \"NIT\" 5. **RelatedParties**: I need to look for information in the \"Datos beneficiarios finales\" section starting from page 2. Looking at the beneficiary data on page 2: - I can see data for one beneficiary: - Cell \"30. Número de identificación\": 70564020 - Cell \"32. Número de Identificación Tributaria - NIT\": 70564020 (matches) - Cell \"34. Primer apellido\": ALVAREZ - Cell \"35. Segundo apellido\": MESA - Cell \"36. Primer nombre\": JUAN - Cell \"37. Otros nombres\": CARLOS - Cell \"57. Porcentaje de participación\": 100 - Cell \"61. Tipo de novedad\": Registro (code 1) So the RelatedParties should be: - FirstName: \"JUAN CARLOS\" (combining cells 36 and 37) - LastName: \"ALVAREZ MESA\" (combining cells 34 and 35) - IdType: \"NIT\" (for DIAN documents) - IdNumber: \"70564020\" - NoveltyType: \"Registro\" - ParticipationPercentage: \"100\" I've confirmed the beneficiary details align perfectly. The 100% participation and consistent identification numbers validate the information without raising any review flags.",
+          "signature": "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"
+        },
+        {
+          "type": "text",
+          "text": "{ \"result\": { \"CompanyName\": \"INTERLAN S.A.S.\", \"TaxId\": \"8001346341\", \"IdentificationType\": \"NIT\", \"Country\": \"Colombia\", \"ConflictingSources\": [], \"RequiresReview\": \"false\" }, \"RelatedParties\": [ { \"FirstName\": \"JUAN CARLOS\", \"LastName\": \"ALVAREZ MESA\", \"IdType\": \"NIT\", \"IdNumber\": \"70564020\", \"NoveltyType\": \"Registro\", \"ParticipationPercentage\": \"100\" } ], \"DocumentType\": \"company\", \"Category\": \"RUB\" }"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 4797,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 2039,
+        "output_tokens": 727
+      }
+    },
+    "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 9000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+  "api_used": "invoke_model"
+}

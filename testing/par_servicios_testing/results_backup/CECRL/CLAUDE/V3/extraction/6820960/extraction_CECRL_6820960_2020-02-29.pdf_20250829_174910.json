@@ -1,0 +1,88 @@
+{
+  "extraction_data": {
+    "result": {
+      "firstName": "JORGE EMILIO",
+      "lastName": "MONTES MONTES",
+      "country_issuer": "Colombia",
+      "nationality": "Colombia",
+      "identificationType": "Cédula de Ciudadanía",
+      "identificationNumber": "5.520.996",
+      "message": ""
+    },
+    "document_type": "person",
+    "category": "CECRL"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "```json { \"result\": { \"firstName\": \"JORGE EMILIO\", \"lastName\": \"MONTES MONTES\", \"country_issuer\": \"Colombia\", \"nationality\": \"Colombia\", \"identificationType\": \"Cédula de Ciudadanía\", \"identificationNumber\": \"5.520.996\", \"message\": \"\" }, \"document_type\": \"person\", \"category\": \"CECRL\" } ```"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 10,
+      "cache_creation_input_tokens": 6419,
+      "cache_read_input_tokens": 0,
+      "output_tokens": 483
+    },
+    "ResponseMetadata": {
+      "RequestId": "8417f6fd-4bc1-4fb2-b4a2-d00e78075c8c",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Fri, 29 Aug 2025 22:49:10 GMT",
+        "content-type": "application/json",
+        "content-length": "4113",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "8417f6fd-4bc1-4fb2-b4a2-d00e78075c8c",
+        "x-amzn-bedrock-invocation-latency": "9920",
+        "x-amzn-bedrock-cache-write-input-token-count": "6419",
+        "x-amzn-bedrock-cache-read-input-token-count": "0",
+        "x-amzn-bedrock-output-token-count": "483",
+        "x-amzn-bedrock-input-token-count": "10"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_01MFiL7gmUiyxBSWcqY4wYZv",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-sonnet-4-20250514",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Let me analyze this Colombian identification document: 1. Document Analysis: - This is a Colombian \"Cédula de Ciudadanía\" (citizenship card) as indicated by the header \"REPÚBLICA DE COLOMBIA IDENTIFICACIÓN PERSONAL CÉDULA DE CIUDADANÍA\" - Document number: 5.520.996 - The document shows: - APELLIDOS (Surnames): MONTES MONTES - NOMBRES (Given names): JORGE EMILIO - There's a signature and photo 2. Field Extraction: firstName: \"JORGE EMILIO\" - this is clearly labeled as \"NOMBRES\" lastName: \"MONTES MONTES\" - this is clearly labeled as \"APELLIDOS\" country_issuer: \"Colombia\" - this is shown as \"REPÚBLICA DE COLOMBIA\" in the header nationality: \"Colombia\" - default assumption since no other nationality field is shown and it's a Colombian citizenship document identificationType: \"Cédula de Ciudadanía\" - clearly stated in the document header identificationNumber: \"5.520.896\" (wait, let me look more carefully... the number appears to be \"5.520.996\") message: \"\" - everything was extracted successfully Let me double-check the identification number - it shows \"NUMERO 5.520.996\" The second part of the document appears to be some kind of additional verification document from \"SINCELEJO\" dated \"05-SEP-1955\" with some fingerprint data, but the main identification information comes from the top card.",
+          "signature": "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"
+        },
+        {
+          "type": "text",
+          "text": "```json { \"result\": { \"firstName\": \"JORGE EMILIO\", \"lastName\": \"MONTES MONTES\", \"country_issuer\": \"Colombia\", \"nationality\": \"Colombia\", \"identificationType\": \"Cédula de Ciudadanía\", \"identificationNumber\": \"5.520.996\", \"message\": \"\" }, \"document_type\": \"person\", \"category\": \"CECRL\" } ```"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 10,
+        "cache_creation_input_tokens": 6419,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 483
+      }
+    },
+    "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 8000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+  "api_used": "invoke_model"
+}

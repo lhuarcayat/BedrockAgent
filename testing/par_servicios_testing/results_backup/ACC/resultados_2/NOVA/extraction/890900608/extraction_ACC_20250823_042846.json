@@ -1,0 +1,74 @@
+{
+  "extraction_data": {
+    "path": "$pdf_path",
+    "result": {
+      "companyName": "Grupo Éxito S.A.",
+      "documentType": "Equity Composition",
+      "taxId": "POR REVISAR",
+      "country": "Colombia",
+      "identificationDetails": {
+        "source": "domain_analysis",
+        "indicators": [
+          "grupoexito.com.co"
+        ],
+        "conflictingSources": [],
+        "requiresReview": true
+      },
+      "relatedParties": [
+        {
+          "firstName": "Giovanni",
+          "lastName": "Humberto Velasquez Ruiz",
+          "identificationType": "POR REVISAR",
+          "identificationNumber": "POR REVISAR",
+          "relationshipType": "Shareholder",
+          "participationPercentage": "POR REVISAR",
+          "timeFound": 1,
+          "job": "Apoderado Especial"
+        }
+      ]
+    },
+    "document_type": "company",
+    "document_number": "$document_number",
+    "category": "ACC",
+    "confidenceScores": {
+      "companyName": 80,
+      "taxId": 50,
+      "country": 85,
+      "relatedParties": "<70"
+    }
+  },
+  "raw_response": {
+    "ResponseMetadata": {
+      "RequestId": "2f0cad3c-d4d9-47e5-ae89-d720a5cd7292",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Sat, 23 Aug 2025 09:28:45 GMT",
+        "content-type": "application/json",
+        "content-length": "1283",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "2f0cad3c-d4d9-47e5-ae89-d720a5cd7292"
+      },
+      "RetryAttempts": 0
+    },
+    "output": {
+      "message": {
+        "role": "assistant",
+        "content": [
+          {
+            "text": "```json\n{\n  \"path\": \"$pdf_path\",\n  \"result\": {\n    \"companyName\": \"Grupo Éxito S.A.\",\n    \"documentType\": \"Equity Composition\",\n    \"taxId\": \"POR REVISAR\",\n    \"country\": \"Colombia\",\n    \"identificationDetails\": {\n      \"source\": \"domain_analysis\",\n      \"indicators\": [\n        \"grupoexito.com.co\"\n      ],\n      \"conflictingSources\": [],\n      \"requiresReview\": true\n    },\n    \"relatedParties\": [\n      {\n        \"firstName\": \"Giovanni\",\n        \"lastName\": \"Humberto Velasquez Ruiz\",\n        \"identificationType\": \"POR REVISAR\",\n        \"identificationNumber\": \"POR REVISAR\",\n        \"relationshipType\": \"Shareholder\",\n        \"participationPercentage\": \"POR REVISAR\",\n        \"timeFound\": 1,\n        \"job\": \"Apoderado Especial\"\n      }\n    ]\n  },\n  \"document_type\": \"company\",\n  \"document_number\": \"$document_number\",\n  \"category\": \"ACC\",\n  \"confidenceScores\": {\n    \"companyName\": 80,\n    \"taxId\": 50,\n    \"country\": 85,\n    \"relatedParties\": \"<70\"\n  }\n}\n```"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "inputTokens": 8668,
+      "outputTokens": 276,
+      "totalTokens": 8944
+    },
+    "metrics": {
+      "latencyMs": 5633
+    }
+  },
+  "model_used": "us.amazon.nova-pro-v1:0"
+}

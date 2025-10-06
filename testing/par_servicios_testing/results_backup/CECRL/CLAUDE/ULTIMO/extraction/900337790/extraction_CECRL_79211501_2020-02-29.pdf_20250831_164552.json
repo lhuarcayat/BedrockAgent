@@ -1,0 +1,88 @@
+{
+  "extraction_data": {
+    "result": {
+      "FirstName": "JOHN WILTER",
+      "LastName": "STERLING NEIRA",
+      "CountryIssuer": "Colombia",
+      "Nationality": "colombiano",
+      "IdentificationType": "Cédula de Ciudadanía",
+      "IdentificationNumber": "79.211.501",
+      "Message": ""
+    },
+    "document_type": "person",
+    "category": "CECRL"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "```json { \"result\": { \"FirstName\": \"JOHN WILTER\", \"LastName\": \"STERLING NEIRA\", \"CountryIssuer\": \"Colombia\", \"Nationality\": \"colombiano\", \"IdentificationType\": \"Cédula de Ciudadanía\", \"IdentificationNumber\": \"79.211.501\", \"Message\": \"\" }, \"document_type\": \"person\", \"category\": \"CECRL\" } ```"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 3342,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 4300,
+      "output_tokens": 716
+    },
+    "ResponseMetadata": {
+      "RequestId": "ec4e1f2d-0007-42ec-80e6-009007711236",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Sun, 31 Aug 2025 21:45:51 GMT",
+        "content-type": "application/json",
+        "content-length": "6068",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "ec4e1f2d-0007-42ec-80e6-009007711236",
+        "x-amzn-bedrock-invocation-latency": "12838",
+        "x-amzn-bedrock-cache-write-input-token-count": "0",
+        "x-amzn-bedrock-cache-read-input-token-count": "4300",
+        "x-amzn-bedrock-output-token-count": "716",
+        "x-amzn-bedrock-input-token-count": "3342"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_019HAhU8W9yd4RVwAXNczujM",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-sonnet-4-20250514",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Looking at this document, I can see it's a Colombian Cédula de Ciudadanía (citizenship card). Let me analyze it step by step: 1. Document header shows: \"REPUBLICA DE COLOMBIA\" and \"CEDULA DE CIUDADANIA\" 2. I can see the following information on page 1: - NUMERO: 79.211.501 - STERLING NEIRA (appears to be after the number) - APELLIDOS: (label) - JOHN WILTER (appears under APELLIDOS label) - NOMBRES: (label) Now, this is interesting. Based on the extraction methodology, I need to check if this is one of those Colombian documents with misalignment issues. Looking at the layout: - We have \"NUMERO 79.211.501\" - Then \"STERLING NEIRA\" - Then \"APELLIDOS\" - Then \"JOHN WILTER\" - Then \"NOMBRES\" This seems like a typical Colombian misaligned document. The methodology specifically mentions that in Colombian documents, surnames appear first and then the label \"APELLIDOS\" along with the first name(s) and finally the label \"NAMES\" appears. In this case, the text that appears in \"APELLIDOS\" is actually the name and belongs to the \"NAMES\" label. So let me apply contextual analysis: - The number is clearly 79.211.501 - \"STERLING NEIRA\" appears to be the surnames (after the number, before the APELLIDOS label) - \"JOHN WILTER\" appears under the APELLIDOS label, but based on the methodology, this would actually be the first names From page 2, I can see: - LUGAR DE NACIMIENTO: NEIVA (HUILA) - this indicates birth in Colombia - The document is issued by Colombia So applying the extraction rules: - FirstName: \"JOHN WILTER\" (what appears under APELLIDOS label is actually the first names) - LastName: \"STERLING NEIRA\" (what appears after the number, before APELLIDOS label) - CountryIssuer: \"Colombia\" (clearly stated in header) - Nationality: \"colombiano\" (inferred from place of birth being in Colombia and document being Colombian) - IdentificationType: \"Cédula de Ciudadanía\" (clearly stated in document) - IdentificationNumber: \"79.211.501\" (clearly marked as NUMERO) - Message: \"\" (no issues, successful extraction after contextual analysis) I've confirmed the key details of this identification document, verifying each piece of information through careful cross-referencing and contextual analysis of the Colombian Cédula de Ciudadanía.",
+          "signature": "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"
+        },
+        {
+          "type": "text",
+          "text": "```json { \"result\": { \"FirstName\": \"JOHN WILTER\", \"LastName\": \"STERLING NEIRA\", \"CountryIssuer\": \"Colombia\", \"Nationality\": \"colombiano\", \"IdentificationType\": \"Cédula de Ciudadanía\", \"IdentificationNumber\": \"79.211.501\", \"Message\": \"\" }, \"document_type\": \"person\", \"category\": \"CECRL\" } ```"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 3342,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 4300,
+        "output_tokens": 716
+      }
+    },
+    "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 8000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+  "api_used": "invoke_model"
+}

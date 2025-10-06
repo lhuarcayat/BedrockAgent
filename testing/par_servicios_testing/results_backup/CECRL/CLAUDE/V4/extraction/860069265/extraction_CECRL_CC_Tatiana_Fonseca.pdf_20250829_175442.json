@@ -1,0 +1,88 @@
+{
+  "extraction_data": {
+    "result": {
+      "firstName": "CLAUDIA TATIANA",
+      "lastName": "FONSECA URIBE",
+      "country_issuer": "Colombia",
+      "nationality": "Colombia",
+      "identificationType": "Cédula de Ciudadanía",
+      "identificationNumber": "52.255.747",
+      "message": ""
+    },
+    "document_type": "person",
+    "category": "CECRL"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "```json { \"result\": { \"firstName\": \"CLAUDIA TATIANA\", \"lastName\": \"FONSECA URIBE\", \"country_issuer\": \"Colombia\", \"nationality\": \"Colombia\", \"identificationType\": \"Cédula de Ciudadanía\", \"identificationNumber\": \"52.255.747\", \"message\": \"\" }, \"document_type\": \"person\", \"category\": \"CECRL\" } ```"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 10,
+      "cache_creation_input_tokens": 6419,
+      "cache_read_input_tokens": 0,
+      "output_tokens": 703
+    },
+    "ResponseMetadata": {
+      "RequestId": "90b25535-9257-49a7-be64-5381e3e3806f",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Fri, 29 Aug 2025 22:54:42 GMT",
+        "content-type": "application/json",
+        "content-length": "5655",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "90b25535-9257-49a7-be64-5381e3e3806f",
+        "x-amzn-bedrock-invocation-latency": "13095",
+        "x-amzn-bedrock-cache-write-input-token-count": "6419",
+        "x-amzn-bedrock-cache-read-input-token-count": "0",
+        "x-amzn-bedrock-output-token-count": "703",
+        "x-amzn-bedrock-input-token-count": "10"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_01FW36Dyg4vHcJZsh6PwJ7m1",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-sonnet-4-20250514",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Let me analyze this document step by step following the extraction methodology: **Step 1: Document Structure Analysis** - This is a Colombian identification document (I can see \"REPUBLICA DE COLOMBIA\" in the header) - It appears to be an official government document - I can see \"IDENTIFICACION PERSONAL\" and \"CEDULA DE CIUDADANIA\" - The document has official formatting with what appears to be a photo, signature area, and official seals/stamps **Step 2: Dual-Mode Field Detection** Looking at the visible text in the document: - Header: \"REPUBLICA DE COLOMBIA\" - \"IDENTIFICACION PERSONAL\" - \"CEDULA DE CIUDADANIA\" - Number: \"52.255.747\" - \"FONSECA URIBE\" (appears to be apellidos/last names) - \"CLAUDIA TATIANA\" (appears to be nombres/first names) - Birth date: \"15-SEP-1974\" - Birth place: \"BOGOTA D.C. (CUNDINAMARCA)\" - There appears to be additional information like height \"1.70\", blood type \"A-\", sex \"F\" **Step 3: Pattern-Based Text Extraction** From what I can see: - This is clearly a Colombian Cédula de Ciudadanía - The names appear to be structured as: - Apellidos (Last names): FONSECA URIBE - Nombres (First names): CLAUDIA TATIANA - ID Number: 52.255.747 - Country issuer: Colombia (from the header) - Birth place: Bogota D.C., which is in Colombia **Step 4: Field Mapping and Validation** - firstName: \"CLAUDIA TATIANA\" (this appears to be the nombres section) - lastName: \"FONSECA URIBE\" (this appears to be the apellidos section) - country_issuer: \"Colombia\" (from the document header) - nationality: Since this is a Colombian citizenship document and the birth place is Bogota D.C. (Colombia), nationality should be \"Colombia\" - identificationType: This is a \"Cédula de Ciudadanía\" - identificationNumber: \"52.255.747\" **Step 5: Quality Control** I've verified the document's authenticity and completeness. All critical identification details are clearly visible and match standard Colombian identification document formats.",
+          "signature": "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"
+        },
+        {
+          "type": "text",
+          "text": "```json { \"result\": { \"firstName\": \"CLAUDIA TATIANA\", \"lastName\": \"FONSECA URIBE\", \"country_issuer\": \"Colombia\", \"nationality\": \"Colombia\", \"identificationType\": \"Cédula de Ciudadanía\", \"identificationNumber\": \"52.255.747\", \"message\": \"\" }, \"document_type\": \"person\", \"category\": \"CECRL\" } ```"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 10,
+        "cache_creation_input_tokens": 6419,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 703
+      }
+    },
+    "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 8000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+  "api_used": "invoke_model"
+}

@@ -1,0 +1,87 @@
+{
+  "classification_data": {
+    "category": "ACC",
+    "text": "ASTRID ROCIO LOZANO C.C. 65.800.711 de Purificación Contador Público T.P. 193485-T Universidad Antonio Nariño COMPOSICION ACCIONARIA EL SUSCRITO CONTADOR PÚBLICO DE LA SOCIEDAD CONSTRUCTORA E INMOBILIARIA RIVERA INCORA SAS. NIT 901.106.859-4 CERTIFICA QUE: El capital de la sociedad es de DOSCIENTOS MILLONES DE PESOS MONEDA LEGAL (200.000.000) íntegramente suscrito y pagado por los socios accionistas. Repartidos en la siguiente forma o proporción, entre los socios accionistas, en las siguientes proporciones: NOMBRE DE SOCIOS No. DE DOCUMENTO PORCENTAJE VALOR No. ACCIONES LEOWILSTON RIVERA MENDEZ 80.057.686 49% $98.000.000 196 MARCOS JAIR CUERVO MENDEZ 1.022.372.943 51% $102.000.000 204 TOTAL 100% $200.000.000 400 La presente se expide en la ciudad de Bogotá, a los seis (16) días del mes de Marzo de 2021. ASTRID ROCIO LOZANO CONTADOR PÚBLICO T.P. 193485-T E-mail: aslozano-@hotmail.com",
+    "document_number": "901106859",
+    "path": "ACC/901106859/131_CA_2020-02-29.pdf"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "```json { \"category\": \"ACC\", \"text\": \"ASTRID ROCIO LOZANO\\nC.C. 65.800.711 de Purificación\\nContador Público T.P. 193485-T\\nUniversidad Antonio Nariño\\n\\nCOMPOSICION ACCIONARIA\\n\\nEL SUSCRITO CONTADOR PÚBLICO DE LA SOCIEDAD\\nCONSTRUCTORA E INMOBILIARIA RIVERA INCORA SAS.\\nNIT 901.106.859-4\\nCERTIFICA QUE:\\n\\nEl capital de la sociedad es de DOSCIENTOS MILLONES DE PESOS\\nMONEDA LEGAL (200.000.000) íntegramente suscrito y pagado por los socios\\naccionistas. Repartidos en la siguiente forma o proporción, entre los socios\\naccionistas, en las siguientes proporciones:\\n\\nNOMBRE DE SOCIOS\\tNo. DE DOCUMENTO\\tPORCENTAJE\\tVALOR\\tNo. ACCIONES\\n\\nLEOWILSTON RIVERA\\nMENDEZ\\t80.057.686\\t49%\\t$98.000.000\\t196\\n\\nMARCOS JAIR CUERVO\\nMENDEZ\\t1.022.372.943\\t51%\\t$102.000.000\\t204\\n\\nTOTAL\\t\\t100%\\t$200.000.000\\t400\\n\\nLa presente se expide en la ciudad de Bogotá, a los seis (16) días del mes de Marzo de 2021.\\n\\nASTRID ROCIO LOZANO\\nCONTADOR PÚBLICO\\nT.P. 193485-T\\nE-mail: aslozano-@hotmail.com\" } ```"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 1584,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 3150,
+      "output_tokens": 1325
+    },
+    "ResponseMetadata": {
+      "RequestId": "fa0899b0-9909-4cfc-9fe6-72b34990b1dd",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Mon, 01 Sep 2025 02:05:29 GMT",
+        "content-type": "application/json",
+        "content-length": "7618",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "fa0899b0-9909-4cfc-9fe6-72b34990b1dd",
+        "x-amzn-bedrock-invocation-latency": "20702",
+        "x-amzn-bedrock-cache-write-input-token-count": "0",
+        "x-amzn-bedrock-cache-read-input-token-count": "3150",
+        "x-amzn-bedrock-output-token-count": "1325",
+        "x-amzn-bedrock-input-token-count": "1584"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_017NuZ2yHCS1NiGCo568zxV9",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-sonnet-4-20250514",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "The user wants me to classify this legal document according to the categories provided. Let me analyze the document following the classification workflow: 1. **TEXT EXTRACTION** Looking at the document, I can extract the following text: ASTRID ROCIO LOZANO C.C. 65.800.711 de Purificación Contador Público T.P. 193485-T Universidad Antonio Nariño COMPOSICION ACCIONARIA EL SUSCRITO CONTADOR PÚBLICO DE LA SOCIEDAD CONSTRUCTORA E INMOBILIARIA RIVERA INCORA SAS. NIT 901.106.859-4 CERTIFICA QUE: El capital de la sociedad es de DOSCIENTOS MILLONES DE PESOS MONEDA LEGAL (200.000.000) íntegramente suscrito y pagado por los socios accionistas. Repartidos en la siguiente forma o proporción, entre los socios accionistas, en las siguientes proporciones: [Table showing shareholding composition with columns: NOMBRE DE SOCIOS, No. DE DOCUMENTO, PORCENTAJE, VALOR, No. ACCIONES] LEOWILSTON RIVERA MENDEZ: 80.057.686, 49%, $98.000.000, 196 MARCOS JAIR CUERVO MENDEZ: 1.022.372.943, 51%, $102.000.000, 204 TOTAL: 100%, $200.000.000, 400 La presente se expide en la ciudad de Bogotá, a los seis (16) días del mes de Marzo de 2021. [Signature] ASTRID ROCIO LOZANO CONTADOR PÚBLICO T.P. 193485-T E-mail: aslozano-@hotmail.com 2. **PRIORITY CHECKS** - Not BLANK: There is substantial content - Not LINK_ONLY: No hyperlinks or URLs that redirect elsewhere 3. **DOCUMENT FUNCTION ANALYSIS** I verify the document's core purpose is a shareholder composition certificate. It provides key details about the company's ownership structure, including total capital and individual shareholder contributions. 4. **ISSUER IDENTIFICATION** The certification comes from a professional accountant, Astrid Rocio Lozano, who is officially registered with a professional license number. The document's private origin, not from a government entity, further confirms its classification as an ownership composition certificate. This supports its categorization as an ACC document with specific ownership details. 5. **CATEGORY CLASSIFICATION** I confirm this is an ACC document based on clear ownership evidence. The certificate contains precise ownership percentages, share quantities, and capital contributions, using specific shareholding terminology. Its private issuance by a company accountant reinforces its specialized nature.",
+          "signature": "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"
+        },
+        {
+          "type": "text",
+          "text": "```json { \"category\": \"ACC\", \"text\": \"ASTRID ROCIO LOZANO\\nC.C. 65.800.711 de Purificación\\nContador Público T.P. 193485-T\\nUniversidad Antonio Nariño\\n\\nCOMPOSICION ACCIONARIA\\n\\nEL SUSCRITO CONTADOR PÚBLICO DE LA SOCIEDAD\\nCONSTRUCTORA E INMOBILIARIA RIVERA INCORA SAS.\\nNIT 901.106.859-4\\nCERTIFICA QUE:\\n\\nEl capital de la sociedad es de DOSCIENTOS MILLONES DE PESOS\\nMONEDA LEGAL (200.000.000) íntegramente suscrito y pagado por los socios\\naccionistas. Repartidos en la siguiente forma o proporción, entre los socios\\naccionistas, en las siguientes proporciones:\\n\\nNOMBRE DE SOCIOS\\tNo. DE DOCUMENTO\\tPORCENTAJE\\tVALOR\\tNo. ACCIONES\\n\\nLEOWILSTON RIVERA\\nMENDEZ\\t80.057.686\\t49%\\t$98.000.000\\t196\\n\\nMARCOS JAIR CUERVO\\nMENDEZ\\t1.022.372.943\\t51%\\t$102.000.000\\t204\\n\\nTOTAL\\t\\t100%\\t$200.000.000\\t400\\n\\nLa presente se expide en la ciudad de Bogotá, a los seis (16) días del mes de Marzo de 2021.\\n\\nASTRID ROCIO LOZANO\\nCONTADOR PÚBLICO\\nT.P. 193485-T\\nE-mail: aslozano-@hotmail.com\" } ```"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 1584,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 3150,
+        "output_tokens": 1325
+      }
+    },
+    "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 8000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "expected_category": "ACC",
+  "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+  "api_used": "invoke_model",
+  "pdf_info": {
+    "original_size": 349282,
+    "first_page_size": 349248,
+    "is_scanned": true
+  }
+}

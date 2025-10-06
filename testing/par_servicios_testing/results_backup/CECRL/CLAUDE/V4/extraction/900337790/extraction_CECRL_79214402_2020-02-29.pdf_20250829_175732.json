@@ -1,0 +1,88 @@
+{
+  "extraction_data": {
+    "result": {
+      "firstName": "STERLING",
+      "lastName": "NEIRA RENE",
+      "country_issuer": "Colombia",
+      "nationality": "Colombia",
+      "identificationType": "Cédula de Ciudadanía",
+      "identificationNumber": "79.214.402",
+      "message": ""
+    },
+    "document_type": "person",
+    "category": "CECRL"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "```json { \"result\": { \"firstName\": \"STERLING\", \"lastName\": \"NEIRA RENE\", \"country_issuer\": \"Colombia\", \"nationality\": \"Colombia\", \"identificationType\": \"Cédula de Ciudadanía\", \"identificationNumber\": \"79.214.402\", \"message\": \"\" }, \"document_type\": \"person\", \"category\": \"CECRL\" } ```"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 10,
+      "cache_creation_input_tokens": 8212,
+      "cache_read_input_tokens": 0,
+      "output_tokens": 1193
+    },
+    "ResponseMetadata": {
+      "RequestId": "c5f0e910-b7ae-4117-b73d-0f96c71ada3a",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Fri, 29 Aug 2025 22:57:33 GMT",
+        "content-type": "application/json",
+        "content-length": "8798",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "c5f0e910-b7ae-4117-b73d-0f96c71ada3a",
+        "x-amzn-bedrock-invocation-latency": "19937",
+        "x-amzn-bedrock-cache-write-input-token-count": "8212",
+        "x-amzn-bedrock-cache-read-input-token-count": "0",
+        "x-amzn-bedrock-output-token-count": "1193",
+        "x-amzn-bedrock-input-token-count": "10"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_01WrBnTbFtAA38K7kyrAcwL3",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-sonnet-4-20250514",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Let me analyze this Colombian identification document (Cédula de Ciudadanía). From the document, I can see: Page 1: - Header: \"REPUBLICA DE COLOMBIA IDENTIFICACION PERSONAL CEDULA DE CIUDADANIA\" - Number: \"79.214.402\" - Name appears to be \"STERLING NEIRA\" (this looks like it might be the full name) - Last name section shows \"RENE\" Page 2: - Birth date: \"17-NOV-1978\" (there seems to be some inconsistency as I also see \"1979\" mentioned) - Place of birth: \"BOGOTA D.C. (CUNDINAMARCA)\" - Height: \"1.60\" - Blood type: \"O+\" - Sex: \"M\" - Issue date and place: \"03-MAR-1997 SOACHA\" Now I need to carefully parse the names. Looking at the document structure: On page 1, I can see: - \"STERLING NEIRA\" appears prominently - \"APELLIDOS\" followed by \"RENE\" - There's a \"NOMBRES\" section but it's not clearly visible what follows it This is a bit confusing because typically \"APELLIDOS\" means surnames/last names, but \"RENE\" appears to be where a first name would normally be. And \"STERLING NEIRA\" appears prominently at the top. Looking more carefully at the document structure and applying contextual analysis: The document shows: - Number: 79.214.402 - The prominent name display shows \"STERLING NEIRA\" - There's an \"APELLIDOS\" label followed by \"RENE\" - There should be a \"NOMBRES\" field somewhere Given the Colombian document format, I need to be careful about the name fields. Let me re-examine: Actually, looking more carefully at the document, I think the layout might be: - The prominent display might be showing the last name first (STERLING NEIRA) - The name configuration seems unusual and requires closer investigation I suspect \"RENE\" might be part of a more complex name structure, potentially indicating a middle or first name that doesn't follow standard naming conventions. The document's layout suggests a Colombian identification format, with specific sections for surnames and first names that don't immediately align with typical expectations. Careful cross-referencing of the visible text and document labels will help clarify the actual name components. The identification details are clear: a Colombian national ID with the number 79.214.402, originating from Bogota. The name interpretation requires nuanced examination of cultural naming conventions and document structure. I'll focus on extracting the most reliable information while acknowledging the potential complexity of name interpretation in this context.",
+          "signature": "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"
+        },
+        {
+          "type": "text",
+          "text": "```json { \"result\": { \"firstName\": \"STERLING\", \"lastName\": \"NEIRA RENE\", \"country_issuer\": \"Colombia\", \"nationality\": \"Colombia\", \"identificationType\": \"Cédula de Ciudadanía\", \"identificationNumber\": \"79.214.402\", \"message\": \"\" }, \"document_type\": \"person\", \"category\": \"CECRL\" } ```"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 10,
+        "cache_creation_input_tokens": 8212,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 1193
+      }
+    },
+    "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 8000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+  "api_used": "invoke_model"
+}

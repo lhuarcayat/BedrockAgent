@@ -1,0 +1,87 @@
+{
+  "classification_data": {
+    "category": "CECRL",
+    "text": "REPÚBLICA DE COLOMBIA IDENTIFICACIÓN PERSONAL CÉDULA DE CIUDADANÍA 79.474.197 TOVAR OSORIO ALEXANDER FECHA DE NACIMIENTO 13-ENE-1969 BOGOTÁ D.C. (CUNDINAMARCA) LUGAR DE NACIMIENTO 1.70 O+ M 31-MAR-1987 BOGOTÁ D.C. FECHA Y LUGAR DE EXPEDICIÓN INDICE DERECHO A-1500112-471532271-M-0079474197-20070120 06568-070293-03-220653306",
+    "document_number": "900285194",
+    "path": "CECRL/900285194/79474197_2020-02-29.pdf"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "```json { \"category\": \"CECRL\", \"text\": \"REPÚBLICA DE COLOMBIA\\nIDENTIFICACIÓN PERSONAL\\nCÉDULA DE CIUDADANÍA\\n79.474.197\\nTOVAR OSORIO\\nALEXANDER\\nFECHA DE NACIMIENTO 13-ENE-1969\\nBOGOTÁ D.C.\\n(CUNDINAMARCA)\\nLUGAR DE NACIMIENTO\\n1.70\\nO+\\nM\\n31-MAR-1987 BOGOTÁ D.C.\\nFECHA Y LUGAR DE EXPEDICIÓN\\nINDICE DERECHO\\nA-1500112-471532271-M-0079474197-20070120\\n06568-070293-03-220653306\" } ```"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 1584,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 3150,
+      "output_tokens": 844
+    },
+    "ResponseMetadata": {
+      "RequestId": "0ea6166c-c8bd-41f4-b654-0f5d7b9b1c35",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Sun, 31 Aug 2025 21:37:06 GMT",
+        "content-type": "application/json",
+        "content-length": "5795",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "0ea6166c-c8bd-41f4-b654-0f5d7b9b1c35",
+        "x-amzn-bedrock-invocation-latency": "12642",
+        "x-amzn-bedrock-cache-write-input-token-count": "0",
+        "x-amzn-bedrock-cache-read-input-token-count": "3150",
+        "x-amzn-bedrock-output-token-count": "844",
+        "x-amzn-bedrock-input-token-count": "1584"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_01RZD1u2bgUNFwF3S76TxTaJ",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-sonnet-4-20250514",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Let me analyze this PDF document following the classification workflow: 1. **TEXT EXTRACTION** From what I can see in the document: Front side (top image): - \"REPÚBLICA DE COLOMBIA\" - \"IDENTIFICACIÓN PERSONAL\" - \"CÉDULA DE CIUDADANÍA\" - Number: \"79.474.197\" - \"TOVAR OSORIO\" - \"ALEXANDER\" - There's a photograph of a person - There's a signature Back side (bottom image): - \"FECHA DE NACIMIENTO 13-ENE-1969\" - \"BOGOTÁ D.C.\" - \"(CUNDINAMARCA)\" - \"LUGAR DE NACIMIENTO\" - \"1.70\" (height) - \"O+\" (blood type) - \"M\" (sex) - \"31-MAR-1987 BOGOTÁ D.C.\" - \"FECHA Y LUGAR DE EXPEDICIÓN\" - There's a fingerprint - There's a barcode - Some additional numbers and codes 2. **PRIORITY CHECKS** - Not BLANK - there is significant content - Not LINK_ONLY - no hyperlinks or URLs directing to external sources 3. **DOCUMENT FUNCTION ANALYSIS** What is the MAIN PURPOSE of this document? - This is clearly a personal identification document - It shows \"CÉDULA DE CIUDADANÍA\" which is a Colombian citizenship card - It contains personal biographical data: date of birth, place of birth, blood type, sex, height - It has a photograph, signature, and fingerprint - It's issued by the Republic of Colombia for personal identification purposes This is clearly CECRL indicative. 4. **ISSUER IDENTIFICATION** - Document issued by \"REPÚBLICA DE COLOMBIA\" - a government identification authority - This confirms CECRL classification 5. **CATEGORY CLASSIFICATION** Following the order: CECRL → CERL → ACC → RUT → RUB → BY_REVIEW I confirm the document meets all CECRL criteria with robust government-issued identification features. The Colombian citizenship card provides comprehensive personal verification through multiple unique identifiers. Its official format, security elements, and comprehensive personal data definitively establish it as a standard government identification document.",
+          "signature": "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"
+        },
+        {
+          "type": "text",
+          "text": "```json { \"category\": \"CECRL\", \"text\": \"REPÚBLICA DE COLOMBIA\\nIDENTIFICACIÓN PERSONAL\\nCÉDULA DE CIUDADANÍA\\n79.474.197\\nTOVAR OSORIO\\nALEXANDER\\nFECHA DE NACIMIENTO 13-ENE-1969\\nBOGOTÁ D.C.\\n(CUNDINAMARCA)\\nLUGAR DE NACIMIENTO\\n1.70\\nO+\\nM\\n31-MAR-1987 BOGOTÁ D.C.\\nFECHA Y LUGAR DE EXPEDICIÓN\\nINDICE DERECHO\\nA-1500112-471532271-M-0079474197-20070120\\n06568-070293-03-220653306\" } ```"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 1584,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 3150,
+        "output_tokens": 844
+      }
+    },
+    "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 8000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "expected_category": "CECRL",
+  "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+  "api_used": "invoke_model",
+  "pdf_info": {
+    "original_size": 184804,
+    "first_page_size": 183392,
+    "is_scanned": true
+  }
+}

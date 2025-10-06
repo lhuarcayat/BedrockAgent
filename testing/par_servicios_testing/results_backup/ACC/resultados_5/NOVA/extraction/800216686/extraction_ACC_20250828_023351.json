@@ -1,0 +1,109 @@
+{
+  "extraction_data": {
+    "path": "ACC/800216686/231_CA_2020-02-29.pdf",
+    "result": {
+      "companyName": "AEROSUPPORT S.A.S.",
+      "documentCategory": "Equity Composition",
+      "taxId": "800.216.686-2",
+      "country": "Colombia",
+      "identificationDetails": {
+        "source": "id_analysis",
+        "indicators": [
+          "NIT",
+          "Colombia"
+        ],
+        "conflictingSources": [],
+        "requiresReview": "false"
+      },
+      "relatedParties": [
+        {
+          "type": "company",
+          "companyName": "GERMAN SALGADO VERGARA",
+          "identificationType": "C.C.",
+          "identificationNumber": "19.306.991",
+          "relationshipType": "Shareholder",
+          "participationPercentage": "49.50%",
+          "timeFound": "1",
+          "job": ""
+        },
+        {
+          "type": "company",
+          "companyName": "GLOBAL AVIATION SUPPORT CORP",
+          "identificationType": "NIT",
+          "identificationNumber": "1045179-1-546162",
+          "relationshipType": "Shareholder",
+          "participationPercentage": "49.00%",
+          "timeFound": "1",
+          "job": ""
+        },
+        {
+          "type": "person",
+          "firstName": "ADRIANA",
+          "lastName": "ARANGO JARAMILLO",
+          "identificationType": "C.C.",
+          "identificationNumber": "35469632",
+          "relationshipType": "Shareholder",
+          "participationPercentage": "1.00%",
+          "timeFound": "1",
+          "job": ""
+        },
+        {
+          "type": "person",
+          "firstName": "NICOLAS",
+          "lastName": "SALAGDADO ARANGO",
+          "identificationType": "C.C.",
+          "identificationNumber": "1020763136",
+          "relationshipType": "Shareholder",
+          "participationPercentage": "0.50%",
+          "timeFound": "1",
+          "job": ""
+        }
+      ]
+    },
+    "documentType": "company",
+    "documentNumber": "800216686",
+    "category": "ACC"
+  },
+  "raw_response": {
+    "ResponseMetadata": {
+      "RequestId": "f2327967-0321-49e0-99bb-09e71c96829b",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Thu, 28 Aug 2025 07:33:50 GMT",
+        "content-type": "application/json",
+        "content-length": "2174",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "f2327967-0321-49e0-99bb-09e71c96829b"
+      },
+      "RetryAttempts": 0
+    },
+    "output": {
+      "message": {
+        "role": "assistant",
+        "content": [
+          {
+            "text": "```json { \"result\": { \"companyName\": \"AEROSUPPORT S.A.S.\", \"documentCategory\": \"Equity Composition\", \"taxId\": \"800.216.686-2\", \"country\": \"Colombia\", \"identificationDetails\": { \"source\": \"id_analysis\", \"indicators\": [ \"NIT\", \"Colombia\" ], \"conflictingSources\": [], \"requiresReview\": \"false\" }, \"relatedParties\": [ { \"type\": \"company\", \"companyName\": \"GERMAN SALGADO VERGARA\", \"identificationType\": \"C.C.\", \"identificationNumber\": \"19.306.991\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"49.50%\", \"timeFound\": \"1\", \"job\": \"\" }, { \"type\": \"company\", \"companyName\": \"GLOBAL AVIATION SUPPORT CORP\", \"identificationType\": \"NIT\", \"identificationNumber\": \"1045179-1-546162\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"49.00%\", \"timeFound\": \"1\", \"job\": \"\" }, { \"type\": \"person\", \"firstName\": \"ADRIANA\", \"lastName\": \"ARANGO JARAMILLO\", \"identificationType\": \"C.C.\", \"identificationNumber\": \"35469632\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"1.00%\", \"timeFound\": \"1\", \"job\": \"\" }, { \"type\": \"person\", \"firstName\": \"NICOLAS\", \"lastName\": \"SALAGDADO ARANGO\", \"identificationType\": \"C.C.\", \"identificationNumber\": \"1020763136\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"0.50%\", \"timeFound\": \"1\", \"job\": \"\" } ] }, \"documentType\": \"company\", \"category\": \"ACC\" } ```"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "inputTokens": 5407,
+      "outputTokens": 495,
+      "totalTokens": 5902
+    },
+    "metrics": {
+      "latencyMs": 8701
+    },
+    "model_id": "us.amazon.nova-pro-v1:0",
+    "api_used": "converse",
+    "model_params": {
+      "maxTokens": 8000,
+      "topP": 1,
+      "temperature": 0
+    }
+  },
+  "model_used": "us.amazon.nova-pro-v1:0",
+  "api_used": "converse"
+}

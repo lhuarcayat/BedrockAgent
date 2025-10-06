@@ -1,0 +1,120 @@
+{
+  "extraction_data": {
+    "result": {
+      "companyName": "APROGAS S.A.C.",
+      "documentCategory": "Equity Composition",
+      "taxId": "POR REVISAR",
+      "country": "Perú",
+      "identificationDetails": {
+        "source": "text_reference",
+        "indicators": [
+          "Lima",
+          "RENIEC Peru",
+          "DNI format",
+          "Peruvian legal structure"
+        ],
+        "conflictingSources": [],
+        "requiresReview": "true"
+      },
+      "relatedParties": [
+        {
+          "type": "person",
+          "firstName": "Ticiano",
+          "lastName": "Muñoz Sanchez",
+          "identificationType": "DNI",
+          "identificationNumber": "09163077",
+          "relationshipType": "Shareholder",
+          "participationPercentage": "99.9",
+          "timeFound": "1",
+          "job": "Presidente"
+        },
+        {
+          "type": "person",
+          "firstName": "Chano",
+          "lastName": "Muñoz Llontop",
+          "identificationType": "DNI",
+          "identificationNumber": "70008642",
+          "relationshipType": "Shareholder",
+          "participationPercentage": "0.1",
+          "timeFound": "1",
+          "job": "Secretario"
+        }
+      ]
+    },
+    "documentType": "company",
+    "category": "ACC"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "{ \"result\": { \"companyName\": \"APROGAS S.A.C.\", \"documentCategory\": \"Equity Composition\", \"taxId\": \"POR REVISAR\", \"country\": \"Perú\", \"identificationDetails\": { \"source\": \"text_reference\", \"indicators\": [ \"Lima\", \"RENIEC Peru\", \"DNI format\", \"Peruvian legal structure\" ], \"conflictingSources\": [], \"requiresReview\": \"true\" }, \"relatedParties\": [ { \"type\": \"person\", \"firstName\": \"Ticiano\", \"lastName\": \"Muñoz Sanchez\", \"identificationType\": \"DNI\", \"identificationNumber\": \"09163077\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"99.9\", \"timeFound\": \"1\", \"job\": \"Presidente\" }, { \"type\": \"person\", \"firstName\": \"Chano\", \"lastName\": \"Muñoz Llontop\", \"identificationType\": \"DNI\", \"identificationNumber\": \"70008642\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"0.1\", \"timeFound\": \"1\", \"job\": \"Secretario\" } ] }, \"documentType\": \"company\", \"category\": \"ACC\" }"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 9,
+      "cache_creation_input_tokens": 20251,
+      "cache_read_input_tokens": 0,
+      "output_tokens": 1123
+    },
+    "ResponseMetadata": {
+      "RequestId": "390f4c11-a4bb-4ecc-8d72-87450e0dedca",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Sun, 31 Aug 2025 05:38:41 GMT",
+        "content-type": "application/json",
+        "content-length": "7108",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "390f4c11-a4bb-4ecc-8d72-87450e0dedca",
+        "x-amzn-bedrock-invocation-latency": "23147",
+        "x-amzn-bedrock-cache-write-input-token-count": "20251",
+        "x-amzn-bedrock-cache-read-input-token-count": "0",
+        "x-amzn-bedrock-output-token-count": "1123",
+        "x-amzn-bedrock-input-token-count": "9"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_012Ro7g5ZXMNNR6Ztfvv3kkp",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-sonnet-4-20250514",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Let me analyze this document step by step. **Step 1: Document Analysis** Looking at this document, I can see: - It's a notarized document titled \"ACTA GENERAL DE ACCIONISTAS DE APROGAS SAC\" - Page 1 shows it's from Lima, Peru (November 14, 2019) - Page 3 has a biometric authentication document from RENIEC (Peru) - The company appears to be \"APROGAS S.A.C.\" **Step 2: Root Level Extraction** **companyName**: From page 1, I can see \"ACTA GENERAL DE ACCIONISTAS DE APROGAS SAC\" and later \"APROGAS S.A.C.\" - this is the issuing company. **taxId**: Looking through the document, I need to find the company's RUC (since it's Peru). I see mentions of individual DNIs but need to look for the company's RUC. On page 4, I can see the company is registered as \"APROGAS SAC, INSCRITO EN LA PARTIDA ELECTRÓNICA Nº 11016561 DEL REGISTRO DE PERSONAS JURÍDICAS DE LIMA\" but I don't see the RUC clearly stated in the document. **country**: This is clearly Peru based on: - Lima mentioned multiple times - RENIEC document (Peruvian identity verification system) - DNI format matches Peru - Legal structure references Peruvian law **Step 3: Related Parties Processing** Looking at page 1, I can see the shareholders: - TICIANO MUÑOZ SANCHEZ, identified with DNI N° 09163077, TITULAR DE 549,945 ACCIONES - CHANO MUÑOZ LLONTOP, identified with DNI N° 70008642, TITULAR DE 55 ACCIONES Page 4 also lists: - TICIANO MUÑOZ SANCHEZ, IDENTIFICADO CON DNI 09163077, TITULAR DE 549,945 ACCIONES A S/. 1.00 CADA UNA - CHANO MUÑOZ LLONTOP, IDENTIFICADO CON DNI 70008642, TITULAR DE 55 ACCIONES A S/. 1.00 CADA UNA - TOTAL ACCIONES: 550,000 ACCIONES From page 4, I can also see that Ticiano Muñoz Sanchez is acting as \"PRESIDENTE\" and Chano Muñoz Llontop as \"SECRETARIO\". I'll calculate the ownership percentages precisely. Ticiano owns 99.99% of the shares, with Chano holding just 0.01%. The total share capital is 550,000 shares, each valued at 1 Peruvian Sol. The company's leadership is concentrated between these two individuals, with Ticiano clearly being the primary shareholder and president. Validating the document reveals Peru as the country of origin, with DNI as the standard identification type for individuals. However, the company's RUC (tax identification number) remains unconfirmed and requires further review.",
+          "signature": "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"
+        },
+        {
+          "type": "text",
+          "text": "{ \"result\": { \"companyName\": \"APROGAS S.A.C.\", \"documentCategory\": \"Equity Composition\", \"taxId\": \"POR REVISAR\", \"country\": \"Perú\", \"identificationDetails\": { \"source\": \"text_reference\", \"indicators\": [ \"Lima\", \"RENIEC Peru\", \"DNI format\", \"Peruvian legal structure\" ], \"conflictingSources\": [], \"requiresReview\": \"true\" }, \"relatedParties\": [ { \"type\": \"person\", \"firstName\": \"Ticiano\", \"lastName\": \"Muñoz Sanchez\", \"identificationType\": \"DNI\", \"identificationNumber\": \"09163077\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"99.9\", \"timeFound\": \"1\", \"job\": \"Presidente\" }, { \"type\": \"person\", \"firstName\": \"Chano\", \"lastName\": \"Muñoz Llontop\", \"identificationType\": \"DNI\", \"identificationNumber\": \"70008642\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"0.1\", \"timeFound\": \"1\", \"job\": \"Secretario\" } ] }, \"documentType\": \"company\", \"category\": \"ACC\" }"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 9,
+        "cache_creation_input_tokens": 20251,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 1123
+      }
+    },
+    "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 8000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+  "api_used": "invoke_model"
+}

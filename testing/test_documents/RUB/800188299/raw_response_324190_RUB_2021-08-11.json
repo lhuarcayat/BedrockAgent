@@ -1,0 +1,33 @@
+{
+  "ResponseMetadata": {
+    "RequestId": "81cbdc8a-37d1-4178-9da6-3045ce36120d",
+    "HTTPStatusCode": 200,
+    "HTTPHeaders": {
+      "date": "Tue, 17 Jun 2025 14:28:02 GMT",
+      "content-type": "application/json",
+      "content-length": "1354",
+      "connection": "keep-alive",
+      "x-amzn-requestid": "81cbdc8a-37d1-4178-9da6-3045ce36120d"
+    },
+    "RetryAttempts": 0
+  },
+  "output": {
+    "message": {
+      "role": "assistant",
+      "content": [
+        {
+          "text": "```json\n{\n  \"path\": \"s3://par-servicios-poc-dev-filling-desk/par-servicios-poc/RUB/800188299/324190_RUB_2021-08-11.pdf\",\n  \"result\": {\n    \"companyName\": \"LINALCA INFORMATICA S.A.S. - BIC\",\n    \"country\": \"Colombia\",\n    \"documentType\": \"NIT\",\n    \"taxId\": \"92555765\",\n    \"relatedParties\": [\n      {\n        \"firstName\": \"SANCHEZ\",\n        \"lastName\": \"FERRE JUAN CLAUDIO\",\n        \"identificationType\": \"NIT\",\n        \"identificationNumber\": \"92555765\",\n        \"noveltyType\": \"Actualización\",\n        \"participationPercentage\": \"49.6\"\n      },\n      {\n        \"firstName\": \"MARTHA\",\n        \"lastName\": \"PATRICIA\",\n        \"identificationType\": \"NIT\",\n        \"identificationNumber\": \"41324009\",\n        \"noveltyType\": \"Actualización\",\n        \"participationPercentage\": \"40.22\"\n      }\n    ]\n  },\n  \"confidenceScores\": {\n    \"companyName\": 100,\n    \"documentType\": 100,\n    \"country\": 100,\n    \"taxId\": 100,\n    \"relatedParties\": 90\n  },\n  \"document_type\": \"company\",\n  \"document_number\": \"800188299\",\n  \"category\": \"RUB\"\n}\n```"
+        }
+      ]
+    }
+  },
+  "stopReason": "end_turn",
+  "usage": {
+    "inputTokens": 8126,
+    "outputTokens": 365,
+    "totalTokens": 8491
+  },
+  "metrics": {
+    "latencyMs": 8208
+  }
+}

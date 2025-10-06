@@ -1,0 +1,88 @@
+{
+  "extraction_data": {
+    "result": {
+      "firstName": "LUIS DARIO",
+      "lastName": "HERNANDEZ RAMIREZ",
+      "country_issuer": "Colombia",
+      "nationality": "Colombia",
+      "identificationType": "Cédula de Ciudadanía",
+      "identificationNumber": "80.163.642",
+      "message": ""
+    },
+    "document_type": "person",
+    "category": "CECRL"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "```json { \"result\": { \"firstName\": \"LUIS DARIO\", \"lastName\": \"HERNANDEZ RAMIREZ\", \"country_issuer\": \"Colombia\", \"nationality\": \"Colombia\", \"identificationType\": \"Cédula de Ciudadanía\", \"identificationNumber\": \"80.163.642\", \"message\": \"\" }, \"document_type\": \"person\", \"category\": \"CECRL\" } ```"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 10,
+      "cache_creation_input_tokens": 6003,
+      "cache_read_input_tokens": 0,
+      "output_tokens": 632
+    },
+    "ResponseMetadata": {
+      "RequestId": "4bcec6b4-c66e-42dd-866d-773e745d4178",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Fri, 29 Aug 2025 15:54:37 GMT",
+        "content-type": "application/json",
+        "content-length": "5169",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "4bcec6b4-c66e-42dd-866d-773e745d4178",
+        "x-amzn-bedrock-invocation-latency": "9981",
+        "x-amzn-bedrock-cache-write-input-token-count": "6003",
+        "x-amzn-bedrock-cache-read-input-token-count": "0",
+        "x-amzn-bedrock-output-token-count": "632",
+        "x-amzn-bedrock-input-token-count": "10"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_01LWEP1uVaxzBXj7vj8TQ3bA",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-sonnet-4-20250514",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Looking at this document, I can see it's a Colombian identification document - a \"Cédula de Ciudadanía\" from Colombia. Let me analyze the document carefully: From the image, I can see: - Header: \"REPUBLICA DE COLOMBIA\" and \"IDENTIFICACION PERSONAL\" and \"CEDULA DE CIUDADANIA\" - Number: \"80.163.642\" - A surname section that appears to say \"HERNANDEZ RAMIREZ\" - A names section that shows \"LUIS DARIO\" - There's a photo of a person - Date of birth: \"10-NOV-1983\" - Place of birth: \"BOGOTA D.C\" (Cundinamarca) - There's other information like height (1.70), blood type (AB+), sex (M) - There's a fingerprint and barcode at the bottom Let me extract the information following the methodology: 1. Document Structure Analysis: This is clearly an official Colombian government identification document - a \"Cédula de Ciudadanía\" (Citizenship Card), which is the primary national ID document in Colombia. 2. Field Detection: Looking at the text, I can see: - \"HERNANDEZ RAMIREZ\" appears to be in the surname/apellidos section - \"LUIS DARIO\" appears to be in the names/nombres section - The document number is \"80.163.642\" - Country issuer: Colombia (clear from \"REPUBLICA DE COLOMBIA\" header) - Document type: \"CEDULA DE CIUDADANIA\" 3. Field Extraction: - firstName: \"LUIS DARIO\" (from the nombres section) - lastName: \"HERNANDEZ RAMIREZ\" (from the apellidos section) - country_issuer: \"Colombia\" (from document header) - nationality: \"Colombia\" (since this is a Colombian citizenship document, nationality would be Colombian) - identificationType: \"Cédula de Ciudadanía\" (from document header) - identificationNumber: \"80.163.642\" The document appears to be an official identification record with all key details successfully captured. No additional messages or warnings are present.",
+          "signature": "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"
+        },
+        {
+          "type": "text",
+          "text": "```json { \"result\": { \"firstName\": \"LUIS DARIO\", \"lastName\": \"HERNANDEZ RAMIREZ\", \"country_issuer\": \"Colombia\", \"nationality\": \"Colombia\", \"identificationType\": \"Cédula de Ciudadanía\", \"identificationNumber\": \"80.163.642\", \"message\": \"\" }, \"document_type\": \"person\", \"category\": \"CECRL\" } ```"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 10,
+        "cache_creation_input_tokens": 6003,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 632
+      }
+    },
+    "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 8000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+  "api_used": "invoke_model"
+}

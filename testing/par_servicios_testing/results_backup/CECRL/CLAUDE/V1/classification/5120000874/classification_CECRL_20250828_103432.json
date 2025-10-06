@@ -1,0 +1,87 @@
+{
+  "classification_data": {
+    "category": "CECRL",
+    "text": "BUNDESREPUBLIK DEUTSCHLAND FEDERAL REPUBLIC OF GERMANY RÉPUBLIQUE FÉDÉRALE D'ALLEMAGNE REISEPASS PASSPORT PASSEPORT Type / Type / Type P Code / Code / Code D Pass-Nr. / Passport No. / Passeport No C7VRFD59K 1 Familienname / Surname / Nom KOSFELD 2. Vornamen / Given names / Prénoms MICHAEL 3. Geburtstag / Date of birth / Date de naissance 20.02.1956 4. Geschlecht / Sex / Sexe M 5. Staatsangehörigkeit / Nationality / Nationalité DEUTSCH 6. Geburtsort / Place of birth / Lieu de naissance MÖNCHENGLADBACH 7. Ausstellungsdatum / Date of issue / Date de délivrance 14.02.2019 8. Gültig bis / Date of expiry / Date d'expiration 13.02.2029 9. Behörde / Authority / Autorité STADT SIEGEN P<D<<KOSFELD<<MICHAEL<<<<<<<<<<<<<<<<<<<<<<<<<<< C7VRFD59K2D<<6603285M2902131<<<<<<<<<<<<<6",
+    "document_number": "5120000874",
+    "path": "CECRL/5120000874/C7VRF059K_2020-04-13.pdf"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "```json { \"category\": \"CECRL\", \"text\": \"BUNDESREPUBLIK DEUTSCHLAND\\nFEDERAL REPUBLIC OF GERMANY RÉPUBLIQUE FÉDÉRALE D'ALLEMAGNE\\nREISEPASS\\nPASSPORT PASSEPORT\\nType / Type / Type\\nP\\nCode / Code / Code\\nD\\nPass-Nr. / Passport No. / Passeport No\\nC7VRFD59K\\n1 Familienname / Surname / Nom\\nKOSFELD\\n2. Vornamen / Given names / Prénoms\\nMICHAEL\\n3. Geburtstag / Date of birth / Date de naissance\\n20.02.1956\\n4. Geschlecht / Sex / Sexe\\nM\\n5. Staatsangehörigkeit / Nationality / Nationalité\\nDEUTSCH\\n6. Geburtsort / Place of birth / Lieu de naissance\\nMÖNCHENGLADBACH\\n7. Ausstellungsdatum / Date of issue / Date de délivrance\\n14.02.2019\\n8. Gültig bis / Date of expiry / Date d'expiration\\n13.02.2029\\n9. Behörde / Authority / Autorité\\nSTADT SIEGEN\\nP<D<<KOSFELD<<MICHAEL<<<<<<<<<<<<<<<<<<<<<<<<<<<\\nC7VRFD59K2D<<6603285M2902131<<<<<<<<<<<<<6\" } ```"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 9,
+      "cache_creation_input_tokens": 4496,
+      "cache_read_input_tokens": 0,
+      "output_tokens": 994
+    },
+    "ResponseMetadata": {
+      "RequestId": "ebee2acb-12f1-43e1-8896-18a8888852b0",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Thu, 28 Aug 2025 15:34:18 GMT",
+        "content-type": "application/json",
+        "content-length": "3943",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "ebee2acb-12f1-43e1-8896-18a8888852b0",
+        "x-amzn-bedrock-invocation-latency": "27537",
+        "x-amzn-bedrock-cache-write-input-token-count": "4496",
+        "x-amzn-bedrock-cache-read-input-token-count": "0",
+        "x-amzn-bedrock-output-token-count": "994",
+        "x-amzn-bedrock-input-token-count": "9"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_01GgP7F98KH3rhFTb2R6EFMp",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-3-7-sonnet-20250219",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Let me analyze the document according to the classification workflow: 1. TEXT EXTRACTION The document appears to be a German passport (\"REISEPASS\" / \"BUNDESREPUBLIK DEUTSCHLAND\"). I can extract the following text: - BUNDESREPUBLIK DEUTSCHLAND (Federal Republic of Germany) - REISEPASS (Passport) - Type/Type: P - Code/Code: D - Passport No: C7VRFD59K - Name: KOSFELD - First name/Prénoms: MICHAEL - Date of birth: 20.02.1956 - Sex/Sexe: M - Nationality: DEUTSCH - Place of birth: MÖNCHENGLADBACH - Date of issue: 14.02.2019 - Date of expiry: 13.02.2029 - Authority: STADT SIEGEN - Machine readable zone: P<D<<KOSFELD<<MICHAEL<<<<<<<<<<<<<<<<<<<<<<<<<<<< C7VRFD59K2D<<6603285M2902131<<<<<<<<<<<<<6 2. PRIORITY CHECKS This is not a blank document or a link-only document. 3. ISSUER IDENTIFICATION The issuer is a government authority - specifically the German Federal government (BUNDESREPUBLIK DEUTSCHLAND). This is not issued by DIAN, a Chamber of Commerce, or a corporate entity. 4. DOCUMENT FUNCTION ANALYSIS This is a personal identification document (passport) issued by the German government for an individual. It is not a corporate document, tax document, regulatory compliance document, or anything related to ownership structures or corporate entities. 5. CATEGORY CLASSIFICATION Looking at the defined categories: - This is a personal identification document, which might initially suggest CECRL - However, CECRL specifically refers to \"Official personal identification documents of legal representatives of companies\" - There is no indication in this document that the individual is a legal representative of a company - This is simply a personal passport 6. CONFIDENCE VALIDATION The document is clearly a German passport (personal identification document), but there is no evidence that this person is a legal representative of a company, which would be required for CECRL classification. Based on this analysis, this document doesn't fit cleanly into any of the defined categories. It's a personal identification document but not specifically for a legal representative of a company (as required for CECRL). There's no evidence of corporate relationship, tax documentation, or any other business context. Therefore, the most appropriate classification would be POR_REVISAR, as this document doesn't clearly fit into any of the specific defined categories.",
+          "signature": "ErcBCkgIBxABGAIiQNv8crrsvK8nuR4/ocffbSK04U/j4ZHBbsn5BKuCZG0YGHiXgVMM1XrnGwaliIJf9mEajb9iKrKda1xcLp+XXFwSDNVw0pXSBOvVDlSgCxoMz9lwz3f9Xenex7X3IjAbowTpKAL6n+kqwXfhjTsQ5RravpINARZPicoqbxmyaw3304m58U+NuDXT/elGbMsqHXDGhrDWRlMJnSeTNDd7tV0uPt6X+Wai3w5BDiKNGAI="
+        },
+        {
+          "type": "text",
+          "text": "```json { \"category\": \"CECRL\", \"text\": \"BUNDESREPUBLIK DEUTSCHLAND\\nFEDERAL REPUBLIC OF GERMANY RÉPUBLIQUE FÉDÉRALE D'ALLEMAGNE\\nREISEPASS\\nPASSPORT PASSEPORT\\nType / Type / Type\\nP\\nCode / Code / Code\\nD\\nPass-Nr. / Passport No. / Passeport No\\nC7VRFD59K\\n1 Familienname / Surname / Nom\\nKOSFELD\\n2. Vornamen / Given names / Prénoms\\nMICHAEL\\n3. Geburtstag / Date of birth / Date de naissance\\n20.02.1956\\n4. Geschlecht / Sex / Sexe\\nM\\n5. Staatsangehörigkeit / Nationality / Nationalité\\nDEUTSCH\\n6. Geburtsort / Place of birth / Lieu de naissance\\nMÖNCHENGLADBACH\\n7. Ausstellungsdatum / Date of issue / Date de délivrance\\n14.02.2019\\n8. Gültig bis / Date of expiry / Date d'expiration\\n13.02.2029\\n9. Behörde / Authority / Autorité\\nSTADT SIEGEN\\nP<D<<KOSFELD<<MICHAEL<<<<<<<<<<<<<<<<<<<<<<<<<<<\\nC7VRFD59K2D<<6603285M2902131<<<<<<<<<<<<<6\" } ```"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 9,
+        "cache_creation_input_tokens": 4496,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 994
+      }
+    },
+    "model_id": "us.anthropic.claude-3-7-sonnet-20250219-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 8000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "expected_category": "CECRL",
+  "model_used": "us.anthropic.claude-3-7-sonnet-20250219-v1:0",
+  "api_used": "invoke_model",
+  "pdf_info": {
+    "original_size": 241711,
+    "first_page_size": 239989,
+    "is_scanned": true
+  }
+}

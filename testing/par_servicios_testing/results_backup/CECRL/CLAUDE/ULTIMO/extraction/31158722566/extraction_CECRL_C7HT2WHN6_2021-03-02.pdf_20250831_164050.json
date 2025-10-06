@@ -1,0 +1,88 @@
+{
+  "extraction_data": {
+    "result": {
+      "FirstName": "EIKE HERMANN RICHARD",
+      "LastName": "DREWES",
+      "CountryIssuer": "Alemania",
+      "Nationality": "alemán",
+      "IdentificationType": "Pasaporte",
+      "IdentificationNumber": "C7HT2WHN6",
+      "Message": ""
+    },
+    "document_type": "person",
+    "category": "CECRL"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "```json { \"result\": { \"FirstName\": \"EIKE HERMANN RICHARD\", \"LastName\": \"DREWES\", \"CountryIssuer\": \"Alemania\", \"Nationality\": \"alemán\", \"IdentificationType\": \"Pasaporte\", \"IdentificationNumber\": \"C7HT2WHN6\", \"Message\": \"\" }, \"document_type\": \"person\", \"category\": \"CECRL\" } ```"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 1604,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 4300,
+      "output_tokens": 569
+    },
+    "ResponseMetadata": {
+      "RequestId": "972b1528-ce03-4445-804f-b18fb4f04375",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Sun, 31 Aug 2025 21:40:49 GMT",
+        "content-type": "application/json",
+        "content-length": "4807",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "972b1528-ce03-4445-804f-b18fb4f04375",
+        "x-amzn-bedrock-invocation-latency": "10425",
+        "x-amzn-bedrock-cache-write-input-token-count": "0",
+        "x-amzn-bedrock-cache-read-input-token-count": "4300",
+        "x-amzn-bedrock-output-token-count": "569",
+        "x-amzn-bedrock-input-token-count": "1604"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_013p5UKWiFuRLNCh2wjSJ3b1",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-sonnet-4-20250514",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "I need to analyze this German passport document and extract the required information. Let me carefully examine the document. Looking at the document, I can see: 1. This is clearly a German passport (Reisepass) - I can see \"DEUTSCHLAND\" text and the German federal eagle emblem 2. The person's name appears to be \"DREWES\" as surname and \"EIKE HERMANN RICHARD\" as given names 3. There's a passport number visible: \"C7HT2WHN6\" 4. Birth information shows \"28.05.1974\" and \"OLDENBURG (OLD)\" 5. The document shows \"DEUTSCH\" which indicates German nationality 6. There's text showing \"STADT RHEINE\" which appears to be the issuing place Let me extract the information systematically: FirstName: Looking at the document, I can see \"EIKE HERMANN RICHARD\" listed under what appears to be the given names section LastName: \"DREWES\" appears to be the surname CountryIssuer: This is clearly a German passport, so \"Alemania\" (Germany in Spanish) Nationality: The document shows \"DEUTSCH\" which means German nationality, so \"alemán\" in Spanish IdentificationType: This is a German passport (Reisepass), which translates to \"Pasaporte\" in Spanish IdentificationNumber: The passport number appears to be \"C7HT2WHN6\" Message: The document appears to be clearly readable and all information can be extracted, so this should be empty Let me double-check the layout and make sure I'm reading the names correctly. The document appears to follow standard German passport format where: - Surname: DREWES - Given names: EIKE HERMANN RICHARD This matches the machine-readable zone at the bottom which shows \"P<D<<DREWES<<EIKE<HERMANN<RICHARD\"",
+          "signature": "EoIOCkgIBxABGAIqQInPrvCc1+A4meSWP081RFGcTWneBGGbCiGHSmBeem+qgY4zN39aY58YC3VfKgYOAKSS9MNt+/BYOwVOvEYpDEcSDOpTnrCd6XsGIJ0CgRoMsuLqbLq+FCaX289lIjBHp2K625Qa73IdRMCx5ddP9nBq1hphe1sZyMXrQr2GppMB2QzVBPcVsRiB98V1p+wq5wxukTML7bbXXxeP1AXNXwh+qHiRT/LFGcJDJlfjQm5jEWkyq6Zxw0B3vIuTsO3e3r8WxAht0NgQdFMBlvIJ+4oMDa56VHE+mhpMvu3UWGKMbODERvkKqGhdMrbbMV38/jUprJbjeHBwe7HWTp1rJ7wNDBl5yceTVBiydsSz+VC2Vyonnz+AGnkqH/XqZ+0nCISq6L+EpxtdznNPnflBDo+l4VxmS8VQjQ0pJXdRe0+Bp0cCpfAilvKq9m5YhFCSipkCkNIj0niU0ES1FqNQGhacSalPNnuMYjv012aOGQjCtet+DlapNN/11gC1kRZV37zvhZ8MVdkljxLSMH502DznTxC5Jcpt0TtwGnSIbvGGJT7J2cFLVFbQ+XLzsntNIN/HwcwYWjFusBFFUh1r/EK0tB7d5Q9KtB+9+OhSagFfEMwBcv652PnmaT52Bgr45ne8Ui+jpMUU07m//D1eEvv6maFJbYf9ZOHoJReaiKMwwxyUOoCsIy7Y8U66GxgaP7oEH7lOaMV3oK6q1xxp5bNAVXa4Hq+7TkV9Ug0ZKc1fyJKXrA/bL3kK0PcZCdKU5uB1CcuzzEXVV7zAX7BHskCOj918PjUoQTgd+WgiQLaPUMyynebr2EJgYVIlFzeWhkNGW72xZoWL29PoXHJAktJI7kWZglbIonXx/Mjar0qa/Qf5FdxtAAHDK3nURjwD32g2elPGcYWHYk2fuGYz7kQLYYiPI14Zojuem05shVvBTLSGHMT5p2MqEFhb8MnIvrvXIQel0CiOCe3tskiQkxBTFLk5D0bQXMV3mlqHG20byh/uxtOcrHoBU8eE0MxsJD+ECLxJKtd/wsYRrP9RQ35QHHt+jVcviUvcjR8R2dbT77A8BLMH1/7fVdbHXP8+Qk/g6lSTUIdXaQjZWh+1qM569hfMX2lLLo94qnGRm/x42uBhTUJZMvlQ+HGdS4QE4lCHtVBpJRdbesiIh51MVONwQjvFa18TE6x8nLUhWG+hJDidp9FU0AskwpjCOzdZubs8ZpiaTLpHlq+DTbYbqvSYggahrwEtWl1O/l6z8FSCi16tMYejTBdIY9ZocXBq7FaygS+HUpMqLVV5t7iBnMNGhIqKVHFgHBTwORQ+z9YLs7YD/qTnlbanjLGYRfCnXsnucPadmQNIm4MRtXy+p7c5d8LJM6JjzCSGoVbs1+Os6ThAGETO2igJ2oqNumD2rYSFuN5SGoq9oDmNVP9//dO+axE4Ohm6Xxua1X4XIIAs31Co+jDmGA4+sxdUWLY5/u2bRb4IKTS88p69JQZAH1CP3adOnJXQwO4xsb4/EVLtpRll07dPXx5iyfeV3rPTznEaBnW2Ph01kfdvVcaONMEf29YQlbik1z1f6CxpERdUr+wOG2UqLQfswQVHU2mZcWVdNKGmrAi/AwtYZLjeNOCKq/aNlTSZZMMsS2Um8NklM6Rp6Ox7aEBFkKQh/aPHTM1Y4vN/OQpsQXTUyvLm+12Pnk+WJYCwzMoW/PMPNTRvaRM4XVbPM4kk+RG8adlLyzXEz6AgRi87iQvRuAFrf83t48ePTsLouJBoZekxWwiGLY+0XH92PWwSqhN7ziwjMwzASAq6ya+fA5/IyLiAJFXcc8ChtmQ84AOyyKyENGCzf5e6ILeZfkMM3Lph5zZEvHhndQQ+9ITO1I5DDsSUSUl5pXC2aJO2J4IKQXctRC9Nxwo3LBSO1uxjAS/J2rz/tLourXSXFGbzGpFspDaEeQiAvVDZ6iURtAPyasturInT6K2FYkkvX7CJRNHzYi/irgtUIMw+0BtxHroaDOF5vuH/L834e/GUp6MwwELulEdxVBX8RzP9w7mEc1ne8IWWY3PfaxB5qMGGo/aloEtEVQc3G9MdXLdiyL4OaowCLKj3Hmswq3+U4YZB/yxc8EE4o/anX+OWkst9G4bxBrJQQyJn0p0BreRXiZYyZgz3wHmjyYXhBcckObpLLSHWxmT7gwmNyp2+n5tcCHsGQUvVSbiqGU0IG4D3eE6ySMiuKg/UJEhbsRY2A6oz3vyuURBrhn2LOk0BHuvpheZCDRODxroGKHjuIQoPR+eyfShFVtbeRChXao85ZSMffOjiDN8Cmh5ynu422YKkxUGzDLyo+cgzEOTCTyTJZUZJzZbf706EIrRS6H3qV5fvoMM/CUpRoKXwALt4HQfwGAE="
+        },
+        {
+          "type": "text",
+          "text": "```json { \"result\": { \"FirstName\": \"EIKE HERMANN RICHARD\", \"LastName\": \"DREWES\", \"CountryIssuer\": \"Alemania\", \"Nationality\": \"alemán\", \"IdentificationType\": \"Pasaporte\", \"IdentificationNumber\": \"C7HT2WHN6\", \"Message\": \"\" }, \"document_type\": \"person\", \"category\": \"CECRL\" } ```"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 1604,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 4300,
+        "output_tokens": 569
+      }
+    },
+    "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 8000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+  "api_used": "invoke_model"
+}

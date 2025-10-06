@@ -1,0 +1,35 @@
+{
+  "ResponseMetadata": {
+    "RequestId": "edecda03-9eef-4426-abda-2e74888d9135",
+    "HTTPStatusCode": 200,
+    "HTTPHeaders": {
+      "date": "Thu, 05 Jun 2025 21:57:49 GMT",
+      "content-type": "application/json",
+      "content-length": "1985",
+      "connection": "keep-alive",
+      "x-amzn-requestid": "edecda03-9eef-4426-abda-2e74888d9135"
+    },
+    "RetryAttempts": 0
+  },
+  "output": {
+    "message": {
+      "role": "assistant",
+      "content": [
+        {
+          "text": "## Reasoning Steps:\n\n1. **Document Analysis**: The provided document appears to be empty - the document_content field is completely blank with no text, images, or any extractable information.\n\n2. **Document Validation**: Since there is no content to analyze, I cannot identify any official identification document elements, seals, headers, or government indicators.\n\n3. **Extraction Attempt**: With no text or visual content available, it's impossible to extract any personal identification information such as names, document types, identification numbers, or country information.\n\n4. **Quality Assessment**: This appears to be a case where the document is completely unreadable/inaccessible rather than just poor quality OCR.\n\n5. **Message Assignment**: Given the complete absence of content, this falls under the category requiring the message \"Necesita revisión manual, documento ilegible\" as it's not possible to find any information.\n\n6. **Confidence Scoring**: All fields receive the lowest possible confidence scores since no extraction was possible.\n\n```json\n{\n  \"path\": \"document.pdf\",\n  \"result\": {\n    \"firstName\": \"\",\n    \"lastName\": \"\",\n    \"country_issuer\": \"\",\n    \"nationality\": \"\",\n    \"identificationType\": \"\",\n    \"identificationNumber\": \"\",\n    \"message\": \"Necesita revisión manual, documento ilegible\"\n  },\n  \"confidenceScores\": {\n    \"firstName\": 0,\n    \"lastName\": 0,\n    \"country_issuer\": 0,\n    \"nationality\": 0,\n    \"identificationType\": 0,\n    \"identificationNumber\": 0\n  },\n  \"document_type\": \"person\",\n  \"document_number\": \"1\",\n  \"category\": \"CECRL\"\n}\n```"
+        }
+      ]
+    }
+  },
+  "stopReason": "end_turn",
+  "usage": {
+    "inputTokens": 3421,
+    "outputTokens": 402,
+    "totalTokens": 3823,
+    "cacheReadInputTokens": 0,
+    "cacheWriteInputTokens": 0
+  },
+  "metrics": {
+    "latencyMs": 10786
+  }
+}

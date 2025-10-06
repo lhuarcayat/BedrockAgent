@@ -1,0 +1,90 @@
+{
+  "extraction_data": {
+    "path": "CECRL/900397317/19200964_2020-02-29.pdf",
+    "result": {
+      "firstName": "LUIS IGNACIO",
+      "lastName": "HERNÁNDEZ DÍAZ",
+      "country_issuer": "Colombia",
+      "nationality": "Colombia",
+      "identificationType": "Cédula de Ciudadanía",
+      "identificationNumber": "19.200.964",
+      "message": ""
+    },
+    "document_type": "person",
+    "documentNumber": "900397317",
+    "category": "CECRL"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "```json { \"result\": { \"firstName\": \"LUIS IGNACIO\", \"lastName\": \"HERNÁNDEZ DÍAZ\", \"country_issuer\": \"Colombia\", \"nationality\": \"Colombia\", \"identificationType\": \"Cédula de Ciudadanía\", \"identificationNumber\": \"19.200.964\", \"message\": \"\" }, \"document_type\": \"person\", \"category\": \"CECRL\" } ```"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 10,
+      "cache_creation_input_tokens": 6039,
+      "cache_read_input_tokens": 0,
+      "output_tokens": 780
+    },
+    "ResponseMetadata": {
+      "RequestId": "da1e2cd7-9d74-4acb-8c5b-b4c0919b22d1",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Thu, 28 Aug 2025 15:48:03 GMT",
+        "content-type": "application/json",
+        "content-length": "3231",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "da1e2cd7-9d74-4acb-8c5b-b4c0919b22d1",
+        "x-amzn-bedrock-invocation-latency": "16537",
+        "x-amzn-bedrock-cache-write-input-token-count": "6039",
+        "x-amzn-bedrock-cache-read-input-token-count": "0",
+        "x-amzn-bedrock-output-token-count": "780",
+        "x-amzn-bedrock-input-token-count": "10"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_01JDJvyXUGkvuhHFKd7FddNk",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-3-7-sonnet-20250219",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "I need to extract information from the Colombian ID document (Cédula de Ciudadanía) shown in the image. Let me analyze the content systematically: ## Document Analysis 1. **Document Type**: This appears to be a \"Cédula de Ciudadanía\" from Colombia (visible in the header \"REPÚBLICA DE COLOMBIA\" and \"CÉDULA DE CIUDADANÍA\") 2. **Country of Issue**: Colombia 3. **Document Structure**: This shows both sides of a Colombian national ID card ## Field Detection and Extraction ### From the visible text in the image: **Front side (top ID card)**: - \"REPÚBLICA DE COLOMBIA\" - Confirms country issuer - \"IDENTIFICACIÓN PERSONAL\" - Document type category - \"CÉDULA DE CIUDADANÍA\" - Specific document type - Number: \"19.200.964\" - ID number - Last name: \"HERNÁNDEZ DÍAZ\" - Appears under \"APELLIDOS\" - First name: \"LUIS IGNACIO\" - Appears under \"NOMBRES\" - There's a signature at the bottom **Back side (bottom ID card)**: - Birth date: \"09-MAY-1953\" - Birth place: \"BOGOTÁ D.C. (CUNDINAMARCA)\" - Height: \"1.66\" - Blood type: \"B-\" - Sex: \"M\" (Male) - Issue date/location: \"28-AGO-1974 BOGOTÁ D.C.\" - Fingerprint and barcode visible ### Mapping to required fields: 1. **firstName**: \"LUIS IGNACIO\" 2. **lastName**: \"HERNÁNDEZ DÍAZ\" 3. **country_issuer**: \"Colombia\" 4. **nationality**: \"Colombia\" (Colombian citizens have Cédula de Ciudadanía, so nationality matches issuer) 5. **identificationType**: \"Cédula de Ciudadanía\" 6. **identificationNumber**: \"19.200.964\" 7. **message**: \"\" (Empty as the document is valid and all fields are clear) ## Final Output Let me prepare the JSON according to the schema: ```json { \"result\": { \"firstName\": \"LUIS IGNACIO\", \"lastName\": \"HERNÁNDEZ DÍAZ\", \"country_issuer\": \"Colombia\", \"nationality\": \"Colombia\", \"identificationType\": \"Cédula de Ciudadanía\", \"identificationNumber\": \"19.200.964\", \"message\": \"\" }, \"document_type\": \"person\", \"category\": \"CECRL\" } ``` The extraction is complete and all required fields have been populated according to the document contents and the schema requirements.",
+          "signature": "ErcBCkgIBxABGAIiQDjlT1tDe1QCPCeYTW1WDHp+JbaOOqaRAAsYS6TLhMWr34Jvb/OJ1/D+mj0DZse4Y54ZIdGhQDtJyha66qihU9gSDAsvq4tLVRCNJBxI0BoMpehEZ9153MeRxLvmIjA4ywDz8oU9vdpQ4w1jteihsvxct0Erl9qYd0mNME4uwjppAvmSBjEKTY49VIRMWIgqHWOm5tuyzLF3zhfU76p9rfSJrgAJAj4L7v2iGMXwGAI="
+        },
+        {
+          "type": "text",
+          "text": "```json { \"result\": { \"firstName\": \"LUIS IGNACIO\", \"lastName\": \"HERNÁNDEZ DÍAZ\", \"country_issuer\": \"Colombia\", \"nationality\": \"Colombia\", \"identificationType\": \"Cédula de Ciudadanía\", \"identificationNumber\": \"19.200.964\", \"message\": \"\" }, \"document_type\": \"person\", \"category\": \"CECRL\" } ```"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 10,
+        "cache_creation_input_tokens": 6039,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 780
+      }
+    },
+    "model_id": "us.anthropic.claude-3-7-sonnet-20250219-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 8000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "model_used": "us.anthropic.claude-3-7-sonnet-20250219-v1:0",
+  "api_used": "invoke_model"
+}

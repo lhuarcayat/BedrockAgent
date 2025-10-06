@@ -1,0 +1,107 @@
+{
+  "extraction_data": {
+    "result": {
+      "CompanyName": "LUIS FRANCISCO GALEANO HERRERA S A S",
+      "Country": "COLOMBIA",
+      "TaxId": "9 0 0 4 7 5 0 7 7",
+      "VerificationDigit": "1",
+      "IdentificationType": "NIT",
+      "PersonType": "Persona jurídica",
+      "ConflictingSources": [],
+      "RequiresReview": "false"
+    },
+    "RelatedParties": [
+      {
+        "FirstName": "FELIPE",
+        "LastName": "RAMIREZ MATIZ",
+        "IdType": "Cédula de Ciudadanía",
+        "IdNumber": "19265580",
+        "RelationshipType": "Revisor fiscal principal"
+      },
+      {
+        "FirstName": "MARIA DEL ROSARIO",
+        "LastName": "CORDON SALAZAR",
+        "IdType": "Cédula de Ciudadanía",
+        "IdNumber": "52713382",
+        "RelationshipType": "Contador"
+      }
+    ],
+    "Address": "CR 67 100 20 OF 401 BRR FLORESTA, Bogotá, D.C., Bogotá D.C.",
+    "DocumentGenerationDate": "24-06-2024 02:06:46PM",
+    "DocumentType": "company",
+    "Category": "RUT"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "{ \"result\": { \"CompanyName\": \"LUIS FRANCISCO GALEANO HERRERA S A S\", \"Country\": \"COLOMBIA\", \"TaxId\": \"9 0 0 4 7 5 0 7 7\", \"VerificationDigit\": \"1\", \"IdentificationType\": \"NIT\", \"PersonType\": \"Persona jurídica\", \"ConflictingSources\": [], \"RequiresReview\": \"false\" }, \"RelatedParties\": [ { \"FirstName\": \"FELIPE\", \"LastName\": \"RAMIREZ MATIZ\", \"IdType\": \"Cédula de Ciudadanía\", \"IdNumber\": \"19265580\", \"RelationshipType\": \"Revisor fiscal principal\" }, { \"FirstName\": \"MARIA DEL ROSARIO\", \"LastName\": \"CORDON SALAZAR\", \"IdType\": \"Cédula de Ciudadanía\", \"IdNumber\": \"52713382\", \"RelationshipType\": \"Contador\" } ], \"Address\": \"CR 67 100 20 OF 401 BRR FLORESTA, Bogotá, D.C., Bogotá D.C.\", \"DocumentGenerationDate\": \"24-06-2024 02:06:46PM\", \"DocumentType\": \"company\", \"Category\": \"RUT\" }"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 9522,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 2990,
+      "output_tokens": 1340
+    },
+    "ResponseMetadata": {
+      "RequestId": "f515f32b-db05-495b-a16d-eb65c17cc120",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Tue, 02 Sep 2025 22:03:15 GMT",
+        "content-type": "application/json",
+        "content-length": "7264",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "f515f32b-db05-495b-a16d-eb65c17cc120",
+        "x-amzn-bedrock-invocation-latency": "19791",
+        "x-amzn-bedrock-cache-write-input-token-count": "0",
+        "x-amzn-bedrock-cache-read-input-token-count": "2990",
+        "x-amzn-bedrock-output-token-count": "1340",
+        "x-amzn-bedrock-input-token-count": "9522"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_01QC4rqcm4VNiSB2Vvhizpzo",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-sonnet-4-20250514",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Let me analyze this Colombian RUT document issued by DIAN to extract the required information. Looking through the document: 1. CompanyName (Cell 35. Razón social): I can see \"LUIS FRANCISCO GALEANO HERRERA S A S\" 2. Country (Cell 38. País): I can see \"COLOMBIA\" 3. TaxId (Cell 5. Número de Identificación Tributaria (NIT)): I can see \"9 0 0 4 7 5 0 7 7\" 4. VerificationDigit (Cell 6. DV): I can see \"1\" 5. IdentificationType: For RUT documents, this is \"NIT\" 6. PersonType (Cell 24. Tipo de contribuyente): I can see \"Persona jurídica\" 7. Address: I need to combine cells 41, 40, and 39: - Cell 41. Dirección principal: \"CR 67 100 20 OF 401 BRR FLORESTA\" - Cell 40. Ciudad/Municipio: \"Bogotá, D.C.\" - Cell 39. Departamento: \"Bogotá D.C.\" 8. DocumentGenerationDate: At the bottom of pages I can see \"Fecha generación documento PDF: 24-06-2024 02:06:46PM\" 9. RelatedParties: I need to look for the related parties sections. Looking at pages 3 and 4, I can see: Page 3 has representatives: - REPRS LEGAL PRIN (Representante Legal Principal): GALEANO HERRERA LUIS FRANCISCO with Cédula de Ciudadanía 19336891 - REPRS LEGAL SUPL (Representante Legal Suplente): GALEANO NIÑO LAURA XIMENA with Cédula de Ciudadan 1019077438 I've identified additional key personnel on page 4. The fiscal reviewer and accountant are RAMIREZ MATIZ FELIPE (Fiscal Reviewer) and CORDON SALAZAR MARIA DEL ROSARIO (Accountant), each with their respective citizen identification numbers. After careful review, no \"socios\" or additional members were found in the document. I will not include these individuals as RelatedParties since they do not meet the specific classification rules for such designation. The document shows the contador's full name as Maria del Rosario Cor Salazar, with a citizenship document number of 52713382. While the revisor fiscal suplente section remains empty, I've noted the TaxId format should be preserved with spaces between digits.",
+          "signature": "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"
+        },
+        {
+          "type": "text",
+          "text": "{ \"result\": { \"CompanyName\": \"LUIS FRANCISCO GALEANO HERRERA S A S\", \"Country\": \"COLOMBIA\", \"TaxId\": \"9 0 0 4 7 5 0 7 7\", \"VerificationDigit\": \"1\", \"IdentificationType\": \"NIT\", \"PersonType\": \"Persona jurídica\", \"ConflictingSources\": [], \"RequiresReview\": \"false\" }, \"RelatedParties\": [ { \"FirstName\": \"FELIPE\", \"LastName\": \"RAMIREZ MATIZ\", \"IdType\": \"Cédula de Ciudadanía\", \"IdNumber\": \"19265580\", \"RelationshipType\": \"Revisor fiscal principal\" }, { \"FirstName\": \"MARIA DEL ROSARIO\", \"LastName\": \"CORDON SALAZAR\", \"IdType\": \"Cédula de Ciudadanía\", \"IdNumber\": \"52713382\", \"RelationshipType\": \"Contador\" } ], \"Address\": \"CR 67 100 20 OF 401 BRR FLORESTA, Bogotá, D.C., Bogotá D.C.\", \"DocumentGenerationDate\": \"24-06-2024 02:06:46PM\", \"DocumentType\": \"company\", \"Category\": \"RUT\" }"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 9522,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 2990,
+        "output_tokens": 1340
+      }
+    },
+    "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 9000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+  "api_used": "invoke_model"
+}

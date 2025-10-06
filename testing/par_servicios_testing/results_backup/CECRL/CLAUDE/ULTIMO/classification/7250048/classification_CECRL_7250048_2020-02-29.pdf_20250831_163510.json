@@ -1,0 +1,87 @@
+{
+  "classification_data": {
+    "category": "CECRL",
+    "text": "REPUBLICA DE COLOMBIA IDENTIFICACION PERSONAL CEDULA DE CIUDADANIA NUMERO 7.250.048 HERRERA MESA APELIDOS LEONCIO DE JESUS NOMBRES FECHA DE NACIMIENTO 27-SEP-1964 REMEDIOS (ANTIOQUIA) LUGAR DE NACIMIENTO 1.60 ESTATURA A+ G.S RH M SEXO 22-MAR-1983 PUERTO BOYACA FECHA Y LUGAR DE EXPEDICION REGISTRADOR NACIONAL CARLOS ARIEL SANCHEZ TORRES INDICE DERICHO A-0721400-00139388-M-007250048-200812 16 000836314A 741000269",
+    "document_number": "7250048",
+    "path": "CECRL/7250048/7250048_2020-02-29.pdf"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "```json { \"category\": \"CECRL\", \"text\": \"REPUBLICA DE COLOMBIA\\nIDENTIFICACION PERSONAL\\nCEDULA DE CIUDADANIA\\n\\nNUMERO 7.250.048\\nHERRERA MESA\\nAPELIDOS\\nLEONCIO DE JESUS\\nNOMBRES\\n\\nFECHA DE NACIMIENTO 27-SEP-1964\\nREMEDIOS\\n(ANTIOQUIA)\\nLUGAR DE NACIMIENTO\\n\\n1.60\\nESTATURA\\n\\nA+\\nG.S RH\\n\\nM\\nSEXO\\n\\n22-MAR-1983 PUERTO BOYACA\\nFECHA Y LUGAR DE EXPEDICION\\n\\nREGISTRADOR NACIONAL\\nCARLOS ARIEL SANCHEZ TORRES\\n\\nINDICE DERICHO\\n\\nA-0721400-00139388-M-007250048-200812 16\\n\\n000836314A\\n\\n741000269\" } ```"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 1608,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 3150,
+      "output_tokens": 921
+    },
+    "ResponseMetadata": {
+      "RequestId": "c7c93b45-6f7f-48d8-8dda-375906f0543d",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Sun, 31 Aug 2025 21:35:10 GMT",
+        "content-type": "application/json",
+        "content-length": "6048",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "c7c93b45-6f7f-48d8-8dda-375906f0543d",
+        "x-amzn-bedrock-invocation-latency": "14523",
+        "x-amzn-bedrock-cache-write-input-token-count": "0",
+        "x-amzn-bedrock-cache-read-input-token-count": "3150",
+        "x-amzn-bedrock-output-token-count": "921",
+        "x-amzn-bedrock-input-token-count": "1608"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_01MWWoH74Ca7LBfM485rvC4F",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-sonnet-4-20250514",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "I need to analyze this PDF document and classify it into one of the predefined categories. Let me follow the classification workflow step by step. 1. **TEXT EXTRACTION**: Looking at the document, I can see: - \"REPUBLICA DE COLOMBIA\" - \"IDENTIFICACION PERSONAL\" - \"CEDULA DE CIUDADANIA\" - \"NUMERO 7.250.048\" - \"HERRERA MESA\" - \"APEUDOS\" - \"LEONCIO DE JESUS\" - \"NOMBRES\" - \"FECHA DE NACIMIENTO 27-SEP-1964\" - \"REMEDIOS\" - \"(ANTIOQUIA)\" - \"LUGAR DE NACIMIENTO\" - \"1.60\" - \"ESTATURA\" - \"A+\" - \"G.S RH\" - \"M\" - \"SEXO\" - \"22-MAR-1983 PUERTO BOYACA\" - \"FECHA Y LUGAR DE EXPEDICION\" - There's also a photograph of a person and a fingerprint - A barcode at the bottom - Various other registry numbers 2. **PRIORITY CHECKS**: This document is not BLANK (it has significant content) and not LINK_ONLY (no URLs redirecting elsewhere). 3. **DOCUMENT FUNCTION ANALYSIS**: - This document's main purpose is personal identification - It contains \"CEDULA DE CIUDADANIA\" which is a citizenship identity card - It has personal biographical data: date of birth (27-SEP-1964), place of birth (REMEDIOS, ANTIOQUIA), blood type (A+), sex (M), height (1.60) - It has individual references with photograph and fingerprint - It has government-issued personal identification number (7.250.048) - It has security elements like barcode and official formatting This clearly indicates CECRL (personal identification document). 4. **ISSUER IDENTIFICATION**: This is issued by the government of Colombia for personal identification purposes, which confirms CECRL. The document definitively belongs to the CECRL category, presenting comprehensive personal identification details from an official Colombian government source. The card contains critical identifying information, including full name, birth details, physical characteristics, and unique government-issued identification number, all authenticated with biometric markers like a photograph and fingerprint.",
+          "signature": "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"
+        },
+        {
+          "type": "text",
+          "text": "```json { \"category\": \"CECRL\", \"text\": \"REPUBLICA DE COLOMBIA\\nIDENTIFICACION PERSONAL\\nCEDULA DE CIUDADANIA\\n\\nNUMERO 7.250.048\\nHERRERA MESA\\nAPELIDOS\\nLEONCIO DE JESUS\\nNOMBRES\\n\\nFECHA DE NACIMIENTO 27-SEP-1964\\nREMEDIOS\\n(ANTIOQUIA)\\nLUGAR DE NACIMIENTO\\n\\n1.60\\nESTATURA\\n\\nA+\\nG.S RH\\n\\nM\\nSEXO\\n\\n22-MAR-1983 PUERTO BOYACA\\nFECHA Y LUGAR DE EXPEDICION\\n\\nREGISTRADOR NACIONAL\\nCARLOS ARIEL SANCHEZ TORRES\\n\\nINDICE DERICHO\\n\\nA-0721400-00139388-M-007250048-200812 16\\n\\n000836314A\\n\\n741000269\" } ```"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 1608,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 3150,
+        "output_tokens": 921
+      }
+    },
+    "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 8000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "expected_category": "CECRL",
+  "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+  "api_used": "invoke_model",
+  "pdf_info": {
+    "original_size": 679308,
+    "first_page_size": 674957,
+    "is_scanned": true
+  }
+}

@@ -1,0 +1,87 @@
+{
+  "classification_data": {
+    "category": "CECRL",
+    "text": "REPÚBLICA DE COLOMBIA IDENTIFICACIÓN PERSONAL CÉDULA DE CIUDADANÍA NÚMERO 79.567.566 LAYTON AREVALO APELLIDOS LEONARDO NOMBRES FECHA DE NACIMIENTO 28-OCT-1972 BOGOTÁ D.C. (CUNDINAMARCA) LUGAR DE NACIMIENTO 1.71 O+ M ESTATURA G.S. RH SEXO 17-ABR-1991 BOGOTÁ D.C. FECHA Y LUGAR DE EXPEDICIÓN REGISTRADURÍA NACIONAL INDICE DERECHO A-1500112-45149102-M-007950766B-20060707 024620918TD-02 185255744",
+    "document_number": "900284349",
+    "path": "CECRL/900284349/79567666_2020-02-29.pdf"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "```json { \"category\": \"CECRL\", \"text\": \"REPÚBLICA DE COLOMBIA\\nIDENTIFICACIÓN PERSONAL\\nCÉDULA DE CIUDADANÍA\\nNÚMERO 79.567.566\\nLAYTON AREVALO\\nAPELLIDOS\\nLEONARDO\\nNOMBRES\\nFECHA DE NACIMIENTO 28-OCT-1972\\nBOGOTÁ D.C.\\n(CUNDINAMARCA)\\nLUGAR DE NACIMIENTO\\n1.71\\nO+\\nM\\nESTATURA G.S. RH SEXO\\n17-ABR-1991 BOGOTÁ D.C.\\nFECHA Y LUGAR DE EXPEDICIÓN\\nREGISTRADURÍA NACIONAL\\nINDICE DERECHO\\nA-1500112-45149102-M-007950766B-20060707\\n024620918TD-02 185255744\" } ```"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 1584,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 3150,
+      "output_tokens": 931
+    },
+    "ResponseMetadata": {
+      "RequestId": "8d2dbe27-01d7-4545-85b3-bf785f8a5150",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Sun, 31 Aug 2025 21:36:53 GMT",
+        "content-type": "application/json",
+        "content-length": "5961",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "8d2dbe27-01d7-4545-85b3-bf785f8a5150",
+        "x-amzn-bedrock-invocation-latency": "14106",
+        "x-amzn-bedrock-cache-write-input-token-count": "0",
+        "x-amzn-bedrock-cache-read-input-token-count": "3150",
+        "x-amzn-bedrock-output-token-count": "931",
+        "x-amzn-bedrock-input-token-count": "1584"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_01LbNUdSjmYNtWf8DaUUsDQa",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-sonnet-4-20250514",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Let me analyze this document following the classification workflow: 1. **TEXT EXTRACTION** I can see text from the document: - \"REPÚBLICA DE COLOMBIA\" - \"IDENTIFICACIÓN PERSONAL\" - \"CÉDULA DE CIUDADANÍA\" - \"NÚMERO 79.567.566\" - \"LAYTON AREVALO\" - \"APELLIDOS\" - \"LEONARDO\" - \"NOMBRES\" - \"FECHA DE NACIMIENTO 28-OCT-1972\" - \"BOGOTÁ D.C.\" - \"(CUNDINAMARCA)\" - \"LUGAR DE NACIMIENTO\" - \"1.71\" (height) - \"O+\" (blood type) - \"M\" (sex) - \"ESTATURA G.S. RH SEXO\" - \"17-ABR-1991 BOGOTÁ D.C.\" - \"FECHA Y LUGAR DE EXPEDICIÓN\" - \"REGISTRADURIA NACIONAL\" - \"INDICE DERECHO\" (right index fingerprint) - Various barcodes and ID numbers at the bottom 2. **PRIORITY CHECKS** - Not BLANK: substantial content present - Not LINK_ONLY: no hyperlinks/URLs 3. **DOCUMENT FUNCTION ANALYSIS** This is clearly a personal identification document. The main purpose is to identify an individual person (Leonardo Layton Arevalo). It contains: - Personal biographical data: date of birth (28-OCT-1972), place of birth (Bogotá D.C.), blood type (O+), sex (M), height (1.71) - Individual photograph - Fingerprint - Government-issued personal identification number (79.567.566) - Security elements: barcodes, official format 4. **ISSUER IDENTIFICATION** This is issued by a government identification authority - \"REGISTRADURIA NACIONAL\" (National Registry Office) in Colombia, which is the government entity responsible for personal identification documents. 5. **CATEGORY CLASSIFICATION** I confirm this document precisely matches the CECRL classification. The Colombian national ID contains all critical identification markers, with comprehensive personal details and official government validation. The document's structure and security features align perfectly with standard identification protocols. No warning signs indicate alternative document types like business certificates or tax records.",
+          "signature": "EqASCkgIBxABGAIqQMLQXTQgy5x6E45APruUmjSuEn1zWCYgyH+pWfxgcB6u3samRCNi7x+zwuOQegbPNlgVqFVVmKX9T2/B00/bgwUSDDMcqF2t4F1g3aym6RoMw3gSbQaO0OSpO3gjIjCyU8HN91CkMfvnXa8VoemFulKOq12jiJ0v71fvWLbRgi0ELnsO/Jk4eWqyVJSekasqhRFlAnXsUEyt9qU2FS46BAUj2UrNDzxpcYQLGtmxbuHaHoSnUYz2Y5AyWjs6f5j2MWIkR9Z+wwAoFdAkdRaxKoIaubAHQpikBL1Q6hZfIOadl1vRovDKNIr8uGPovyUdt0RWcsI5yISlAJh0zqz7iF4LqT8UxOmZyoXZG4FWMfAg9bRR5ZRTW6Vt19CX/9oHkE682QYqIR+RU2Ol4a5tOOZnFkZU8wn4DGbEQ4a/mW1kkA1GHJIMvE9KHPwPaYugZrs5JZ2elxJkODSDd1EGq91x9NBCa4JAWi6R4/cmYHFIukvTo8PHYtyg/X0Holp+f7rtCyB8zOhwrqu8WbyHy49CIdnKEm/gu1/R8Gz+GDHrzp5zQIsYqK/9RrT9oBtU3AX9o2GECG+LitgWhf7sGdcqHVTy68/ij5KbS2A6v6IdJ5WX2C8eCJuYbaWv7ojH+/FwteksqsQzBILpGPrC9Rip7AB++bedJSjmRKzYNTu7xphyNsytO5gLigNgYorSjl3OaUTUaYE95ZkudPNBrBfaNYD1TEGuv08hSpmIlFyj6VntkoDP4DRus8zAZYfqDcArvN/oap5pG3fzIQVFDROb3Bfo2EJUyeKA+MguyCsiGWQeM7Be328pZCui8OyE54TBjixJV0pqFnOBB4J3Yj2oela14Fla/a2I1PDZvUFX7MjmsjLuFrWPYNOSNjRoYGErKCguXcIRuBC7au0c3EQARJwZWe37f+FM8DXZlI0c4cUvnuqbkEs+rAldlOI2Ii63crKakqOlBmGAh8fJa8W87COhsaAJ0fUQ3BxIpcWFmo7RfR0aYbZHsW674Pl/ZKurfwd0r+P60/+HIZ9mqlBx0jh2BIdItppwkrle//HF9JC8+egbxPaoOOSE1SzxTqrtn5DGif4D8XuOKV7ymLwxrzTrMVKtIlVzsqtSCR5bh32lG4dEnZmqJkR0FsGdx6iYOE1df1TaX7HBJgUVLozZc6+2Vwp0sHK5a3tt3cekiVnFNLSlXRybiS9+rHtW1sSdlf/+ZamsKHTRbjx6/FmQ2fSSSPV2AFTYxwEN9cyNa+NjiodjLc8ZxdUY6UT+d4ydLpzzYdkICy4h0EsM5uICmjMff7RoKhuDEFQkUZxSCUNq815V+AWW0+2toyXqs7y3jFiMofX2TBJxw+vr9tyAXUvBxxAh4wdBRV3b/UDewwO65x7g7ueT9e8uHQgmXdPdzO8k5c+1h7bZU80PSA4TjrBGxGzKP4fKyZGrXHlk9hKDWwB+dVJwuFJKQQeGJlxQwtlgxYbK8p5NMCgWpGTQeoxjNF4sLJwPXSMoTsOj5DDw0oxPD+ugTQNOeY2/KmUdfQCQKuaOdr7PjvlGnb2G6xyVQmP8U0CfvJdGOExgyqVUOwcI+CtuOj3dplsmYpRvXIWO7WuGKLfPIkFQtW3b012dqTTfdyLFYQ0BdtMSW6SA0UEEUTDNl8V/+N3qR6JO2MF1iB65Wsikvusx9L9Qb5Jo7yRzIii9ubKYg6GISk/iE/aJwmRh+bRYTxpUpvA/uLdyAeMxL++sWCml4pK/aYL15HPN9ZWLGoMjVAF2PgEHbiinl8x2uWhiJPUm/eLhu1cl5wdt14mR8loUCpDvRkzvHOKYen5A267N7YnLtc2GLc6TlEuBhozh9+hTnxAMRuNN12mwhnV7GttxDe6PcndcvUBaVD2XEkDNwcRGd5QeZOWHHPenKq87RVrIC6pxTIvfrvEuTx5hqOWmKW3QK8o7uBDpP6oYM6J3KGs5RQNmt5uScxgFVCnn6LgX1Sw32uJHNOAOpahtKI98HtLir6r2m3xUNgrEyAqhSXCykeFKMqERNuzoDPKy2Q2USjTa0rnHX3IzO5vSYMtt7cEPIJbdpPkcxDcejwn3o1MGRj9MAbGRZXnX0aayfwQO6T6FXPpCq59wTghQiebyyPz3NdIsGs1/oGTGj0kkgF0VHz5GsXvZ30Uovt/RGOw/oMoHDrNigsmHWTXQBVSNRBz9LK6sN4TAEkzz3UEikHnCbqb2eZq+UN+lJurqM6gw3iR98kiskSAYFglPO57ZPqhnSSGUQjR9KKXSEYFvw44GH+tTUU1drVLRNXWuq9X7UFcpkJKUwlsQLSD6iZuWA8HDfYnJvXTPBzvnPz1tqYoQL69sA4l1svC0dpMJmpQvIzYJO39Fz7PMYjK0vpwhzFVx1JUaAH73dzpZAv0Mz2BafG57X/U6WCXR0NOWiIjUOBL/FELhQ4WNLAk5kKgYi28H/tfEWJrnzR758oo/1VIiKkYWNtA5dgHIFDxfwv35zZEyno4NSdi7wFgjQ/D2oGfQ4kwIGpS3mQCkb0Yqbg1FpzJKGTliKr/WXfRU2cvwup/IGrM9JcVxwFuTy058RdUugoTo8Facu+E3vad9WveD9iWIS/Ph+8P5vSB52SBCgc/iO4zyh56VwkLUdipj1Dt2Nl0g8MpfzRlluLhNrMmeeQ6H4rJ3ZrNgrDD8x4R7FjE+jokV+77N5OLCZ63O5lxYMtJ61tRsNLWWEHB9IDN+g2557XA1/hlVCQjZWzncFMUkcH9fwBCvqHW3XUa8JzuVlfAS3tq832mXdDXtrTdCeOOMr6ROrW8sGvu9zr5IlV/ZeZPCHPjgV+IUSvcjKfA/IxSiE7tDPCIOV+p4EreuLVuMeyEF3mCHOWOuSQGDjY2WlSmsq4/d/XOdZ2CLD5dvhuxsZPR7kz2mYfGgpiOEwUX/eEOHtjw4McsLSfvtuM3WvJth2rFOIc9RD0eTHgVXUmdBdPpGqD9BzMz4ZscznFVeNtXy3i6P+GjNYzqflfaj7LR3S3XziUg2nUADjhFK6DzJxsDALhP6sV58/zUF7A8AGbPF3eTjwx5jesIyiMcgc3xost58I8gWsQc0tHEIuMX4wLQYAQ=="
+        },
+        {
+          "type": "text",
+          "text": "```json { \"category\": \"CECRL\", \"text\": \"REPÚBLICA DE COLOMBIA\\nIDENTIFICACIÓN PERSONAL\\nCÉDULA DE CIUDADANÍA\\nNÚMERO 79.567.566\\nLAYTON AREVALO\\nAPELLIDOS\\nLEONARDO\\nNOMBRES\\nFECHA DE NACIMIENTO 28-OCT-1972\\nBOGOTÁ D.C.\\n(CUNDINAMARCA)\\nLUGAR DE NACIMIENTO\\n1.71\\nO+\\nM\\nESTATURA G.S. RH SEXO\\n17-ABR-1991 BOGOTÁ D.C.\\nFECHA Y LUGAR DE EXPEDICIÓN\\nREGISTRADURÍA NACIONAL\\nINDICE DERECHO\\nA-1500112-45149102-M-007950766B-20060707\\n024620918TD-02 185255744\" } ```"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 1584,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 3150,
+        "output_tokens": 931
+      }
+    },
+    "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 8000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "expected_category": "CECRL",
+  "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+  "api_used": "invoke_model",
+  "pdf_info": {
+    "original_size": 279924,
+    "first_page_size": 275599,
+    "is_scanned": true
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "extraction_data": {
+    "path": "CECRL/3250169/3250169_2020-02-29.pdf",
+    "result": {
+      "firstName": "JOSE MANUEL",
+      "lastName": "HOYOS ROJAS",
+      "country_issuer": "Colombia",
+      "nationality": "Colombia",
+      "identificationType": "Cédula de Ciudadanía",
+      "identificationNumber": "9.250.153",
+      "message": ""
+    },
+    "document_type": "person",
+    "documentNumber": "3250169",
+    "category": "CECRL"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "```json { \"result\": { \"firstName\": \"JOSE MANUEL\", \"lastName\": \"HOYOS ROJAS\", \"country_issuer\": \"Colombia\", \"nationality\": \"Colombia\", \"identificationType\": \"Cédula de Ciudadanía\", \"identificationNumber\": \"9.250.153\", \"message\": \"\" }, \"document_type\": \"person\", \"category\": \"CECRL\" } ```"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 10,
+      "cache_creation_input_tokens": 5982,
+      "cache_read_input_tokens": 0,
+      "output_tokens": 597
+    },
+    "ResponseMetadata": {
+      "RequestId": "b1bf10b6-d805-4f69-b116-9e7a6cdbe327",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Thu, 28 Aug 2025 15:31:49 GMT",
+        "content-type": "application/json",
+        "content-length": "2653",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "b1bf10b6-d805-4f69-b116-9e7a6cdbe327",
+        "x-amzn-bedrock-invocation-latency": "14391",
+        "x-amzn-bedrock-cache-write-input-token-count": "5982",
+        "x-amzn-bedrock-cache-read-input-token-count": "0",
+        "x-amzn-bedrock-output-token-count": "597",
+        "x-amzn-bedrock-input-token-count": "10"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_01DXqRqS6fUKzCyaGQsRgfQt",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-3-7-sonnet-20250219",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Let me analyze this document carefully to extract all required information: 1. **Document Identification** - The document appears to be a Colombian identification card (\"Cédula de Ciudadanía\") - It clearly states \"REPUBLICA DE COLOMBIA\" and \"IDENTIFICACIÓN PERSONAL\" at the top - The document type is specifically labeled as \"CEDULA DE CIUDADANIA\" 2. **Personal Information** - Name: The document shows the following fields: - APELLIDOS: HOYOS ROJAS - NOMBRES: JOSE MANUEL - ID Number: 9.250.153 - There is also personal information about: - Date of birth (FECHA DE NACIMIENTO): 15-ABR-1953 - Place of birth (LUGAR DE NACIMIENTO): EL COLEGIO (CUNDINAMARCA) - Height (ESTATURA): 1.74 - Blood type (G.S. RH): O+ - Sex (SEXO): M - Issue date and place (FECHA Y LUGAR DE EXPEDICION): 03-MAR-1979 EL COLEGIO 3. **Field Extraction** - firstName: \"JOSE MANUEL\" (Extracted from the NOMBRES field) - lastName: \"HOYOS ROJAS\" (Extracted from the APELLIDOS field) - country_issuer: \"Colombia\" (Based on \"REPUBLICA DE COLOMBIA\" header) - nationality: \"Colombia\" (Default assumption since birth place is in Colombia) - identificationType: \"Cédula de Ciudadanía\" (Explicitly stated on document) - identificationNumber: \"9.250.153\" (Clearly visible on the document) - message: \"\" (No issues with document verification or extraction) This appears to be a valid government-issued identification document from Colombia, with clear fields that match our extraction requirements. I'll now format this information according to the required schema.",
+          "signature": "ErcBCkgIBxABGAIiQHMpoMSwTWZyLofWxI8E04EQuwkL0RAEx+7c6ue4YlCfs5FsW+npISwwjF7n7roacM912RCTMlK9UxnU0octsx4SDJvB6ijBDEXsa8YkvxoMaW+H+txYHvFQxlOjIjCMII8UH/RCSUxQ9czw0QRO2JxLotnu6sPjuuKiDE+sZj6DoShCye9CE02bvlHR8rAqHcGL8rAbqvwmqnNCB7UwES94FKZmfpKHrFxcVMuOGAI="
+        },
+        {
+          "type": "text",
+          "text": "```json { \"result\": { \"firstName\": \"JOSE MANUEL\", \"lastName\": \"HOYOS ROJAS\", \"country_issuer\": \"Colombia\", \"nationality\": \"Colombia\", \"identificationType\": \"Cédula de Ciudadanía\", \"identificationNumber\": \"9.250.153\", \"message\": \"\" }, \"document_type\": \"person\", \"category\": \"CECRL\" } ```"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 10,
+        "cache_creation_input_tokens": 5982,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 597
+      }
+    },
+    "model_id": "us.anthropic.claude-3-7-sonnet-20250219-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 8000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "model_used": "us.anthropic.claude-3-7-sonnet-20250219-v1:0",
+  "api_used": "invoke_model"
+}

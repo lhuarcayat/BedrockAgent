@@ -1,0 +1,90 @@
+{
+  "extraction_data": {
+    "path": "CECRL/19466536/cedula sr garcia.pdf",
+    "result": {
+      "firstName": "JOSE REINALDO",
+      "lastName": "GARCIA GONZALEZ",
+      "country_issuer": "Colombia",
+      "nationality": "Colombia",
+      "identificationType": "Cédula de Ciudadanía",
+      "identificationNumber": "19.466.536",
+      "message": ""
+    },
+    "document_type": "person",
+    "documentNumber": "19466536",
+    "category": "CECRL"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "```json { \"result\": { \"firstName\": \"JOSE REINALDO\", \"lastName\": \"GARCIA GONZALEZ\", \"country_issuer\": \"Colombia\", \"nationality\": \"Colombia\", \"identificationType\": \"Cédula de Ciudadanía\", \"identificationNumber\": \"19.466.536\", \"message\": \"\" }, \"document_type\": \"person\", \"category\": \"CECRL\" } ```"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 10,
+      "cache_creation_input_tokens": 6003,
+      "cache_read_input_tokens": 0,
+      "output_tokens": 817
+    },
+    "ResponseMetadata": {
+      "RequestId": "2d767be5-b4cf-41d2-a26e-27475a8222b4",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Thu, 28 Aug 2025 15:30:19 GMT",
+        "content-type": "application/json",
+        "content-length": "3471",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "2d767be5-b4cf-41d2-a26e-27475a8222b4",
+        "x-amzn-bedrock-invocation-latency": "19763",
+        "x-amzn-bedrock-cache-write-input-token-count": "6003",
+        "x-amzn-bedrock-cache-read-input-token-count": "0",
+        "x-amzn-bedrock-output-token-count": "817",
+        "x-amzn-bedrock-input-token-count": "10"
+      },
+      "RetryAttempts": 1
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_01CzQx1ScN46c1U4cBEeHuDJ",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-3-7-sonnet-20250219",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "I need to extract information from this identification document following the schema provided. Let me analyze the document systematically: ## Step 1: Document Structure Analysis This appears to be a Colombian identification document titled \"REPUBLICA DE COLOMBIA IDENTIFICACIÓN PERSONAL CÉDULA DE CIUDADANÍA\". I can identify: - The document is in Spanish - This is clearly an official government-issued ID (Cédula de Ciudadanía from Colombia) - There are official headers and a photo of the person (which I should not describe as per the instructions) - The document has a structured layout with personal information fields ## Step 2: Field Detection Let me identify the key fields: 1. Document Type: \"CÉDULA DE CIUDADANÍA\" (Colombian national ID card) 2. ID Number: \"19.466.536\" 3. Name fields: - \"GARCIA GONZALEZ\" appears under \"APELLIDOS\" (Last names) - \"JOSE REINALDO\" appears under \"NOMBRES\" (First names) 4. Birth information: - \"FECHA DE NACIMIENTO: 14-FEB-1962\" (Birth date) - \"LUGAR DE NACIMIENTO: BOGOTÁ D.C. (CUNDINAMARCA)\" (Birthplace) 5. Additional information: - Height: \"1.80\" (ESTATURA) - Blood type: \"O+\" (G.S. RH) - Sex: \"M\" (SEXO) - Issue date and place: \"20-JUN-1990 BOGOTÁ D.C.\" (FECHA Y LUGAR DE EXPEDICIÓN) ## Step 3: Text Extraction Based on the field labels: - First name: \"JOSE REINALDO\" - Last name: \"GARCIA GONZALEZ\" - Country issuer: \"Colombia\" (evident from \"REPUBLICA DE COLOMBIA\" header) - Nationality: Colombia (using default assumption since no explicit nationality field and place of birth is in Colombia) - ID Type: \"Cédula de Ciudadanía\" (matches direct field) - ID Number: \"19.466.536\" ## Step 4: Field Mapping and Validation All fields are clearly visible and well-defined, so I can confidently map: - firstName: \"JOSE REINALDO\" - lastName: \"GARCIA GONZALEZ\" - country_issuer: \"Colombia\" - nationality: \"Colombia\" - identificationType: \"Cédula de Ciudadanía\" - identificationNumber: \"19.466.536\" - message: \"\" (empty since all fields were extracted successfully) ## Step 5: Quality Control and Output All fields have been properly extracted and match the expected patterns. The document is clearly an official Colombian ID card (Cédula de Ciudadanía), and all required information is present and correctly formatted. Now I'll generate the final JSON output according to the schema.",
+          "signature": "ErcBCkgIBxABGAIiQJmBtNbl4ULe4hMwv9q8gM+Xvr0ibNxbERmglwTK/4M6CYTB2AqU5KBEMDEVB0yhfBl4h7i7xb8rdAqrVJQ2glQSDCCcelS0vXHcxE8fCRoMZ4OvoKwVHRLydfTmIjCw6j42Kt/LvpSzEaDQt4stco/xZI429V4p6jFmHn2sfnxulqtrLfXMMWc0Uw8LIxcqHffyjkniKvnWB8+nzLEVeDIDQyNhw+vsUlMZay3EGAI="
+        },
+        {
+          "type": "text",
+          "text": "```json { \"result\": { \"firstName\": \"JOSE REINALDO\", \"lastName\": \"GARCIA GONZALEZ\", \"country_issuer\": \"Colombia\", \"nationality\": \"Colombia\", \"identificationType\": \"Cédula de Ciudadanía\", \"identificationNumber\": \"19.466.536\", \"message\": \"\" }, \"document_type\": \"person\", \"category\": \"CECRL\" } ```"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 10,
+        "cache_creation_input_tokens": 6003,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 817
+      }
+    },
+    "model_id": "us.anthropic.claude-3-7-sonnet-20250219-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 8000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "model_used": "us.anthropic.claude-3-7-sonnet-20250219-v1:0",
+  "api_used": "invoke_model"
+}

@@ -2,7 +2,7 @@ terraform {
   required_providers {
     aws = {
       source  = "hashicorp/aws"
-      version = "~> 5.0"
+      version = "~> 6.0"
     }
   }
 
@@ -10,12 +10,12 @@ terraform {
 }
 
 provider "aws" {
-  region = "us-east-1"
+  region = "us-east-2"
 
   default_tags {
     tags = {
       Project   = var.service_name
-      Component = "agents-bedrock"
+      CostComponent = var.cost_component
       Environment = var.stage_name
     }
   }

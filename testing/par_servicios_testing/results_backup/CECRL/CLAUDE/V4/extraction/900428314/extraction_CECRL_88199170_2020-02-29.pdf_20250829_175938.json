@@ -1,0 +1,88 @@
+{
+  "extraction_data": {
+    "result": {
+      "firstName": "NORBERTO",
+      "lastName": "FUENTES LEÓN",
+      "country_issuer": "Colombia",
+      "nationality": "Colombia",
+      "identificationType": "Cédula de Ciudadanía",
+      "identificationNumber": "36.199.170",
+      "message": "Texto manuscrito del campo NOMBRES es ilegible, se extrajo nombre basado en información disponible en el documento"
+    },
+    "document_type": "person",
+    "category": "CECRL"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "```json { \"result\": { \"firstName\": \"NORBERTO\", \"lastName\": \"FUENTES LEÓN\", \"country_issuer\": \"Colombia\", \"nationality\": \"Colombia\", \"identificationType\": \"Cédula de Ciudadanía\", \"identificationNumber\": \"36.199.170\", \"message\": \"Texto manuscrito del campo NOMBRES es ilegible, se extrajo nombre basado en información disponible en el documento\" }, \"document_type\": \"person\", \"category\": \"CECRL\" } ```"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 10,
+      "cache_creation_input_tokens": 6419,
+      "cache_read_input_tokens": 0,
+      "output_tokens": 935
+    },
+    "ResponseMetadata": {
+      "RequestId": "3f2e2848-fa38-4624-9aae-2b921d5f91ae",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Fri, 29 Aug 2025 22:59:38 GMT",
+        "content-type": "application/json",
+        "content-length": "7340",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "3f2e2848-fa38-4624-9aae-2b921d5f91ae",
+        "x-amzn-bedrock-invocation-latency": "15858",
+        "x-amzn-bedrock-cache-write-input-token-count": "6419",
+        "x-amzn-bedrock-cache-read-input-token-count": "0",
+        "x-amzn-bedrock-output-token-count": "935",
+        "x-amzn-bedrock-input-token-count": "10"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_01XapCdwD3M1grZ37ZcKe2mB",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-sonnet-4-20250514",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "I need to analyze this Colombian identification document (Cédula de Ciudadanía) and extract the information following the detailed instructions. Let me examine the document: 1. This is clearly a Colombian government identification document - I can see \"REPÚBLICA DE COLOMBIA\" and \"CÉDULA DE CIUDADANÍA\" in the header. 2. Looking for personal information: - I can see \"APELLIDOS\" followed by \"NORBERTO\" - I can see \"NOMBRES\" with what appears to be a signature-like text that's hard to read clearly - There's an identification number \"36.199.170\" - The document shows \"FUENTES LEÓN\" which seems to be associated with the person 3. Let me analyze the structure more carefully: - \"APELLIDOS: NORBERTO\" - this seems to indicate the surname is \"NORBERTO\" - Under \"NOMBRES\" there's handwritten text that's difficult to read clearly - I can see \"FUENTES LEÓN\" prominently displayed, which could be part of the name 4. Looking at birth information: - \"FECHA DE NACIMIENTO: 27-NOV-1970\" - \"CHIMA (SANTANDER)\" - this indicates the place of birth 5. Other details: - Height: \"1.61\" - Gender: \"M\" (Male) - \"B+\" appears to be blood type - Issue date seems to be \"03-OCT-1990 CUCUTA\" 6. Document type: This is clearly a \"Cédula de Ciudadanía\" from Colombia Now I need to be careful about the name extraction. Looking more closely: - The document shows \"APELLIDOS\" followed by \"NORBERTO\" - But there's also \"FUENTES LEÓN\" which appears prominently - Under \"NOMBRES\" there's handwritten text that's hard to read This is confusing because typically \"APELLIDOS\" would be the surname/last name, but \"NORBERTO\" is typically a first name. I'm encountering inconsistencies in the document's name layout. The identification number \"36.199.170\" seems clear, but the name structure is puzzling. \"FUENTES LEÓN\" looks like a legitimate surname, while \"NORBERTO\" appears misplaced. The handwritten section under \"NOMBRES\" remains illegible, adding to the complexity of accurately identifying the individual's full name. I'll extract the identifiable details with careful notation about the document's structural ambiguities, flagging the signature area's lack of clarity.",
+          "signature": "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"
+        },
+        {
+          "type": "text",
+          "text": "```json { \"result\": { \"firstName\": \"NORBERTO\", \"lastName\": \"FUENTES LEÓN\", \"country_issuer\": \"Colombia\", \"nationality\": \"Colombia\", \"identificationType\": \"Cédula de Ciudadanía\", \"identificationNumber\": \"36.199.170\", \"message\": \"Texto manuscrito del campo NOMBRES es ilegible, se extrajo nombre basado en información disponible en el documento\" }, \"document_type\": \"person\", \"category\": \"CECRL\" } ```"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 10,
+        "cache_creation_input_tokens": 6419,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 935
+      }
+    },
+    "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 8000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+  "api_used": "invoke_model"
+}

@@ -1,0 +1,88 @@
+{
+  "extraction_data": {
+    "result": {
+      "firstName": "JOSE MANUEL",
+      "lastName": "HOYOS ROJAS",
+      "country_issuer": "Colombia",
+      "nationality": "Colombia",
+      "identificationType": "Cédula de Ciudadanía",
+      "identificationNumber": "3.250.169",
+      "message": ""
+    },
+    "document_type": "person",
+    "category": "CECRL"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "```json { \"result\": { \"firstName\": \"JOSE MANUEL\", \"lastName\": \"HOYOS ROJAS\", \"country_issuer\": \"Colombia\", \"nationality\": \"Colombia\", \"identificationType\": \"Cédula de Ciudadanía\", \"identificationNumber\": \"3.250.169\", \"message\": \"\" }, \"document_type\": \"person\", \"category\": \"CECRL\" } ```"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 10,
+      "cache_creation_input_tokens": 5982,
+      "cache_read_input_tokens": 0,
+      "output_tokens": 661
+    },
+    "ResponseMetadata": {
+      "RequestId": "7eea3981-ff19-42f1-a2a5-186757c9d475",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Fri, 29 Aug 2025 15:37:24 GMT",
+        "content-type": "application/json",
+        "content-length": "5398",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "7eea3981-ff19-42f1-a2a5-186757c9d475",
+        "x-amzn-bedrock-invocation-latency": "15189",
+        "x-amzn-bedrock-cache-write-input-token-count": "5982",
+        "x-amzn-bedrock-cache-read-input-token-count": "0",
+        "x-amzn-bedrock-output-token-count": "661",
+        "x-amzn-bedrock-input-token-count": "10"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_0162AhFeB1fEhEhLm2s7CWpF",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-sonnet-4-20250514",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Looking at the provided document, I can see this is a Colombian identification document (ID card). Let me analyze it step by step: 1. Document Structure Analysis: - This is a \"REPUBLICA DE COLOMBIA\" document - It says \"IDENTIFICACION PERSONAL\" and \"CEDULA DE CIUDADANIA\" - There's a photo and what appears to be fingerprint data - There are signature fields and official markings 2. Field Detection: Looking for the specific field labels and information: - I can see \"APELLIDOS\" and what appears to be \"JOSE MANUEL\" - There's \"HOYOS ROJAS\" which seems to be the surname - The document number appears to be \"3.250.169\" - There's a birth date \"13-ABR-1958\" - Place appears to be \"EL COLEGIO (CUNDINAMARCA)\" - There's height \"1.74\" and other physical characteristics Wait, let me look more carefully at the text: Top section: - \"REPUBLICA DE COLOMBIA\" - \"IDENTIFICACION PERSONAL\" - \"CEDULA DE CIUDADANIA\" - \"3.250.169\" (this appears to be the ID number) - \"HOYOS ROJAS\" (this appears to be the surnames/apellidos) - \"JOSE MANUEL\" (this appears to be the given names/nombres) Bottom section: - \"FECHA DE NACIMIENTO: 13-ABR-1958\" - \"EL COLEGIO (CUNDINAMARCA)\" - \"LUGAR DE NACIMIENTO\" - Height: \"1.74\" - Other details including fingerprint and signatures So based on this analysis: - firstName: \"JOSE MANUEL\" (the given names) - lastName: \"HOYOS ROJAS\" (the surnames) - country_issuer: \"Colombia\" (this is clearly a Colombian document) - nationality: \"Colombia\" (default assumption since no other info contradicts this) - identificationType: \"Cédula de Ciudadanía\" (explicitly stated) - identificationNumber: \"3.250.169\" (the number at the top) - message: \"\" (this appears to be a legitimate Colombian ID document with all fields extractable) I confirm this is a standard Colombian citizen identification card with complete and clear personal information. The document provides comprehensive details about the individual, including full name, identification number, and place of origin.",
+          "signature": "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"
+        },
+        {
+          "type": "text",
+          "text": "```json { \"result\": { \"firstName\": \"JOSE MANUEL\", \"lastName\": \"HOYOS ROJAS\", \"country_issuer\": \"Colombia\", \"nationality\": \"Colombia\", \"identificationType\": \"Cédula de Ciudadanía\", \"identificationNumber\": \"3.250.169\", \"message\": \"\" }, \"document_type\": \"person\", \"category\": \"CECRL\" } ```"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 10,
+        "cache_creation_input_tokens": 5982,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 661
+      }
+    },
+    "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 8000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+  "api_used": "invoke_model"
+}

@@ -1,0 +1,87 @@
+{
+  "classification_data": {
+    "category": "CECRL",
+    "text": "T{}LOM&T,d REPUBLICA DE COLOMBIA IDENTIFICACION PERSONAL CEDULA DE CIUDADANIA NUMERO 79.211.501 STERLING NEIRA APELLIDOS JOHN WILTER NOMBRES FIRMA",
+    "document_number": "900337790",
+    "path": "CECRL/900337790/79211501_2020-02-29.pdf"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "```json { \"category\": \"CECRL\", \"text\": \"T{}LOM&T,d\\nREPUBLICA DE COLOMBIA\\nIDENTIFICACION PERSONAL\\nCEDULA DE CIUDADANIA\\nNUMERO 79.211.501\\nSTERLING NEIRA\\nAPELLIDOS\\nJOHN WILTER\\nNOMBRES\\nFIRMA\" } ```"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 9,
+      "cache_creation_input_tokens": 4519,
+      "cache_read_input_tokens": 0,
+      "output_tokens": 812
+    },
+    "ResponseMetadata": {
+      "RequestId": "200d3077-a04a-4bb5-bd32-a5c7a07df8b3",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Thu, 28 Aug 2025 15:47:02 GMT",
+        "content-type": "application/json",
+        "content-length": "3342",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "200d3077-a04a-4bb5-bd32-a5c7a07df8b3",
+        "x-amzn-bedrock-invocation-latency": "20624",
+        "x-amzn-bedrock-cache-write-input-token-count": "4519",
+        "x-amzn-bedrock-cache-read-input-token-count": "0",
+        "x-amzn-bedrock-output-token-count": "812",
+        "x-amzn-bedrock-input-token-count": "9"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_01XqKu7o9iQhUwYwzt73awec",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-3-7-sonnet-20250219",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Let me analyze the document according to the workflow provided: 1). Text Extraction: - I can see this is an identification document from Colombia - Text visible includes: - \"REPUBLICA DE COLOMBIA\" - \"IDENTIFICACION PERSONAL\" - \"CEDULA DE CIUDADANIA\" - \"NUMERO: 79.211.501\" - \"STERLING NEIRA\" (appears to be a surname) - \"JOHN WILTER\" (appears to be a first name) - \"NOMBRES\" (Spanish for \"names\") - \"APELLIDOS\" (Spanish for \"surnames\") - \"FIRMA\" (Spanish for \"signature\") 2). Priority Checks: - This is not a blank document - This is not a link-only document 3). Issuer Identification: - This appears to be issued by a Colombian government authority responsible for personal identification documents 4). Document Function Analysis: - This is clearly a personal identification document (Colombian ID card, \"Cédula de Ciudadanía\") - It contains personal information of an individual, including their photo, name, and ID number - It serves as a government-issued identity verification document 5). Category Classification: Based on the document analysis, this appears to match the CECRL category (Official personal identification documents). Let's verify against the must-have indicators: - Individual identification terminology: ✓ (\"IDENTIFICACION PERSONAL\", \"CEDULA DE CIUDADANIA\") - Personal biographical data: Partially visible (name is clearly visible, other biographical data may be on other parts of the document) - Individual photo: ✓ (photo is visible on the right side) - Government-issued personal ID numbers with individual names: ✓ (ID number 79.211.501 with name JOHN WILTER STERLING NEIRA) - Security elements: ✓ (appears to have security elements typical of ID cards) The document matches the key pattern: \"REPUBLICA DE COLOMBIA IDENTIFICACION PERSONAL\", \"CEDULA DE CIUDADANIA NUMERO\" 6). Confidence Validation: - Strong evidence: This is clearly a Colombian national ID card (\"Cédula de Ciudadanía\") - There are no conflicting signals or unclear purposes - All the must-have indicators for CECRL are present Therefore, this document should be classified as CECRL. For the JSON output, I need to include the extracted text with proper JSON escaping: ```json { \"category\": \"CECRL\", \"text\": \"REPUBLICA DE COLOMBIA\\nIDENTIFICACION PERSONAL\\nCEDULA DE CIUDADANIA\\nNUMERO 79.211.501\\nSTERLING NEIRA\\nAPELLIDOS\\nJOHN WILTER\\nNOMBRES\\nFIRMA\" } ```",
+          "signature": "ErcBCkgIBxABGAIiQGnmEiUPHXxfGLfvpmAtG4ODXJSXG2O2wF9/5pawRdtTXY1W0suTqmWpb3mx8yz8JeavY080jqMLKNggU5Ak64YSDHduaDmQUG5REw00uhoMPN1pJkfDymlrj44xIjDj03H3dNUBpKLC9XcEvWOiKCUvIOLQ6HEEPNGTCPxLnqwRuggqc0cdhaWAfHl87zIqHfQ9FFskDH5oD//2wuVLPRI5zLEBbzw+wEdMkWs3GAI="
+        },
+        {
+          "type": "text",
+          "text": "```json { \"category\": \"CECRL\", \"text\": \"T{}LOM&T,d\\nREPUBLICA DE COLOMBIA\\nIDENTIFICACION PERSONAL\\nCEDULA DE CIUDADANIA\\nNUMERO 79.211.501\\nSTERLING NEIRA\\nAPELLIDOS\\nJOHN WILTER\\nNOMBRES\\nFIRMA\" } ```"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 9,
+        "cache_creation_input_tokens": 4519,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 812
+      }
+    },
+    "model_id": "us.anthropic.claude-3-7-sonnet-20250219-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 8000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "expected_category": "CECRL",
+  "model_used": "us.anthropic.claude-3-7-sonnet-20250219-v1:0",
+  "api_used": "invoke_model",
+  "pdf_info": {
+    "original_size": 229067,
+    "first_page_size": 133257,
+    "is_scanned": false
+  }
+}

@@ -1,0 +1,113 @@
+{
+  "extraction_data": {
+    "result": {
+      "CompanyName": "NECONSER SAS",
+      "TaxId": "901355130-1",
+      "IdentificationType": "NIT",
+      "Country": "Colombia",
+      "ConflictingSources": [],
+      "RequiresReview": "false"
+    },
+    "RelatedParties": [
+      {
+        "FirstName": "GERALDINE",
+        "LastName": "HERNANDEZ DIAZ",
+        "IdType": "NIT",
+        "IdNumber": "1022418631",
+        "NoveltyType": "Actualización",
+        "ParticipationPercentage": "35"
+      },
+      {
+        "FirstName": "ERIKA YESSENIA",
+        "LastName": "GUERRA QUIÑONES",
+        "IdType": "NIT",
+        "IdNumber": "1022369773",
+        "NoveltyType": "Actualización",
+        "ParticipationPercentage": "60"
+      },
+      {
+        "FirstName": "CARLOS ANDRES",
+        "LastName": "GUERRA QUIÑONES",
+        "IdType": "NIT",
+        "IdNumber": "1018416174",
+        "NoveltyType": "Actualización",
+        "ParticipationPercentage": "5"
+      }
+    ],
+    "DocumentType": "company",
+    "Category": "RUB"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "{ \"result\": { \"CompanyName\": \"NECONSER SAS\", \"TaxId\": \"901355130-1\", \"IdentificationType\": \"NIT\", \"Country\": \"Colombia\", \"ConflictingSources\": [], \"RequiresReview\": \"false\" }, \"RelatedParties\": [ { \"FirstName\": \"GERALDINE\", \"LastName\": \"HERNANDEZ DIAZ\", \"IdType\": \"NIT\", \"IdNumber\": \"1022418631\", \"NoveltyType\": \"Actualización\", \"ParticipationPercentage\": \"35\" }, { \"FirstName\": \"ERIKA YESSENIA\", \"LastName\": \"GUERRA QUIÑONES\", \"IdType\": \"NIT\", \"IdNumber\": \"1022369773\", \"NoveltyType\": \"Actualización\", \"ParticipationPercentage\": \"60\" }, { \"FirstName\": \"CARLOS ANDRES\", \"LastName\": \"GUERRA QUIÑONES\", \"IdType\": \"NIT\", \"IdNumber\": \"1018416174\", \"NoveltyType\": \"Actualización\", \"ParticipationPercentage\": \"5\" } ], \"DocumentType\": \"company\", \"Category\": \"RUB\" }"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 7805,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 2039,
+      "output_tokens": 1015
+    },
+    "ResponseMetadata": {
+      "RequestId": "8f6ae04f-4339-4cad-a57a-1abb856bd609",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Tue, 02 Sep 2025 16:46:06 GMT",
+        "content-type": "application/json",
+        "content-length": "6069",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "8f6ae04f-4339-4cad-a57a-1abb856bd609",
+        "x-amzn-bedrock-invocation-latency": "18126",
+        "x-amzn-bedrock-cache-write-input-token-count": "0",
+        "x-amzn-bedrock-cache-read-input-token-count": "2039",
+        "x-amzn-bedrock-output-token-count": "1015",
+        "x-amzn-bedrock-input-token-count": "7805"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_012t22CwzeYHUofUWANE59cP",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-sonnet-4-20250514",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Let me analyze this Colombian Final Beneficiaries Report (RUB) issued by DIAN. From the first page, I can identify: - This is a \"Reporte de Beneficiarios Finales\" (Final Beneficiaries Report) from DIAN - Form number: 2687 - Company name: \"NECONSER SAS\" (cell 11. Denominación o razón social) - Tax ID: \"901355130\" (cell 18. Número de identificación with DV \"1\") - Country: Colombia (this is a DIAN document) - Identification type: Should be \"NIT\" for Colombian companies Now I need to extract the beneficiaries information from pages 2 and 3: Page 2 shows the first two beneficiaries: First beneficiary: - Document type: \"13\" (cell 29) - ID Number: \"1022418631\" (cell 30) - First names: \"GERALDINE\" (cell 36) - Last names: \"HERNANDEZ DIAZ\" (cells 34 and 35) - Participation percentage: \"35\" (cell 57) - Novelty type: \"Actualización\" with code \"2\" (cell 61) Second beneficiary: - Document type: \"13\" (cell 29) - ID Number: \"1022369773\" (cell 30) - First names: \"ERIKA YESSENIA\" (cells 36 and 37) - Last names: \"GUERRA QUIÑONES\" (cells 34 and 35) - Participation percentage: \"60\" (cell 57) - Novelty type: \"Actualización\" with code \"2\" (cell 61) Page 3 shows a third beneficiary: - Document type: \"13\" (cell 29) - ID Number: \"1018416174\" (cell 30) - First names: \"CARLOS ANDRES\" (cells 36 and 37) - Last names: \"GUERRA QUIÑONES\" (cells 34 and 35) - Participation percentage: \"5\" (cell 57) - Novelty type: \"Actualización\" with code \"2\" (cell 61) I've confirmed the participation percentages perfectly total 100%. The document follows standard identification protocols for Colombian business reporting. Despite the typical document type referencing a citizen ID, DIAN regulations mandate using \"NIT\" for Final Beneficiaries Reports, which this submission correctly implements.",
+          "signature": "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"
+        },
+        {
+          "type": "text",
+          "text": "{ \"result\": { \"CompanyName\": \"NECONSER SAS\", \"TaxId\": \"901355130-1\", \"IdentificationType\": \"NIT\", \"Country\": \"Colombia\", \"ConflictingSources\": [], \"RequiresReview\": \"false\" }, \"RelatedParties\": [ { \"FirstName\": \"GERALDINE\", \"LastName\": \"HERNANDEZ DIAZ\", \"IdType\": \"NIT\", \"IdNumber\": \"1022418631\", \"NoveltyType\": \"Actualización\", \"ParticipationPercentage\": \"35\" }, { \"FirstName\": \"ERIKA YESSENIA\", \"LastName\": \"GUERRA QUIÑONES\", \"IdType\": \"NIT\", \"IdNumber\": \"1022369773\", \"NoveltyType\": \"Actualización\", \"ParticipationPercentage\": \"60\" }, { \"FirstName\": \"CARLOS ANDRES\", \"LastName\": \"GUERRA QUIÑONES\", \"IdType\": \"NIT\", \"IdNumber\": \"1018416174\", \"NoveltyType\": \"Actualización\", \"ParticipationPercentage\": \"5\" } ], \"DocumentType\": \"company\", \"Category\": \"RUB\" }"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 7805,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 2039,
+        "output_tokens": 1015
+      }
+    },
+    "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 9000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+  "api_used": "invoke_model"
+}

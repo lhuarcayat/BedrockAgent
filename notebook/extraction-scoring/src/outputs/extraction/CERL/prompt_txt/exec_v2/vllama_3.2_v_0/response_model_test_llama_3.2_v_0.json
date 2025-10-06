@@ -1,0 +1,33 @@
+{
+  "ResponseMetadata": {
+    "RequestId": "dbe1be93-28e2-48e7-b42a-ae33d45b421f",
+    "HTTPStatusCode": 200,
+    "HTTPHeaders": {
+      "date": "Wed, 04 Jun 2025 17:36:22 GMT",
+      "content-type": "application/json",
+      "content-length": "5094",
+      "connection": "keep-alive",
+      "x-amzn-requestid": "dbe1be93-28e2-48e7-b42a-ae33d45b421f"
+    },
+    "RetryAttempts": 0
+  },
+  "output": {
+    "message": {
+      "role": "assistant",
+      "content": [
+        {
+          "text": "Here's the step-by-step reasoning for extracting the company data from the provided JSON document:\n\n1. **Generating the JSON Output**: The output will be a JSON object with the required fields as specified in the problem statement.\n\n2. **Defining Data Mapping**: Based on the provided JSON document, the following data mapping is defined:\n   - companyName: \"GEOKINETICS INTERNACIONAL, INC.\"\n   - companyType: \"Sociedad por Acciones Simplificada\"\n   - country: \"COLOMBIA\"\n   - document_pages: 6 (calculated from the document content)\n   - documentType: \"NIT\"\n   - taxId: \"860006152-8\"\n   - mainAddress: \"CALLE 100N. 19 - 54 OFICINA 604, BOGOTA D.C.\"\n   - incorporationDate: \"1963-02-04\"\n   - companyDuration: \"2462-02-04\"\n   - registrationNumber: \"0018259\"\n   - size: \"MEDIANA EMPRESA\"\n   - relatedParties: extracted from the document content\n   - embargoes: \"\"\n   - liquidations: \"\"\n   - documentIssueDate: \"2009-02-24\"\n   - lastRegistrationRenewalDate: \"\"\n\n3. **Defining the Data Extraction**: The data extraction process involves extracting the relevant information from the document content.\n\n4. **Refining Data Extraction**: The extracted data is refined to ensure it matches the required format.\n\n5. **Extracting and Mapping Data**: The extracted data is mapped to the corresponding fields in the JSON output.\n\n6. **Extracting Related Parties**: The related parties are extracted from the document content and added to the JSON output.\n\n7. **Extracting & Refining the Data**: The extracted data is refined to ensure it matches the required format.\n\n8. **Refining Data Accuracy**: The extracted data is verified to ensure its accuracy.\n\n9. **Extracting and Finalizing Data**: The final data is extracted and added to the JSON output.\n\n10. **Constructing the Final JSON**: The final JSON output is constructed with the extracted data.\n\nHere is the final JSON output:\n\n```json\n{\n  \"path\": \"../../shared/file_examples/CERL/860006752/22_CamCom_2020-02-28.pdf\",\n  \"result\": {\n    \"companyName\": \"GEOKINETICS INTERNACIONAL, INC.\",\n    \"companyType\": \"Sociedad por Acciones Simplificada\",\n    \"country\": \"COLOMBIA\",\n    \"document_pages\": 6,\n    \"documentType\": \"NIT\",\n    \"taxId\": \"860006152-8\",\n    \"mainAddress\": \"CALLE 100N. 19 - 54 OFICINA 604, BOGOTA D.C.\",\n    \"incorporationDate\": \"1963-02-04\",\n    \"companyDuration\": \"2462-02-04\",\n    \"registrationNumber\": \"0018259\",\n    \"size\": \"MEDIANA EMPRESA\",\n    \"relatedParties\": [\n      {\n        \"firstName\": \"NARCISO\",\n        \"lastName\": \"MANUEL CHIQUILLO CONDE\",\n        \"identificationType\": \"C.C.\",\n        \"identificationNumber\": \"17.124.736\",\n        \"relationshipType\": \"REPRESENTANTE LEGAL\"\n      },\n      {\n        \"firstName\": \"JORGE ENRIQUE\",\n        \"lastName\": \"RODRIGUEZ ROJAS\",\n        \"identificationType\": \"C.C.\",\n        \"identificationNumber\": \"17.444.414\",\n        \"relationshipType\": \"PRIMER SUPLENTE DEL APODERADO GENERAL\"\n      },\n      {\n        \"firstName\": \"NARCISO\",\n        \"lastName\": \"MANUEL CHIQUILLO CONDE\",\n        \"identificationType\": \"C.C.\",\n        \"identificationNumber\": \"17.124.736\",\n        \"relationshipType\": \"SEGUNDO SUPLENTE DEL APODERADO GENERAL\"\n      },\n      {\n        \"firstName\": \"JOSE MANUEL\",\n        \"lastName\": \"TAMAYO OLARTE\",\n        \"identificationType\": \"C.C.\",\n        \"identificationNumber\": \"19.303.534\",\n        \"relationshipType\": \"REPRESENTANTE LEGAL SUPLENTE\"\n      },\n      {\n        \"firstName\": \"VICTOR\",\n        \"lastName\": \"UCURICIO GOMEZ GUTIERREZ\",\n        \"identificationType\": \"C.C.\",\n        \"identificationNumber\": \"80.414.776\",\n        \"relationshipType\": \"APODERADO GENERAL\"\n      },\n      {\n        \"firstName\": \"RAFAEL\",\n        \"lastName\": \"CASILLO CHARRY\",\n        \"identificationType\": \"C.C.\",\n        \"identificationNumber\": \"79.370.170\",\n        \"relationshipType\": \"APODERADO GENERAL\"\n      },\n      {\n        \"firstName\": \"EDWIN RENÉ\",\n        \"lastName\": \"VARGAS SALGADO\",\n        \"identificationType\": \"C.C.\",\n        \"identificationNumber\": \"79.791.291\",\n        \"relationshipType\": \"REVISOR FISCAL SUPLENTE\"\n      },\n      {\n        \"firstName\": \"FABIO LEÓN\",\n        \"lastName\": \"MONTEALEGRE BUENO\",\n        \"identificationType\": \"C.C.\",\n        \"identificationNumber\": \"36.357.389\",\n        \"relationshipType\": \"REVISOR FISCAL PRINCIPAL\"\n      }\n    ],\n    \"embargoes\": \"\",\n    \"liquidations\": \"\",\n    \"documentIssueDate\": \"2009-02-24\",\n    \"lastRegistrationRenewalDate\": \"\"\n  },\n  \"document_type\": \"company\",\n  \"document_number\": \"860006752\",\n  \"category\": \"CERL\"\n}\n```"
+        }
+      ]
+    }
+  },
+  "stopReason": "end_turn",
+  "usage": {
+    "inputTokens": 19144,
+    "outputTokens": 1225,
+    "totalTokens": 20369
+  },
+  "metrics": {
+    "latencyMs": 26646
+  }
+}

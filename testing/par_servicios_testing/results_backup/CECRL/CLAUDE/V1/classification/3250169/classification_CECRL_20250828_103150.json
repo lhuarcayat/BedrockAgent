@@ -1,0 +1,87 @@
+{
+  "classification_data": {
+    "category": "CECRL",
+    "text": "REPUBLICA DE COLOMBIA IDENTIFICACION PERSONAL CEDULA DE CIUDADANIA 9.250.159 HOYOS ROJAS JOSE MANUEL FECHA DE NACIMIENTO 15-ABR-1958 EL COLEGIO (CUNDINAMARCA) LUGAR DE NACIMIENTO 1.74 O+ M ESTATURA G.S. RH SEXO 03-MAR-1978 EL COLEGIO FECHA Y LUGAR DE EXPEDICION",
+    "document_number": "3250169",
+    "path": "CECRL/3250169/3250169_2020-02-29.pdf"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "```json { \"category\": \"CECRL\", \"text\": \"REPUBLICA DE COLOMBIA\\nIDENTIFICACION PERSONAL\\nCEDULA DE CIUDADANIA\\n9.250.159\\nHOYOS ROJAS\\nJOSE MANUEL\\nFECHA DE NACIMIENTO 15-ABR-1958\\nEL COLEGIO\\n(CUNDINAMARCA)\\nLUGAR DE NACIMIENTO\\n1.74 O+ M\\nESTATURA G.S. RH SEXO\\n03-MAR-1978 EL COLEGIO\\nFECHA Y LUGAR DE EXPEDICION\" } ```"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 9,
+      "cache_creation_input_tokens": 4475,
+      "cache_read_input_tokens": 0,
+      "output_tokens": 868
+    },
+    "ResponseMetadata": {
+      "RequestId": "3c3edf09-960f-49dd-9c5f-d3b51fdf2eb8",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Thu, 28 Aug 2025 15:31:34 GMT",
+        "content-type": "application/json",
+        "content-length": "3746",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "3c3edf09-960f-49dd-9c5f-d3b51fdf2eb8",
+        "x-amzn-bedrock-invocation-latency": "25950",
+        "x-amzn-bedrock-cache-write-input-token-count": "4475",
+        "x-amzn-bedrock-cache-read-input-token-count": "0",
+        "x-amzn-bedrock-output-token-count": "868",
+        "x-amzn-bedrock-input-token-count": "9"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_01YUhiTVKMfKzChiwHUTy3cd",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-3-7-sonnet-20250219",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Let me analyze this document by following the classification workflow: 1. **TEXT EXTRACTION**: I can see a Colombian identity document (\"Cédula de Ciudadanía\") with the following text elements: - Header: \"REPUBLICA DE COLOMBIA IDENTIFICACION PERSONAL CEDULA DE CIUDADANIA\" - Number: \"9.250.159\" - Name: \"HOYOS ROJAS JOSE MANUEL\" - Birth date: \"15-ABR-1958\" - Birth place: \"EL COLEGIO (CUNDINAMARCA)\" - Height: \"1.74\" - Blood type: \"O+\" - Gender: \"M\" (Male) - Issue date: \"03-MAR-1978\" - Issue location: \"EL COLEGIO\" - There's a photograph, signature, and fingerprint area visible - Various registration numbers at the bottom 2. **PRIORITY CHECKS**: This is not a BLANK or LINK_ONLY document. 3. **ISSUER IDENTIFICATION**: The issuer is clearly a Colombian government identification authority (National Registrar/Registraduría Nacional). 4. **DOCUMENT FUNCTION ANALYSIS**: This document functions as personal identification. It's a government-issued \"Cédula de Ciudadanía\" which is Colombia's national ID card. 5. **CATEGORY CLASSIFICATION**: Looking at the categories in order: - CECRL: This is a personal identification document (cédula), but we need to determine if it's for a legal representative of a company. The document itself doesn't explicitly state that this person is a legal representative. It's simply a personal ID card. However, the document matches all the must-have indicators for CECRL: - It has individual identification terminology: \"IDENTIFICACION PERSONAL\", \"CEDULA DE CIUDADANIA\" - It contains personal biographical data: birth date/place, blood type, gender - It has an individual photo, signature, fingerprint references - It shows a government-issued personal ID number with individual name - It has security elements like barcodes and official seals The key question is whether this is for a legal representative of a company. Without additional context from other documents, I can't definitively say that this person is a legal representative. However, this document itself is exactly matching the format of a CECRL document, just without the explicit connection to company representation. 6. **CONFIDENCE VALIDATION**: Since this is clearly a Colombian national ID card (Cédula de Ciudadanía) which matches all the criteria for CECRL except that we don't have explicit confirmation that this person is a legal representative of a company, I need to make a judgment call. Based on the classification rules and the document itself, this is most accurately classified as CECRL since it's a personal identification document that matches all the defined criteria for that category. The document type itself is unambiguous, even if we don't have the explicit business context.",
+          "signature": "ErcBCkgIBxABGAIiQBwLma6OD1z3ZypHiUs/fAB2Y7Vo3trYRBcdEO/EuJqaQ6pgwJX8sz+MZ6Zysmi+F5hONeQphUHsHK9tt78wRT8SDDSdQQaOZmFzsJIjZxoMXo49j9ZFqURNf/POIjBsHfneLzxhQR85YaF2wZzeHfm/6r4r1VgS9adXz0c++i0U70NRxR5SzE0CKS2u3igqHViSOZOAugj/u2y9eHJwlGfEpIEYTdHwsPa2JfgRGAI="
+        },
+        {
+          "type": "text",
+          "text": "```json { \"category\": \"CECRL\", \"text\": \"REPUBLICA DE COLOMBIA\\nIDENTIFICACION PERSONAL\\nCEDULA DE CIUDADANIA\\n9.250.159\\nHOYOS ROJAS\\nJOSE MANUEL\\nFECHA DE NACIMIENTO 15-ABR-1958\\nEL COLEGIO\\n(CUNDINAMARCA)\\nLUGAR DE NACIMIENTO\\n1.74 O+ M\\nESTATURA G.S. RH SEXO\\n03-MAR-1978 EL COLEGIO\\nFECHA Y LUGAR DE EXPEDICION\" } ```"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 9,
+        "cache_creation_input_tokens": 4475,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 868
+      }
+    },
+    "model_id": "us.anthropic.claude-3-7-sonnet-20250219-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 8000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "expected_category": "CECRL",
+  "model_used": "us.anthropic.claude-3-7-sonnet-20250219-v1:0",
+  "api_used": "invoke_model",
+  "pdf_info": {
+    "original_size": 176920,
+    "first_page_size": 175337,
+    "is_scanned": true
+  }
+}

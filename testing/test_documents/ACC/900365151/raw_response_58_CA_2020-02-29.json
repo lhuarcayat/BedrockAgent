@@ -1,0 +1,33 @@
+{
+  "ResponseMetadata": {
+    "RequestId": "3f014098-0edb-499c-9b92-22c5722a07f0",
+    "HTTPStatusCode": 200,
+    "HTTPHeaders": {
+      "date": "Mon, 16 Jun 2025 20:49:17 GMT",
+      "content-type": "application/json",
+      "content-length": "1171",
+      "connection": "keep-alive",
+      "x-amzn-requestid": "3f014098-0edb-499c-9b92-22c5722a07f0"
+    },
+    "RetryAttempts": 0
+  },
+  "output": {
+    "message": {
+      "role": "assistant",
+      "content": [
+        {
+          "text": "```json\n{\n  \"path\": \"s3://par-servicios-poc-dev-filling-desk/par-servicios-poc/ACC/900365151/58_CA_2020-02-29.pdf\",\n  \"result\": {\n    \"companyName\": \"ECOSIMPLE SAS\",\n    \"documentType\": \"Equity Composition\",\n    \"taxId\": \"900365151-5\",\n    \"country\": \"Colombia\",\n    \"identificationDetails\": {\n      \"source\": \"id_analysis\",\n      \"indicators\": [\n        \"CC\",\n        \"NIT\"\n      ],\n      \"requiresReview\": false\n    },\n    \"relatedParties\": [\n      {\n        \"firstName\": \"HENRY\",\n        \"lastName\": \"ALTERIO GONZALEZ\",\n        \"identificationType\": \"CC\",\n        \"identificationNumber\": \"79694634\",\n        \"relationshipType\": \"Shareholder\",\n        \"participationPercentage\": \"100\",\n        \"timeFound\": 1\n      }\n    ]\n  },\n  \"confidenceScores\": {\n    \"companyName\": 95,\n    \"documentType\": 100,\n    \"taxId\": 95,\n    \"country\": 95,\n    \"relatedParties\": 90\n  }\n}\n```"
+        }
+      ]
+    }
+  },
+  "stopReason": "end_turn",
+  "usage": {
+    "inputTokens": 5434,
+    "outputTokens": 293,
+    "totalTokens": 5727
+  },
+  "metrics": {
+    "latencyMs": 6642
+  }
+}

@@ -1,0 +1,87 @@
+{
+  "classification_data": {
+    "category": "CECRL",
+    "text": "REPUBLICA DE COLOMBIA IDENTIFICACIÓN PERSONAL CÉDULA DE CIUDADANÍA 3.357.420 SANCHEZ DUARTE DARIO FECHA DE NACIMIENTO: 01-AGO-1962 YONDO - CASABE YONDO (ANTIOQUIA) 1.75 O+ M 13-ABR-1991 YONDO FECHA Y LUGAR DE EXPEDICIÓN",
+    "document_number": "3557420",
+    "path": "CECRL/3557420/3557420_2020-02-29.pdf"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "```json { \"category\": \"CECRL\", \"text\": \"REPUBLICA DE COLOMBIA\\nIDENTIFICACIÓN PERSONAL\\nCÉDULA DE CIUDADANÍA\\n\\n3.357.420\\nSANCHEZ DUARTE\\nDARIO\\n\\nFECHA DE NACIMIENTO: 01-AGO-1962\\nYONDO - CASABE\\nYONDO (ANTIOQUIA)\\n1.75\\nO+\\nM\\n13-ABR-1991 YONDO\\nFECHA Y LUGAR DE EXPEDICIÓN\" } ```"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 9,
+      "cache_creation_input_tokens": 4753,
+      "cache_read_input_tokens": 0,
+      "output_tokens": 810
+    },
+    "ResponseMetadata": {
+      "RequestId": "f42a5bed-909a-4d1e-b903-ae8f9f055b87",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Fri, 29 Aug 2025 22:44:45 GMT",
+        "content-type": "application/json",
+        "content-length": "5749",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "f42a5bed-909a-4d1e-b903-ae8f9f055b87",
+        "x-amzn-bedrock-invocation-latency": "13026",
+        "x-amzn-bedrock-cache-write-input-token-count": "4753",
+        "x-amzn-bedrock-cache-read-input-token-count": "0",
+        "x-amzn-bedrock-output-token-count": "810",
+        "x-amzn-bedrock-input-token-count": "9"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_01KTueoWcE2WcQS3ZkHKjS7n",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-sonnet-4-20250514",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Let me carefully analyze the document following the classification workflow. 1. **TEXT EXTRACTION** Looking at the document, I can see this is a Colombian identification document. Let me extract all the text: Top card: - REPUBLICA DE COLOMBIA - IDENTIFICACIÓN PERSONAL - CÉDULA DE CIUDADANÍA - Number: 3.357.420 - SANCHEZ DUARTE - DARIO - [There's a signature and photo] Bottom section: - FECHA DE NACIMIENTO: 01-AGO-1962 - YONDO - CASABE - YONDO (ANTIOQUIA) - 1.75 [height] - O+ [blood type] - M [sex] - 13-ABR-1991 YONDO - [Fingerprint image] - [Barcode at bottom] 2. **PRIORITY CHECKS** This is not BLANK (has meaningful content) and not LINK_ONLY (no URLs). 3. **DOCUMENT FUNCTION ANALYSIS** What is the PRIMARY PURPOSE of this document's content? - This is clearly a personal identification document (Cédula de Ciudadanía) - It provides identification information for an individual person - Contains biographical data: birth date (01-AGO-1962), birth place (YONDO-CASABE, ANTIOQUIA), height (1.75), blood type (O+), sex (M) - Has individual photo, signature, and fingerprint - Government-issued personal ID number (3.357.420) with individual name (DARIO SANCHEZ DUARTE) 4. **ISSUER IDENTIFICATION** This is issued by the Colombian government (República de Colombia) as a personal identification document, not by DIAN or Chamber of Commerce. 5. **CATEGORY CLASSIFICATION** Looking at CECRL definition: - ✓ Individual identification terminology: \"IDENTIFICACIÓN PERSONAL\", \"CÉDULA DE CIUDADANÍA\" - ✓ Comprehensive personal details confirm document's identity verification purpose - Matches all key classification criteria for official personal identification 6. **CONFIDENCE VALIDATION** Strong evidence confirms the document's authenticity and completeness. All critical identification elements are present and unambiguous.",
+          "signature": "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"
+        },
+        {
+          "type": "text",
+          "text": "```json { \"category\": \"CECRL\", \"text\": \"REPUBLICA DE COLOMBIA\\nIDENTIFICACIÓN PERSONAL\\nCÉDULA DE CIUDADANÍA\\n\\n3.357.420\\nSANCHEZ DUARTE\\nDARIO\\n\\nFECHA DE NACIMIENTO: 01-AGO-1962\\nYONDO - CASABE\\nYONDO (ANTIOQUIA)\\n1.75\\nO+\\nM\\n13-ABR-1991 YONDO\\nFECHA Y LUGAR DE EXPEDICIÓN\" } ```"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 9,
+        "cache_creation_input_tokens": 4753,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 810
+      }
+    },
+    "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 8000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "expected_category": "CECRL",
+  "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+  "api_used": "invoke_model",
+  "pdf_info": {
+    "original_size": 168469,
+    "first_page_size": 163968,
+    "is_scanned": true
+  }
+}

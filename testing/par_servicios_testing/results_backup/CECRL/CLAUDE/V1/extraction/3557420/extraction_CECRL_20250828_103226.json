@@ -1,0 +1,90 @@
+{
+  "extraction_data": {
+    "path": "CECRL/3557420/3557420_2020-02-29.pdf",
+    "result": {
+      "firstName": "DARIO",
+      "lastName": "SANCHEZ DUARTE",
+      "country_issuer": "Colombia",
+      "nationality": "Colombia",
+      "identificationType": "Cédula de Ciudadanía",
+      "identificationNumber": "3.557.420",
+      "message": ""
+    },
+    "document_type": "person",
+    "documentNumber": "3557420",
+    "category": "CECRL"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "```json { \"result\": { \"firstName\": \"DARIO\", \"lastName\": \"SANCHEZ DUARTE\", \"country_issuer\": \"Colombia\", \"nationality\": \"Colombia\", \"identificationType\": \"Cédula de Ciudadanía\", \"identificationNumber\": \"3.557.420\", \"message\": \"\" }, \"document_type\": \"person\", \"category\": \"CECRL\" } ```"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 10,
+      "cache_creation_input_tokens": 5982,
+      "cache_read_input_tokens": 0,
+      "output_tokens": 644
+    },
+    "ResponseMetadata": {
+      "RequestId": "0bab3a84-c225-482a-bb69-ad76d4a18861",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Thu, 28 Aug 2025 15:32:25 GMT",
+        "content-type": "application/json",
+        "content-length": "2801",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "0bab3a84-c225-482a-bb69-ad76d4a18861",
+        "x-amzn-bedrock-invocation-latency": "14730",
+        "x-amzn-bedrock-cache-write-input-token-count": "5982",
+        "x-amzn-bedrock-cache-read-input-token-count": "0",
+        "x-amzn-bedrock-output-token-count": "644",
+        "x-amzn-bedrock-input-token-count": "10"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_01VCvLerPGUuMKqA7C3xzmJu",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-3-7-sonnet-20250219",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Let me analyze this Colombian ID document carefully to extract all the required information according to the schema. First, let's identify what type of document this is: - The document has \"REPUBLICA DE COLOMBIA\" and \"CEDULA DE CIUDADANIA\" in the header - This confirms it's a Colombian national ID card (Cédula de Ciudadanía) Now I'll systematically extract the required information: 1. **firstName**: - Field labeled \"DARIO\" under \"NOMBRES\" - This indicates the first name is \"DARIO\" 2. **lastName**: - Field labeled \"SANCHEZ DUARTE\" under \"APELLIDOS\" - This indicates the full last name is \"SANCHEZ DUARTE\" 3. **country_issuer**: - Clearly stated as \"REPUBLICA DE COLOMBIA\" in the header - The country issuer is \"Colombia\" 4. **nationality**: - No explicit nationality field is visible - Birth place shows \"YONDO - CASABE\" in \"YONDO (ANTIOQUIA)\" which is in Colombia - Since birth place is in Colombia and it's a Cédula de Ciudadanía (which is for Colombian citizens), nationality is \"Colombia\" 5. **identificationType**: - Clearly stated as \"CEDULA DE CIUDADANIA\" - According to our rules, we should maintain this as \"Cédula de Ciudadanía\" 6. **identificationNumber**: - Clearly visible as \"3.557.420\" - We should preserve the formatting exactly as shown 7. **message**: - This appears to be a valid official ID document - All fields can be extracted clearly - No issues to report Additional information visible but not required in our schema: - Date of birth: 01-AGO-1962 (August 1, 1962) - Height: 1.75 - Blood type: O+ - Gender: M - Document issue date and place: 13-ABR-1991 YONDO (April 13, 1991 in Yondo) Now I'll format this according to the required JSON schema:",
+          "signature": "ErcBCkgIBxABGAIiQDmXpTW6zwWCOoZGmp3kfmznOe5vZ8rJVOKSfjxDccOcAYjWGUypjNUrlXGyauthcaUZFtSZSQyY21kTNUu3Zq8SDFUVju3rDpPUrNyrexoMEft76QkOynQXDqUoIjBs7CZesfpIrZQnjq5MZQTW2VG4QL53yC5miYTAG2CLMUU83DYtNwCjbYvzwIVdsTQqHUznmVoWSkWkeXpzdSgklEGBVXyq0VY1hMLfPLJvGAI="
+        },
+        {
+          "type": "text",
+          "text": "```json { \"result\": { \"firstName\": \"DARIO\", \"lastName\": \"SANCHEZ DUARTE\", \"country_issuer\": \"Colombia\", \"nationality\": \"Colombia\", \"identificationType\": \"Cédula de Ciudadanía\", \"identificationNumber\": \"3.557.420\", \"message\": \"\" }, \"document_type\": \"person\", \"category\": \"CECRL\" } ```"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 10,
+        "cache_creation_input_tokens": 5982,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 644
+      }
+    },
+    "model_id": "us.anthropic.claude-3-7-sonnet-20250219-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 8000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "model_used": "us.anthropic.claude-3-7-sonnet-20250219-v1:0",
+  "api_used": "invoke_model"
+}

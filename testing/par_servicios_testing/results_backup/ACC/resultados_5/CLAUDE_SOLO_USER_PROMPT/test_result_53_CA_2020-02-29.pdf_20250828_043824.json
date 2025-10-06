@@ -1,0 +1,215 @@
+{
+  "document_name": "53_CA_2020-02-29.pdf",
+  "category": "ACC",
+  "classification_success": true,
+  "extraction_success": true,
+  "overall_success": true,
+  "timestamp": "2025-08-28T04:37:06.779720",
+  "classification_result": {
+    "classification_data": {
+      "category": "ACC",
+      "text": "EL SUSCRITO, SAMIR ENRIQUE MARTINEZ ESTRADA EN CALIDAD DE REVISOR FISCAL DE LA SOCIEDAD BUSNIESS PROCESS MANAGEMENT LATINOAMERICA SAS. CERTIFICO QUE LA SOCIEDAD BUSINESS PROCESS MANAGEMENT LATINOAMERICA SAS, DE NIT 900.266.513-3 DOMICILIARIA EN BOGOTA D.C., FUE CREADA POR DOCUMENTO PRIVADO EL 12 DE FEBRERO DE 2009 Y DE ACUERDO CON LAS NORMAS COLOMBIANAS. QUE SU CAPITAL SOCIAL AUTORIZADO, COMPUESTO POR 70.000 ACCIONES DE UN VALOR NOMINAL DE $1.000,00, PARA UN TOTAL DE $70.000.000, DEL CUAL SUSCRITO Y PAGADO ES EL SIGUIENTE: NOMBRE NUMERO DE DOCUMENTO CARGO % PARTICIPACION TIPO DE DOCUMENTO NACIONALIDAD Mauricio Obregón Gutiérrez 79.425.769 GERENTE 80% C.C COLOMBIANO Monica María Gutierrez Obregón 51.826.093 SUBGERENTE 20% C.C COLOMBIANA SE EXPIDE EN BOGOTA A LOS DIEZ Y SIETE DÍAS DEL MES DE SEPTIEMBRE DE 2020. SAMIR ENRIQUE MARTINEZ ESTRADA REVISOR FISCAL C.C. 79.862.372 EXPEDIDA EN BARRANQUILLA CPT 85.571-T",
+      "document_number": "900266513",
+      "path": "ACC/900266513/53_CA_2020-02-29.pdf"
+    },
+    "raw_response": {
+      "output": {
+        "message": {
+          "content": [
+            {
+              "text": "```json { \"category\": \"ACC\", \"text\": \"EL SUSCRITO, SAMIR ENRIQUE MARTINEZ ESTRADA EN CALIDAD DE REVISOR FISCAL DE \\nLA SOCIEDAD BUSNIESS PROCESS MANAGEMENT LATINOAMERICA SAS.\\n\\nCERTIFICO\\nQUE LA SOCIEDAD BUSINESS PROCESS MANAGEMENT LATINOAMERICA SAS, DE NIT \\n900.266.513-3 DOMICILIARIA EN BOGOTA D.C., FUE CREADA POR DOCUMENTO PRIVADO EL \\n12 DE FEBRERO DE 2009 Y DE ACUERDO CON LAS NORMAS COLOMBIANAS.\\n\\nQUE SU CAPITAL SOCIAL AUTORIZADO, COMPUESTO POR 70.000 ACCIONES DE UN VALOR \\nNOMINAL DE $1.000,00, PARA UN TOTAL DE $70.000.000, DEL CUAL SUSCRITO Y PAGADO \\nES EL SIGUIENTE:\\nNOMBRE NUMERO DE \\nDOCUMENTO CARGO % PARTICIPACION\\nTIPO DE \\nDOCUMENTO NACIONALIDAD\\nMauricio \\nObregón \\nGutiérrez\\n79.425.769 GERENTE 80% C.C COLOMBIANO\\nMonica \\nMaría \\nGutierrez \\nObregón\\n51.826.093 SUBGERENTE 20% C.C COLOMBIANA\\nSE EXPIDE EN BOGOTA A LOS DIEZ Y SIETE DÍAS DEL MES DE SEPTIEMBRE DE 2020.\\n\\nSAMIR ENRIQUE MARTINEZ ESTRADA\\nREVISOR FISCAL\\nC.C. 79.862.372 EXPEDIDA EN BARRANQUILLA\\nCPT 85.571-T\" } ```"
+            }
+          ]
+        }
+      },
+      "stopReason": "end_turn",
+      "usage": {
+        "input_tokens": 9,
+        "cache_creation_input_tokens": 4961,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 1624
+      },
+      "ResponseMetadata": {
+        "RequestId": "2b58f44a-b858-4bcb-b8e9-3165b7216886",
+        "HTTPStatusCode": 200,
+        "HTTPHeaders": {
+          "date": "Thu, 28 Aug 2025 09:37:47 GMT",
+          "content-type": "application/json",
+          "content-length": "5483",
+          "connection": "keep-alive",
+          "x-amzn-requestid": "2b58f44a-b858-4bcb-b8e9-3165b7216886",
+          "x-amzn-bedrock-invocation-latency": "40269",
+          "x-amzn-bedrock-cache-write-input-token-count": "4961",
+          "x-amzn-bedrock-cache-read-input-token-count": "0",
+          "x-amzn-bedrock-output-token-count": "1624",
+          "x-amzn-bedrock-input-token-count": "9"
+        },
+        "RetryAttempts": 0
+      },
+      "raw_anthropic_response": {
+        "id": "msg_bdrk_019fmCTsSRzncKY2KHuyC3w8",
+        "type": "message",
+        "role": "assistant",
+        "model": "claude-3-7-sonnet-20250219",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "Let me follow the classification workflow to analyze this document: 1. **TEXT EXTRACTION** I can see this is a PDF document in Spanish that appears to be a certification of some kind. The document is issued by a \"REVISOR FISCAL\" (Fiscal Auditor) named SAMIR ENRIQUE MARTINEZ ESTRADA for a company called BUSINESS PROCESS MANAGEMENT LATINOAMERICA SAS. The document certifies: - The company's NIT (tax identification number): 900.266.513-3 - The company is domiciled in Bogota D.C. - It was created via private document on February 12, 2009 - Information about the company's authorized capital: 70,000 shares with a nominal value of $1,000.00 each, for a total of $70,000,000 - Shareholder composition with ownership percentages: - Mauricio Obregón Gutiérrez (ID: 79.425.769) - GERENTE - 80% - Colombian - Monica María Gutierrez Obregón (ID: 51.826.093) - SUBGERENTE - 20% - Colombian - The certification is dated September 17, 2020 - Signed by the Fiscal Auditor 2. **PRIORITY CHECKS** - This is not a BLANK document - it contains substantial content - This is not a LINK_ONLY document - no hyperlinks/URLs are present 3. **ISSUER IDENTIFICATION** - The document is issued by a \"REVISOR FISCAL\" (Fiscal Auditor), not DIAN or Chamber of Commerce - This appears to be a corporate certification document 4. **DOCUMENT FUNCTION ANALYSIS** - The document's primary function is to certify the ownership structure of the company - It provides detailed information about shareholders with their participation percentages - It does not appear to be a tax document or legal existence document 5. **CATEGORY CLASSIFICATION** Looking at the categories in order: - CECRL: No, this is not a personal identification document - RUT: No, this is not issued by DIAN and doesn't have tax registration information - CERL: No, this is not issued by Chamber of Commerce and doesn't focus on legal representation - ACC: Yes, this document specifically certifies the shareholder composition with ownership percentages (80% and 20%) - RUB: No, this is not a DIAN report about beneficial owners - POR_REVISAR: Not applicable since we have a clear match 6. **CONFIDENCE VALIDATION** - Strong evidence for ACC: - Contains explicit ownership percentages (80% and 20%) - Lists shareholders with their identification numbers - Shows relationship types (GERENTE, SUBGERENTE) - Is certified by a legal representative (REVISOR FISCAL) - Primary focus is on the ownership structure of the company Based on this analysis, the document is clearly an \"ACC\" - a document that certifies the ownership structure and shareholding composition of a company. The complete extracted text from the document is: \"EL SUSCRITO, SAMIR ENRIQUE MARTINEZ ESTRADA EN CALIDAD DE REVISOR FISCAL DE LA SOCIEDAD BUSNIESS PROCESS MANAGEMENT LATINOAMERICA SAS. CERTIFICO QUE LA SOCIEDAD BUSINESS PROCESS MANAGEMENT LATINOAMERICA SAS, DE NIT 900.266.513-3 DOMICILIARIA EN BOGOTA D.C., FUE CREADA POR DOCUMENTO PRIVADO EL 12 DE FEBRERO DE 2009 Y DE ACUERDO CON LAS NORMAS COLOMBIANAS. QUE SU CAPITAL SOCIAL AUTORIZADO, COMPUESTO POR 70.000 ACCIONES DE UN VALOR NOMINAL DE $1.000,00, PARA UN TOTAL DE $70.000.000, DEL CUAL SUSCRITO Y PAGADO ES EL SIGUIENTE: NOMBRE NUMERO DE DOCUMENTO CARGO % PARTICIPACION TIPO DE DOCUMENTO NACIONALIDAD Mauricio Obregón Gutiérrez 79.425.769 GERENTE 80% C.C COLOMBIANO Monica María Gutierrez Obregón 51.826.093 SUBGERENTE 20% C.C COLOMBIANA SE EXPIDE EN BOGOTA A LOS DIEZ Y SIETE DÍAS DEL MES DE SEPTIEMBRE DE 2020. SAMIR ENRIQUE MARTINEZ ESTRADA REVISOR FISCAL C.C. 79.862.372 EXPEDIDA EN BARRANQUILLA CPT 85.571-T\"",
+            "signature": "ErcBCkgIBxABGAIiQEKBusrToGinY70MLWIgm1kp7myA77RMPdyizapXrLGGx6OIiEs1CVNL8LBGirUp4h3UATfjN6Zpr54uWDm43R4SDDhGfQ45sW20ER+C+RoMj0UMrisA+rkl7I1bIjBHHCaht81nD+TIlrJhOgVg36qgncCy3HvmmvhAH+bT5w3oCnkRRepbCZgDVMkT8ugqHfRpCli2TbYJMsYtXx/dExjqYFvTQ3iZfwcRy8QxGAI="
+          },
+          {
+            "type": "text",
+            "text": "```json { \"category\": \"ACC\", \"text\": \"EL SUSCRITO, SAMIR ENRIQUE MARTINEZ ESTRADA EN CALIDAD DE REVISOR FISCAL DE \\nLA SOCIEDAD BUSNIESS PROCESS MANAGEMENT LATINOAMERICA SAS.\\n\\nCERTIFICO\\nQUE LA SOCIEDAD BUSINESS PROCESS MANAGEMENT LATINOAMERICA SAS, DE NIT \\n900.266.513-3 DOMICILIARIA EN BOGOTA D.C., FUE CREADA POR DOCUMENTO PRIVADO EL \\n12 DE FEBRERO DE 2009 Y DE ACUERDO CON LAS NORMAS COLOMBIANAS.\\n\\nQUE SU CAPITAL SOCIAL AUTORIZADO, COMPUESTO POR 70.000 ACCIONES DE UN VALOR \\nNOMINAL DE $1.000,00, PARA UN TOTAL DE $70.000.000, DEL CUAL SUSCRITO Y PAGADO \\nES EL SIGUIENTE:\\nNOMBRE NUMERO DE \\nDOCUMENTO CARGO % PARTICIPACION\\nTIPO DE \\nDOCUMENTO NACIONALIDAD\\nMauricio \\nObregón \\nGutiérrez\\n79.425.769 GERENTE 80% C.C COLOMBIANO\\nMonica \\nMaría \\nGutierrez \\nObregón\\n51.826.093 SUBGERENTE 20% C.C COLOMBIANA\\nSE EXPIDE EN BOGOTA A LOS DIEZ Y SIETE DÍAS DEL MES DE SEPTIEMBRE DE 2020.\\n\\nSAMIR ENRIQUE MARTINEZ ESTRADA\\nREVISOR FISCAL\\nC.C. 79.862.372 EXPEDIDA EN BARRANQUILLA\\nCPT 85.571-T\" } ```"
+          }
+        ],
+        "stop_reason": "end_turn",
+        "stop_sequence": null,
+        "usage": {
+          "input_tokens": 9,
+          "cache_creation_input_tokens": 4961,
+          "cache_read_input_tokens": 0,
+          "output_tokens": 1624
+        }
+      },
+      "model_id": "us.anthropic.claude-3-7-sonnet-20250219-v1:0",
+      "api_used": "invoke_model",
+      "model_params": {
+        "max_tokens": 8000,
+        "top_p": 1,
+        "temperature": 1,
+        "thinking": {
+          "type": "enabled",
+          "budget_tokens": 4096
+        }
+      }
+    },
+    "expected_category": "ACC",
+    "model_used": "us.anthropic.claude-3-7-sonnet-20250219-v1:0",
+    "api_used": "invoke_model",
+    "pdf_info": {
+      "original_size": 19440,
+      "first_page_size": 12694,
+      "is_scanned": false
+    }
+  },
+  "extraction_result": {
+    "extraction_data": {
+      "path": "ACC/900266513/53_CA_2020-02-29.pdf",
+      "result": {
+        "companyName": "BUSINESS PROCESS MANAGEMENT LATINOAMERICA SAS",
+        "documentCategory": "Equity Composition",
+        "taxId": "900.266.513-3",
+        "country": "Colombia",
+        "identificationDetails": {
+          "source": "text_reference",
+          "indicators": [
+            "BOGOTA D.C.",
+            "NORMAS COLOMBIANAS"
+          ],
+          "conflictingSources": [],
+          "requiresReview": "false"
+        },
+        "relatedParties": [
+          {
+            "type": "person",
+            "firstName": "Mauricio",
+            "lastName": "Obregón Gutiérrez",
+            "identificationType": "C.C.",
+            "identificationNumber": "79.425.769",
+            "relationshipType": "Shareholder",
+            "participationPercentage": "80",
+            "timeFound": "1",
+            "job": "GERENTE"
+          },
+          {
+            "type": "person",
+            "firstName": "Monica María",
+            "lastName": "Gutierrez Obregón",
+            "identificationType": "C.C.",
+            "identificationNumber": "51.826.093",
+            "relationshipType": "Shareholder",
+            "participationPercentage": "20",
+            "timeFound": "1",
+            "job": "SUBGERENTE"
+          }
+        ]
+      },
+      "documentType": "company",
+      "documentNumber": "900266513",
+      "category": "ACC"
+    },
+    "raw_response": {
+      "output": {
+        "message": {
+          "content": [
+            {
+              "text": "```json { \"result\": { \"companyName\": \"BUSINESS PROCESS MANAGEMENT LATINOAMERICA SAS\", \"documentCategory\": \"Equity Composition\", \"taxId\": \"900.266.513-3\", \"country\": \"Colombia\", \"identificationDetails\": { \"source\": \"text_reference\", \"indicators\": [ \"BOGOTA D.C.\", \"NORMAS COLOMBIANAS\" ], \"conflictingSources\": [], \"requiresReview\": \"false\" }, \"relatedParties\": [ { \"type\": \"person\", \"firstName\": \"Mauricio\", \"lastName\": \"Obregón Gutiérrez\", \"identificationType\": \"C.C.\", \"identificationNumber\": \"79.425.769\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"80\", \"timeFound\": \"1\", \"job\": \"GERENTE\" }, { \"type\": \"person\", \"firstName\": \"Monica María\", \"lastName\": \"Gutierrez Obregón\", \"identificationType\": \"C.C.\", \"identificationNumber\": \"51.826.093\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"20\", \"timeFound\": \"1\", \"job\": \"SUBGERENTE\" } ] }, \"documentType\": \"company\", \"category\": \"ACC\" } ```"
+            }
+          ]
+        }
+      },
+      "stopReason": "end_turn",
+      "usage": {
+        "input_tokens": 9,
+        "cache_creation_input_tokens": 6559,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 1844
+      },
+      "ResponseMetadata": {
+        "RequestId": "446ca216-5feb-4b26-ac41-07abf301fcf2",
+        "HTTPStatusCode": 200,
+        "HTTPHeaders": {
+          "date": "Thu, 28 Aug 2025 09:38:24 GMT",
+          "content-type": "application/json",
+          "content-length": "7041",
+          "connection": "keep-alive",
+          "x-amzn-requestid": "446ca216-5feb-4b26-ac41-07abf301fcf2",
+          "x-amzn-bedrock-invocation-latency": "37409",
+          "x-amzn-bedrock-cache-write-input-token-count": "6559",
+          "x-amzn-bedrock-cache-read-input-token-count": "0",
+          "x-amzn-bedrock-output-token-count": "1844",
+          "x-amzn-bedrock-input-token-count": "9"
+        },
+        "RetryAttempts": 0
+      },
+      "raw_anthropic_response": {
+        "id": "msg_bdrk_01XeuyUStZBKtYS1qks8Tp6N",
+        "type": "message",
+        "role": "assistant",
+        "model": "claude-3-7-sonnet-20250219",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "Let's analyze this document systematically: ## Step 1: Document Analysis This appears to be a certification document (certificado) issued by a fiscal auditor (revisor fiscal) named Samir Enrique Martinez Estrada for a Colombian company. Key observations: - The document is a certification of the equity composition of a company - Language is Spanish - The company is located in Bogota, Colombia - The company has two shareholders - The document contains information about the company's capital structure - The document is dated September 17, 2020 ## Step 2: Root Level Extraction Let's extract the basic company information: 1. **companyName**: \"BUSINESS PROCESS MANAGEMENT LATINOAMERICA SAS\" - Evidence: Appears in the header \"LA SOCIEDAD BUSINESS PROCESS MANAGEMENT LATINOAMERICA SAS\" 2. **taxId**: \"900.266.513-3\" - Evidence: Clearly stated as \"NIT 900.266.513-3\" 3. **country**: \"Colombia\" - Evidence: Multiple indicators: - \"BOGOTA D.C.\" mentioned as company domicile - Uses \"NIT\" which is the tax ID format for Colombia - Reference to \"NORMAS COLOMBIANAS\" - Document uses Colombian ID type nomenclature (C.C.) 4. **identificationDetails**: - source: \"text_reference\" (explicit mentions of Colombia) - indicators: [\"BOGOTA D.C.\", \"NORMAS COLOMBIANAS\", \"NIT format\"] - conflictingSources: [] (no conflicts observed) - requiresReview: \"false\" (all information appears clear and consistent) ## Step 3: Related Parties Processing The document lists two shareholders: 1. First shareholder: - Name: \"Mauricio Obregón Gutiérrez\" - Document Number: \"79.425.769\" - Position: \"GERENTE\" - Participation: \"80%\" - Document Type: \"C.C.\" (Cédula de Ciudadanía) - Nationality: \"COLOMBIANO\" 2. Second shareholder: - Name: \"Monica María Gutierrez Obregón\" - Document Number: \"51.826.093\" - Position: \"SUBGERENTE\" - Participation: \"20%\" - Document Type: \"C.C.\" (Cédula de Ciudadanía) - Nationality: \"COLOMBIANA\" Both shareholders appear to be individuals (persons) rather than companies, and both have Colombian citizenship. Let's format these into the relatedParties array: ```json \"relatedParties\": [ { \"type\": \"person\", \"firstName\": \"Mauricio\", \"lastName\": \"Obregón Gutiérrez\", \"identificationType\": \"C.C.\", \"identificationNumber\": \"79.425.769\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"80\", \"timeFound\": \"1\", \"job\": \"GERENTE\" }, { \"type\": \"person\", \"firstName\": \"Monica María\", \"lastName\": \"Gutierrez Obregón\", \"identificationType\": \"C.C.\", \"identificationNumber\": \"51.826.093\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"20\", \"timeFound\": \"1\", \"job\": \"SUBGERENTE\" } ] ``` ## Step 4: Validation & Cross-checking Let's validate the information: 1. **taxId format**: \"900.266.513-3\" follows the Colombian NIT format with dots and hyphen. 2. **identificationType**: C.C. is correct for Colombian citizens per the PERSON_ID hash table. 3. **Percentage total**: 80% + 20% = 100% (correct sum) 4. **Job titles**: \"GERENTE\" and \"SUBGERENTE\" are executive roles, common in Colombian companies. 5. **Required fields**: All required fields are present. 6. **Conflicts**: None detected. Based on this validation, the requiresReview flag should be set to \"false\" as all information appears clear and consistent. ## Final JSON Output Based on the analysis, I'll now prepare the final JSON: ```json { \"result\": { \"companyName\": \"BUSINESS PROCESS MANAGEMENT LATINOAMERICA SAS\", \"documentCategory\": \"Equity Composition\", \"taxId\": \"900.266.513-3\", \"country\": \"Colombia\", \"identificationDetails\": { \"source\": \"text_reference\", \"indicators\": [ \"BOGOTA D.C.\", \"NORMAS COLOMBIANAS\" ], \"conflictingSources\": [], \"requiresReview\": \"false\" }, \"relatedParties\": [ { \"type\": \"person\", \"firstName\": \"Mauricio\", \"lastName\": \"Obregón Gutiérrez\", \"identificationType\": \"C.C.\", \"identificationNumber\": \"79.425.769\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"80\", \"timeFound\": \"1\", \"job\": \"GERENTE\" }, { \"type\": \"person\", \"firstName\": \"Monica María\", \"lastName\": \"Gutierrez Obregón\", \"identificationType\": \"C.C.\", \"identificationNumber\": \"51.826.093\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"20\", \"timeFound\": \"1\", \"job\": \"SUBGERENTE\" } ] }, \"documentType\": \"company\", \"category\": \"ACC\" } ```",
+            "signature": "ErcBCkgIBxABGAIiQNhJIypzt2V34u753Mmklj0anuUxeem6pvLN3ZMufUanOhSTCce28Euk5iG1W0aV1mJb8+vCN4ahG3MQXU6bd90SDKMSbrqeH1aGnSufMhoMg566Kly5H+JvhMA9IjA0i4dobg8+uS+ahl6OQ2Rumuf5RbfKKR7+An53u+GcPDA7H5TtpZ5SAHUjmvsis/wqHRFkEfCMK7t97633Zql+mmzVMypToyHrb2kUK6AdGAI="
+          },
+          {
+            "type": "text",
+            "text": "```json { \"result\": { \"companyName\": \"BUSINESS PROCESS MANAGEMENT LATINOAMERICA SAS\", \"documentCategory\": \"Equity Composition\", \"taxId\": \"900.266.513-3\", \"country\": \"Colombia\", \"identificationDetails\": { \"source\": \"text_reference\", \"indicators\": [ \"BOGOTA D.C.\", \"NORMAS COLOMBIANAS\" ], \"conflictingSources\": [], \"requiresReview\": \"false\" }, \"relatedParties\": [ { \"type\": \"person\", \"firstName\": \"Mauricio\", \"lastName\": \"Obregón Gutiérrez\", \"identificationType\": \"C.C.\", \"identificationNumber\": \"79.425.769\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"80\", \"timeFound\": \"1\", \"job\": \"GERENTE\" }, { \"type\": \"person\", \"firstName\": \"Monica María\", \"lastName\": \"Gutierrez Obregón\", \"identificationType\": \"C.C.\", \"identificationNumber\": \"51.826.093\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"20\", \"timeFound\": \"1\", \"job\": \"SUBGERENTE\" } ] }, \"documentType\": \"company\", \"category\": \"ACC\" } ```"
+          }
+        ],
+        "stop_reason": "end_turn",
+        "stop_sequence": null,
+        "usage": {
+          "input_tokens": 9,
+          "cache_creation_input_tokens": 6559,
+          "cache_read_input_tokens": 0,
+          "output_tokens": 1844
+        }
+      },
+      "model_id": "us.anthropic.claude-3-7-sonnet-20250219-v1:0",
+      "api_used": "invoke_model",
+      "model_params": {
+        "max_tokens": 8000,
+        "top_p": 1,
+        "temperature": 1,
+        "thinking": {
+          "type": "enabled",
+          "budget_tokens": 4096
+        }
+      }
+    },
+    "model_used": "us.anthropic.claude-3-7-sonnet-20250219-v1:0",
+    "api_used": "invoke_model"
+  }
+}

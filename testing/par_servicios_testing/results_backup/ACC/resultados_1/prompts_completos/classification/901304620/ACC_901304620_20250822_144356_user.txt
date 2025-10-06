@@ -1,0 +1,217 @@
+I'll provide you with PDF document text and a folder path. Your task is to classify the document into one of our legal document categories and return a properly formatted JSON response.
+
+# Document Categories
+
+Please classify each document into one of these categories:
+
+- CERL: Certificados de Existencia y Representación Legal
+  These are certificates that prove a company's legal existence and representation.
+
+- CECRL: Copia de cédulas de ciudadanía del Representante Legal
+  These are copies of the legal representative's citizenship ID cards.
+
+- RUT: Registro Único Tributario
+  These are tax registration documents.
+
+- RUB: Registro Único de Beneficiarios
+  These are documents registering the beneficiaries of a company or entity.
+
+- ACC: Composiciones Accionarias
+  These documents detail the shareholder composition of a company.
+
+# Document Path Structure
+
+The folder path follows this pattern: {CATEGORY}/{DOCUMENT_NUMBER}/{FILENAME}
+
+For example:
+- "CECRL/5120000874/cedula_representante.pdf"
+- "RUT/800003781/941_2020-02-29.pdf"
+- "ACC/900266513/53_CA_2020-02-29.pdf"
+
+# Important Path Instructions
+
+When extracting the document_number:
+- Extract the parent folder name (middle part of the path)
+- In "CECRL/5120000874/cedula_representante.pdf", use "5120000874" as the document_number
+- In "RUT/800003781/941_2020-02-29.pdf", use "800003781" as the document_number
+
+When formatting the output path:
+- Follow the pattern: "file_examples/{category}/{document_number}"
+- Example: "file_examples/CECRL/5120000874"
+- Exclude the filename from the path
+
+
+# Special Cases
+
+For empty documents or those with only whitespace, assign the "BLANK" category.
+
+For documents containing only a hyperlink with no other meaningful text, assign the "LINK_ONLY" category.
+
+# Expected Output
+
+Provide a single JSON object with this structure:
+
+{
+  "document_number": "[subfolder name from the path]",
+  "document_type": "[person or company]",
+  "category": "[one of CERL|CECRL|RUT|RUB|ACC|BLANK|LINK_ONLY]",
+  "text": "[all extracted text]",
+  "path": "[document path from 'Folder path:']"
+}
+
+# Important Guidelines
+
+1. Assign "person" as the document_type for CECRL documents and "company" for all other categories.
+2. Use the exact string after 'Folder path:' for the path field.
+3. Output only the JSON object without additional text or formatting.
+4. Use the exact category spelling shown above, including underscores where needed.
+
+# Examples
+
+## Example 1: Composición Accionaria
+
+Input:
+Folder path: ACC/900266513/53_CA_2020-02-29.pdf
+Extracted text: "EL SUSCRITO, SAMIR ENRIQUE MARTINEZ ESTRADA EN CALIDAD DE REVISOR FISCAL DE LA SOCIEDAD BUSNIESS PROCESS MANAGEMENT LATINOAMERICA SAS. CERTIFICO QUE LA SOCIEDAD BUSINESS PROCESS MANAGEMENT LATINOAMERICA SAS, DE NIT 900.266.513-3 DOMICILIARIA EN BOGOTA D.C., FUE CREADA POR DOCUMENTO PRIVADO EL 12 DE FEBRERO DE 2009 Y DE ACUERDO CON LAS NORMAS COLOMBIANAS. QUE SU CAPITAL SOCIAL AUTORIZADO, COMPUESTO POR 70.000 ACCIONES DE UN VALOR NOMINAL DE $1.000,00, PARA UN TOTAL DE $70.000.000, DEL CUAL SUSCRITO Y PAGADO ES EL SIGUIENTE: NOMBRE NUMERO DE DOCUMENTO CARGO % PARTICIPACION TIPO DE DOCUMENTO NACIONALIDAD Mauricio Obregón Gutiérrez 79.425.769 GERENTE 80% C.C COLOMBIΑΝΟ Monica María Gutierrez Obregón 51.826.093 SUBGERENTE 20% C.C COLOMBIΑΝΑ SE EXPIDE EN BOGOTA A LOS DIEZ Y SIETE DÍAS DEL MES DE SEPTIEMBRE DE 2020. SAMIR ENRIQUE MARTINEZ ESTRADA REVISOR FISCAL C.C. 79.862.372 EXPEDIDA EN BARRANQUILLA CPT 85.571-T"
+
+Output:
+{
+  "document_number": "900266513",
+  "document_type": "company",
+  "category": "ACC",
+  "text": "EL SUSCRITO, SAMIR ENRIQUE MARTINEZ ESTRADA EN CALIDAD DE REVISOR FISCAL DE LA SOCIEDAD BUSNIESS PROCESS MANAGEMENT LATINOAMERICA SAS. CERTIFICO QUE LA SOCIEDAD BUSINESS PROCESS MANAGEMENT LATINOAMERICA SAS, DE NIT 900.266.513-3 DOMICILIARIA EN BOGOTA D.C., FUE CREADA POR DOCUMENTO PRIVADO EL 12 DE FEBRERO DE 2009 Y DE ACUERDO CON LAS NORMAS COLOMBIANAS. QUE SU CAPITAL SOCIAL AUTORIZADO, COMPUESTO POR 70.000 ACCIONES DE UN VALOR NOMINAL DE $1.000,00, PARA UN TOTAL DE $70.000.000, DEL CUAL SUSCRITO Y PAGADO ES EL SIGUIENTE: NOMBRE NUMERO DE DOCUMENTO CARGO % PARTICIPACION TIPO DE DOCUMENTO NACIONALIDAD Mauricio Obregón Gutiérrez 79.425.769 GERENTE 80% C.C COLOMBIΑΝΟ Monica María Gutierrez Obregón 51.826.093 SUBGERENTE 20% C.C COLOMBIΑΝΑ SE EXPIDE EN BOGOTA A LOS DIEZ Y SIETE DÍAS DEL MES DE SEPTIEMBRE DE 2020. SAMIR ENRIQUE MARTINEZ ESTRADA REVISOR FISCAL C.C. 79.862.372 EXPEDIDA EN BARRANQUILLA CPT 85.571-T",
+  "path": "file_examples/ACC/900266513"
+}
+
+## Example 2: Registro Único Tributario
+
+Input:
+Folder path: RUT/800003781/941_2020-02-29.pdf
+Extracted text: "DIAN Formulario del Registro Único Tributario POR UNA COLOMBIA HAS HONESTA 001 Concepto 13 Actualización de oficio Número de formulario 14698341279 Código 5 05- Impto. renta y compl. régimen ordinar 48-Impuesto sobre las ventas - IVA 07- Retención en la fuente a titulo de rent 52-Facturador electrónico 08- Retención timbre nacional 09- Retención en la fuente en el impuesto 10- Obligado aduanero 14- Informante de exogena 42- Obligado a llevar contabilidad Razón social VR INGENIERIA Y MERCADEO SA S 36. Nombre comercial VR INGENIERIA S A S País Departamento Ciudad/Municipio COLOMBIA 169 Bogotá D.C. 1 1 Bogotá, D.C. 001 Dirección principal CR 126 17 10 Correo electrónico yolima@vringenieria.com.co Código postal Teléfono 4 2 6 3 7 7 7 45. Teléfono 2 CLASIFICACIÓN Actividad económica Ocupación Actividad principal Actividad secundaria Otras actividades Número Código Fecha inicio actividad Código 49. Fecha Inicio actividad 2513 198 70 10 1 2 5 12 20 0 30101 Código 1 2 Código establecimientos 2 79 0 3 3 12 1 Responsabilidades, Calidades y Atributos 2 3 4 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 8 9 1014424852 Número de Identificación Tributaria (NIT) DV 12. Dirección seccional Buzón electrónico 8 0 0 0 0 3 7 811 Impuestos de Bogotá IDENTIFICACIÓN Tipo de contribuyente Tipo de documento Número de Identificación Fecha expedición Persona jurídica 1 Lugar de expedición Pais Departamento Primer apellido Segundo apellido Primer nombre CERTIFICADO O SIN COST (415)7707212489984(8020) 0000014698341279"
+
+Output:
+{
+  "document_number": "800003781",
+  "document_type": "company",
+  "category": "RUT",
+  "text": "DIAN Formulario del Registro Único Tributario POR UNA COLOMBIA HAS HONESTA 001 Concepto 13 Actualización de oficio Número de formulario 14698341279 Código 5 05- Impto. renta y compl. régimen ordinar 48-Impuesto sobre las ventas - IVA 07- Retención en la fuente a titulo de rent 52-Facturador electrónico 08- Retención timbre nacional 09- Retención en la fuente en el impuesto 10- Obligado aduanero 14- Informante de exogena 42- Obligado a llevar contabilidad Razón social VR INGENIERIA Y MERCADEO SA S 36. Nombre comercial VR INGENIERIA S A S País Departamento Ciudad/Municipio COLOMBIA 169 Bogotá D.C. 1 1 Bogotá, D.C. 001 Dirección principal CR 126 17 10 Correo electrónico yolima@vringenieria.com.co Código postal Teléfono 4 2 6 3 7 7 7 45. Teléfono 2 CLASIFICACIÓN Actividad económica Ocupación Actividad principal Actividad secundaria Otras actividades Número Código Fecha inicio actividad Código 49. Fecha Inicio actividad 2513 198 70 10 1 2 5 12 20 0 30101 Código 1 2 Código establecimientos 2 79 0 3 3 12 1 Responsabilidades, Calidades y Atributos 2 3 4 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 8 9 1014424852 Número de Identificación Tributaria (NIT) DV 12. Dirección seccional Buzón electrónico 8 0 0 0 0 3 7 811 Impuestos de Bogotá IDENTIFICACIÓN Tipo de contribuyente Tipo de documento Número de Identificación Fecha expedición Persona jurídica 1 Lugar de expedición Pais Departamento Primer apellido Segundo apellido Primer nombre CERTIFICADO O SIN COST (415)7707212489984(8020) 0000014698341279",
+  "path": "file_examples/RUT/800003781"
+}
+
+## Example 3: Cédula de Ciudadanía
+
+Input:
+Folder path: CECRL/555666777/cedula_representante.pdf
+Extracted text: "REPUBLICA DE COLOMBIA IDENTIFICACION PERSONAL CEDULA DE CIUDADANIA NUMERO 88.199.170 FUENTES LEON APELLIDOS NORBERTO NOMBRES [illegible firma] FIRMA FECHA DE NACIMIENTO 27-NOV-1970 CHIMA (SANTANDER) LUGAR DE NACIMIENTO CUCUTA ESTATURA 1.61 G.S. RH B+ SEXO M 03-OCT-1990 FECHA Y LUGAR DE EXPEDICION REGISTRADOR NACIONAL CARLOS ARIEL SANCHEZ TORRES A-4000100-00206610-M-0088199170-20091229 0019423436A 1 1730606305"
+
+Output:
+{
+  "document_number": "88199170",
+  "document_type": "person",
+  "category": "CECRL",
+  "text": "REPUBLICA DE COLOMBIA IDENTIFICACION PERSONAL CEDULA DE CIUDADANIA NUMERO 88.199.170 FUENTES LEON APELLIDOS NORBERTO NOMBRES [illegible firma] FIRMA FECHA DE NACIMIENTO 27-NOV-1970 CHIMA (SANTANDER) LUGAR DE NACIMIENTO CUCUTA ESTATURA 1.61 G.S. RH B+ SEXO M 03-OCT-1990 FECHA Y LUGAR DE EXPEDICION REGISTRADOR NACIONAL CARLOS ARIEL SANCHEZ TORRES A-4000100-00206610-M-0088199170-20091229 0019423436A 1 1730606305",
+  "path": "file_examples/CECRL/555666777"
+}
+
+## Example 4: Blank Document
+
+Input:
+Folder path: CERL/999888777/cert_existencia.pdf
+Extracted text: (blank page)
+
+Output:
+{
+  "document_number": "999888777",
+  "document_type": "company",
+  "category": "BLANK",
+  "text": "",
+  "path": "file_examples/CERL/999888777"
+}
+
+## Example 5: Certificado de Existencia (CERL)
+
+Input:
+Folder path: CERL/800035887/9_CamCom_2020-02-28.pdf
+Extracted text: "CÁMARA DE COMERCIO DE BOGOTÁ CERTIFICADO DE EXISTENCIA Y REPRESENTACIÓN LEGAL NÚMERO 12345 RAZÓN SOCIAL: EMPRESA EJEMPLO SAS NIT: 800035887-3 REPRESENTANTE LEGAL: JUAN PÉREZ GÓMEZ CÉDULA: 123456789 VIGENCIA: INDEFINIDA FECHA DE EXPEDICIÓN: 28-FEB-2020"
+
+Output:
+{
+  "document_number": "800035887",
+  "document_type": "company",
+  "category": "CERL",
+  "text": "CÁMARA DE COMERCIO DE BOGOTÁ CERTIFICADO DE EXISTENCIA Y REPRESENTACIÓN LEGAL NÚMERO 12345 RAZÓN SOCIAL: EMPRESA EJEMPLO SAS NIT: 800035887-3 REPRESENTANTE LEGAL: JUAN PÉREZ GÓMEZ CÉDULA: 123456789 VIGENCIA: INDEFINIDA FECHA DE EXPEDICIÓN: 28-FEB-2020",
+  "path": "file_examples/CERL/800035887"
+}
+
+## Example 6: Registro Único de Beneficiarios (RUB)
+
+Input:
+Folder path: RUB/860013951/941_2020-02-29.pdf
+Extracted text: "REGISTRO ÚNICO DE BENEFICIARIOS NOMBRE DE LA EMPRESA: EJEMPLO SA NIT: 860013951-3 BENEFICIARIOS: 1. MARÍA LÓPEZ RODRÍGUEZ - CC 987654321 - 45% 2. CARLOS GARCÍA MÉNDEZ - CE 654321987 - 30% 3. SOCIEDAD BENEFICIARIA SAS - NIT 900123456-1 - 25%"
+
+Output:
+{
+  "document_number": "860013951",
+  "document_type": "company",
+  "category": "RUB",
+  "text": "REGISTRO ÚNICO DE BENEFICIARIOS NOMBRE DE LA EMPRESA: EJEMPLO SA NIT: 860013951-3 BENEFICIARIOS: 1. MARÍA LÓPEZ RODRÍGUEZ - CC 987654321 - 45% 2. CARLOS GARCÍA MÉNDEZ - CE 654321987 - 30% 3. SOCIEDAD BENEFICIARIA SAS - NIT 900123456-1 - 25%",
+  "path": "file_examples/RUB/860013951"
+}
+
+## Example 7: Link Only Document
+
+Input:
+Folder path: ACC/123456789/accionistas.pdf
+Extracted text: "RELACIÓN PRINCIPALES ACCIONISTAS
+De acuerdo con su solicitud, nos permitimos informar que la relación de nuestros
+principales accionistas se encuentra debidamente actualizada en la página web del
+Grupo. A continuación, relacionamos el link en el cual puede encontrarla:
+https://www.grupoexito.com.co/es/principales-accionistas
+La presente certificación se expide a los
+2024.
+01
+días del mes de
+Febrero de
+Cualquier información adicional que requieran, no duden en contactarnos.
+Cordialmente"
+
+Output:
+{
+  "document_number": "123456789",
+  "document_type": "company",
+  "category": "LINK_ONLY",
+  "text": "RELACIÓN PRINCIPALES ACCIONISTAS
+De acuerdo con su solicitud, nos permitimos informar que la relación de nuestros
+principales accionistas se encuentra debidamente actualizada en la página web del
+Grupo. A continuación, relacionamos el link en el cual puede encontrarla:
+https://www.grupoexito.com.co/es/principales-accionistas
+La presente certificación se expide a los
+2024.
+01
+días del mes de
+Febrero de
+Cualquier información adicional que requieran, no duden en contactarnos.
+Cordialmente",
+  "path": "file_examples/ACC/123456789"
+}
+
+## Example 8: Blank Document with text
+
+Input:
+Folder path: CERL/999888777/cert_existencia.pdf
+Extracted text: hola
+
+Output:
+{
+  "document_number": "999888777",
+  "document_type": "company",
+  "category": "BLANK",
+  "text": "hola",
+  "path": "file_examples/CERL/999888777"
+}
+
+Please analyze the document I provide and return a single JSON object with the correct classification.
+
+NOW PROCESS:
+Folder path: `ACC/901304620/237_CA_2020-02-29.pdf`
+Extracted text follows the PDF below.

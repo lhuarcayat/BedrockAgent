@@ -1,0 +1,82 @@
+{
+  "extraction_data": {
+    "path": "ACC/860031028/Compisicion_accionaria_S_A__Mayo_2023.pdf",
+    "result": {
+      "companyName": "Siemens Sociedad por Acciones Simplificada",
+      "documentType": "Equity Composition",
+      "taxId": "860.031.028-9",
+      "country": "Colombia",
+      "identificationDetails": {
+        "source": "text_reference",
+        "indicators": [
+          "Bogotá",
+          "Colombia"
+        ],
+        "conflictingSources": [],
+        "requiresReview": false
+      },
+      "relatedParties": [
+        {
+          "companyName": "Siemens International Holding B.V.",
+          "identificationType": "NIT",
+          "identificationNumber": "NL001781029801",
+          "relationshipType": "Shareholder",
+          "participationPercentage": "100%",
+          "timeFound": 1,
+          "job": ""
+        }
+      ]
+    },
+    "document_type": "company",
+    "document_number": "860031028",
+    "category": "ACC",
+    "confidenceScores": {
+      "companyName": 95,
+      "taxId": 95,
+      "country": 98,
+      "relatedParties": 90
+    }
+  },
+  "raw_response": {
+    "ResponseMetadata": {
+      "RequestId": "736dd432-ab0e-444e-926a-7b61c4cd10e4",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Mon, 25 Aug 2025 06:02:31 GMT",
+        "content-type": "application/json",
+        "content-length": "1303",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "736dd432-ab0e-444e-926a-7b61c4cd10e4"
+      },
+      "RetryAttempts": 0
+    },
+    "output": {
+      "message": {
+        "role": "assistant",
+        "content": [
+          {
+            "text": "```json { \"path\": \"ACC/860031028/Compisicion_accionaria_S_A__Mayo_2023.pdf\", \"result\": { \"companyName\": \"Siemens Sociedad por Acciones Simplificada\", \"documentType\": \"Equity Composition\", \"taxId\": \"860.031.028-9\", \"country\": \"Colombia\", \"identificationDetails\": { \"source\": \"text_reference\", \"indicators\": [ \"Bogotá\", \"Colombia\" ], \"conflictingSources\": [], \"requiresReview\": false }, \"relatedParties\": [ { \"companyName\": \"Siemens International Holding B.V.\", \"identificationType\": \"NIT\", \"identificationNumber\": \"NL001781029801\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"100%\", \"timeFound\": 1, \"job\": \"\" } ] }, \"document_type\": \"company\", \"document_number\": \"860031028\", \"category\": \"ACC\", \"confidenceScores\": { \"companyName\": 95, \"taxId\": 95, \"country\": 98, \"relatedParties\": 90 } } ```"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "inputTokens": 8571,
+      "outputTokens": 320,
+      "totalTokens": 8891
+    },
+    "metrics": {
+      "latencyMs": 6180
+    },
+    "model_id": "us.amazon.nova-pro-v1:0",
+    "api_used": "converse",
+    "model_params": {
+      "maxTokens": 8200,
+      "topP": 1,
+      "temperature": 0.1
+    }
+  },
+  "model_used": "us.amazon.nova-pro-v1:0",
+  "api_used": "converse"
+}

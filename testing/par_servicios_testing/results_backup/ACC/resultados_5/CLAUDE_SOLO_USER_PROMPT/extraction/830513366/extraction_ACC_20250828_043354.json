@@ -1,0 +1,131 @@
+{
+  "extraction_data": {
+    "path": "ACC/830513366/240_CA_2020-02-29.pdf",
+    "result": {
+      "companyName": "NEWSAT S.A.S.",
+      "documentCategory": "Equity Composition",
+      "taxId": "830.513.366-3",
+      "country": "Colombia",
+      "identificationDetails": {
+        "source": "text_reference",
+        "indicators": [
+          "Bogotá",
+          "Cámara de Comercio de Bogotá"
+        ],
+        "conflictingSources": [],
+        "requiresReview": "false"
+      },
+      "relatedParties": [
+        {
+          "type": "person",
+          "firstName": "Carlos Enrique",
+          "lastName": "Rosero Ceron",
+          "identificationType": "C.C.",
+          "identificationNumber": "6386024",
+          "relationshipType": "Shareholder",
+          "participationPercentage": "40",
+          "timeFound": "1",
+          "job": ""
+        },
+        {
+          "type": "person",
+          "firstName": "Shai",
+          "lastName": "Bercovich",
+          "identificationType": "C.C.",
+          "identificationNumber": "301680",
+          "relationshipType": "Shareholder",
+          "participationPercentage": "40",
+          "timeFound": "1",
+          "job": ""
+        },
+        {
+          "type": "person",
+          "firstName": "Diego Alejandro",
+          "lastName": "Salazar Vasquez",
+          "identificationType": "C.C.",
+          "identificationNumber": "91499446",
+          "relationshipType": "Shareholder",
+          "participationPercentage": "20",
+          "timeFound": "1",
+          "job": ""
+        }
+      ]
+    },
+    "documentType": "company",
+    "documentNumber": "830513366",
+    "category": "ACC"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "```json { \"result\": { \"companyName\": \"NEWSAT S.A.S.\", \"documentCategory\": \"Equity Composition\", \"taxId\": \"830.513.366-3\", \"country\": \"Colombia\", \"identificationDetails\": { \"source\": \"text_reference\", \"indicators\": [ \"Bogotá\", \"Cámara de Comercio de Bogotá\" ], \"conflictingSources\": [], \"requiresReview\": \"false\" }, \"relatedParties\": [ { \"type\": \"person\", \"firstName\": \"Carlos Enrique\", \"lastName\": \"Rosero Ceron\", \"identificationType\": \"C.C.\", \"identificationNumber\": \"6386024\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"40\", \"timeFound\": \"1\", \"job\": \"\" }, { \"type\": \"person\", \"firstName\": \"Shai\", \"lastName\": \"Bercovich\", \"identificationType\": \"C.C.\", \"identificationNumber\": \"301680\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"40\", \"timeFound\": \"1\", \"job\": \"\" }, { \"type\": \"person\", \"firstName\": \"Diego Alejandro\", \"lastName\": \"Salazar Vasquez\", \"identificationType\": \"C.C.\", \"identificationNumber\": \"91499446\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"20\", \"timeFound\": \"1\", \"job\": \"\" } ] }, \"documentType\": \"company\", \"category\": \"ACC\" } ```"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 9,
+      "cache_creation_input_tokens": 6695,
+      "cache_read_input_tokens": 0,
+      "output_tokens": 1271
+    },
+    "ResponseMetadata": {
+      "RequestId": "3449365a-aa9f-405a-bd09-464d5e3e05fa",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Thu, 28 Aug 2025 09:33:53 GMT",
+        "content-type": "application/json",
+        "content-length": "5219",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "3449365a-aa9f-405a-bd09-464d5e3e05fa",
+        "x-amzn-bedrock-invocation-latency": "26651",
+        "x-amzn-bedrock-cache-write-input-token-count": "6695",
+        "x-amzn-bedrock-cache-read-input-token-count": "0",
+        "x-amzn-bedrock-output-token-count": "1271",
+        "x-amzn-bedrock-input-token-count": "9"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_0113uCpEdW3gjT5Lq3cgzY4Y",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-3-7-sonnet-20250219",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Let me analyze the provided document and extract the relevant information according to the schema and rules provided. ## Step 1: Document Analysis - This is a certification of equity composition (\"composición accionaria\") for a company - The document is in Spanish and appears to be from Colombia (mentions \"Cámara de Comercio de Bogotá\") - The document is issued by a Fiscal Reviewer (\"Revisor Fiscal\") named Roberto Londoño Osorio - It includes a table showing the shareholders with their ID numbers, names, number of shares, nominal value, and participation percentages ## Step 2: Root Level Extraction ### Company Name The company name is clearly stated as \"NEWSAT S.A.S.\" ### Tax ID The tax ID is provided as \"830.513.366-3\", which follows the Colombian NIT format. ### Country The country is Colombia, as evidenced by: - The document mentions \"Cámara de Comercio de Bogotá\" (Bogotá's Chamber of Commerce) - The address at the bottom mentions \"BOGOTA D.C.\" - NIT format is consistent with Colombian tax ID structure - The document follows Colombian business documentation standards ### Document Category As per instructions, this is set to \"Equity Composition\". ### Identification Details - Source: \"text_reference\" (explicit city reference) - Indicators: [\"Bogotá\", \"Colombia\"] - No apparent conflicts in identification - No fields set to \"POR REVISAR\", so requiresReview can be set to \"false\" ## Step 3: Related Parties Processing Looking at the shareholder table, I can identify three shareholders: 1. **Carlos Enrique Rosero Ceron** - Type: person - ID Type: C.C. (based on Colombian ID type rules) - ID Number: 6386024 - Number of shares: 148,000 - Nominal value: $1,480,000,000.00 - Participation percentage: 40% - Job: Not specified (empty string) 2. **Shai Bercovich** - Type: person - ID Type: C.C. (based on Colombian ID type rules) - ID Number: 301680 - Number of shares: 148,000 - Nominal value: $1,480,000,000.00 - Participation percentage: 40% - Job: Not specified (empty string) 3. **Diego Alejandro Salazar Vasquez** - Type: person - ID Type: C.C. (based on Colombian ID type rules) - ID Number: 91499446 - Number of shares: 74,000 - Nominal value: $740,000,000.00 - Participation percentage: 20% - Job: Not specified (empty string) Each entity appears only once, so timeFound = \"1\" for each. ## Step 4: Validation & Cross-checking - The company name and tax ID are clearly stated - The country is determined to be Colombia based on multiple indicators - The participationPercentage values sum to 100% (40% + 40% + 20%) - All three shareholders appear to be individuals (persons), not companies - All fields required by the schema are present - No conflicts or missing information detected Now I'll create the JSON according to the schema:",
+          "signature": "ErcBCkgIBxABGAIiQOOG8pE9u9J3zTv8dD7DNPy0Gyol2jtad3rOndjmYsV9pL6tEtO8PJ5ubH++rDuNLvSOA1EIZ3I2rbez1kp0bggSDBpu6a+hpY5AzQCqUhoMJcMGLUjLdA9ZijBKIjAgZjz4RyeDrf0OuG1DfYtHzMwcOzJ0bYcCUjwUQiSgMOmPDrmxpjhrGfGwOCFb8ycqHUD+wF+LBCCmn5PvPbIN86M5FL0CBBD15R4z83NdGAI="
+        },
+        {
+          "type": "text",
+          "text": "```json { \"result\": { \"companyName\": \"NEWSAT S.A.S.\", \"documentCategory\": \"Equity Composition\", \"taxId\": \"830.513.366-3\", \"country\": \"Colombia\", \"identificationDetails\": { \"source\": \"text_reference\", \"indicators\": [ \"Bogotá\", \"Cámara de Comercio de Bogotá\" ], \"conflictingSources\": [], \"requiresReview\": \"false\" }, \"relatedParties\": [ { \"type\": \"person\", \"firstName\": \"Carlos Enrique\", \"lastName\": \"Rosero Ceron\", \"identificationType\": \"C.C.\", \"identificationNumber\": \"6386024\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"40\", \"timeFound\": \"1\", \"job\": \"\" }, { \"type\": \"person\", \"firstName\": \"Shai\", \"lastName\": \"Bercovich\", \"identificationType\": \"C.C.\", \"identificationNumber\": \"301680\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"40\", \"timeFound\": \"1\", \"job\": \"\" }, { \"type\": \"person\", \"firstName\": \"Diego Alejandro\", \"lastName\": \"Salazar Vasquez\", \"identificationType\": \"C.C.\", \"identificationNumber\": \"91499446\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"20\", \"timeFound\": \"1\", \"job\": \"\" } ] }, \"documentType\": \"company\", \"category\": \"ACC\" } ```"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 9,
+        "cache_creation_input_tokens": 6695,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 1271
+      }
+    },
+    "model_id": "us.anthropic.claude-3-7-sonnet-20250219-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 8000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "model_used": "us.anthropic.claude-3-7-sonnet-20250219-v1:0",
+  "api_used": "invoke_model"
+}

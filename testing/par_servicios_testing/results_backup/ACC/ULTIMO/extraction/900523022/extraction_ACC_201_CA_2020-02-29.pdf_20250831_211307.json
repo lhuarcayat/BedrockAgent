@@ -1,0 +1,108 @@
+{
+  "extraction_data": {
+    "result": {
+      "PrincipalCompanyName": "PUBLIART COLORS SAS",
+      "DocumentCategory": "Equity Composition",
+      "TaxId": "900.523.022-1",
+      "IdentificationType": "NIT",
+      "Country": "Colombia",
+      "IdentificationDetails": {
+        "Source": "TextReference",
+        "Indicators": [
+          "Bogotá D.C.",
+          "Colombia"
+        ],
+        "ConflictingSources": [],
+        "RequiresReview": "false"
+      },
+      "RelatedParties": [
+        {
+          "Type": "person",
+          "FirstName": "JOHN FABIO",
+          "LastName": "MARTINEZ LIEVANO",
+          "IdType": "CC",
+          "IdNumber": "1.010.168.875",
+          "RelationshipType": "Shareholder",
+          "ParticipationPercentage": "100%",
+          "TimeFound": "1",
+          "Job": "GERENTE"
+        }
+      ]
+    },
+    "DocumentType": "company",
+    "Category": "ACC"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "{ \"result\": { \"PrincipalCompanyName\": \"PUBLIART COLORS SAS\", \"DocumentCategory\": \"Equity Composition\", \"TaxId\": \"900.523.022-1\", \"IdentificationType\": \"NIT\", \"Country\": \"Colombia\", \"IdentificationDetails\": { \"Source\": \"TextReference\", \"Indicators\": [ \"Bogotá D.C.\", \"Colombia\" ], \"ConflictingSources\": [], \"RequiresReview\": \"false\" }, \"RelatedParties\": [ { \"Type\": \"person\", \"FirstName\": \"JOHN FABIO\", \"LastName\": \"MARTINEZ LIEVANO\", \"IdType\": \"CC\", \"IdNumber\": \"1.010.168.875\", \"RelationshipType\": \"Shareholder\", \"ParticipationPercentage\": \"100%\", \"TimeFound\": \"1\", \"Job\": \"GERENTE\" } ] }, \"DocumentType\": \"company\", \"Category\": \"ACC\" }"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 1584,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 4822,
+      "output_tokens": 1445
+    },
+    "ResponseMetadata": {
+      "RequestId": "f5846c28-033b-4339-89b7-70b9c3349ae4",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Mon, 01 Sep 2025 02:13:07 GMT",
+        "content-type": "application/json",
+        "content-length": "10077",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "f5846c28-033b-4339-89b7-70b9c3349ae4",
+        "x-amzn-bedrock-invocation-latency": "29434",
+        "x-amzn-bedrock-cache-write-input-token-count": "0",
+        "x-amzn-bedrock-cache-read-input-token-count": "4822",
+        "x-amzn-bedrock-output-token-count": "1445",
+        "x-amzn-bedrock-input-token-count": "1584"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_01TER29bePiRyq3FNmdYGJfK",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-sonnet-4-20250514",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Let me analyze this document step by step according to the rules provided: 1. **PrincipalCompanyName**: Looking for the main company name whose shareholder composition is reported. - The document mentions \"PUBLIART COLORS SAS\" which appears to be the principal company - It says \"El suscrito Contador Público de PUBLIART COLORS SAS identificada con Nit No. 900.523.022-1\" - This indicates PUBLIART COLORS SAS is the main company 2. **DocumentCategory**: Always \"Equity Composition\" 3. **Country**: Looking for country indicators - \"Bogotá D.C.\" is mentioned at the top - \"Colombia\" is mentioned in the text - This clearly indicates Colombia 4. **TaxId**: Looking for tax identification number - \"Nit No. 900.523.022-1\" is mentioned - This follows Colombian NIT format 5. **IdentificationType**: - \"Nit\" is mentioned, which corresponds to \"NIT\" in Colombian documents 6. **IdentificationDetails**: - Source: \"TextReference\" (since we found \"Bogotá D.C.\" and \"Colombia\") - Indicators: [\"Bogotá D.C.\", \"Colombia\"] - ConflictingSources: Need to check for conflicts - RequiresReview: Need to determine this 7. **RelatedParties**: Looking for shareholders/entities - From the table: \"JOHN FABIO MARTINEZ LIEVANO\" - ID number: \"1.010.168.875\" - Cargo: \"GERENTE\" (Job) - Participation: \"100%\" - Document type: \"C.C\" (which matches Colombian CC for persons) - Nationality: \"COLOMBIANO\" Also mentioned: - \"OSCAR ALBERTO LLANOS GONZALEZ\" with \"CC 72.257.114\" - this person appears to be the document certifier, not a shareholder I've verified the document's consistency. The single shareholder holds 100% participation, and the identification details align with Colombian documentation standards. The document appears to be a standard equity composition report for PUBLIART COLORS SAS. For JOHN FABIO MARTINEZ LIEVANO, I've identified key details: he's an individual shareholder with full company ownership, serving as the company's manager. His professional role and complete equity stake suggest he's the primary decision-maker in this business entity. Regarding OSCAR ALBERTO LLANOS GONZALEZ, his professional status seems to be a certification authority rather than an equity participant. His identification includes both a national ID and a professional registration number, indicating an official verification role. The document's rules specify including mentioned entities while excluding the principal company. For OSCAR ALBERTO, this means listing him with an empty RelationshipType, reflecting his non-ownership status. However, after carefully reviewing the guidelines, I realize he's a certifying accountant and not a shareholder. The RelatedParties section should only include ownership participants, so I'll exclude him from the list. Instead, I'll concentrate on JOHN FABIO MARTINEZ LIEVANO, who is definitively the shareholder with full ownership participation.",
+          "signature": "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"
+        },
+        {
+          "type": "text",
+          "text": "{ \"result\": { \"PrincipalCompanyName\": \"PUBLIART COLORS SAS\", \"DocumentCategory\": \"Equity Composition\", \"TaxId\": \"900.523.022-1\", \"IdentificationType\": \"NIT\", \"Country\": \"Colombia\", \"IdentificationDetails\": { \"Source\": \"TextReference\", \"Indicators\": [ \"Bogotá D.C.\", \"Colombia\" ], \"ConflictingSources\": [], \"RequiresReview\": \"false\" }, \"RelatedParties\": [ { \"Type\": \"person\", \"FirstName\": \"JOHN FABIO\", \"LastName\": \"MARTINEZ LIEVANO\", \"IdType\": \"CC\", \"IdNumber\": \"1.010.168.875\", \"RelationshipType\": \"Shareholder\", \"ParticipationPercentage\": \"100%\", \"TimeFound\": \"1\", \"Job\": \"GERENTE\" } ] }, \"DocumentType\": \"company\", \"Category\": \"ACC\" }"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 1584,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 4822,
+        "output_tokens": 1445
+      }
+    },
+    "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 8000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+  "api_used": "invoke_model"
+}

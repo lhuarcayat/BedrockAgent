@@ -1,0 +1,33 @@
+{
+  "ResponseMetadata": {
+    "RequestId": "5f2c0de8-d201-4c15-bf09-84428265f776",
+    "HTTPStatusCode": 200,
+    "HTTPHeaders": {
+      "date": "Wed, 04 Jun 2025 16:52:39 GMT",
+      "content-type": "application/json",
+      "content-length": "4047",
+      "connection": "keep-alive",
+      "x-amzn-requestid": "5f2c0de8-d201-4c15-bf09-84428265f776"
+    },
+    "RetryAttempts": 0
+  },
+  "output": {
+    "message": {
+      "role": "assistant",
+      "content": [
+        {
+          "text": "Here's my step-by-step reasoning for extracting the company data from the provided document:\n\n1. **Document Analysis**: The document appears to be a certificate of existence and legal representation for a company named \"GEODINETICS INTERNATIONAL, INC.\" with tax ID \"860006152-8\" and registered in Bogotá, D.C.\n\n2. **Page Count**: After analyzing the document structure, I count a total of 6 pages.\n\n3. **Company Information**:\n   - **companyName**: \"GEODINETICS INTERNATIONAL, INC.\"\n   - **companyType**: Not explicitly mentioned, but appears to be a foreign corporation.\n   - **country**: Not explicitly mentioned, but seems to be Colombia based on the registration information.\n   - **taxId**: \"860006152-8\"\n   - **documentType**: Appears to be a certificate of existence and legal representation.\n\n4. **Address Composition**:\n   - **mainAddress**: \"Calle 100 N. 19 - 54 Oficina 604, Bogotá D.C.\"\n\n5. **Date Normalization**:\n   - **incorporationDate**: Not explicitly mentioned in the provided text.\n   - **companyDuration**: \"Vigencia: hasta el 4 de febrero de 2462\" (potential OCR error, may need correction)\n   - **documentIssueDate**: \"16 de Abril de 2009\"\n\n6. **Registration Details**:\n   - **registrationNumber**: \"Matricula: 10: C0018259 del 28 de Abril de 1972\"\n\n7. **Related Parties Handling**:\n   - Several related parties are mentioned, including legal representatives and power of attorney holders.\n\nGiven the provided document content and following the strict guidelines, here's the extracted data in the required JSON format:\n\n```json\n{\n  \"companyName\": \"GEODINETICS INTERNATIONAL, INC.\",\n  \"companyType\": \"\",\n  \"country\": \"Colombia\",\n  \"document_pages\": 6,\n  \"documentType\": \"Certificate of Existence and Legal Representation\",\n  \"taxId\": \"860006152-8\",\n  \"mainAddress\": \"Calle 100 N. 19 - 54 Oficina 604, Bogotá D.C.\",\n  \"incorporationDate\": \"\",\n  \"companyDuration\": \"2462-02-04\",\n  \"registrationNumber\": \"C0018259\",\n  \"size\": \"\",\n  \"relatedParties\": [\n    {\n      \"firstName\": \"JORGE ENRIQUE\",\n      \"lastName\": \"RODRIGUEZ ROJAS\",\n      \"identificationType\": \"C.C.\",\n      \"identificationNumber\": \"000000017144874\",\n      \"relationshipType\": \"Primer Suplente del Apoderado General Principal\"\n    },\n    {\n      \"firstName\": \"NARCISO MANUEL\",\n      \"lastName\": \"CHIQUILLO CONDE\",\n      \"identificationType\": \"C.C.\",\n      \"identificationNumber\": \"000000017124736\",\n      \"relationshipType\": \"Segundo Suplente de Apoderado General Principal\"\n    },\n    {\n      \"firstName\": \"TAMAYO OLARTE\",\n      \"lastName\": \"JOSE MANUEL\",\n      \"identificationType\": \"C.C.\",\n      \"identificationNumber\": \"000000019303534\",\n      \"relationshipType\": \"\"\n    },\n    {\n      \"firstName\": \"VICTOR\",\n      \"lastName\": \"LUCURCIO GOMEZ GUTIERREZ\",\n      \"identificationType\": \"Cédula\",\n      \"identificationNumber\": \"80.414.776\",\n      \"relationshipType\": \"\"\n    },\n    {\n      \"firstName\": \"NARCISO MANUEL\",\n      \"lastName\": \"CHIQUILLO CONDE\",\n      \"identificationType\": \"C.C.\",\n      \"identificationNumber\": \"17.124.736\",\n      \"relationshipType\": \"\"\n    },\n    {\n      \"firstName\": \"JCS' MANUEL TAMAYO\",\n      \"lastName\": \"OLARTE\",\n      \"identificationType\": \"C.C.\",\n      \"identificationNumber\": \"19.303.534\",\n      \"relationshipType\": \"\"\n    },\n    {\n      \"firstName\": \"VICENTE\",\n      \"lastName\": \"GUTIERREZ\",\n      \"identificationType\": \"\",\n      \"identificationNumber\": \"\",\n      \"relationshipType\": \"\"\n    }\n  ],\n  \"embargoes\": \"\",\n  \"liquidations\": \"\",\n  \"documentIssueDate\": \"2009-04-16\",\n  \"lastRegistrationRenewalDate\": \"\"\n}\n```"
+        }
+      ]
+    }
+  },
+  "stopReason": "end_turn",
+  "usage": {
+    "inputTokens": 19494,
+    "outputTokens": 954,
+    "totalTokens": 20448
+  },
+  "metrics": {
+    "latencyMs": 8604
+  }
+}

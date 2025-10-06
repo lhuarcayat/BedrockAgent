@@ -1,0 +1,88 @@
+{
+  "extraction_data": {
+    "result": {
+      "firstName": "MICHAEL",
+      "lastName": "KOSFELD",
+      "country_issuer": "Alemania",
+      "nationality": "Alemania",
+      "identificationType": "Pasaporte",
+      "identificationNumber": "C7VRF059",
+      "message": ""
+    },
+    "document_type": "person",
+    "category": "CECRL"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "```json { \"result\": { \"firstName\": \"MICHAEL\", \"lastName\": \"KOSFELD\", \"country_issuer\": \"Alemania\", \"nationality\": \"Alemania\", \"identificationType\": \"Pasaporte\", \"identificationNumber\": \"C7VRF059\", \"message\": \"\" }, \"document_type\": \"person\", \"category\": \"CECRL\" } ```"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 10,
+      "cache_creation_input_tokens": 6440,
+      "cache_read_input_tokens": 0,
+      "output_tokens": 558
+    },
+    "ResponseMetadata": {
+      "RequestId": "a54abb6d-301b-4cb5-af28-5375dd1ed3a1",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Fri, 29 Aug 2025 22:47:10 GMT",
+        "content-type": "application/json",
+        "content-length": "4987",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "a54abb6d-301b-4cb5-af28-5375dd1ed3a1",
+        "x-amzn-bedrock-invocation-latency": "10952",
+        "x-amzn-bedrock-cache-write-input-token-count": "6440",
+        "x-amzn-bedrock-cache-read-input-token-count": "0",
+        "x-amzn-bedrock-output-token-count": "558",
+        "x-amzn-bedrock-input-token-count": "10"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_017azJDZq9y46f3ajbCJgCqM",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-sonnet-4-20250514",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Let me carefully analyze this German passport document to extract the required information. From what I can see in the document: 1. This appears to be a German passport (\"REISEPASS\" is visible in the header) 2. I can see \"BUNDESREPUBLIK DEUTSCHLAND\" which confirms this is a German document 3. There's a photo of a man 4. Looking at the personal information section: - I can see \"KOSFELD\" appears prominently - \"MICHAEL\" is clearly visible as well - There are various numbered fields typical of passport format Let me extract the information systematically: **Document Type**: This is clearly a German passport (\"REISEPASS\") **Country Issuer**: Germany (\"BUNDESREPUBLIK DEUTSCHLAND\") **Names**: I can see: - \"KOSFELD\" appears to be the surname - \"MICHAEL\" appears to be the given name **Identification Number**: I can see what appears to be \"C7VRF059\" followed by some additional characters **Nationality**: Since this is a German passport and I don't see explicit nationality information that differs, it would be German **Dates**: I can see dates like \"14.02.2019\" and \"13.02.2029\" which are likely issue and expiry dates Let me structure this according to the schema: - firstName: \"MICHAEL\" - lastName: \"KOSFELD\" - country_issuer: \"Alemania\" (Germany in Spanish) - nationality: \"Alemania\" (assuming German nationality unless stated otherwise) - identificationType: \"Pasaporte\" (German Reisepass = Passport in Spanish) - identificationNumber: Need to look more carefully at the document number - message: \"\" (if all information is clear) Looking more carefully at the identification number, I can see \"C7VRF059\" followed by what appears to be additional characters/numbers.",
+          "signature": "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"
+        },
+        {
+          "type": "text",
+          "text": "```json { \"result\": { \"firstName\": \"MICHAEL\", \"lastName\": \"KOSFELD\", \"country_issuer\": \"Alemania\", \"nationality\": \"Alemania\", \"identificationType\": \"Pasaporte\", \"identificationNumber\": \"C7VRF059\", \"message\": \"\" }, \"document_type\": \"person\", \"category\": \"CECRL\" } ```"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 10,
+        "cache_creation_input_tokens": 6440,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 558
+      }
+    },
+    "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 8000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+  "api_used": "invoke_model"
+}

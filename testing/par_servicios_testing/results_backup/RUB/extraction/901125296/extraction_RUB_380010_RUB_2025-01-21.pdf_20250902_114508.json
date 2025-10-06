@@ -1,0 +1,105 @@
+{
+  "extraction_data": {
+    "result": {
+      "CompanyName": "REPRESENTACIONES GRUPO ESCALANTE S.A.S.",
+      "TaxId": "901125296",
+      "IdentificationType": "NIT",
+      "Country": "Colombia",
+      "ConflictingSources": [],
+      "RequiresReview": "false"
+    },
+    "RelatedParties": [
+      {
+        "FirstName": "BERTA EUGENIA",
+        "LastName": "ESCALANTE MONTOYA",
+        "IdType": "NIT",
+        "IdNumber": "43722874",
+        "NoveltyType": "Registro",
+        "ParticipationPercentage": "80"
+      },
+      {
+        "FirstName": "JUAN PABLO",
+        "LastName": "VARGAS ESCALANTE",
+        "IdType": "NIT",
+        "IdNumber": "1017213511",
+        "NoveltyType": "Registro",
+        "ParticipationPercentage": "20"
+      }
+    ],
+    "DocumentType": "company",
+    "Category": "RUB"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "{ \"result\": { \"CompanyName\": \"REPRESENTACIONES GRUPO ESCALANTE S.A.S.\", \"TaxId\": \"901125296\", \"IdentificationType\": \"NIT\", \"Country\": \"Colombia\", \"ConflictingSources\": [], \"RequiresReview\": \"false\" }, \"RelatedParties\": [ { \"FirstName\": \"BERTA EUGENIA\", \"LastName\": \"ESCALANTE MONTOYA\", \"IdType\": \"NIT\", \"IdNumber\": \"43722874\", \"NoveltyType\": \"Registro\", \"ParticipationPercentage\": \"80\" }, { \"FirstName\": \"JUAN PABLO\", \"LastName\": \"VARGAS ESCALANTE\", \"IdType\": \"NIT\", \"IdNumber\": \"1017213511\", \"NoveltyType\": \"Registro\", \"ParticipationPercentage\": \"20\" } ], \"DocumentType\": \"company\", \"Category\": \"RUB\" }"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 5052,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 2039,
+      "output_tokens": 823
+    },
+    "ResponseMetadata": {
+      "RequestId": "6620d140-d7e2-4bff-94c6-5477dd4c64ed",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Tue, 02 Sep 2025 16:45:08 GMT",
+        "content-type": "application/json",
+        "content-length": "5151",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "6620d140-d7e2-4bff-94c6-5477dd4c64ed",
+        "x-amzn-bedrock-invocation-latency": "15092",
+        "x-amzn-bedrock-cache-write-input-token-count": "0",
+        "x-amzn-bedrock-cache-read-input-token-count": "2039",
+        "x-amzn-bedrock-output-token-count": "823",
+        "x-amzn-bedrock-input-token-count": "5052"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_013VXJeh2sbF5dZ9eSFQqGxz",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-sonnet-4-20250514",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Looking at this document, I can see this is a \"Reporte de Beneficiarios Finales\" (Final Beneficiaries Report) issued by DIAN (Colombian tax authority). Let me extract the information following the rules: **CompanyName**: From cell \"11. Denominación o razón social\" I can see \"REPRESENTACIONES GRUPO ESCALANTE S.A.S.\" **Country**: This is a Final Beneficiaries Report issued by DIAN, so Country = \"Colombia\" **TaxId**: From cell \"18. Número de identificación\" I can see \"9 0 1 1 2 5 2 9 6\" **IdentificationType**: For Final Beneficiaries Report issued by DIAN, this is \"NIT\" Now for the **RelatedParties** - I need to look at the \"Datos Beneficiarios Finales\" section on page 2: **First beneficiary:** - 34. Primer apellido: ESCALANTE - 35. Segundo apellido: MONTOYA - 36. Primer nombre: BERTA - 37. Otros nombres: EUGENIA - 30. Número de identificación: 43722874 - 32. Número de Identificación Tributaria - NIT: 43722874 (matches) - 57. Porcentaje de participación: 80 - 61. Tipo de novedad: Registro (code 1) **Second beneficiary:** - 34. Primer apellido: VARGAS - 35. Segundo apellido: ESCALANTE - 36. Primer nombre: JUAN - 37. Otros nombres: PABLO - 30. Número de identificación: 1017213511 - 32. Número de Identificación Tributaria - NIT: 1017213511 (matches) - 57. Porcentaje de participación: 20 - 61. Tipo de novedad: Registro (code 1) I verify the ownership structure shows a complete 100% ownership split between two beneficiaries. Their individual identification details are unique and consistent across the document.",
+          "signature": "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"
+        },
+        {
+          "type": "text",
+          "text": "{ \"result\": { \"CompanyName\": \"REPRESENTACIONES GRUPO ESCALANTE S.A.S.\", \"TaxId\": \"901125296\", \"IdentificationType\": \"NIT\", \"Country\": \"Colombia\", \"ConflictingSources\": [], \"RequiresReview\": \"false\" }, \"RelatedParties\": [ { \"FirstName\": \"BERTA EUGENIA\", \"LastName\": \"ESCALANTE MONTOYA\", \"IdType\": \"NIT\", \"IdNumber\": \"43722874\", \"NoveltyType\": \"Registro\", \"ParticipationPercentage\": \"80\" }, { \"FirstName\": \"JUAN PABLO\", \"LastName\": \"VARGAS ESCALANTE\", \"IdType\": \"NIT\", \"IdNumber\": \"1017213511\", \"NoveltyType\": \"Registro\", \"ParticipationPercentage\": \"20\" } ], \"DocumentType\": \"company\", \"Category\": \"RUB\" }"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 5052,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 2039,
+        "output_tokens": 823
+      }
+    },
+    "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 9000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+  "api_used": "invoke_model"
+}

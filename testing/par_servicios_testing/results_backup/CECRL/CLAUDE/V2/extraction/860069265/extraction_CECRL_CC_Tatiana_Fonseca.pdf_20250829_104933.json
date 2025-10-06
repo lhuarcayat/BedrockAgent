@@ -1,0 +1,88 @@
+{
+  "extraction_data": {
+    "result": {
+      "firstName": "CLAUDIA TATIANA",
+      "lastName": "FONSECA URIBE",
+      "country_issuer": "Colombia",
+      "nationality": "Colombia",
+      "identificationType": "Cédula de Ciudadanía",
+      "identificationNumber": "52.255.747",
+      "message": ""
+    },
+    "document_type": "person",
+    "category": "CECRL"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "```json { \"result\": { \"firstName\": \"CLAUDIA TATIANA\", \"lastName\": \"FONSECA URIBE\", \"country_issuer\": \"Colombia\", \"nationality\": \"Colombia\", \"identificationType\": \"Cédula de Ciudadanía\", \"identificationNumber\": \"52.255.747\", \"message\": \"\" }, \"document_type\": \"person\", \"category\": \"CECRL\" } ```"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 10,
+      "cache_creation_input_tokens": 5982,
+      "cache_read_input_tokens": 0,
+      "output_tokens": 565
+    },
+    "ResponseMetadata": {
+      "RequestId": "8ef76cc1-8546-4906-9768-06d3fab70b1e",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Fri, 29 Aug 2025 15:49:33 GMT",
+        "content-type": "application/json",
+        "content-length": "4637",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "8ef76cc1-8546-4906-9768-06d3fab70b1e",
+        "x-amzn-bedrock-invocation-latency": "13084",
+        "x-amzn-bedrock-cache-write-input-token-count": "5982",
+        "x-amzn-bedrock-cache-read-input-token-count": "0",
+        "x-amzn-bedrock-output-token-count": "565",
+        "x-amzn-bedrock-input-token-count": "10"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_012DKpPxtPFxCZzbTcv984b5",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-sonnet-4-20250514",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Let me carefully analyze this Colombian identification document step by step. 1. Document Structure Analysis: - This appears to be a Colombian \"CÉDULA DE CIUDADANÍA\" (ciudadanía means citizenship) - Header shows \"REPÚBLICA DE COLOMBIA\" and \"IDENTIFICACIÓN PERSONAL\" - This is clearly an official government-issued ID document 2. Field Detection: Looking at the document, I can see: - \"APELLIDOS\" followed by \"FONSECA URIBE\" - \"NOMBRES\" followed by \"CLAUDIA TATIANA\" - The number \"52.255.747\" appears prominently - Date of birth: \"15-SEP-1974\" - Place of birth: \"BOGOTA D.C.\" - Document issued: \"15-JUL-1993 BOGOTA D.C.\" - There's also height \"1.70\", blood type \"A-\", and sex \"F\" 3. Field Mapping: - firstName: From \"NOMBRES:\" field = \"CLAUDIA TATIANA\" - lastName: From \"APELLIDOS:\" field = \"FONSECA URIBE\" - country_issuer: Document is from \"REPÚBLICA DE COLOMBIA\" = \"Colombia\" - nationality: No explicit nationality field, but document is Colombian citizenship card, and birth place is Bogota D.C. (which is in Colombia), so nationality = \"Colombia\" - identificationType: This is \"CÉDULA DE CIUDADANÍA\" - identificationNumber: The prominent number \"52.255.747\" (preserving the dots as formatted) - message: All fields extracted successfully, so should be empty 4. Validation: - All required fields are present and clearly readable - Names are properly extracted from labeled fields - Country and nationality are consistent - Document type is correctly identified - ID number is clearly visible and formatted properly",
+          "signature": "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"
+        },
+        {
+          "type": "text",
+          "text": "```json { \"result\": { \"firstName\": \"CLAUDIA TATIANA\", \"lastName\": \"FONSECA URIBE\", \"country_issuer\": \"Colombia\", \"nationality\": \"Colombia\", \"identificationType\": \"Cédula de Ciudadanía\", \"identificationNumber\": \"52.255.747\", \"message\": \"\" }, \"document_type\": \"person\", \"category\": \"CECRL\" } ```"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 10,
+        "cache_creation_input_tokens": 5982,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 565
+      }
+    },
+    "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 8000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+  "api_used": "invoke_model"
+}

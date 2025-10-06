@@ -1,0 +1,183 @@
+{
+  "document_name": "19200964_2020-02-29.pdf",
+  "category": "CECRL",
+  "classification_success": true,
+  "extraction_success": true,
+  "overall_success": true,
+  "timestamp": "2025-08-29T10:52:57.078090",
+  "classification_result": {
+    "classification_data": {
+      "category": "CECRL",
+      "text": "T:' w üi.' ,& ¡i w ffi ryo,, REPUBLICA DE COLOMBIA IDENTIFICACION PERSONAL CEDULA DE CIUDADANIA NUMERO 19.200.964 HERNANDEZ DIAZ LUIS IGNACIO FECHA VENCIMIENTO 09-MAY-1953 BOGOTA D.C. (CUNDINAMARCA) LUGAR DE NACIMIENTO 1.66 B- M ESTATURA SEX HR SEXO 28-AGO-1974 BOGOTA D.C. FECHA Y LUGAR DE EXPEDICION A-1550111-42146151-06301906664-20050901 027985654A4 02 1792813T3",
+      "document_number": "UNKNOWN",
+      "path": "CECRL/900397317_19200964_2020-02-29/19200964_2020-02-29.pdf"
+    },
+    "raw_response": {
+      "output": {
+        "message": {
+          "content": [
+            {
+              "text": "```json { \"category\": \"CECRL\", \"text\": \"T:' w üi.' ,& ¡i w ffi ryo,, REPUBLICA DE COLOMBIA IDENTIFICACION PERSONAL CEDULA DE CIUDADANIA NUMERO 19.200.964 HERNANDEZ DIAZ LUIS IGNACIO FECHA VENCIMIENTO 09-MAY-1953 BOGOTA D.C. (CUNDINAMARCA) LUGAR DE NACIMIENTO 1.66 B- M ESTATURA SEX HR SEXO 28-AGO-1974 BOGOTA D.C. FECHA Y LUGAR DE EXPEDICION A-1550111-42146151-06301906664-20050901 027985654A4 02 1792813T3\" } ```"
+            }
+          ]
+        }
+      },
+      "stopReason": "end_turn",
+      "usage": {
+        "input_tokens": 9,
+        "cache_creation_input_tokens": 4606,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 933
+      },
+      "ResponseMetadata": {
+        "RequestId": "83d67a67-e45c-4fa8-90f5-28aa182938f3",
+        "HTTPStatusCode": 200,
+        "HTTPHeaders": {
+          "date": "Fri, 29 Aug 2025 15:53:27 GMT",
+          "content-type": "application/json",
+          "content-length": "6793",
+          "connection": "keep-alive",
+          "x-amzn-requestid": "83d67a67-e45c-4fa8-90f5-28aa182938f3",
+          "x-amzn-bedrock-invocation-latency": "30154",
+          "x-amzn-bedrock-cache-write-input-token-count": "4606",
+          "x-amzn-bedrock-cache-read-input-token-count": "0",
+          "x-amzn-bedrock-output-token-count": "933",
+          "x-amzn-bedrock-input-token-count": "9"
+        },
+        "RetryAttempts": 0
+      },
+      "raw_anthropic_response": {
+        "id": "msg_bdrk_01SLgUnz4P75sEzER46nFSDW",
+        "type": "message",
+        "role": "assistant",
+        "model": "claude-sonnet-4-20250514",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "Let me carefully analyze this document following the classification workflow: 1. **TEXT EXTRACTION** Looking at the document, I can see it contains two identification cards. From the top card I can read: - \"REPUBLICA DE COLOMBIA\" - \"IDENTIFICACION PERSONAL\" - \"CEDULA DE CIUDADANIA\" - \"NUMERO: 19.200.964\" - \"HERNANDEZ DIAZ\" - \"LUIS IGNACIO\" From the bottom card I can read: - \"FECHA VENCIMIENTO: 09-MAY-1953\" - \"BOGOTA D.C.\" - \"(CUNDINAMARCA)\" - \"LUGAR DE NACIMIENTO:\" - \"1.66 B- M\" - \"ESTATURA: SEX HR SEXO\" - \"28-AGO-1974 BOGOTA D.C.\" - There's a fingerprint image - There appears to be a barcode - Some additional text that's partially illegible 2. **PRIORITY CHECKS** This is not blank - there's meaningful content visible This is not a link-only document - no URLs or redirections 3. **ISSUER IDENTIFICATION** This appears to be issued by Colombian government identification authorities - \"REPUBLICA DE COLOMBIA\" and \"IDENTIFICACION PERSONAL\" clearly indicate this is a government-issued personal identification document. 4. **DOCUMENT FUNCTION ANALYSIS** This is clearly personal identification documentation for individuals. I can see: - Personal names (HERNANDEZ DIAZ, LUIS IGNACIO) - Individual identification numbers (19.200.964) - Personal data like place of birth (BOGOTA D.C.), date references - Physical characteristics (height: 1.66, gender: M) - Fingerprint - This is focused on identifying individuals, not corporate entities 5. **CATEGORY CLASSIFICATION** Looking at the category definitions: CECRL fits perfectly: The document demonstrates comprehensive individual identification characteristics. It contains official government-issued personal identification markers including unique numerical identifiers, biographical details, physical descriptors, and security elements like fingerprints and barcodes. The Colombian national identification card (Cedula de Ciudadania) provides a standardized format for personal verification and authentication. Critically, the document is definitively not a tax, corporate, or commercial registration document. Its specific design and terminology confirm it as an official personal identification credential issued by the Republic of Colombia.",
+            "signature": "EtwVCkgIBxABGAIqQHJ7S//EehYsKFI++IW6kftHB+Mhuvb+64n2cUAWNwRu+UdR78+DsozRnm1mmWXR7sekyyXYLd13uubwTx4WjwcSDGZLxct+rtaEN4JInhoMT1Bw8I0tz/pq5k1rIjCy3TA0TYIHPvq2pW83M4JE8ZpHoXFO9oslLj7lkGJ44+FjznJR25WqqL8iyZgnrIwqwRQXYSEBReKQZCQDKYi2fRd83hihIYvYHfqCwW/B9Xeosd619XJ1snrA+aDAWANSL9OQmHpOA3qa4W/+d90SDGqDFG/7YAPL/OMV2D5QV1n1XW9uzkJ8jcpfLBQCdyuHoE3LIqE583BQyAP1xY0b4+fMMm7J9q0wE0ytP40FepFiofLOs/xiVBY0MyZUbInjGezfxhyoHCM1UgCKwffu34rzostdKRvQxaNjPZomA0DhGbcX8UrKpewy6keRb2BsnE+3cam+NPTJ4qwb0HFN44bulWjHhhYm0XNTNCKmhjU2nkO0CIzjFY4hm/cpVtyDyAWYNnvYlzv9GPU7PsIIbJqyoL04PRcB4vPF8V3RtvKupJRo3ZVcYcDqq3KDu8pfC9Vtw4oxYuWplTmYBjPIHIWdYzZPCZYjGdobtVumWEBAWr9CF8KndyUXTzUVbkzB2x5mjbIfC+ExyRmxnkPKY9JtxS5/yF8c+C6hN9FTldsCGwbMfRi9ulcExB0zQvpnC0ZFFz8qAHqJNrLYSmjY9F6aCnLbYfxYEZKjc7YHgOLq8XEdodzYRYZ2FrOAcl2BupUrtmogQJ1h9xWR1H8753/c9uo9DXYDtYxb28C6mIpfBDSGgigdib3BgCsiFSO+zAN1icaP6hyb2pKr+fcq/sOAaIqOPQ2zGOhPvbYcbuRwGZPuMApqfgtfsr9ZzUdJJbgKtNf3CH031qLSgd+rdQvrMwrXZwGzG+8jCohvnP9Q5h7+REhd/Yol9A/gKuGP3KorHJ5i1a0nZ1ZlAVg8+pV2PrEZChcGicuhrPRi/DI7hKl2IyNCcSqJlEahsD4WlKGkJahMlNhwiE/JoauBjSXBGMnnBpD2N3jJtpsRxaWUahx7va6A3hJ3FzYJU6Cv8o5n5sBNO0SPB6psNF9QA/OleFCVlt4hherMvwIfSJYUPXWyCpw1hMZBhWollUVqwYqmtMpTKPYgWoJCPyryBm6cfHb4y5JDQXeuec3hebVpys4Zjt0jIoiYeA+c1cgUukPE2byFzuPs3qGv47ijhhY+ZqXOQ+LgQ2bEySkKitW6JIXPLxaHGqx5zITnBXbV8gnzlPG5rMoe1rlkreUwYJ7fFTES22QVLjT/ae2CQVxtEhPpJ1o2Qq1Mgrtk/oYQ3CaPNj9o2XU1S/FyVBM3LsRXxFe8Awh+w3y6/cdsxClruqYX7nDgekNxZ9UamaDR1iF35DAoj+e/K8sA1c6WNSQI3suRNAep2Cz/1S09VWIc87+E0tmTO+zNMw5nVAAmkSfdRHJdm1tl0Be+MDJLDH9Ce/p2KWrsxae0ppVchMlxrgneQQrPJL8AIR0MHgyE7f23nh46BXYE/tNctlO2uDAPZbVQyJqyjE5r/1/ToI37uxoSe4G0ldUOX83a8NrjUU4hty47rLHzvcFl/I5TxXhyNWXYcCkOGhBopQ33Jrt1PVelbgduTAoTrkCCLXVjcN0FFuAPPwaxHEGVZp3YUW6AkvpZbM54a6nP7ZNo2Sqlq96XiZQoQkCi4yquhaGNj13krQNNr5m5p1Y1wyjYfmhvLYRLF38Lx5uC42pfLdY7foElrDtro36EqZjqK1vKIhT3CAyc7Vs0ojeKzoOaE4dOxTdLmT5L3wEF40FNO15ka5sEJtjLmxirNlxD2NBIyVUipSoojvBCqSv1YERhUO4TL8N8Gb5w8SJcKjjRgNXTAK4OrpRPJwkCM/C/JvZIZfztwWch7vt16eDuvxnb8I9I7NsucpFnhz6QUQ52hXy4KnkPT7bq9HhSGvTQF2zUhEFqXNlsTbz9gYsNwkt6MMuAMu/28gk8wkv8Yd9vFk8a/KNWvSCXrhMabx6ZiihWfZjb0aQZ13oacpizAb0Oqc1kMicnEGT1eOlojEN+njQSlHCbwjUCwhAScTapFclgeQusEaYzq0dUu0E3Yrkqfu3A8iAOjPn57cmL8iCtu3ncqulQ/2iHI+xKXTr8mJOA0g2olR41IyIyvvQwLyAQfBztMKuhJgYdgEpOJP4m3udQW5AfXi6DiJkSF5tz15CHh/2UCmzCUaS/t9gp72tFJMKsuWjbWch0U8378UCF9ycVrl2mrznJhmCNcJH+DT5obEihN+1JPnAJwD/x+2hJdloJAiz9PjPT25T8f3BE2J9SzudL23qfe1EY4NeIqd0WqMId5ZzumV9vt+j463S6wOZ+/WR7K03kbL1kYqyhW1GxANl008Dytk3s7uxEqN32wqBAWKzrWEAnf31hkG55DkczdJYYzXivis931pZ8XTCPFgBi6uyHydVwx0tUXbLWnj7Awb8xdPVHq4fRrJXX+T1h8IV2dMdU8P0y8EOdLX7eqq24BDM9lsRVFBLtnsUU+9+XgkZtcAaudFDFfBZ0OSrsvm/LpOOkmVTFj6BpdjNKM6RK/wI/d2DFM7DFkKuBR6Bgpl1IvBt5LJx53JBeyD7watsFtTABFjBgREK8mFjxbeZy/xjXu4VEnEW48BeuLiXF8TFYF4F9fzd99mCAILn2dbo/tHpM+KDvyOr9YXrN4TeSnVxbcDTz06ruJteWyIxNAfmZv677m5gHJ6ykyHt3F89HapnU26gQVLwc/PxU033Cu/MswDVagOyKuWkNZgVJ/BavOxcQpGoAkGPXxR/XSIsZpnK8yRDH0rvheLDqzLoOTt0bW0pRCkYp2u+gtp1TunQANSPMj4FYSTcOwYLg/a4N4JyWLQH4j0v8N+oXV7FxluhxxS6BGT+IwX/8I3j5PurEskCqMVJGkButbx9k48rLRExRE5PFkqzCilCFF+8cuBZNDQW2xK5tDPiB8zuc8A8fCihgVKUa525wHkd9alsxAP/PwOAj4PyMeKhTn7NMdtq0lLkDi432TqzYZjq5Slnj3THrrpIT7bNlhOskEEoEJzAJERQPTQTZIJ6IOe4SKcjThqk7aq+UCHphwNbUa1uLDZ7RswodvDpyg5c6MJieGev/7+hgdtJVbDTGmkO7M55sY6+YnOb4poB9g3p6AGHFdnnHxtENyAs2LQEEBCsEAiUUjoiR92mwOzIKyjyUGyS5x0SW46y6QTezzwPycIf/eFczwT4RMNiFO7msx3dL7d38ZRsu11NFyLjFQIBkW52lwl+rO+QGzAAQ7VoB4aRTn4uwmmraJO7hZ3f1S1a12U4BEVW+7KI/TZCpRuMAtTLyaA+WQJprWcBUmi+DnnVfuWAs6ga2Nr06U7JBdSI18azkf2jSVyNIBRbg2OU8pECK+wedJJed5WnsoS7SOycMQsj6Za7fppSZhxEfgD6CeapXPvEPh/EA08RvSiMlh8Hp2MjSA7/Rp6LZEXeEgo/PKtYfnpu4NVM9RjtLZMdloC17HwuQiqZqurufVeE2315YO+gFl3BX58/LbIQ11ETwmc0WkvEWaEk977RmTzmvFER/JIRJ+p6OpE0tGKdjKV1n/I+wZ2tRiI2NdOxQYwcb8lPoP8yohJs3sGDjJyKrc7jxKHaXLnoYbf+nBWQYAQ=="
+          },
+          {
+            "type": "text",
+            "text": "```json { \"category\": \"CECRL\", \"text\": \"T:' w üi.' ,& ¡i w ffi ryo,, REPUBLICA DE COLOMBIA IDENTIFICACION PERSONAL CEDULA DE CIUDADANIA NUMERO 19.200.964 HERNANDEZ DIAZ LUIS IGNACIO FECHA VENCIMIENTO 09-MAY-1953 BOGOTA D.C. (CUNDINAMARCA) LUGAR DE NACIMIENTO 1.66 B- M ESTATURA SEX HR SEXO 28-AGO-1974 BOGOTA D.C. FECHA Y LUGAR DE EXPEDICION A-1550111-42146151-06301906664-20050901 027985654A4 02 1792813T3\" } ```"
+          }
+        ],
+        "stop_reason": "end_turn",
+        "stop_sequence": null,
+        "usage": {
+          "input_tokens": 9,
+          "cache_creation_input_tokens": 4606,
+          "cache_read_input_tokens": 0,
+          "output_tokens": 933
+        }
+      },
+      "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+      "api_used": "invoke_model",
+      "model_params": {
+        "max_tokens": 8000,
+        "top_p": 1,
+        "temperature": 1,
+        "thinking": {
+          "type": "enabled",
+          "budget_tokens": 4096
+        }
+      }
+    },
+    "expected_category": "CECRL",
+    "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model",
+    "pdf_info": {
+      "original_size": 432516,
+      "first_page_size": 432312,
+      "is_scanned": false
+    }
+  },
+  "extraction_result": {
+    "extraction_data": {
+      "result": {
+        "firstName": "LUIS IGNACIO",
+        "lastName": "HERNANDEZ DIAZ",
+        "country_issuer": "Colombia",
+        "nationality": "Colombia",
+        "identificationType": "Cédula de Ciudadanía",
+        "identificationNumber": "19.200.964",
+        "message": ""
+      },
+      "document_type": "person",
+      "category": "CECRL"
+    },
+    "raw_response": {
+      "output": {
+        "message": {
+          "content": [
+            {
+              "text": "```json { \"result\": { \"firstName\": \"LUIS IGNACIO\", \"lastName\": \"HERNANDEZ DIAZ\", \"country_issuer\": \"Colombia\", \"nationality\": \"Colombia\", \"identificationType\": \"Cédula de Ciudadanía\", \"identificationNumber\": \"19.200.964\", \"message\": \"\" }, \"document_type\": \"person\", \"category\": \"CECRL\" } ```"
+            }
+          ]
+        }
+      },
+      "stopReason": "end_turn",
+      "usage": {
+        "input_tokens": 10,
+        "cache_creation_input_tokens": 6039,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 575
+      },
+      "ResponseMetadata": {
+        "RequestId": "6b0812f4-e879-4d3d-a88b-306df3b50172",
+        "HTTPStatusCode": 200,
+        "HTTPHeaders": {
+          "date": "Fri, 29 Aug 2025 15:53:39 GMT",
+          "content-type": "application/json",
+          "content-length": "4696",
+          "connection": "keep-alive",
+          "x-amzn-requestid": "6b0812f4-e879-4d3d-a88b-306df3b50172",
+          "x-amzn-bedrock-invocation-latency": "10929",
+          "x-amzn-bedrock-cache-write-input-token-count": "6039",
+          "x-amzn-bedrock-cache-read-input-token-count": "0",
+          "x-amzn-bedrock-output-token-count": "575",
+          "x-amzn-bedrock-input-token-count": "10"
+        },
+        "RetryAttempts": 0
+      },
+      "raw_anthropic_response": {
+        "id": "msg_bdrk_01EDbF8gzz8wTjLbse7PHDNe",
+        "type": "message",
+        "role": "assistant",
+        "model": "claude-sonnet-4-20250514",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "Let me carefully analyze this document to extract identification information. This appears to be a scanned document with two identification documents from Colombia. Looking at the document, I can see: 1. First document (top): - \"REPÚBLICA DE COLOMBIA\" - indicating country is Colombia - \"IDENTIFICACION PERSONAL\" - \"CEDULA DE CIUDADANIA\" - \"NUMERO: 19.200.964\" - Names appear to be \"HERNANDEZ DIAZ\" and \"LUIS IGNACIO\" - This looks like a Colombian ID card (Cédula de Ciudadanía) 2. Second document (bottom): - Shows what appears to be another Colombian document - \"BOGOTA D.C.\" is visible - Date appears to be \"09-MAY-1953\" - There's a fingerprint visible - Height appears to be \"1.66\" - Some other details but text is a bit unclear Let me apply the extraction methodology: For the first document (which appears clearer): - Country issuer: Colombia (from \"REPÚBLICA DE COLOMBIA\") - Document type: Cédula de Ciudadanía (from \"CEDULA DE CIUDADANIA\") - ID number: 19.200.964 (from \"NUMERO: 19.200.964\") - Names: I can see \"HERNANDEZ DIAZ\" which would be surnames, and \"LUIS IGNACIO\" which would be given names Based on Colombian naming conventions and the document layout: - firstName: \"LUIS IGNACIO\" - lastName: \"HERNANDEZ DIAZ\" - country_issuer: \"Colombia\" - nationality: \"Colombia\" (assuming same as issuer since no other nationality indicated) - identificationType: \"Cédula de Ciudadanía\" - identificationNumber: \"19.200.964\" The document appears to be an official Colombian identification document with government seals and proper formatting.",
+            "signature": "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"
+          },
+          {
+            "type": "text",
+            "text": "```json { \"result\": { \"firstName\": \"LUIS IGNACIO\", \"lastName\": \"HERNANDEZ DIAZ\", \"country_issuer\": \"Colombia\", \"nationality\": \"Colombia\", \"identificationType\": \"Cédula de Ciudadanía\", \"identificationNumber\": \"19.200.964\", \"message\": \"\" }, \"document_type\": \"person\", \"category\": \"CECRL\" } ```"
+          }
+        ],
+        "stop_reason": "end_turn",
+        "stop_sequence": null,
+        "usage": {
+          "input_tokens": 10,
+          "cache_creation_input_tokens": 6039,
+          "cache_read_input_tokens": 0,
+          "output_tokens": 575
+        }
+      },
+      "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+      "api_used": "invoke_model",
+      "model_params": {
+        "max_tokens": 8000,
+        "top_p": 1,
+        "temperature": 1,
+        "thinking": {
+          "type": "enabled",
+          "budget_tokens": 4096
+        }
+      }
+    },
+    "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model"
+  }
+}

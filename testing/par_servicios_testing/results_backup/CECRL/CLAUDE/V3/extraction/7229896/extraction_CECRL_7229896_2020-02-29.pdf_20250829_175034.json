@@ -1,0 +1,88 @@
+{
+  "extraction_data": {
+    "result": {
+      "firstName": "CESAR AUGUSTO",
+      "lastName": "JEREZ BERRIO",
+      "country_issuer": "Colombia",
+      "nationality": "Colombia",
+      "identificationType": "Cédula de Ciudadanía",
+      "identificationNumber": "7.229.896",
+      "message": ""
+    },
+    "document_type": "person",
+    "category": "CECRL"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "```json { \"result\": { \"firstName\": \"CESAR AUGUSTO\", \"lastName\": \"JEREZ BERRIO\", \"country_issuer\": \"Colombia\", \"nationality\": \"Colombia\", \"identificationType\": \"Cédula de Ciudadanía\", \"identificationNumber\": \"7.229.896\", \"message\": \"\" }, \"document_type\": \"person\", \"category\": \"CECRL\" } ```"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 10,
+      "cache_creation_input_tokens": 6419,
+      "cache_read_input_tokens": 0,
+      "output_tokens": 684
+    },
+    "ResponseMetadata": {
+      "RequestId": "0f91c0df-859f-4fea-8053-9b200ab042b2",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Fri, 29 Aug 2025 22:50:34 GMT",
+        "content-type": "application/json",
+        "content-length": "5471",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "0f91c0df-859f-4fea-8053-9b200ab042b2",
+        "x-amzn-bedrock-invocation-latency": "14698",
+        "x-amzn-bedrock-cache-write-input-token-count": "6419",
+        "x-amzn-bedrock-cache-read-input-token-count": "0",
+        "x-amzn-bedrock-output-token-count": "684",
+        "x-amzn-bedrock-input-token-count": "10"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_01KmVPh1GRCSfgVL8cqPkDbY",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-sonnet-4-20250514",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Looking at this Colombian identification document, I need to extract all the required information: 1. Document Type Analysis: - This is a \"REPUBLICA DE COLOMBIA\" \"IDENTIFICACION PERSONAL\" \"CEDULA DE CIUDADANIA\" - It's an official Colombian citizenship identity card 2. Field Extraction: - I can see \"APELLIDOS\" field followed by \"CESAR AUGUSTO\" - I can see \"NOMBRES\" field - but I need to look for the signature area - Looking at the document, there's a signature that appears to say something - Number: 7.229.896 - Name from header: \"JEREZ BERRIO\" - From the \"APELLIDOS\" section: \"CESAR AUGUSTO\" Wait, let me reanalyze this more carefully: Looking at the document structure: - \"NUMERO: 7.229.896\" - \"JEREZ BERRIO\" - this appears to be in the header area - \"APELLIDOS: CESAR AUGUSTO\" - \"NOMBRES:\" followed by what looks like a signature This is confusing because typically \"APELLIDOS\" means surnames/last names, but \"CESAR AUGUSTO\" looks like given names. And \"JEREZ BERRIO\" in the header looks like surnames. Let me apply contextual analysis: - The header prominently displays \"JEREZ BERRIO\" which are typical Colombian surnames - The \"APELLIDOS\" field shows \"CESAR AUGUSTO\" which are typically given names - There seems to be a labeling issue or misalignment Based on contextual intelligence and typical Colombian naming patterns: - \"JEREZ BERRIO\" (from header) are likely the surnames/lastName - \"CESAR AUGUSTO\" are likely the given names/firstName, despite being under \"APELLIDOS\" label Other fields: - Country issuer: Colombia (from header \"REPUBLICA DE COLOMBIA\") - Birth details reveal additional context about the individual's origin - Birthplace confirms local Colombian identity in Duitama, Boyacá - Born on May 30, 1974, providing precise biographical information",
+          "signature": "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"
+        },
+        {
+          "type": "text",
+          "text": "```json { \"result\": { \"firstName\": \"CESAR AUGUSTO\", \"lastName\": \"JEREZ BERRIO\", \"country_issuer\": \"Colombia\", \"nationality\": \"Colombia\", \"identificationType\": \"Cédula de Ciudadanía\", \"identificationNumber\": \"7.229.896\", \"message\": \"\" }, \"document_type\": \"person\", \"category\": \"CECRL\" } ```"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 10,
+        "cache_creation_input_tokens": 6419,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 684
+      }
+    },
+    "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 8000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+  "api_used": "invoke_model"
+}

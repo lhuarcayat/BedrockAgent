@@ -1,0 +1,87 @@
+{
+  "classification_data": {
+    "category": "CECRL",
+    "text": ": ;,NUMEBQ'v' REPUBLICA DE COLOMBIA IDENTIFICACION PERSONAL CEDULA DECIUDADANÍA ™* « f OVALLE GUTIERREZ PABLO EMILIO REPUBLICA DE COLOMBIA IDENTIFICACION PERSONAL CEDULA DE CIUDADANIA 4129417 NUMERO OVALLE GUTIERREZ APELLIDOS PABLO EMILIO NOMBRES FECHA DE NACIMIENTO 10-OCT-1951 GARAGOA (BOYACA) LUGAR DE NACIMIENTO 1.65 O+ M ESTATURA G.S. RH SEXO 23-ABR-1973 GUATEQUE FECHA Y LUGAR DE EXPEDICION REGISTRADOR NACIONAL IVAN DUQUE ESCOBAR INDICE DERECHO A-4552000-70087669-M-090412417-20010515 007750135A 01 091993775",
+    "document_number": "UNKNOWN",
+    "path": "CECRL/4129417_4129417_2020-02-29/4129417_2020-02-29.pdf"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "```json { \"category\": \"CECRL\", \"text\": \": ;,NUMEBQ'v' \\nREPUBLICA DE COLOMBIA \\nIDENTIFICACION PERSONAL \\nCEDULA DECIUDADANÍA ™* \\n« f \\nOVALLE GUTIERREZ \\nPABLO EMILIO \\n\\nREPUBLICA DE COLOMBIA\\nIDENTIFICACION PERSONAL\\nCEDULA DE CIUDADANIA\\n4129417\\nNUMERO\\nOVALLE GUTIERREZ\\nAPELLIDOS\\nPABLO EMILIO\\nNOMBRES\\n\\nFECHA DE NACIMIENTO 10-OCT-1951\\nGARAGOA\\n(BOYACA)\\nLUGAR DE NACIMIENTO\\n1.65 O+ M\\nESTATURA G.S. RH SEXO\\n23-ABR-1973 GUATEQUE\\nFECHA Y LUGAR DE EXPEDICION\\nREGISTRADOR NACIONAL\\nIVAN DUQUE ESCOBAR\\nINDICE DERECHO\\nA-4552000-70087669-M-090412417-20010515 007750135A 01 091993775\" } ```"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 1660,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 3150,
+      "output_tokens": 1012
+    },
+    "ResponseMetadata": {
+      "RequestId": "94f07e42-4e3a-4b2b-8a2b-e3b312320557",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Sun, 31 Aug 2025 21:32:38 GMT",
+        "content-type": "application/json",
+        "content-length": "6031",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "94f07e42-4e3a-4b2b-8a2b-e3b312320557",
+        "x-amzn-bedrock-invocation-latency": "15952",
+        "x-amzn-bedrock-cache-write-input-token-count": "0",
+        "x-amzn-bedrock-cache-read-input-token-count": "3150",
+        "x-amzn-bedrock-output-token-count": "1012",
+        "x-amzn-bedrock-input-token-count": "1660"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_012MPAJ6pSATzoEbsR87GfCt",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-sonnet-4-20250514",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Let me analyze this PDF document following the classification workflow: 1. **TEXT EXTRACTION** The text I can extract from the document: - \"REPUBLICA DE COLOMBIA\" - \"IDENTIFICACION PERSONAL\" - \"CEDULA DE CIUDADANIA\" - \"OVALLE GUTIERREZ\" - \"PABLO EMILIO\" - Number: \"4129417\" - \"FECHA DE NACIMIENTO\" \"10-OCT-1951\" - \"GARAGOA\" - \"(BOYACA)\" - \"LUGAR DE NACIMIENTO\" - \"1.65\" \"O+\" \"M\" - \"ESTATURA\" \"G.S. RH\" \"SEXO\" - \"23-ABR-1973 GUATEQUE\" - \"FECHA Y LUGAR DE EXPEDICION\" - \"INDICE DERECHO\" - \"REGISTRADOR NACIONAL\" - Various numbers and barcodes 2. **PRIORITY CHECKS** - BLANK: No, this document has significant content - LINK_ONLY: No, this is not mainly links/URLs 3. **DOCUMENT FUNCTION ANALYSIS** What is the MAIN PURPOSE of this document? - This is clearly a personal identification document - It contains personal biographical data: name (PABLO EMILIO OVALLE GUTIERREZ), date of birth (10-OCT-1951), place of birth (GARAGOA, BOYACA), height (1.65), blood type (O+), sex (M) - It has a photograph of the individual - It contains a fingerprint - It has an identification number (4129417) - It's issued by \"REPUBLICA DE COLOMBIA\" as \"IDENTIFICACION PERSONAL\" - The document type is \"CEDULA DE CIUDADANIA\" which is a citizenship card This is definitely a CECRL indicative document. 4. **ISSUER IDENTIFICATION** The Colombian government validates this as an official personal identification credential, confirming its authenticity and legal status as a primary identification document. 5. **CATEGORY CLASSIFICATION** I confidently classify this as a CECRL document due to its comprehensive personal identification features. The citizenship card meets all key criteria: official government issuance, comprehensive personal details, biometric identifiers, and standardized security elements typical of national identification documents.",
+          "signature": "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"
+        },
+        {
+          "type": "text",
+          "text": "```json { \"category\": \"CECRL\", \"text\": \": ;,NUMEBQ'v' \\nREPUBLICA DE COLOMBIA \\nIDENTIFICACION PERSONAL \\nCEDULA DECIUDADANÍA ™* \\n« f \\nOVALLE GUTIERREZ \\nPABLO EMILIO \\n\\nREPUBLICA DE COLOMBIA\\nIDENTIFICACION PERSONAL\\nCEDULA DE CIUDADANIA\\n4129417\\nNUMERO\\nOVALLE GUTIERREZ\\nAPELLIDOS\\nPABLO EMILIO\\nNOMBRES\\n\\nFECHA DE NACIMIENTO 10-OCT-1951\\nGARAGOA\\n(BOYACA)\\nLUGAR DE NACIMIENTO\\n1.65 O+ M\\nESTATURA G.S. RH SEXO\\n23-ABR-1973 GUATEQUE\\nFECHA Y LUGAR DE EXPEDICION\\nREGISTRADOR NACIONAL\\nIVAN DUQUE ESCOBAR\\nINDICE DERECHO\\nA-4552000-70087669-M-090412417-20010515 007750135A 01 091993775\" } ```"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 1660,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 3150,
+        "output_tokens": 1012
+      }
+    },
+    "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 8000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "expected_category": "CECRL",
+  "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+  "api_used": "invoke_model",
+  "pdf_info": {
+    "original_size": 580288,
+    "first_page_size": 580252,
+    "is_scanned": false
+  }
+}

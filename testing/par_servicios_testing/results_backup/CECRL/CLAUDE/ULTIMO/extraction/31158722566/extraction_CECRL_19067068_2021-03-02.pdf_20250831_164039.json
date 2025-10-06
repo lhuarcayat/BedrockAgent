@@ -1,0 +1,88 @@
+{
+  "extraction_data": {
+    "result": {
+      "FirstName": "LUIS ALBERTO",
+      "LastName": "VARGAS VELOZA",
+      "CountryIssuer": "Colombia",
+      "Nationality": "colombiano",
+      "IdentificationType": "Cédula de Ciudadanía",
+      "IdentificationNumber": "19.067.068",
+      "Message": ""
+    },
+    "document_type": "person",
+    "category": "CECRL"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "```json { \"result\": { \"FirstName\": \"LUIS ALBERTO\", \"LastName\": \"VARGAS VELOZA\", \"CountryIssuer\": \"Colombia\", \"Nationality\": \"colombiano\", \"IdentificationType\": \"Cédula de Ciudadanía\", \"IdentificationNumber\": \"19.067.068\", \"Message\": \"\" }, \"document_type\": \"person\", \"category\": \"CECRL\" } ```"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 1583,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 4300,
+      "output_tokens": 603
+    },
+    "ResponseMetadata": {
+      "RequestId": "22627e98-f05f-442e-bdff-0d3e02e21d21",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Sun, 31 Aug 2025 21:40:38 GMT",
+        "content-type": "application/json",
+        "content-length": "5098",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "22627e98-f05f-442e-bdff-0d3e02e21d21",
+        "x-amzn-bedrock-invocation-latency": "10596",
+        "x-amzn-bedrock-cache-write-input-token-count": "0",
+        "x-amzn-bedrock-cache-read-input-token-count": "4300",
+        "x-amzn-bedrock-output-token-count": "603",
+        "x-amzn-bedrock-input-token-count": "1583"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_01ADBzzVWrKyvAc5mwDQEEvj",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-sonnet-4-20250514",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Let me analyze this Colombian identification document carefully. Looking at the document, I can see: 1. Header: \"REPÚBLICA DE COLOMBIA\" - This clearly identifies Colombia as the issuing country 2. Document type: \"CÉDULA DE CIUDADANÍA\" - This is a citizenship card 3. Looking at the layout, I need to be careful about the \"misaligned\" Colombian documents issue mentioned in the instructions Let me examine the text structure: - NÚMERO: 19.067.068 - Then I see \"VARGAS VELOZA\" - APELLIDOS - LUIS ALBERTO - NOMBRES This looks like a case of misalignment that the instructions specifically mention for Colombian documents. Let me analyze: According to the methodology, Colombian documents often have misalignment where: - The surnames appear first, then the \"APELLIDOS\" label - Then the first names appear, followed by the \"NOMBRES\" label - The \"NOMBRES\" label will never be empty, so if it appears empty, the previous text belongs to it Looking at the structure: - \"VARGAS VELOZA\" appears before \"APELLIDOS\" label - \"LUIS ALBERTO\" appears before \"NOMBRES\" label So the correct extraction should be: - LastName: \"VARGAS VELOZA\" - FirstName: \"LUIS ALBERTO\" For other fields: - CountryIssuer: \"REPÚBLICA DE COLOMBIA\" = \"Colombia\" - Nationality: Since this is a Colombian citizenship card and there's no explicit nationality field, I should use the issuer country = \"colombiano\" - IdentificationType: \"CÉDULA DE CIUDADANÍA\" = \"Cédula de Ciudadanía\" (already in Spanish) - IdentificationNumber: \"19.067.068\" I can also see birth information at the bottom: - FECHA DE NACIMIENTO: 22-ABR-1949 - UBATE (CUNDINAMARCA) The birthplace in Cundinamarca definitively establishes the individual's Colombian origin, confirming the national identity through geographical context.",
+          "signature": "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"
+        },
+        {
+          "type": "text",
+          "text": "```json { \"result\": { \"FirstName\": \"LUIS ALBERTO\", \"LastName\": \"VARGAS VELOZA\", \"CountryIssuer\": \"Colombia\", \"Nationality\": \"colombiano\", \"IdentificationType\": \"Cédula de Ciudadanía\", \"IdentificationNumber\": \"19.067.068\", \"Message\": \"\" }, \"document_type\": \"person\", \"category\": \"CECRL\" } ```"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 1583,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 4300,
+        "output_tokens": 603
+      }
+    },
+    "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 8000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+  "api_used": "invoke_model"
+}

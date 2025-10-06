@@ -1,0 +1,90 @@
+{
+  "extraction_data": {
+    "path": "CECRL/900285194/79474197_2020-02-29.pdf",
+    "result": {
+      "firstName": "ALEXANDER",
+      "lastName": "TOVAR OSORIO",
+      "country_issuer": "Colombia",
+      "nationality": "Colombia",
+      "identificationType": "Cédula de Ciudadanía",
+      "identificationNumber": "79.474.197",
+      "message": ""
+    },
+    "document_type": "person",
+    "documentNumber": "900285194",
+    "category": "CECRL"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "```json { \"result\": { \"firstName\": \"ALEXANDER\", \"lastName\": \"TOVAR OSORIO\", \"country_issuer\": \"Colombia\", \"nationality\": \"Colombia\", \"identificationType\": \"Cédula de Ciudadanía\", \"identificationNumber\": \"79.474.197\", \"message\": \"\" }, \"document_type\": \"person\", \"category\": \"CECRL\" } ```"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 10,
+      "cache_creation_input_tokens": 5982,
+      "cache_read_input_tokens": 0,
+      "output_tokens": 682
+    },
+    "ResponseMetadata": {
+      "RequestId": "ddcd6097-7ae9-4fe4-ae0d-c2c4e1a59bf0",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Thu, 28 Aug 2025 15:46:04 GMT",
+        "content-type": "application/json",
+        "content-length": "3095",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "ddcd6097-7ae9-4fe4-ae0d-c2c4e1a59bf0",
+        "x-amzn-bedrock-invocation-latency": "17230",
+        "x-amzn-bedrock-cache-write-input-token-count": "5982",
+        "x-amzn-bedrock-cache-read-input-token-count": "0",
+        "x-amzn-bedrock-output-token-count": "682",
+        "x-amzn-bedrock-input-token-count": "10"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_01My5u36VupKCMaZTKkUh7Kz",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-3-7-sonnet-20250219",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "I need to analyze the document images and extract the required information according to the schema. Let me carefully examine what is shown in the PDF: The document appears to be a Colombian identification card (\"Cédula de Ciudadanía\"). Let me extract the information systematically: 1. **Document Analysis:** - This is clearly a government-issued ID from Colombia - The document title states \"REPUBLICA DE COLOMBIA\" and \"IDENTIFICACION PERSONAL\" / \"CEDULA DE CIUDADANIA\" - The document contains two sides shown in the images (front and back) 2. **Field Extraction:** **firstName:** - The document shows \"ALEXANDER\" under \"NOMBRES\" - This is clearly the given name/first name field **lastName:** - The document shows \"TOVAR OSORIO\" under \"APELLIDOS\" - These are the surnames/last names **country_issuer:** - The document header clearly states \"REPUBLICA DE COLOMBIA\" - The issuing country is Colombia **nationality:** - While not explicitly stated, the document type (Cédula de Ciudadanía) is for Colombian citizens - The nationality can be inferred as Colombia - The birth place shown is \"BOGOTA D.C. (CUNDINAMARCA)\" which is in Colombia **identificationType:** - The document states \"CEDULA DE CIUDADANIA\" - This is the official Colombian national ID card **identificationNumber:** - The document shows \"79.474.197\" next to \"NUMERO\" - This is the identification number **Additional Information (not in required schema but visible):** - Birth date: \"13-ENE-1969\" (January 13, 1969) - Birth place: \"BOGOTA D.C. (CUNDINAMARCA)\" - Height: \"1.70\" - Blood type: \"O+\" - Sex: \"M\" (Male) - Issue date: \"31-MAR-1987 BOGOTA D.C.\" 3. **Final Validation:** - All required fields have been identified - Document is a valid government-issued ID - No contradictions or issues detected - Message field can remain empty as there are no issues to report Now I'll prepare the JSON output according to the required schema:",
+          "signature": "ErcBCkgIBxABGAIiQEn5J+gkusfOtqfC5etX0vMZGc0OTqfWkeN0/7Lb9MQuiJaWeBaCPAIOHncUcTrWEVAoGhVht7JMH0xjiPOIGWsSDMR0TZnYPb8VNSCbnRoMvOf64v3H5Hd9+UOvIjC+ssmuidnBC0K8pdei5C1E2iJrdsNGxqldNtBTEzhJBbi3DJfX/b/Iox6ME6LHb5wqHRb2uff1afHRCIijwMCerrJ5Hvl4nZI0lvNQZyI9GAI="
+        },
+        {
+          "type": "text",
+          "text": "```json { \"result\": { \"firstName\": \"ALEXANDER\", \"lastName\": \"TOVAR OSORIO\", \"country_issuer\": \"Colombia\", \"nationality\": \"Colombia\", \"identificationType\": \"Cédula de Ciudadanía\", \"identificationNumber\": \"79.474.197\", \"message\": \"\" }, \"document_type\": \"person\", \"category\": \"CECRL\" } ```"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 10,
+        "cache_creation_input_tokens": 5982,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 682
+      }
+    },
+    "model_id": "us.anthropic.claude-3-7-sonnet-20250219-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 8000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "model_used": "us.anthropic.claude-3-7-sonnet-20250219-v1:0",
+  "api_used": "invoke_model"
+}

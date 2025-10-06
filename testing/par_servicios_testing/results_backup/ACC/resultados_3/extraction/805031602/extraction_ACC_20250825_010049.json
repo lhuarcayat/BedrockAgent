@@ -1,0 +1,93 @@
+{
+  "extraction_data": {
+    "path": "ACC/805031602/68_CA_2020-02-29.pdf",
+    "result": {
+      "companyName": "MEGASERVICIOS DE INGENIERÍA S.A.S.",
+      "documentType": "Equity Composition",
+      "taxId": "805.031.602-7",
+      "country": "Colombia",
+      "identificationDetails": {
+        "source": "text_reference",
+        "indicators": [
+          "Cali",
+          "Colombia"
+        ],
+        "conflictingSources": [],
+        "requiresReview": false
+      },
+      "relatedParties": [
+        {
+          "firstName": "Dora Matilde",
+          "lastName": "Trejos Puerta",
+          "identificationType": "C.C.",
+          "identificationNumber": "31.953.854",
+          "relationshipType": "Shareholder",
+          "participationPercentage": "50%",
+          "timeFound": 1,
+          "job": ""
+        },
+        {
+          "firstName": "Juan Carlos",
+          "lastName": "Escobar Welsch",
+          "identificationType": "C.C.",
+          "identificationNumber": "16.733.280",
+          "relationshipType": "Shareholder",
+          "participationPercentage": "50%",
+          "timeFound": 1,
+          "job": "Representante Legal"
+        }
+      ]
+    },
+    "document_type": "company",
+    "document_number": "805031602",
+    "category": "ACC",
+    "confidenceScores": {
+      "companyName": 95,
+      "taxId": 95,
+      "country": 98,
+      "relatedParties": 90
+    }
+  },
+  "raw_response": {
+    "ResponseMetadata": {
+      "RequestId": "743ec3f2-c8fe-4186-9136-f6f893109f9e",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Mon, 25 Aug 2025 06:00:49 GMT",
+        "content-type": "application/json",
+        "content-length": "1647",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "743ec3f2-c8fe-4186-9136-f6f893109f9e"
+      },
+      "RetryAttempts": 0
+    },
+    "output": {
+      "message": {
+        "role": "assistant",
+        "content": [
+          {
+            "text": "```json { \"path\": \"ACC/805031602/68_CA_2020-02-29.pdf\", \"result\": { \"companyName\": \"MEGASERVICIOS DE INGENIERÍA S.A.S.\", \"documentType\": \"Equity Composition\", \"taxId\": \"805.031.602-7\", \"country\": \"Colombia\", \"identificationDetails\": { \"source\": \"text_reference\", \"indicators\": [ \"Cali\", \"Colombia\" ], \"conflictingSources\": [], \"requiresReview\": false }, \"relatedParties\": [ { \"firstName\": \"Dora Matilde\", \"lastName\": \"Trejos Puerta\", \"identificationType\": \"C.C.\", \"identificationNumber\": \"31.953.854\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"50%\", \"timeFound\": 1, \"job\": \"\" }, { \"firstName\": \"Juan Carlos\", \"lastName\": \"Escobar Welsch\", \"identificationType\": \"C.C.\", \"identificationNumber\": \"16.733.280\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"50%\", \"timeFound\": 1, \"job\": \"Representante Legal\" } ] }, \"document_type\": \"company\", \"document_number\": \"805031602\", \"category\": \"ACC\", \"confidenceScores\": { \"companyName\": 95, \"taxId\": 95, \"country\": 98, \"relatedParties\": 90 } } ```"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "inputTokens": 8667,
+      "outputTokens": 410,
+      "totalTokens": 9077
+    },
+    "metrics": {
+      "latencyMs": 8963
+    },
+    "model_id": "us.amazon.nova-pro-v1:0",
+    "api_used": "converse",
+    "model_params": {
+      "maxTokens": 8200,
+      "topP": 1,
+      "temperature": 0.1
+    }
+  },
+  "model_used": "us.amazon.nova-pro-v1:0",
+  "api_used": "converse"
+}

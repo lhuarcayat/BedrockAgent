@@ -1,0 +1,110 @@
+{
+  "extraction_data": {
+    "result": {
+      "PrincipalCompanyName": "Siemens S.A.S.",
+      "DocumentCategory": "Equity Composition",
+      "TaxId": "860.031.028-9",
+      "IdentificationType": "NIT",
+      "Country": "Colombia",
+      "IdentificationDetails": {
+        "Source": "TextReference",
+        "Indicators": [
+          "Bogotá D.C.",
+          "pesos colombianos",
+          "Decreto 2420 de 2015"
+        ],
+        "ConflictingSources": [
+          "Foreign company identification number 'NL001781029B01' labeled as NIT but appears to be a Dutch registration number for B.V. company"
+        ],
+        "RequiresReview": "true"
+      },
+      "RelatedParties": [
+        {
+          "Type": "company",
+          "CompanyName": "Siemens International Holding B.V.",
+          "IdType": "ForReview",
+          "IdNumber": "NL001781029B01",
+          "RelationshipType": "Shareholder",
+          "ParticipationPercentage": "100%",
+          "TimeFound": "1",
+          "Job": ""
+        }
+      ]
+    },
+    "DocumentType": "company",
+    "Category": "ACC"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "{ \"result\": { \"PrincipalCompanyName\": \"Siemens S.A.S.\", \"DocumentCategory\": \"Equity Composition\", \"TaxId\": \"860.031.028-9\", \"IdentificationType\": \"NIT\", \"Country\": \"Colombia\", \"IdentificationDetails\": { \"Source\": \"TextReference\", \"Indicators\": [ \"Bogotá D.C.\", \"pesos colombianos\", \"Decreto 2420 de 2015\" ], \"ConflictingSources\": [\"Foreign company identification number 'NL001781029B01' labeled as NIT but appears to be a Dutch registration number for B.V. company\"], \"RequiresReview\": \"true\" }, \"RelatedParties\": [ { \"Type\": \"company\", \"CompanyName\": \"Siemens International Holding B.V.\", \"IdType\": \"ForReview\", \"IdNumber\": \"NL001781029B01\", \"RelationshipType\": \"Shareholder\", \"ParticipationPercentage\": \"100%\", \"TimeFound\": \"1\", \"Job\": \"\" } ] }, \"DocumentType\": \"company\", \"Category\": \"ACC\" }"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 2633,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 4822,
+      "output_tokens": 949
+    },
+    "ResponseMetadata": {
+      "RequestId": "b2ad100c-4a04-413b-8856-5fab647407ef",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Mon, 01 Sep 2025 02:11:10 GMT",
+        "content-type": "application/json",
+        "content-length": "6474",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "b2ad100c-4a04-413b-8856-5fab647407ef",
+        "x-amzn-bedrock-invocation-latency": "16331",
+        "x-amzn-bedrock-cache-write-input-token-count": "0",
+        "x-amzn-bedrock-cache-read-input-token-count": "4822",
+        "x-amzn-bedrock-output-token-count": "949",
+        "x-amzn-bedrock-input-token-count": "2633"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_011gHBK12WA2WXqwpoPahi4D",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-sonnet-4-20250514",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Let me carefully analyze this document to extract the required information: 1. The document appears to be a shareholder composition certificate from Colombia, issued by Ernst & Young, for a company called Siemens. 2. Looking at the principal company name: - The document is addressed to \"Señores Siemens Sociedad por Acciones Simplificada\" and later mentions \"Siemens S.A.S.\" - The document specifically mentions it's about the accounts of \"Siemens S.A.S., identificada con NIT. 860.031.028-9\" - So the principal company name is \"Siemens S.A.S.\" 3. Document Category: Should be \"Equity Composition\" 4. Country: This is clearly Colombia as evidenced by: - Multiple references to \"Bogotá D.C.\" - Colombian peso amounts (\"pesos colombianos\") - NIT identification (Colombian tax ID format) - Colombian audit regulations referenced 5. TaxId: The document clearly states the company is \"identificada con NIT. 860.031.028-9\" 6. IdentificationType: \"NIT\" as stated in the document 7. Related Parties: Looking at the shareholder composition table: - There's one shareholder: \"Siemens International Holding B.V.\" with NIT \"NL001781029B01\" - This entity has 5,468,220 shares worth $95,693,850,000 Colombian pesos and 100% participation - Wait, that \"NIT\" looks suspicious for a foreign company - it looks more like a European company registration number starting with \"NL\" (Netherlands) Let me double-check the table: ``` NIT Accionistas N° Acciones (*) Valor en pesos colombianos Participación % NL001781029B01 Siemens International Holding B.V. 5,468,220 $95,693,850,000 100% ``` I notice a key discrepancy with the identification number. The \"NL001781029B01\" is clearly a Dutch company registration number, not a Colombian NIT. The \"B.V.\" suffix confirms this is a Dutch company (Besloten Vennootschap), which creates an interesting documentation anomaly where a foreign company registration number is labeled as a NIT.",
+          "signature": "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"
+        },
+        {
+          "type": "text",
+          "text": "{ \"result\": { \"PrincipalCompanyName\": \"Siemens S.A.S.\", \"DocumentCategory\": \"Equity Composition\", \"TaxId\": \"860.031.028-9\", \"IdentificationType\": \"NIT\", \"Country\": \"Colombia\", \"IdentificationDetails\": { \"Source\": \"TextReference\", \"Indicators\": [ \"Bogotá D.C.\", \"pesos colombianos\", \"Decreto 2420 de 2015\" ], \"ConflictingSources\": [\"Foreign company identification number 'NL001781029B01' labeled as NIT but appears to be a Dutch registration number for B.V. company\"], \"RequiresReview\": \"true\" }, \"RelatedParties\": [ { \"Type\": \"company\", \"CompanyName\": \"Siemens International Holding B.V.\", \"IdType\": \"ForReview\", \"IdNumber\": \"NL001781029B01\", \"RelationshipType\": \"Shareholder\", \"ParticipationPercentage\": \"100%\", \"TimeFound\": \"1\", \"Job\": \"\" } ] }, \"DocumentType\": \"company\", \"Category\": \"ACC\" }"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 2633,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 4822,
+        "output_tokens": 949
+      }
+    },
+    "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 8000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+  "api_used": "invoke_model"
+}

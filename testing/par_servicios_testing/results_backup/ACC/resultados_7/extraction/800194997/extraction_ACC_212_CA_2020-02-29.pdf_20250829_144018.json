@@ -1,0 +1,118 @@
+{
+  "extraction_data": {
+    "result": {
+      "companyName": "DOCUPRINT S.A.S",
+      "documentCategory": "Equity Composition",
+      "taxId": "800.194.997-1",
+      "country": "Colombia",
+      "identificationDetails": {
+        "source": "text_reference",
+        "indicators": [
+          "Medellín",
+          "NIT format",
+          "Contador Público"
+        ],
+        "conflictingSources": [],
+        "requiresReview": "false"
+      },
+      "relatedParties": [
+        {
+          "type": "person",
+          "firstName": "Carlos A.",
+          "lastName": "Molina Suarez",
+          "identificationType": "C.C.",
+          "identificationNumber": "12.119.319",
+          "relationshipType": "Shareholder",
+          "participationPercentage": "50.0",
+          "timeFound": "1",
+          "job": ""
+        },
+        {
+          "type": "company",
+          "companyName": "FAST PRINT LTDA",
+          "identificationType": "NIT",
+          "identificationNumber": "800.149.757",
+          "relationshipType": "Shareholder",
+          "participationPercentage": "50.0",
+          "timeFound": "1",
+          "job": ""
+        }
+      ]
+    },
+    "documentType": "company",
+    "category": "ACC"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "{ \"result\": { \"companyName\": \"DOCUPRINT S.A.S\", \"documentCategory\": \"Equity Composition\", \"taxId\": \"800.194.997-1\", \"country\": \"Colombia\", \"identificationDetails\": { \"source\": \"text_reference\", \"indicators\": [ \"Medellín\", \"NIT format\", \"Contador Público\" ], \"conflictingSources\": [], \"requiresReview\": \"false\" }, \"relatedParties\": [ { \"type\": \"person\", \"firstName\": \"Carlos A.\", \"lastName\": \"Molina Suarez\", \"identificationType\": \"C.C.\", \"identificationNumber\": \"12.119.319\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"50.0\", \"timeFound\": \"1\", \"job\": \"\" }, { \"type\": \"company\", \"companyName\": \"FAST PRINT LTDA\", \"identificationType\": \"NIT\", \"identificationNumber\": \"800.149.757\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"50.0\", \"timeFound\": \"1\", \"job\": \"\" } ] }, \"documentType\": \"company\", \"category\": \"ACC\" }"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 9,
+      "cache_creation_input_tokens": 6073,
+      "cache_read_input_tokens": 0,
+      "output_tokens": 1088
+    },
+    "ResponseMetadata": {
+      "RequestId": "1d80042d-453b-480b-8db3-4090585255ed",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Fri, 29 Aug 2025 19:40:19 GMT",
+        "content-type": "application/json",
+        "content-length": "7074",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "1d80042d-453b-480b-8db3-4090585255ed",
+        "x-amzn-bedrock-invocation-latency": "17016",
+        "x-amzn-bedrock-cache-write-input-token-count": "6073",
+        "x-amzn-bedrock-cache-read-input-token-count": "0",
+        "x-amzn-bedrock-output-token-count": "1088",
+        "x-amzn-bedrock-input-token-count": "9"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_01MxWLLKfX4AGgE62UNVFcpx",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-sonnet-4-20250514",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Let me analyze this document step by step following the workflow: **Step 1: Document Analysis** - This appears to be a Colombian equity composition certificate from \"DOCUPRINT S.A.S.\" - The document is titled \"EL SUSCRITO CONTADOR PUBLICO CERTIFICA QUE\" - I can see a table showing shareholders with their identification numbers, shares, and equity values - The document is issued in Medellín, Colombia (indicated at the bottom) **Step 2: Root Level Extraction** **Company Name**: \"DOCUPRINT S.A.S\" - this is clearly the issuing company at the top of the document with NIT 800.194.997-1 **Tax ID**: \"800.194.997-1\" - this is shown as \"NIT 800.194.997-1\" **Country**: Colombia - evidence includes: - Medellín mentioned at bottom - NIT format (Colombian tax ID type) - \"Contador Público\" (Colombian terminology) - Document structure typical of Colombian equity composition certificates **Step 3: Related Parties Processing** Looking at the table, I can see two shareholders: 1. CARLOS A. MOLINA SUAREZ - CC o NIT: 12.119.319 - ACCIONES VR NOMINAL: 1170 - VR CAPITAL PAGADO: 117.000.000 2. FAST PRINT LTDA - CC o NIT: 800.149.757 - ACCIONES VR NOMINAL: 1170 - VR CAPITAL PAGADO: 117.000.000 The totals show: - ACCIONES: 2340 - VR NOMINAL: 200.000 - VR CAPITAL PAGADO: 234.000.000 Now I need to classify these entities: 1. \"CARLOS A. MOLINA SUAREZ\" - This appears to be a person (has personal name structure) I've identified a personal identification matching the Colombian C.C. (cédula de ciudadanía) format. The shareholder owns exactly half the company's shares, with 1170 out of 2340 total shares. His standardized ID is 12119319, confirming a valid personal identification number. 2. \"FAST PRINT LTDA\" - This is a company (has \"LTDA\" suffix) The second shareholder is a limited liability company with an identical share distribution. Its tax identification number suggests it's a registered Colombian business entity, also holding 1170 shares, representing 50% ownership of DOCUPRINT S.A.S. The validation confirms both shareholders have matching participation, with no discrepancies in identification or ownership percentages. The documentation appears complete and accurate, indicating no further review is necessary.",
+          "signature": "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"
+        },
+        {
+          "type": "text",
+          "text": "{ \"result\": { \"companyName\": \"DOCUPRINT S.A.S\", \"documentCategory\": \"Equity Composition\", \"taxId\": \"800.194.997-1\", \"country\": \"Colombia\", \"identificationDetails\": { \"source\": \"text_reference\", \"indicators\": [ \"Medellín\", \"NIT format\", \"Contador Público\" ], \"conflictingSources\": [], \"requiresReview\": \"false\" }, \"relatedParties\": [ { \"type\": \"person\", \"firstName\": \"Carlos A.\", \"lastName\": \"Molina Suarez\", \"identificationType\": \"C.C.\", \"identificationNumber\": \"12.119.319\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"50.0\", \"timeFound\": \"1\", \"job\": \"\" }, { \"type\": \"company\", \"companyName\": \"FAST PRINT LTDA\", \"identificationType\": \"NIT\", \"identificationNumber\": \"800.149.757\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"50.0\", \"timeFound\": \"1\", \"job\": \"\" } ] }, \"documentType\": \"company\", \"category\": \"ACC\" }"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 9,
+        "cache_creation_input_tokens": 6073,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 1088
+      }
+    },
+    "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 8000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+  "api_used": "invoke_model"
+}

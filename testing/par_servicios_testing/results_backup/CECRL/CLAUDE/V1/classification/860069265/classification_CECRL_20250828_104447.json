@@ -1,0 +1,87 @@
+{
+  "classification_data": {
+    "category": "CECRL",
+    "text": "REPUBLICA DE COLOMBIA IDENTIFICACION PERSONAL CEDULA DE CIUDADANIA NUMERO 52.255.747 FONSECA URIBE APELLIDOS CLAUDIA TATIANA NOMBRES FECHA DE NACIMIENTO 15-SEP-1974 BOGOTA D.C. (CUNDINAMARCA) LUGAR DE NACIMIENTO 1.70 A- F ESTATURA G.S. RH SEXO 15-JUL-1993 BOGOTA D.C. FECHA Y LUGAR DE EXPEDICION INDICE DERECHO REGISTRADOR NACIONAL A-1500101-47154892-F-0052255747-20071026 044466.0728RQ 02 227085132",
+    "document_number": "860069265",
+    "path": "CECRL/860069265/CC_Tatiana_Fonseca.pdf"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "```json { \"category\": \"CECRL\", \"text\": \"REPUBLICA DE COLOMBIA\\nIDENTIFICACION PERSONAL\\nCEDULA DE CIUDADANIA\\nNUMERO 52.255.747\\nFONSECA URIBE\\nAPELLIDOS\\nCLAUDIA TATIANA\\nNOMBRES\\nFECHA DE NACIMIENTO 15-SEP-1974\\nBOGOTA D.C.\\n(CUNDINAMARCA)\\nLUGAR DE NACIMIENTO\\n1.70 A- F\\nESTATURA G.S. RH SEXO\\n15-JUL-1993 BOGOTA D.C.\\nFECHA Y LUGAR DE EXPEDICION\\nINDICE DERECHO\\nREGISTRADOR NACIONAL\\nA-1500101-47154892-F-0052255747-20071026 044466.0728RQ 02 227085132\" } ```"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 9,
+      "cache_creation_input_tokens": 4475,
+      "cache_read_input_tokens": 0,
+      "output_tokens": 1026
+    },
+    "ResponseMetadata": {
+      "RequestId": "e0f962cf-b103-4cb5-9363-58011bd78148",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Thu, 28 Aug 2025 15:44:33 GMT",
+        "content-type": "application/json",
+        "content-length": "4162",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "e0f962cf-b103-4cb5-9363-58011bd78148",
+        "x-amzn-bedrock-invocation-latency": "30172",
+        "x-amzn-bedrock-cache-write-input-token-count": "4475",
+        "x-amzn-bedrock-cache-read-input-token-count": "0",
+        "x-amzn-bedrock-output-token-count": "1026",
+        "x-amzn-bedrock-input-token-count": "9"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_012cVe71rJV6yr5UKnvp5dYb",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-3-7-sonnet-20250219",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Let me analyze the document systematically following the classification workflow: ## 1. TEXT EXTRACTION The document appears to be a Colombian identification document (cédula de ciudadanía). I can extract the following text: ``` REPUBLICA DE COLOMBIA IDENTIFICACION PERSONAL CEDULA DE CIUDADANIA NUMERO 52.255.747 FONSECA URIBE APELLIDOS CLAUDIA TATIANA NOMBRES [signature] FECHA DE NACIMIENTO 15-SEP-1974 BOGOTA D.C. (CUNDINAMARCA) LUGAR DE NACIMIENTO 1.70 A- F ESTATURA G.S. RH SEXO 15-JUL-1993 BOGOTA D.C. FECHA Y LUGAR DE EXPEDICION INDICE DERECHO REGISTRADOR NACIONAL [barcode] A-1500101-47154892-F-0052255747-20071026 044466.0728RQ 02 227085132 ``` ## 2. PRIORITY CHECKS - Not BLANK: The document contains meaningful content. - Not LINK_ONLY: No hyperlinks or URLs present. ## 3. ISSUER IDENTIFICATION The document is issued by the National Registry of Colombia (implied by \"REGISTRADOR NACIONAL\" and the format), which is the government entity responsible for issuing national identification documents. ## 4. DOCUMENT FUNCTION ANALYSIS This is clearly a personal identification document (Cédula de Ciudadanía) for an individual. It contains personal information such as: - Full name - National ID number - Date of birth - Place of birth - Gender - Blood type - Height - Date and place of issuance - Fingerprint - Photo - Signature ## 5. CATEGORY CLASSIFICATION Based on the evaluation order and document content, this is a personal identification document. The most appropriate category would be CECRL (Official personal identification documents of legal representatives of companies). Looking at the CECRL definition: - Must-have indicators present: - Individual identification terminology: \"Identificación personal\", \"Cédula de Ciudadanía\" - Personal biographical data: birth date/place, blood type, gender - Individual photo, signature, fingerprint references - Government-issued personal ID number with individual name - Security elements: barcode, official appearance The document matches all the required indicators for CECRL. ## 6. CONFIDENCE VALIDATION Strong evidence for CECRL: - Clear personal identification document (cédula) - Contains all required biographical data - Contains security elements - Government-issued personal document However, one consideration: while this is definitely a Colombian cédula (national ID card), I don't see specific evidence that this person is a legal representative of a company. The CECRL category specifically mentions identification documents \"of legal representatives of companies.\" This document only shows the personal identification, not the connection to any company representation. Despite this, based on the classification workflow and category definitions, CECRL appears to be the most appropriate category since it's defined as \"Official personal identification documents (cédulas, passports, etc.)\" and this is clearly a cédula.",
+          "signature": "ErcBCkgIBxABGAIiQCvW/gH65oviijfJqcOzoHKlK6xu8ns3BktbYaiPRIfehr1YDV5Ku47vd+CGX65SoGYNO8LwMF/dadMrv+muIAQSDPOic88h1k7uwSMdGRoMFG5cp+966Ub9mBVLIjCCISt7hmxHKehcjWf/5HCvKkrzfu0puzgUZ6FZctBaEaVA3SIEQq6FZV7EZKYpEeAqHUb2dsx02JcQijhje60OTSLgXxh08CR784SlBszOGAI="
+        },
+        {
+          "type": "text",
+          "text": "```json { \"category\": \"CECRL\", \"text\": \"REPUBLICA DE COLOMBIA\\nIDENTIFICACION PERSONAL\\nCEDULA DE CIUDADANIA\\nNUMERO 52.255.747\\nFONSECA URIBE\\nAPELLIDOS\\nCLAUDIA TATIANA\\nNOMBRES\\nFECHA DE NACIMIENTO 15-SEP-1974\\nBOGOTA D.C.\\n(CUNDINAMARCA)\\nLUGAR DE NACIMIENTO\\n1.70 A- F\\nESTATURA G.S. RH SEXO\\n15-JUL-1993 BOGOTA D.C.\\nFECHA Y LUGAR DE EXPEDICION\\nINDICE DERECHO\\nREGISTRADOR NACIONAL\\nA-1500101-47154892-F-0052255747-20071026 044466.0728RQ 02 227085132\" } ```"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 9,
+        "cache_creation_input_tokens": 4475,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 1026
+      }
+    },
+    "model_id": "us.anthropic.claude-3-7-sonnet-20250219-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 8000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "expected_category": "CECRL",
+  "model_used": "us.anthropic.claude-3-7-sonnet-20250219-v1:0",
+  "api_used": "invoke_model",
+  "pdf_info": {
+    "original_size": 226738,
+    "first_page_size": 223294,
+    "is_scanned": true
+  }
+}

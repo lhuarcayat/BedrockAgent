@@ -1,0 +1,88 @@
+{
+  "extraction_data": {
+    "result": {
+      "FirstName": "LUIS KENNETH",
+      "LastName": "BERMUDEZ FILBERT",
+      "CountryIssuer": "Colombia",
+      "Nationality": "Colombia",
+      "IdentificationType": "Cédula de Ciudadanía",
+      "IdentificationNumber": "7.690.621",
+      "Message": ""
+    },
+    "document_type": "person",
+    "category": "CECRL"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "```json { \"result\": { \"FirstName\": \"LUIS KENNETH\", \"LastName\": \"BERMUDEZ FILBERT\", \"CountryIssuer\": \"Colombia\", \"Nationality\": \"Colombia\", \"IdentificationType\": \"Cédula de Ciudadanía\", \"IdentificationNumber\": \"7.690.621\", \"Message\": \"\" }, \"document_type\": \"person\", \"category\": \"CECRL\" } ```"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 1583,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 4300,
+      "output_tokens": 506
+    },
+    "ResponseMetadata": {
+      "RequestId": "5add9e38-7a56-4c1b-9ace-51530b5fb4eb",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Sun, 31 Aug 2025 21:44:44 GMT",
+        "content-type": "application/json",
+        "content-length": "4029",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "5add9e38-7a56-4c1b-9ace-51530b5fb4eb",
+        "x-amzn-bedrock-invocation-latency": "8318",
+        "x-amzn-bedrock-cache-write-input-token-count": "0",
+        "x-amzn-bedrock-cache-read-input-token-count": "4300",
+        "x-amzn-bedrock-output-token-count": "506",
+        "x-amzn-bedrock-input-token-count": "1583"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_01VVivSdwBbozDbFRMCo6Xsm",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-sonnet-4-20250514",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Let me analyze this Colombian identification document carefully, following the extraction methodology. 1. **Document Analysis**: This is a Colombian \"CEDULA DE CIUDADANIA\" (Citizenship Card) from \"REPÚBLICA DE COLOMBIA\". 2. **Structured Label Detection**: Looking at the document, I can see: - NÚMERO: 7.690.621 - BERMUDEZ FILBERT (appears after \"APELLIDOS\" label) - LUIS KENNETH (appears after \"NOMBRES\" label) Let me verify if the extracted text matches the labels: - APELLIDOS -> BERMUDEZ FILBERT ✓ (this matches) - NOMBRES -> LUIS KENNETH ✓ (this matches) The layout appears to be correct - no misalignment detected here. The surnames appear after \"APELLIDOS\" and the first names appear after \"NOMBRES\". 3. **Field Extraction**: **FirstName**: \"LUIS KENNETH\" (extracted from NOMBRES label) **LastName**: \"BERMUDEZ FILBERT\" (extracted from APELLIDOS label) **CountryIssuer**: \"Colombia\" (from \"REPÚBLICA DE COLOMBIA\" header) **Nationality**: \"Colombia\" (same as CountryIssuer, as no explicit nationality field found) **IdentificationType**: \"Cédula de Ciudadanía\" (from \"CEDULA DE CIUDADANIA\" header) **IdentificationNumber**: \"7.690.621\" (from NÚMERO field) **Message**: \"\" (no issues detected) All extractions are clear and consistent with the document structure.",
+          "signature": "ErALCkgIBxABGAIqQLzwJHnFV3xSceAAiUV1UV2oHGWTPUWzZt7rQCfA+dM9QCOeQ7zuXkcsgtIpkCgNIeD7pUyB2Ta6ecDU0/T7X8oSDIQQDuN4NvOUhOGA1BoMVv+DNN1yo6PJHd5IIjDI7eiIQAXdRVTkgemeM9sShIrSvD3QJSyCK8GK8w9tmqf3bmwAWHsK7fz/ch3WQJIqlQorHUFxs7OBKzzex12BFH4MdaDXcy8hsJ1JfMS9VH9q8wt1GKusszynB+v2hKZhIHV+D9gIPTV+AA14USffsetCOs+Vrllg5XZiwqpD64gmBPt+qAZRqUv8XawZD+rF+RVouf1yW+6jy4udvlW/ZDEyT2hMa+kCShn+YB2jXZHhGTyAw540tZV2FboHcIIPtxnVEe9vzeSKQPcSVmWYFxfq+kMwaQFxBWdZnjuhJk4mHwKk+5WQOSSd1QzDdrQv+g5hWjZStNyqx/DxTb3nnXqrZG/+zfK1c6vsMivXfUYwiewnEGNFd/BXsP/xwRJdkavXsohOc0TImztvMcKZdc7+4Y9w2QulPM3b3MfdS88kGfBv1ZZ6+Ozp08URhwhtX09Go17pw8y343oUeKC12I5cALKJPL3E9h2bHfguqxHpd1/ukKKVWzP2UD4dRvRjbogK/v62JgluD0a+I2KXEKby5FWykZB3KiYy9gJ++fD6Lz9BtVN+GqHfX1JHaAi+MDGuVel0zaMBt3PIFKrO8TrnrPrGHJxxE/xOesfzbU43qia18jULPzSrD1s03+MG4iB9MfWzdmC+4fXBb5vrTiwcCWGavDOeHusRVscymD8BIXLdctu8uoHBtNKgleldjGC2T8rFtYrcpuhTvmE1aToI1/r79BgoXaM3jm5X+/FyrOi6L5Dfc9Dqrx6vCdCRhHILhnnjbz4urrvwF/1pxNm7daKU048ZJdTJnMDg7yi99WsL4j7UqZTcGbfn0qsZNYYmmnLE4zwcDYwfzz8mXjPNUMdE9Tetm27QQB2qmk5TAPfKpkW+dxRIlqqvlJWLM0hKJZlEoRbtpNbL8grJhsKYo4Sfdw3x0k4k7g9k+sL47HGIM8Bi4qCbc8KeLwxE9zY4SwIFqtrOtuZ71ZIGTBzsBw4CQFJB9/7enzUNGIf/rnp0Naw+VzMlKU0z18sbWyfqUp6jQ6+Un+Y3qGIrFGxGErAhjvUI8IAhnZqNbfAbWrGNm7ZmQjOOnQ5+qH5QHWJ2GkLigTBjJTYWnXjIFrZgGM+tmif1Kv+NVBh1rNfiOpjcu0AWvBjTiXkzr8LbG34AMf+PFPVqLXfxdI9vEojs+muRvcPN6O8X4ldWyMGPEYdJRK8ae0MDcCwLn8ok/oWKNRtxMagdyxYjgr+TxLCI3TZcg+p5TpWBU3i/hq+mu86SI0DHvQHPnPFXaQKkkQoQOAP8KhpQhjjua6TVOj0iX/Fx0rdF9z/HyeGNp3nDxb6Ql62lWvm0mKTECAo/ezfQHQ4V/9CpMdeW62wqa0d+/SMtypTmku7JY5DE0VrqHnvMUG/LwG7PAb99kJCP5P8FiajS2Y0qWORvmP1LEyLez4zqY3TKXU82LDMvkiOyD4GWGogZ0mez2UjS2dMf99GP8OESxOAj9hS0uuiG9oQwudw3o34qxc6kwnm+F5Blfsy/Vf8+pK9dsTDCDf54mx0cBo7Uy4UpJeqV7mJFPRIyNs7eNe4wDrqvBDndBcv39njPXcD/AlfJXWmQsWm39kZuqrsPQNQhxtlYJWtiJ0BzuUbrLa2zpSjB07gQ+nyJaGHY7lwvplN4yXPUWjmRpotgyOmmBdHJYntllMfDX+9YyG+l2afFNFzJoRmfg8M7GVoiNUKfDgkzfGUFAPGz4xpSueBl0IRn7a7HBo6xYrDKPMzG1QRePRIxiUp12gRl7tUUT9l+FQv7MwggAl6BjMM2nOu7shgB"
+        },
+        {
+          "type": "text",
+          "text": "```json { \"result\": { \"FirstName\": \"LUIS KENNETH\", \"LastName\": \"BERMUDEZ FILBERT\", \"CountryIssuer\": \"Colombia\", \"Nationality\": \"Colombia\", \"IdentificationType\": \"Cédula de Ciudadanía\", \"IdentificationNumber\": \"7.690.621\", \"Message\": \"\" }, \"document_type\": \"person\", \"category\": \"CECRL\" } ```"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 1583,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 4300,
+        "output_tokens": 506
+      }
+    },
+    "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 8000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+  "api_used": "invoke_model"
+}

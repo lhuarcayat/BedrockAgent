@@ -1,0 +1,90 @@
+{
+  "extraction_data": {
+    "path": "CECRL/31158722566/19067068_2021-03-02.pdf",
+    "result": {
+      "firstName": "LUIS ALBERTO",
+      "lastName": "VARGAS VELOZA",
+      "country_issuer": "Colombia",
+      "nationality": "Colombia",
+      "identificationType": "Cédula de Ciudadanía",
+      "identificationNumber": "19.067.068",
+      "message": ""
+    },
+    "document_type": "person",
+    "documentNumber": "31158722566",
+    "category": "CECRL"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "```json { \"result\": { \"firstName\": \"LUIS ALBERTO\", \"lastName\": \"VARGAS VELOZA\", \"country_issuer\": \"Colombia\", \"nationality\": \"Colombia\", \"identificationType\": \"Cédula de Ciudadanía\", \"identificationNumber\": \"19.067.068\", \"message\": \"\" }, \"document_type\": \"person\", \"category\": \"CECRL\" } ```"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 10,
+      "cache_creation_input_tokens": 5982,
+      "cache_read_input_tokens": 0,
+      "output_tokens": 817
+    },
+    "ResponseMetadata": {
+      "RequestId": "50acf7dd-8665-4d8f-aa83-af6f77a01726",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Thu, 28 Aug 2025 15:31:08 GMT",
+        "content-type": "application/json",
+        "content-length": "3519",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "50acf7dd-8665-4d8f-aa83-af6f77a01726",
+        "x-amzn-bedrock-invocation-latency": "18753",
+        "x-amzn-bedrock-cache-write-input-token-count": "5982",
+        "x-amzn-bedrock-cache-read-input-token-count": "0",
+        "x-amzn-bedrock-output-token-count": "817",
+        "x-amzn-bedrock-input-token-count": "10"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_014Yxp5E9xCMrAmVBrSH3u8c",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-3-7-sonnet-20250219",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Let me analyze this identification document and extract the information according to the required schema. First, I need to determine what kind of document this is and verify it's an official government ID. This appears to be a \"Cédula de Ciudadanía\" from Colombia, which is a Colombian national ID card. I can see the header \"REPÚBLICA DE COLOMBIA IDENTIFICACIÓN PERSONAL CÉDULA DE CIUDADANÍA\" clearly indicating it's an official government ID from Colombia. Now I'll extract all required fields systematically: **firstName**: I see \"NOMBRES: LUIS ALBERTO\" on the document. So the first name is \"LUIS ALBERTO\". **lastName**: I see \"APELLIDOS: VARGAS VELOZA\" on the document. So the last name is \"VARGAS VELOZA\". **country_issuer**: The document header clearly states \"REPÚBLICA DE COLOMBIA\", so the issuing country is \"Colombia\". **nationality**: There is no explicit nationality field visible, but since this is a Colombian \"Cédula de Ciudadanía\" which is typically issued to Colombian citizens, and seeing the birth place is \"UBATE (CUNDINAMARCA)\" which is in Colombia, we can assume the nationality is \"Colombia\". **identificationType**: The document clearly states \"CÉDULA DE CIUDADANÍA\" which translates directly to \"Cédula de Ciudadanía\" in the required Spanish format. **identificationNumber**: I see \"NÚMERO: 19.067.068\" on the document. So the identification number is \"19.067.068\". **Additional information visible**: - Birth date: \"FECHA DE NACIMIENTO: 22-ABR-1949\" - Birth place: \"UBATE (CUNDINAMARCA)\" - indicating the person was born in Ubate, Cundinamarca, Colombia - Height: \"ESTATURA: 1.65\" - Blood type: \"G.S. RH: A+\" - Sex: \"SEXO: M\" (Male) - Date and place of issuance: \"FECHA Y LUGAR DE EXPEDICIÓN: 26-MAY-1970 BOGOTA D.C.\" Now that I've extracted all the required information, I'll format it according to the schema: ```json { \"result\": { \"firstName\": \"LUIS ALBERTO\", \"lastName\": \"VARGAS VELOZA\", \"country_issuer\": \"Colombia\", \"nationality\": \"Colombia\", \"identificationType\": \"Cédula de Ciudadanía\", \"identificationNumber\": \"19.067.068\", \"message\": \"\" }, \"document_type\": \"person\", \"category\": \"CECRL\" } ``` This appears to be a complete and valid extraction of the information from this Colombian ID card, following all the requirements in the schema. All fields have been properly identified and populated.",
+          "signature": "ErcBCkgIBxABGAIiQJ+o7Me/6eDbi89pwl14MsAV5eKv4N2OF8XN8cW93TJNFDmNe7Q6jZKKpUS/UF9VmYK5Lv6eS878XzD85S/g+hgSDGQ9yiNOeNQpODmssRoMhCb/oG2aZeX2Ob53IjCtUxMptmHP4yT1MFinUqcbreCa4cUNxbmgU9ha8woW6yU+jfnOjNCs+cEIlR9y71cqHScYk/5xpEPY1bRBUsK51jp2kFIMjEfvUYJoeIFBGAI="
+        },
+        {
+          "type": "text",
+          "text": "```json { \"result\": { \"firstName\": \"LUIS ALBERTO\", \"lastName\": \"VARGAS VELOZA\", \"country_issuer\": \"Colombia\", \"nationality\": \"Colombia\", \"identificationType\": \"Cédula de Ciudadanía\", \"identificationNumber\": \"19.067.068\", \"message\": \"\" }, \"document_type\": \"person\", \"category\": \"CECRL\" } ```"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 10,
+        "cache_creation_input_tokens": 5982,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 817
+      }
+    },
+    "model_id": "us.anthropic.claude-3-7-sonnet-20250219-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 8000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "model_used": "us.anthropic.claude-3-7-sonnet-20250219-v1:0",
+  "api_used": "invoke_model"
+}

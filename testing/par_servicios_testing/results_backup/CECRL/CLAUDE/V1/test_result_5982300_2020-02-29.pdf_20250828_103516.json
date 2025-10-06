@@ -1,0 +1,185 @@
+{
+  "document_name": "5982300_2020-02-29.pdf",
+  "category": "CECRL",
+  "classification_success": true,
+  "extraction_success": true,
+  "overall_success": true,
+  "timestamp": "2025-08-28T10:34:32.530594",
+  "classification_result": {
+    "classification_data": {
+      "category": "CECRL",
+      "text": "Scanned by CamScanner REPUBLICA DE COLOMBIA IDENTIFICACION PERSONAL CEDULA DE CIUDADANIA NUMERO 5.982.300 NAVARRO MORALES APELLIDOS EDGAR NOMBRES FIRMA FECHA DE NACIMIENTO 06-MAY-1947 PURIFICACION (TOLIMA) LUGAR DE NACIMIENTO 1.77 ESTATURA O G.S. RH M SEXO 05-SEP-1969 PURIFICACION FECHA Y LUGAR DE EXPEDICION REGISTRADOR NACIONAL CARLOS ARIEL SANCHEZ TORRES INDICE DERECHO A-2909400-00107510-M-0005982300-20090807 001463665A 3 6350103293 Scanned by CamScanner",
+      "document_number": "5982300",
+      "path": "CECRL/5982300/5982300_2020-02-29.pdf"
+    },
+    "raw_response": {
+      "output": {
+        "message": {
+          "content": [
+            {
+              "text": "```json { \"category\": \"CECRL\", \"text\": \"Scanned by CamScanner\\n\\nREPUBLICA DE COLOMBIA\\nIDENTIFICACION PERSONAL\\nCEDULA DE CIUDADANIA\\n\\nNUMERO 5.982.300\\nNAVARRO MORALES\\nAPELLIDOS\\nEDGAR\\nNOMBRES\\nFIRMA\\n\\nFECHA DE NACIMIENTO 06-MAY-1947\\nPURIFICACION\\n(TOLIMA)\\nLUGAR DE NACIMIENTO\\n1.77\\nESTATURA\\nO\\nG.S. RH\\nM\\nSEXO\\n05-SEP-1969 PURIFICACION\\nFECHA Y LUGAR DE EXPEDICION\\nREGISTRADOR NACIONAL\\nCARLOS ARIEL SANCHEZ TORRES\\nINDICE DERECHO\\n\\nA-2909400-00107510-M-0005982300-20090807 001463665A 3 6350103293\\n\\nScanned by CamScanner\" } ```"
+            }
+          ]
+        }
+      },
+      "stopReason": "end_turn",
+      "usage": {
+        "input_tokens": 9,
+        "cache_creation_input_tokens": 4520,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 1035
+      },
+      "ResponseMetadata": {
+        "RequestId": "7d9c0fef-b75e-4ac8-acab-2548b5b2f6f6",
+        "HTTPStatusCode": 200,
+        "HTTPHeaders": {
+          "date": "Thu, 28 Aug 2025 15:34:59 GMT",
+          "content-type": "application/json",
+          "content-length": "4023",
+          "connection": "keep-alive",
+          "x-amzn-requestid": "7d9c0fef-b75e-4ac8-acab-2548b5b2f6f6",
+          "x-amzn-bedrock-invocation-latency": "27215",
+          "x-amzn-bedrock-cache-write-input-token-count": "4520",
+          "x-amzn-bedrock-cache-read-input-token-count": "0",
+          "x-amzn-bedrock-output-token-count": "1035",
+          "x-amzn-bedrock-input-token-count": "9"
+        },
+        "RetryAttempts": 0
+      },
+      "raw_anthropic_response": {
+        "id": "msg_bdrk_016WXuw1fq6cGNJrqtazJVgv",
+        "type": "message",
+        "role": "assistant",
+        "model": "claude-3-7-sonnet-20250219",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "Let's analyze the document following the classification workflow: 1. TEXT EXTRACTION: - The document appears to be a Colombian national ID card (\"Cédula de Ciudadanía\") - It has the title \"REPUBLICA DE COLOMBIA IDENTIFICACION PERSONAL CEDULA DE CIUDADANIA\" - ID Number: 5.982.300 - Name: NAVARRO MORALES EDGAR - There's a signature and photo - Birth date: 06-MAY-1947 - Birth place: PURIFICACION (TOLIMA) - Height: 1.77 - Blood Type: O RH - Sex: M - Issue date/location: 05-SEP-1969 PURIFICACION - There's a fingerprint image - Has a barcode at the bottom with number A-2909400-00107510-M-0005982300-20090807 - Additional number: 001463665A 3 6350103293 - \"Scanned by CamScanner\" appears at top and bottom 2. PRIORITY CHECKS: - This is not a BLANK document - This is not a LINK_ONLY document 3. ISSUER IDENTIFICATION: - This is issued by an individual identification authority (Colombian government) - It's not a DIAN document - It's not from the Chamber of Commerce - It's not from a corporate entity 4. DOCUMENT FUNCTION ANALYSIS: - This is a personal identification document - It's not for tax/regulatory compliance - It's not related to ownership structure - It's an individual record, not related to entity relationships 5. CATEGORY CLASSIFICATION: Following the evaluation order, this appears to be a CECRL (personal identification document). Let me verify against the definition: **CECRL definition check:** - Individual identification terminology: ✓ (\"IDENTIFICACION PERSONAL\", \"CEDULA DE CIUDADANIA\") - Personal biographical data: ✓ (birth date/place, gender) - Individual photo, signature, fingerprint: ✓ (all present) - Government-issued personal ID: ✓ (Colombian national ID) - Security elements: ✓ (photo, fingerprint, barcode) However, I need to carefully check if this is specifically a CECRL (ID of a legal representative) or just a regular personal ID. The CECRL category is specifically for \"Official personal identification documents of legal representatives of companies.\" There's no indication in this document that the person is a legal representative of a company. It appears to be just a standard Colombian national ID (cédula). 6. CONFIDENCE VALIDATION: Since there's no indication this person is a legal representative of a company, this is not clearly a CECRL document. It's a personal ID document, but without the connection to legal representation of a company. Given the classification categories provided, I would classify this as POR_REVISAR since it doesn't clearly fit into the specific categories defined. While it is an identification document, the CECRL category specifically requires evidence that the person is a legal representative of a company, which is not apparent in this document.",
+            "signature": "ErcBCkgIBxABGAIiQMbB++sUixq2Sj8RvXuTWelMfN/vtTda9LJBGQ4JR3eB23G8IKFMSV4K3yti/RPL8sjFRpXVwEsD/qzffPK0KY4SDEeO97m/t+QlGkOfrhoMRFNatRfyr9MjxSADIjDShTb8KQetWKbHvgRZ2XNJnDZHIXvzHiePZLTfTwjQkW6eOs5JDw7stse/9yveQo4qHb6AGNOFaP/qc89DESy/Au3nbuJGR5ZPyix9nn3JGAI="
+          },
+          {
+            "type": "text",
+            "text": "```json { \"category\": \"CECRL\", \"text\": \"Scanned by CamScanner\\n\\nREPUBLICA DE COLOMBIA\\nIDENTIFICACION PERSONAL\\nCEDULA DE CIUDADANIA\\n\\nNUMERO 5.982.300\\nNAVARRO MORALES\\nAPELLIDOS\\nEDGAR\\nNOMBRES\\nFIRMA\\n\\nFECHA DE NACIMIENTO 06-MAY-1947\\nPURIFICACION\\n(TOLIMA)\\nLUGAR DE NACIMIENTO\\n1.77\\nESTATURA\\nO\\nG.S. RH\\nM\\nSEXO\\n05-SEP-1969 PURIFICACION\\nFECHA Y LUGAR DE EXPEDICION\\nREGISTRADOR NACIONAL\\nCARLOS ARIEL SANCHEZ TORRES\\nINDICE DERECHO\\n\\nA-2909400-00107510-M-0005982300-20090807 001463665A 3 6350103293\\n\\nScanned by CamScanner\" } ```"
+          }
+        ],
+        "stop_reason": "end_turn",
+        "stop_sequence": null,
+        "usage": {
+          "input_tokens": 9,
+          "cache_creation_input_tokens": 4520,
+          "cache_read_input_tokens": 0,
+          "output_tokens": 1035
+        }
+      },
+      "model_id": "us.anthropic.claude-3-7-sonnet-20250219-v1:0",
+      "api_used": "invoke_model",
+      "model_params": {
+        "max_tokens": 8000,
+        "top_p": 1,
+        "temperature": 1,
+        "thinking": {
+          "type": "enabled",
+          "budget_tokens": 4096
+        }
+      }
+    },
+    "expected_category": "CECRL",
+    "model_used": "us.anthropic.claude-3-7-sonnet-20250219-v1:0",
+    "api_used": "invoke_model",
+    "pdf_info": {
+      "original_size": 245556,
+      "first_page_size": 245001,
+      "is_scanned": false
+    }
+  },
+  "extraction_result": {
+    "extraction_data": {
+      "path": "CECRL/5982300/5982300_2020-02-29.pdf",
+      "result": {
+        "firstName": "EDGAR",
+        "lastName": "NAVARRO MORALES",
+        "country_issuer": "Colombia",
+        "nationality": "Colombia",
+        "identificationType": "Cédula de Ciudadanía",
+        "identificationNumber": "5.982.300",
+        "message": ""
+      },
+      "document_type": "person",
+      "documentNumber": "5982300",
+      "category": "CECRL"
+    },
+    "raw_response": {
+      "output": {
+        "message": {
+          "content": [
+            {
+              "text": "```json { \"result\": { \"firstName\": \"EDGAR\", \"lastName\": \"NAVARRO MORALES\", \"country_issuer\": \"Colombia\", \"nationality\": \"Colombia\", \"identificationType\": \"Cédula de Ciudadanía\", \"identificationNumber\": \"5.982.300\", \"message\": \"\" }, \"document_type\": \"person\", \"category\": \"CECRL\" } ```"
+            }
+          ]
+        }
+      },
+      "stopReason": "end_turn",
+      "usage": {
+        "input_tokens": 10,
+        "cache_creation_input_tokens": 6027,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 640
+      },
+      "ResponseMetadata": {
+        "RequestId": "e5c306bc-d6a2-467e-95a6-73d6bb0b8cb3",
+        "HTTPStatusCode": 200,
+        "HTTPHeaders": {
+          "date": "Thu, 28 Aug 2025 15:35:16 GMT",
+          "content-type": "application/json",
+          "content-length": "2984",
+          "connection": "keep-alive",
+          "x-amzn-requestid": "e5c306bc-d6a2-467e-95a6-73d6bb0b8cb3",
+          "x-amzn-bedrock-invocation-latency": "16481",
+          "x-amzn-bedrock-cache-write-input-token-count": "6027",
+          "x-amzn-bedrock-cache-read-input-token-count": "0",
+          "x-amzn-bedrock-output-token-count": "640",
+          "x-amzn-bedrock-input-token-count": "10"
+        },
+        "RetryAttempts": 0
+      },
+      "raw_anthropic_response": {
+        "id": "msg_bdrk_01GVhcD5TC9CJDJZNyd8ShXG",
+        "type": "message",
+        "role": "assistant",
+        "model": "claude-3-7-sonnet-20250219",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "Let me carefully analyze the document in the image and extract the required information following the provided extraction methodology. First, let's identify what type of document this is: - The document has a header \"REPUBLICA DE COLOMBIA\" - It's titled \"IDENTIFICACION PERSONAL\" and \"CEDULA DE CIUDADANIA\" - This is clearly a Colombian national ID card (Cédula de Ciudadanía) Now I'll extract each required field systematically: **firstName**: - I see the field labeled \"NOMBRES\" but the actual first name doesn't appear to be filled in a typical text format - There appears to be a signature underneath, but not a clearly typed first name - Based on the format of Colombian cédulas, this would be \"EDGAR\" as that appears in the document (below \"APELLIDOS\") **lastName**: - The field labeled \"APELLIDOS\" contains \"NAVARRO MORALES\" - This is the complete surname **country_issuer**: - The document header clearly states \"REPUBLICA DE COLOMBIA\" - Therefore the country issuer is \"Colombia\" **nationality**: - There's no explicit nationality field - For Colombian cédulas, nationality is typically Colombian - The document shows \"PURIFICACION (TOLIMA)\" as the place of birth, which is in Colombia - Therefore nationality is \"Colombia\" **identificationType**: - The document clearly states \"CEDULA DE CIUDADANIA\" - In Spanish this is \"Cédula de Ciudadanía\" with proper accents **identificationNumber**: - There's a field labeled \"NUMERO\" with value \"5.982.300\" - This is the identification number **Additional observations**: - Date of birth: \"06-MAY-1947\" - Place of birth: \"PURIFICACION (TOLIMA)\" - Date of issue: \"05-SEP-1969 PURIFICACION\" - Sex: \"M\" (Male) - Height: \"1.77\" (meters) - Blood type: \"O\" RH The document appears to be a legitimate Colombian government-issued ID. All required fields can be identified from the document. Let me prepare the JSON response according to the schema:",
+            "signature": "ErcBCkgIBxABGAIiQCeSyGSGn/kqhj4FcObERqZrIUzlNxwOc4iQPJ0Wy+ZQbAQeBcDwKtg0PqzyUbHotBunUWkgYJe7tONfVz7SHjQSDJ1HS+Druw4q4H7PjRoM7UFvC4ELDZIzybmzIjABwhz1zaaM20Yni5Z7bzm04exk/W5mTL+Tw72XVM8TtG9v0Wh2OIqVYrNDQDqKI7oqHevlDgRU0iejGk0vlXSVS7sk3ww9hOMU9FnFP9x5GAI="
+          },
+          {
+            "type": "text",
+            "text": "```json { \"result\": { \"firstName\": \"EDGAR\", \"lastName\": \"NAVARRO MORALES\", \"country_issuer\": \"Colombia\", \"nationality\": \"Colombia\", \"identificationType\": \"Cédula de Ciudadanía\", \"identificationNumber\": \"5.982.300\", \"message\": \"\" }, \"document_type\": \"person\", \"category\": \"CECRL\" } ```"
+          }
+        ],
+        "stop_reason": "end_turn",
+        "stop_sequence": null,
+        "usage": {
+          "input_tokens": 10,
+          "cache_creation_input_tokens": 6027,
+          "cache_read_input_tokens": 0,
+          "output_tokens": 640
+        }
+      },
+      "model_id": "us.anthropic.claude-3-7-sonnet-20250219-v1:0",
+      "api_used": "invoke_model",
+      "model_params": {
+        "max_tokens": 8000,
+        "top_p": 1,
+        "temperature": 1,
+        "thinking": {
+          "type": "enabled",
+          "budget_tokens": 4096
+        }
+      }
+    },
+    "model_used": "us.anthropic.claude-3-7-sonnet-20250219-v1:0",
+    "api_used": "invoke_model"
+  }
+}

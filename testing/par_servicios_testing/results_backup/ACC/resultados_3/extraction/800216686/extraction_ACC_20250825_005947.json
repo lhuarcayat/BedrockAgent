@@ -1,0 +1,112 @@
+{
+  "extraction_data": {
+    "path": "ACC/800216686/231_CA_2020-02-29.pdf",
+    "result": {
+      "companyName": "AEROSUPPORT S.A.S.",
+      "documentType": "Equity Composition",
+      "taxId": "800.216.686-2",
+      "country": "Colombia",
+      "identificationDetails": {
+        "source": "text_reference",
+        "indicators": [
+          "Bogotá",
+          "Colombia"
+        ],
+        "conflictingSources": [],
+        "requiresReview": false
+      },
+      "relatedParties": [
+        {
+          "firstName": "GERMAN",
+          "lastName": "SALGADO VERGARA",
+          "identificationType": "C.C.",
+          "identificationNumber": "19306991",
+          "relationshipType": "Shareholder",
+          "participationPercentage": "49.50%",
+          "timeFound": 1,
+          "job": "Representante Legal"
+        },
+        {
+          "companyName": "GLOBAL AVIATION SUPPORT CORP",
+          "identificationType": "NIT",
+          "identificationNumber": "1045179-1-546162",
+          "relationshipType": "Shareholder",
+          "participationPercentage": "49.00%",
+          "timeFound": 1,
+          "job": ""
+        },
+        {
+          "firstName": "ADRIANA",
+          "lastName": "ARANGO JARAMILLO",
+          "identificationType": "C.C.",
+          "identificationNumber": "35469632",
+          "relationshipType": "Shareholder",
+          "participationPercentage": "1.00%",
+          "timeFound": 1,
+          "job": ""
+        },
+        {
+          "firstName": "NICOLAS",
+          "lastName": "SALGADO ARANGO",
+          "identificationType": "C.C.",
+          "identificationNumber": "1020763136",
+          "relationshipType": "Shareholder",
+          "participationPercentage": "0.50%",
+          "timeFound": 1,
+          "job": ""
+        }
+      ]
+    },
+    "document_type": "company",
+    "document_number": "800216686",
+    "category": "ACC",
+    "confidenceScores": {
+      "companyName": 95,
+      "taxId": 95,
+      "country": 98,
+      "relatedParties": 90
+    }
+  },
+  "raw_response": {
+    "ResponseMetadata": {
+      "RequestId": "6d1749f5-537d-4987-95df-b5feead6e882",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Mon, 25 Aug 2025 05:59:47 GMT",
+        "content-type": "application/json",
+        "content-length": "2295",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "6d1749f5-537d-4987-95df-b5feead6e882"
+      },
+      "RetryAttempts": 0
+    },
+    "output": {
+      "message": {
+        "role": "assistant",
+        "content": [
+          {
+            "text": "```json { \"path\": \"ACC/800216686/231_CA_2020-02-29.pdf\", \"result\": { \"companyName\": \"AEROSUPPORT S.A.S.\", \"documentType\": \"Equity Composition\", \"taxId\": \"800.216.686-2\", \"country\": \"Colombia\", \"identificationDetails\": { \"source\": \"text_reference\", \"indicators\": [ \"Bogotá\", \"Colombia\" ], \"conflictingSources\": [], \"requiresReview\": false }, \"relatedParties\": [ { \"firstName\": \"GERMAN\", \"lastName\": \"SALGADO VERGARA\", \"identificationType\": \"C.C.\", \"identificationNumber\": \"19306991\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"49.50%\", \"timeFound\": 1, \"job\": \"Representante Legal\" }, { \"companyName\": \"GLOBAL AVIATION SUPPORT CORP\", \"identificationType\": \"NIT\", \"identificationNumber\": \"1045179-1-546162\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"49.00%\", \"timeFound\": 1, \"job\": \"\" }, { \"firstName\": \"ADRIANA\", \"lastName\": \"ARANGO JARAMILLO\", \"identificationType\": \"C.C.\", \"identificationNumber\": \"35469632\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"1.00%\", \"timeFound\": 1, \"job\": \"\" }, { \"firstName\": \"NICOLAS\", \"lastName\": \"SALGADO ARANGO\", \"identificationType\": \"C.C.\", \"identificationNumber\": \"1020763136\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"0.50%\", \"timeFound\": 1, \"job\": \"\" } ] }, \"document_type\": \"company\", \"document_number\": \"800216686\", \"category\": \"ACC\", \"confidenceScores\": { \"companyName\": 95, \"taxId\": 95, \"country\": 98, \"relatedParties\": 90 } } ```"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "inputTokens": 8569,
+      "outputTokens": 573,
+      "totalTokens": 9142
+    },
+    "metrics": {
+      "latencyMs": 9486
+    },
+    "model_id": "us.amazon.nova-pro-v1:0",
+    "api_used": "converse",
+    "model_params": {
+      "maxTokens": 8200,
+      "topP": 1,
+      "temperature": 0.1
+    }
+  },
+  "model_used": "us.amazon.nova-pro-v1:0",
+  "api_used": "converse"
+}

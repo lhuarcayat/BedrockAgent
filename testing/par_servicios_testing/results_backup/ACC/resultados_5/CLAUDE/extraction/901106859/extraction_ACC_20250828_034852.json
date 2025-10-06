@@ -1,0 +1,121 @@
+{
+  "extraction_data": {
+    "path": "ACC/901106859/131_CA_2020-02-29.pdf",
+    "result": {
+      "companyName": "CONSTRUCTORA E INMOBILIARIA RIVERA INCORA SAS",
+      "documentCategory": "Equity Composition",
+      "taxId": "901.106.859-4",
+      "country": "Colombia",
+      "identificationDetails": {
+        "source": "text_reference",
+        "indicators": [
+          "Bogotá",
+          "Colombia",
+          "NIT format"
+        ],
+        "conflictingSources": [],
+        "requiresReview": "false"
+      },
+      "relatedParties": [
+        {
+          "type": "person",
+          "firstName": "Leowilston",
+          "lastName": "Rivera Mendez",
+          "identificationType": "C.C.",
+          "identificationNumber": "80.057.686",
+          "relationshipType": "Shareholder",
+          "participationPercentage": "49",
+          "timeFound": "1",
+          "job": ""
+        },
+        {
+          "type": "person",
+          "firstName": "Marcos Jair",
+          "lastName": "Cuervo Mendez",
+          "identificationType": "C.C.",
+          "identificationNumber": "1.022.372.943",
+          "relationshipType": "Shareholder",
+          "participationPercentage": "51",
+          "timeFound": "1",
+          "job": ""
+        }
+      ]
+    },
+    "documentType": "company",
+    "documentNumber": "901106859",
+    "category": "ACC"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "```json { \"result\": { \"companyName\": \"CONSTRUCTORA E INMOBILIARIA RIVERA INCORA SAS\", \"documentCategory\": \"Equity Composition\", \"taxId\": \"901.106.859-4\", \"country\": \"Colombia\", \"identificationDetails\": { \"source\": \"text_reference\", \"indicators\": [ \"Bogotá\", \"Colombia\", \"NIT format\" ], \"conflictingSources\": [], \"requiresReview\": \"false\" }, \"relatedParties\": [ { \"type\": \"person\", \"firstName\": \"Leowilston\", \"lastName\": \"Rivera Mendez\", \"identificationType\": \"C.C.\", \"identificationNumber\": \"80.057.686\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"49\", \"timeFound\": \"1\", \"job\": \"\" }, { \"type\": \"person\", \"firstName\": \"Marcos Jair\", \"lastName\": \"Cuervo Mendez\", \"identificationType\": \"C.C.\", \"identificationNumber\": \"1.022.372.943\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"51\", \"timeFound\": \"1\", \"job\": \"\" } ] }, \"documentType\": \"company\", \"category\": \"ACC\" } ```"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 425,
+      "cache_creation_input_tokens": 6074,
+      "cache_read_input_tokens": 0,
+      "output_tokens": 1178
+    },
+    "ResponseMetadata": {
+      "RequestId": "5148d23c-74a4-4cf9-aba0-603abd2c9fb4",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Thu, 28 Aug 2025 08:48:51 GMT",
+        "content-type": "application/json",
+        "content-length": "4732",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "5148d23c-74a4-4cf9-aba0-603abd2c9fb4",
+        "x-amzn-bedrock-invocation-latency": "23569",
+        "x-amzn-bedrock-cache-write-input-token-count": "6074",
+        "x-amzn-bedrock-cache-read-input-token-count": "0",
+        "x-amzn-bedrock-output-token-count": "1178",
+        "x-amzn-bedrock-input-token-count": "425"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_01BJB11dJtHR3eQiEWV1Dkqx",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-3-7-sonnet-20250219",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Let me analyze this document step by step following the extraction rules and workflow. ## Step 1: Document Analysis This appears to be an Equity Composition document (\"COMPOSICION ACCIONARIA\") in Spanish. It was issued by a public accountant named ASTRID ROCIO LOZANO for a Colombian company. The document shows: - The main reporting company is \"CONSTRUCTORA E INMOBILIARIA RIVERA INCORA SAS\" - The document is explicitly issued in Bogotá, Colombia (indicating country = \"Colombia\") - The document lists two shareholders with their participation percentages - The capital is 200,000,000 Colombian pesos - The document was issued on March 16, 2021 ## Step 2: Root Level Extraction - **companyName**: \"CONSTRUCTORA E INMOBILIARIA RIVERA INCORA SAS\" (from the header where it mentions \"EL SUSCRITO CONTADOR PÚBLICO DE LA SOCIEDAD CONSTRUCTORA E INMOBILIARIA RIVERA INCORA SAS.\") - **taxId**: \"901.106.859-4\" (preserving the format with dots and dash, appears after \"NIT\") - **country**: \"Colombia\" (explicit mention of \"Bogotá\" and the tax ID format \"NIT\" confirms Colombia) - For identificationDetails: - **source**: \"text_reference\" (because we have an explicit reference to \"Bogotá\") - **indicators**: [\"Bogotá\", \"NIT format\"] - **conflictingSources**: [] (no conflicts observed) - **requiresReview**: \"false\" (no apparent issues requiring review) ## Step 3: Related Parties Processing The document lists two shareholders: 1. LEOWILSTON RIVERA MENDEZ - **type**: \"person\" (this is a personal name) - **firstName**: \"Leowilston\" - **lastName**: \"Rivera Mendez\" - **identificationType**: \"C.C.\" (this is a Colombian personal document type - Cédula de Ciudadanía) - **identificationNumber**: \"80.057.686\" - **relationshipType**: \"Shareholder\" - **participationPercentage**: \"49\" - **timeFound**: \"1\" - **job**: \"\" (no job title mentioned) 2. MARCOS JAIR CUERVO MENDEZ - **type**: \"person\" (this is a personal name) - **firstName**: \"Marcos Jair\" - **lastName**: \"Cuervo Mendez\" - **identificationType**: \"C.C.\" (this is a Colombian personal document type - Cédula de Ciudadanía) - **identificationNumber**: \"1.022.372.943\" - **relationshipType**: \"Shareholder\" - **participationPercentage**: \"51\" - **timeFound**: \"1\" - **job**: \"\" (no job title mentioned) ## Step 4: Validation & Cross-checking - The taxId format \"NIT\" aligns with Colombia - The identification types \"C.C.\" are appropriate for Colombia for persons - The participation percentages sum to 100%, which is correct - All required fields are present - No conflicts observed Now I'll construct the final JSON output:",
+          "signature": "ErcBCkgIBxABGAIiQKxnJnuBY1x5by0mFmmG6BRsNAAPkG05QiDIAt8G1j30Do5Iv4f5H9f7Ags69vclnY/X7AGDSsh73cfojsAbrRsSDNkrIFGBPXJX34niRRoM6RWixjnAPNo09ZoRIjAA2dPMOyek44Z93b2bwCWuQ9cl8PXmWPTV1gY2h3OGu2QRQIl8WbTRY2CcOkaCewoqHZGv97ao84bpuIGjGnAgojJKJNnocX32lrhY4lhQGAI="
+        },
+        {
+          "type": "text",
+          "text": "```json { \"result\": { \"companyName\": \"CONSTRUCTORA E INMOBILIARIA RIVERA INCORA SAS\", \"documentCategory\": \"Equity Composition\", \"taxId\": \"901.106.859-4\", \"country\": \"Colombia\", \"identificationDetails\": { \"source\": \"text_reference\", \"indicators\": [ \"Bogotá\", \"Colombia\", \"NIT format\" ], \"conflictingSources\": [], \"requiresReview\": \"false\" }, \"relatedParties\": [ { \"type\": \"person\", \"firstName\": \"Leowilston\", \"lastName\": \"Rivera Mendez\", \"identificationType\": \"C.C.\", \"identificationNumber\": \"80.057.686\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"49\", \"timeFound\": \"1\", \"job\": \"\" }, { \"type\": \"person\", \"firstName\": \"Marcos Jair\", \"lastName\": \"Cuervo Mendez\", \"identificationType\": \"C.C.\", \"identificationNumber\": \"1.022.372.943\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"51\", \"timeFound\": \"1\", \"job\": \"\" } ] }, \"documentType\": \"company\", \"category\": \"ACC\" } ```"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 425,
+        "cache_creation_input_tokens": 6074,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 1178
+      }
+    },
+    "model_id": "us.anthropic.claude-3-7-sonnet-20250219-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 8000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "model_used": "us.anthropic.claude-3-7-sonnet-20250219-v1:0",
+  "api_used": "invoke_model"
+}

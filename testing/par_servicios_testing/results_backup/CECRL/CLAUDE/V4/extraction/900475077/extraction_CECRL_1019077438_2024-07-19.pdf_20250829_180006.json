@@ -1,0 +1,88 @@
+{
+  "extraction_data": {
+    "result": {
+      "firstName": "LAURA XIMENA",
+      "lastName": "GALEANO NIÑO",
+      "country_issuer": "Colombia",
+      "nationality": "Colombia",
+      "identificationType": "Cédula de Ciudadanía",
+      "identificationNumber": "1.019.077.438",
+      "message": ""
+    },
+    "document_type": "person",
+    "category": "CECRL"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "```json { \"result\": { \"firstName\": \"LAURA XIMENA\", \"lastName\": \"GALEANO NIÑO\", \"country_issuer\": \"Colombia\", \"nationality\": \"Colombia\", \"identificationType\": \"Cédula de Ciudadanía\", \"identificationNumber\": \"1.019.077.438\", \"message\": \"\" }, \"document_type\": \"person\", \"category\": \"CECRL\" } ```"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 10,
+      "cache_creation_input_tokens": 6440,
+      "cache_read_input_tokens": 0,
+      "output_tokens": 592
+    },
+    "ResponseMetadata": {
+      "RequestId": "db71612d-3ab6-48e5-8d3e-4dbf0870655e",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Fri, 29 Aug 2025 23:00:06 GMT",
+        "content-type": "application/json",
+        "content-length": "4779",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "db71612d-3ab6-48e5-8d3e-4dbf0870655e",
+        "x-amzn-bedrock-invocation-latency": "12171",
+        "x-amzn-bedrock-cache-write-input-token-count": "6440",
+        "x-amzn-bedrock-cache-read-input-token-count": "0",
+        "x-amzn-bedrock-output-token-count": "592",
+        "x-amzn-bedrock-input-token-count": "10"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_01ExQWxgA86NbzZaKD9p8HYV",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-sonnet-4-20250514",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "I need to analyze the Colombian ID document provided to extract all the required information. Let me examine it carefully. Looking at the document, I can see: 1. This is a Colombian ID document (Cédula de Ciudadanía) - I can see \"REPUBLICA DE COLOMBIA\" and \"IDENTIFICACION PERSONAL\" and \"CEDULA DE CIUDADANIA\" in the header 2. I can see the following information: - Number: 1.019.077.438 - There's text that appears to say \"GALEANO NIÑO\" - There's text that appears to say \"LAURA XIMENA\" - There's a photo of a woman - On the back I can see birth information: \"FECHA DE NACIMIENTO: 07-DIC-1992\" - Place appears to be \"BOGOTA D.C (CUNDINAMARCA)\" - Gender appears to be \"F\" (female) - Height \"1.65\" Now I need to determine what are the names. Looking at the structure: - \"GALEANO NIÑO\" appears to be positioned where surnames typically go - \"LAURA XIMENA\" appears to be positioned where given names typically go Based on the document structure and Colombian naming conventions: - firstName: \"LAURA XIMENA\" (given names) - lastName: \"GALEANO NIÑO\" (surnames) - country_issuer: \"Colombia\" (clearly a Colombian document) - nationality: \"Colombia\" (born in Bogotá, Colombia, so Colombian nationality) - identificationType: \"Cédula de Ciudadanía\" (this is clearly stated on the document) - identificationNumber: \"1.019.077.438\" (the number shown) - message: \"\" (document appears to be a valid official Colombian ID) Let me double-check this analysis - yes, this follows the typical Colombian cédula format with surnames appearing prominently and given names below them.",
+          "signature": "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"
+        },
+        {
+          "type": "text",
+          "text": "```json { \"result\": { \"firstName\": \"LAURA XIMENA\", \"lastName\": \"GALEANO NIÑO\", \"country_issuer\": \"Colombia\", \"nationality\": \"Colombia\", \"identificationType\": \"Cédula de Ciudadanía\", \"identificationNumber\": \"1.019.077.438\", \"message\": \"\" }, \"document_type\": \"person\", \"category\": \"CECRL\" } ```"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 10,
+        "cache_creation_input_tokens": 6440,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 592
+      }
+    },
+    "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 8000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+  "api_used": "invoke_model"
+}

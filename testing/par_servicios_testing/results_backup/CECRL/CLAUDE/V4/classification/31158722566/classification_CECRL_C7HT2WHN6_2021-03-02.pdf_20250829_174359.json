@@ -1,0 +1,87 @@
+{
+  "classification_data": {
+    "category": "CECRL",
+    "text": "REISEPASS BUNDESREPUBLIK DEUTSCHLAND Pass-Nr./Passport No. C7HT2WHN6 Typ/Type/Type P Kode/Code/Code D 1. Name/Surname/Nom DREWES 2. Vorname(n)/Given names/Prénoms EIKE HERMANN RICHARD 3. Staatsangehörigkeit/Nationality/Nationalité DEUTSCH 4. Geburtsdatum/Date of birth/Date de naissance 28.05.1974 5. Geschlecht/Sex/Sexe M 6. Geburtsort/Place of birth/Lieu de naissance OLDENBURG (OLDB) 7. Ausstellungsdatum/Date of issue/Date de délivrance 04.04.2016 8. Gültig bis/Date of expiry/Date d'expiration 03.04.2026 9. Ausstellende Behörde/Authority/Autorité STADT RHEINE P<<D<DREWES<<EIKE<HERMANN<RICHARD<<<<<<<<<<<<<< C7HT2WHN67D<<7405280M2604033<<<<<<<<<<<<<<<<4",
+    "document_number": "UNKNOWN",
+    "path": "CECRL/31158722566_C7HT2WHN6_2021-03-02/C7HT2WHN6_2021-03-02.pdf"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "```json { \"category\": \"CECRL\", \"text\": \"REISEPASS BUNDESREPUBLIK DEUTSCHLAND Pass-Nr./Passport No. C7HT2WHN6 Typ/Type/Type P Kode/Code/Code D 1. Name/Surname/Nom DREWES 2. Vorname(n)/Given names/Prénoms EIKE HERMANN RICHARD 3. Staatsangehörigkeit/Nationality/Nationalité DEUTSCH 4. Geburtsdatum/Date of birth/Date de naissance 28.05.1974 5. Geschlecht/Sex/Sexe M 6. Geburtsort/Place of birth/Lieu de naissance OLDENBURG (OLDB) 7. Ausstellungsdatum/Date of issue/Date de délivrance 04.04.2016 8. Gültig bis/Date of expiry/Date d'expiration 03.04.2026 9. Ausstellende Behörde/Authority/Autorité STADT RHEINE P<<D<DREWES<<EIKE<HERMANN<RICHARD<<<<<<<<<<<<<< C7HT2WHN67D<<7405280M2604033<<<<<<<<<<<<<<<<4\" } ```"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 9,
+      "cache_creation_input_tokens": 4774,
+      "cache_read_input_tokens": 0,
+      "output_tokens": 769
+    },
+    "ResponseMetadata": {
+      "RequestId": "8a825cb0-7569-4e8b-bfa8-060fad943e7e",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Fri, 29 Aug 2025 22:43:49 GMT",
+        "content-type": "application/json",
+        "content-length": "5531",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "8a825cb0-7569-4e8b-bfa8-060fad943e7e",
+        "x-amzn-bedrock-invocation-latency": "12846",
+        "x-amzn-bedrock-cache-write-input-token-count": "4774",
+        "x-amzn-bedrock-cache-read-input-token-count": "0",
+        "x-amzn-bedrock-output-token-count": "769",
+        "x-amzn-bedrock-input-token-count": "9"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_01C9okPpy33K3y1t9whwyE34",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-sonnet-4-20250514",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Let me analyze this document step by step according to the classification workflow: 1. **TEXT EXTRACTION** Looking at the document, I can see this is a German passport. I can extract the following text: - \"REISEPASS\" (German for passport) - \"BUNDESREPUBLIK DEUTSCHLAND\" (Federal Republic of Germany) - Personal information section showing: - Name: \"DREWES\" and \"EIKE HERMANN RICHARD\" - Date of birth: \"28.05.1974\" - Place of birth: \"OLDENBURG (OLDB)\" - Date of issue: \"04.04.2016\" - Date of expiry: \"03.04.2026\" - Issuing authority: \"STADT RHEINE\" - Passport number: \"C7HT2WHN6\" - There are machine-readable zones at the bottom with encoded information 2. **PRIORITY CHECKS** - NOT BLANK: There is substantial meaningful content - NOT LINK_ONLY: No hyperlinks or URLs present 3. **DOCUMENT FUNCTION ANALYSIS** This is clearly a personal identification document (German passport). The primary purpose is to identify an individual person for travel and identification purposes. It contains: - Personal biographical data (birth date, birth place) - Individual photo - Official government issuance - Security elements - Personal identification number 4. **ISSUER IDENTIFICATION** This is issued by German government authorities (specifically \"STADT RHEINE\"), not DIAN or Chamber of Commerce. 5. **CATEGORY CLASSIFICATION** This clearly fits CECRL category: - It's an official personal identification document (passport) - Contains individual identification information - Has personal biographical data (birth date/place) - Has individual photo and signature - Government-issued personal ID - Contains security elements - Focus on ONE individual person The text I can extract includes the German passport information, personal details, and machine-readable zones.",
+          "signature": "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"
+        },
+        {
+          "type": "text",
+          "text": "```json { \"category\": \"CECRL\", \"text\": \"REISEPASS BUNDESREPUBLIK DEUTSCHLAND Pass-Nr./Passport No. C7HT2WHN6 Typ/Type/Type P Kode/Code/Code D 1. Name/Surname/Nom DREWES 2. Vorname(n)/Given names/Prénoms EIKE HERMANN RICHARD 3. Staatsangehörigkeit/Nationality/Nationalité DEUTSCH 4. Geburtsdatum/Date of birth/Date de naissance 28.05.1974 5. Geschlecht/Sex/Sexe M 6. Geburtsort/Place of birth/Lieu de naissance OLDENBURG (OLDB) 7. Ausstellungsdatum/Date of issue/Date de délivrance 04.04.2016 8. Gültig bis/Date of expiry/Date d'expiration 03.04.2026 9. Ausstellende Behörde/Authority/Autorité STADT RHEINE P<<D<DREWES<<EIKE<HERMANN<RICHARD<<<<<<<<<<<<<< C7HT2WHN67D<<7405280M2604033<<<<<<<<<<<<<<<<4\" } ```"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 9,
+        "cache_creation_input_tokens": 4774,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 769
+      }
+    },
+    "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 8000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "expected_category": "CECRL",
+  "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+  "api_used": "invoke_model",
+  "pdf_info": {
+    "original_size": 732916,
+    "first_page_size": 729064,
+    "is_scanned": true
+  }
+}

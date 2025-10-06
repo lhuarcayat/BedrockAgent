@@ -1,0 +1,116 @@
+{
+  "extraction_data": {
+    "path": "ACC/860031028/Compisicion_accionaria_S_A__Mayo_2023.pdf",
+    "result": {
+      "companyName": "Siemens S.A.S.",
+      "documentType": "Equity Composition",
+      "taxId": "860.031.028-9",
+      "country": "Colombia",
+      "identificationDetails": {
+        "source": "text_reference",
+        "indicators": [
+          "Bogotá D.C.",
+          "pesos colombianos",
+          "Medellín – Antioquia",
+          "Cali – Valle del Cauca",
+          "Barranquilla - Atlántico"
+        ],
+        "conflictingSources": [],
+        "requiresReview": false
+      },
+      "relatedParties": [
+        {
+          "companyName": "Siemens International Holding B.V.",
+          "identificationType": "NIT",
+          "identificationNumber": "NL001781029B01",
+          "relationshipType": "Shareholder",
+          "participationPercentage": "100%",
+          "timeFound": 1,
+          "job": ""
+        }
+      ]
+    },
+    "document_type": "company",
+    "document_number": "860031028",
+    "category": "ACC",
+    "confidenceScores": {
+      "companyName": 95,
+      "taxId": 95,
+      "country": 98,
+      "relatedParties": 90
+    }
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "```json { \"path\": \"ACC/860031028/Compisicion_accionaria_S_A__Mayo_2023.pdf\", \"result\": { \"companyName\": \"Siemens S.A.S.\", \"documentType\": \"Equity Composition\", \"taxId\": \"860.031.028-9\", \"country\": \"Colombia\", \"identificationDetails\": { \"source\": \"text_reference\", \"indicators\": [ \"Bogotá D.C.\", \"pesos colombianos\", \"Medellín – Antioquia\", \"Cali – Valle del Cauca\", \"Barranquilla - Atlántico\" ], \"conflictingSources\": [], \"requiresReview\": false }, \"relatedParties\": [ { \"companyName\": \"Siemens International Holding B.V.\", \"identificationType\": \"NIT\", \"identificationNumber\": \"NL001781029B01\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"100%\", \"timeFound\": 1, \"job\": \"\" } ] }, \"document_type\": \"company\", \"document_number\": \"860031028\", \"category\": \"ACC\", \"confidenceScores\": { \"companyName\": 95, \"taxId\": 95, \"country\": 98, \"relatedParties\": 90 } } ```"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 503,
+      "cache_creation_input_tokens": 10501,
+      "cache_read_input_tokens": 0,
+      "output_tokens": 1085
+    },
+    "ResponseMetadata": {
+      "RequestId": "2fdb53fc-0b45-46b5-ae6c-c35f6ba1f508",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Mon, 25 Aug 2025 20:35:44 GMT",
+        "content-type": "application/json",
+        "content-length": "6399",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "2fdb53fc-0b45-46b5-ae6c-c35f6ba1f508",
+        "x-amzn-bedrock-invocation-latency": "17500",
+        "x-amzn-bedrock-cache-write-input-token-count": "10501",
+        "x-amzn-bedrock-cache-read-input-token-count": "0",
+        "x-amzn-bedrock-output-token-count": "1085",
+        "x-amzn-bedrock-input-token-count": "503"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_01StyrjJsLNM9HM4eQqrrJBr",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-sonnet-4-20250514",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Let me analyze this PDF document step by step to extract the company equity composition data. 1) Country Identification (Multi-Layer Approach): - Explicit References: The document mentions \"Bogotá D.C.\" multiple times (spans 1-9, 1-18), and references to Colombian cities like \"Medellín – Antioquia\", \"Cali – Valle del Cauca\", \"Barranquilla - Atlántico\" (span 1-5) - There are references to \"pesos colombianos\" (span 1-13) - The tax ID format \"NIT. 860.031.028-9\" matches Colombian format - Source: text_reference with indicators [\"Bogotá D.C.\", \"pesos colombianos\"] 2) Root-Level main Company fields: - CompanyName: From span 1-8 \"Siemens Sociedad por Acciones Simplificada\" and span 1-10 \"Siemens S.A.S.\" - The document is addressed to \"Señores Siemens Sociedad por Acciones Simplificada\" but the audit is for \"Siemens S.A.S.\" - Looking at span 1-10: \"Siemens S.A.S., identificada con NIT. 860.031.028-9\" - CompanyName: \"Siemens S.A.S.\" - TaxId: \"860.031.028-9\" 3) Related Parties Extraction: From span 1-13, there's a table showing: NIT: NL001781029B01 Accionistas: Siemens International Holding B.V. N° Acciones: 5,468,220 Valor: $95,693,850,000 Participación: 100% This is clearly a company (has \"B.V.\" suffix indicating Dutch company), so it's a CompanyRelatedParty I've identified a key shareholder with precise details: - A Dutch company (Siemens International Holding B.V.) owns 100% of the shares - Holding 5,468,220 shares valued at $95,693,850,000 - Registered with an unusual NIT identification for a foreign entity 4) Confidence Scoring: - CompanyName: 95 (clear identification) - TaxId: 95 (clear format matching Colombian NIT) - Country: 98 (multiple explicit references) - RelatedParties: High confidence in shareholder details 5) Validation confirms complete data integrity with no review required.",
+          "signature": "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"
+        },
+        {
+          "type": "text",
+          "text": "```json { \"path\": \"ACC/860031028/Compisicion_accionaria_S_A__Mayo_2023.pdf\", \"result\": { \"companyName\": \"Siemens S.A.S.\", \"documentType\": \"Equity Composition\", \"taxId\": \"860.031.028-9\", \"country\": \"Colombia\", \"identificationDetails\": { \"source\": \"text_reference\", \"indicators\": [ \"Bogotá D.C.\", \"pesos colombianos\", \"Medellín – Antioquia\", \"Cali – Valle del Cauca\", \"Barranquilla - Atlántico\" ], \"conflictingSources\": [], \"requiresReview\": false }, \"relatedParties\": [ { \"companyName\": \"Siemens International Holding B.V.\", \"identificationType\": \"NIT\", \"identificationNumber\": \"NL001781029B01\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"100%\", \"timeFound\": 1, \"job\": \"\" } ] }, \"document_type\": \"company\", \"document_number\": \"860031028\", \"category\": \"ACC\", \"confidenceScores\": { \"companyName\": 95, \"taxId\": 95, \"country\": 98, \"relatedParties\": 90 } } ```"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 503,
+        "cache_creation_input_tokens": 10501,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 1085
+      }
+    },
+    "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 8000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+  "api_used": "invoke_model"
+}

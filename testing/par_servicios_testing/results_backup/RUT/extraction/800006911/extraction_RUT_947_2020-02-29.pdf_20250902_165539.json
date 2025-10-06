@@ -1,0 +1,128 @@
+{
+  "extraction_data": {
+    "result": {
+      "CompanyName": "WALTER BRIDGE Y CIA S.A.",
+      "Country": "COLOMBIA",
+      "TaxId": "800006911-4",
+      "VerificationDigit": "4",
+      "IdentificationType": "NIT",
+      "PersonType": "Persona jurídica",
+      "ConflictingSources": [],
+      "RequiresReview": "false",
+      "RelatedParties": [
+        {
+          "FirstName": "FEDERIK GEORGE",
+          "LastName": "BRIDGE GUTIERREZ",
+          "IdType": "Cédula de Ciudadanía",
+          "IdNumber": "70074136",
+          "RelationshipType": "socio"
+        },
+        {
+          "FirstName": "JORGE ALONSO",
+          "LastName": "ECHAVARRIA GREIFFENSTEIN",
+          "IdType": "Cédula de Ciudadanía",
+          "IdNumber": "70086960",
+          "RelationshipType": "socio"
+        },
+        {
+          "FirstName": "JORGE ENRIQUE",
+          "LastName": "ARBELAEZ SIERRA",
+          "IdType": "Cédula de Ciudadanía",
+          "IdNumber": "82605579",
+          "RelationshipType": "socio"
+        },
+        {
+          "FirstName": "MARCELA",
+          "LastName": "ORTIZ RODRIGUEZ",
+          "IdType": "Cédula de Ciudadanía",
+          "IdNumber": "1053769994",
+          "RelationshipType": "Revisor fiscal principal"
+        },
+        {
+          "FirstName": "MARIA ISABEL",
+          "LastName": "RUIZ ARTEAGA",
+          "IdType": "Cédula de Ciudadanía",
+          "IdNumber": "43589780",
+          "RelationshipType": "Revisor fiscal suplente"
+        }
+      ],
+      "Address": "CR 43 A 25 A 25 BRR COLOMBIA, Medellín, Antioquia",
+      "DocumentGenerationDate": "13-05-2022 11:16:24AM",
+      "DocumentType": "company",
+      "Category": "RUT"
+    }
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "{ \"result\": { \"CompanyName\": \"WALTER BRIDGE Y CIA S.A.\", \"Country\": \"COLOMBIA\", \"TaxId\": \"800006911-4\", \"VerificationDigit\": \"4\", \"IdentificationType\": \"NIT\", \"PersonType\": \"Persona jurídica\", \"ConflictingSources\": [], \"RequiresReview\": \"false\", \"RelatedParties\": [ { \"FirstName\": \"FEDERIK GEORGE\", \"LastName\": \"BRIDGE GUTIERREZ\", \"IdType\": \"Cédula de Ciudadanía\", \"IdNumber\": \"70074136\", \"RelationshipType\": \"socio\" }, { \"FirstName\": \"JORGE ALONSO\", \"LastName\": \"ECHAVARRIA GREIFFENSTEIN\", \"IdType\": \"Cédula de Ciudadanía\", \"IdNumber\": \"70086960\", \"RelationshipType\": \"socio\" }, { \"FirstName\": \"JORGE ENRIQUE\", \"LastName\": \"ARBELAEZ SIERRA\", \"IdType\": \"Cédula de Ciudadanía\", \"IdNumber\": \"82605579\", \"RelationshipType\": \"socio\" }, { \"FirstName\": \"MARCELA\", \"LastName\": \"ORTIZ RODRIGUEZ\", \"IdType\": \"Cédula de Ciudadanía\", \"IdNumber\": \"1053769994\", \"RelationshipType\": \"Revisor fiscal principal\" }, { \"FirstName\": \"MARIA ISABEL\", \"LastName\": \"RUIZ ARTEAGA\", \"IdType\": \"Cédula de Ciudadanía\", \"IdNumber\": \"43589780\", \"RelationshipType\": \"Revisor fiscal suplente\" } ], \"Address\": \"CR 43 A 25 A 25 BRR COLOMBIA, Medellín, Antioquia\", \"DocumentGenerationDate\": \"13-05-2022 11:16:24AM\", \"DocumentType\": \"company\", \"Category\": \"RUT\" } }"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 14175,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 2990,
+      "output_tokens": 1213
+    },
+    "ResponseMetadata": {
+      "RequestId": "060e2007-93e4-43c5-b01a-73f0198d952b",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Tue, 02 Sep 2025 21:55:39 GMT",
+        "content-type": "application/json",
+        "content-length": "6818",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "060e2007-93e4-43c5-b01a-73f0198d952b",
+        "x-amzn-bedrock-invocation-latency": "19929",
+        "x-amzn-bedrock-cache-write-input-token-count": "0",
+        "x-amzn-bedrock-cache-read-input-token-count": "2990",
+        "x-amzn-bedrock-output-token-count": "1213",
+        "x-amzn-bedrock-input-token-count": "14175"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_017Xeg4jkBjvCQiL7f9y2EHC",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-sonnet-4-20250514",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "I need to extract information from this Colombian RUT (Registro Único Tributario) document issued by DIAN. Let me analyze it systematically according to the rules provided. Looking at the document: 1. CompanyName - From cell \"35. Razón social\": I can see \"WALTER BRIDGE Y CIA S.A.\" 2. Country - From cell \"38. País\": I can see \"COLOMBIA\" with code \"169\" 3. TaxId - From cell \"5. Número de Identificación Tributaria (NIT)\": I can see \"800006911-4\" 4. VerificationDigit - From cell \"6. DV\": I can see \"4\" 5. IdentificationType - For RUT documents this is \"NIT\" 6. PersonType - From cell \"24. Tipo de contribuyente\": I can see \"Persona jurídica 1\" 7. Address - From cells \"41. Dirección principal\", \"40. Ciudad/Municipio\", \"39. Departamento\": - 41: \"CR 43 A 25 A 25 BRR COLOMBIA\" - 40: \"Medellín 001\" - 39: \"Antioquia 05\" 8. DocumentGenerationDate - From the bottom: \"Fecha generación documento PDF: 13-05-2022 11:16:24AM\" 9. RelatedParties - I need to look for information in the \"Socios y/o miembros de Juntas Directivas\" and \"Revisor Fiscal y contador\" sections: From page 4 (Socios section): - I can see three socios with their information in cells 111-123: 1. First socio: BRIDGE GUTIERREZ FEDERIK GEORGE - Cédula de Ciudadanía - 70074136 2. Second socio: ECHAVARRIA GREIFFENSTEIN JORGE ALONSO - Cédula de Ciudadanía - 70086960 3. Third socio: ARBELAEZ SIERRA JORGE ENRIQUE - Cédula de Ciudadanía - 82605579 From page 5 (Revisor Fiscal y Contador section): - Revisor fiscal principal: ORTIZ RODRIGUEZ MARCELA - Cédula de Ciudadanía - 1053769994 - Revisor fiscal suplente: RUIZ ARTEAGA MARIA ISABEL - Cédula de Ciudadanía - 43589780 I notice that the Contador section appears to be empty. I've identified three company shareholders and two fiscal reviewers. The document provides comprehensive details about the company's legal and tax-related information, including personal identifications and roles within the organization.",
+          "signature": "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"
+        },
+        {
+          "type": "text",
+          "text": "{ \"result\": { \"CompanyName\": \"WALTER BRIDGE Y CIA S.A.\", \"Country\": \"COLOMBIA\", \"TaxId\": \"800006911-4\", \"VerificationDigit\": \"4\", \"IdentificationType\": \"NIT\", \"PersonType\": \"Persona jurídica\", \"ConflictingSources\": [], \"RequiresReview\": \"false\", \"RelatedParties\": [ { \"FirstName\": \"FEDERIK GEORGE\", \"LastName\": \"BRIDGE GUTIERREZ\", \"IdType\": \"Cédula de Ciudadanía\", \"IdNumber\": \"70074136\", \"RelationshipType\": \"socio\" }, { \"FirstName\": \"JORGE ALONSO\", \"LastName\": \"ECHAVARRIA GREIFFENSTEIN\", \"IdType\": \"Cédula de Ciudadanía\", \"IdNumber\": \"70086960\", \"RelationshipType\": \"socio\" }, { \"FirstName\": \"JORGE ENRIQUE\", \"LastName\": \"ARBELAEZ SIERRA\", \"IdType\": \"Cédula de Ciudadanía\", \"IdNumber\": \"82605579\", \"RelationshipType\": \"socio\" }, { \"FirstName\": \"MARCELA\", \"LastName\": \"ORTIZ RODRIGUEZ\", \"IdType\": \"Cédula de Ciudadanía\", \"IdNumber\": \"1053769994\", \"RelationshipType\": \"Revisor fiscal principal\" }, { \"FirstName\": \"MARIA ISABEL\", \"LastName\": \"RUIZ ARTEAGA\", \"IdType\": \"Cédula de Ciudadanía\", \"IdNumber\": \"43589780\", \"RelationshipType\": \"Revisor fiscal suplente\" } ], \"Address\": \"CR 43 A 25 A 25 BRR COLOMBIA, Medellín, Antioquia\", \"DocumentGenerationDate\": \"13-05-2022 11:16:24AM\", \"DocumentType\": \"company\", \"Category\": \"RUT\" } }"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 14175,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 2990,
+        "output_tokens": 1213
+      }
+    },
+    "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 9000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+  "api_used": "invoke_model"
+}

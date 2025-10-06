@@ -1,0 +1,107 @@
+{
+  "extraction_data": {
+    "result": {
+      "companyName": "Siemens Sociedad por Acciones Simplificada",
+      "documentCategory": "Equity Composition",
+      "taxId": "860.031.028-9",
+      "country": "Colombia",
+      "identificationDetails": {
+        "source": "text_reference",
+        "indicators": [
+          "Bogotá D.C.",
+          "Colombia",
+          "NIT format 860.031.028-9"
+        ],
+        "conflictingSources": [],
+        "requiresReview": "false"
+      },
+      "relatedParties": [
+        {
+          "type": "company",
+          "companyName": "Siemens International Holding B.V.",
+          "identificationType": "POR REVISAR",
+          "identificationNumber": "NL001781029B01",
+          "relationshipType": "Shareholder",
+          "participationPercentage": "100%",
+          "timeFound": "1",
+          "job": ""
+        }
+      ]
+    },
+    "documentType": "company",
+    "category": "ACC"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "{ \"result\": { \"companyName\": \"Siemens Sociedad por Acciones Simplificada\", \"documentCategory\": \"Equity Composition\", \"taxId\": \"860.031.028-9\", \"country\": \"Colombia\", \"identificationDetails\": { \"source\": \"text_reference\", \"indicators\": [ \"Bogotá D.C.\", \"Colombia\", \"NIT format 860.031.028-9\" ], \"conflictingSources\": [], \"requiresReview\": \"false\" }, \"relatedParties\": [ { \"type\": \"company\", \"companyName\": \"Siemens International Holding B.V.\", \"identificationType\": \"POR REVISAR\", \"identificationNumber\": \"NL001781029B01\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"100%\", \"timeFound\": \"1\", \"job\": \"\" } ] }, \"documentType\": \"company\", \"category\": \"ACC\" }"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 9,
+      "cache_creation_input_tokens": 7122,
+      "cache_read_input_tokens": 0,
+      "output_tokens": 819
+    },
+    "ResponseMetadata": {
+      "RequestId": "763ddd68-16e2-4f9e-a408-76e63e0930fd",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Fri, 29 Aug 2025 19:47:25 GMT",
+        "content-type": "application/json",
+        "content-length": "5897",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "763ddd68-16e2-4f9e-a408-76e63e0930fd",
+        "x-amzn-bedrock-invocation-latency": "13752",
+        "x-amzn-bedrock-cache-write-input-token-count": "7122",
+        "x-amzn-bedrock-cache-read-input-token-count": "0",
+        "x-amzn-bedrock-output-token-count": "819",
+        "x-amzn-bedrock-input-token-count": "9"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_016CPdbC6mArue3ZDTH7qGqk",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-sonnet-4-20250514",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Let me analyze this document step by step. Step 1: Document Analysis This is a certification document from Ernst & Young Audit S.A.S. issued to Siemens Sociedad por Acciones Simplificada (Siemens S.A.S.). It appears to be an equity composition certificate showing the shareholding structure of the company. The document is clearly from Colombia based on: - The addresses mentioned (Bogotá D.C., Medellín, Cali, Barranquilla) - The NIT format (860.031.028-9) - The language and legal structure Step 2: Root Level Extraction - companyName: \"Siemens Sociedad por Acciones Simplificada\" (this is mentioned in the letter header and throughout) - Actually, let me be more careful. Looking at the text, I see \"Siemens S.A.S.\" is mentioned as being identified with NIT 860.031.028-9. The full name appears to be \"Siemens Sociedad por Acciones Simplificada\" - taxId: \"860.031.028-9\" (clearly stated) - country: \"Colombia\" (multiple indicators) Step 3: Related Parties Processing Looking at the shareholder information: - There is one shareholder: \"Siemens International Holding B.V.\" - NIT: NL001781029B01 - Number of shares: 5,468,220 - Value: $95,693,850,000 - Participation: 100% This is clearly a company (has \"B.V.\" suffix which is a Dutch legal entity form). The identificationType for this entity is tricky. The NIT format \"NL001781029B01\" doesn't follow Colombian NIT patterns. The \"NL\" prefix suggests Netherlands. Since this is a foreign company, I should set this to \"POR REVISAR\" as it doesn't match the expected Colombian company ID patterns. I verify the document's key details, confirming the company's complete identification and shareholder structure. The validation process shows no discrepancies, with a single shareholder holding full ownership. The documentation appears consistent and accurately represents Siemens S.A.S.'s current equity composition.",
+          "signature": "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"
+        },
+        {
+          "type": "text",
+          "text": "{ \"result\": { \"companyName\": \"Siemens Sociedad por Acciones Simplificada\", \"documentCategory\": \"Equity Composition\", \"taxId\": \"860.031.028-9\", \"country\": \"Colombia\", \"identificationDetails\": { \"source\": \"text_reference\", \"indicators\": [ \"Bogotá D.C.\", \"Colombia\", \"NIT format 860.031.028-9\" ], \"conflictingSources\": [], \"requiresReview\": \"false\" }, \"relatedParties\": [ { \"type\": \"company\", \"companyName\": \"Siemens International Holding B.V.\", \"identificationType\": \"POR REVISAR\", \"identificationNumber\": \"NL001781029B01\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"100%\", \"timeFound\": \"1\", \"job\": \"\" } ] }, \"documentType\": \"company\", \"category\": \"ACC\" }"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 9,
+        "cache_creation_input_tokens": 7122,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 819
+      }
+    },
+    "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 8000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+  "api_used": "invoke_model"
+}

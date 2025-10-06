@@ -1,0 +1,90 @@
+{
+  "extraction_data": {
+    "path": "CECRL/7690621/7690621_2020-02-29.pdf",
+    "result": {
+      "firstName": "LUIS KENNETH",
+      "lastName": "BERMUDEZ FILBERT",
+      "country_issuer": "Colombia",
+      "nationality": "Colombia",
+      "identificationType": "Cédula de Ciudadanía",
+      "identificationNumber": "7.690.621",
+      "message": ""
+    },
+    "document_type": "person",
+    "documentNumber": "7690621",
+    "category": "CECRL"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "```json { \"result\": { \"firstName\": \"LUIS KENNETH\", \"lastName\": \"BERMUDEZ FILBERT\", \"country_issuer\": \"Colombia\", \"nationality\": \"Colombia\", \"identificationType\": \"Cédula de Ciudadanía\", \"identificationNumber\": \"7.690.621\", \"message\": \"\" }, \"document_type\": \"person\", \"category\": \"CECRL\" } ```"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 10,
+      "cache_creation_input_tokens": 5982,
+      "cache_read_input_tokens": 0,
+      "output_tokens": 534
+    },
+    "ResponseMetadata": {
+      "RequestId": "e8983222-cd97-4790-a513-76bbde34f0f3",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Thu, 28 Aug 2025 15:43:20 GMT",
+        "content-type": "application/json",
+        "content-length": "2458",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "e8983222-cd97-4790-a513-76bbde34f0f3",
+        "x-amzn-bedrock-invocation-latency": "12836",
+        "x-amzn-bedrock-cache-write-input-token-count": "5982",
+        "x-amzn-bedrock-cache-read-input-token-count": "0",
+        "x-amzn-bedrock-output-token-count": "534",
+        "x-amzn-bedrock-input-token-count": "10"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_01Ern1XhvyZuCTPE7PAi8UFC",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-3-7-sonnet-20250219",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "I'll analyze this Colombian identification document (Cédula de Ciudadanía) and extract the required information following the provided methodology. First, let's identify the key elements visible in the image: 1. Document type: \"REPUBLICA DE COLOMBIA - IDENTIFICACION PERSONAL - CEDULA DE CIUDADANIA\" 2. Identification number: \"7.690.621\" 3. Last name: \"BERMUDEZ FILBERT\" 4. First name: \"LUIS KENNETH\" 5. Birth date: \"13-AGO-1972\" 6. Birth place: \"NEIVA (HUILA)\" 7. Height: \"1.82\" 8. Blood type: \"A+\" 9. Sex: \"M\" (Male) 10. Issue date/place: \"13-SEP-1990 NEIVA\" Now I'll map this information to the requested schema: - firstName: \"LUIS KENNETH\" - lastName: \"BERMUDEZ FILBERT\" - country_issuer: \"Colombia\" (Based on \"REPUBLICA DE COLOMBIA\" header) - nationality: \"Colombia\" (Assumed same as the issuing country since there's no explicit nationality field) - identificationType: \"Cédula de Ciudadanía\" (Explicitly stated on the document) - identificationNumber: \"7.690.621\" (Preserving the original formatting with dot) - message: \"\" (No issues with this document, it's clearly an official ID) This appears to be a standard Colombian national ID card (Cédula de Ciudadanía) with all the required information clearly visible. The document is in Spanish and follows the typical format for Colombian identification documents. Let me prepare the final JSON output according to the required schema:",
+          "signature": "ErcBCkgIBxABGAIiQBfUIXGcqX70duWWSvLJWZaW9NaE8dNJdd80p5vphg9cvueldPstXjt4+DaJ+DK5VXOXFbsvyU8Rekc2OQIQ32MSDBeIxbB5Jg1MrDBGPxoMsHKvcdsBLxNmv1tLIjCGwRzdHVLyveUOcYX50/iFtZ6rBgHuFIuUMpfwh9MncUznxEnx/7BEsUgttY+WDPQqHf9fIO3XYMVI6syIr/u767j0+YjTMhslggqDnpd8GAI="
+        },
+        {
+          "type": "text",
+          "text": "```json { \"result\": { \"firstName\": \"LUIS KENNETH\", \"lastName\": \"BERMUDEZ FILBERT\", \"country_issuer\": \"Colombia\", \"nationality\": \"Colombia\", \"identificationType\": \"Cédula de Ciudadanía\", \"identificationNumber\": \"7.690.621\", \"message\": \"\" }, \"document_type\": \"person\", \"category\": \"CECRL\" } ```"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 10,
+        "cache_creation_input_tokens": 5982,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 534
+      }
+    },
+    "model_id": "us.anthropic.claude-3-7-sonnet-20250219-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 8000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "model_used": "us.anthropic.claude-3-7-sonnet-20250219-v1:0",
+  "api_used": "invoke_model"
+}

@@ -1,0 +1,90 @@
+{
+  "extraction_data": {
+    "path": "CECRL/900475077/1019077438_2024-07-19.pdf",
+    "result": {
+      "firstName": "LAURA XIMENA",
+      "lastName": "GALEANO NIÑO",
+      "country_issuer": "Colombia",
+      "nationality": "Colombia",
+      "identificationType": "Cédula de Ciudadanía",
+      "identificationNumber": "1.019.077.438",
+      "message": ""
+    },
+    "document_type": "person",
+    "documentNumber": "900475077",
+    "category": "CECRL"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "```json { \"result\": { \"firstName\": \"LAURA XIMENA\", \"lastName\": \"GALEANO NIÑO\", \"country_issuer\": \"Colombia\", \"nationality\": \"Colombia\", \"identificationType\": \"Cédula de Ciudadanía\", \"identificationNumber\": \"1.019.077.438\", \"message\": \"\" }, \"document_type\": \"person\", \"category\": \"CECRL\" } ```"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 10,
+      "cache_creation_input_tokens": 6003,
+      "cache_read_input_tokens": 0,
+      "output_tokens": 813
+    },
+    "ResponseMetadata": {
+      "RequestId": "07f211f5-9689-4d9d-96f8-c4cb83f04567",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Thu, 28 Aug 2025 15:50:34 GMT",
+        "content-type": "application/json",
+        "content-length": "3568",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "07f211f5-9689-4d9d-96f8-c4cb83f04567",
+        "x-amzn-bedrock-invocation-latency": "19478",
+        "x-amzn-bedrock-cache-write-input-token-count": "6003",
+        "x-amzn-bedrock-cache-read-input-token-count": "0",
+        "x-amzn-bedrock-output-token-count": "813",
+        "x-amzn-bedrock-input-token-count": "10"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_01UaNdFeKvuZSNPRrx1g3WYD",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-3-7-sonnet-20250219",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Let me analyze the document that has been provided and extract the required information following the structured approach outlined in the instructions. ## Step 1: Document Structure Analysis Looking at the image, I can identify this as a Colombian identification document called \"Cédula de Ciudadanía\" which is a national ID card issued by the Republic of Colombia. The document is in Spanish and contains official government headers and formatting consistent with an official ID. The document shows both the front and back sides of the ID card. ## Step 2: Dual-Mode Field Detection Let me scan for field labels and extract information: Front side: - Header: \"REPUBLICA DE COLOMBIA\" - Document type: \"IDENTIFICACION PERSONAL\" / \"CEDULA DE CIUDADANIA\" - \"NUMERO:\" followed by \"1.019.077.438\" - \"APELLIDOS:\" followed by \"GALEANO NIÑO\" - \"NOMBRES:\" followed by \"LAURA XIMENA\" - There's a signature and photo Back side: - \"FECHA DE NACIMIENTO:\" followed by \"07-DIC-1992\" - \"LUGAR DE NACIMIENTO:\" followed by \"BOGOTA D.C.\" and \"(CUNDINAMARCA)\" - Additional information about height, blood type, sex: \"1.65\", \"O+\", \"F\" - \"FECHA Y LUGAR DE EXPEDICION:\" followed by \"22-DIC-2010 BOGOTA D.C.\" ## Step 3: Pattern-Based Text Extraction Now I'll extract the text for each field: - firstName: \"LAURA XIMENA\" (following \"NOMBRES:\") - lastName: \"GALEANO NIÑO\" (following \"APELLIDOS:\") - country_issuer: \"Colombia\" (from the header \"REPUBLICA DE COLOMBIA\") - identificationType: \"Cédula de Ciudadanía\" (from the document header) - identificationNumber: \"1.019.077.438\" (following \"NUMERO:\") - Nationality: Not explicitly stated, but typically matches the country_issuer for a Cédula de Ciudadanía, so \"Colombia\" ## Step 4: Field Mapping and Validation - firstName: \"LAURA XIMENA\" - This is correctly identified from the NOMBRES field - lastName: \"GALEANO NIÑO\" - This is correctly identified from the APELLIDOS field - country_issuer: \"Colombia\" - Clearly identified from the document header - nationality: \"Colombia\" - Using default assumption since no contradictory information is present - identificationType: \"Cédula de Ciudadanía\" - Matches the document type in Spanish - identificationNumber: \"1.019.077.438\" - Extracted exactly as formatted in the document ## Step 5: Quality Control and Output All required fields have been extracted with high confidence. There are no apparent issues with the extraction. Let me prepare the final JSON:",
+          "signature": "ErcBCkgIBxABGAIiQOAEaFAfX7RKLR1IYFcKcRm73gcPKuNwOJbf3BE5xJDDNhgfsq2kOKSZdURFDn1UpIfTn/SWq+NR7KgN8NrpF48SDMuD7RKjzR5/Ym8hghoMrRRT3FiRZhYcLhQVIjAB/Yt7X3owRoGKVbbKNth4tjx4B77khNyX9wFF7PQcIO1+eoOicAYVSZqqEXbTVOoqHZ6CSvWSGQ0rJ398GHMPNJFI2wgVy6MGRan6zCB7GAI="
+        },
+        {
+          "type": "text",
+          "text": "```json { \"result\": { \"firstName\": \"LAURA XIMENA\", \"lastName\": \"GALEANO NIÑO\", \"country_issuer\": \"Colombia\", \"nationality\": \"Colombia\", \"identificationType\": \"Cédula de Ciudadanía\", \"identificationNumber\": \"1.019.077.438\", \"message\": \"\" }, \"document_type\": \"person\", \"category\": \"CECRL\" } ```"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 10,
+        "cache_creation_input_tokens": 6003,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 813
+      }
+    },
+    "model_id": "us.anthropic.claude-3-7-sonnet-20250219-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 8000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "model_used": "us.anthropic.claude-3-7-sonnet-20250219-v1:0",
+  "api_used": "invoke_model"
+}

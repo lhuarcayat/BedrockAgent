@@ -1,0 +1,82 @@
+{
+  "extraction_data": {
+    "path": "ACC/900365151/58_CA_2020-02-29.pdf",
+    "result": {
+      "companyName": "ECOSIMPLE SAS",
+      "documentType": "Equity Composition",
+      "taxId": "900365151-5",
+      "country": "Colombia",
+      "identificationDetails": {
+        "source": "id_analysis",
+        "indicators": [
+          "NIT"
+        ],
+        "conflictingSources": [],
+        "requiresReview": false
+      },
+      "relatedParties": [
+        {
+          "firstName": "HENRY ANTONIO",
+          "lastName": "ALTERIO GONZALEZ",
+          "identificationType": "CC",
+          "identificationNumber": "79694634",
+          "relationshipType": "Shareholder",
+          "participationPercentage": "100%",
+          "timeFound": 1,
+          "job": ""
+        }
+      ]
+    },
+    "document_type": "company",
+    "document_number": "900365151",
+    "category": "ACC",
+    "confidenceScores": {
+      "companyName": 90,
+      "taxId": 95,
+      "country": 95,
+      "relatedParties": 90
+    }
+  },
+  "raw_response": {
+    "ResponseMetadata": {
+      "RequestId": "39412728-f25c-4853-aebc-e5bbaf478fe2",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Mon, 25 Aug 2025 19:43:16 GMT",
+        "content-type": "application/json",
+        "content-length": "1236",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "39412728-f25c-4853-aebc-e5bbaf478fe2"
+      },
+      "RetryAttempts": 0
+    },
+    "output": {
+      "message": {
+        "role": "assistant",
+        "content": [
+          {
+            "text": "```json { \"path\": \"ACC/900365151/58_CA_2020-02-29.pdf\", \"result\": { \"companyName\": \"ECOSIMPLE SAS\", \"documentType\": \"Equity Composition\", \"taxId\": \"900365151-5\", \"country\": \"Colombia\", \"identificationDetails\": { \"source\": \"id_analysis\", \"indicators\": [ \"NIT\" ], \"conflictingSources\": [], \"requiresReview\": false }, \"relatedParties\": [ { \"firstName\": \"HENRY ANTONIO\", \"lastName\": \"ALTERIO GONZALEZ\", \"identificationType\": \"CC\", \"identificationNumber\": \"79694634\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"100%\", \"timeFound\": 1, \"job\": \"\" } ] }, \"document_type\": \"company\", \"document_number\": \"900365151\", \"category\": \"ACC\", \"confidenceScores\": { \"companyName\": 90, \"taxId\": 95, \"country\": 95, \"relatedParties\": 90 } } ```"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "inputTokens": 8568,
+      "outputTokens": 303,
+      "totalTokens": 8871
+    },
+    "metrics": {
+      "latencyMs": 6271
+    },
+    "model_id": "us.amazon.nova-pro-v1:0",
+    "api_used": "converse",
+    "model_params": {
+      "maxTokens": 8000,
+      "topP": 1,
+      "temperature": 0
+    }
+  },
+  "model_used": "us.amazon.nova-pro-v1:0",
+  "api_used": "converse"
+}

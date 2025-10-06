@@ -1,0 +1,183 @@
+{
+  "document_name": "19067068_2021-03-02.pdf",
+  "category": "CECRL",
+  "classification_success": true,
+  "extraction_success": true,
+  "overall_success": true,
+  "timestamp": "2025-08-29T10:35:31.664095",
+  "classification_result": {
+    "classification_data": {
+      "category": "CECRL",
+      "text": "REPÚBLICA DE COLOMBIA IDENTIFICACIÓN PERSONAL CÉDULA DE CIUDADANÍA NÚMERO 19.067.068 VARGAS VELOZA APELLIDOS LUIS ALBERTO NOMBRES FECHA DE NACIMIENTO 22-ABR-1949 UBATE (CUNDINAMARCA) LUGAR DE NACIMIENTO 1.65 A+ M ESTATURA G.S. RH SEXO 26-MAY-1970 BOGOTÁ D.C. FECHA Y LUGAR DE EXPEDICIÓN REGISTRADOR NACIONAL CARLOS ARIEL SÁNCHEZ TORRES ÍNDICE DERECHO A-1500150-0000728I-M-001906706B-20080507 0000246624A 1 1150021138",
+      "document_number": "UNKNOWN",
+      "path": "CECRL/31158722566_19067068_2021-03-02/19067068_2021-03-02.pdf"
+    },
+    "raw_response": {
+      "output": {
+        "message": {
+          "content": [
+            {
+              "text": "```json { \"category\": \"CECRL\", \"text\": \"REPÚBLICA DE COLOMBIA\\nIDENTIFICACIÓN PERSONAL\\nCÉDULA DE CIUDADANÍA\\nNÚMERO 19.067.068\\nVARGAS VELOZA\\nAPELLIDOS\\nLUIS ALBERTO\\nNOMBRES\\nFECHA DE NACIMIENTO 22-ABR-1949\\nUBATE\\n(CUNDINAMARCA)\\nLUGAR DE NACIMIENTO\\n1.65 A+ M\\nESTATURA G.S. RH SEXO\\n26-MAY-1970 BOGOTÁ D.C.\\nFECHA Y LUGAR DE EXPEDICIÓN\\nREGISTRADOR NACIONAL\\nCARLOS ARIEL SÁNCHEZ TORRES\\nÍNDICE DERECHO\\nA-1500150-0000728I-M-001906706B-20080507 0000246624A 1 1150021138\" } ```"
+            }
+          ]
+        }
+      },
+      "stopReason": "end_turn",
+      "usage": {
+        "input_tokens": 9,
+        "cache_creation_input_tokens": 4549,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 1052
+      },
+      "ResponseMetadata": {
+        "RequestId": "e3461e6d-e27a-493a-87ff-94b6bac5761e",
+        "HTTPStatusCode": 200,
+        "HTTPHeaders": {
+          "date": "Fri, 29 Aug 2025 15:36:02 GMT",
+          "content-type": "application/json",
+          "content-length": "6528",
+          "connection": "keep-alive",
+          "x-amzn-requestid": "e3461e6d-e27a-493a-87ff-94b6bac5761e",
+          "x-amzn-bedrock-invocation-latency": "30333",
+          "x-amzn-bedrock-cache-write-input-token-count": "4549",
+          "x-amzn-bedrock-cache-read-input-token-count": "0",
+          "x-amzn-bedrock-output-token-count": "1052",
+          "x-amzn-bedrock-input-token-count": "9"
+        },
+        "RetryAttempts": 0
+      },
+      "raw_anthropic_response": {
+        "id": "msg_bdrk_01Ab8jJWRPkcAromJ5ysyvrX",
+        "type": "message",
+        "role": "assistant",
+        "model": "claude-sonnet-4-20250514",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "Let me analyze the document step by step following the classification workflow: 1. **TEXT EXTRACTION** Let me extract all visible text from this document: From the top part (Colombian ID card): - REPÚBLICA DE COLOMBIA - IDENTIFICACIÓN PERSONAL - CÉDULA DE CIUDADANÍA - NÚMERO 19.067.068 - VARGAS VELOZA - APELLIDOS - LUIS ALBERTO - NOMBRES - [There's a photo of a man and a signature] From the bottom part: - FECHA DE NACIMIENTO 22-ABR-1949 - UBATE - (CUNDINAMARCA) - LUGAR DE NACIMIENTO - 1.65 A+ M - ESTATURA G.S. RH SEXO - 26-MAY-1970 BOGOTÁ D.C. - FECHA Y LUGAR DE EXPEDICIÓN - REGISTRADOR NACIONAL - CARLOS ARIEL SÁNCHEZ TORRES - ÍNDICE DERECHO - [Fingerprint image] - [Barcode at bottom] - A-1500150-0000728I-M-001906706B-20080507 0000246624A 1 1150021138 2. **PRIORITY CHECKS** - Not BLANK: There's substantial meaningful content - Not LINK_ONLY: No hyperlinks or URLs 3. **ISSUER IDENTIFICATION** This is issued by \"REPÚBLICA DE COLOMBIA\" - a government identification authority, not DIAN or Chamber of Commerce. 4. **DOCUMENT FUNCTION ANALYSIS** This is clearly a personal identification document - specifically a Colombian national ID card (Cédula de Ciudadanía). It contains: - Personal biographical data (birth date, place of birth, height, blood type, gender) - Individual photo - Signature - Fingerprint - Security elements (barcode, official registration) - Individual identification number - Issued by government identification authority 5. **CATEGORY CLASSIFICATION** I confirm this document meets CECRL criteria with comprehensive personal identification details. The card provides official verification of Luis Alberto Vargas Veloza's identity through multiple unique identifiers and government-issued authentication methods. Security features and official validation strongly indicate a genuine national identification document from Colombia's government authority. The comprehensive personal data and distinctive security elements definitively classify this as a standard citizen identification card.",
+            "signature": "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"
+          },
+          {
+            "type": "text",
+            "text": "```json { \"category\": \"CECRL\", \"text\": \"REPÚBLICA DE COLOMBIA\\nIDENTIFICACIÓN PERSONAL\\nCÉDULA DE CIUDADANÍA\\nNÚMERO 19.067.068\\nVARGAS VELOZA\\nAPELLIDOS\\nLUIS ALBERTO\\nNOMBRES\\nFECHA DE NACIMIENTO 22-ABR-1949\\nUBATE\\n(CUNDINAMARCA)\\nLUGAR DE NACIMIENTO\\n1.65 A+ M\\nESTATURA G.S. RH SEXO\\n26-MAY-1970 BOGOTÁ D.C.\\nFECHA Y LUGAR DE EXPEDICIÓN\\nREGISTRADOR NACIONAL\\nCARLOS ARIEL SÁNCHEZ TORRES\\nÍNDICE DERECHO\\nA-1500150-0000728I-M-001906706B-20080507 0000246624A 1 1150021138\" } ```"
+          }
+        ],
+        "stop_reason": "end_turn",
+        "stop_sequence": null,
+        "usage": {
+          "input_tokens": 9,
+          "cache_creation_input_tokens": 4549,
+          "cache_read_input_tokens": 0,
+          "output_tokens": 1052
+        }
+      },
+      "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+      "api_used": "invoke_model",
+      "model_params": {
+        "max_tokens": 8000,
+        "top_p": 1,
+        "temperature": 1,
+        "thinking": {
+          "type": "enabled",
+          "budget_tokens": 4096
+        }
+      }
+    },
+    "expected_category": "CECRL",
+    "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model",
+    "pdf_info": {
+      "original_size": 123009,
+      "first_page_size": 119406,
+      "is_scanned": true
+    }
+  },
+  "extraction_result": {
+    "extraction_data": {
+      "result": {
+        "firstName": "LUIS ALBERTO",
+        "lastName": "VARGAS VELOZA",
+        "country_issuer": "Colombia",
+        "nationality": "Colombia",
+        "identificationType": "Cédula de Ciudadanía",
+        "identificationNumber": "19.067.068",
+        "message": ""
+      },
+      "document_type": "person",
+      "category": "CECRL"
+    },
+    "raw_response": {
+      "output": {
+        "message": {
+          "content": [
+            {
+              "text": "```json { \"result\": { \"firstName\": \"LUIS ALBERTO\", \"lastName\": \"VARGAS VELOZA\", \"country_issuer\": \"Colombia\", \"nationality\": \"Colombia\", \"identificationType\": \"Cédula de Ciudadanía\", \"identificationNumber\": \"19.067.068\", \"message\": \"\" }, \"document_type\": \"person\", \"category\": \"CECRL\" } ```"
+            }
+          ]
+        }
+      },
+      "stopReason": "end_turn",
+      "usage": {
+        "input_tokens": 10,
+        "cache_creation_input_tokens": 5982,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 542
+      },
+      "ResponseMetadata": {
+        "RequestId": "b2eb031b-8f55-4fbe-9506-d686e8ca27c2",
+        "HTTPStatusCode": 200,
+        "HTTPHeaders": {
+          "date": "Fri, 29 Aug 2025 15:36:13 GMT",
+          "content-type": "application/json",
+          "content-length": "4538",
+          "connection": "keep-alive",
+          "x-amzn-requestid": "b2eb031b-8f55-4fbe-9506-d686e8ca27c2",
+          "x-amzn-bedrock-invocation-latency": "10913",
+          "x-amzn-bedrock-cache-write-input-token-count": "5982",
+          "x-amzn-bedrock-cache-read-input-token-count": "0",
+          "x-amzn-bedrock-output-token-count": "542",
+          "x-amzn-bedrock-input-token-count": "10"
+        },
+        "RetryAttempts": 0
+      },
+      "raw_anthropic_response": {
+        "id": "msg_bdrk_01WSphvaqPwcw61ExngqNqGr",
+        "type": "message",
+        "role": "assistant",
+        "model": "claude-sonnet-4-20250514",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "Let me analyze this Colombian identification document carefully. Looking at the document, I can see: 1. This is a \"REPÚBLICA DE COLOMBIA\" document 2. It says \"IDENTIFICACIÓN PERSONAL\" and \"CÉDULA DE CIUDADANÍA\" 3. The document number is: 19.067.068 4. I can see \"VARGAS VELOZA\" 5. I can see \"LUIS ALBERTO\" 6. There's information about birth date: 22-ABR-1949 7. Birth place: UBATE (CUNDINAMARCA) 8. There are official seals and stamps indicating this is an official government document Looking at the structure: - \"VARGAS VELOZA\" appears to be the surname/apellidos - \"LUIS ALBERTO\" appears to be the given names/nombres - The document is clearly from Colombia (República de Colombia) - This is a Cédula de Ciudadanía (citizenship card) - The number is 19.067.068 - Birth place is in Colombia (Ubate, Cundinamarca), so nationality would be Colombian Let me extract according to the field rules: firstName: \"LUIS ALBERTO\" (these are the given names) lastName: \"VARGAS VELOZA\" (these are the family names/apellidos) country_issuer: \"Colombia\" (República de Colombia) nationality: \"Colombia\" (birth place is in Colombia, and this is a Colombian citizenship document) identificationType: \"Cédula de Ciudadanía\" (this is explicitly stated) identificationNumber: \"19.067.068\" (preserve the formatting with periods) message: \"\" (document appears to be official and complete) This looks like a legitimate Colombian government identification document with official seals and proper formatting.",
+            "signature": "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"
+          },
+          {
+            "type": "text",
+            "text": "```json { \"result\": { \"firstName\": \"LUIS ALBERTO\", \"lastName\": \"VARGAS VELOZA\", \"country_issuer\": \"Colombia\", \"nationality\": \"Colombia\", \"identificationType\": \"Cédula de Ciudadanía\", \"identificationNumber\": \"19.067.068\", \"message\": \"\" }, \"document_type\": \"person\", \"category\": \"CECRL\" } ```"
+          }
+        ],
+        "stop_reason": "end_turn",
+        "stop_sequence": null,
+        "usage": {
+          "input_tokens": 10,
+          "cache_creation_input_tokens": 5982,
+          "cache_read_input_tokens": 0,
+          "output_tokens": 542
+        }
+      },
+      "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+      "api_used": "invoke_model",
+      "model_params": {
+        "max_tokens": 8000,
+        "top_p": 1,
+        "temperature": 1,
+        "thinking": {
+          "type": "enabled",
+          "budget_tokens": 4096
+        }
+      }
+    },
+    "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model"
+  }
+}

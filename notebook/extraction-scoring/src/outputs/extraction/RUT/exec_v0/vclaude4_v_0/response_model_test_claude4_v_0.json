@@ -1,0 +1,35 @@
+{
+  "ResponseMetadata": {
+    "RequestId": "e493c48e-e182-4fd2-ba87-74349430f507",
+    "HTTPStatusCode": 200,
+    "HTTPHeaders": {
+      "date": "Thu, 05 Jun 2025 03:12:18 GMT",
+      "content-type": "application/json",
+      "content-length": "3078",
+      "connection": "keep-alive",
+      "x-amzn-requestid": "e493c48e-e182-4fd2-ba87-74349430f507"
+    },
+    "RetryAttempts": 0
+  },
+  "output": {
+    "message": {
+      "role": "assistant",
+      "content": [
+        {
+          "text": "Looking at this RUT document, I'll analyze it step by step to extract the required information.\n\n## Step-by-Step Reasoning:\n\n1. **Document Analysis**: This is a multi-page RUT document (8 pages total based on page numbers shown) from DIAN Colombia for \"FARMACIA INSTITUCIONAL S A S\".\n\n2. **Company Information Extraction**:\n   - **companyName**: Found \"FARMACIA INSTITUCIONAL S A S\" in field 35 (Razón social)\n   - **documentType**: \"NIT\" - standard Colombian tax identification\n   - **taxId**: \"900285194\" from field 5\n   - **verificationDigit**: \"8\" from field 6 (DV)\n   - **personType**: \"Persona jurídica\" indicated by checkbox marked as \"1\"\n   - **country**: \"COLOMBIA\" explicitly mentioned in field 38\n\n3. **Address Extraction**: \n   - Found \"TV 93 53 32 IN 9\" in field 41 (Dirección principal)\n   - Location: \"Bogotá, D.C.\" from fields 39-40\n\n4. **Date Extraction**:\n   - Document generation date: \"08-02-2021 08:23:29AM\" converts to \"2021-02-08\"\n\n5. **Related Parties Processing** (Multiple pages present):\n   - Page 3 shows representation section with 2 legal representatives\n   - Page 5 shows fiscal reviewer and accountant\n   - Each person extracted from their respective rows with complete information\n\n6. **Page Count Determination**: Document has 8 pages (shown as \"Página X de 8\" on each page), so related parties extraction is required.\n\n```json\n{\n  \"companyName\": \"FARMACIA INSTITUCIONAL S A S\",\n  \"country\": \"COLOMBIA\",\n  \"documentType\": \"NIT\",\n  \"taxId\": \"900285194\",\n  \"verificationDigit\": \"8\",\n  \"personType\": \"Persona Jurídica\",\n  \"relatedParties\": [\n    {\n      \"firstName\": \"ALEXANDER\",\n      \"lastName\": \"TOVAR OSORIO\",\n      \"identificationType\": \"Cédula de Ciudadanía\",\n      \"identificationNumber\": \"79474197\",\n      \"relationshipType\": \"REPRS LEGAL PRIN\"\n    },\n    {\n      \"firstName\": \"OLGA LUCIA\",\n      \"lastName\": \"RUGE LEON\",\n      \"identificationType\": \"Cédula de Ciudadanía\",\n      \"identificationNumber\": \"52053354\",\n      \"relationshipType\": \"REPRS LEGAL SUPL\"\n    },\n    {\n      \"firstName\": \"WILIAN ANDRES\",\n      \"lastName\": \"VALDERRAMA ESQUIVEL\",\n      \"identificationType\": \"Cédula de Ciudadanía\",\n      \"identificationNumber\": \"80230151\",\n      \"relationshipType\": \"Revisor Fiscal Principal\"\n    },\n    {\n      \"firstName\": \"MILCIADES\",\n      \"lastName\": \"TAPIAS MENDIETA\",\n      \"identificationType\": \"Cédula de Ciudadanía\",\n      \"identificationNumber\": \"79663905\",\n      \"relationshipType\": \"Contador\"\n    }\n  ],\n  \"address\": \"TV 93 53 32 IN 9, Bogotá, D.C.\",\n  \"documentGenerationDate\": \"2021-02-08\"\n}\n```"
+        }
+      ]
+    }
+  },
+  "stopReason": "end_turn",
+  "usage": {
+    "inputTokens": 12458,
+    "outputTokens": 839,
+    "totalTokens": 13297,
+    "cacheReadInputTokens": 0,
+    "cacheWriteInputTokens": 0
+  },
+  "metrics": {
+    "latencyMs": 21045
+  }
+}

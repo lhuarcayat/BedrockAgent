@@ -1,0 +1,121 @@
+{
+  "extraction_data": {
+    "path": "ACC/805031602/68_CA_2020-02-29.pdf",
+    "result": {
+      "companyName": "MEGASERVICIOS DE INGENIERÍA S.A.S.",
+      "documentCategory": "Equity Composition",
+      "taxId": "805.031.602 - 7",
+      "country": "Colombia",
+      "identificationDetails": {
+        "source": "text_reference",
+        "indicators": [
+          "SANTIAGO DE CALI",
+          "Colombian ID format (C.C.)",
+          "NIT format"
+        ],
+        "conflictingSources": [],
+        "requiresReview": "false"
+      },
+      "relatedParties": [
+        {
+          "type": "person",
+          "firstName": "DORA MATILDE",
+          "lastName": "TREJOS PUERTA",
+          "identificationType": "C.C.",
+          "identificationNumber": "31.953.854",
+          "relationshipType": "Shareholder",
+          "participationPercentage": "50",
+          "timeFound": "1",
+          "job": ""
+        },
+        {
+          "type": "person",
+          "firstName": "JUAN CARLOS",
+          "lastName": "ESCOBAR WELSCH",
+          "identificationType": "C.C.",
+          "identificationNumber": "16.733.280",
+          "relationshipType": "Shareholder",
+          "participationPercentage": "50",
+          "timeFound": "1",
+          "job": "Representante Legal"
+        }
+      ]
+    },
+    "documentType": "company",
+    "documentNumber": "805031602",
+    "category": "ACC"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "```json { \"result\": { \"companyName\": \"MEGASERVICIOS DE INGENIERÍA S.A.S.\", \"documentCategory\": \"Equity Composition\", \"taxId\": \"805.031.602 - 7\", \"country\": \"Colombia\", \"identificationDetails\": { \"source\": \"text_reference\", \"indicators\": [ \"SANTIAGO DE CALI\", \"Colombian ID format (C.C.)\", \"NIT format\" ], \"conflictingSources\": [], \"requiresReview\": \"false\" }, \"relatedParties\": [ { \"type\": \"person\", \"firstName\": \"DORA MATILDE\", \"lastName\": \"TREJOS PUERTA\", \"identificationType\": \"C.C.\", \"identificationNumber\": \"31.953.854\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"50\", \"timeFound\": \"1\", \"job\": \"\" }, { \"type\": \"person\", \"firstName\": \"JUAN CARLOS\", \"lastName\": \"ESCOBAR WELSCH\", \"identificationType\": \"C.C.\", \"identificationNumber\": \"16.733.280\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"50\", \"timeFound\": \"1\", \"job\": \"Representante Legal\" } ] }, \"documentType\": \"company\", \"category\": \"ACC\" } ```"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 9,
+      "cache_creation_input_tokens": 6107,
+      "cache_read_input_tokens": 0,
+      "output_tokens": 937
+    },
+    "ResponseMetadata": {
+      "RequestId": "523685cc-90cf-4ca9-8660-69ddd644d872",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Thu, 28 Aug 2025 09:29:05 GMT",
+        "content-type": "application/json",
+        "content-length": "3875",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "523685cc-90cf-4ca9-8660-69ddd644d872",
+        "x-amzn-bedrock-invocation-latency": "21723",
+        "x-amzn-bedrock-cache-write-input-token-count": "6107",
+        "x-amzn-bedrock-cache-read-input-token-count": "0",
+        "x-amzn-bedrock-output-token-count": "937",
+        "x-amzn-bedrock-input-token-count": "9"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_01BRLQg5z5fY8crvbMHcLy41",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-3-7-sonnet-20250219",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Let me analyze this document thoroughly to extract the required information according to the schema and rules provided. ## Step 1: Document Analysis First, I'll identify the key elements of this document: - This appears to be a certification document (\"CERTIFICA QUE\") from a public accountant (Julio César Suaza) - The main company being reported on is MEGASERVICIOS DE INGENIERÍA S.A.S. - The document appears to be in Spanish and from Colombia (indicated by \"Santiago de Cali\") - The document is showing the shareholder composition of the company ## Step 2: Root Level Extraction - **companyName**: MEGASERVICIOS DE INGENIERÍA S.A.S. - **taxId**: The document shows \"NIT: 805.031.602 – 7\" for the company - **country**: Colombia (evidenced by \"SANTIAGO DE CALI\" mentioned in the document and Colombian ID formats) - **documentCategory**: \"Equity Composition\" (fixed value) ## Step 3: Related Parties Processing I can identify two shareholders: 1. DORA MATILDE TREJOS PUERTA, C.C. 31.953.854 - Type: person - Participation: 50% - Shares: 7,042 - Share value: 50,000 each 2. JUAN CARLOS ESCOBAR WELSCH, C.C. 16.733.280 - Type: person - Participation: 50% - Shares: 7,042 - Share value: 50,000 each Additionally, I note that Juan Carlos Escobar Welsch is identified as the Legal Representative (\"representante Legal\") of the company. ## Step 4: Validation & Cross-checking - The taxId format (NIT) is consistent with Colombia - The identification numbers are in Colombian C.C. (Cédula de Ciudadanía) format - The participation percentages sum to 100%, which is valid - All required fields are present - The job role for Juan Carlos Escobar is \"representante Legal\" but no role is explicitly mentioned for Dora Matilde Trejos Now let me structure this information according to the provided schema:",
+          "signature": "ErcBCkgIBxABGAIiQN7ZCKY2uE+U31y9hMoLb5T9b2iqaaXfhSF029/Wvhc/fxxk+BUO57lwHYe+xSnjNHuX7rx1yHMlUM9aLTANv4wSDOZF1TxS0U0sZdQMeBoMtpiWUuhA+rblTgYOIjCTdsbM22Cijq/hI3Rd7ekj4AIvFBpJBQ+XUSlJTTIPJQY6btvQZ1BgtBa+dbpmPR8qHVmbqdk47Kz92UXsdJqGoNNJ+Ts/o7L2vdVItK5cGAI="
+        },
+        {
+          "type": "text",
+          "text": "```json { \"result\": { \"companyName\": \"MEGASERVICIOS DE INGENIERÍA S.A.S.\", \"documentCategory\": \"Equity Composition\", \"taxId\": \"805.031.602 - 7\", \"country\": \"Colombia\", \"identificationDetails\": { \"source\": \"text_reference\", \"indicators\": [ \"SANTIAGO DE CALI\", \"Colombian ID format (C.C.)\", \"NIT format\" ], \"conflictingSources\": [], \"requiresReview\": \"false\" }, \"relatedParties\": [ { \"type\": \"person\", \"firstName\": \"DORA MATILDE\", \"lastName\": \"TREJOS PUERTA\", \"identificationType\": \"C.C.\", \"identificationNumber\": \"31.953.854\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"50\", \"timeFound\": \"1\", \"job\": \"\" }, { \"type\": \"person\", \"firstName\": \"JUAN CARLOS\", \"lastName\": \"ESCOBAR WELSCH\", \"identificationType\": \"C.C.\", \"identificationNumber\": \"16.733.280\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"50\", \"timeFound\": \"1\", \"job\": \"Representante Legal\" } ] }, \"documentType\": \"company\", \"category\": \"ACC\" } ```"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 9,
+        "cache_creation_input_tokens": 6107,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 937
+      }
+    },
+    "model_id": "us.anthropic.claude-3-7-sonnet-20250219-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 8000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "model_used": "us.anthropic.claude-3-7-sonnet-20250219-v1:0",
+  "api_used": "invoke_model"
+}

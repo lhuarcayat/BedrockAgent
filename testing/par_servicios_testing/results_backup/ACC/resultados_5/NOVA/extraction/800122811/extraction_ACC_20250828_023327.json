@@ -1,0 +1,123 @@
+{
+  "extraction_data": {
+    "path": "ACC/800122811/259_CA_2020-02-29.pdf",
+    "result": {
+      "companyName": "COTEL S.A.S.",
+      "documentCategory": "Equity Composition",
+      "taxId": "800122-811-2",
+      "country": "POR REVISAR",
+      "identificationDetails": {
+        "source": "taxId inference",
+        "indicators": [
+          "COTEL",
+          "800122-811-2"
+        ],
+        "conflictingSources": [
+          "Cannot determine country based on taxId alone"
+        ],
+        "requiresReview": "true"
+      },
+      "relatedParties": [
+        {
+          "type": "person",
+          "firstName": "James Herney",
+          "lastName": "Quijano Morán",
+          "identificationType": "TP",
+          "identificationNumber": "16.758.096",
+          "relationshipType": "Shareholder",
+          "participationPercentage": "82%",
+          "timeFound": "1",
+          "job": ""
+        },
+        {
+          "type": "person",
+          "firstName": "María del Pilar",
+          "lastName": "Zuluaga Marín",
+          "identificationType": "TP",
+          "identificationNumber": "66.901.361",
+          "relationshipType": "Shareholder",
+          "participationPercentage": "10%",
+          "timeFound": "1",
+          "job": ""
+        },
+        {
+          "type": "person",
+          "firstName": "Nicolle Dayana",
+          "lastName": "Quijano Zuluaga",
+          "identificationType": "TP",
+          "identificationNumber": "101.108.788",
+          "relationshipType": "Shareholder",
+          "participationPercentage": "3%",
+          "timeFound": "1",
+          "job": ""
+        },
+        {
+          "type": "person",
+          "firstName": "Juan Pablo",
+          "lastName": "Quijano Zuluaga",
+          "identificationType": "TP",
+          "identificationNumber": "1.144.109.912",
+          "relationshipType": "Shareholder",
+          "participationPercentage": "3%",
+          "timeFound": "1",
+          "job": ""
+        },
+        {
+          "type": "company",
+          "companyName": "COTEL S.A.S.",
+          "identificationType": "NIT",
+          "identificationNumber": "800.122.811-2",
+          "relationshipType": "Shareholder",
+          "participationPercentage": "2%",
+          "timeFound": "1",
+          "job": ""
+        }
+      ]
+    },
+    "documentType": "company",
+    "documentNumber": "800122811",
+    "category": "ACC"
+  },
+  "raw_response": {
+    "ResponseMetadata": {
+      "RequestId": "eee9f723-36ca-4a15-bb60-cc26bb249c14",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Thu, 28 Aug 2025 07:33:26 GMT",
+        "content-type": "application/json",
+        "content-length": "2632",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "eee9f723-36ca-4a15-bb60-cc26bb249c14"
+      },
+      "RetryAttempts": 0
+    },
+    "output": {
+      "message": {
+        "role": "assistant",
+        "content": [
+          {
+            "text": "```json { \"result\": { \"companyName\": \"COTEL S.A.S.\", \"documentCategory\": \"Equity Composition\", \"taxId\": \"800122-811-2\", \"country\": \"POR REVISAR\", \"identificationDetails\": { \"source\": \"taxId inference\", \"indicators\": [ \"COTEL\", \"800122-811-2\" ], \"conflictingSources\": [ \"Cannot determine country based on taxId alone\" ], \"requiresReview\": \"true\" }, \"relatedParties\": [ { \"type\": \"person\", \"firstName\": \"James Herney\", \"lastName\": \"Quijano Morán\", \"identificationType\": \"TP\", \"identificationNumber\": \"16.758.096\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"82%\", \"timeFound\": \"1\", \"job\": \"\" }, { \"type\": \"person\", \"firstName\": \"María del Pilar\", \"lastName\": \"Zuluaga Marín\", \"identificationType\": \"TP\", \"identificationNumber\": \"66.901.361\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"10%\", \"timeFound\": \"1\", \"job\": \"\" }, { \"type\": \"person\", \"firstName\": \"Nicolle Dayana\", \"lastName\": \"Quijano Zuluaga\", \"identificationType\": \"TP\", \"identificationNumber\": \"101.108.788\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"3%\", \"timeFound\": \"1\", \"job\": \"\" }, { \"type\": \"person\", \"firstName\": \"Juan Pablo\", \"lastName\": \"Quijano Zuluaga\", \"identificationType\": \"TP\", \"identificationNumber\": \"1.144.109.912\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"3%\", \"timeFound\": \"1\", \"job\": \"\" }, { \"type\": \"company\", \"companyName\": \"COTEL S.A.S.\", \"identificationType\": \"NIT\", \"identificationNumber\": \"800.122.811-2\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"2%\", \"timeFound\": \"1\", \"job\": \"\" } ] }, \"documentType\": \"company\", \"category\": \"ACC\" } ```"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "inputTokens": 5407,
+      "outputTokens": 598,
+      "totalTokens": 6005
+    },
+    "metrics": {
+      "latencyMs": 8635
+    },
+    "model_id": "us.amazon.nova-pro-v1:0",
+    "api_used": "converse",
+    "model_params": {
+      "maxTokens": 8000,
+      "topP": 1,
+      "temperature": 0
+    }
+  },
+  "model_used": "us.amazon.nova-pro-v1:0",
+  "api_used": "converse"
+}

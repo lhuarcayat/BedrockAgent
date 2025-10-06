@@ -1,0 +1,87 @@
+{
+  "classification_data": {
+    "category": "CECRL",
+    "text": "REPUBLICA DE COLOMBIA IDENTIFICACION PERSONAL CEDULA DE CIUDADANIA NUMERO 1.174.043 SIERRA APELLIDOS PUBLIO ROBERTO NOMBRES FIRMA FECHA DE NACIMIENTO 11-OCT-1965 CHIQUINQUIRA (BOYACA) LUGAR DE NACIMIENTO 1.71 O+ M ESTATURA G.S. RH SEXO 12-OCT-1983 TINUACA FECHA Y LUGAR DE EXPEDICION INDICE DERECHO REGISTRADOR NACIONAL CARLOS ARIEL SANCHEZ TORRES A-1500150-0009374Z-M 000174043-20081011 0004256265A 1 1510011657",
+    "document_number": "901022555",
+    "path": "CECRL/901022555/1174043_2020-02-29.pdf"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "```json { \"category\": \"CECRL\", \"text\": \"REPUBLICA DE COLOMBIA\\nIDENTIFICACION PERSONAL\\nCEDULA DE CIUDADANIA\\n\\nNUMERO 1.174.043\\nSIERRA\\n\\nAPELLIDOS\\nPUBLIO ROBERTO\\n\\nNOMBRES\\n\\nFIRMA\\n\\nFECHA DE NACIMIENTO 11-OCT-1965\\nCHIQUINQUIRA\\n(BOYACA)\\nLUGAR DE NACIMIENTO\\n\\n1.71 O+ M\\nESTATURA G.S. RH SEXO\\n\\n12-OCT-1983 TINUACA\\nFECHA Y LUGAR DE EXPEDICION\\n\\nINDICE DERECHO\\n\\nREGISTRADOR NACIONAL\\nCARLOS ARIEL SANCHEZ TORRES\\n\\nA-1500150-0009374Z-M 000174043-20081011 0004256265A 1 1510011657\" } ```"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 1584,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 3150,
+      "output_tokens": 1061
+    },
+    "ResponseMetadata": {
+      "RequestId": "526fcb90-f10b-4a93-bab0-67c25880522b",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Sun, 31 Aug 2025 21:40:00 GMT",
+        "content-type": "application/json",
+        "content-length": "6656",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "526fcb90-f10b-4a93-bab0-67c25880522b",
+        "x-amzn-bedrock-invocation-latency": "17350",
+        "x-amzn-bedrock-cache-write-input-token-count": "0",
+        "x-amzn-bedrock-cache-read-input-token-count": "3150",
+        "x-amzn-bedrock-output-token-count": "1061",
+        "x-amzn-bedrock-input-token-count": "1584"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_01Y6eJdSfTgHP3pRsCvhJmvy",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-sonnet-4-20250514",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Let me analyze this document step by step according to the classification workflow: 1. **TEXT EXTRACTION** Looking at the document, I can see: - \"REPUBLICA DE COLOMBIA\" - \"IDENTIFICACION PERSONAL\" - \"CEDULA DE CIUDADANIA\" - \"NUMERO 1.174.043\" - \"SIERRA\" - \"APELLIDOS\" - \"PUBLIO ROBERTO\" - \"NOMBRES\" - There's a signature area marked \"FIRMA\" - A photograph of a person - \"FECHA DE NACIMIENTO 11-OCT-1965\" - \"CHIQUINQUIRA\" - \"(BOYACA)\" - \"LUGAR DE NACIMIENTO\" - \"1.71\" (height) - \"O+\" (blood type) - \"M\" (sex) - \"ESTATURA\", \"G.S. RH\", \"SEXO\" - \"12-OCT-1983 TINUACA\" - \"FECHA Y LUGAR DE EXPEDICION\" - \"INDICE DERECHO\" (right index - fingerprint area) - \"REGISTRADOR NACIONAL\" - \"CARLOS ARIEL SANCHEZ TORRES\" - A barcode at the bottom - Various identification numbers 2. **PRIORITY CHECKS** - This is not BLANK - there's substantial content - This is not LINK_ONLY - there are no URLs or redirects 3. **DOCUMENT FUNCTION ANALYSIS** What is the MAIN PURPOSE of this document? - This is clearly a personal identification document - It's a \"CÉDULA DE CIUDADANÍA\" (citizenship card) - It contains personal biographical data: date of birth, place of birth, blood type, sex, height - It has a photograph, signature area, and fingerprint area - It has an identification number (1.174.043) - This is a government-issued personal identification document I recognize this as an official Colombian government identification document. The card contains critical personal verification details issued by national authorities. Its comprehensive information allows for official personal identification and verification purposes. Key personal data includes biographical specifics like birthdate (11-OCT-1965), birthplace (CHIQUINQUIRA, BOYACA), physical characteristics such as blood type (O+), sex (M), and height (1.71). The document includes unique individual identifiers like government-issued personal number (1.174.043), along with security features like photograph, signature, and fingerprints. The document definitively represents a standard Colombian citizenship identification card with robust authentication elements.",
+          "signature": "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"
+        },
+        {
+          "type": "text",
+          "text": "```json { \"category\": \"CECRL\", \"text\": \"REPUBLICA DE COLOMBIA\\nIDENTIFICACION PERSONAL\\nCEDULA DE CIUDADANIA\\n\\nNUMERO 1.174.043\\nSIERRA\\n\\nAPELLIDOS\\nPUBLIO ROBERTO\\n\\nNOMBRES\\n\\nFIRMA\\n\\nFECHA DE NACIMIENTO 11-OCT-1965\\nCHIQUINQUIRA\\n(BOYACA)\\nLUGAR DE NACIMIENTO\\n\\n1.71 O+ M\\nESTATURA G.S. RH SEXO\\n\\n12-OCT-1983 TINUACA\\nFECHA Y LUGAR DE EXPEDICION\\n\\nINDICE DERECHO\\n\\nREGISTRADOR NACIONAL\\nCARLOS ARIEL SANCHEZ TORRES\\n\\nA-1500150-0009374Z-M 000174043-20081011 0004256265A 1 1510011657\" } ```"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 1584,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 3150,
+        "output_tokens": 1061
+      }
+    },
+    "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 8000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "expected_category": "CECRL",
+  "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+  "api_used": "invoke_model",
+  "pdf_info": {
+    "original_size": 743509,
+    "first_page_size": 741958,
+    "is_scanned": true
+  }
+}

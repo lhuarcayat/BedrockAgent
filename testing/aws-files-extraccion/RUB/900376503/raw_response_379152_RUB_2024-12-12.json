@@ -1,0 +1,33 @@
+{
+  "ResponseMetadata": {
+    "RequestId": "07ab5dac-8185-4e2a-a1a8-dc45aa8f20d6",
+    "HTTPStatusCode": 200,
+    "HTTPHeaders": {
+      "date": "Tue, 17 Jun 2025 14:28:02 GMT",
+      "content-type": "application/json",
+      "content-length": "1073",
+      "connection": "keep-alive",
+      "x-amzn-requestid": "07ab5dac-8185-4e2a-a1a8-dc45aa8f20d6"
+    },
+    "RetryAttempts": 0
+  },
+  "output": {
+    "message": {
+      "role": "assistant",
+      "content": [
+        {
+          "text": "```json\n{\n  \"path\": \"s3://par-servicios-poc-dev-filling-desk/par-servicios-poc/RUB/900376503/379152_RUB_2024-12-12.pdf\",\n  \"result\": {\n    \"companyName\": \"OEP Spanish IT Acquico, S.L.U.\",\n    \"country\": \"Spain\",\n    \"documentType\": \"CIF\",\n    \"taxId\": \"B02731982\",\n    \"relatedParties\": [\n      {\n        \"firstName\": \"Francisco José\",\n        \"lastName\": \"Devesa Medina\",\n        \"identificationType\": \"D.N.I.\",\n        \"identificationNumber\": \"2.876.358-R\",\n        \"noveltyType\": \"Registro\",\n        \"participationPercentage\": \"100\"\n      }\n    ]\n  },\n  \"confidenceScores\": {\n    \"companyName\": 95,\n    \"documentType\": 90,\n    \"country\": 100,\n    \"taxId\": 100,\n    \"relatedParties\": 85\n  },\n  \"document_type\": \"company\",\n  \"document_number\": \"900376503\",\n  \"category\": \"RUB\"\n}\n```"
+        }
+      ]
+    }
+  },
+  "stopReason": "end_turn",
+  "usage": {
+    "inputTokens": 8390,
+    "outputTokens": 299,
+    "totalTokens": 8689
+  },
+  "metrics": {
+    "latencyMs": 7555
+  }
+}

@@ -1,0 +1,183 @@
+{
+  "document_name": "80163642_2020-02-29.pdf",
+  "category": "CECRL",
+  "classification_success": true,
+  "extraction_success": true,
+  "overall_success": true,
+  "timestamp": "2025-08-29T10:54:12.038154",
+  "classification_result": {
+    "classification_data": {
+      "category": "CECRL",
+      "text": "REPUBLICA DE COLOMBIA IDENTIFICACION PERSONAL CEDULA DE CIUDADANIA NUMERO 80.163.642 HERNANDEZ RAMIREZ APELLIDOS LUIS DARIO NOMBRES FIRMA FECHA DE NACIMIENTO 10-NOV-1983 BOGOTA D.C (CUNDINAMARCA) LUGAR DE NACIMIENTO 1.70 AB+ M ESTATURA G.S. RH SEXO 19-NOV-2001 BOGOTA D.C. FECHA Y LUGAR DE EXPEDICION INDICE DERECHO REGISTRADURIA NACIONAL CARLOS ARIEL SANCHEZ TORRES A-1500150-00653692-M-09801163642-20141229 004211930TH 1 1433211325",
+      "document_number": "UNKNOWN",
+      "path": "CECRL/900397317_80163642_2020-02-29/80163642_2020-02-29.pdf"
+    },
+    "raw_response": {
+      "output": {
+        "message": {
+          "content": [
+            {
+              "text": "```json { \"category\": \"CECRL\", \"text\": \"REPUBLICA DE COLOMBIA\\nIDENTIFICACION PERSONAL\\nCEDULA DE CIUDADANIA\\n\\nNUMERO 80.163.642\\nHERNANDEZ RAMIREZ\\nAPELLIDOS\\nLUIS DARIO\\nNOMBRES\\n\\nFIRMA\\n\\nFECHA DE NACIMIENTO 10-NOV-1983\\nBOGOTA D.C\\n(CUNDINAMARCA)\\nLUGAR DE NACIMIENTO\\n1.70 AB+ M\\nESTATURA G.S. RH SEXO\\n19-NOV-2001 BOGOTA D.C.\\nFECHA Y LUGAR DE EXPEDICION\\n\\nINDICE DERECHO\\n\\nREGISTRADURIA NACIONAL\\nCARLOS ARIEL SANCHEZ TORRES\\n\\nA-1500150-00653692-M-09801163642-20141229 004211930TH 1 1433211325\" } ```"
+            }
+          ]
+        }
+      },
+      "stopReason": "end_turn",
+      "usage": {
+        "input_tokens": 9,
+        "cache_creation_input_tokens": 4570,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 877
+      },
+      "ResponseMetadata": {
+        "RequestId": "7cfb0032-6e4a-4cec-a73c-dcdceaa52264",
+        "HTTPStatusCode": 200,
+        "HTTPHeaders": {
+          "date": "Fri, 29 Aug 2025 15:54:27 GMT",
+          "content-type": "application/json",
+          "content-length": "5872",
+          "connection": "keep-alive",
+          "x-amzn-requestid": "7cfb0032-6e4a-4cec-a73c-dcdceaa52264",
+          "x-amzn-bedrock-invocation-latency": "15041",
+          "x-amzn-bedrock-cache-write-input-token-count": "4570",
+          "x-amzn-bedrock-cache-read-input-token-count": "0",
+          "x-amzn-bedrock-output-token-count": "877",
+          "x-amzn-bedrock-input-token-count": "9"
+        },
+        "RetryAttempts": 0
+      },
+      "raw_anthropic_response": {
+        "id": "msg_bdrk_0145Zw5qs4PkJg6dLRx3hy3q",
+        "type": "message",
+        "role": "assistant",
+        "model": "claude-sonnet-4-20250514",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "Let me analyze this document step by step: 1. **TEXT EXTRACTION** Looking at the PDF image, I can see: - This appears to be a Colombian identification document (cédula) - \"REPUBLICA DE COLOMBIA\" at the top - \"IDENTIFICACION PERSONAL\" - \"CEDULA DE CIUDADANIA\" - Number: 80.163.642 - Name: HERNANDEZ RAMIREZ, LUIS DARIO - There's a photo of a person - A signature section marked \"FIRMA\" - Back side shows: - Birth date: 10-NOV-1983 - Birth place: BOGOTA D.C (CUNDINAMARCA) - Height: 1.70 - Blood type: AB+ - Gender: M (masculino) - Issue date and place: 19-NOV-2001 BOGOTA D.C. - Fingerprint section - Barcode at bottom 2. **PRIORITY CHECKS** - Not BLANK - has substantial content - Not LINK_ONLY - no hyperlinks, this is a complete document 3. **ISSUER IDENTIFICATION** - This is issued by the Colombian government (República de Colombia) - This is a personal identification document (Cédula de Ciudadanía) - Not DIAN, not Chamber of Commerce 4. **DOCUMENT FUNCTION ANALYSIS** - This is clearly personal identification for an individual - Contains biographical data (birth date, place, blood type, gender) - Has security elements (photo, signature, fingerprint, barcode) - Single individual focus (Luis Dario Hernandez Ramirez) 5. **CATEGORY CLASSIFICATION** Based on the category definitions, this clearly fits CECRL: - Individual identification document ✓ - Personal biographical data (birth date/place, blood type, gender) ✓ - Individual photo, signature, fingerprint references ✓ - Government-issued personal ID number with individual name ✓ - Security elements (photo, signature, barcode, official seals) ✓ - Issued by government identification authority ✓ - Key pattern matches: \"REPUBLICA DE COLOMBIA IDENTIFICACION PERSONAL\", \"CEDULA DE CIUDADANIA NUMERO\" ✓ 6. **CONFIDENCE VALIDATION** I've confirmed this is a robust official Colombian identification document with comprehensive personal details and multiple security features. The document meets all critical verification criteria for a legitimate national ID.",
+            "signature": "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"
+          },
+          {
+            "type": "text",
+            "text": "```json { \"category\": \"CECRL\", \"text\": \"REPUBLICA DE COLOMBIA\\nIDENTIFICACION PERSONAL\\nCEDULA DE CIUDADANIA\\n\\nNUMERO 80.163.642\\nHERNANDEZ RAMIREZ\\nAPELLIDOS\\nLUIS DARIO\\nNOMBRES\\n\\nFIRMA\\n\\nFECHA DE NACIMIENTO 10-NOV-1983\\nBOGOTA D.C\\n(CUNDINAMARCA)\\nLUGAR DE NACIMIENTO\\n1.70 AB+ M\\nESTATURA G.S. RH SEXO\\n19-NOV-2001 BOGOTA D.C.\\nFECHA Y LUGAR DE EXPEDICION\\n\\nINDICE DERECHO\\n\\nREGISTRADURIA NACIONAL\\nCARLOS ARIEL SANCHEZ TORRES\\n\\nA-1500150-00653692-M-09801163642-20141229 004211930TH 1 1433211325\" } ```"
+          }
+        ],
+        "stop_reason": "end_turn",
+        "stop_sequence": null,
+        "usage": {
+          "input_tokens": 9,
+          "cache_creation_input_tokens": 4570,
+          "cache_read_input_tokens": 0,
+          "output_tokens": 877
+        }
+      },
+      "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+      "api_used": "invoke_model",
+      "model_params": {
+        "max_tokens": 8000,
+        "top_p": 1,
+        "temperature": 1,
+        "thinking": {
+          "type": "enabled",
+          "budget_tokens": 4096
+        }
+      }
+    },
+    "expected_category": "CECRL",
+    "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model",
+    "pdf_info": {
+      "original_size": 371255,
+      "first_page_size": 371208,
+      "is_scanned": true
+    }
+  },
+  "extraction_result": {
+    "extraction_data": {
+      "result": {
+        "firstName": "LUIS DARIO",
+        "lastName": "HERNANDEZ RAMIREZ",
+        "country_issuer": "Colombia",
+        "nationality": "Colombia",
+        "identificationType": "Cédula de Ciudadanía",
+        "identificationNumber": "80.163.642",
+        "message": ""
+      },
+      "document_type": "person",
+      "category": "CECRL"
+    },
+    "raw_response": {
+      "output": {
+        "message": {
+          "content": [
+            {
+              "text": "```json { \"result\": { \"firstName\": \"LUIS DARIO\", \"lastName\": \"HERNANDEZ RAMIREZ\", \"country_issuer\": \"Colombia\", \"nationality\": \"Colombia\", \"identificationType\": \"Cédula de Ciudadanía\", \"identificationNumber\": \"80.163.642\", \"message\": \"\" }, \"document_type\": \"person\", \"category\": \"CECRL\" } ```"
+            }
+          ]
+        }
+      },
+      "stopReason": "end_turn",
+      "usage": {
+        "input_tokens": 10,
+        "cache_creation_input_tokens": 6003,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 632
+      },
+      "ResponseMetadata": {
+        "RequestId": "4bcec6b4-c66e-42dd-866d-773e745d4178",
+        "HTTPStatusCode": 200,
+        "HTTPHeaders": {
+          "date": "Fri, 29 Aug 2025 15:54:37 GMT",
+          "content-type": "application/json",
+          "content-length": "5169",
+          "connection": "keep-alive",
+          "x-amzn-requestid": "4bcec6b4-c66e-42dd-866d-773e745d4178",
+          "x-amzn-bedrock-invocation-latency": "9981",
+          "x-amzn-bedrock-cache-write-input-token-count": "6003",
+          "x-amzn-bedrock-cache-read-input-token-count": "0",
+          "x-amzn-bedrock-output-token-count": "632",
+          "x-amzn-bedrock-input-token-count": "10"
+        },
+        "RetryAttempts": 0
+      },
+      "raw_anthropic_response": {
+        "id": "msg_bdrk_01LWEP1uVaxzBXj7vj8TQ3bA",
+        "type": "message",
+        "role": "assistant",
+        "model": "claude-sonnet-4-20250514",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "Looking at this document, I can see it's a Colombian identification document - a \"Cédula de Ciudadanía\" from Colombia. Let me analyze the document carefully: From the image, I can see: - Header: \"REPUBLICA DE COLOMBIA\" and \"IDENTIFICACION PERSONAL\" and \"CEDULA DE CIUDADANIA\" - Number: \"80.163.642\" - A surname section that appears to say \"HERNANDEZ RAMIREZ\" - A names section that shows \"LUIS DARIO\" - There's a photo of a person - Date of birth: \"10-NOV-1983\" - Place of birth: \"BOGOTA D.C\" (Cundinamarca) - There's other information like height (1.70), blood type (AB+), sex (M) - There's a fingerprint and barcode at the bottom Let me extract the information following the methodology: 1. Document Structure Analysis: This is clearly an official Colombian government identification document - a \"Cédula de Ciudadanía\" (Citizenship Card), which is the primary national ID document in Colombia. 2. Field Detection: Looking at the text, I can see: - \"HERNANDEZ RAMIREZ\" appears to be in the surname/apellidos section - \"LUIS DARIO\" appears to be in the names/nombres section - The document number is \"80.163.642\" - Country issuer: Colombia (clear from \"REPUBLICA DE COLOMBIA\" header) - Document type: \"CEDULA DE CIUDADANIA\" 3. Field Extraction: - firstName: \"LUIS DARIO\" (from the nombres section) - lastName: \"HERNANDEZ RAMIREZ\" (from the apellidos section) - country_issuer: \"Colombia\" (from document header) - nationality: \"Colombia\" (since this is a Colombian citizenship document, nationality would be Colombian) - identificationType: \"Cédula de Ciudadanía\" (from document header) - identificationNumber: \"80.163.642\" The document appears to be an official identification record with all key details successfully captured. No additional messages or warnings are present.",
+            "signature": "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"
+          },
+          {
+            "type": "text",
+            "text": "```json { \"result\": { \"firstName\": \"LUIS DARIO\", \"lastName\": \"HERNANDEZ RAMIREZ\", \"country_issuer\": \"Colombia\", \"nationality\": \"Colombia\", \"identificationType\": \"Cédula de Ciudadanía\", \"identificationNumber\": \"80.163.642\", \"message\": \"\" }, \"document_type\": \"person\", \"category\": \"CECRL\" } ```"
+          }
+        ],
+        "stop_reason": "end_turn",
+        "stop_sequence": null,
+        "usage": {
+          "input_tokens": 10,
+          "cache_creation_input_tokens": 6003,
+          "cache_read_input_tokens": 0,
+          "output_tokens": 632
+        }
+      },
+      "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+      "api_used": "invoke_model",
+      "model_params": {
+        "max_tokens": 8000,
+        "top_p": 1,
+        "temperature": 1,
+        "thinking": {
+          "type": "enabled",
+          "budget_tokens": 4096
+        }
+      }
+    },
+    "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model"
+  }
+}

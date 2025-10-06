@@ -1,0 +1,215 @@
+{
+  "document_name": "131_CA_2020-02-29.pdf",
+  "category": "ACC",
+  "classification_success": true,
+  "extraction_success": true,
+  "overall_success": true,
+  "timestamp": "2025-08-28T04:43:26.431790",
+  "classification_result": {
+    "classification_data": {
+      "category": "ACC",
+      "text": "ASTRID ROCIO LOZANO C.C. 65.800.711 de Purificación Contador Público T.P. 193485-T Universidad Antonio Nariño COMPOSICION ACCIONARIA EL SUSCRITO CONTADOR PÚBLICO DE LA SOCIEDAD CONSTRUCTORA E INMOBILIARIA RIVERA INCORA SAS. NIT 901.106.859-4 CERTIFICA QUE: El capital de la sociedad es de DOSCIENTOS MILLONES DE PESOS MONEDA LEGAL (200.000.000) íntegramente suscrito y pagado por los socios accionistas. Repartidos en la siguiente forma o proporción, entre los socios accionistas, en las siguientes proporciones: NOMBRE DE SOCIOS | No. DE DOCUMENTO | PORCENTAJE | VALOR | No. ACCIONES LEOWILSTON RIVERA MENDEZ | 80.057.686 | 49% | $98.000.000 | 196 MARCOS JAIR CUERVO MENDEZ | 1.022.372.943 | 51% | $102.000.000 | 204 TOTAL | | 100% | $200.000.000 | 400 La presente se expide en la ciudad de Bogotá, a los seis (16) días del mes de Marzo de 2021. ASTRID ROCIO LOZANO CONTADOR PÚBLICO TP. 193485-T E-mail: aslozano-@hotmail.com",
+      "document_number": "901106859",
+      "path": "ACC/901106859/131_CA_2020-02-29.pdf"
+    },
+    "raw_response": {
+      "output": {
+        "message": {
+          "content": [
+            {
+              "text": "```json { \"category\": \"ACC\", \"text\": \"ASTRID ROCIO LOZANO\\nC.C. 65.800.711 de Purificación\\nContador Público T.P. 193485-T\\nUniversidad Antonio Nariño\\n\\nCOMPOSICION ACCIONARIA\\n\\nEL SUSCRITO CONTADOR PÚBLICO DE LA SOCIEDAD\\nCONSTRUCTORA E INMOBILIARIA RIVERA INCORA SAS.\\n\\nNIT 901.106.859-4\\n\\nCERTIFICA QUE:\\n\\nEl capital de la sociedad es de DOSCIENTOS MILLONES DE PESOS MONEDA LEGAL (200.000.000) íntegramente suscrito y pagado por los socios accionistas. Repartidos en la siguiente forma o proporción, entre los socios accionistas, en las siguientes proporciones:\\n\\nNOMBRE DE SOCIOS | No. DE DOCUMENTO | PORCENTAJE | VALOR | No. ACCIONES\\nLEOWILSTON RIVERA MENDEZ | 80.057.686 | 49% | $98.000.000 | 196\\nMARCOS JAIR CUERVO MENDEZ | 1.022.372.943 | 51% | $102.000.000 | 204\\nTOTAL | | 100% | $200.000.000 | 400\\n\\nLa presente se expide en la ciudad de Bogotá, a los seis (16) días del mes de Marzo de 2021.\\n\\nASTRID ROCIO LOZANO\\nCONTADOR PÚBLICO\\nTP. 193485-T\\nE-mail: aslozano-@hotmail.com\" } ```"
+            }
+          ]
+        }
+      },
+      "stopReason": "end_turn",
+      "usage": {
+        "input_tokens": 9,
+        "cache_creation_input_tokens": 4475,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 1596
+      },
+      "ResponseMetadata": {
+        "RequestId": "c15fdf18-cf04-41e9-8649-f242c45bb1c3",
+        "HTTPStatusCode": 200,
+        "HTTPHeaders": {
+          "date": "Thu, 28 Aug 2025 09:44:00 GMT",
+          "content-type": "application/json",
+          "content-length": "5620",
+          "connection": "keep-alive",
+          "x-amzn-requestid": "c15fdf18-cf04-41e9-8649-f242c45bb1c3",
+          "x-amzn-bedrock-invocation-latency": "34339",
+          "x-amzn-bedrock-cache-write-input-token-count": "4475",
+          "x-amzn-bedrock-cache-read-input-token-count": "0",
+          "x-amzn-bedrock-output-token-count": "1596",
+          "x-amzn-bedrock-input-token-count": "9"
+        },
+        "RetryAttempts": 0
+      },
+      "raw_anthropic_response": {
+        "id": "msg_bdrk_0131cBHycesYcQAm82eE3NJf",
+        "type": "message",
+        "role": "assistant",
+        "model": "claude-3-7-sonnet-20250219",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "Let me analyze the provided document carefully according to the classification workflow: 1. **TEXT EXTRACTION** - The document appears to be in Spanish - It's a certificate of shareholder composition (Composición Accionaria) - It's issued by a public accountant named Astrid Rocio Lozano - It certifies the shareholder structure of a company called \"Constructora e Inmobiliaria Rivera Incora SAS\" 2. **PRIORITY CHECKS** - The document has substantial text, so it's not BLANK - It contains actual content, not just links, so it's not LINK_ONLY 3. **ISSUER IDENTIFICATION** - The issuer appears to be an accountant (Contador Público) named Astrid Rocio Lozano - Not issued by DIAN or a Chamber of Commerce - Issued by a corporate entity's accountant 4. **DOCUMENT FUNCTION ANALYSIS** - This document certifies the ownership structure/shareholding composition of a company - It shows percentages, monetary values, and number of shares for each shareholder - It specifically has \"COMPOSICION ACCIONARIA\" as the title (which means \"Shareholder Composition\") - It includes shareholder names, document numbers, percentages, values, and number of shares 5. **CATEGORY CLASSIFICATION** Looking at the categories in order: - Not CECRL: Not a personal identification document - Not RUT: Not a tax registration document issued by DIAN - Not CERL: Not a certificate of existence and representation issued by a Chamber of Commerce - Possibly ACC: This appears to be a document that certifies the ownership structure of a company - Not RUB: Not a DIAN report about beneficial owners The document has the following characteristics of an ACC: - Clear shareholder terminology: \"COMPOSICION ACCIONARIA\" (Shareholder Composition) as title - Lists the shareholders (\"NOMBRE DE SOCIOS\") - Shows ownership percentages (\"PORCENTAJE\") - Shows number of shares (\"No. ACCIONES\") - Shows capital contributions (\"VALOR\") - Owner identification with names and ID numbers - Certification by a public accountant - Shows exact distribution of ownership among shareholders The document explicitly shows: - Two shareholders: Leowilston Rivera Mendez (49%) and Marcos Jair Cuervo Mendez (51%) - Their ID numbers: 80.057.686 and 1.022.372.943 - Their ownership values: $98,000,000 and $102,000,000 - Number of shares: 196 and 204 - Total capital of the company: $200,000,000 (200 million pesos) - 400 total shares 6. **CONFIDENCE VALIDATION** - Strong evidence: The document has clear indicators of shareholder composition - The title explicitly states \"COMPOSICION ACCIONARIA\" - All key indicators for ACC classification are present Based on this analysis, the correct classification is ACC (Documents that certify the ownership structure and shareholding composition of a company). Now let me extract the complete text from the document: ``` ASTRID ROCIO LOZANO C.C. 65.800.711 de Purificación Contador Público T.P. 193485-T Universidad Antonio Nariño COMPOSICION ACCIONARIA EL SUSCRITO CONTADOR PÚBLICO DE LA SOCIEDAD CONSTRUCTORA E INMOBILIARIA RIVERA INCORA SAS. NIT 901.106.859-4 CERTIFICA QUE: El capital de la sociedad es de DOSCIENTOS MILLONES DE PESOS MONEDA LEGAL (200.000.000) íntegramente suscrito y pagado por los socios accionistas. Repartidos en la siguiente forma o proporción, entre los socios accionistas, en las siguientes proporciones: NOMBRE DE SOCIOS | No. DE DOCUMENTO | PORCENTAJE | VALOR | No. ACCIONES LEOWILSTON RIVERA MENDEZ | 80.057.686 | 49% | $98.000.000 | 196 MARCOS JAIR CUERVO MENDEZ | 1.022.372.943 | 51% | $102.000.000 | 204 TOTAL | | 100% | $200.000.000 | 400 La presente se expide en la ciudad de Bogotá, a los seis (16) días del mes de Marzo de 2021. ASTRID ROCIO LOZANO CONTADOR PÚBLICO TP. 193485-T E-mail: aslozano-@hotmail.com ``` Therefore, the classification is ACC with the extracted text as shown above.",
+            "signature": "ErcBCkgIBxABGAIiQImuohALXozeTJ5lCdTvX4k6P7imNziEtm8Ee3C6gJiAUAqAUya8zA42EXSRXWCNXq14GBTGntqbRlnKnp3YNNoSDM7Gbc3OiJZH97CtchoMC34BpG4wWlApQV1FIjC2klVPs7M8pKjxnrN9lKW2F5K6mwW6v/TgI2jTFHBbZ95DPodPQd5YuJgeB0HpMloqHdiWDGZsKfVEVr076w3yCziHASsF/woBShKlUMYsGAI="
+          },
+          {
+            "type": "text",
+            "text": "```json { \"category\": \"ACC\", \"text\": \"ASTRID ROCIO LOZANO\\nC.C. 65.800.711 de Purificación\\nContador Público T.P. 193485-T\\nUniversidad Antonio Nariño\\n\\nCOMPOSICION ACCIONARIA\\n\\nEL SUSCRITO CONTADOR PÚBLICO DE LA SOCIEDAD\\nCONSTRUCTORA E INMOBILIARIA RIVERA INCORA SAS.\\n\\nNIT 901.106.859-4\\n\\nCERTIFICA QUE:\\n\\nEl capital de la sociedad es de DOSCIENTOS MILLONES DE PESOS MONEDA LEGAL (200.000.000) íntegramente suscrito y pagado por los socios accionistas. Repartidos en la siguiente forma o proporción, entre los socios accionistas, en las siguientes proporciones:\\n\\nNOMBRE DE SOCIOS | No. DE DOCUMENTO | PORCENTAJE | VALOR | No. ACCIONES\\nLEOWILSTON RIVERA MENDEZ | 80.057.686 | 49% | $98.000.000 | 196\\nMARCOS JAIR CUERVO MENDEZ | 1.022.372.943 | 51% | $102.000.000 | 204\\nTOTAL | | 100% | $200.000.000 | 400\\n\\nLa presente se expide en la ciudad de Bogotá, a los seis (16) días del mes de Marzo de 2021.\\n\\nASTRID ROCIO LOZANO\\nCONTADOR PÚBLICO\\nTP. 193485-T\\nE-mail: aslozano-@hotmail.com\" } ```"
+          }
+        ],
+        "stop_reason": "end_turn",
+        "stop_sequence": null,
+        "usage": {
+          "input_tokens": 9,
+          "cache_creation_input_tokens": 4475,
+          "cache_read_input_tokens": 0,
+          "output_tokens": 1596
+        }
+      },
+      "model_id": "us.anthropic.claude-3-7-sonnet-20250219-v1:0",
+      "api_used": "invoke_model",
+      "model_params": {
+        "max_tokens": 8000,
+        "top_p": 1,
+        "temperature": 1,
+        "thinking": {
+          "type": "enabled",
+          "budget_tokens": 4096
+        }
+      }
+    },
+    "expected_category": "ACC",
+    "model_used": "us.anthropic.claude-3-7-sonnet-20250219-v1:0",
+    "api_used": "invoke_model",
+    "pdf_info": {
+      "original_size": 349282,
+      "first_page_size": 349248,
+      "is_scanned": true
+    }
+  },
+  "extraction_result": {
+    "extraction_data": {
+      "path": "ACC/901106859/131_CA_2020-02-29.pdf",
+      "result": {
+        "companyName": "CONSTRUCTORA E INMOBILIARIA RIVERA INCORA SAS",
+        "documentCategory": "Equity Composition",
+        "taxId": "901.106.859-4",
+        "country": "Colombia",
+        "identificationDetails": {
+          "source": "text_reference",
+          "indicators": [
+            "Bogotá",
+            "NIT format"
+          ],
+          "conflictingSources": [],
+          "requiresReview": "false"
+        },
+        "relatedParties": [
+          {
+            "type": "person",
+            "firstName": "LEOWILSTON",
+            "lastName": "RIVERA MENDEZ",
+            "identificationType": "C.C.",
+            "identificationNumber": "80.057.686",
+            "relationshipType": "Shareholder",
+            "participationPercentage": "49",
+            "timeFound": "1",
+            "job": ""
+          },
+          {
+            "type": "person",
+            "firstName": "MARCOS JAIR",
+            "lastName": "CUERVO MENDEZ",
+            "identificationType": "C.C.",
+            "identificationNumber": "1.022.372.943",
+            "relationshipType": "Shareholder",
+            "participationPercentage": "51",
+            "timeFound": "1",
+            "job": ""
+          }
+        ]
+      },
+      "documentType": "company",
+      "documentNumber": "901106859",
+      "category": "ACC"
+    },
+    "raw_response": {
+      "output": {
+        "message": {
+          "content": [
+            {
+              "text": "```json { \"result\": { \"companyName\": \"CONSTRUCTORA E INMOBILIARIA RIVERA INCORA SAS\", \"documentCategory\": \"Equity Composition\", \"taxId\": \"901.106.859-4\", \"country\": \"Colombia\", \"identificationDetails\": { \"source\": \"text_reference\", \"indicators\": [ \"Bogotá\", \"NIT format\" ], \"conflictingSources\": [], \"requiresReview\": \"false\" }, \"relatedParties\": [ { \"type\": \"person\", \"firstName\": \"LEOWILSTON\", \"lastName\": \"RIVERA MENDEZ\", \"identificationType\": \"C.C.\", \"identificationNumber\": \"80.057.686\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"49\", \"timeFound\": \"1\", \"job\": \"\" }, { \"type\": \"person\", \"firstName\": \"MARCOS JAIR\", \"lastName\": \"CUERVO MENDEZ\", \"identificationType\": \"C.C.\", \"identificationNumber\": \"1.022.372.943\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"51\", \"timeFound\": \"1\", \"job\": \"\" } ] }, \"documentType\": \"company\", \"category\": \"ACC\" } ```"
+            }
+          ]
+        }
+      },
+      "stopReason": "end_turn",
+      "usage": {
+        "input_tokens": 9,
+        "cache_creation_input_tokens": 6073,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 1457
+      },
+      "ResponseMetadata": {
+        "RequestId": "1893129a-30a6-4f73-bf1b-0f103a5df450",
+        "HTTPStatusCode": 200,
+        "HTTPHeaders": {
+          "date": "Thu, 28 Aug 2025 09:44:30 GMT",
+          "content-type": "application/json",
+          "content-length": "5761",
+          "connection": "keep-alive",
+          "x-amzn-requestid": "1893129a-30a6-4f73-bf1b-0f103a5df450",
+          "x-amzn-bedrock-invocation-latency": "29532",
+          "x-amzn-bedrock-cache-write-input-token-count": "6073",
+          "x-amzn-bedrock-cache-read-input-token-count": "0",
+          "x-amzn-bedrock-output-token-count": "1457",
+          "x-amzn-bedrock-input-token-count": "9"
+        },
+        "RetryAttempts": 0
+      },
+      "raw_anthropic_response": {
+        "id": "msg_bdrk_01V56udQ1oasMeUsGM232S3j",
+        "type": "message",
+        "role": "assistant",
+        "model": "claude-3-7-sonnet-20250219",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "Let me analyze this document carefully following the provided workflow and rules. ### Step 1: Document Analysis The document appears to be an equity composition certificate (\"COMPOSICION ACCIONARIA\") issued by a public accountant named ASTRID ROCIO LOZANO for a company called CONSTRUCTORA E INMOBILIARIA RIVERA INCORA SAS. Key elements: - Document is in Spanish - Location reference: Bogotá (indicating Colombia) - Date: March 16, 2021 - It certifies the shareholder composition of a company ### Step 2: Root Level Extraction - **companyName**: \"CONSTRUCTORA E INMOBILIARIA RIVERA INCORA SAS\" - **taxId**: \"901.106.859-4\" (this appears to be a Colombian NIT format) - **country**: \"Colombia\" (based on city \"Bogotá\" mentioned, and NIT format) - **documentCategory**: \"Equity Composition\" (as per rules, this is fixed) - **documentType**: \"company\" (as per rules, this is fixed) - **category**: \"ACC\" (as per rules, this is fixed) ### Step 3: Related Parties Processing I can identify two shareholders: 1. **First shareholder:** - Name: LEOWILSTON RIVERA MENDEZ - Document Number: 80.057.686 - Percentage: 49% - Value: $98.000.000 - Number of shares: 196 - Type: Appears to be a person (no company indicators in name) 2. **Second shareholder:** - Name: MARCOS JAIR CUERVO MENDEZ - Document Number: 1.022.372.943 - Percentage: 51% - Value: $102.000.000 - Number of shares: 204 - Type: Appears to be a person (no company indicators in name) Both appear to be individuals (PersonRelatedParty) rather than companies. ### Step 4: Validation & Cross-Checking - **taxId** format (901.106.859-4) matches Colombian NIT pattern - **identificationType** for shareholders would be \"C.C.\" (Colombian Cédula de Ciudadanía) based on the format of their ID numbers - Percentages add up to 100% (49% + 51%) - All required fields are present - No conflicts detected ### Developing the JSON output Let me build the JSON response according to the schema: ```json { \"result\": { \"companyName\": \"CONSTRUCTORA E INMOBILIARIA RIVERA INCORA SAS\", \"documentCategory\": \"Equity Composition\", \"taxId\": \"901.106.859-4\", \"country\": \"Colombia\", \"identificationDetails\": { \"source\": \"text_reference\", \"indicators\": [ \"Bogotá\", \"NIT format\" ], \"conflictingSources\": [], \"requiresReview\":\"false\" }, \"relatedParties\": [ { \"type\": \"person\", \"firstName\": \"LEOWILSTON\", \"lastName\": \"RIVERA MENDEZ\", \"identificationType\": \"C.C.\", \"identificationNumber\": \"80.057.686\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"49\", \"timeFound\":\"1\", \"job\":\"\" }, { \"type\": \"person\", \"firstName\": \"MARCOS JAIR\", \"lastName\": \"CUERVO MENDEZ\", \"identificationType\": \"C.C.\", \"identificationNumber\": \"1.022.372.943\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"51\", \"timeFound\":\"1\", \"job\":\"\" } ] }, \"documentType\": \"company\", \"category\": \"ACC\" } ``` Let me double-check this against the requirements: - All mandatory fields are included - Each shareholder is properly classified as a person - Colombian C.C. identificationType is used for citizens - Participation percentages sum to 100% - No conflicts detected, so requiresReview is set to \"false\" - Job fields included but empty as no jobs/roles are mentioned This JSON follows the schema and captures all the information from the document accurately.",
+            "signature": "ErcBCkgIBxABGAIiQLtFRfSNpc5ucUlnoHtQsxLjV75SrMyyQEX+PVMsqYB6QTBYMNEu9+wFdZx1Ceg4GHonnekiJOoYPSfEV/jA64MSDHtouCoxd7xWMQdnshoME+BKYFraUdk7W60HIjB6dziQiqLnjppCwVtwtCKfNlAt++e9xpld4emF0t2S4s89O0K8GswQtuIpsS/0ToAqHdwfKDlmGclNidGQ4/KYoBWgtPSxpOpzF3BhWhQyGAI="
+          },
+          {
+            "type": "text",
+            "text": "```json { \"result\": { \"companyName\": \"CONSTRUCTORA E INMOBILIARIA RIVERA INCORA SAS\", \"documentCategory\": \"Equity Composition\", \"taxId\": \"901.106.859-4\", \"country\": \"Colombia\", \"identificationDetails\": { \"source\": \"text_reference\", \"indicators\": [ \"Bogotá\", \"NIT format\" ], \"conflictingSources\": [], \"requiresReview\": \"false\" }, \"relatedParties\": [ { \"type\": \"person\", \"firstName\": \"LEOWILSTON\", \"lastName\": \"RIVERA MENDEZ\", \"identificationType\": \"C.C.\", \"identificationNumber\": \"80.057.686\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"49\", \"timeFound\": \"1\", \"job\": \"\" }, { \"type\": \"person\", \"firstName\": \"MARCOS JAIR\", \"lastName\": \"CUERVO MENDEZ\", \"identificationType\": \"C.C.\", \"identificationNumber\": \"1.022.372.943\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"51\", \"timeFound\": \"1\", \"job\": \"\" } ] }, \"documentType\": \"company\", \"category\": \"ACC\" } ```"
+          }
+        ],
+        "stop_reason": "end_turn",
+        "stop_sequence": null,
+        "usage": {
+          "input_tokens": 9,
+          "cache_creation_input_tokens": 6073,
+          "cache_read_input_tokens": 0,
+          "output_tokens": 1457
+        }
+      },
+      "model_id": "us.anthropic.claude-3-7-sonnet-20250219-v1:0",
+      "api_used": "invoke_model",
+      "model_params": {
+        "max_tokens": 8000,
+        "top_p": 1,
+        "temperature": 1,
+        "thinking": {
+          "type": "enabled",
+          "budget_tokens": 4096
+        }
+      }
+    },
+    "model_used": "us.anthropic.claude-3-7-sonnet-20250219-v1:0",
+    "api_used": "invoke_model"
+  }
+}

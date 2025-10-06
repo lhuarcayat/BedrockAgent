@@ -1,0 +1,33 @@
+{
+  "ResponseMetadata": {
+    "RequestId": "8522bf62-04e1-404a-b366-c8ed56a5f157",
+    "HTTPStatusCode": 200,
+    "HTTPHeaders": {
+      "date": "Tue, 17 Jun 2025 14:28:05 GMT",
+      "content-type": "application/json",
+      "content-length": "1304",
+      "connection": "keep-alive",
+      "x-amzn-requestid": "8522bf62-04e1-404a-b366-c8ed56a5f157"
+    },
+    "RetryAttempts": 0
+  },
+  "output": {
+    "message": {
+      "role": "assistant",
+      "content": [
+        {
+          "text": "```json\n{\n  \"path\": \"s3://par-servicios-poc-dev-filling-desk/par-servicios-poc/RUB/900543749/380030_RUB_2025-01-21.pdf\",\n  \"result\": {\n    \"companyName\": \"VATCO GROUP LTDA\",\n    \"country\": \"Colombia\",\n    \"documentType\": \"NIT\",\n    \"taxId\": \"900543749\",\n    \"relatedParties\": [\n      {\n        \"firstName\": \"DIANA\",\n        \"lastName\": \"MONSALVE\",\n        \"identificationType\": \"NIT\",\n        \"identificationNumber\": \"169\",\n        \"noveltyType\": \"Registro\",\n        \"participationPercentage\": \"95\"\n      },\n      {\n        \"firstName\": \"CASTELLANOS\",\n        \"lastName\": \"BAUTISTA\",\n        \"identificationType\": \"NIT\",\n        \"identificationNumber\": \"169\",\n        \"noveltyType\": \"Registro\",\n        \"participationPercentage\": \"5\"\n      }\n    ]\n  },\n  \"confidenceScores\": {\n    \"companyName\": 100,\n    \"documentType\": 100,\n    \"country\": 100,\n    \"taxId\": 100,\n    \"relatedParties\": 90\n  },\n  \"document_type\": \"company\",\n  \"document_number\": \"900543749\",\n  \"category\": \"RUB\"\n}\n```"
+        }
+      ]
+    }
+  },
+  "stopReason": "end_turn",
+  "usage": {
+    "inputTokens": 8126,
+    "outputTokens": 339,
+    "totalTokens": 8465
+  },
+  "metrics": {
+    "latencyMs": 8045
+  }
+}

@@ -1,0 +1,131 @@
+{
+  "extraction_data": {
+    "result": {
+      "PrincipalCompanyName": "NEWSAT S.A.S.",
+      "DocumentCategory": "Equity Composition",
+      "TaxId": "830.513.366-3",
+      "IdentificationType": "NIT",
+      "Country": "Colombia",
+      "IdentificationDetails": {
+        "Source": "TextReference",
+        "Indicators": [
+          "Cámara de Comercio de Bogotá",
+          "Colombia",
+          "BOGOTA D.C."
+        ],
+        "ConflictingSources": [],
+        "RequiresReview": "false"
+      },
+      "RelatedParties": [
+        {
+          "Type": "person",
+          "FirstName": "CARLOS ENRIQUE",
+          "LastName": "ROSERO CERON",
+          "IdType": "CC",
+          "IdNumber": "6386024",
+          "RelationshipType": "Shareholder",
+          "ParticipationPercentage": "40%",
+          "TimeFound": "1",
+          "Job": ""
+        },
+        {
+          "Type": "person",
+          "FirstName": "SHAI",
+          "LastName": "BERCOVICH",
+          "IdType": "CE",
+          "IdNumber": "301680",
+          "RelationshipType": "Shareholder",
+          "ParticipationPercentage": "40%",
+          "TimeFound": "1",
+          "Job": ""
+        },
+        {
+          "Type": "person",
+          "FirstName": "DIEGO ALEJANDRO",
+          "LastName": "SALAZAR VASQUEZ",
+          "IdType": "CC",
+          "IdNumber": "91499446",
+          "RelationshipType": "Shareholder",
+          "ParticipationPercentage": "20%",
+          "TimeFound": "1",
+          "Job": ""
+        }
+      ]
+    },
+    "DocumentType": "company",
+    "Category": "ACC"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "{ \"result\": { \"PrincipalCompanyName\": \"NEWSAT S.A.S.\", \"DocumentCategory\": \"Equity Composition\", \"TaxId\": \"830.513.366-3\", \"IdentificationType\": \"NIT\", \"Country\": \"Colombia\", \"IdentificationDetails\": { \"Source\": \"TextReference\", \"Indicators\": [ \"Cámara de Comercio de Bogotá\", \"Colombia\", \"BOGOTA D.C.\" ], \"ConflictingSources\": [], \"RequiresReview\": \"false\" }, \"RelatedParties\": [ { \"Type\": \"person\", \"FirstName\": \"CARLOS ENRIQUE\", \"LastName\": \"ROSERO CERON\", \"IdType\": \"CC\", \"IdNumber\": \"6386024\", \"RelationshipType\": \"Shareholder\", \"ParticipationPercentage\": \"40%\", \"TimeFound\": \"1\", \"Job\": \"\" }, { \"Type\": \"person\", \"FirstName\": \"SHAI\", \"LastName\": \"BERCOVICH\", \"IdType\": \"CE\", \"IdNumber\": \"301680\", \"RelationshipType\": \"Shareholder\", \"ParticipationPercentage\": \"40%\", \"TimeFound\": \"1\", \"Job\": \"\" }, { \"Type\": \"person\", \"FirstName\": \"DIEGO ALEJANDRO\", \"LastName\": \"SALAZAR VASQUEZ\", \"IdType\": \"CC\", \"IdNumber\": \"91499446\", \"RelationshipType\": \"Shareholder\", \"ParticipationPercentage\": \"20%\", \"TimeFound\": \"1\", \"Job\": \"\" } ] }, \"DocumentType\": \"company\", \"Category\": \"ACC\" }"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 2206,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 4822,
+      "output_tokens": 1021
+    },
+    "ResponseMetadata": {
+      "RequestId": "edef562b-c9cb-4cbe-a49a-518a10a4abd0",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Mon, 01 Sep 2025 02:10:54 GMT",
+        "content-type": "application/json",
+        "content-length": "6343",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "edef562b-c9cb-4cbe-a49a-518a10a4abd0",
+        "x-amzn-bedrock-invocation-latency": "14688",
+        "x-amzn-bedrock-cache-write-input-token-count": "0",
+        "x-amzn-bedrock-cache-read-input-token-count": "4822",
+        "x-amzn-bedrock-output-token-count": "1021",
+        "x-amzn-bedrock-input-token-count": "2206"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_01DiynxdR1E5xJV5Q2G212NX",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-sonnet-4-20250514",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Let me analyze this document step by step: 1. **PrincipalCompanyName**: Looking at the document, I can see \"NEWSAT S.A.S.\" mentioned multiple times. It appears as both \"NEWSAT S.A.S\" and \"NEWSAT S.A.S.\" throughout the document. This seems to be the company whose shareholder composition is being reported. 2. **TaxId**: I can see \"NIT. 830.513.366-3\" mentioned explicitly in the document. 3. **IdentificationType**: The document clearly shows \"NIT\" as the identification type. 4. **Country**: I can see several indicators of Colombia: - \"Cámara de Comercio de Bogotá\" (Bogota Chamber of Commerce) - \"Colombia\" is explicitly mentioned - \"BOGOTA D.C.\" in the address - The NIT format is consistent with Colombian tax IDs 5. **RelatedParties**: Looking at the shareholder table, I can see three shareholders: - CARLOS ENRIQUE ROSERO CERON with CC 6386024, 40% participation - SHAI BERCOVICH with ID 301680, 40% participation - DIEGO ALEJANDRO SALAZAR VASQUEZ with CC 91499446, 20% participation Let me check the ID types: - 6386024: This looks like a Colombian CC (Cédula de Ciudadanía) - fits the pattern - 301680: This is shorter, could be CE (Cédula de Extranjería) - 91499446: This also looks like a Colombian CC All three appear to be individuals (persons) based on their names, not companies. 6. **DocumentCategory**: Should be \"Equity Composition\" 7. **DocumentType**: Should be \"company\" 8. **Category**: Should be \"ACC\" Let me check for conflicts: The document's details are consistent and complete. The shareholder percentages perfectly align, with each identification matching the expected format for Colombian documentation. No discrepancies or red flags are apparent in the equity composition.",
+          "signature": "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"
+        },
+        {
+          "type": "text",
+          "text": "{ \"result\": { \"PrincipalCompanyName\": \"NEWSAT S.A.S.\", \"DocumentCategory\": \"Equity Composition\", \"TaxId\": \"830.513.366-3\", \"IdentificationType\": \"NIT\", \"Country\": \"Colombia\", \"IdentificationDetails\": { \"Source\": \"TextReference\", \"Indicators\": [ \"Cámara de Comercio de Bogotá\", \"Colombia\", \"BOGOTA D.C.\" ], \"ConflictingSources\": [], \"RequiresReview\": \"false\" }, \"RelatedParties\": [ { \"Type\": \"person\", \"FirstName\": \"CARLOS ENRIQUE\", \"LastName\": \"ROSERO CERON\", \"IdType\": \"CC\", \"IdNumber\": \"6386024\", \"RelationshipType\": \"Shareholder\", \"ParticipationPercentage\": \"40%\", \"TimeFound\": \"1\", \"Job\": \"\" }, { \"Type\": \"person\", \"FirstName\": \"SHAI\", \"LastName\": \"BERCOVICH\", \"IdType\": \"CE\", \"IdNumber\": \"301680\", \"RelationshipType\": \"Shareholder\", \"ParticipationPercentage\": \"40%\", \"TimeFound\": \"1\", \"Job\": \"\" }, { \"Type\": \"person\", \"FirstName\": \"DIEGO ALEJANDRO\", \"LastName\": \"SALAZAR VASQUEZ\", \"IdType\": \"CC\", \"IdNumber\": \"91499446\", \"RelationshipType\": \"Shareholder\", \"ParticipationPercentage\": \"20%\", \"TimeFound\": \"1\", \"Job\": \"\" } ] }, \"DocumentType\": \"company\", \"Category\": \"ACC\" }"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 2206,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 4822,
+        "output_tokens": 1021
+      }
+    },
+    "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 8000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+  "api_used": "invoke_model"
+}

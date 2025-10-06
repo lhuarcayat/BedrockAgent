@@ -1,0 +1,33 @@
+{
+  "ResponseMetadata": {
+    "RequestId": "de9df0cd-4cc8-4d22-b032-970321355528",
+    "HTTPStatusCode": 200,
+    "HTTPHeaders": {
+      "date": "Thu, 05 Jun 2025 21:52:14 GMT",
+      "content-type": "application/json",
+      "content-length": "1796",
+      "connection": "keep-alive",
+      "x-amzn-requestid": "de9df0cd-4cc8-4d22-b032-970321355528"
+    },
+    "RetryAttempts": 0
+  },
+  "output": {
+    "message": {
+      "role": "assistant",
+      "content": [
+        {
+          "text": "To proceed with the extraction, I need the actual JSON document content that includes the text and metadata of the identification document. You've provided guidelines and an empty document example but not the specific document content to extract from.\n\nPlease provide the JSON input with the document text and metadata, and I'll be happy to assist with the extraction process, following the detailed guidelines you've outlined. \n\nOnce I have the document content, I can start the step-by-step extraction process:\n\n1. **Document Validation**: Check if the document is an official identification document.\n2. **Document Analysis and Data Extraction**: Extract personal information, identification type, number, country issuer, and nationality.\n3. **Date and Format Handling**: Convert dates to the required format and preserve identification number formatting.\n4. **Confidence Scoring**: Assign confidence scores to each field based on the extraction certainty.\n5. **Validation Checklist**: Verify the presence and accuracy of all required fields.\n\nPlease provide the necessary document content to begin the extraction process. \n\nGiven the absence of specific document content, I will illustrate a hypothetical response based on the examples provided earlier:\n\n```json\n{\n  \"firstName\": \"Claudia Tatiana\",\n  \"lastName\": \"Fonseca Uribe\",\n  \"country_issuer\": \"Colombia\",\n  \"nationality\": \"Colombia\",\n  \"identificationType\": \"Cedula de Ciudadanía\",\n  \"identificationNumber\": \"52.255.747\"\n}\n```\n\nPlease provide the actual document content for a precise extraction."
+        }
+      ]
+    }
+  },
+  "stopReason": "end_turn",
+  "usage": {
+    "inputTokens": 3046,
+    "outputTokens": 302,
+    "totalTokens": 3348
+  },
+  "metrics": {
+    "latencyMs": 2914
+  }
+}

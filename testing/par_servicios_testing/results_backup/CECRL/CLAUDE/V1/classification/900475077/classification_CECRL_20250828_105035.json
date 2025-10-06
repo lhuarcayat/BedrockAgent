@@ -1,0 +1,87 @@
+{
+  "classification_data": {
+    "category": "CECRL",
+    "text": "REPUBLICA DE COLOMBIA IDENTIFICACION PERSONAL CEDULA DE CIUDADANIA NUMERO: 1.019.077.438 GALEANO NIÑO LAURA XIMENA FECHA DE NACIMIENTO: 07-DIC-1992 BOGOTA D.C. (CUNDINAMARCA) LUGAR DE NACIMIENTO 1.65 O+ F 22-DIC-2010 BOGOTA D.C. FECHA Y LUGAR DE EXPEDICION",
+    "document_number": "900475077",
+    "path": "CECRL/900475077/1019077438_2024-07-19.pdf"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "```json { \"category\": \"CECRL\", \"text\": \"REPUBLICA DE COLOMBIA\\nIDENTIFICACION PERSONAL\\nCEDULA DE CIUDADANIA\\nNUMERO: 1.019.077.438\\nGALEANO NIÑO\\nLAURA XIMENA\\nFECHA DE NACIMIENTO: 07-DIC-1992\\nBOGOTA D.C. (CUNDINAMARCA)\\nLUGAR DE NACIMIENTO\\n1.65\\nO+\\nF\\n22-DIC-2010 BOGOTA D.C.\\nFECHA Y LUGAR DE EXPEDICION\" } ```"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 9,
+      "cache_creation_input_tokens": 4496,
+      "cache_read_input_tokens": 0,
+      "output_tokens": 1238
+    },
+    "ResponseMetadata": {
+      "RequestId": "47e559cf-1ff6-485c-ac5d-5863ee84560f",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Thu, 28 Aug 2025 15:50:14 GMT",
+        "content-type": "application/json",
+        "content-length": "4953",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "47e559cf-1ff6-485c-ac5d-5863ee84560f",
+        "x-amzn-bedrock-invocation-latency": "31829",
+        "x-amzn-bedrock-cache-write-input-token-count": "4496",
+        "x-amzn-bedrock-cache-read-input-token-count": "0",
+        "x-amzn-bedrock-output-token-count": "1238",
+        "x-amzn-bedrock-input-token-count": "9"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_01AHHLqtaCxxuAtYvCgLyDRe",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-3-7-sonnet-20250219",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Let me analyze the PDF document by following the workflow: 1. **TEXT EXTRACTION** The document appears to be a Colombian identification card (Cédula de Ciudadanía). I can extract the following text: - \"REPUBLICA DE COLOMBIA\" - \"IDENTIFICACION PERSONAL\" - \"CEDULA DE CIUDADANIA\" - \"NUMERO: 1.019.077.438\" - \"GALEANO NIÑO\" (appears to be a surname) - \"LAURA XIMENA\" (appears to be first names) - There's a signature - The reverse side shows: - \"FECHA DE NACIMIENTO: 07-DIC-1992\" - \"BOGOTA D.C. (CUNDINAMARCA)\" - \"LUGAR DE NACIMIENTO\" - \"1.65\" (likely height) - \"O+\" (blood type) - \"F\" (likely gender - female) - \"22-DIC-2010 BOGOTA D.C.\" (likely issuance date and place) - There's a barcode and fingerprint 2. **PRIORITY CHECKS** - Not BLANK: The document contains meaningful content - Not LINK_ONLY: No hyperlinks or URLs are present 3. **ISSUER IDENTIFICATION** This is issued by the Colombian government (República de Colombia), not by DIAN, Chamber of Commerce, or a corporate entity. It's a personal identification document. 4. **DOCUMENT FUNCTION ANALYSIS** This is clearly a personal identification document (Cédula de Ciudadanía) which serves as the national ID card in Colombia. It contains personal information about an individual including name, photo, signature, ID number, date of birth, place of birth, blood type, gender, and biometric data (fingerprint). 5. **CATEGORY CLASSIFICATION** Following the evaluation order: - CECRL: This is a personal identification document, but I need to determine if it's specifically for a legal representative of a company. Based on the document content, this appears to be a standard Colombian national ID card (Cédula de Ciudadanía). There is no information indicating that this person is specifically identified as a legal representative of a company. It's just a personal identification document. However, according to the category definitions, CECRL is defined as \"Official personal identification documents (cédulas, passports, etc.) of legal representatives of companies\". While there's no explicit indication that this person is a legal representative, the document itself is a \"cédula\" which matches the document type described in CECRL. The document contains all the \"must-have indicators\" for CECRL: - Individual identification terminology: \"Identificación personal\", \"Cédula de Ciudadanía\" - Personal biographical data: birth date/place, blood type, gender - Individual photo and fingerprint - Government-issued personal ID number with individual name - Security elements: barcode, fingerprint There are no \"red flags\" for CECRL (no corporate entities, company names, business activities, or multiple individuals). The document also matches the \"distinguishing characteristics\" for CECRL: - Focus on ONE individual person - Contains biographic data (birth, location) - Has security elements (photo, fingerprint) - Government-issued personal document 6. **CONFIDENCE VALIDATION** I have strong evidence that this is a personal identification document (Cédula de Ciudadanía). However, I don't have explicit evidence that this person is a legal representative of a company, which is part of the CECRL definition. Given the workflow instructions to evaluate in order (CECRL first) and the fact that this document perfectly matches the type of document described in CECRL (even if I can't confirm the \"legal representative\" aspect), I will classify this as CECRL. The text extraction is: \"REPUBLICA DE COLOMBIA IDENTIFICACION PERSONAL CEDULA DE CIUDADANIA NUMERO: 1.019.077.438 GALEANO NIÑO LAURA XIMENA [Signature] FECHA DE NACIMIENTO: 07-DIC-1992 BOGOTA D.C. (CUNDINAMARCA) LUGAR DE NACIMIENTO 1.65 O+ F 22-DIC-2010 BOGOTA D.C. FECHA Y LUGAR DE EXPEDICION\"",
+          "signature": "ErcBCkgIBxABGAIiQFcr+Nm3hFpmuB9jQ4dpuRN3qFyGIr1F/wnzw5/o++s960cggpZOUEdqEM1xdrerCgDlvQ0VdWZjEwqmN6bwso0SDFJuvqdTSFMuCwWL5hoMGZLszkTpOBiF/L4/IjBuVJNd++3yHiQZ8m49IUGa0dnqeXiADuJN1A/l4qDHGmeZ27wtp0GLuZvAXqpMmUQqHQzyC4i7RdDDBLvI4gRxrqhYe3CtLvFQWE3M9v3sGAI="
+        },
+        {
+          "type": "text",
+          "text": "```json { \"category\": \"CECRL\", \"text\": \"REPUBLICA DE COLOMBIA\\nIDENTIFICACION PERSONAL\\nCEDULA DE CIUDADANIA\\nNUMERO: 1.019.077.438\\nGALEANO NIÑO\\nLAURA XIMENA\\nFECHA DE NACIMIENTO: 07-DIC-1992\\nBOGOTA D.C. (CUNDINAMARCA)\\nLUGAR DE NACIMIENTO\\n1.65\\nO+\\nF\\n22-DIC-2010 BOGOTA D.C.\\nFECHA Y LUGAR DE EXPEDICION\" } ```"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 9,
+        "cache_creation_input_tokens": 4496,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 1238
+      }
+    },
+    "model_id": "us.anthropic.claude-3-7-sonnet-20250219-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 8000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "expected_category": "CECRL",
+  "model_used": "us.anthropic.claude-3-7-sonnet-20250219-v1:0",
+  "api_used": "invoke_model",
+  "pdf_info": {
+    "original_size": 119794,
+    "first_page_size": 118331,
+    "is_scanned": true
+  }
+}

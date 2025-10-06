@@ -1,0 +1,145 @@
+{
+  "extraction_data": {
+    "result": {
+      "PrincipalCompanyName": "V.P. GLOBAL LTDA.",
+      "DocumentCategory": "Equity Composition",
+      "TaxId": "ForReview",
+      "IdentificationType": "ForReview",
+      "Country": "Colombia",
+      "IdentificationDetails": {
+        "Source": "TextReference",
+        "Indicators": [
+          "Barranquilla",
+          "Bogota",
+          "Cartagena",
+          "COLOMBIANA"
+        ],
+        "ConflictingSources": [
+          "Missing TaxId and IdentificationType for principal company"
+        ],
+        "RequiresReview": "true"
+      },
+      "RelatedParties": [
+        {
+          "Type": "person",
+          "FirstName": "Jose Miguel",
+          "LastName": "Villafañez Planells",
+          "IdType": "CC",
+          "IdNumber": "7474165",
+          "RelationshipType": "Shareholder",
+          "ParticipationPercentage": "49,00%",
+          "TimeFound": "1",
+          "Job": ""
+        },
+        {
+          "Type": "person",
+          "FirstName": "Vilma Leonor",
+          "LastName": "Jabba Galindo",
+          "IdType": "CC",
+          "IdNumber": "22430683",
+          "RelationshipType": "Shareholder",
+          "ParticipationPercentage": "49,00%",
+          "TimeFound": "1",
+          "Job": ""
+        },
+        {
+          "Type": "person",
+          "FirstName": "Jose Elias",
+          "LastName": "Villafañez Jabba",
+          "IdType": "CC",
+          "IdNumber": "72302912",
+          "RelationshipType": "Shareholder",
+          "ParticipationPercentage": "1,00%",
+          "TimeFound": "1",
+          "Job": ""
+        },
+        {
+          "Type": "person",
+          "FirstName": "Andres Felipe",
+          "LastName": "Villafañez Jabba",
+          "IdType": "CC",
+          "IdNumber": "1129577148",
+          "RelationshipType": "Shareholder",
+          "ParticipationPercentage": "1,00%",
+          "TimeFound": "1",
+          "Job": ""
+        }
+      ]
+    },
+    "DocumentType": "company",
+    "Category": "ACC"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "{ \"result\": { \"PrincipalCompanyName\": \"V.P. GLOBAL LTDA.\", \"DocumentCategory\": \"Equity Composition\", \"TaxId\": \"ForReview\", \"IdentificationType\": \"ForReview\", \"Country\": \"Colombia\", \"IdentificationDetails\": { \"Source\": \"TextReference\", \"Indicators\": [ \"Barranquilla\", \"Bogota\", \"Cartagena\", \"COLOMBIANA\" ], \"ConflictingSources\": [\"Missing TaxId and IdentificationType for principal company\"], \"RequiresReview\": \"true\" }, \"RelatedParties\": [ { \"Type\": \"person\", \"FirstName\": \"Jose Miguel\", \"LastName\": \"Villafañez Planells\", \"IdType\": \"CC\", \"IdNumber\": \"7474165\", \"RelationshipType\": \"Shareholder\", \"ParticipationPercentage\": \"49,00%\", \"TimeFound\": \"1\", \"Job\": \"\" }, { \"Type\": \"person\", \"FirstName\": \"Vilma Leonor\", \"LastName\": \"Jabba Galindo\", \"IdType\": \"CC\", \"IdNumber\": \"22430683\", \"RelationshipType\": \"Shareholder\", \"ParticipationPercentage\": \"49,00%\", \"TimeFound\": \"1\", \"Job\": \"\" }, { \"Type\": \"person\", \"FirstName\": \"Jose Elias\", \"LastName\": \"Villafañez Jabba\", \"IdType\": \"CC\", \"IdNumber\": \"72302912\", \"RelationshipType\": \"Shareholder\", \"ParticipationPercentage\": \"1,00%\", \"TimeFound\": \"1\", \"Job\": \"\" }, { \"Type\": \"person\", \"FirstName\": \"Andres Felipe\", \"LastName\": \"Villafañez Jabba\", \"IdType\": \"CC\", \"IdNumber\": \"1129577148\", \"RelationshipType\": \"Shareholder\", \"ParticipationPercentage\": \"1,00%\", \"TimeFound\": \"1\", \"Job\": \"\" } ] }, \"DocumentType\": \"company\", \"Category\": \"ACC\" }"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 1584,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 4822,
+      "output_tokens": 1247
+    },
+    "ResponseMetadata": {
+      "RequestId": "5de55897-43ef-4e72-a53c-08b7375dcf51",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Mon, 01 Sep 2025 02:09:12 GMT",
+        "content-type": "application/json",
+        "content-length": "7273",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "5de55897-43ef-4e72-a53c-08b7375dcf51",
+        "x-amzn-bedrock-invocation-latency": "20079",
+        "x-amzn-bedrock-cache-write-input-token-count": "0",
+        "x-amzn-bedrock-cache-read-input-token-count": "4822",
+        "x-amzn-bedrock-output-token-count": "1247",
+        "x-amzn-bedrock-input-token-count": "1584"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_012AS5Pibj2cTk8P3CAM8QAq",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-sonnet-4-20250514",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Let me carefully analyze this document to extract the required information according to the rules provided. First, I'll identify the main aspects: 1. **PrincipalCompanyName**: Looking at the document, I can see \"CERTIFICACION DE PARTICIPACION ACCIONARIA\" as the header, and then there's a table with \"V.P. GLOBAL LTDA.\" - this appears to be the main company. 2. **Country**: I can see several indicators: - \"BARRANQUILLA\" which is a city in Colombia - \"BOGOTA\" which is the capital of Colombia - \"CARTAGENA\" which is another Colombian city - The nationality column shows \"COLOMBIANA\" for all shareholders - The document appears to be signed in \"Barranquilla\" - The website shows \"www.grupovpglobal.com\" 3. **TaxId and IdentificationType**: Looking at the document, I need to find the NIT for V.P. GLOBAL LTDA. I don't see it explicitly stated in the visible portions of the document. 4. **RelatedParties**: From the table, I can see the shareholders: - VILLAFAÑEZ PLANELLS JOSE MIGUEL - CC 7474165 - 49,00% - JABBA GALINDO VILMA LEONOR - CC 22430683 - 49,00% - VILLAFAÑEZ JABBA JOSE ELIAS - CC 72302912 - 1,00% - VILLAFAÑEZ JABBA ANDRES FELIPE - CC 1129577148 - 1,00% All appear to be individuals (persons) based on the CC (Cédula de Ciudadanía) identification type. Let me organize this information: **Country**: Colombia (based on cities mentioned: Barranquilla, Bogota, Cartagena, and nationality \"COLOMBIANA\") **TaxId and IdentificationType**: Require further investigation as not explicitly visible in the document. The shareholders represent a family group with interconnected ownership, totaling 100% participation through four individuals with Colombian identification. The accountant's certification by Katherine Charris Robles provides professional validation, though she is not part of the ownership structure.",
+          "signature": "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"
+        },
+        {
+          "type": "text",
+          "text": "{ \"result\": { \"PrincipalCompanyName\": \"V.P. GLOBAL LTDA.\", \"DocumentCategory\": \"Equity Composition\", \"TaxId\": \"ForReview\", \"IdentificationType\": \"ForReview\", \"Country\": \"Colombia\", \"IdentificationDetails\": { \"Source\": \"TextReference\", \"Indicators\": [ \"Barranquilla\", \"Bogota\", \"Cartagena\", \"COLOMBIANA\" ], \"ConflictingSources\": [\"Missing TaxId and IdentificationType for principal company\"], \"RequiresReview\": \"true\" }, \"RelatedParties\": [ { \"Type\": \"person\", \"FirstName\": \"Jose Miguel\", \"LastName\": \"Villafañez Planells\", \"IdType\": \"CC\", \"IdNumber\": \"7474165\", \"RelationshipType\": \"Shareholder\", \"ParticipationPercentage\": \"49,00%\", \"TimeFound\": \"1\", \"Job\": \"\" }, { \"Type\": \"person\", \"FirstName\": \"Vilma Leonor\", \"LastName\": \"Jabba Galindo\", \"IdType\": \"CC\", \"IdNumber\": \"22430683\", \"RelationshipType\": \"Shareholder\", \"ParticipationPercentage\": \"49,00%\", \"TimeFound\": \"1\", \"Job\": \"\" }, { \"Type\": \"person\", \"FirstName\": \"Jose Elias\", \"LastName\": \"Villafañez Jabba\", \"IdType\": \"CC\", \"IdNumber\": \"72302912\", \"RelationshipType\": \"Shareholder\", \"ParticipationPercentage\": \"1,00%\", \"TimeFound\": \"1\", \"Job\": \"\" }, { \"Type\": \"person\", \"FirstName\": \"Andres Felipe\", \"LastName\": \"Villafañez Jabba\", \"IdType\": \"CC\", \"IdNumber\": \"1129577148\", \"RelationshipType\": \"Shareholder\", \"ParticipationPercentage\": \"1,00%\", \"TimeFound\": \"1\", \"Job\": \"\" } ] }, \"DocumentType\": \"company\", \"Category\": \"ACC\" }"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 1584,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 4822,
+        "output_tokens": 1247
+      }
+    },
+    "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 8000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+  "api_used": "invoke_model"
+}

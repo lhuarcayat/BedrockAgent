@@ -1,0 +1,87 @@
+{
+  "classification_data": {
+    "category": "BLANK",
+    "text": "hola hola",
+    "document_number": "921224537",
+    "path": "RUB/921224537/374381_RUB_2024-08-20.pdf"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "```json { \"category\": \"BLANK\", \"text\": \"hola\\n\\nhola\" } ```"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 1586,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 2707,
+      "output_tokens": 376
+    },
+    "ResponseMetadata": {
+      "RequestId": "8c693620-cf52-4684-ace2-4079c6a783cd",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Tue, 02 Sep 2025 16:39:49 GMT",
+        "content-type": "application/json",
+        "content-length": "4177",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "8c693620-cf52-4684-ace2-4079c6a783cd",
+        "x-amzn-bedrock-invocation-latency": "7426",
+        "x-amzn-bedrock-cache-write-input-token-count": "0",
+        "x-amzn-bedrock-cache-read-input-token-count": "2707",
+        "x-amzn-bedrock-output-token-count": "376",
+        "x-amzn-bedrock-input-token-count": "1586"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_01AhmiMUkmYX6BXoyKJ2AH2e",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-sonnet-4-20250514",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Let me analyze this document following the classification workflow: 1. **TEXT EXTRACTION** - The document contains very minimal text: \"hola\" appears twice - The page appears to be mostly white space with just these two instances of \"hola\" 2. **PRIORITY CHECKS** - BLANK: The document has minimal content - just the word \"hola\" repeated twice. This is essentially meaningless text with no identifiable purpose or substantial content - LINK_ONLY: There are no hyperlinks or URLs visible 3. **DOCUMENT FUNCTION ANALYSIS** - What is the main purpose? There is no identifiable main purpose - just the greeting \"hola\" with no context - This doesn't serve any of the functions described (personal identification, tax document, beneficiary document, company existence proof, shareholding composition) 4. **ISSUER IDENTIFICATION** - No issuer is identifiable - No authority or organization mentioned 5. **CATEGORY CLASSIFICATION** - This document fits the BLANK category definition: \"documents that are empty, contain only white space or a minimum of meaningless text\" - The word \"hola\" (hello in Spanish) repeated twice constitutes minimal meaningless text in the context of legal document classification According to the BLANK category definition: \"documents that are empty, contain only white space or a minimum of meaningless text\" - this document clearly fits this criteria as \"hola\" repeated twice is minimal and meaningless in a legal document context.",
+          "signature": "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"
+        },
+        {
+          "type": "text",
+          "text": "```json { \"category\": \"BLANK\", \"text\": \"hola\\n\\nhola\" } ```"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 1586,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 2707,
+        "output_tokens": 376
+      }
+    },
+    "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 8000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "expected_category": "RUB",
+  "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+  "api_used": "invoke_model",
+  "pdf_info": {
+    "original_size": 27939,
+    "first_page_size": 23318,
+    "is_scanned": true
+  }
+}

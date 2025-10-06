@@ -1,0 +1,118 @@
+{
+  "extraction_data": {
+    "result": {
+      "companyName": "MEGASERVICIOS DE INGENIERÍA S.A.S.",
+      "documentCategory": "Equity Composition",
+      "taxId": "805.031.602-7",
+      "country": "Colombia",
+      "identificationDetails": {
+        "source": "text_reference",
+        "indicators": [
+          "Cali",
+          "NIT format consistent with Colombia"
+        ],
+        "conflictingSources": [],
+        "requiresReview": "false"
+      },
+      "relatedParties": [
+        {
+          "type": "person",
+          "firstName": "Dora Matilde",
+          "lastName": "Trejos Puerta",
+          "identificationType": "C.C.",
+          "identificationNumber": "31.953.854",
+          "relationshipType": "Shareholder",
+          "participationPercentage": "50%",
+          "timeFound": "1",
+          "job": ""
+        },
+        {
+          "type": "person",
+          "firstName": "Juan Carlos",
+          "lastName": "Escobar Welsch",
+          "identificationType": "C.C.",
+          "identificationNumber": "16.733.280",
+          "relationshipType": "Shareholder",
+          "participationPercentage": "50%",
+          "timeFound": "1",
+          "job": "Representante Legal"
+        }
+      ]
+    },
+    "documentType": "company",
+    "category": "ACC"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "{ \"result\": { \"companyName\": \"MEGASERVICIOS DE INGENIERÍA S.A.S.\", \"documentCategory\": \"Equity Composition\", \"taxId\": \"805.031.602-7\", \"country\": \"Colombia\", \"identificationDetails\": { \"source\": \"text_reference\", \"indicators\": [ \"Cali\", \"NIT format consistent with Colombia\" ], \"conflictingSources\": [], \"requiresReview\": \"false\" }, \"relatedParties\": [ { \"type\": \"person\", \"firstName\": \"Dora Matilde\", \"lastName\": \"Trejos Puerta\", \"identificationType\": \"C.C.\", \"identificationNumber\": \"31.953.854\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"50%\", \"timeFound\": \"1\", \"job\": \"\" }, { \"type\": \"person\", \"firstName\": \"Juan Carlos\", \"lastName\": \"Escobar Welsch\", \"identificationType\": \"C.C.\", \"identificationNumber\": \"16.733.280\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"50%\", \"timeFound\": \"1\", \"job\": \"Representante Legal\" } ] }, \"documentType\": \"company\", \"category\": \"ACC\" }"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 9,
+      "cache_creation_input_tokens": 6107,
+      "cache_read_input_tokens": 0,
+      "output_tokens": 991
+    },
+    "ResponseMetadata": {
+      "RequestId": "3dc632f2-3bee-461a-8a1c-6e22dfa45feb",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Sun, 31 Aug 2025 05:43:28 GMT",
+        "content-type": "application/json",
+        "content-length": "6400",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "3dc632f2-3bee-461a-8a1c-6e22dfa45feb",
+        "x-amzn-bedrock-invocation-latency": "17375",
+        "x-amzn-bedrock-cache-write-input-token-count": "6107",
+        "x-amzn-bedrock-cache-read-input-token-count": "0",
+        "x-amzn-bedrock-output-token-count": "991",
+        "x-amzn-bedrock-input-token-count": "9"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_01PXai5fwjcR64pmZwgjm7Qd",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-sonnet-4-20250514",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Looking at this PDF document, I need to extract structured data for an Equity Composition (ACC) document. Let me analyze the document: 1. **Company Name**: The document header shows \"MEGASERVICIOS DE INGENIERÍA S.A.S.\" - this appears to be the main reporting company. 2. **Tax ID**: The document shows \"NIT: 805.031.602 – 7\" for MEGASERVICIOS DE INGENIERÍA S.A.S. 3. **Country**: The document is signed in \"Cali\" and there are references to Colombian format. The NIT format is consistent with Colombia. The document is in Spanish and the format suggests Colombia. 4. **Document details**: This is a certification (\"CERTIFICA QUE\") about the equity composition (\"composición Accionaria\") of MEGASERVICIOS DE INGENIERÍA S.A.S. 5. **Shareholders**: Looking at the table, I can see two shareholders: - DORA MATILDE TREJOS PUERTA, C.C. 31.953.854 - 50% participation - 7,042 shares - JUAN CARLOS ESCOBAR WELSCH, C.C. 16.733.280 - 50% participation - 7,042 shares The company has: - CAPITAL AUTORIZADO: $800.000.000 - CAPITAL SUSCRITO: $704.200.000 - CAPITAL PAGADO: $430.000.000 6. **Additional context**: The document mentions this certificate is requested by \"JUAN CARLOS ESCOBAR WELSCH, representante Legal de MEGASERVICIOS INGENIERÍA S.A.S.\" - so Juan Carlos appears to be the legal representative. 7. **Location and date**: Signed in Cali, September 23, 2020. Now let me structure this according to the schema: - companyName: \"MEGASERVICIOS DE INGENIERÍA S.A.S.\" - taxId: \"805.031.602-7\" (preserving the format with hyphen) - country: \"Colombia\" (based on NIT format, Cali location, Spanish language) I've identified two shareholders with equal 50% ownership, both Colombian citizens with standard identification documents. The data appears consistent and clear, with no apparent conflicts or need for additional verification.",
+          "signature": "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"
+        },
+        {
+          "type": "text",
+          "text": "{ \"result\": { \"companyName\": \"MEGASERVICIOS DE INGENIERÍA S.A.S.\", \"documentCategory\": \"Equity Composition\", \"taxId\": \"805.031.602-7\", \"country\": \"Colombia\", \"identificationDetails\": { \"source\": \"text_reference\", \"indicators\": [ \"Cali\", \"NIT format consistent with Colombia\" ], \"conflictingSources\": [], \"requiresReview\": \"false\" }, \"relatedParties\": [ { \"type\": \"person\", \"firstName\": \"Dora Matilde\", \"lastName\": \"Trejos Puerta\", \"identificationType\": \"C.C.\", \"identificationNumber\": \"31.953.854\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"50%\", \"timeFound\": \"1\", \"job\": \"\" }, { \"type\": \"person\", \"firstName\": \"Juan Carlos\", \"lastName\": \"Escobar Welsch\", \"identificationType\": \"C.C.\", \"identificationNumber\": \"16.733.280\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"50%\", \"timeFound\": \"1\", \"job\": \"Representante Legal\" } ] }, \"documentType\": \"company\", \"category\": \"ACC\" }"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 9,
+        "cache_creation_input_tokens": 6107,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 991
+      }
+    },
+    "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 8000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+  "api_used": "invoke_model"
+}

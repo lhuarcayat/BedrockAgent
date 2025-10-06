@@ -1,0 +1,117 @@
+{
+  "extraction_data": {
+    "result": {
+      "CompanyName": "TANQUES Y TAPAS INDUSTRIALES LIMITADA INDUTANPAS LTDA.",
+      "CompanyType": "LIMITADA",
+      "Country": "Colombia",
+      "DocumentPages": "4",
+      "DocumentType": "CERTIFICADO DE EXISTENCIA Y REPRESENTACIÓN LEGAL",
+      "TaxId": "860519821-1",
+      "MainAddress": "CR 5 ES 15 56, MOSQUERA",
+      "IncorporationDate": "2001-04-27",
+      "CompanyDuration": "2033-12-31",
+      "RegistrationNumber": "22469",
+      "Size": "PEQUEÑA EMPRESA",
+      "RelatedParties": [
+        {
+          "FirstName": "OSCAR CELIO",
+          "LastName": "MARIÑO",
+          "IdType": "CC",
+          "IdNumber": "152,867",
+          "RelationshipType": "GERENTE GENERAL"
+        },
+        {
+          "FirstName": "OSCAR ALBERTO",
+          "LastName": "MARIÑO FLOREZ",
+          "IdType": "CC",
+          "IdNumber": "19,333,470",
+          "RelationshipType": "SUPLENTE DEL GERENTE"
+        },
+        {
+          "FirstName": "ANA HERMINDA",
+          "LastName": "CARO PEREZ",
+          "IdType": "CC",
+          "IdNumber": "41,702,898",
+          "RelationshipType": "REVISOR FISCAL"
+        }
+      ],
+      "Embargoes": "",
+      "Liquidations": "",
+      "DocumentIssueDate": "2023-06-09",
+      "LastRegistrationRenewalDate": "2023-03-23"
+    }
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "```json { \"result\": { \"CompanyName\": \"TANQUES Y TAPAS INDUSTRIALES LIMITADA INDUTANPAS LTDA.\", \"CompanyType\": \"LIMITADA\", \"Country\": \"Colombia\", \"DocumentPages\": \"4\", \"DocumentType\": \"CERTIFICADO DE EXISTENCIA Y REPRESENTACIÓN LEGAL\", \"TaxId\": \"860519821-1\", \"MainAddress\": \"CR 5 ES 15 56, MOSQUERA\", \"IncorporationDate\": \"2001-04-27\", \"CompanyDuration\": \"2033-12-31\", \"RegistrationNumber\": \"22469\", \"Size\": \"PEQUEÑA EMPRESA\", \"RelatedParties\": [ { \"FirstName\": \"OSCAR CELIO\", \"LastName\": \"MARIÑO\", \"IdType\": \"CC\", \"IdNumber\": \"152,867\", \"RelationshipType\": \"GERENTE GENERAL\" }, { \"FirstName\": \"OSCAR ALBERTO\", \"LastName\": \"MARIÑO FLOREZ\", \"IdType\": \"CC\", \"IdNumber\": \"19,333,470\", \"RelationshipType\": \"SUPLENTE DEL GERENTE\" }, { \"FirstName\": \"ANA HERMINDA\", \"LastName\": \"CARO PEREZ\", \"IdType\": \"CC\", \"IdNumber\": \"41,702,898\", \"RelationshipType\": \"REVISOR FISCAL\" } ], \"Embargoes\": \"\", \"Liquidations\": \"\", \"DocumentIssueDate\": \"2023-06-09\", \"LastRegistrationRenewalDate\": \"2023-03-23\" } } ```"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 10805,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 2304,
+      "output_tokens": 1162
+    },
+    "ResponseMetadata": {
+      "RequestId": "2c3d460f-f021-4fc8-b443-9894191101ca",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Mon, 01 Sep 2025 06:31:08 GMT",
+        "content-type": "application/json",
+        "content-length": "6465",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "2c3d460f-f021-4fc8-b443-9894191101ca",
+        "x-amzn-bedrock-invocation-latency": "15307",
+        "x-amzn-bedrock-cache-write-input-token-count": "0",
+        "x-amzn-bedrock-cache-read-input-token-count": "2304",
+        "x-amzn-bedrock-output-token-count": "1162",
+        "x-amzn-bedrock-input-token-count": "10805"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_01Eqa3fqztFc1QU1xN1SLWWX",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-sonnet-4-20250514",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "I need to extract data from this Colombian \"Certificado de Existencia y Representación Legal\" document. Let me analyze each page carefully. **Page Count Analysis:** Looking at the document, I can see \"Página 1/4\", \"Página 2/4\", \"Página 3/4\", and \"Página 4/4\" at the bottom of each page, indicating this is a 4-page document. **Company Information:** - CompanyName: From the document header and content, I can see \"TANQUES Y TAPAS INDUSTRIALES LIMITADA INDUTANPAS LTDA.\" - CompanyType: \"LIMITADA\" (indicated by \"LTDA.\") - Country: Colombia (issued by \"CÁMARA DE COMERCIO DE FACATATIVA\") - TaxId: \"860519821-1\" (from \"NIT : 860519821-1\") - IdentificationType: \"NIT\" **Address:** - From \"DIRECCIÓN DEL DOMICILIO PRINCIPAL : CR 5 ES 15 56\" - And \"DOMICILIO : MOSQUERA\" - So MainAddress: \"CR 5 ES 15 56, MOSQUERA\" **Dates:** - DocumentIssueDate: \"2023/06/09\" (from \"Fecha expedición: 2023/06/09\") - IncorporationDate: \"ABRIL 27 DE 2001\" = \"2001-04-27\" (from \"FECHA DE MATRÍCULA : ABRIL 27 DE 2001\") - LastRegistrationRenewalDate: \"MARZO 23 DE 2023\" = \"2023-03-23\" (from \"FECHA DE RENOVACION DE LA MATRÍCULA : MARZO 23 DE 2023\") - CompanyDuration: \"31 DE DICIEMBRE DE 2033\" = \"2033-12-31\" (from \"QUE LA DURACIÓN DE LA PERSONA JURÍDICA (VIGENCIA) ES HASTA EL 31 DE DICIEMBRE DE 2033\") - RegistrationNumber: \"22469\" (from \"MATRÍCULA NO : 22469\") - Size: \"PEQUEÑA EMPRESA\" (from \"el tamaño de la empresa es PEQUEÑA EMPRESA\") I've identified key leadership and oversight roles. The company has three primary individuals: Oscar Celio Mariño as General Manager, Oscar Alberto Mariño Florez as Deputy Manager, and Ana Herminda Caro Perez, likely in an auditing capacity. Their identification numbers are recorded, providing additional verification of their roles within the organization. No current details exist regarding liquidations or potential legal embargoes on the company's records.",
+          "signature": "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"
+        },
+        {
+          "type": "text",
+          "text": "```json { \"result\": { \"CompanyName\": \"TANQUES Y TAPAS INDUSTRIALES LIMITADA INDUTANPAS LTDA.\", \"CompanyType\": \"LIMITADA\", \"Country\": \"Colombia\", \"DocumentPages\": \"4\", \"DocumentType\": \"CERTIFICADO DE EXISTENCIA Y REPRESENTACIÓN LEGAL\", \"TaxId\": \"860519821-1\", \"MainAddress\": \"CR 5 ES 15 56, MOSQUERA\", \"IncorporationDate\": \"2001-04-27\", \"CompanyDuration\": \"2033-12-31\", \"RegistrationNumber\": \"22469\", \"Size\": \"PEQUEÑA EMPRESA\", \"RelatedParties\": [ { \"FirstName\": \"OSCAR CELIO\", \"LastName\": \"MARIÑO\", \"IdType\": \"CC\", \"IdNumber\": \"152,867\", \"RelationshipType\": \"GERENTE GENERAL\" }, { \"FirstName\": \"OSCAR ALBERTO\", \"LastName\": \"MARIÑO FLOREZ\", \"IdType\": \"CC\", \"IdNumber\": \"19,333,470\", \"RelationshipType\": \"SUPLENTE DEL GERENTE\" }, { \"FirstName\": \"ANA HERMINDA\", \"LastName\": \"CARO PEREZ\", \"IdType\": \"CC\", \"IdNumber\": \"41,702,898\", \"RelationshipType\": \"REVISOR FISCAL\" } ], \"Embargoes\": \"\", \"Liquidations\": \"\", \"DocumentIssueDate\": \"2023-06-09\", \"LastRegistrationRenewalDate\": \"2023-03-23\" } } ```"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 10805,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 2304,
+        "output_tokens": 1162
+      }
+    },
+    "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 8000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+  "api_used": "invoke_model"
+}

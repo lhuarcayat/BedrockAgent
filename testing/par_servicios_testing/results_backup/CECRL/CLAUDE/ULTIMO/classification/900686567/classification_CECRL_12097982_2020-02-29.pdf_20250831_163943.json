@@ -1,0 +1,87 @@
+{
+  "classification_data": {
+    "category": "CECRL",
+    "text": "REPUBLICA DE COLOMBIA IDENTIFICACION PERSONAL CEDULA DE CIUDADANIA NUMERO 12.097.982 POLANIA ANDRADE APELLIDOS ENRIQUE NOMBRES FIRMA FECHA DE NACIMIENTO 04-DIC-1947 NEIVA (HUILA) LUGAR DE NACIMIENTO 1,69 ESTATURA O+ G.S. RH M SEXO 10-ABR-1969 NEIVA FECHA Y LUGAR DE EXPEDICION INDICE DERECHO REGISTRADOR NACIONAL CARLOS ARIEL SANCHEZ TORRES A 1903000 0163962 M-0012057092-2009/722 00137177/1A1 7120005800",
+    "document_number": "900686567",
+    "path": "CECRL/900686567/12097982_2020-02-29.pdf"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "```json { \"category\": \"CECRL\", \"text\": \"REPUBLICA DE COLOMBIA\\nIDENTIFICACION PERSONAL\\nCEDULA DE CIUDADANIA\\nNUMERO 12.097.982\\nPOLANIA ANDRADE\\nAPELLIDOS\\nENRIQUE\\nNOMBRES\\nFIRMA\\nFECHA DE NACIMIENTO 04-DIC-1947\\nNEIVA\\n(HUILA)\\nLUGAR DE NACIMIENTO\\n1,69 ESTATURA\\nO+ G.S. RH\\nM SEXO\\n10-ABR-1969 NEIVA\\nFECHA Y LUGAR DE EXPEDICION\\nINDICE DERECHO\\nREGISTRADOR NACIONAL\\nCARLOS ARIEL SANCHEZ TORRES\\nA 1903000 0163962 M-0012057092-2009/722 00137177/1A1 7120005800\" } ```"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 1594,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 3150,
+      "output_tokens": 880
+    },
+    "ResponseMetadata": {
+      "RequestId": "18578c65-53ec-4a39-ac8a-81f063c0d166",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Sun, 31 Aug 2025 21:39:43 GMT",
+        "content-type": "application/json",
+        "content-length": "5600",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "18578c65-53ec-4a39-ac8a-81f063c0d166",
+        "x-amzn-bedrock-invocation-latency": "14518",
+        "x-amzn-bedrock-cache-write-input-token-count": "0",
+        "x-amzn-bedrock-cache-read-input-token-count": "3150",
+        "x-amzn-bedrock-output-token-count": "880",
+        "x-amzn-bedrock-input-token-count": "1594"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_015s6mwnwa7TY7WKMZ9DZQMG",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-sonnet-4-20250514",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Let me analyze this document step by step according to the classification workflow: 1. **TEXT EXTRACTION** Looking at the document, I can extract the following text: - REPUBLICA DE COLOMBIA - IDENTIFICACION PERSONAL - CEDULA DE CIUDADANIA - NUMERO 12.097.982 - POLANIA ANDRADE - APELLIDOS: ENRIQUE - NOMBRES (there's a signature) - FECHA DE NACIMIENTO: 04-DIC-1947 - NEIVA - (HUILA) - LUGAR DE NACIMIENTO - 1,69 ESTATURA - O+ G.S. RH - M SEXO - 10-ABR-1969 NEIVA - FECHA Y LUGAR DE EXPEDICION - There's a fingerprint - INDICE DERECHO - REGISTRADOR NACIONAL - CARLOS ARIEL SANCHEZ TORRES - There's a barcode - Some additional numbers at the bottom 2. **PRIORITY CHECKS** - BLANK: No, this document has substantial content - LINK_ONLY: No, this is not mainly URLs/links 3. **DOCUMENT FUNCTION ANALYSIS** What is the MAIN PURPOSE of this document? - This is clearly a personal identification document - It contains \"CEDULA DE CIUDADANIA\" which means \"Citizenship Card\" - It has personal biographical data: date of birth (04-DIC-1947), place of birth (NEIVA, HUILA), blood type (O+), sex (M), height (1,69) - It has a photograph, signature, and fingerprint - It has an identification number (12.097.982) - This is definitively a CECRL indicative document 4. **ISSUER IDENTIFICATION** - This is issued by \"REPUBLICA DE COLOMBIA\" - a government identification authority - This confirms CECRL classification 5. **CATEGORY CLASSIFICATION** I've confirmed this is a Colombian government-issued personal identification document. The evidence includes specific terminology, comprehensive personal details, and official government markings. The document contains critical identifying information that uniquely represents an individual's official identity within the Colombian system.",
+          "signature": "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"
+        },
+        {
+          "type": "text",
+          "text": "```json { \"category\": \"CECRL\", \"text\": \"REPUBLICA DE COLOMBIA\\nIDENTIFICACION PERSONAL\\nCEDULA DE CIUDADANIA\\nNUMERO 12.097.982\\nPOLANIA ANDRADE\\nAPELLIDOS\\nENRIQUE\\nNOMBRES\\nFIRMA\\nFECHA DE NACIMIENTO 04-DIC-1947\\nNEIVA\\n(HUILA)\\nLUGAR DE NACIMIENTO\\n1,69 ESTATURA\\nO+ G.S. RH\\nM SEXO\\n10-ABR-1969 NEIVA\\nFECHA Y LUGAR DE EXPEDICION\\nINDICE DERECHO\\nREGISTRADOR NACIONAL\\nCARLOS ARIEL SANCHEZ TORRES\\nA 1903000 0163962 M-0012057092-2009/722 00137177/1A1 7120005800\" } ```"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 1594,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 3150,
+        "output_tokens": 880
+      }
+    },
+    "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 8000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "expected_category": "CECRL",
+  "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+  "api_used": "invoke_model",
+  "pdf_info": {
+    "original_size": 775594,
+    "first_page_size": 773947,
+    "is_scanned": true
+  }
+}

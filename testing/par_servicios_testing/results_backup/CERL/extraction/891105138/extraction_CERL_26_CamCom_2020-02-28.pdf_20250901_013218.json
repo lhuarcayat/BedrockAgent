@@ -1,0 +1,124 @@
+{
+  "extraction_data": {
+    "result": {
+      "CompanyName": "VARISUR S.A.S.",
+      "CompanyType": "S.A.S.",
+      "Country": "Colombia",
+      "DocumentPages": "8",
+      "DocumentType": "CERTIFICADO DE EXISTENCIA Y REPRESENTACIÓN LEGAL",
+      "TaxId": "891105138-2",
+      "MainAddress": "CALLE 26 NO . 4W 24 - Los andaquies, Neiva, Huila",
+      "IncorporationDate": "1986-10-27",
+      "CompanyDuration": "undefined",
+      "RegistrationNumber": "35107",
+      "Size": "Grande",
+      "RelatedParties": [
+        {
+          "FirstName": "MARCO FIDEL",
+          "LastName": "PINZON AZUERO",
+          "IdType": "C.C.",
+          "IdNumber": "19.447.157",
+          "RelationshipType": "GERENTE"
+        },
+        {
+          "FirstName": "CARLOS ERNESTO",
+          "LastName": "PINZON AZUERO",
+          "IdType": "C.C.",
+          "IdNumber": "79.393.585",
+          "RelationshipType": "SUBGERENTE"
+        },
+        {
+          "FirstName": "EDUAR",
+          "LastName": "OTALORA TOVAR",
+          "IdType": "C.C.",
+          "IdNumber": "7.684.368",
+          "RelationshipType": "REVISOR FISCAL PRINCIPAL"
+        },
+        {
+          "FirstName": "YENIFER",
+          "LastName": "CERQUERA LOZANO",
+          "IdType": "C.C.",
+          "IdNumber": "1.075.229.712",
+          "RelationshipType": "REVISOR FISCAL SUPLENTE"
+        }
+      ],
+      "Embargoes": "",
+      "Liquidations": "",
+      "DocumentIssueDate": "2024-12-11",
+      "LastRegistrationRenewalDate": "2024-03-21"
+    }
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "```json { \"result\": { \"CompanyName\": \"VARISUR S.A.S.\", \"CompanyType\": \"S.A.S.\", \"Country\": \"Colombia\", \"DocumentPages\": \"8\", \"DocumentType\": \"CERTIFICADO DE EXISTENCIA Y REPRESENTACIÓN LEGAL\", \"TaxId\": \"891105138-2\", \"MainAddress\": \"CALLE 26 NO . 4W 24 - Los andaquies, Neiva, Huila\", \"IncorporationDate\": \"1986-10-27\", \"CompanyDuration\": \"undefined\", \"RegistrationNumber\": \"35107\", \"Size\": \"Grande\", \"RelatedParties\": [ { \"FirstName\": \"MARCO FIDEL\", \"LastName\": \"PINZON AZUERO\", \"IdType\": \"C.C.\", \"IdNumber\": \"19.447.157\", \"RelationshipType\": \"GERENTE\" }, { \"FirstName\": \"CARLOS ERNESTO\", \"LastName\": \"PINZON AZUERO\", \"IdType\": \"C.C.\", \"IdNumber\": \"79.393.585\", \"RelationshipType\": \"SUBGERENTE\" }, { \"FirstName\": \"EDUAR\", \"LastName\": \"OTALORA TOVAR\", \"IdType\": \"C.C.\", \"IdNumber\": \"7.684.368\", \"RelationshipType\": \"REVISOR FISCAL PRINCIPAL\" }, { \"FirstName\": \"YENIFER\", \"LastName\": \"CERQUERA LOZANO\", \"IdType\": \"C.C.\", \"IdNumber\": \"1.075.229.712\", \"RelationshipType\": \"REVISOR FISCAL SUPLENTE\" } ], \"Embargoes\": \"\", \"Liquidations\": \"\", \"DocumentIssueDate\": \"2024-12-11\", \"LastRegistrationRenewalDate\": \"2024-03-21\" } } ```"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 25180,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 2304,
+      "output_tokens": 1357
+    },
+    "ResponseMetadata": {
+      "RequestId": "23e7ada1-8a9c-4c2e-a2f8-a2ced22d79ad",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Mon, 01 Sep 2025 06:32:18 GMT",
+        "content-type": "application/json",
+        "content-length": "7028",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "23e7ada1-8a9c-4c2e-a2f8-a2ced22d79ad",
+        "x-amzn-bedrock-invocation-latency": "20416",
+        "x-amzn-bedrock-cache-write-input-token-count": "0",
+        "x-amzn-bedrock-cache-read-input-token-count": "2304",
+        "x-amzn-bedrock-output-token-count": "1357",
+        "x-amzn-bedrock-input-token-count": "25180"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_01M5Rpyg5oZ79TaeUNMQfgyf",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-sonnet-4-20250514",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "I need to extract data from this Colombian certificate \"Certificado de Existencia y Representación Legal\" from the Cámara de Comercio del Huila. Let me analyze the document: 1. Page Count: Looking at the document, I can see \"Página X de 8\" at the bottom of pages, indicating this is an 8-page document. 2. Company Information: - CompanyName: In document span 1-4, I can see \"Razón Social : VARISUR S.A.S.\" - CompanyType: S.A.S. (from the company name) - Country: Colombia (from \"CÁMARA DE COMERCIO DEL HUILA\") - TaxId: From span 1-5, \"Nit : 891105138-2\" - IdentificationType: NIT (standard for Colombian documents) 3. Main Address: - From span 1-5: \"Dirección del domicilio principal : CALLE 26 NO . 4W 24 - Los andaquies\" - From span 1-6: \"Municipio : Neiva , Huila\" - So MainAddress should be: \"CALLE 26 NO . 4W 24 - Los andaquies, Neiva, Huila\" 4. Dates: - IncorporationDate: From span 1-5: \"Fecha de matrícula : 27 de octubre de 1986\" = 1986-10-27 - DocumentIssueDate: From span 1-1: \"Fecha expedición: 11 /12/2024 - 08:48:33\" = 2024-12-11 - LastRegistrationRenewalDate: From span 1-5: \"Fecha de renovación: 21 de marzo de 2024\" = 2024-03-21 - CompanyDuration: From span 1-25: \"La persona jurídica no se encuentra disuelta y su duración es indefinida.\" = \"undefined\" I've identified additional registration details and key leadership information. The company is registered as a \"Grande\" enterprise with registration number 35107. Key leadership includes Marco Fidel Pinzon Azuero as General Manager and Carlos Ernesto Pinzon Azuero as Deputy Manager, both identified by their national identification numbers. The fiscal review team consists of two members: Eduar Otalora Tovar as Principal Fiscal Reviewer and Yenifer Cerquera Lozano as Substitute Fiscal Reviewer, each with their professional credentials and identification details. The document type is a Legal Existence and Representation Certificate, with no specific liquidation or embargo information noted.",
+          "signature": "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"
+        },
+        {
+          "type": "text",
+          "text": "```json { \"result\": { \"CompanyName\": \"VARISUR S.A.S.\", \"CompanyType\": \"S.A.S.\", \"Country\": \"Colombia\", \"DocumentPages\": \"8\", \"DocumentType\": \"CERTIFICADO DE EXISTENCIA Y REPRESENTACIÓN LEGAL\", \"TaxId\": \"891105138-2\", \"MainAddress\": \"CALLE 26 NO . 4W 24 - Los andaquies, Neiva, Huila\", \"IncorporationDate\": \"1986-10-27\", \"CompanyDuration\": \"undefined\", \"RegistrationNumber\": \"35107\", \"Size\": \"Grande\", \"RelatedParties\": [ { \"FirstName\": \"MARCO FIDEL\", \"LastName\": \"PINZON AZUERO\", \"IdType\": \"C.C.\", \"IdNumber\": \"19.447.157\", \"RelationshipType\": \"GERENTE\" }, { \"FirstName\": \"CARLOS ERNESTO\", \"LastName\": \"PINZON AZUERO\", \"IdType\": \"C.C.\", \"IdNumber\": \"79.393.585\", \"RelationshipType\": \"SUBGERENTE\" }, { \"FirstName\": \"EDUAR\", \"LastName\": \"OTALORA TOVAR\", \"IdType\": \"C.C.\", \"IdNumber\": \"7.684.368\", \"RelationshipType\": \"REVISOR FISCAL PRINCIPAL\" }, { \"FirstName\": \"YENIFER\", \"LastName\": \"CERQUERA LOZANO\", \"IdType\": \"C.C.\", \"IdNumber\": \"1.075.229.712\", \"RelationshipType\": \"REVISOR FISCAL SUPLENTE\" } ], \"Embargoes\": \"\", \"Liquidations\": \"\", \"DocumentIssueDate\": \"2024-12-11\", \"LastRegistrationRenewalDate\": \"2024-03-21\" } } ```"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 25180,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 2304,
+        "output_tokens": 1357
+      }
+    },
+    "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 8000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+  "api_used": "invoke_model"
+}

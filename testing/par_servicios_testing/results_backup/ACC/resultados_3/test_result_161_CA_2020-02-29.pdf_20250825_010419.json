@@ -1,0 +1,192 @@
+{
+  "document_name": "161_CA_2020-02-29.pdf",
+  "category": "ACC",
+  "classification_success": true,
+  "extraction_success": true,
+  "overall_success": true,
+  "timestamp": "2025-08-25T01:03:58.026219",
+  "classification_result": {
+    "classification_data": {
+      "category": "ACC",
+      "text": "ATLANTIC MARINE FUELS CERTIFICADO DE COMPOSICION ACCIONARIA Yo, CLAUDIA RANGEL SANCHEZ, identificada con la cédula de ciudadanía No 32.935.336 de Cartagena, particularizada con la T. P. No 177480-T expedida por la Junta Central de Contadores. En mi condición de Contador Público de la Empresa: ATLANTIC MARINE FUELS S.A.S. identificada con N. .T. 900.614.423-2, certifico que la información consignada en el presento documento ha sido tomada del libro de registro de accionistas. No. ACCIONISTAS IDENTIFICACION ACCIONES TOTAL TOTAL % DE PARTICIPACION PAGADO 1 71.753.222 1.895.654 $ 1.895.654.000 45.05% 2 900.528.867-0 933.333 $ 933.333.000 22.18% 3 8900917463-8 591.732 $ 591.732.000 14.06% 4 900.889845-7 420.769 $ 420.769.000 10.00% 5 900918530-8 261.111 $ 261.111.000 6.21% 6 830.109.209-3 105.087 $ 105.087.000 2.50% TOTAL 4.207.686 $ 4,207,686.000 100% \"\" Se expide en la ciudad de Cartagena D. T. y C. a los uno (24) días del mes de septiembre del 2015 (5) [SIGNATURE] Chudia Rangel CLAUDIA RANGEL SANCHEZ CONTADOR PUBLICO T.P Nº 177480-T",
+      "document_number": "900614423",
+      "path": "ACC/900614423/161_CA_2020-02-29.pdf"
+    },
+    "raw_response": {
+      "ResponseMetadata": {
+        "RequestId": "b9aeca16-5b9a-4ab8-99de-9169c7d36b29",
+        "HTTPStatusCode": 200,
+        "HTTPHeaders": {
+          "date": "Mon, 25 Aug 2025 06:04:07 GMT",
+          "content-type": "application/json",
+          "content-length": "1308",
+          "connection": "keep-alive",
+          "x-amzn-requestid": "b9aeca16-5b9a-4ab8-99de-9169c7d36b29"
+        },
+        "RetryAttempts": 0
+      },
+      "output": {
+        "message": {
+          "role": "assistant",
+          "content": [
+            {
+              "text": "```json { \"category\": \"ACC\", \"text\": \"ATLANTIC MARINE FUELS CERTIFICADO DE COMPOSICION ACCIONARIA Yo, CLAUDIA RANGEL SANCHEZ, identificada con la cédula de ciudadanía No 32.935.336 de Cartagena, particularizada con la T. P. No 177480-T expedida por la Junta Central de Contadores. En mi condición de Contador Público de la Empresa: ATLANTIC MARINE FUELS S.A.S. identificada con N. .T. 900.614.423-2, certifico que la información consignada en el presento documento ha sido tomada del libro de registro de accionistas. No. ACCIONISTAS IDENTIFICACION ACCIONES TOTAL TOTAL % DE PARTICIPACION PAGADO 1 71.753.222 1.895.654 $ 1.895.654.000 45.05% 2 900.528.867-0 933.333 $ 933.333.000 22.18% 3 8900917463-8 591.732 $ 591.732.000 14.06% 4 900.889845-7 420.769 $ 420.769.000 10.00% 5 900918530-8 261.111 $ 261.111.000 6.21% 6 830.109.209-3 105.087 $ 105.087.000 2.50% TOTAL 4.207.686 $ 4,207,686.000 100% \\\"\\\" Se expide en la ciudad de Cartagena D. T. y C. a los uno (24) días del mes de septiembre del 2015 (5) [SIGNATURE] Chudia Rangel CLAUDIA RANGEL SANCHEZ CONTADOR PUBLICO T.P Nº 177480-T\" } ```"
+            }
+          ]
+        }
+      },
+      "stopReason": "end_turn",
+      "usage": {
+        "inputTokens": 3128,
+        "outputTokens": 561,
+        "totalTokens": 3689
+      },
+      "metrics": {
+        "latencyMs": 9160
+      },
+      "model_id": "us.amazon.nova-pro-v1:0",
+      "api_used": "converse",
+      "model_params": {
+        "maxTokens": 8200,
+        "topP": 1,
+        "temperature": 0
+      }
+    },
+    "expected_category": "ACC",
+    "model_used": "us.amazon.nova-pro-v1:0",
+    "api_used": "converse",
+    "pdf_info": {
+      "original_size": 353526,
+      "first_page_size": 349000,
+      "is_scanned": true
+    }
+  },
+  "extraction_result": {
+    "extraction_data": {
+      "path": "ACC/900614423/161_CA_2020-02-29.pdf",
+      "result": {
+        "companyName": "ATLANTIC MARINE FUELS S.A.S.",
+        "documentType": "Equity Composition",
+        "taxId": "900.614.423-2",
+        "country": "Colombia",
+        "identificationDetails": {
+          "source": "text_reference",
+          "indicators": [
+            "Cartagena",
+            "Colombia"
+          ],
+          "conflictingSources": [],
+          "requiresReview": false
+        },
+        "relatedParties": [
+          {
+            "firstName": "Mauricio",
+            "lastName": "Lopez Londoño",
+            "identificationType": "C.C.",
+            "identificationNumber": "71.753.222",
+            "relationshipType": "Shareholder",
+            "participationPercentage": "45.05%",
+            "timeFound": 1,
+            "job": ""
+          },
+          {
+            "companyName": "INVERSIONES BALMASEDA S.A.",
+            "identificationType": "NIT",
+            "identificationNumber": "900.528.867-0",
+            "relationshipType": "Shareholder",
+            "participationPercentage": "22.18%",
+            "timeFound": 1,
+            "job": ""
+          },
+          {
+            "companyName": "BERTACHOLA S.A.S.",
+            "identificationType": "NIT",
+            "identificationNumber": "900.917.463-8",
+            "relationshipType": "Shareholder",
+            "participationPercentage": "14.06%",
+            "timeFound": 1,
+            "job": ""
+          },
+          {
+            "companyName": "PROYECTOS DE INVERSION LATAM SAS",
+            "identificationType": "NIT",
+            "identificationNumber": "900.889.845-7",
+            "relationshipType": "Shareholder",
+            "participationPercentage": "10.00%",
+            "timeFound": 1,
+            "job": ""
+          },
+          {
+            "companyName": "MACARI LONDOÑO & CIA S.C.A \"EN LIQUIDACION\"",
+            "identificationType": "NIT",
+            "identificationNumber": "900.918.530-8",
+            "relationshipType": "Shareholder",
+            "participationPercentage": "6.21%",
+            "timeFound": 1,
+            "job": ""
+          },
+          {
+            "companyName": "COMERCIAL LOMARSCA SCA",
+            "identificationType": "NIT",
+            "identificationNumber": "830.109.209-3",
+            "relationshipType": "Shareholder",
+            "participationPercentage": "2.50%",
+            "timeFound": 1,
+            "job": ""
+          }
+        ]
+      },
+      "document_type": "company",
+      "document_number": "900614423",
+      "category": "ACC",
+      "confidenceScores": {
+        "companyName": 95,
+        "taxId": 95,
+        "country": 98,
+        "relatedParties": 90
+      }
+    },
+    "raw_response": {
+      "ResponseMetadata": {
+        "RequestId": "e683f6af-6a18-4a02-bda0-688e635dce91",
+        "HTTPStatusCode": 200,
+        "HTTPHeaders": {
+          "date": "Mon, 25 Aug 2025 06:04:19 GMT",
+          "content-type": "application/json",
+          "content-length": "2906",
+          "connection": "keep-alive",
+          "x-amzn-requestid": "e683f6af-6a18-4a02-bda0-688e635dce91"
+        },
+        "RetryAttempts": 0
+      },
+      "output": {
+        "message": {
+          "role": "assistant",
+          "content": [
+            {
+              "text": "```json { \"path\": \"ACC/900614423/161_CA_2020-02-29.pdf\", \"result\": { \"companyName\": \"ATLANTIC MARINE FUELS S.A.S.\", \"documentType\": \"Equity Composition\", \"taxId\": \"900.614.423-2\", \"country\": \"Colombia\", \"identificationDetails\": { \"source\": \"text_reference\", \"indicators\": [ \"Cartagena\", \"Colombia\" ], \"conflictingSources\": [], \"requiresReview\": false }, \"relatedParties\": [ { \"firstName\": \"Mauricio\", \"lastName\": \"Lopez Londoño\", \"identificationType\": \"C.C.\", \"identificationNumber\": \"71.753.222\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"45.05%\", \"timeFound\": 1, \"job\": \"\" }, { \"companyName\": \"INVERSIONES BALMASEDA S.A.\", \"identificationType\": \"NIT\", \"identificationNumber\": \"900.528.867-0\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"22.18%\", \"timeFound\": 1, \"job\": \"\" }, { \"companyName\": \"BERTACHOLA S.A.S.\", \"identificationType\": \"NIT\", \"identificationNumber\": \"900.917.463-8\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"14.06%\", \"timeFound\": 1, \"job\": \"\" }, { \"companyName\": \"PROYECTOS DE INVERSION LATAM SAS\", \"identificationType\": \"NIT\", \"identificationNumber\": \"900.889.845-7\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"10.00%\", \"timeFound\": 1, \"job\": \"\" }, { \"companyName\": \"MACARI LONDOÑO & CIA S.C.A \\\"EN LIQUIDACION\\\"\", \"identificationType\": \"NIT\", \"identificationNumber\": \"900.918.530-8\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"6.21%\", \"timeFound\": 1, \"job\": \"\" }, { \"companyName\": \"COMERCIAL LOMARSCA SCA\", \"identificationType\": \"NIT\", \"identificationNumber\": \"830.109.209-3\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"2.50%\", \"timeFound\": 1, \"job\": \"\" } ] }, \"document_type\": \"company\", \"document_number\": \"900614423\", \"category\": \"ACC\", \"confidenceScores\": { \"companyName\": 95, \"taxId\": 95, \"country\": 98, \"relatedParties\": 90 } } ```"
+            }
+          ]
+        }
+      },
+      "stopReason": "end_turn",
+      "usage": {
+        "inputTokens": 8569,
+        "outputTokens": 739,
+        "totalTokens": 9308
+      },
+      "metrics": {
+        "latencyMs": 12087
+      },
+      "model_id": "us.amazon.nova-pro-v1:0",
+      "api_used": "converse",
+      "model_params": {
+        "maxTokens": 8200,
+        "topP": 1,
+        "temperature": 0.1
+      }
+    },
+    "model_used": "us.amazon.nova-pro-v1:0",
+    "api_used": "converse"
+  }
+}

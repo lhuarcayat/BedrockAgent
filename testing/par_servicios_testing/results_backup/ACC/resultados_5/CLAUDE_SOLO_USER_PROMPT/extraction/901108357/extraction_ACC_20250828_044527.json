@@ -1,0 +1,109 @@
+{
+  "extraction_data": {
+    "path": "ACC/901108357/204_CA_2020-02-29.pdf",
+    "result": {
+      "companyName": "QUIMEL INGENIERIA S.A.S.",
+      "documentCategory": "Equity Composition",
+      "taxId": "901.108.357-8",
+      "country": "Colombia",
+      "identificationDetails": {
+        "source": "id_analysis",
+        "indicators": [
+          "NIT format (Colombian tax ID)",
+          "S.A.S. corporate designation (Colombian)"
+        ],
+        "conflictingSources": [],
+        "requiresReview": "false"
+      },
+      "relatedParties": [
+        {
+          "type": "person",
+          "firstName": "JOSE CARLOS",
+          "lastName": "MENDOZA CARRANZA",
+          "identificationType": "C.E",
+          "identificationNumber": "737708",
+          "relationshipType": "Shareholder",
+          "participationPercentage": "100",
+          "timeFound": "1",
+          "job": "Representante Legal"
+        }
+      ]
+    },
+    "documentType": "company",
+    "documentNumber": "901108357",
+    "category": "ACC"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "```json { \"result\": { \"companyName\": \"QUIMEL INGENIERIA S.A.S.\", \"documentCategory\": \"Equity Composition\", \"taxId\": \"901.108.357-8\", \"country\": \"Colombia\", \"identificationDetails\": { \"source\": \"id_analysis\", \"indicators\": [ \"NIT format (Colombian tax ID)\", \"S.A.S. corporate designation (Colombian)\" ], \"conflictingSources\": [], \"requiresReview\": \"false\" }, \"relatedParties\": [ { \"type\": \"person\", \"firstName\": \"JOSE CARLOS\", \"lastName\": \"MENDOZA CARRANZA\", \"identificationType\": \"C.E\", \"identificationNumber\": \"737708\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"100\", \"timeFound\": \"1\", \"job\": \"Representante Legal\" } ] }, \"documentType\": \"company\", \"category\": \"ACC\" } ```"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 9,
+      "cache_creation_input_tokens": 6486,
+      "cache_read_input_tokens": 0,
+      "output_tokens": 998
+    },
+    "ResponseMetadata": {
+      "RequestId": "33db6c63-cb49-4648-bad0-9273ba8bff04",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Thu, 28 Aug 2025 09:45:27 GMT",
+        "content-type": "application/json",
+        "content-length": "4109",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "33db6c63-cb49-4648-bad0-9273ba8bff04",
+        "x-amzn-bedrock-invocation-latency": "27596",
+        "x-amzn-bedrock-cache-write-input-token-count": "6486",
+        "x-amzn-bedrock-cache-read-input-token-count": "0",
+        "x-amzn-bedrock-output-token-count": "998",
+        "x-amzn-bedrock-input-token-count": "9"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_01DK2xMf2htoz3XTn5R2aepB",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-3-7-sonnet-20250219",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Let me analyze this document from QUIMEL INGENIERIA S.A.S. systematically to extract the required equity composition information. ### Step 1: Document Analysis This is a certificate from a Colombian company's accountant detailing the equity composition of QUIMEL INGENIERIA S.A.S. The document is in Spanish and appears to be official. ### Step 2: Root Level Extraction **Company Name**: - Clearly identified as \"QUIMEL INGENIERIA S.A.S.\" **Tax ID**: - The document shows \"NIT No. 901.108.357-8\" - This follows the Colombian NIT format with dots and a hyphen **Country**: - While not explicitly stated, the following indicators suggest Colombia: - The use of \"NIT\" (Colombian tax ID format) - Format of the document is typical for Colombian certificates - Use of Colombian peso currency - The \"S.A.S.\" designation (Sociedad por Acciones Simplificada) is common in Colombia **Document Category**: - This is clearly an \"Equity Composition\" document ### Step 3: Related Parties Processing I see one shareholder in the document: **Shareholder Information**: - Type: Person - Name: JOSE CARLOS MENDOZA CARRANZA - Identification Type: C.E (Cédula de Extranjería - foreign ID card in Colombia) - Identification Number: 737708 - Relationship Type: Shareholder - Participation Percentage: 100% (explicitly stated) - Job: Representante Legal (Legal Representative) - Nationality: SALVADOREÑO (Salvadoran) - Number of shares: 5,200 - Share value: $100,000 each - Total capital: $520,000,000 **Additional Context**: - This person owns 100% of the company - He is also identified as the legal representative of the company - The certificate is signed by Sandra Milena Bolaños Bravo (the accountant) - The certificate was issued on December 30, 2022 ### Step 4: Validation & Cross-checking - QUIMEL INGENIERIA S.A.S. has a Colombian NIT format: ✓ - The shareholder uses C.E. which is valid in Colombia for foreigners: ✓ - The participation percentage is 100% (complete ownership): ✓ - The timeFound is 1 (only appears once): ✓ - The individual is clearly a person (not a company): ✓ - No percentage conflicts detected: ✓ Now I'll prepare the JSON output following the required schema: 1. Main company is QUIMEL INGENIERIA S.A.S. with NIT 901.108.357-8 2. Shareholder is JOSE CARLOS MENDOZA CARRANZA (100% ownership) 3. Country is Colombia (based on NIT format and document style) 4. No conflicts or issues requiring review",
+          "signature": "ErcBCkgIBxABGAIiQAz3DhO4NfVmmUgMIU64qZePKV/DHOXoIyNdW2jiJKyP3I0hf4MkSPWzk3gddcUPkDx3FjwUTEH2DQLP4ElUeWcSDGvz0a2Au+L2z3/tMRoMijPuEpDdgmRga2ZTIjA+F9lPzNAkKGRFd6aItPAyTrhAfsq3cXJYxAHTGVzBFzjwsn7N7ttdwyxs5Zf32hoqHcDj+t3/C9vOn3Pws0BFtuzTa+sf7xCiBS6qgVXyGAI="
+        },
+        {
+          "type": "text",
+          "text": "```json { \"result\": { \"companyName\": \"QUIMEL INGENIERIA S.A.S.\", \"documentCategory\": \"Equity Composition\", \"taxId\": \"901.108.357-8\", \"country\": \"Colombia\", \"identificationDetails\": { \"source\": \"id_analysis\", \"indicators\": [ \"NIT format (Colombian tax ID)\", \"S.A.S. corporate designation (Colombian)\" ], \"conflictingSources\": [], \"requiresReview\": \"false\" }, \"relatedParties\": [ { \"type\": \"person\", \"firstName\": \"JOSE CARLOS\", \"lastName\": \"MENDOZA CARRANZA\", \"identificationType\": \"C.E\", \"identificationNumber\": \"737708\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"100\", \"timeFound\": \"1\", \"job\": \"Representante Legal\" } ] }, \"documentType\": \"company\", \"category\": \"ACC\" } ```"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 9,
+        "cache_creation_input_tokens": 6486,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 998
+      }
+    },
+    "model_id": "us.anthropic.claude-3-7-sonnet-20250219-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 8000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "model_used": "us.anthropic.claude-3-7-sonnet-20250219-v1:0",
+  "api_used": "invoke_model"
+}

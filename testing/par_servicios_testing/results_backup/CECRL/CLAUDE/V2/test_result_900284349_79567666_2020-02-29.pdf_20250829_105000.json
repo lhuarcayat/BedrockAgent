@@ -1,0 +1,183 @@
+{
+  "document_name": "79567666_2020-02-29.pdf",
+  "category": "CECRL",
+  "classification_success": true,
+  "extraction_success": true,
+  "overall_success": true,
+  "timestamp": "2025-08-29T10:49:33.338188",
+  "classification_result": {
+    "classification_data": {
+      "category": "CECRL",
+      "text": "REPUBLICA DE COLOMBIA IDENTIFICACION PERSONAL CEDULA DE CIUDADANIA NUMERO 79.567.666 LAYTON AREVALO APELLIDOS LEONARDO NOMBRES FECHA DE NACIMIENTO 28-OCT-1972 BOGOTA D.C. (CUNDINAMARCA) LUGAR DE NACIMIENTO 1.71 ESTATURA O+ G.S. RH M SEXO 17-ABR-1991 BOGOTA D.C. FECHA Y LUGAR DE EXPEDICION INDICE DERECHO REGISTRADO EN NACIONAL A-1500112-45149102-M-007956768B-2006707D 024620818705 02 185255744",
+      "document_number": "900284349",
+      "path": "CECRL/900284349/79567666_2020-02-29.pdf"
+    },
+    "raw_response": {
+      "output": {
+        "message": {
+          "content": [
+            {
+              "text": "```json { \"category\": \"CECRL\", \"text\": \"REPUBLICA DE COLOMBIA\\nIDENTIFICACION PERSONAL\\nCEDULA DE CIUDADANIA\\nNUMERO 79.567.666\\nLAYTON AREVALO\\nAPELLIDOS\\nLEONARDO\\nNOMBRES\\nFECHA DE NACIMIENTO 28-OCT-1972\\nBOGOTA D.C.\\n(CUNDINAMARCA)\\nLUGAR DE NACIMIENTO\\n1.71\\nESTATURA\\nO+\\nG.S. RH\\nM\\nSEXO\\n17-ABR-1991 BOGOTA D.C.\\nFECHA Y LUGAR DE EXPEDICION\\nINDICE DERECHO\\nREGISTRADO EN NACIONAL\\nA-1500112-45149102-M-007956768B-2006707D 024620818705 02 185255744\" } ```"
+            }
+          ]
+        }
+      },
+      "stopReason": "end_turn",
+      "usage": {
+        "input_tokens": 9,
+        "cache_creation_input_tokens": 4549,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 913
+      },
+      "ResponseMetadata": {
+        "RequestId": "55694733-09d0-4d4c-9a8c-8a4f248a00fe",
+        "HTTPStatusCode": 200,
+        "HTTPHeaders": {
+          "date": "Fri, 29 Aug 2025 15:49:49 GMT",
+          "content-type": "application/json",
+          "content-length": "6374",
+          "connection": "keep-alive",
+          "x-amzn-requestid": "55694733-09d0-4d4c-9a8c-8a4f248a00fe",
+          "x-amzn-bedrock-invocation-latency": "15235",
+          "x-amzn-bedrock-cache-write-input-token-count": "4549",
+          "x-amzn-bedrock-cache-read-input-token-count": "0",
+          "x-amzn-bedrock-output-token-count": "913",
+          "x-amzn-bedrock-input-token-count": "9"
+        },
+        "RetryAttempts": 0
+      },
+      "raw_anthropic_response": {
+        "id": "msg_bdrk_01WSS1tTQmX9mczrVHrcn83X",
+        "type": "message",
+        "role": "assistant",
+        "model": "claude-sonnet-4-20250514",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "Let me analyze this document step by step following the workflow: 1. **TEXT EXTRACTION** Looking at the document, I can see this appears to be a Colombian identification document. Let me extract the visible text: Top section: - REPUBLICA DE COLOMBIA - IDENTIFICACION PERSONAL - CEDULA DE CIUDADANIA - NUMERO 79.567.666 - LAYTON AREVALO (appears to be the surname) - LEONARDO (appears to be the first name) Bottom section: - FECHA DE NACIMIENTO 28-OCT-1972 - BOGOTA D.C. - (CUNDINAMARCA) - LUGAR DE NACIMIENTO - 1.71 (appears to be height) - O+ (appears to be blood type) - M (appears to be gender - Male) - SEXO - 17-ABR-1991 BOGOTA D.C. - FECHA Y LUGAR DE EXPEDICION - There's a fingerprint section labeled \"INDICE DERECHO\" - There's a barcode at the bottom - Some additional reference numbers 2. **PRIORITY CHECKS** This is not BLANK - there's substantial meaningful content This is not LINK_ONLY - no hyperlinks or URLs present 3. **ISSUER IDENTIFICATION** This appears to be issued by the Colombian government (REPUBLICA DE COLOMBIA), specifically as a personal identification document, not by DIAN or Chamber of Commerce. 4. **DOCUMENT FUNCTION ANALYSIS** This is clearly a personal identification document for an individual named Leonardo Layton Arevalo. It contains: - Personal biographical data (birth date, birth place) - Physical characteristics (height, blood type, gender) - Individual photo - Fingerprint - Government-issued ID number - Official seals and security elements 5. **CATEGORY CLASSIFICATION** This clearly fits CECRL: - Contains \"IDENTIFICACION PERSONAL\" and \"CEDULA DE CIUDADANIA\" - Confirms individual identity with comprehensive personal details - Uniquely identifies Leonardo Layton Arevalo through multiple verification elements - Provides official government authentication of personal information 6. **CONFIDENCE VALIDATION** Extremely high confidence in document classification as a personal identification certificate. All key identifiers are present, with multiple layers of verification including photo, fingerprint, and official government markings.",
+            "signature": "Es4TCkgIBxABGAIqQEGVUE0Nz3K/qGJiWz7nud6Ak2Bn98DRlnRifmtvt76A4Vyrnk9LtFcn2kNd16DLplqmMdNz4EMAw/ysJVZbX1QSDDhMgK7LYTFISWHN5xoMO7TY4ifS0uNYq8bEIjDzBxWKx6Ws2vwfrtO9JPhhIg9u1uKs0zBTyZEVqEmZl2oacHy1Sb+/VfDBj4a6xIoqsxLTx4Pequ1MJ5FTUcoadF/jk/qJifPOJ0hLJV0yDQ88eiPTgWz8nhmpKF7U6UyW7yO904BpglfIAfLnPPGmKzg8XCHkd6c9b2jW37wqVOGnWY2WKBLmeZqd7rj4abHJXLUrxL/LK7xX5QpEX5f9fSUTXKj5Q9enB8OO6ZcVuqoji8jIquI+fiMZMRykTUf22tIEnySGN6W8ImeVIR6bffAPATf6KOB5iXImM0FOJ2VV88BOd1cuj6XeV/4yDeevEbJ3wuyeCMhpXfFFm1B0J5I/7GMHwlME4XYdMrXn6S8BkeVycNek+LBTkuVOCgUh6KptmWvNQV/gOnevcQ/jvRvGQk8FyhIRKsrcvBDNM4nNiszX6cmqG3Gz3hkDprWiCJKPXrvrFsB3iiqLZ9rpGEePT2rMDSAswJY3Re4ENO2JIb4op8gQXb9Nz0flhdiQZFq/h/xIMMu7Fj/MWD3bfmqBTrNELf3OqWK4vySy3PhZ5SwFu/sf7/Q15APHUabKjdDuhDWyaVBqsn0yJkuxZVQWbQIbIEtWc+64PihK9geVtRYkReFaB1ob58A8xWmViGyt7Ff5wf3eQkRqvAhvLxMejkmByEh+c3DCHVldv7nTIOSg3y+NSBBgpbu4FWWicZVNt5BPxYWVOBxVCx1G0bDMawHqeFpQrwh6/pU4fJES9eKiarnBb0ZG+ToxuiPOkr4a54vj+JCF0DigHzbvbEYmOUBbA5URPXRLqKlOAsNizUrfFA6/DxLZ00rljQdxpyB7AeadHM0RC0oPplmCOpBDhEhf5chAEKEj+gQCb+MLIuF6ncaQnKIyfoeP+rpScMs1j9zEUtJiNXm9mPKRvPLtIZUHBt4X+XEuY2SLbspM+OBtGFFoid/X4s4ciMzdDXKTnRcZKFug0CcmjWDHqGDHakUZbrhqCxs3bFKdZMqQfGqHnYUEPzSCvwjgyg7OZpa1A6wFeypZzlUiV5pkNz1xgNtuY5YuoGSVLj/dYgRy3N7cKqsji4QBXgTPwdfuidp5fJ0N+RTlz38UfalYuwHQ9Cq8J8uSAR+keVrEEJIQXfWibtMcKICDcWoOhqo785xvt6HOlGLc4WINpChBnT3KYtuSIB/xaKlEEB9QrqnCaeUUhjvJINrKiGWCIV+v1491AgMQvSlEAL2u+SN3eAlXCa3BYbD0jbZ0kMn/asB6r1yEjmqm/PbV7xZElA44B4o+ymC4iY6aZf6GPhuIKviIq9Pu7Ge+jaT6c1E28Z0L6VPbWCoYnrCuaP+naONq366Ge6del+AyG6/x1EL/j+YxQA/1ILZnUEzQ/aVL1/H57uodQHEMrn+zR11ypVSd/6p15Zx7XCYJjjmFtP9rLD+Q2OWb0qLm9LxgAJhXE8ajry251kMsFNXo2z/I2N7ZdXMgVJiUGZZgV/vBYXaU5rGhSbzD8eZANy9TY2YlaZA7GZqHicnjRdKlGK6lXrUpVa7AwvXS4YlchFYYiQWnSacl8PjFVDelOpFMV4sU78btbOd71D/nO2iaQ2WlAD86KdbEjR7lAbj0ksDk7/mgefO8e8uZRBdGYuxQP4yjb9/c3kP68Lg1eUFPOF2hw5fXZHujZHSDAaXuOythMipuuBjMIN9pmqa7FYdPo6y3F9bhvNrPhDBe/9sKtdoJnRmswYgsoMDbmjvvHN84t5Jfb6ZrPYpsHex9jc/TpsG6LztP+9F+eqQ9xItWuQCg38dEZjppHS2tm+U7DJYYyKzTC7oYla8SPByn7U6YBAmGDlNlIbYjvlK0BlunAsQ8TQcH13jr+18KZzY51COd59oKBuajO3L2CN8BN2zvhZTFxzyk6II4GVTFeVf++R/KB+fT3E9Su/oYzPgtnJ4gfVfd9dyjPhOB+rplSowbg0gwhvV1RpJoXe4hg62nEEaL0VuX5k5xeBJ+fE94ITSTPfcbtwoK5Fd+F+dQPg+i3pZ5uNoprmNAo4hS/XMSI32Dh+Ac+KVQb8YbdlesDqXeDub3gT4TThBwr+LKIiF6cvjuNM64iuH7hLO5Dg0Gs0g6ylS85IVi3rCoBJzFyJ7d0xFxK5HfR1PyCqiMARqC9RE0cQeJZL5EexIc/KpmA4PACPBC1pew9jRzPny0Ig0O47SqMN+BK0FKfbGPcsxSoVVz906Sl8O2MR/3EajbqxpJ7Dw1FkZLYldSFZcNcVbl2AplF/iOQO5o9C4SMipeKWkyptnCUS/ae0AM9wJLpvMOHamScl0z2y4dwvtb9zL6KQFcjHBsrw0ogcPHNJPdLa1oWR4x1iCSeAT6h8dPDUzndV3gY6UGpfbEf7D1T9FIdr/fUHc6uhtRQhpPWAkU3E43hvBcfCe6MhnmaLvZNBr2eCvOCjXUujjGfDlLFT/9bmNn9Fw9U6da8AzIX/STRrDcfHOysSGtKCbgiuwJokR8jj5vbPXHg6kxfP06AEgDqt77HbPm+9sL3roXq8hycU6SS4WYn3u56DBkXhcwVAXpo7ehvxSkeoVdkFJnXko4Qt0CdaOu9wUqRfeCS1OxiEnBiY3jWa1m8LAmkTwxl3beyfBscGgXKCDuncMNU5gHzNSE65xtx1z9YALCQ15MMpByAOJoxA9Sd+IbIkHHIIrSxn2eIJfQJiNEqmLSYHrzHWN83SDuT9fgBnrH0jzkpQmNkZ4n1RB/CRwZzeC6sRF2bQwKICL4z8C06l/SuYVL9cI3Q3mB+C8WAKO41OcDULrpejLeF0oXPe1J6tvFi2P3zyAXj9BFfOFBRnh2ULkm9R7cjaIpIDIqSQX3zk5DV04kspjb2ZQjEWC5Tu1R7l24PDpvjTgHLyWrE1T3cH6x3mqObgbPvWppyPFQUNVMzqL2QwDPJJ9hG1U/utW1AufzKsI5hEe6AFq3SXXuZ+PaKpuRx4FpgecE7S7X82ZttlQJMLmuqF/BHvJp6z2DTCZj8lc5U2CZMngwUW3PLK3LrpZEuPbftkZWH6j18nnFu6HrvQ2fV4dpxk0CO6AgNIYRMZQHVpa5JTjwHuredrnvqBz3h7hhdKp7+71r62Ic0PpXpcEojVZsUaiBPDnzq5Iko+aVEZZ3mbIcvW5AU4GIMXbQ3COlEbuY6C1P1BDJJEWiEgJsZUR73VOCk7pwuQvly8ZCVVOraaoYAQ=="
+          },
+          {
+            "type": "text",
+            "text": "```json { \"category\": \"CECRL\", \"text\": \"REPUBLICA DE COLOMBIA\\nIDENTIFICACION PERSONAL\\nCEDULA DE CIUDADANIA\\nNUMERO 79.567.666\\nLAYTON AREVALO\\nAPELLIDOS\\nLEONARDO\\nNOMBRES\\nFECHA DE NACIMIENTO 28-OCT-1972\\nBOGOTA D.C.\\n(CUNDINAMARCA)\\nLUGAR DE NACIMIENTO\\n1.71\\nESTATURA\\nO+\\nG.S. RH\\nM\\nSEXO\\n17-ABR-1991 BOGOTA D.C.\\nFECHA Y LUGAR DE EXPEDICION\\nINDICE DERECHO\\nREGISTRADO EN NACIONAL\\nA-1500112-45149102-M-007956768B-2006707D 024620818705 02 185255744\" } ```"
+          }
+        ],
+        "stop_reason": "end_turn",
+        "stop_sequence": null,
+        "usage": {
+          "input_tokens": 9,
+          "cache_creation_input_tokens": 4549,
+          "cache_read_input_tokens": 0,
+          "output_tokens": 913
+        }
+      },
+      "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+      "api_used": "invoke_model",
+      "model_params": {
+        "max_tokens": 8000,
+        "top_p": 1,
+        "temperature": 1,
+        "thinking": {
+          "type": "enabled",
+          "budget_tokens": 4096
+        }
+      }
+    },
+    "expected_category": "CECRL",
+    "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model",
+    "pdf_info": {
+      "original_size": 279924,
+      "first_page_size": 275599,
+      "is_scanned": true
+    }
+  },
+  "extraction_result": {
+    "extraction_data": {
+      "result": {
+        "firstName": "LEONARDO",
+        "lastName": "LAYTON AREVALO",
+        "country_issuer": "Colombia",
+        "nationality": "Colombia",
+        "identificationType": "Cédula de Ciudadanía",
+        "identificationNumber": "79.567.666",
+        "message": ""
+      },
+      "document_type": "person",
+      "category": "CECRL"
+    },
+    "raw_response": {
+      "output": {
+        "message": {
+          "content": [
+            {
+              "text": "```json { \"result\": { \"firstName\": \"LEONARDO\", \"lastName\": \"LAYTON AREVALO\", \"country_issuer\": \"Colombia\", \"nationality\": \"Colombia\", \"identificationType\": \"Cédula de Ciudadanía\", \"identificationNumber\": \"79.567.666\", \"message\": \"\" }, \"document_type\": \"person\", \"category\": \"CECRL\" } ```"
+            }
+          ]
+        }
+      },
+      "stopReason": "end_turn",
+      "usage": {
+        "input_tokens": 10,
+        "cache_creation_input_tokens": 5982,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 503
+      },
+      "ResponseMetadata": {
+        "RequestId": "332d72c9-937d-432f-807a-a2aa3da34888",
+        "HTTPStatusCode": 200,
+        "HTTPHeaders": {
+          "date": "Fri, 29 Aug 2025 15:50:01 GMT",
+          "content-type": "application/json",
+          "content-length": "4296",
+          "connection": "keep-alive",
+          "x-amzn-requestid": "332d72c9-937d-432f-807a-a2aa3da34888",
+          "x-amzn-bedrock-invocation-latency": "11738",
+          "x-amzn-bedrock-cache-write-input-token-count": "5982",
+          "x-amzn-bedrock-cache-read-input-token-count": "0",
+          "x-amzn-bedrock-output-token-count": "503",
+          "x-amzn-bedrock-input-token-count": "10"
+        },
+        "RetryAttempts": 0
+      },
+      "raw_anthropic_response": {
+        "id": "msg_bdrk_016fkY4Myxj2wxXZu64S69ht",
+        "type": "message",
+        "role": "assistant",
+        "model": "claude-sonnet-4-20250514",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "Looking at this Colombian identification document (Cédula de Ciudadanía), I need to extract the required information following the rules: From what I can see in the document: 1. This is a Colombian identification document - \"REPUBLICA DE COLOMBIA\" and \"CEDULA DE CIUDADANIA\" are visible at the top 2. Looking at the names section: - I can see \"LAYTON AREVALO\" which appears to be in the APELLIDOS (surnames) section - I can see \"LEONARDO\" which appears to be in the NOMBRES (given names) section 3. The identification number appears to be \"79.567.666\" based on what I can see 4. This is clearly a Colombian Cédula de Ciudadanía 5. For country and nationality, since this is a Colombian document, both would be Colombia 6. There are some additional details on the second part like birth date (28-OCT-1972), birth place (BOGOTA D.C.), but the main extraction focuses on the required fields. Let me structure this according to the schema: - firstName: \"LEONARDO\" (from the NOMBRES field) - lastName: \"LAYTON AREVALO\" (from the APELLIDOS field) - country_issuer: \"Colombia\" (this is a Colombian document) - nationality: \"Colombia\" (default assumption for Colombian ID unless specified otherwise) - identificationType: \"Cédula de Ciudadanía\" (clearly stated at the top) - identificationNumber: \"79.567.666\" (the number I can see) - message: \"\" (document appears to be properly extracted)",
+            "signature": "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"
+          },
+          {
+            "type": "text",
+            "text": "```json { \"result\": { \"firstName\": \"LEONARDO\", \"lastName\": \"LAYTON AREVALO\", \"country_issuer\": \"Colombia\", \"nationality\": \"Colombia\", \"identificationType\": \"Cédula de Ciudadanía\", \"identificationNumber\": \"79.567.666\", \"message\": \"\" }, \"document_type\": \"person\", \"category\": \"CECRL\" } ```"
+          }
+        ],
+        "stop_reason": "end_turn",
+        "stop_sequence": null,
+        "usage": {
+          "input_tokens": 10,
+          "cache_creation_input_tokens": 5982,
+          "cache_read_input_tokens": 0,
+          "output_tokens": 503
+        }
+      },
+      "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+      "api_used": "invoke_model",
+      "model_params": {
+        "max_tokens": 8000,
+        "top_p": 1,
+        "temperature": 1,
+        "thinking": {
+          "type": "enabled",
+          "budget_tokens": 4096
+        }
+      }
+    },
+    "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model"
+  }
+}

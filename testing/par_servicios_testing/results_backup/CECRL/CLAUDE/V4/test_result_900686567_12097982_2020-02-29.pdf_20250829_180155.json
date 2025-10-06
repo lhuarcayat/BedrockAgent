@@ -1,0 +1,183 @@
+{
+  "document_name": "12097982_2020-02-29.pdf",
+  "category": "CECRL",
+  "classification_success": true,
+  "extraction_success": true,
+  "overall_success": true,
+  "timestamp": "2025-08-29T18:01:21.528719",
+  "classification_result": {
+    "classification_data": {
+      "category": "CECRL",
+      "text": "REPUBLICA DE COLOMBIA IDENTIFICACION PERSONAL CEDULA DE CIUDADANIA NUMERO 12.097.982 POLANIA ANDRADE APELLIDOS ENRIQUE NOMBRES FIRMA FECHA DE NACIMIENTO 04-DIC-1947 NEIVA (HUILA) LUGAR DE NACIMIENTO 1,69 O+ M ESTATURA G.S. RH SEXO 10-ABR-1969 NEIVA FECHA Y LUGAR DE EXPEDICION REGISTRADOR NACIONAL CARLOS ARIEL SANCHEZ TORRES INDICE DERECHO A 193V00-01163962 M-001205709P-200801722 00137177164 7120005800",
+      "document_number": "900686567",
+      "path": "CECRL/900686567/12097982_2020-02-29.pdf"
+    },
+    "raw_response": {
+      "output": {
+        "message": {
+          "content": [
+            {
+              "text": "```json { \"category\": \"CECRL\", \"text\": \"REPUBLICA DE COLOMBIA\\nIDENTIFICACION PERSONAL\\nCEDULA DE CIUDADANIA\\nNUMERO 12.097.982\\nPOLANIA ANDRADE\\nAPELLIDOS\\nENRIQUE\\nNOMBRES\\nFIRMA\\nFECHA DE NACIMIENTO 04-DIC-1947\\nNEIVA\\n(HUILA)\\nLUGAR DE NACIMIENTO\\n1,69 O+ M\\nESTATURA G.S. RH SEXO\\n10-ABR-1969 NEIVA\\nFECHA Y LUGAR DE EXPEDICION\\nREGISTRADOR NACIONAL\\nCARLOS ARIEL SANCHEZ TORRES\\nINDICE DERECHO\\nA 193V00-01163962 M-001205709P-200801722 00137177164 7120005800\" } ```"
+            }
+          ]
+        }
+      },
+      "stopReason": "end_turn",
+      "usage": {
+        "input_tokens": 9,
+        "cache_creation_input_tokens": 4763,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 961
+      },
+      "ResponseMetadata": {
+        "RequestId": "419db94b-65b8-4ff0-a4c9-f033e46f9db1",
+        "HTTPStatusCode": 200,
+        "HTTPHeaders": {
+          "date": "Fri, 29 Aug 2025 23:01:43 GMT",
+          "content-type": "application/json",
+          "content-length": "6133",
+          "connection": "keep-alive",
+          "x-amzn-requestid": "419db94b-65b8-4ff0-a4c9-f033e46f9db1",
+          "x-amzn-bedrock-invocation-latency": "21434",
+          "x-amzn-bedrock-cache-write-input-token-count": "4763",
+          "x-amzn-bedrock-cache-read-input-token-count": "0",
+          "x-amzn-bedrock-output-token-count": "961",
+          "x-amzn-bedrock-input-token-count": "9"
+        },
+        "RetryAttempts": 0
+      },
+      "raw_anthropic_response": {
+        "id": "msg_bdrk_01FytzwGEYHBKy3mjwmjV49Z",
+        "type": "message",
+        "role": "assistant",
+        "model": "claude-sonnet-4-20250514",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "Let me analyze this document step by step following the classification workflow: 1. **TEXT EXTRACTION** Looking at this document, I can see: - \"REPUBLICA DE COLOMBIA\" - \"IDENTIFICACION PERSONAL\" - \"CEDULA DE CIUDADANIA\" - A number: \"12.097.982\" - Name: \"POLANIA ANDRADE\" - \"ENRIQUE\" (appears to be first name) - There's a photo of a person - \"FECHA DE NACIMIENTO 04-DIC-1947\" - \"NEIVA\" (place) - \"(HUILA)\" - \"LUGAR DE NACIMIENTO\" - \"1,69\" (height) - \"O+\" (blood type) - \"M\" (sex/gender) - \"ESTATURA\", \"G.S. RH\", \"SEXO\" - \"10-ABR-1969 NEIVA\" - \"FECHA Y LUGAR DE EXPEDICION\" - Signature area - \"INDICE DERECHO\" (right index - fingerprint area) - There's a barcode at the bottom - Some reference numbers 2. **PRIORITY CHECKS** This is not BLANK - there's substantial content This is not LINK_ONLY - no URLs or links 3. **DOCUMENT FUNCTION ANALYSIS** This document's PRIMARY PURPOSE is personal identification. It provides: - Individual personal information (name, photo) - Biographic data (birth date, birth place) - Physical characteristics (height, blood type, gender) - Government-issued ID number - Official seal/security elements This is clearly a personal identification document, not corporate documentation, not tax compliance, not ownership structure. 4. **ISSUER IDENTIFICATION** This is issued by \"REPUBLICA DE COLOMBIA\" - a government identification authority, not DIAN or Chamber of Commerce. 5. **CATEGORY CLASSIFICATION** Looking at CECRL indicators: I confirm the document contains comprehensive personal identification markers. The Colombian government-issued identification card validates an individual's identity through multiple verification elements. Key authentication features include photographic representation, unique numerical identifier, biometric data (fingerprint), and official governmental certification.",
+            "signature": "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"
+          },
+          {
+            "type": "text",
+            "text": "```json { \"category\": \"CECRL\", \"text\": \"REPUBLICA DE COLOMBIA\\nIDENTIFICACION PERSONAL\\nCEDULA DE CIUDADANIA\\nNUMERO 12.097.982\\nPOLANIA ANDRADE\\nAPELLIDOS\\nENRIQUE\\nNOMBRES\\nFIRMA\\nFECHA DE NACIMIENTO 04-DIC-1947\\nNEIVA\\n(HUILA)\\nLUGAR DE NACIMIENTO\\n1,69 O+ M\\nESTATURA G.S. RH SEXO\\n10-ABR-1969 NEIVA\\nFECHA Y LUGAR DE EXPEDICION\\nREGISTRADOR NACIONAL\\nCARLOS ARIEL SANCHEZ TORRES\\nINDICE DERECHO\\nA 193V00-01163962 M-001205709P-200801722 00137177164 7120005800\" } ```"
+          }
+        ],
+        "stop_reason": "end_turn",
+        "stop_sequence": null,
+        "usage": {
+          "input_tokens": 9,
+          "cache_creation_input_tokens": 4763,
+          "cache_read_input_tokens": 0,
+          "output_tokens": 961
+        }
+      },
+      "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+      "api_used": "invoke_model",
+      "model_params": {
+        "max_tokens": 8000,
+        "top_p": 1,
+        "temperature": 1,
+        "thinking": {
+          "type": "enabled",
+          "budget_tokens": 4096
+        }
+      }
+    },
+    "expected_category": "CECRL",
+    "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model",
+    "pdf_info": {
+      "original_size": 775594,
+      "first_page_size": 773947,
+      "is_scanned": true
+    }
+  },
+  "extraction_result": {
+    "extraction_data": {
+      "result": {
+        "firstName": "ENRIQUE",
+        "lastName": "POLANIA ANDRADE",
+        "country_issuer": "Colombia",
+        "nationality": "Colombia",
+        "identificationType": "Cédula de Ciudadanía",
+        "identificationNumber": "12.097.982",
+        "message": ""
+      },
+      "document_type": "person",
+      "category": "CECRL"
+    },
+    "raw_response": {
+      "output": {
+        "message": {
+          "content": [
+            {
+              "text": "```json { \"result\": { \"firstName\": \"ENRIQUE\", \"lastName\": \"POLANIA ANDRADE\", \"country_issuer\": \"Colombia\", \"nationality\": \"Colombia\", \"identificationType\": \"Cédula de Ciudadanía\", \"identificationNumber\": \"12.097.982\", \"message\": \"\" }, \"document_type\": \"person\", \"category\": \"CECRL\" } ```"
+            }
+          ]
+        }
+      },
+      "stopReason": "end_turn",
+      "usage": {
+        "input_tokens": 10,
+        "cache_creation_input_tokens": 6429,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 564
+      },
+      "ResponseMetadata": {
+        "RequestId": "d11132a8-2e35-4549-ab48-0b10311bb701",
+        "HTTPStatusCode": 200,
+        "HTTPHeaders": {
+          "date": "Fri, 29 Aug 2025 23:01:55 GMT",
+          "content-type": "application/json",
+          "content-length": "4866",
+          "connection": "keep-alive",
+          "x-amzn-requestid": "d11132a8-2e35-4549-ab48-0b10311bb701",
+          "x-amzn-bedrock-invocation-latency": "11586",
+          "x-amzn-bedrock-cache-write-input-token-count": "6429",
+          "x-amzn-bedrock-cache-read-input-token-count": "0",
+          "x-amzn-bedrock-output-token-count": "564",
+          "x-amzn-bedrock-input-token-count": "10"
+        },
+        "RetryAttempts": 0
+      },
+      "raw_anthropic_response": {
+        "id": "msg_bdrk_01SDsYB7c3ewSYVMVFiDo2KW",
+        "type": "message",
+        "role": "assistant",
+        "model": "claude-sonnet-4-20250514",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "I need to analyze this Colombian identification document. Let me examine the document carefully: Looking at the document, I can see: 1. **Document Type**: This appears to be a \"REPUBLICA DE COLOMBIA\" identification document - specifically a \"CEDULA DE CIUDADANIA\" 2. **Names**: I can see: - \"POLANIA ANDRADE\" appears prominently - \"ENRIQUE\" appears below that - The layout suggests \"POLANIA ANDRADE\" are the surnames (apellidos) and \"ENRIQUE\" is the given name (nombres) 3. **Identification Number**: \"12.097.982\" is clearly visible 4. **Country**: \"REPUBLICA DE COLOMBIA\" indicates this is issued by Colombia 5. **Document Type**: \"CEDULA DE CIUDADANIA\" which translates to \"Cédula de Ciudadanía\" 6. **Other details**: I can see birth information showing \"04-DIC-1947\" and \"NEIVA\" as place of birth, with other personal details. Let me extract this information according to the schema: - firstName: \"ENRIQUE\" (this appears to be the nombres/given name) - lastName: \"POLANIA ANDRADE\" (these appear to be the apellidos/surnames) - country_issuer: \"Colombia\" (República de Colombia) - nationality: \"Colombia\" (since this is a Colombian cédula and no other nationality is indicated) - identificationType: \"Cédula de Ciudadanía\" (this is clearly stated) - identificationNumber: \"12.097.982\" (preserving the formatting) - message: \"\" (document appears to be official and all fields extracted successfully) The document appears to be an official Colombian national ID card (Cédula de Ciudadanía) with all the proper official elements including government header, official formatting, and required information fields.",
+            "signature": "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"
+          },
+          {
+            "type": "text",
+            "text": "```json { \"result\": { \"firstName\": \"ENRIQUE\", \"lastName\": \"POLANIA ANDRADE\", \"country_issuer\": \"Colombia\", \"nationality\": \"Colombia\", \"identificationType\": \"Cédula de Ciudadanía\", \"identificationNumber\": \"12.097.982\", \"message\": \"\" }, \"document_type\": \"person\", \"category\": \"CECRL\" } ```"
+          }
+        ],
+        "stop_reason": "end_turn",
+        "stop_sequence": null,
+        "usage": {
+          "input_tokens": 10,
+          "cache_creation_input_tokens": 6429,
+          "cache_read_input_tokens": 0,
+          "output_tokens": 564
+        }
+      },
+      "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+      "api_used": "invoke_model",
+      "model_params": {
+        "max_tokens": 8000,
+        "top_p": 1,
+        "temperature": 1,
+        "thinking": {
+          "type": "enabled",
+          "budget_tokens": 4096
+        }
+      }
+    },
+    "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model"
+  }
+}

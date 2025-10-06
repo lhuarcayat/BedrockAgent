@@ -1,0 +1,35 @@
+{
+  "ResponseMetadata": {
+    "RequestId": "c1a13b0c-653c-4569-8bb2-666b17ce2d5c",
+    "HTTPStatusCode": 200,
+    "HTTPHeaders": {
+      "date": "Thu, 05 Jun 2025 03:29:32 GMT",
+      "content-type": "application/json",
+      "content-length": "3395",
+      "connection": "keep-alive",
+      "x-amzn-requestid": "c1a13b0c-653c-4569-8bb2-666b17ce2d5c"
+    },
+    "RetryAttempts": 0
+  },
+  "output": {
+    "message": {
+      "role": "assistant",
+      "content": [
+        {
+          "text": "Looking at this RUT document, I'll analyze it step by step to extract the required information.\n\n## Step-by-Step Reasoning:\n\n1. **Document Structure Analysis**: This is a multi-page RUT document (8 pages total based on page numbers shown) with complete company information and related parties data.\n\n2. **Company Information Extraction**:\n   - **companyName**: Found \"FARMACIA INSTITUCIONAL S A S\" in field 35 (Razón social)\n   - **documentType**: \"NIT\" - standard Colombian tax identification document\n   - **taxId**: \"900285194\" from field 5 (Número de Identificación Tributaria)\n   - **verificationDigit**: \"8\" from field 6 (DV) - single digit following the taxId\n   - **personType**: \"Persona Jurídica\" indicated by checkbox marked as \"1\" in field 24\n   - **country**: \"COLOMBIA\" - explicitly mentioned in field 38 (País)\n\n3. **Address Extraction**: \n   - Primary address from field 41: \"TV 93 53 32 IN 9\"\n   - Location details: Bogotá D.C. (field 40), Colombia\n   - Combined as: \"TV 93 53 32 IN 9, Bogotá, D.C., Colombia\"\n\n4. **Date Extraction**:\n   - Document generation date: \"08-02-2021 08:23:29AM\" converted to \"2021-02-08\"\n\n5. **Related Parties Processing** (from pages 3 and 5):\n   - **Page 3 - Representatives**:\n     - Row 1: TOVAR OSORIO ALEXANDER (Principal Legal Representative)\n     - Row 2: RUGE LEON OLGA LUCIA (Substitute Legal Representative)\n   - **Page 5 - Fiscal Auditor and Accountant**:\n     - VALDERRAMA ESQUIVEL WILIAN ANDRES (Principal Fiscal Auditor)\n     - TAPIAS MENDIETA MILCIADES (Accountant)\n\n6. **Confidence Assessment**: All fields have high confidence (85-100) due to clear document structure and explicit field labels.\n\n```json\n{\n  \"companyName\": \"FARMACIA INSTITUCIONAL S A S\",\n  \"country\": \"Colombia\",\n  \"documentType\": \"NIT\",\n  \"taxId\": \"900285194\",\n  \"verificationDigit\": \"8\",\n  \"personType\": \"Persona Jurídica\",\n  \"relatedParties\": [\n    {\n      \"firstName\": \"ALEXANDER\",\n      \"lastName\": \"TOVAR OSORIO\",\n      \"identificationType\": \"Cédula de Ciudadanía\",\n      \"identificationNumber\": \"79474197\",\n      \"relationshipType\": \"REPRS LEGAL PRIN\"\n    },\n    {\n      \"firstName\": \"OLGA LUCIA\",\n      \"lastName\": \"RUGE LEON\",\n      \"identificationType\": \"Cédula de Ciudadanía\",\n      \"identificationNumber\": \"52053354\",\n      \"relationshipType\": \"REPRS LEGAL SUPL\"\n    },\n    {\n      \"firstName\": \"WILIAN ANDRES\",\n      \"lastName\": \"VALDERRAMA ESQUIVEL\",\n      \"identificationType\": \"Cédula de Ciudadanía\",\n      \"identificationNumber\": \"80230151\",\n      \"relationshipType\": \"Revisor Fiscal Principal\"\n    },\n    {\n      \"firstName\": \"MILCIADES\",\n      \"lastName\": \"TAPIAS MENDIETA\",\n      \"identificationType\": \"Cédula de Ciudadanía\",\n      \"identificationNumber\": \"79663905\",\n      \"relationshipType\": \"Contador\"\n    }\n  ],\n  \"address\": \"TV 93 53 32 IN 9, Bogotá, D.C., Colombia\",\n  \"documentGenerationDate\": \"2021-02-08\"\n}\n```"
+        }
+      ]
+    }
+  },
+  "stopReason": "end_turn",
+  "usage": {
+    "inputTokens": 12606,
+    "outputTokens": 959,
+    "totalTokens": 13565,
+    "cacheReadInputTokens": 0,
+    "cacheWriteInputTokens": 0
+  },
+  "metrics": {
+    "latencyMs": 22256
+  }
+}

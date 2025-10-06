@@ -1,0 +1,90 @@
+{
+  "extraction_data": {
+    "path": "CECRL/70568729/cc velasquez.pdf",
+    "result": {
+      "firstName": "GIOVANNY HUMBERTO",
+      "lastName": "VELASQUEZ RUIZ",
+      "country_issuer": "Colombia",
+      "nationality": "Colombia",
+      "identificationType": "Cédula de Ciudadanía",
+      "identificationNumber": "70.568.728",
+      "message": ""
+    },
+    "document_type": "person",
+    "documentNumber": "70568729",
+    "category": "CECRL"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "```json { \"result\": { \"firstName\": \"GIOVANNY HUMBERTO\", \"lastName\": \"VELASQUEZ RUIZ\", \"country_issuer\": \"Colombia\", \"nationality\": \"Colombia\", \"identificationType\": \"Cédula de Ciudadanía\", \"identificationNumber\": \"70.568.728\", \"message\": \"\" }, \"document_type\": \"person\", \"category\": \"CECRL\" } ```"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 10,
+      "cache_creation_input_tokens": 7534,
+      "cache_read_input_tokens": 0,
+      "output_tokens": 879
+    },
+    "ResponseMetadata": {
+      "RequestId": "d65256ef-0073-41ad-86e2-5cd477bc6378",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Thu, 28 Aug 2025 15:37:09 GMT",
+        "content-type": "application/json",
+        "content-length": "3896",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "d65256ef-0073-41ad-86e2-5cd477bc6378",
+        "x-amzn-bedrock-invocation-latency": "19044",
+        "x-amzn-bedrock-cache-write-input-token-count": "7534",
+        "x-amzn-bedrock-cache-read-input-token-count": "0",
+        "x-amzn-bedrock-output-token-count": "879",
+        "x-amzn-bedrock-input-token-count": "10"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_01MQJntHGXPWdSt9GV6QwE2j",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-3-7-sonnet-20250219",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Let me analyze this Colombian ID document (Cédula de Ciudadanía) in detail using the extraction methodology provided. ## Document Structure Analysis The document appears to be a Colombian ID card (Cédula de Ciudadanía), shown over two pages/sides. It has official government headers and seals typical of Colombian identification documents. ## Field Extraction ### Page 1 (Front of ID): I can see: - Header: \"REPUBLICA DE COLOMBIA\" - Document type: \"IDENTIFICACION PERSONAL\" and \"CEDULA DE CIUDADANIA\" - ID Number: \"70.568.728\" - Last Name: \"VELASQUEZ RUIZ\" - First Name: \"GIOVANNY HUMBERTO\" - Signature field visible with what appears to be a signature ### Page 2 (Back of ID): I can see: - Birth date: \"17-OCT-1966\" - Place of birth: \"ENVIGADO (ANTIOQUIA)\" - Height: \"1.83\" - Blood Type: \"A+\" - Sex: \"M\" (Male) - Issue date information: \"30-NOV-1984 ENVIGADO\" - Fingerprint and barcode information Now I'll extract all required fields according to the schema: ### firstName From the front of the ID, I can see \"GIOVANNY HUMBERTO\" is listed after the surname. This appears to be the given name/first name of the individual. ### lastName From the front of the ID, \"VELASQUEZ RUIZ\" is clearly shown as the surname/last name. ### country_issuer The document is clearly issued by \"REPUBLICA DE COLOMBIA\" as stated in the header, so the country issuer is \"Colombia\". ### nationality There is no explicit nationality field visible, but following the provided hierarchy rules, I should assume the nationality is the same as the country issuer when no other information is provided. Therefore, the nationality is \"Colombia\". ### identificationType The document is labeled as \"CEDULA DE CIUDADANIA\" which translates to \"Cédula de Ciudadanía\" in proper Spanish formatting. This is a standard Colombian national ID card. ### identificationNumber The ID number shown on the front of the card is \"70.568.728\". I will preserve the original formatting with the period. ### message There are no issues with extraction or document validation. This is clearly an official Colombian ID document with all key fields visible. ## Final JSON Output: ```json { \"result\": { \"firstName\": \"GIOVANNY HUMBERTO\", \"lastName\": \"VELASQUEZ RUIZ\", \"country_issuer\": \"Colombia\", \"nationality\": \"Colombia\", \"identificationType\": \"Cédula de Ciudadanía\", \"identificationNumber\": \"70.568.728\", \"message\": \"\" }, \"document_type\": \"person\", \"category\": \"CECRL\" } ``` This output follows the schema exactly - I've included all required fields with the proper values extracted from the document. The identificationType is properly translated to Spanish as required, and I've preserved the original formatting of the identification number.",
+          "signature": "ErcBCkgIBxABGAIiQKQWpJOHldVAK12GeMHU0ljrq2xCbcwwyrbKdHmYh1T8l84R3sh15tkTYiPp+6Ub3XutGEXMnz7djzGhusGqOhYSDMeBwf0P8ncGHAZDSRoMktpNTUK2bKoKmmLFIjBY3/W8u8QgQy8Gyi0sAILeMdo3iGA+OhrWxcEaQl/s5F9kuVvo8ZRNXZcfKXNDVQkqHXkZKF7iOfDhDDBam+Xo3aXfAkJU1e4KrnLy7ffTGAI="
+        },
+        {
+          "type": "text",
+          "text": "```json { \"result\": { \"firstName\": \"GIOVANNY HUMBERTO\", \"lastName\": \"VELASQUEZ RUIZ\", \"country_issuer\": \"Colombia\", \"nationality\": \"Colombia\", \"identificationType\": \"Cédula de Ciudadanía\", \"identificationNumber\": \"70.568.728\", \"message\": \"\" }, \"document_type\": \"person\", \"category\": \"CECRL\" } ```"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 10,
+        "cache_creation_input_tokens": 7534,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 879
+      }
+    },
+    "model_id": "us.anthropic.claude-3-7-sonnet-20250219-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 8000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "model_used": "us.anthropic.claude-3-7-sonnet-20250219-v1:0",
+  "api_used": "invoke_model"
+}

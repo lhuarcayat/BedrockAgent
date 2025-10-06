@@ -1,0 +1,87 @@
+{
+  "classification_data": {
+    "category": "CECRL",
+    "text": "REPÚBLICA DE COLOMBIA IDENTIFICACIÓN PERSONAL CÉDULA DE CIUDADANÍA NUMERO 19.466.536 GARCÍA GONZÁLEZ APELLIDOS JOSÉ REINALDO NOMBRES FIRMA FECHA DE NACIMIENTO 14-FEB-1962 BOGOTÁ D.C. (CUNDINAMARCA) LUGAR DE NACIMIENTO 1.80 O+ M ESTATURA G.S. RH SEXO 20-JUN-1980 BOGOTÁ D.C. FECHA Y LUGAR DE EXPEDICIÓN REGISTRADOR NACIONAL ÍNDICE DERECHO A-1560150-00014462-M-00194950565536-20080616 000051535A 1 125020154G",
+    "document_number": "19466536",
+    "path": "CECRL/19466536/cedula sr garcia.pdf"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "```json { \"category\": \"CECRL\", \"text\": \"REPÚBLICA DE COLOMBIA\\nIDENTIFICACIÓN PERSONAL\\nCÉDULA DE CIUDADANÍA\\n\\nNUMERO 19.466.536\\nGARCÍA GONZÁLEZ\\nAPELLIDOS\\nJOSÉ REINALDO\\nNOMBRES\\n\\nFIRMA\\n\\nFECHA DE NACIMIENTO 14-FEB-1962\\nBOGOTÁ D.C.\\n(CUNDINAMARCA)\\nLUGAR DE NACIMIENTO\\n1.80 O+ M\\nESTATURA G.S. RH SEXO\\n20-JUN-1980 BOGOTÁ D.C.\\nFECHA Y LUGAR DE EXPEDICIÓN\\nREGISTRADOR NACIONAL\\n\\nÍNDICE DERECHO\\n\\nA-1560150-00014462-M-00194950565536-20080616 000051535A 1 125020154G\" } ```"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 1605,
+      "cache_creation_input_tokens": 3150,
+      "cache_read_input_tokens": 0,
+      "output_tokens": 921
+    },
+    "ResponseMetadata": {
+      "RequestId": "578e0b42-6c6d-434f-86f4-aabaec4ec5c4",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Sun, 31 Aug 2025 21:31:10 GMT",
+        "content-type": "application/json",
+        "content-length": "5835",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "578e0b42-6c6d-434f-86f4-aabaec4ec5c4",
+        "x-amzn-bedrock-invocation-latency": "13575",
+        "x-amzn-bedrock-cache-write-input-token-count": "3150",
+        "x-amzn-bedrock-cache-read-input-token-count": "0",
+        "x-amzn-bedrock-output-token-count": "921",
+        "x-amzn-bedrock-input-token-count": "1605"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_01HkvWCkTjUwXSd6ZGaRrZrj",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-sonnet-4-20250514",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Let me analyze this document following the classification workflow: 1. **TEXT EXTRACTION** Looking at this document, I can see: - \"REPÚBLICA DE COLOMBIA\" - \"IDENTIFICACIÓN PERSONAL\" - \"CÉDULA DE CIUDADANÍA\" - \"NUMERO 19,466,536\" - \"GARCÍA GONZÁLEZ\" - \"APELLIDOS\" - \"JOSÉ REINALDO\" - \"NOMBRES\" - There's a signature section labeled \"FIRMA\" - There's a photograph of a person - \"FECHA DE NACIMIENTO 14-FEB-1962\" - \"BOGOTÁ D.C.\" - \"(CUNDINAMARCA)\" - \"LUGAR DE NACIMIENTO\" - \"1.80 O+ M\" - \"ESTATURA G.S. RH SEXO\" - \"20-JUN-1980 BOGOTÁ D.C.\" - \"FECHA Y LUGAR DE EXPEDICIÓN\" - \"REGISTRADOR NACIONAL\" - There's a fingerprint - \"ÍNDICE DERECHO\" - There's a barcode at the bottom 2. **PRIORITY CHECKS** This is not BLANK - it has substantial content This is not LINK_ONLY - there are no hyperlinks/URLs 3. **DOCUMENT FUNCTION ANALYSIS** What is the main purpose of this document? - This is clearly a personal identification document - It contains personal biographical data: name, birth date, place of birth, blood type, sex, height - It has a photograph, signature, and fingerprint - It has a government-issued identification number (19,466,536) - It's labeled \"CÉDULA DE CIUDADANÍA\" which means \"Citizenship Card\" 4. **ISSUER IDENTIFICATION** - This is issued by \"REPÚBLICA DE COLOMBIA\" (Republic of Colombia) - It's a government-issued personal identification document 5. **CATEGORY CLASSIFICATION** I've confirmed this matches CECRL classification precisely. The document contains comprehensive personal identification details from an official Colombian government source, with all key identifying elements present and verified. The systematic markers - official terminology, personal biometrics, and government identification number - definitively place this as a CECRL category document with high confidence.",
+          "signature": "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"
+        },
+        {
+          "type": "text",
+          "text": "```json { \"category\": \"CECRL\", \"text\": \"REPÚBLICA DE COLOMBIA\\nIDENTIFICACIÓN PERSONAL\\nCÉDULA DE CIUDADANÍA\\n\\nNUMERO 19.466.536\\nGARCÍA GONZÁLEZ\\nAPELLIDOS\\nJOSÉ REINALDO\\nNOMBRES\\n\\nFIRMA\\n\\nFECHA DE NACIMIENTO 14-FEB-1962\\nBOGOTÁ D.C.\\n(CUNDINAMARCA)\\nLUGAR DE NACIMIENTO\\n1.80 O+ M\\nESTATURA G.S. RH SEXO\\n20-JUN-1980 BOGOTÁ D.C.\\nFECHA Y LUGAR DE EXPEDICIÓN\\nREGISTRADOR NACIONAL\\n\\nÍNDICE DERECHO\\n\\nA-1560150-00014462-M-00194950565536-20080616 000051535A 1 125020154G\" } ```"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 1605,
+        "cache_creation_input_tokens": 3150,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 921
+      }
+    },
+    "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 8000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "expected_category": "CECRL",
+  "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+  "api_used": "invoke_model",
+  "pdf_info": {
+    "original_size": 88839,
+    "first_page_size": 88628,
+    "is_scanned": true
+  }
+}

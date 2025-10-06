@@ -1,0 +1,87 @@
+{
+  "classification_data": {
+    "category": "CECRL",
+    "text": "R.EPUBLECA DD CÜLüMBIA IDEFITiF¡CACION PESSONAL CEDULA DE CIUDADANIA i\\uMERC 7.250.095 GARCIA VALENCIA APELL¡DÜS JOHN . . NOI.JBR!S ,..]']CE i ERE'HC FECHA DE NACTMTENTO 1g_AGO_l 965 ÉHESIP BoYAcA LUGAR DE NACIMIENTO 1.74 ESTATURA u.> ^O: HFl M SEXO 10:Aco-1 e83 PUERTO BOYACA trEChA y LUGAR DE ,*o=r,a,Oy_;-t-1.-tr..:a-. + .., BEGrsrnADoFi ¡r¡cib l;¡l c¡RLos aptEt sAilc dEZ toFRr: A. 072 1 4O0-0o1 92ri9s,M-0007250o95_:009 1 c3 1 001 76c7628A 1 27e1 5422 REPUBLICA DE COLOMBIA IDENTIFICACION PERSONAL CEDULA DE CIUDADANIA NUMERO 7.250.095 GARCIA VALENCIA APELLIDOS JOHN NÓMBRES FIRMA FECHA DE NACIMIENTO 19-AGO-1965 PUERTO BOYACA (BOYACA) LUGAR DE NACIMIENTO 1.74 ESTATURA O- G.S. RH M SEXO 20-AGO-1983 PUERTO BOYACA FECHA Y LUGAR DE EXPEDICION INDICE DERECHO REGISTRADORA NACIONAL CARLOS ARIEL SANCHEZ TORRES A-0721400-00192996-M-0007250095-20091031 00176676284 1 27615422",
+    "document_number": "7250095",
+    "path": "CECRL/7250095/7250095_2020-02-29.pdf"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "```json { \"category\": \"CECRL\", \"text\": \"R.EPUBLECA DD CÜLüMBIA\\nIDEFITiF¡CACION PESSONAL\\nCEDULA DE CIUDADANIA\\ni\\\\uMERC 7.250.095\\nGARCIA VALENCIA\\nAPELL¡DÜS\\nJOHN\\n.\\n. \\nNOI.JBR!S\\n,..]']CE i ERE'HC\\nFECHA DE NACTMTENTO 1g_AGO_l 965\\nÉHESIP BoYAcA\\nLUGAR DE NACIMIENTO\\n1.74\\nESTATURA u.> ^O: HFl M\\nSEXO\\n10:Aco-1 e83 PUERTO BOYACA trEChA y LUGAR DE ,*o=r,a,Oy_;-t-1.-tr..:a-.\\n+ ..,\\nBEGrsrnADoFi ¡r¡cib l;¡l c¡RLos aptEt sAilc dEZ toFRr:\\nA.\\n072 1 4O0-0o1 92ri9s,M-0007250o95_:009 1 c3 1 001 76c7628A 1 27e1 5422\\n\\nREPUBLICA DE COLOMBIA\\nIDENTIFICACION PERSONAL\\nCEDULA DE CIUDADANIA\\nNUMERO 7.250.095\\nGARCIA VALENCIA\\nAPELLIDOS\\nJOHN\\nNÓMBRES\\nFIRMA\\n\\nFECHA DE NACIMIENTO 19-AGO-1965\\nPUERTO BOYACA\\n(BOYACA)\\nLUGAR DE NACIMIENTO\\n1.74\\nESTATURA\\nO-\\nG.S. RH\\nM\\nSEXO\\n20-AGO-1983 PUERTO BOYACA\\nFECHA Y LUGAR DE EXPEDICION\\nINDICE DERECHO\\nREGISTRADORA NACIONAL\\nCARLOS ARIEL SANCHEZ TORRES\\n\\nA-0721400-00192996-M-0007250095-20091031\\n00176676284 1\\n27615422\" } ```"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 1967,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 3150,
+      "output_tokens": 1140
+    },
+    "ResponseMetadata": {
+      "RequestId": "f2c2328a-526b-4711-aadc-8f260b38b108",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Sun, 31 Aug 2025 21:35:32 GMT",
+        "content-type": "application/json",
+        "content-length": "6132",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "f2c2328a-526b-4711-aadc-8f260b38b108",
+        "x-amzn-bedrock-invocation-latency": "22040",
+        "x-amzn-bedrock-cache-write-input-token-count": "0",
+        "x-amzn-bedrock-cache-read-input-token-count": "3150",
+        "x-amzn-bedrock-output-token-count": "1140",
+        "x-amzn-bedrock-input-token-count": "1967"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_01MH3jJVnF9uL1zwGfj3W35E",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-sonnet-4-20250514",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Let me analyze this document step by step according to the classification workflow: 1. **TEXT EXTRACTION** Looking at the document, I can see Spanish text from what appears to be an identification document. The text includes: - REPUBLICA DE COLOMBIA - IDENTIFICACION PERSONAL - CEDULA DE CIUDADANIA - NUMERO 7.250.095 - GARCIA VALENCIA (apellidos) - JOHN (nombres) - Various personal data like fecha de nacimiento (19-AGO-1965), lugar de nacimiento (PUERTO BOYACA), estatura (1.74), sexo (M), etc. There is substantial readable content, so this is not BLANK or LINK_ONLY. 2. **PRIORITY CHECKS** This is not BLANK - there's substantial content. This is not LINK_ONLY - there are no URLs or hyperlinks redirecting to external sources. 3. **DOCUMENT FUNCTION ANALYSIS** What is the MAIN PURPOSE of this document? - This appears to be a personal identification document - It contains \"CEDULA DE CIUDADANIA\" which means \"Citizenship Card\" - It has personal biographical data like date of birth, place of birth, height, sex - It has a photograph and appears to have security elements - This is clearly a personal identification document -> CECRL Indicative 4. **ISSUER IDENTIFICATION** - This is issued by \"REPUBLICA DE COLOMBIA\" (Republic of Colombia) - It's a government-issued personal identification document -> CECRL Indicative 5. **CATEGORY CLASSIFICATION** Following the order: CECRL → CERL → ACC → RUT → RUB → BY_REVIEW This clearly fits CECRL: - Contains \"CÉDULA DE CIUDADANÍA\" (citizenship card) - Personal biographical data: date of birth, place of birth, height, sex - Individual reference with photograph - Government-issued personal identification number (7.250.095) - Has additional protective features like barcodes and security elements The document definitively meets all critical classification requirements for a Colombian government-issued personal identification document.",
+          "signature": "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"
+        },
+        {
+          "type": "text",
+          "text": "```json { \"category\": \"CECRL\", \"text\": \"R.EPUBLECA DD CÜLüMBIA\\nIDEFITiF¡CACION PESSONAL\\nCEDULA DE CIUDADANIA\\ni\\\\uMERC 7.250.095\\nGARCIA VALENCIA\\nAPELL¡DÜS\\nJOHN\\n.\\n. \\nNOI.JBR!S\\n,..]']CE i ERE'HC\\nFECHA DE NACTMTENTO 1g_AGO_l 965\\nÉHESIP BoYAcA\\nLUGAR DE NACIMIENTO\\n1.74\\nESTATURA u.> ^O: HFl M\\nSEXO\\n10:Aco-1 e83 PUERTO BOYACA trEChA y LUGAR DE ,*o=r,a,Oy_;-t-1.-tr..:a-.\\n+ ..,\\nBEGrsrnADoFi ¡r¡cib l;¡l c¡RLos aptEt sAilc dEZ toFRr:\\nA.\\n072 1 4O0-0o1 92ri9s,M-0007250o95_:009 1 c3 1 001 76c7628A 1 27e1 5422\\n\\nREPUBLICA DE COLOMBIA\\nIDENTIFICACION PERSONAL\\nCEDULA DE CIUDADANIA\\nNUMERO 7.250.095\\nGARCIA VALENCIA\\nAPELLIDOS\\nJOHN\\nNÓMBRES\\nFIRMA\\n\\nFECHA DE NACIMIENTO 19-AGO-1965\\nPUERTO BOYACA\\n(BOYACA)\\nLUGAR DE NACIMIENTO\\n1.74\\nESTATURA\\nO-\\nG.S. RH\\nM\\nSEXO\\n20-AGO-1983 PUERTO BOYACA\\nFECHA Y LUGAR DE EXPEDICION\\nINDICE DERECHO\\nREGISTRADORA NACIONAL\\nCARLOS ARIEL SANCHEZ TORRES\\n\\nA-0721400-00192996-M-0007250095-20091031\\n00176676284 1\\n27615422\" } ```"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 1967,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 3150,
+        "output_tokens": 1140
+      }
+    },
+    "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 8000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "expected_category": "CECRL",
+  "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+  "api_used": "invoke_model",
+  "pdf_info": {
+    "original_size": 555906,
+    "first_page_size": 555702,
+    "is_scanned": false
+  }
+}

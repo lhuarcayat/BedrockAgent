@@ -1,0 +1,88 @@
+{
+  "extraction_data": {
+    "result": {
+      "FirstName": "LUIS HERNANDO",
+      "LastName": "CORTES ARIAS",
+      "CountryIssuer": "Colombia",
+      "Nationality": "colombiano",
+      "IdentificationType": "Cédula de Ciudadanía",
+      "IdentificationNumber": "9969889",
+      "Message": ""
+    },
+    "document_type": "person",
+    "category": "CECRL"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "```json { \"result\": { \"FirstName\": \"LUIS HERNANDO\", \"LastName\": \"CORTES ARIAS\", \"CountryIssuer\": \"Colombia\", \"Nationality\": \"colombiano\", \"IdentificationType\": \"Cédula de Ciudadanía\", \"IdentificationNumber\": \"9969889\", \"Message\": \"\" }, \"document_type\": \"person\", \"category\": \"CECRL\" } ```"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 1583,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 4300,
+      "output_tokens": 510
+    },
+    "ResponseMetadata": {
+      "RequestId": "387fc000-befc-4937-8549-b5ed194d4ad4",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Sun, 31 Aug 2025 21:42:45 GMT",
+        "content-type": "application/json",
+        "content-length": "4176",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "387fc000-befc-4937-8549-b5ed194d4ad4",
+        "x-amzn-bedrock-invocation-latency": "8575",
+        "x-amzn-bedrock-cache-write-input-token-count": "0",
+        "x-amzn-bedrock-cache-read-input-token-count": "4300",
+        "x-amzn-bedrock-output-token-count": "510",
+        "x-amzn-bedrock-input-token-count": "1583"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_017SHpLS4fUhrAAXgAxhSb8Q",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-sonnet-4-20250514",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "This is a Colombian identification document (Cédula de Ciudadanía). Let me analyze the structure carefully. I can see: - \"REPÚBLICA DE COLOMBIA\" at the top - \"IDENTIFICACIÓN PERSONAL\" - \"CÉDULA DE CIUDADANÍA\" - NÚMERO: (followed by what appears to be a number: 9969889) - Text that includes \"CORTES ARIAS\" and \"LUIS HERNANDO\" - Birth date information showing \"18-MAY-1956\" This looks like a Colombian document with potential misalignment issues as mentioned in the methodology. Let me examine the structure more carefully: Looking at the document, I can see: - The header clearly identifies this as a Colombian Cédula de Ciudadanía - The number appears to be 9969889 - I can see \"CORTES ARIAS\" which would be the surnames - I can see \"LUIS HERNANDO\" which would be the first names Based on the extraction methodology for Colombian documents, I need to be careful about potential misalignment. However, in this case, the layout seems fairly clear: - APELLIDOS: CORTES ARIAS - NOMBRES: LUIS HERNANDO The document shows: - Country: República de Colombia (so CountryIssuer = \"Colombia\") - Document type: Cédula de Ciudadanía - Number: 9969889 - Names: LUIS HERNANDO - Surnames: CORTES ARIAS For nationality, since this is a Colombian citizenship card and there's no explicit nationality field visible, I would infer Colombian nationality.",
+          "signature": "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"
+        },
+        {
+          "type": "text",
+          "text": "```json { \"result\": { \"FirstName\": \"LUIS HERNANDO\", \"LastName\": \"CORTES ARIAS\", \"CountryIssuer\": \"Colombia\", \"Nationality\": \"colombiano\", \"IdentificationType\": \"Cédula de Ciudadanía\", \"IdentificationNumber\": \"9969889\", \"Message\": \"\" }, \"document_type\": \"person\", \"category\": \"CECRL\" } ```"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 1583,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 4300,
+        "output_tokens": 510
+      }
+    },
+    "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 8000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+  "api_used": "invoke_model"
+}

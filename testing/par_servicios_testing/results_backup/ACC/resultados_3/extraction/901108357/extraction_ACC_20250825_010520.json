@@ -1,0 +1,83 @@
+{
+  "extraction_data": {
+    "path": "ACC/901108357/204_CA_2020-02-29.pdf",
+    "result": {
+      "companyName": "QUIMEL INGENIERIA S.A.S.",
+      "documentType": "Equity Composition",
+      "taxId": "901.108.357-8",
+      "country": "Colombia",
+      "identificationDetails": {
+        "source": "text_reference",
+        "indicators": [
+          "NIT",
+          "Colombia"
+        ],
+        "conflictingSources": [],
+        "requiresReview": false
+      },
+      "relatedParties": [
+        {
+          "firstName": "Mendoza",
+          "lastName": "Carranza Jose Carlos",
+          "identificationType": "C.E.",
+          "identificationNumber": "737708",
+          "relationshipType": "Shareholder",
+          "participationPercentage": "100%",
+          "timeFound": 1,
+          "job": ""
+        }
+      ]
+    },
+    "document_type": "company",
+    "document_number": "901108357",
+    "category": "ACC",
+    "confidenceScores": {
+      "companyName": 95,
+      "taxId": 95,
+      "country": 95,
+      "relatedParties": 90
+    }
+  },
+  "raw_response": {
+    "ResponseMetadata": {
+      "RequestId": "63f4cb0d-0e01-4b15-818d-83c91a01dfcd",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Mon, 25 Aug 2025 06:05:19 GMT",
+        "content-type": "application/json",
+        "content-length": "1274",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "63f4cb0d-0e01-4b15-818d-83c91a01dfcd"
+      },
+      "RetryAttempts": 0
+    },
+    "output": {
+      "message": {
+        "role": "assistant",
+        "content": [
+          {
+            "text": "```json { \"path\": \"ACC/901108357/204_CA_2020-02-29.pdf\", \"result\": { \"companyName\": \"QUIMEL INGENIERIA S.A.S.\", \"documentType\": \"Equity Composition\", \"taxId\": \"901.108.357-8\", \"country\": \"Colombia\", \"identificationDetails\": { \"source\": \"text_reference\", \"indicators\": [ \"NIT\", \"Colombia\" ], \"conflictingSources\": [], \"requiresReview\": false }, \"relatedParties\": [ { \"firstName\": \"Mendoza\", \"lastName\": \"Carranza Jose Carlos\", \"identificationType\": \"C.E.\", \"identificationNumber\": \"737708\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"100%\", \"timeFound\": 1, \"job\": \"\" } ] }, \"document_type\": \"company\", \"document_number\": \"901108357\", \"category\": \"ACC\", \"confidenceScores\": { \"companyName\": 95, \"taxId\": 95, \"country\": 95, \"relatedParties\": 90 } } ```"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "inputTokens": 8569,
+      "outputTokens": 316,
+      "totalTokens": 8885
+    },
+    "metrics": {
+      "latencyMs": 6595
+    },
+    "model_id": "us.amazon.nova-pro-v1:0",
+    "api_used": "converse",
+    "model_params": {
+      "maxTokens": 8200,
+      "topP": 1,
+      "temperature": 0.1
+    }
+  },
+  "model_used": "us.amazon.nova-pro-v1:0",
+  "api_used": "converse"
+}

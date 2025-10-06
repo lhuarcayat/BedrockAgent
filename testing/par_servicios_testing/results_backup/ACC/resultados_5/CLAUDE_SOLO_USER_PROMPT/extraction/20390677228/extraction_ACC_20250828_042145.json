@@ -1,0 +1,122 @@
+{
+  "extraction_data": {
+    "path": "ACC/20390677228/228_CA_2020-02-29.pdf",
+    "result": {
+      "companyName": "APROGAS S.A.C.",
+      "documentCategory": "Equity Composition",
+      "taxId": "POR REVISAR",
+      "country": "Perú",
+      "identificationDetails": {
+        "source": "text_reference",
+        "indicators": [
+          "Lima",
+          "DNI (Peruvian ID)"
+        ],
+        "conflictingSources": [
+          "Missing RUC (Peruvian tax ID)"
+        ],
+        "requiresReview": "true"
+      },
+      "relatedParties": [
+        {
+          "type": "person",
+          "firstName": "Ticiano",
+          "lastName": "Muñoz Sanchez",
+          "identificationType": "DNI",
+          "identificationNumber": "09163077",
+          "relationshipType": "Shareholder",
+          "participationPercentage": "99.99",
+          "timeFound": "1",
+          "job": "Gerente General"
+        },
+        {
+          "type": "person",
+          "firstName": "Chano",
+          "lastName": "Muñoz Llontop",
+          "identificationType": "DNI",
+          "identificationNumber": "70008642",
+          "relationshipType": "Shareholder",
+          "participationPercentage": "0.01",
+          "timeFound": "1",
+          "job": "Secretario"
+        }
+      ]
+    },
+    "documentType": "company",
+    "documentNumber": "20390677228",
+    "category": "ACC"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "```json { \"result\": { \"companyName\": \"APROGAS S.A.C.\", \"documentCategory\": \"Equity Composition\", \"taxId\": \"POR REVISAR\", \"country\": \"Perú\", \"identificationDetails\": { \"source\": \"text_reference\", \"indicators\": [ \"Lima\", \"DNI (Peruvian ID)\" ], \"conflictingSources\": [\"Missing RUC (Peruvian tax ID)\"], \"requiresReview\": \"true\" }, \"relatedParties\": [ { \"type\": \"person\", \"firstName\": \"Ticiano\", \"lastName\": \"Muñoz Sanchez\", \"identificationType\": \"DNI\", \"identificationNumber\": \"09163077\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"99.99\", \"timeFound\": \"1\", \"job\": \"Gerente General\" }, { \"type\": \"person\", \"firstName\": \"Chano\", \"lastName\": \"Muñoz Llontop\", \"identificationType\": \"DNI\", \"identificationNumber\": \"70008642\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"0.01\", \"timeFound\": \"1\", \"job\": \"Secretario\" } ] }, \"documentType\": \"company\", \"category\": \"ACC\" } ```"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 8,
+      "cache_creation_input_tokens": 20252,
+      "cache_read_input_tokens": 0,
+      "output_tokens": 1150
+    },
+    "ResponseMetadata": {
+      "RequestId": "92ed0a9a-e412-4d09-bbed-f7d539a25f66",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Thu, 28 Aug 2025 09:21:45 GMT",
+        "content-type": "application/json",
+        "content-length": "4562",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "92ed0a9a-e412-4d09-bbed-f7d539a25f66",
+        "x-amzn-bedrock-invocation-latency": "31777",
+        "x-amzn-bedrock-cache-write-input-token-count": "20252",
+        "x-amzn-bedrock-cache-read-input-token-count": "0",
+        "x-amzn-bedrock-output-token-count": "1150",
+        "x-amzn-bedrock-input-token-count": "8"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_011mqf8doxsTvTsofEREZn7m",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-3-7-sonnet-20250219",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Let me analyze this document carefully to extract the required information for the equity composition. ## Step 1: Document Analysis This appears to be a notarized document (\"ACTA GENERAL DE ACCIONISTAS\") for a company called APROGAS SAC, created in Lima, Peru. The document shows two shareholders meetings - one on November 14, 2019, and another on November 18, 2019. Let me identify the main components: - This is a shareholders meeting record (\"Acta General de Accionistas\") - Company: APROGAS S.A.C. - Country: Peru (indicated by city \"Lima\" and document format) - Notary: RULBI VELA VELASQUEZ - Shareholders are identified with DNI numbers (Peruvian national ID) ## Step 2: Root Level Extraction **CompanyName**: APROGAS S.A.C. The name appears in the document heading and several places throughout. **TaxId**: The document shows the company is registered in \"PARTIDA ELECTRONICA N° 11016561 DEL REGISTRO DE PERSONAS JURIDICAS DE LIMA\" - this appears to be the company registration number, not a RUC (Peruvian tax ID). So the taxId field should be \"POR REVISAR\" as we don't have the RUC. **Country**: The document clearly refers to Lima, Peru throughout, with Peruvian DNI numbers, so country is \"Perú\". ## Step 3: Related Parties Processing From the first page, I can see two shareholders: 1. **TICIANO MUÑOZ SANCHEZ** - Type: person - DNI: 09163077 - Shares: 549,945 shares - Participation: Can be calculated based on total of 550,000 shares = 99.99% (549,945/550,000) - Job: Also appears as \"PRESIDENTE\" of the shareholders meeting and \"GERENTE GENERAL\" 2. **CHANO MUÑOZ LLONTOP** - Type: person - DNI: 70008642 - Shares: 55 shares - Participation: Can be calculated based on total of 550,000 shares = 0.01% (55/550,000) - Job: Also appears as \"SECRETARIO\" of the shareholders meeting The document mentions they represent 100% of shares with voting rights, totaling 550,000 SOLES. ## Step 4: Validation & Cross-checking - The document doesn't provide the RUC of the company, which is the typical tax ID in Peru. So I'll mark taxId as \"POR REVISAR\" - The identificationType for both shareholders should be \"DNI\" which matches Peru in our PERSON_ID hash table - The job roles are clearly specified as \"PRESIDENTE\" and \"SECRETARIO\", and Ticiano is also designated as \"GERENTE GENERAL\" - The participation percentages add up to 100% (99.99% + 0.01%) - We have the share counts, which give us the exact participation percentages Let me structure the data according to the required schema:",
+          "signature": "ErcBCkgIBxABGAIiQBG3HKkpKIH8e/fLimvQFWBx9gUrtMQl+o3UgMqye6wUTRE8UodiVHm2l2VrkIts6jqfHBFCz6+lvLvgPdvxe0sSDOuRhDinxzWoTRzMhBoMw9Bb950MEOleXBNgIjCKCdGklMjHE0qoZSlHjaqS1eZRsWtYdrgAdWCFGNXmDTTFhxs/V8MWnC2OGvpIT4oqHReNhDO6BK1gAV3z251H4DQwoEmkCBYjrCuZNMH6GAI="
+        },
+        {
+          "type": "text",
+          "text": "```json { \"result\": { \"companyName\": \"APROGAS S.A.C.\", \"documentCategory\": \"Equity Composition\", \"taxId\": \"POR REVISAR\", \"country\": \"Perú\", \"identificationDetails\": { \"source\": \"text_reference\", \"indicators\": [ \"Lima\", \"DNI (Peruvian ID)\" ], \"conflictingSources\": [\"Missing RUC (Peruvian tax ID)\"], \"requiresReview\": \"true\" }, \"relatedParties\": [ { \"type\": \"person\", \"firstName\": \"Ticiano\", \"lastName\": \"Muñoz Sanchez\", \"identificationType\": \"DNI\", \"identificationNumber\": \"09163077\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"99.99\", \"timeFound\": \"1\", \"job\": \"Gerente General\" }, { \"type\": \"person\", \"firstName\": \"Chano\", \"lastName\": \"Muñoz Llontop\", \"identificationType\": \"DNI\", \"identificationNumber\": \"70008642\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"0.01\", \"timeFound\": \"1\", \"job\": \"Secretario\" } ] }, \"documentType\": \"company\", \"category\": \"ACC\" } ```"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 8,
+        "cache_creation_input_tokens": 20252,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 1150
+      }
+    },
+    "model_id": "us.anthropic.claude-3-7-sonnet-20250219-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 8000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "model_used": "us.anthropic.claude-3-7-sonnet-20250219-v1:0",
+  "api_used": "invoke_model"
+}

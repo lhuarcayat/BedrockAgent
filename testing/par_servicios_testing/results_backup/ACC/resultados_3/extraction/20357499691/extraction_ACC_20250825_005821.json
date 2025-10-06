@@ -1,0 +1,102 @@
+{
+  "extraction_data": {
+    "path": "ACC/20357499691/244_CA_2020-02-29.pdf",
+    "result": {
+      "companyName": "PRONTE INGENIEROS S.A.C.",
+      "documentType": "Equity Composition",
+      "taxId": "00111305",
+      "country": "POR REVISAR",
+      "identificationDetails": {
+        "source": "id_analysis",
+        "indicators": [
+          "00111305"
+        ],
+        "conflictingSources": [],
+        "requiresReview": true
+      },
+      "relatedParties": [
+        {
+          "firstName": "Enrique Baffi",
+          "lastName": "Arroyo",
+          "identificationType": "DNI",
+          "identificationNumber": "77'847,828",
+          "relationshipType": "Shareholder",
+          "participationPercentage": "96.10%",
+          "timeFound": 1,
+          "job": ""
+        },
+        {
+          "firstName": "Enrique Baffi",
+          "lastName": "Arroyo",
+          "identificationType": "DNI",
+          "identificationNumber": "3'052,172",
+          "relationshipType": "Shareholder",
+          "participationPercentage": "3.76%",
+          "timeFound": 2,
+          "job": ""
+        },
+        {
+          "firstName": "Mario Lazo",
+          "lastName": "Ruiz",
+          "identificationType": "DNI",
+          "identificationNumber": "100,000",
+          "relationshipType": "Shareholder",
+          "participationPercentage": "0.14%",
+          "timeFound": 1,
+          "job": ""
+        }
+      ]
+    },
+    "document_type": "company",
+    "document_number": "20357499691",
+    "category": "ACC",
+    "confidenceScores": {
+      "companyName": 90,
+      "taxId": 80,
+      "country": 60,
+      "relatedParties": 85
+    }
+  },
+  "raw_response": {
+    "ResponseMetadata": {
+      "RequestId": "336e05fb-2c0c-4680-9f96-3f540811f1f5",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Mon, 25 Aug 2025 05:58:20 GMT",
+        "content-type": "application/json",
+        "content-length": "1916",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "336e05fb-2c0c-4680-9f96-3f540811f1f5"
+      },
+      "RetryAttempts": 0
+    },
+    "output": {
+      "message": {
+        "role": "assistant",
+        "content": [
+          {
+            "text": "```json { \"path\": \"ACC/20357499691/244_CA_2020-02-29.pdf\", \"result\": { \"companyName\": \"PRONTE INGENIEROS S.A.C.\", \"documentType\": \"Equity Composition\", \"taxId\": \"00111305\", \"country\": \"POR REVISAR\", \"identificationDetails\": { \"source\": \"id_analysis\", \"indicators\": [ \"00111305\" ], \"conflictingSources\": [], \"requiresReview\": true }, \"relatedParties\": [ { \"firstName\": \"Enrique Baffi\", \"lastName\": \"Arroyo\", \"identificationType\": \"DNI\", \"identificationNumber\": \"77'847,828\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"96.10%\", \"timeFound\": 1, \"job\": \"\" }, { \"firstName\": \"Enrique Baffi\", \"lastName\": \"Arroyo\", \"identificationType\": \"DNI\", \"identificationNumber\": \"3'052,172\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"3.76%\", \"timeFound\": 2, \"job\": \"\" }, { \"firstName\": \"Mario Lazo\", \"lastName\": \"Ruiz\", \"identificationType\": \"DNI\", \"identificationNumber\": \"100,000\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"0.14%\", \"timeFound\": 1, \"job\": \"\" } ] }, \"document_type\": \"company\", \"document_number\": \"20357499691\", \"category\": \"ACC\", \"confidenceScores\": { \"companyName\": 90, \"taxId\": 80, \"country\": 60, \"relatedParties\": 85 } } ```"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "inputTokens": 8705,
+      "outputTokens": 479,
+      "totalTokens": 9184
+    },
+    "metrics": {
+      "latencyMs": 8912
+    },
+    "model_id": "us.amazon.nova-pro-v1:0",
+    "api_used": "converse",
+    "model_params": {
+      "maxTokens": 8200,
+      "topP": 1,
+      "temperature": 0.1
+    }
+  },
+  "model_used": "us.amazon.nova-pro-v1:0",
+  "api_used": "converse"
+}

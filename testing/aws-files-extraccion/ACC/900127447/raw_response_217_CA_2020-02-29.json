@@ -1,0 +1,33 @@
+{
+  "ResponseMetadata": {
+    "RequestId": "c65a6456-60c0-442a-acb6-a3f4c1b79d00",
+    "HTTPStatusCode": 200,
+    "HTTPHeaders": {
+      "date": "Mon, 16 Jun 2025 20:49:20 GMT",
+      "content-type": "application/json",
+      "content-length": "1271",
+      "connection": "keep-alive",
+      "x-amzn-requestid": "c65a6456-60c0-442a-acb6-a3f4c1b79d00"
+    },
+    "RetryAttempts": 0
+  },
+  "output": {
+    "message": {
+      "role": "assistant",
+      "content": [
+        {
+          "text": "```json\n{\n  \"path\": \"s3://par-servicios-poc-dev-filling-desk/par-servicios-poc/ACC/900127447/217_CA_2020-02-29.pdf\",\n  \"result\": {\n    \"companyName\": \"LA EMPRESA ROMEGAS SAS\",\n    \"documentType\": \"Equity Composition\",\n    \"taxId\": \"900.127.447\",\n    \"country\": \"Colombia\",\n    \"identificationDetails\": {\n      \"source\": \"id_analysis\",\n      \"indicators\": [\n        \"NIT\"\n      ],\n      \"requiresReview\": false\n    },\n    \"relatedParties\": [\n      {\n        \"firstName\": \"JULIO CESAR\",\n        \"lastName\": \"ROMERO MUÑOZ\",\n        \"identificationType\": \"CC\",\n        \"identificationNumber\": \"79.735.871\",\n        \"relationshipType\": \"Shareholder\",\n        \"participationPercentage\": \"100.0\",\n        \"timeFound\": 1\n      }\n    ]\n  },\n  \"document_type\": \"company\",\n  \"document_number\": \"900127447\",\n  \"category\": \"ACC\",\n  \"confidenceScores\": {\n    \"companyName\": 95,\n    \"documentType\": 100,\n    \"taxId\": 95,\n    \"country\": 95,\n    \"relatedParties\": 90\n  }\n}\n```"
+        }
+      ]
+    }
+  },
+  "stopReason": "end_turn",
+  "usage": {
+    "inputTokens": 5435,
+    "outputTokens": 333,
+    "totalTokens": 5768
+  },
+  "metrics": {
+    "latencyMs": 7295
+  }
+}

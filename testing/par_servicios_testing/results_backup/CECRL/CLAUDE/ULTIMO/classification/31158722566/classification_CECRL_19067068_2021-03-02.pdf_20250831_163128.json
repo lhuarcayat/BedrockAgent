@@ -1,0 +1,87 @@
+{
+  "classification_data": {
+    "category": "CECRL",
+    "text": "REPÚBLICA DE COLOMBIA IDENTIFICACION PERSONAL CEDULA DE CIUDADANIA NUMERO 19.067.068 VARGAS VELOZA APELLIDOS LUIS ALBERTO NOMBRES FIRMA FECHA DE NACIMIENTO 22-ABR-1949 UBATE (CUNDINAMARCA) LUGAR DE NACIMIENTO 1.65 A+ M ESTATURA G.S. RH SEXO 26-MAY-1970 BOGOTA D.C. FECHA Y LUGAR DE EXPEDICION INDICE DERECHO REGISTRADOR NACIONAL CARLOS ARIEL SANCHEZ TORRES A-1500150-0000728I-M-001906706B-20080507 0000246624A 1 1150021138",
+    "document_number": "UNKNOWN",
+    "path": "CECRL/31158722566_19067068_2021-03-02/19067068_2021-03-02.pdf"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "```json { \"category\": \"CECRL\", \"text\": \"REPÚBLICA DE COLOMBIA\\nIDENTIFICACION PERSONAL\\nCEDULA DE CIUDADANIA\\nNUMERO 19.067.068\\nVARGAS VELOZA\\nAPELLIDOS\\nLUIS ALBERTO\\nNOMBRES\\nFIRMA\\nFECHA DE NACIMIENTO 22-ABR-1949\\nUBATE\\n(CUNDINAMARCA)\\nLUGAR DE NACIMIENTO\\n1.65\\nA+\\nM\\nESTATURA\\nG.S. RH\\nSEXO\\n26-MAY-1970 BOGOTA D.C.\\nFECHA Y LUGAR DE EXPEDICION\\nINDICE DERECHO\\nREGISTRADOR NACIONAL\\nCARLOS ARIEL SANCHEZ TORRES\\nA-1500150-0000728I-M-001906706B-20080507\\n0000246624A 1\\n1150021138\" } ```"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 1584,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 3150,
+      "output_tokens": 1153
+    },
+    "ResponseMetadata": {
+      "RequestId": "965bb3d5-448c-4156-85cc-7de44224efbd",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Sun, 31 Aug 2025 21:31:28 GMT",
+        "content-type": "application/json",
+        "content-length": "7166",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "965bb3d5-448c-4156-85cc-7de44224efbd",
+        "x-amzn-bedrock-invocation-latency": "17513",
+        "x-amzn-bedrock-cache-write-input-token-count": "0",
+        "x-amzn-bedrock-cache-read-input-token-count": "3150",
+        "x-amzn-bedrock-output-token-count": "1153",
+        "x-amzn-bedrock-input-token-count": "1584"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_01FrATR2mUghsmeFNApgg1Ga",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-sonnet-4-20250514",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Let me analyze this document following the classification workflow: 1. **TEXT EXTRACTION** Looking at the document, I can extract the following text: - \"REPÚBLICA DE COLOMBIA\" - \"IDENTIFICACION PERSONAL\" - \"CEDULA DE CIUDADANIA\" - \"NUMERO 19.067.068\" - \"VARGAS VELOZA\" - \"APELLIDOS\" - \"LUIS ALBERTO\" - \"NOMBRES\" - \"FIRMA\" - \"FECHA DE NACIMIENTO 22-ABR-1949\" - \"UBATE\" - \"(CUNDINAMARCA)\" - \"LUGAR DE NACIMIENTO\" - \"1.65\" \"A+\" \"M\" - \"ESTATURA\" \"G.S. RH\" \"SEXO\" - \"26-MAY-1970 BOGOTA D.C.\" - \"FECHA Y LUGAR DE EXPEDICION\" - \"REGISTRADOR NACIONAL\" - \"CARLOS ARIEL SANCHEZ TORRES\" - \"INDICE DERECHO\" - Barcode numbers: \"A-1500150-0000728I-M-001906706B-20080507\" \"0000246624A 1\" \"1150021138\" 2. **PRIORITY CHECKS** - Not BLANK - has significant content - Not LINK_ONLY - no hyperlinks or URLs redirecting to other places 3. **DOCUMENT FUNCTION ANALYSIS** What is the MAIN PURPOSE of this document? - This is clearly a personal identification document - It identifies an individual person named \"LUIS ALBERTO VARGAS VELOZA\" - Contains personal biographical data: date of birth (22-ABR-1949), place of birth (UBATE, CUNDINAMARCA), sex (M), height (1.65), blood type (A+) - Contains identification number (19.067.068) - Has photograph, signature area, and fingerprint - Includes advanced security features like unique barcodes - Specifically a Colombian government-issued citizenship card - Officially validates the holder's identity and citizenship status 4. **ISSUER IDENTIFICATION** - Issued by \"REPÚBLICA DE COLOMBIA\" - a government identification authority - Has \"REGISTRADOR NACIONAL CARLOS ARIEL SANCHEZ TORRES\" - This confirms it's issued by a government identification authority → CECRL indicative 5. **CATEGORY CLASSIFICATION** Following the order: CECRL → CERL → ACC → RUT → RUB → BY_REVIEW I recognize this as a comprehensive personal identification document with multiple verification elements. The card contains critical personal data and robust security mechanisms typical of official government identification. The analysis confirms this is definitively a CECRL document, specifically excluding business or tax-related certificates. The document focuses exclusively on individual personal identification verification.",
+          "signature": "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"
+        },
+        {
+          "type": "text",
+          "text": "```json { \"category\": \"CECRL\", \"text\": \"REPÚBLICA DE COLOMBIA\\nIDENTIFICACION PERSONAL\\nCEDULA DE CIUDADANIA\\nNUMERO 19.067.068\\nVARGAS VELOZA\\nAPELLIDOS\\nLUIS ALBERTO\\nNOMBRES\\nFIRMA\\nFECHA DE NACIMIENTO 22-ABR-1949\\nUBATE\\n(CUNDINAMARCA)\\nLUGAR DE NACIMIENTO\\n1.65\\nA+\\nM\\nESTATURA\\nG.S. RH\\nSEXO\\n26-MAY-1970 BOGOTA D.C.\\nFECHA Y LUGAR DE EXPEDICION\\nINDICE DERECHO\\nREGISTRADOR NACIONAL\\nCARLOS ARIEL SANCHEZ TORRES\\nA-1500150-0000728I-M-001906706B-20080507\\n0000246624A 1\\n1150021138\" } ```"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 1584,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 3150,
+        "output_tokens": 1153
+      }
+    },
+    "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 8000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "expected_category": "CECRL",
+  "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+  "api_used": "invoke_model",
+  "pdf_info": {
+    "original_size": 123009,
+    "first_page_size": 119406,
+    "is_scanned": true
+  }
+}

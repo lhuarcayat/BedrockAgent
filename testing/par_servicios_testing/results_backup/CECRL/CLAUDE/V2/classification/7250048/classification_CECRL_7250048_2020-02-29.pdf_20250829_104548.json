@@ -1,0 +1,87 @@
+{
+  "classification_data": {
+    "category": "CECRL",
+    "text": "REPUBLICA DE COLOMBIA IDENTIFICACION PERSONAL CEDULA DE CIUDADANIA NUMERO 7.250.048 HERRERA MESA APELLIDOS LEONCIO DE JESUS NOMBRES FIRMA FECHA DE NACIMIENTO 27-SEP-1964 REMEDIOS (ANTIOQUIA) LUGAR DE NACIMIENTO 1.60 A+ M ESTATURA G.S RH SEXO 22-MAR-1983 PUERTO BOYACA FECHA Y LUGAR DE EXPEDICION INDICE DERECHO REGISTRADOR NACIONAL CARLOS ARIEL SANCHEZ TORRES A-0721400-00139388-M-00072500448-20081216 00008366914A 17410002668",
+    "document_number": "7250048",
+    "path": "CECRL/7250048/7250048_2020-02-29.pdf"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "```json { \"category\": \"CECRL\", \"text\": \"REPUBLICA DE COLOMBIA IDENTIFICACION PERSONAL CEDULA DE CIUDADANIA NUMERO 7.250.048 HERRERA MESA APELLIDOS LEONCIO DE JESUS NOMBRES FIRMA FECHA DE NACIMIENTO 27-SEP-1964 REMEDIOS (ANTIOQUIA) LUGAR DE NACIMIENTO 1.60 A+ M ESTATURA G.S RH SEXO 22-MAR-1983 PUERTO BOYACA FECHA Y LUGAR DE EXPEDICION INDICE DERECHO REGISTRADOR NACIONAL CARLOS ARIEL SANCHEZ TORRES A-0721400-00139388-M-00072500448-20081216 00008366914A 17410002668\" } ```"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 9,
+      "cache_creation_input_tokens": 4573,
+      "cache_read_input_tokens": 0,
+      "output_tokens": 812
+    },
+    "ResponseMetadata": {
+      "RequestId": "82f16ec5-834b-4319-a2fa-350d30ce6551",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Fri, 29 Aug 2025 15:45:35 GMT",
+        "content-type": "application/json",
+        "content-length": "6496",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "82f16ec5-834b-4319-a2fa-350d30ce6551",
+        "x-amzn-bedrock-invocation-latency": "13693",
+        "x-amzn-bedrock-cache-write-input-token-count": "4573",
+        "x-amzn-bedrock-cache-read-input-token-count": "0",
+        "x-amzn-bedrock-output-token-count": "812",
+        "x-amzn-bedrock-input-token-count": "9"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_01BcwSWgbcGVxYsiJbreRkFY",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-sonnet-4-20250514",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Let me analyze this document step by step following the classification workflow. 1. **TEXT EXTRACTION** Looking at the document, I can see: - \"REPUBLICA DE COLOMBIA IDENTIFICACION PERSONAL CEDULA DE CIUDADANIA\" - \"NUMERO 7.250.048\" - \"HERRERA MESA\" - \"LEONCIO DE JESUS\" - A photo of a person with glasses - \"FECHA DE NACIMIENTO 27-SEP-1964\" - \"REMEDIOS (ANTIOQUIA)\" - place of birth - \"LUGAR DE NACIMIENTO\" - \"1.60\" - height (ESTATURA) - \"A+\" - blood type (G.S RH) - \"M\" - gender (SEXO) - \"22-MAR-1983 PUERTO BOYACA\" - \"FECHA Y LUGAR DE EXPEDICION\" - A fingerprint - Various other identifying marks and barcodes - Registration information at the bottom 2. **PRIORITY CHECKS** This is not BLANK - there is substantial meaningful content. This is not LINK_ONLY - no URLs or hyperlinks, this is a complete document. 3. **ISSUER IDENTIFICATION** This appears to be issued by the Colombian government (República de Colombia) for personal identification purposes. This is clearly a personal identification document, not a DIAN document or Chamber of Commerce document. 4. **DOCUMENT FUNCTION ANALYSIS** This is clearly for personal identification of an individual person. It contains: - Personal biographical data (birth date, birth place) - Physical characteristics (height, blood type, gender) - Photo and fingerprint - Personal identification number - Individual's name 5. **CATEGORY CLASSIFICATION** This fits perfectly into CECRL category: - It's an official personal identification document (\"CEDULA DE CIUDADANIA\") - Contains individual identification terminology - Has personal biographical data (birth date/place, blood type, gender) - Contains individual photo, signature area, fingerprint - Has government-issued personal ID number with individual name - Has security elements (photo, fingerprint, barcodes, official format) - Issued by government identification authority (República de Colombia) 6. **CONFIDENCE VALIDATION** This is strong evidence for CECRL - all the must-have indicators are present and there are no conflicting signals. The document is definitively not a RUT, CERL, ACC, or RUB document, as it lacks tax, corporate, shareholding, or beneficial ownership information. I'll focus on extracting all the text precisely to confirm the document's classification.",
+          "signature": "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"
+        },
+        {
+          "type": "text",
+          "text": "```json { \"category\": \"CECRL\", \"text\": \"REPUBLICA DE COLOMBIA IDENTIFICACION PERSONAL CEDULA DE CIUDADANIA NUMERO 7.250.048 HERRERA MESA APELLIDOS LEONCIO DE JESUS NOMBRES FIRMA FECHA DE NACIMIENTO 27-SEP-1964 REMEDIOS (ANTIOQUIA) LUGAR DE NACIMIENTO 1.60 A+ M ESTATURA G.S RH SEXO 22-MAR-1983 PUERTO BOYACA FECHA Y LUGAR DE EXPEDICION INDICE DERECHO REGISTRADOR NACIONAL CARLOS ARIEL SANCHEZ TORRES A-0721400-00139388-M-00072500448-20081216 00008366914A 17410002668\" } ```"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 9,
+        "cache_creation_input_tokens": 4573,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 812
+      }
+    },
+    "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 8000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "expected_category": "CECRL",
+  "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+  "api_used": "invoke_model",
+  "pdf_info": {
+    "original_size": 679308,
+    "first_page_size": 674957,
+    "is_scanned": true
+  }
+}

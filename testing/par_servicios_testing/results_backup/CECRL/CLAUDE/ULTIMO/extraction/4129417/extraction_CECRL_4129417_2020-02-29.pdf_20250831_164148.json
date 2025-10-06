@@ -1,0 +1,88 @@
+{
+  "extraction_data": {
+    "result": {
+      "FirstName": "PABLO EMILIO",
+      "LastName": "OVALLE GUTIERREZ",
+      "CountryIssuer": "Colombia",
+      "Nationality": "colombiano",
+      "IdentificationType": "Cédula de Ciudadanía",
+      "IdentificationNumber": "4129417",
+      "Message": ""
+    },
+    "document_type": "person",
+    "category": "CECRL"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "```json { \"result\": { \"FirstName\": \"PABLO EMILIO\", \"LastName\": \"OVALLE GUTIERREZ\", \"CountryIssuer\": \"Colombia\", \"Nationality\": \"colombiano\", \"IdentificationType\": \"Cédula de Ciudadanía\", \"IdentificationNumber\": \"4129417\", \"Message\": \"\" }, \"document_type\": \"person\", \"category\": \"CECRL\" } ```"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 1659,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 4300,
+      "output_tokens": 986
+    },
+    "ResponseMetadata": {
+      "RequestId": "c1fbd9b9-3f74-4f97-ab3e-7af9728ee440",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Sun, 31 Aug 2025 21:41:47 GMT",
+        "content-type": "application/json",
+        "content-length": "7763",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "c1fbd9b9-3f74-4f97-ab3e-7af9728ee440",
+        "x-amzn-bedrock-invocation-latency": "15486",
+        "x-amzn-bedrock-cache-write-input-token-count": "0",
+        "x-amzn-bedrock-cache-read-input-token-count": "4300",
+        "x-amzn-bedrock-output-token-count": "986",
+        "x-amzn-bedrock-input-token-count": "1659"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_01ABedAgmcLHvKCb3QiuGYH7",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-sonnet-4-20250514",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Looking at this document, I can see it's a Colombian Cédula de Ciudadanía (citizenship card). Let me analyze the document according to the methodology provided: 1. First, let me try structured label detection: From the document, I can extract: - \"REPUBLICA DE COLOMBIA\" - this indicates the issuing country - \"CEDULA DE CIUDADANIA\" - this is the document type - Number: \"4129417\" - this appears to be the identification number - \"OVALLE GUTIERREZ\" - this appears after the identification number - \"PABLO EMILIO\" - this appears below - There are labels \"APELLIDOS\" and \"NOMBRES\" visible in the document Let me look more carefully at the structure. I can see: - The document header shows \"REPUBLICA DE COLOMBIA\" - \"IDENTIFICACION PERSONAL\" - \"CEDULA DE CIUDADANIA\" - Number: 4129417 - \"OVALLE GUTIERREZ\" - \"APELLIDOS\" (surnames label) - \"PABLO EMILIO\" - \"NOMBRES\" (names label) This appears to be a case where I need to apply contextual analysis because this is a Colombian document that might have the misalignment issue described in the methodology. Looking at the structure more carefully: - The number 4129417 is clearly the identification number - \"OVALLE GUTIERREZ\" appears after the number and before \"APELLIDOS\" label - \"PABLO EMILIO\" appears after \"APELLIDOS\" label and before \"NOMBRES\" label Based on the methodology for Colombian documents with misalignment: - The surnames \"OVALLE GUTIERREZ\" appear first - Then the \"APELLIDOS\" label appears - Then the names \"PABLO EMILIO\" appear - Then the \"NOMBRES\" label appears So the correct extraction should be: - FirstName: \"PABLO EMILIO\" (the text that appears with the APELLIDOS label is actually the first name) - LastName: \"OVALLE GUTIERREZ\" (the text that appears before the APELLIDOS label) - CountryIssuer: \"Colombia\" (from \"REPUBLICA DE COLOMBIA\") - Nationality: \"colombiano\" (inferred from the issuing country) - IdentificationType: \"Cédula de Ciudadanía\" (from the document header) - IdentificationNumber: \"4129417\" (the prominent number) I notice the identification number is clearly visible and matches the document's primary identifier. The document's structure confirms the key personal details with standard Colombian document formatting. The surnames follow the traditional Latin American naming convention, appearing first. The first name \"PABLO EMILIO\" follows the APELLIDOS section, confirming the standard document layout. Additional verification from the document's reverse side provides birth details: born on 10 October 1951 in Garagoa, Boyacá. Given the birthplace, the individual's nationality is definitively Colombian.",
+          "signature": "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"
+        },
+        {
+          "type": "text",
+          "text": "```json { \"result\": { \"FirstName\": \"PABLO EMILIO\", \"LastName\": \"OVALLE GUTIERREZ\", \"CountryIssuer\": \"Colombia\", \"Nationality\": \"colombiano\", \"IdentificationType\": \"Cédula de Ciudadanía\", \"IdentificationNumber\": \"4129417\", \"Message\": \"\" }, \"document_type\": \"person\", \"category\": \"CECRL\" } ```"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 1659,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 4300,
+        "output_tokens": 986
+      }
+    },
+    "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 8000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+  "api_used": "invoke_model"
+}

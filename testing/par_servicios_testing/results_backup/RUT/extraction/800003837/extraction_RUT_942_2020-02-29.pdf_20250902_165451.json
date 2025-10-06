@@ -1,0 +1,92 @@
+{
+  "extraction_data": {
+    "result": {
+      "CompanyName": "INSIGHT S. A. S.",
+      "Country": "COLOMBIA",
+      "TaxId": "800003871",
+      "VerificationDigit": "3",
+      "IdentificationType": "NIT",
+      "PersonType": "Persona jurídica",
+      "ConflictingSources": [],
+      "RequiresReview": "false"
+    },
+    "RelatedParties": [],
+    "Address": "CR 15 88 64 OF 722, Bogotá, D.C., Bogotá D.C.",
+    "DocumentGenerationDate": "11-03-2013 10:12:20AM",
+    "DocumentType": "company",
+    "Category": "RUT"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "{ \"result\": { \"CompanyName\": \"INSIGHT S. A. S.\", \"Country\": \"COLOMBIA\", \"TaxId\": \"800003871\", \"VerificationDigit\": \"3\", \"IdentificationType\": \"NIT\", \"PersonType\": \"Persona jurídica\", \"ConflictingSources\": [], \"RequiresReview\": \"false\" }, \"RelatedParties\": [], \"Address\": \"CR 15 88 64 OF 722, Bogotá, D.C., Bogotá D.C.\", \"DocumentGenerationDate\": \"11-03-2013 10:12:20AM\", \"DocumentType\": \"company\", \"Category\": \"RUT\" }"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 1584,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 2990,
+      "output_tokens": 720
+    },
+    "ResponseMetadata": {
+      "RequestId": "5da431eb-34a0-4919-a75f-44a4ab6cd4ca",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Tue, 02 Sep 2025 21:54:51 GMT",
+        "content-type": "application/json",
+        "content-length": "5100",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "5da431eb-34a0-4919-a75f-44a4ab6cd4ca",
+        "x-amzn-bedrock-invocation-latency": "13018",
+        "x-amzn-bedrock-cache-write-input-token-count": "0",
+        "x-amzn-bedrock-cache-read-input-token-count": "2990",
+        "x-amzn-bedrock-output-token-count": "720",
+        "x-amzn-bedrock-input-token-count": "1584"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_01HxPEVxaza9tNAr2aFe6ERH",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-sonnet-4-20250514",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Let me analyze this Colombian RUT document from DIAN to extract the required information. Looking at the document, I can see: 1. **CompanyName**: In cell \"35. Razón social\" I can see \"INSIGHT S. A. S.\" 2. **Country**: This is a \"Formulario del Registro Único Tributario\" issued by DIAN, so I need to look at cell \"38. País\" which shows \"COLOMBIA\" 3. **TaxId**: In cell \"5. Número de Identificación Tributaria (NIT)\" I can see \"800003871\" 4. **VerificationDigit**: In cell \"6. DV\" I can see \"3\" 5. **IdentificationType**: Since this is a RUT from DIAN, this should be \"NIT\" 6. **PersonType**: In cell \"24. Tipo de contribuyente\" I can see \"Persona jurídica\" 7. **Address**: I need to combine: - Cell \"41. Dirección\": \"CR 15 88 64 OF 722\" - Cell \"40. Ciudad/Municipio\": \"Bogotá, D.C.\" - Cell \"39. Departamento\": \"Bogotá D.C.\" 8. **DocumentGenerationDate**: At the bottom I can see \"Fecha generación documento PDF: 11-03-2013 10:12:20AM\" 9. **RelatedParties**: I need to look for information in the sections \"Socios y/o miembros de Juntas Directivas, Consorcios, Uniones Temporales\" and \"Revisor Fiscal y contador\". Looking at this document, I don't see clear information for these sections filled out. 10. **DocumentType**: Should be \"company\" 11. **Category**: Should be \"RUT\" Let me check if there are any issues or missing information that would require review. The main details are complete and clear. The missing RelatedParties section is typical for this type of document, so no additional review is necessary. All key information is readily extractable and appears to be in order.",
+          "signature": "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"
+        },
+        {
+          "type": "text",
+          "text": "{ \"result\": { \"CompanyName\": \"INSIGHT S. A. S.\", \"Country\": \"COLOMBIA\", \"TaxId\": \"800003871\", \"VerificationDigit\": \"3\", \"IdentificationType\": \"NIT\", \"PersonType\": \"Persona jurídica\", \"ConflictingSources\": [], \"RequiresReview\": \"false\" }, \"RelatedParties\": [], \"Address\": \"CR 15 88 64 OF 722, Bogotá, D.C., Bogotá D.C.\", \"DocumentGenerationDate\": \"11-03-2013 10:12:20AM\", \"DocumentType\": \"company\", \"Category\": \"RUT\" }"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 1584,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 2990,
+        "output_tokens": 720
+      }
+    },
+    "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 9000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+  "api_used": "invoke_model"
+}

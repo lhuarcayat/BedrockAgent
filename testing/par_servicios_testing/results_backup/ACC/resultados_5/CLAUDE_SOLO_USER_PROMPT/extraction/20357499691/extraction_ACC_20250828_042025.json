@@ -1,0 +1,134 @@
+{
+  "extraction_data": {
+    "path": "ACC/20357499691/244_CA_2020-02-29.pdf",
+    "result": {
+      "companyName": "PRONTE INGENIEROS S.A.C.",
+      "documentCategory": "Equity Composition",
+      "taxId": "00111305",
+      "country": "Perú",
+      "identificationDetails": {
+        "source": "text_reference",
+        "indicators": [
+          "PIURA",
+          "SOLES",
+          "Notaria de Piura"
+        ],
+        "conflictingSources": [
+          "Missing identification details for shareholders CÉSAR ENRIQUE BAFFI ARBURUA and MARIO LAZO RUIZ"
+        ],
+        "requiresReview": "true"
+      },
+      "relatedParties": [
+        {
+          "type": "person",
+          "firstName": "CÉSAR ENRIQUE",
+          "lastName": "BAFFI ARBURUA",
+          "identificationType": "POR REVISAR",
+          "identificationNumber": "POR REVISAR",
+          "relationshipType": "Shareholder",
+          "participationPercentage": "96.10",
+          "timeFound": "1",
+          "job": ""
+        },
+        {
+          "type": "person",
+          "firstName": "ENRIQUE",
+          "lastName": "BAFFI ARROYO",
+          "identificationType": "DNI",
+          "identificationNumber": "70462089",
+          "relationshipType": "Shareholder",
+          "participationPercentage": "3.76",
+          "timeFound": "1",
+          "job": "EL ADQUIRENTE"
+        },
+        {
+          "type": "person",
+          "firstName": "MARIO",
+          "lastName": "LAZO RUIZ",
+          "identificationType": "POR REVISAR",
+          "identificationNumber": "POR REVISAR",
+          "relationshipType": "Shareholder",
+          "participationPercentage": "0.14",
+          "timeFound": "1",
+          "job": ""
+        }
+      ]
+    },
+    "documentType": "company",
+    "documentNumber": "20357499691",
+    "category": "ACC"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "```json { \"result\": { \"companyName\": \"PRONTE INGENIEROS S.A.C.\", \"documentCategory\": \"Equity Composition\", \"taxId\": \"00111305\", \"country\": \"Perú\", \"identificationDetails\": { \"source\": \"text_reference\", \"indicators\": [\"PIURA\", \"SOLES\", \"Notaria de Piura\"], \"conflictingSources\": [\"Missing identification details for shareholders CÉSAR ENRIQUE BAFFI ARBURUA and MARIO LAZO RUIZ\"], \"requiresReview\": \"true\" }, \"relatedParties\": [ { \"type\": \"person\", \"firstName\": \"CÉSAR ENRIQUE\", \"lastName\": \"BAFFI ARBURUA\", \"identificationType\": \"POR REVISAR\", \"identificationNumber\": \"POR REVISAR\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"96.10\", \"timeFound\": \"1\", \"job\": \"\" }, { \"type\": \"person\", \"firstName\": \"ENRIQUE\", \"lastName\": \"BAFFI ARROYO\", \"identificationType\": \"DNI\", \"identificationNumber\": \"70462089\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"3.76\", \"timeFound\": \"1\", \"job\": \"EL ADQUIRENTE\" }, { \"type\": \"person\", \"firstName\": \"MARIO\", \"lastName\": \"LAZO RUIZ\", \"identificationType\": \"POR REVISAR\", \"identificationNumber\": \"POR REVISAR\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"0.14\", \"timeFound\": \"1\", \"job\": \"\" } ] }, \"documentType\": \"company\", \"category\": \"ACC\" } ```"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 8,
+      "cache_creation_input_tokens": 3991,
+      "cache_read_input_tokens": 2104,
+      "output_tokens": 1843
+    },
+    "ResponseMetadata": {
+      "RequestId": "a980886e-79b5-4564-94c9-432639fb8cc3",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Thu, 28 Aug 2025 09:20:25 GMT",
+        "content-type": "application/json",
+        "content-length": "6783",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "a980886e-79b5-4564-94c9-432639fb8cc3",
+        "x-amzn-bedrock-invocation-latency": "35620",
+        "x-amzn-bedrock-cache-write-input-token-count": "3991",
+        "x-amzn-bedrock-cache-read-input-token-count": "2104",
+        "x-amzn-bedrock-output-token-count": "1843",
+        "x-amzn-bedrock-input-token-count": "8"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_01CxBtM69haEagYyJfn4VyU8",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-3-7-sonnet-20250219",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "I need to analyze this document and extract the structured data according to the schema provided. Let's go through this methodically following the workflow and rules provided. ## Step 1: Document Analysis First, let's understand what this document is: - This appears to be a notarial document from Peru (NOTARIA DE PIURA) signed by Carolina M. Núñez Ricalde. - It's documenting a transfer of shares in a company called \"PRONTE INGENIEROS S.A.C.\" - The document is dated May 21, 2019 (PIURA, 21 MAYO DE 2019) - The document details a transfer of shares between shareholders. ## Step 2: Root Level Extraction **companyName**: The main reporting company is \"PRONTE INGENIEROS S.A.C.\" which is mentioned in the first clause (PRIMERO) as \"ES UNA SOCIEDAD VIGENTE QUE SE ENCUENTRA INSCRITA EN LA PARTIDA ELECTRONICA Nº 00111305\". **taxId**: The document mentions the electronic registry number \"00111305\" which appears to be the company's registration number. This isn't explicitly labeled as RUC (Peru's tax ID) but it's the closest identifiable number for the company. **country**: The document is from Peru. Evidence: - \"PIURA\" mentioned multiple times which is a city/region in Peru - \"NOTARIA DE PIURA\" - Reference to currency in \"SOLES\" (Peruvian currency) - References to RUC numbers (Peruvian tax ID system) **identificationDetails**: - source: \"text_reference\" - indicators: [\"PIURA\", \"SOLES\", \"Peruvian Notary Format\"] - conflictingSources: [] - requiresReview: \"false\" ## Step 3: Related Parties Processing I need to identify the shareholders/participants with equity participation: 1. DON ENRIQUE BAFFI ARROYO - type: \"person\" (based on \"DON\" prefix and name structure) - firstName: \"ENRIQUE\" - lastName: \"BAFFI ARROYO\" - identificationType: \"DNI\" (Peru's person ID type) - identificationNumber: \"70462089\" - relationshipType: \"Shareholder\" - participationPercentage: \"3.76%\" (as shown in the breakdown) - timeFound: \"1\" - job: \"EL ADQUIRENTE\" (the acquirer) 2. DON SERGIO FRANCISCO VIDAL CASTILLO - type: \"person\" (based on \"DON\" prefix and name structure) - firstName: \"SERGIO FRANCISCO\" - lastName: \"VIDAL CASTILLO\" - identificationType: \"DNI\" (Peru's person ID type) - identificationNumber: \"46070304\" - relationshipType: \"Shareholder\" - participationPercentage: \"POR REVISAR\" (appears to be transferring all shares) - timeFound: \"1\" - job: \"EL TRANSFERENTE\" (the transferor) 3. CÉSAR ENRIQUE BAFFI ARBURUA - type: \"person\" (based on name structure) - firstName: \"CÉSAR ENRIQUE\" - lastName: \"BAFFI ARBURUA\" - identificationType: \"POR REVISAR\" (not specified) - identificationNumber: \"POR REVISAR\" (not specified) - relationshipType: \"Shareholder\" - participationPercentage: \"96.10%\" (as shown in the breakdown) - timeFound: \"1\" - job: \"\" 4. MARIO LAZO RUIZ - type: \"person\" (based on name structure) - firstName: \"MARIO\" - lastName: \"LAZO RUIZ\" - identificationType: \"POR REVISAR\" (not specified) - identificationNumber: \"POR REVISAR\" (not specified) - relationshipType: \"Shareholder\" - participationPercentage: \"0.14%\" (as shown in the breakdown) - timeFound: \"1\" - job: \"\" Looking at this more carefully, I need to understand the transaction. From the document: - SERGIO FRANCISCO VIDAL CASTILLO is transferring all his shares (42,500 shares) to ENRIQUE BAFFI ARROYO - After the transfer, the capital distribution is: - CÉSAR ENRIQUE BAFFI ARBURUA: 77,847,828 shares = 96.10% - ENRIQUE BAFFI ARROYO: 3,052,172 shares = 3.76% - MARIO LAZO RUIZ: 100,000 shares = 0.14% - TOTAL: 81,000,000 shares = 100% So the final shareholders after this transaction are these three individuals, and SERGIO FRANCISCO VIDAL CASTILLO is no longer a shareholder after this transfer. ## Step 4: Validation & Cross-checking - The country is Peru, and the ID types align with Peru's systems (DNI for persons) - All percentages sum to 100% based on the table at the bottom of the document - The document clearly identifies the company name and shareholders - Some identification details for shareholders are missing, which requires review indicators Let me prepare the final JSON:",
+          "signature": "ErcBCkgIBxABGAIiQKY91lPkea50+44ZX0J43tkFECQFYTxuv6gt+ZMwmsy7Wd+xPr+CfFUplMyjbB4SnNw+yJ4V2T3AspcMPGFqJG4SDMMkgaLbdmwoT9sUtBoM2eNCG4hndXPnWuRrIjCHRyFM7N4DVaqIOcmrsQopQIz3Mu8t0hd0hgXmh3zo/ATLf1egE8K5410fKpgAX1QqHVZ55wpzLimkI1SFYx+be5fF3hOum0qVB8zUNEEQGAI="
+        },
+        {
+          "type": "text",
+          "text": "```json { \"result\": { \"companyName\": \"PRONTE INGENIEROS S.A.C.\", \"documentCategory\": \"Equity Composition\", \"taxId\": \"00111305\", \"country\": \"Perú\", \"identificationDetails\": { \"source\": \"text_reference\", \"indicators\": [\"PIURA\", \"SOLES\", \"Notaria de Piura\"], \"conflictingSources\": [\"Missing identification details for shareholders CÉSAR ENRIQUE BAFFI ARBURUA and MARIO LAZO RUIZ\"], \"requiresReview\": \"true\" }, \"relatedParties\": [ { \"type\": \"person\", \"firstName\": \"CÉSAR ENRIQUE\", \"lastName\": \"BAFFI ARBURUA\", \"identificationType\": \"POR REVISAR\", \"identificationNumber\": \"POR REVISAR\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"96.10\", \"timeFound\": \"1\", \"job\": \"\" }, { \"type\": \"person\", \"firstName\": \"ENRIQUE\", \"lastName\": \"BAFFI ARROYO\", \"identificationType\": \"DNI\", \"identificationNumber\": \"70462089\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"3.76\", \"timeFound\": \"1\", \"job\": \"EL ADQUIRENTE\" }, { \"type\": \"person\", \"firstName\": \"MARIO\", \"lastName\": \"LAZO RUIZ\", \"identificationType\": \"POR REVISAR\", \"identificationNumber\": \"POR REVISAR\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"0.14\", \"timeFound\": \"1\", \"job\": \"\" } ] }, \"documentType\": \"company\", \"category\": \"ACC\" } ```"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 8,
+        "cache_creation_input_tokens": 3991,
+        "cache_read_input_tokens": 2104,
+        "output_tokens": 1843
+      }
+    },
+    "model_id": "us.anthropic.claude-3-7-sonnet-20250219-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 8000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "model_used": "us.anthropic.claude-3-7-sonnet-20250219-v1:0",
+  "api_used": "invoke_model"
+}

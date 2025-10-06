@@ -1,0 +1,87 @@
+{
+  "classification_data": {
+    "category": "ACC",
+    "text": "SOCIOS CEDULA ACCIONES V/R NOMINAL V/R TOTAL % ERNESTO JOSE CHALELA MARTINEZ 9,287,800 5,000 10,000 $ 50,000,000 100 TOTALES 5,000 50,000,000 100 ERNESTO JOSE CHALELA MARTINEZ REPRESENTANTE LEGAL CC. 9.287.800 FECHA: 23 ENERO DEL 2020 COMPOSICION ACCIONARIA TRITON LOGISTICA Y CONSTRUCCIONES SAS NIT. 901.127.166 - 9 TOMADO FIELMENTE DEL LIBRO DE ACCIONISTA QUE REPOSA EN LA EMPRESA TRITON LOGISTICA Y CONSTRUCCIONES SAS NIT. 901.127.166 - 9 COMPOSICION ACCIONARIA SOCIOS CEDULA ACCIONES V/R NOMINAL V/R TOTAL % ERNESTO JOSE CHALELA MARTINEZ 9,287,800 5,000 10,000 $ 50,000,000 100 TOTALES 5,000 50,000,000 100 TOMADO FIELMENTE DEL LIBRO DE ACCIONISTA QUE REPOSA EN LA EMPRESA ERNESTO JOSE CHALELA MARTINEZ REPRESENTANTE LEGAL CC. 9.287.800 FECHA: 23 ENERO DEL 2020 POWERFUL INNOVATION",
+    "document_number": "901127166",
+    "path": "ACC/901127166/169_CA_2020-02-29.pdf"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "```json { \"category\": \"ACC\", \"text\": \"SOCIOS CEDULA ACCIONES V/R NOMINAL V/R TOTAL %\\nERNESTO JOSE CHALELA MARTINEZ 9,287,800 5,000 10,000 $ 50,000,000 100\\nTOTALES 5,000 50,000,000 100\\nERNESTO JOSE CHALELA MARTINEZ\\nREPRESENTANTE LEGAL\\nCC. 9.287.800\\nFECHA: 23 ENERO DEL 2020\\nCOMPOSICION ACCIONARIA\\nTRITON LOGISTICA Y CONSTRUCCIONES SAS\\nNIT. 901.127.166 - 9\\nTOMADO FIELMENTE DEL LIBRO DE ACCIONISTA QUE REPOSA EN LA EMPRESA\\n\\nTRITON LOGISTICA Y CONSTRUCCIONES SAS\\nNIT. 901.127.166 - 9\\n\\nCOMPOSICION ACCIONARIA\\n\\nSOCIOS CEDULA ACCIONES V/R NOMINAL V/R TOTAL %\\nERNESTO JOSE CHALELA MARTINEZ 9,287,800 5,000 10,000 $ 50,000,000 100\\nTOTALES 5,000 50,000,000 100\\n\\nTOMADO FIELMENTE DEL LIBRO DE ACCIONISTA QUE REPOSA EN LA EMPRESA\\n\\nERNESTO JOSE CHALELA MARTINEZ\\nREPRESENTANTE LEGAL\\nCC. 9.287.800\\n\\nFECHA: 23 ENERO DEL 2020\\n\\nPOWERFUL INNOVATION\" } ```"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 207,
+      "cache_creation_input_tokens": 4693,
+      "cache_read_input_tokens": 0,
+      "output_tokens": 1368
+    },
+    "ResponseMetadata": {
+      "RequestId": "e745c374-1e09-4d45-9582-c6bd4a467b1e",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Thu, 28 Aug 2025 08:50:11 GMT",
+        "content-type": "application/json",
+        "content-length": "4751",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "e745c374-1e09-4d45-9582-c6bd4a467b1e",
+        "x-amzn-bedrock-invocation-latency": "28222",
+        "x-amzn-bedrock-cache-write-input-token-count": "4693",
+        "x-amzn-bedrock-cache-read-input-token-count": "0",
+        "x-amzn-bedrock-output-token-count": "1368",
+        "x-amzn-bedrock-input-token-count": "207"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_014EjvDv23zPKg6WgqTRJMiA",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-3-7-sonnet-20250219",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Let me analyze this document following the classification workflow: ## 1. TEXT EXTRACTION The document appears to be in Spanish and contains the following text: ``` SOCIOS CEDULA ACCIONES V/R NOMINAL V/R TOTAL % ERNESTO JOSE CHALELA MARTINEZ 9,287,800 5,000 10,000 $ 50,000,000 100 TOTALES 5,000 50,000,000 100 ERNESTO JOSE CHALELA MARTINEZ REPRESENTANTE LEGAL CC. 9.287.800 FECHA: 23 ENERO DEL 2020 COMPOSICION ACCIONARIA TRITON LOGISTICA Y CONSTRUCCIONES SAS NIT. 901.127.166 - 9 TOMADO FIELMENTE DEL LIBRO DE ACCIONISTA QUE REPOSA EN LA EMPRESA TRITON LOGISTICA Y CONSTRUCCIONES SAS NIT. 901.127.166 - 9 COMPOSICION ACCIONARIA SOCIOS CEDULA ACCIONES V/R NOMINAL V/R TOTAL % ERNESTO JOSE CHALELA MARTINEZ 9,287,800 5,000 10,000 $ 50,000,000 100 TOTALES 5,000 50,000,000 100 TOMADO FIELMENTE DEL LIBRO DE ACCIONISTA QUE REPOSA EN LA EMPRESA ERNESTO JOSE CHALELA MARTINEZ REPRESENTANTE LEGAL CC. 9.287.800 FECHA: 23 ENERO DEL 2020 POWERFUL INNOVATION ``` ## 2. PRIORITY CHECKS - BLANK: Not applicable, there's meaningful content - LINK_ONLY: Not applicable, no hyperlinks/URLs ## 3. ISSUER IDENTIFICATION - No DIAN logo or references - No Chamber of Commerce references - This appears to be a corporate document issued by the company itself (TRITON LOGISTICA Y CONSTRUCCIONES SAS) ## 4. DOCUMENT FUNCTION ANALYSIS - This document is focused on ownership structure - It shows the shareholding composition of the company - Contains ownership percentages (100%) - Shows number of shares (5,000) - Shows nominal value and total value - Signed by the legal representative ## 5. CATEGORY CLASSIFICATION Following the order: - CECRL: Not applicable, not a personal identification document - RUT: Not applicable, not a DIAN tax registration document - CERL: Not applicable, not a Chamber of Commerce certificate - ACC: This matches the category. The document: - Has shareholder terminology (\"COMPOSICION ACCIONARIA\", \"SOCIOS\", \"ACCIONES\") - Shows ownership data (5,000 shares, $50,000,000 total value, 100% ownership) - Lists the owner with ID number - Is certified by the legal representative - RUB: Not applicable, not a DIAN beneficial owners report - POR_REVISAR: Not necessary since we have a clear match with ACC ## 6. CONFIDENCE VALIDATION - Strong evidence: The document has all the must-have indicators for an ACC document: - Clear shareholder terminology - Ownership percentages (100%) - Number of shares (5,000) - Capital values ($50,000,000) - Owner identification with name and ID number - Certification by legal representative - Title explicitly states \"COMPOSICION ACCIONARIA\" (Shareholding Composition) Based on this analysis, the document should be classified as ACC (Documents that certify the ownership structure and shareholding composition of a company). I'll now prepare the JSON response with the extracted text, properly escaped for JSON.",
+          "signature": "ErcBCkgIBxABGAIiQA1kZgM86kl3mFp/7q9vBgkS9iRGQzhvKJen1chy5Ctt4h9TWhlr2mUKuVvmaQXsRakllqRhHxZqchjnbrdVoToSDGNhGoAJ4zZOvyU3ZhoMtO1HYj02TEiZy5btIjDWhg6dMVJpacZCHMyiyL8EIfuCO0LdO0WziBHCdnYp4jrLRy1WzUVm8w3/NrtwEsgqHQCjYiBo7YCPqYOubllTUxNIXmrZ9Qmnx8YpUPILGAI="
+        },
+        {
+          "type": "text",
+          "text": "```json { \"category\": \"ACC\", \"text\": \"SOCIOS CEDULA ACCIONES V/R NOMINAL V/R TOTAL %\\nERNESTO JOSE CHALELA MARTINEZ 9,287,800 5,000 10,000 $ 50,000,000 100\\nTOTALES 5,000 50,000,000 100\\nERNESTO JOSE CHALELA MARTINEZ\\nREPRESENTANTE LEGAL\\nCC. 9.287.800\\nFECHA: 23 ENERO DEL 2020\\nCOMPOSICION ACCIONARIA\\nTRITON LOGISTICA Y CONSTRUCCIONES SAS\\nNIT. 901.127.166 - 9\\nTOMADO FIELMENTE DEL LIBRO DE ACCIONISTA QUE REPOSA EN LA EMPRESA\\n\\nTRITON LOGISTICA Y CONSTRUCCIONES SAS\\nNIT. 901.127.166 - 9\\n\\nCOMPOSICION ACCIONARIA\\n\\nSOCIOS CEDULA ACCIONES V/R NOMINAL V/R TOTAL %\\nERNESTO JOSE CHALELA MARTINEZ 9,287,800 5,000 10,000 $ 50,000,000 100\\nTOTALES 5,000 50,000,000 100\\n\\nTOMADO FIELMENTE DEL LIBRO DE ACCIONISTA QUE REPOSA EN LA EMPRESA\\n\\nERNESTO JOSE CHALELA MARTINEZ\\nREPRESENTANTE LEGAL\\nCC. 9.287.800\\n\\nFECHA: 23 ENERO DEL 2020\\n\\nPOWERFUL INNOVATION\" } ```"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 207,
+        "cache_creation_input_tokens": 4693,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 1368
+      }
+    },
+    "model_id": "us.anthropic.claude-3-7-sonnet-20250219-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 8000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "expected_category": "ACC",
+  "model_used": "us.anthropic.claude-3-7-sonnet-20250219-v1:0",
+  "api_used": "invoke_model",
+  "pdf_info": {
+    "original_size": 47218,
+    "first_page_size": 42331,
+    "is_scanned": false
+  }
+}

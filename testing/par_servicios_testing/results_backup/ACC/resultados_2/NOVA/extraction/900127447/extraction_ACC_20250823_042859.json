@@ -1,0 +1,75 @@
+{
+  "extraction_data": {
+    "path": "$pdf_path",
+    "result": {
+      "companyName": "LA EMPRESA ROMEGAS S.A.S.",
+      "documentType": "Equity Composition",
+      "taxId": "900.127.447",
+      "country": "Colombia",
+      "identificationDetails": {
+        "source": "text_reference",
+        "indicators": [
+          "NIT",
+          "Colombia"
+        ],
+        "conflictingSources": [],
+        "requiresReview": false
+      },
+      "relatedParties": [
+        {
+          "firstName": "Julio Cesar",
+          "lastName": "Romero Muñoz",
+          "identificationType": "CC",
+          "identificationNumber": "79.735.871",
+          "relationshipType": "Shareholder",
+          "participationPercentage": "100%",
+          "timeFound": 1,
+          "job": ""
+        }
+      ]
+    },
+    "document_type": "company",
+    "document_number": "900127447",
+    "category": "ACC",
+    "confidenceScores": {
+      "companyName": 95,
+      "taxId": 95,
+      "country": 95,
+      "relatedParties": 90
+    }
+  },
+  "raw_response": {
+    "ResponseMetadata": {
+      "RequestId": "5be75b3e-289a-4623-864e-5db448ae3281",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Sat, 23 Aug 2025 09:28:59 GMT",
+        "content-type": "application/json",
+        "content-length": "1246",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "5be75b3e-289a-4623-864e-5db448ae3281"
+      },
+      "RetryAttempts": 0
+    },
+    "output": {
+      "message": {
+        "role": "assistant",
+        "content": [
+          {
+            "text": "```json\n{\n  \"path\": \"$pdf_path\",\n  \"result\": {\n    \"companyName\": \"LA EMPRESA ROMEGAS S.A.S.\",\n    \"documentType\": \"Equity Composition\",\n    \"taxId\": \"900.127.447\",\n    \"country\": \"Colombia\",\n    \"identificationDetails\": {\n      \"source\": \"text_reference\",\n      \"indicators\": [\n        \"NIT\",\n        \"Colombia\"\n      ],\n      \"conflictingSources\": [],\n      \"requiresReview\": false\n    },\n    \"relatedParties\": [\n      {\n        \"firstName\": \"Julio Cesar\",\n        \"lastName\": \"Romero Muñoz\",\n        \"identificationType\": \"CC\",\n        \"identificationNumber\": \"79.735.871\",\n        \"relationshipType\": \"Shareholder\",\n        \"participationPercentage\": \"100%\",\n        \"timeFound\": 1,\n        \"job\": \"\"\n      }\n    ]\n  },\n  \"document_type\": \"company\",\n  \"document_number\": \"900127447\",\n  \"category\": \"ACC\",\n  \"confidenceScores\": {\n    \"companyName\": 95,\n    \"taxId\": 95,\n    \"country\": 95,\n    \"relatedParties\": 90\n  }\n}\n```"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "inputTokens": 8536,
+      "outputTokens": 289,
+      "totalTokens": 8825
+    },
+    "metrics": {
+      "latencyMs": 5874
+    }
+  },
+  "model_used": "us.amazon.nova-pro-v1:0"
+}

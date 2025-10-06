@@ -1,0 +1,87 @@
+{
+  "classification_data": {
+    "category": "CECRL",
+    "text": ":il,l;: ::Íi:r:i rir\"lii ::,.' ::,..':t:::. *i:,i .$$$\\$$Sqg A$ür: ,. :1:l$*S ,{Ht-diA!tüH:\" I r.i{i/r,H üE t{A*t¡.rtENrC} ,i 1ü.r'{011-1s,H.S 1.Es ;i: liT4t-LJ,{f.t B+ ! :3.,f . a¡ i F 55.q{) a \\: i_. ; i. f : tzr\\ í: t: -.., i/. A,' fs,&:l,ie.+\"?if , ?!. **+,F.ur¡135¿ ; ¡¡;: : 1$\"üt,t*l*Ss ,suBA É5$¡iA f ttJ*.AFi f]{: ii-XFf:ütLrdrr! )arcr\"**L ''.ttl'.i;',*'l#fu ; ;,¡l r,, 0007Fü3ür{F{ $t .1.r.1¡;iütr,l jffffi$,tsl¡ilA IFf;ffiffi#IAL REPUBLICA DE COLOMBIA IDENTIFICACION PERSONAL CEDULA DE CIUDADANIA 39511617 CHARLY RAMIREZ ELISA FERNANDA FECHA DE NACIMIENTO 10-NOV-1968 BOGOTA D.C. (CUNDINAMARCA) LUGAR DE NACIMIENTO 1.65 B+ F ESTATURA SEXO 15-DIC-1986 SUBA FECHA Y LUGAR DE EXPEDICION REGISTRADURIA NACIONAL DEL ESTADO CIVIL 00077030100 54750104",
+    "document_number": "900298103",
+    "path": "CECRL/900298103/35511617_2020-02-29.pdf"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "```json { \"category\": \"CECRL\", \"text\": \":il,l;:\\n::Íi:r:i\\nrir\\\"lii\\n::,.'\\n::,..':t:::.\\n*i:,i\\n.$$$\\\\$$Sqg\\nA$ür: ,.\\n:1:l$*S\\n,{Ht-diA!tüH:\\\"\\nI r.i{i/r,H üE t{A*t¡.rtENrC}\\n,i\\n1ü.r'{011-1s,H.S\\n1.Es\\n;i: liT4t-LJ,{f.t B+\\n!\\n:3.,f \\n.\\na¡ i\\nF\\n55.q{)\\na \\\\: i_.\\n; i. f : tzr\\\\ í: t: \\n-.., i/.\\nA,' fs,&:l,ie.+\\\"?if \\n, ?!.\\n**+,F.ur¡135¿ \\n; ¡¡;: :\\n1$\\\"üt,t*l*Ss ,suBA\\nÉ5$¡iA f ttJ*.AFi f]{: ii-XFf:ütLrdrr! \\n)arcr\\\"**L\\n''.ttl'.i;',*'l#fu \\n; ;,¡l r,,\\n0007Fü3ür{F{ $t .1.r.1¡;iütr,l\\njffffi$,tsl¡ilA\\nIFf;ffiffi#IAL\\n\\nREPUBLICA DE COLOMBIA\\nIDENTIFICACION PERSONAL\\nCEDULA DE CIUDADANIA\\n39511617\\nCHARLY RAMIREZ\\nELISA FERNANDA\\n\\nFECHA DE NACIMIENTO\\n10-NOV-1968\\nBOGOTA D.C.\\n(CUNDINAMARCA)\\nLUGAR DE NACIMIENTO\\n1.65 B+ F\\nESTATURA SEXO\\n15-DIC-1986 SUBA\\nFECHA Y LUGAR DE EXPEDICION\\n\\nREGISTRADURIA NACIONAL\\nDEL ESTADO CIVIL\\n\\n00077030100\\n54750104\" } ```"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 9,
+      "cache_creation_input_tokens": 5253,
+      "cache_read_input_tokens": 0,
+      "output_tokens": 1266
+    },
+    "ResponseMetadata": {
+      "RequestId": "6b9671c6-94d8-42fd-8e57-bbee2c0f32ea",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Fri, 29 Aug 2025 22:56:07 GMT",
+        "content-type": "application/json",
+        "content-length": "7022",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "6b9671c6-94d8-42fd-8e57-bbee2c0f32ea",
+        "x-amzn-bedrock-invocation-latency": "27044",
+        "x-amzn-bedrock-cache-write-input-token-count": "5253",
+        "x-amzn-bedrock-cache-read-input-token-count": "0",
+        "x-amzn-bedrock-output-token-count": "1266",
+        "x-amzn-bedrock-input-token-count": "9"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_01C9mJTesRBo3NbDy1EAqRSv",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-sonnet-4-20250514",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Let me analyze this document step by step following the classification workflow: 1. **TEXT EXTRACTION** Looking at the document, I can see what appears to be a Colombian identification document. The text is quite fragmented due to OCR issues, but I can make out: - \"REPUBLICA DE COLOMBIA\" - \"IDENTIFICACION PERSONAL\" - \"CEDULA DE CIUDADANIA\" - A number \"39511617\" - \"CHARLY RAMIREZ\" (appears to be a name) - \"ELISA FERNANDA\" (appears to be another name) - \"BOGOTA D.C.\" - \"10-NOV-1968\" (appears to be a date) - \"(CUNDINAMARCA)\" - \"1.65\" and \"B+\" (appear to be physical characteristics - height and blood type) - \"F\" (appears to be gender indicator) - \"15-DIC-1986 SUBA\" (appears to be another date and location) - There's a fingerprint image visible - There's a photo of a person - There's a signature - There's a barcode at the bottom 2. **PRIORITY CHECKS** This is not BLANK - there's substantial meaningful content. This is not LINK_ONLY - no hyperlinks or URLs present. 3. **DOCUMENT FUNCTION ANALYSIS** The PRIMARY PURPOSE of this document is clearly personal identification. It contains: - Personal biographical data (birth date, physical characteristics) - Individual photo - Signature - Fingerprint - Government-issued ID number with individual name - Official government issuance from Republic of Colombia This is clearly a personal identification document (cédula de ciudadanía) from Colombia. 4. **ISSUER IDENTIFICATION** This is issued by the government of Colombia (\"REPUBLICA DE COLOMBIA\") for personal identification purposes. 5. **CATEGORY CLASSIFICATION** This clearly falls under CECRL: - ✓ Individual identification terminology: \"CEDULA DE CIUDADANIA\", \"IDENTIFICACION PERSONAL\" - ✓ Comprehensive personal details verified: birth specifics, physical attributes, and unique identifiers 6. **CONFIDENCE VALIDATION** I observe multiple robust authentication mechanisms confirming the document's legitimacy. The presence of biometric data, official seals, and government-issued identifiers provides high-confidence verification of the individual's identity. The document demonstrates comprehensive security features typical of official Colombian government identification.",
+          "signature": "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"
+        },
+        {
+          "type": "text",
+          "text": "```json { \"category\": \"CECRL\", \"text\": \":il,l;:\\n::Íi:r:i\\nrir\\\"lii\\n::,.'\\n::,..':t:::.\\n*i:,i\\n.$$$\\\\$$Sqg\\nA$ür: ,.\\n:1:l$*S\\n,{Ht-diA!tüH:\\\"\\nI r.i{i/r,H üE t{A*t¡.rtENrC}\\n,i\\n1ü.r'{011-1s,H.S\\n1.Es\\n;i: liT4t-LJ,{f.t B+\\n!\\n:3.,f \\n.\\na¡ i\\nF\\n55.q{)\\na \\\\: i_.\\n; i. f : tzr\\\\ í: t: \\n-.., i/.\\nA,' fs,&:l,ie.+\\\"?if \\n, ?!.\\n**+,F.ur¡135¿ \\n; ¡¡;: :\\n1$\\\"üt,t*l*Ss ,suBA\\nÉ5$¡iA f ttJ*.AFi f]{: ii-XFf:ütLrdrr! \\n)arcr\\\"**L\\n''.ttl'.i;',*'l#fu \\n; ;,¡l r,,\\n0007Fü3ür{F{ $t .1.r.1¡;iütr,l\\njffffi$,tsl¡ilA\\nIFf;ffiffi#IAL\\n\\nREPUBLICA DE COLOMBIA\\nIDENTIFICACION PERSONAL\\nCEDULA DE CIUDADANIA\\n39511617\\nCHARLY RAMIREZ\\nELISA FERNANDA\\n\\nFECHA DE NACIMIENTO\\n10-NOV-1968\\nBOGOTA D.C.\\n(CUNDINAMARCA)\\nLUGAR DE NACIMIENTO\\n1.65 B+ F\\nESTATURA SEXO\\n15-DIC-1986 SUBA\\nFECHA Y LUGAR DE EXPEDICION\\n\\nREGISTRADURIA NACIONAL\\nDEL ESTADO CIVIL\\n\\n00077030100\\n54750104\" } ```"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 9,
+        "cache_creation_input_tokens": 5253,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 1266
+      }
+    },
+    "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 8000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "expected_category": "CECRL",
+  "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+  "api_used": "invoke_model",
+  "pdf_info": {
+    "original_size": 577546,
+    "first_page_size": 577342,
+    "is_scanned": false
+  }
+}

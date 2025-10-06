@@ -1,0 +1,88 @@
+{
+  "extraction_data": {
+    "result": {
+      "FirstName": "GIOVANHY HUMBERTO",
+      "LastName": "VELÁSQUEZ RUIZ",
+      "CountryIssuer": "Colombia",
+      "Nationality": "colombiano",
+      "IdentificationType": "Cédula de Ciudadanía",
+      "IdentificationNumber": "70.568.729",
+      "Message": ""
+    },
+    "document_type": "person",
+    "category": "CECRL"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "```json { \"result\": { \"FirstName\": \"GIOVANHY HUMBERTO\", \"LastName\": \"VELÁSQUEZ RUIZ\", \"CountryIssuer\": \"Colombia\", \"Nationality\": \"colombiano\", \"IdentificationType\": \"Cédula de Ciudadanía\", \"IdentificationNumber\": \"70.568.729\", \"Message\": \"\" }, \"document_type\": \"person\", \"category\": \"CECRL\" } ```"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 3135,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 4300,
+      "output_tokens": 623
+    },
+    "ResponseMetadata": {
+      "RequestId": "3fb871a7-458b-4ea6-94ac-db94edca4479",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Sun, 31 Aug 2025 21:43:07 GMT",
+        "content-type": "application/json",
+        "content-length": "5243",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "3fb871a7-458b-4ea6-94ac-db94edca4479",
+        "x-amzn-bedrock-invocation-latency": "10562",
+        "x-amzn-bedrock-cache-write-input-token-count": "0",
+        "x-amzn-bedrock-cache-read-input-token-count": "4300",
+        "x-amzn-bedrock-output-token-count": "623",
+        "x-amzn-bedrock-input-token-count": "3135"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_017o1WX9gTRhhuGrPXbyh8Uk",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-sonnet-4-20250514",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Let me analyze this Colombian identification document carefully, following the extraction methodology. From the first page, I can see: - \"REPÚBLICA DE COLOMBIA\" - indicating this is a Colombian document - \"IDENTIFICACIÓN PERSONAL\" - indicating this is a personal identification document - \"CÉDULA DE CIUDADANÍA\" - indicating this is a citizenship card - I can see the number \"70.568.729\" - I can see \"VELÁSQUEZ RUIZ\" - I can see \"GIOVANHY HUMBERTO\" Now I need to apply the extraction methodology. Looking at the structure, this appears to be a Colombian document which might have the \"misalignment\" issue mentioned in the methodology where surnames appear first, then the \"APELLIDOS\" label, then names, then \"NOMBRES\" label. Looking at the visible text: - \"70.568.729\" - this appears to be the identification number - \"VELÁSQUEZ RUIZ\" - this appears after the number and looks like surnames - \"GIOVANHY HUMBERTO\" - this appears to be the given names This seems to follow the typical Colombian format where: - The number comes first - Then the surnames (VELÁSQUEZ RUIZ) - Then the names (GIOVANHY HUMBERTO) From the second page, I can see additional information including what appears to be birth date \"17-OCT-1966\" and other details, but the key information for extraction is on the first page. So my extraction would be: - FirstName: \"GIOVANHY HUMBERTO\" (the given names) - LastName: \"VELÁSQUEZ RUIZ\" (the surnames) - CountryIssuer: \"Colombia\" (from \"REPÚBLICA DE COLOMBIA\") - Nationality: \"colombiano\" (since this is a Colombian citizenship card, translated to Spanish) - IdentificationType: \"Cédula de Ciudadanía\" (this is explicitly shown on the document) - IdentificationNumber: \"70.568.729\" (the unique identifier for this individual) - Verification: No issues detected with the document's primary information",
+          "signature": "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"
+        },
+        {
+          "type": "text",
+          "text": "```json { \"result\": { \"FirstName\": \"GIOVANHY HUMBERTO\", \"LastName\": \"VELÁSQUEZ RUIZ\", \"CountryIssuer\": \"Colombia\", \"Nationality\": \"colombiano\", \"IdentificationType\": \"Cédula de Ciudadanía\", \"IdentificationNumber\": \"70.568.729\", \"Message\": \"\" }, \"document_type\": \"person\", \"category\": \"CECRL\" } ```"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 3135,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 4300,
+        "output_tokens": 623
+      }
+    },
+    "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 8000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+  "api_used": "invoke_model"
+}

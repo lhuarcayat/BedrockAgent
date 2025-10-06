@@ -1,0 +1,87 @@
+{
+  "classification_data": {
+    "category": "CECRL",
+    "text": "REPUBLICA DE COLOMBIA IDENTIFICACION PERSONAL CEDULA DE CIUDADANIA NUMERO 1.019.077.438 GALEANO NIÑO APELLIDOS LAURA XIMENA NOMBRES FECHA DE NACIMIENTO 07-DIC-1992 BOGOTA D.C (CUNDINAMARCA) LUGAR DE NACIMIENTO 1.55 O+ F ESTATURA TIPO RH SEXO 22-DIC-2019 BOGOTA D.C FECHA Y LUGAR DE EXPEDICION INDICE DERECHO",
+    "document_number": "UNKNOWN",
+    "path": "CECRL/900475077_1019077438_2024-07-19/1019077438_2024-07-19.pdf"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "```json { \"category\": \"CECRL\", \"text\": \"REPUBLICA DE COLOMBIA\\nIDENTIFICACION PERSONAL\\nCEDULA DE CIUDADANIA\\nNUMERO 1.019.077.438\\nGALEANO NIÑO\\nAPELLIDOS\\nLAURA XIMENA\\nNOMBRES\\nFECHA DE NACIMIENTO 07-DIC-1992\\nBOGOTA D.C\\n(CUNDINAMARCA)\\nLUGAR DE NACIMIENTO\\n1.55 O+ F\\nESTATURA TIPO RH SEXO\\n22-DIC-2019 BOGOTA D.C\\nFECHA Y LUGAR DE EXPEDICION\\nINDICE DERECHO\" } ```"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 9,
+      "cache_creation_input_tokens": 4774,
+      "cache_read_input_tokens": 0,
+      "output_tokens": 812
+    },
+    "ResponseMetadata": {
+      "RequestId": "8db6fdfd-1e35-4f59-ab28-e6b88049d83c",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Fri, 29 Aug 2025 22:59:54 GMT",
+        "content-type": "application/json",
+        "content-length": "5749",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "8db6fdfd-1e35-4f59-ab28-e6b88049d83c",
+        "x-amzn-bedrock-invocation-latency": "15646",
+        "x-amzn-bedrock-cache-write-input-token-count": "4774",
+        "x-amzn-bedrock-cache-read-input-token-count": "0",
+        "x-amzn-bedrock-output-token-count": "812",
+        "x-amzn-bedrock-input-token-count": "9"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_01EcuYkkiUnFp1W4ZdZrUPaN",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-sonnet-4-20250514",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Looking at this document, I need to follow the classification workflow and extract all visible text. **TEXT EXTRACTION:** I can see this is a Colombian ID document. I can see: - Top image: A Colombian ID card with \"REPUBLICA DE COLOMBIA\" at the top - \"IDENTIFICACION PERSONAL\" on the card - \"CEDULA DE CIUDADANIA\" - Number: 1.019.077.438 - Name: GALEANO NIÑO - Last names: LAURA XIMENA - There's a photo of a young woman - There's a signature - The bottom part shows what appears to be the back of the ID card with: - Date of birth: 07-DIC-1992 - Place: BOGOTA D.C (CUNDINAMARCA) - Place of birth reference - Height: 1.55 - Blood type: O+ - Gender: F - Some expiration date: 22-DIC-2019 BOGOTA D.C - A barcode at the bottom - Some reference number/code at the bottom **PRIORITY CHECKS:** - This is not BLANK - it has meaningful content - This is not LINK_ONLY - no URLs or redirects **DOCUMENT FUNCTION ANALYSIS:** This is clearly a personal identification document - a Colombian \"Cédula de Ciudadania\" (citizenship ID card). The PRIMARY PURPOSE is to identify an individual person named Laura Ximena Galeano Niño. It contains: - Personal biographical data (birth date, place of birth, height, blood type, gender) - Individual photo - Signature - Government-issued personal ID number - Security elements (barcode, official format) **ISSUER IDENTIFICATION:** This is issued by the Colombian government identification authority (\"REPUBLICA DE COLOMBIA\"), not DIAN or Chamber of Commerce. **CATEGORY CLASSIFICATION:** This clearly fits CECRL: The document meets all key indicators for personal identification. Multiple specific elements confirm its classification as a government-issued personal identification document. The comprehensive personal details, official format, and security features provide strong evidence of its CECRL categorization.",
+          "signature": "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"
+        },
+        {
+          "type": "text",
+          "text": "```json { \"category\": \"CECRL\", \"text\": \"REPUBLICA DE COLOMBIA\\nIDENTIFICACION PERSONAL\\nCEDULA DE CIUDADANIA\\nNUMERO 1.019.077.438\\nGALEANO NIÑO\\nAPELLIDOS\\nLAURA XIMENA\\nNOMBRES\\nFECHA DE NACIMIENTO 07-DIC-1992\\nBOGOTA D.C\\n(CUNDINAMARCA)\\nLUGAR DE NACIMIENTO\\n1.55 O+ F\\nESTATURA TIPO RH SEXO\\n22-DIC-2019 BOGOTA D.C\\nFECHA Y LUGAR DE EXPEDICION\\nINDICE DERECHO\" } ```"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 9,
+        "cache_creation_input_tokens": 4774,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 812
+      }
+    },
+    "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 8000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "expected_category": "CECRL",
+  "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+  "api_used": "invoke_model",
+  "pdf_info": {
+    "original_size": 119794,
+    "first_page_size": 118331,
+    "is_scanned": true
+  }
+}

@@ -1,0 +1,87 @@
+{
+  "classification_data": {
+    "category": "CECRL",
+    "text": "REPUBLICA DE COLOMBIA IDENTIFICACION PERSONAL CEDULA DE CIUDADANIA NUMERO 7.250.095 GARCIA VALENCIA APELLIDOS JOHN NOMBRES FECHA DE NACIMIENTO 19-AGO-1965 BOYACA LUGAR DE NACIMIENTO 1.74 ESTATURA SEXO M 20-AGO-1983 PUERTO BOYACA FECHA Y LUGAR DE EXPEDICION REGISTRADOR CARLOS ARIEL SANCHEZ TORRES A 0721400-00192696-M-0007250095-20091031 00176676284 1 27615422 REPUBLICA DE COLOMBIA IDENTIFICACION PERSONAL CEDULA DE CIUDADANIA NUMERO 7.250.095 GARCIA VALENCIA APELLIDOS JOHN NOMBRES FIRMA FECHA DE NACIMIENTO 19-AGO-1965 PUERTO BOYACA (BOYACA) LUGAR DE NACIMIENTO 1.74 ESTATURA O- G.S. RH M SEXO 20-AGO-1983 PUERTO BOYACA FECHA Y LUGAR DE EXPEDICION INDICE DERECHO REGISTRADOR NACIONAL CARLOS ARIEL SANCHEZ TORRES A-0721400-00192696-M-0007250095-20091031 00176676284 1 27615422",
+    "document_number": "7250095",
+    "path": "CECRL/7250095/7250095_2020-02-29.pdf"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "```json { \"category\": \"CECRL\", \"text\": \"REPUBLICA DE COLOMBIA IDENTIFICACION PERSONAL CEDULA DE CIUDADANIA NUMERO 7.250.095 GARCIA VALENCIA APELLIDOS JOHN NOMBRES FECHA DE NACIMIENTO 19-AGO-1965 BOYACA LUGAR DE NACIMIENTO 1.74 ESTATURA SEXO M 20-AGO-1983 PUERTO BOYACA FECHA Y LUGAR DE EXPEDICION REGISTRADOR CARLOS ARIEL SANCHEZ TORRES A 0721400-00192696-M-0007250095-20091031 00176676284 1 27615422 REPUBLICA DE COLOMBIA IDENTIFICACION PERSONAL CEDULA DE CIUDADANIA NUMERO 7.250.095 GARCIA VALENCIA APELLIDOS JOHN NOMBRES FIRMA FECHA DE NACIMIENTO 19-AGO-1965 PUERTO BOYACA (BOYACA) LUGAR DE NACIMIENTO 1.74 ESTATURA O- G.S. RH M SEXO 20-AGO-1983 PUERTO BOYACA FECHA Y LUGAR DE EXPEDICION INDICE DERECHO REGISTRADOR NACIONAL CARLOS ARIEL SANCHEZ TORRES A-0721400-00192696-M-0007250095-20091031 00176676284 1 27615422\" } ```"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 9,
+      "cache_creation_input_tokens": 5136,
+      "cache_read_input_tokens": 0,
+      "output_tokens": 931
+    },
+    "ResponseMetadata": {
+      "RequestId": "b52b0a6c-fca8-4af5-845d-f95bc427a2b7",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Fri, 29 Aug 2025 22:52:11 GMT",
+        "content-type": "application/json",
+        "content-length": "6584",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "b52b0a6c-fca8-4af5-845d-f95bc427a2b7",
+        "x-amzn-bedrock-invocation-latency": "17958",
+        "x-amzn-bedrock-cache-write-input-token-count": "5136",
+        "x-amzn-bedrock-cache-read-input-token-count": "0",
+        "x-amzn-bedrock-output-token-count": "931",
+        "x-amzn-bedrock-input-token-count": "9"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_01TkVbyEcV7PmWkUSnAtd2N8",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-sonnet-4-20250514",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Let me analyze the document step by step according to the classification workflow: 1. **TEXT EXTRACTION** Looking at the document, I can see this is a Colombian identification document (cedula de ciudadania). The text includes: - REPUBLICA DE COLOMBIA - IDENTIFICACION PERSONAL - CEDULA DE CIUDADANIA - NUMERO 7.250.095 - GARCIA VALENCIA (apellidos/surnames) - JOHN (nombres/names) - FECHA DE NACIMIENTO 19-AGO-1965 (date of birth) - BOYACA (place of birth) - LUGAR DE NACIMIENTO - ESTATURA 1.74 (height) - SEXO M (gender male) - PUERTO BOYACA (appears to be registration location) - There's also a fingerprint image and what appears to be signature areas 2. **PRIORITY CHECKS** - Not BLANK - contains substantial meaningful content - Not LINK_ONLY - no hyperlinks or URLs directing elsewhere 3. **DOCUMENT FUNCTION ANALYSIS** This document's primary purpose is to serve as official personal identification for an individual named John Garcia Valencia. It provides biographical data, physical characteristics, photo, and other identifying information typical of a government-issued ID card. 4. **ISSUER IDENTIFICATION** This is issued by the Republic of Colombia as a personal identification document (cedula de ciudadania), not by DIAN or Chamber of Commerce. 5. **CATEGORY CLASSIFICATION** Looking at the category definitions: **CECRL**: This matches perfectly: - Individual identification terminology: \"Cédula\", \"Identificación personal\" ✓ - Personal biographical data: birth date/place, gender, physical characteristics ✓ - Individual photo, signature, fingerprint references ✓ - Government-issued personal ID numbers with individual names ✓ - Security elements: appears to have barcodes, official seals ✓ - Issued by government identification authorities ✓ - Key patterns confirm a single individual's identification document ✓ - Comprehensive biographic details validate government issuance ✓ 6. **CONFIDENCE VALIDATION** Strong evidence supports this as a genuine CECRL document with comprehensive identifying information.",
+          "signature": "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"
+        },
+        {
+          "type": "text",
+          "text": "```json { \"category\": \"CECRL\", \"text\": \"REPUBLICA DE COLOMBIA IDENTIFICACION PERSONAL CEDULA DE CIUDADANIA NUMERO 7.250.095 GARCIA VALENCIA APELLIDOS JOHN NOMBRES FECHA DE NACIMIENTO 19-AGO-1965 BOYACA LUGAR DE NACIMIENTO 1.74 ESTATURA SEXO M 20-AGO-1983 PUERTO BOYACA FECHA Y LUGAR DE EXPEDICION REGISTRADOR CARLOS ARIEL SANCHEZ TORRES A 0721400-00192696-M-0007250095-20091031 00176676284 1 27615422 REPUBLICA DE COLOMBIA IDENTIFICACION PERSONAL CEDULA DE CIUDADANIA NUMERO 7.250.095 GARCIA VALENCIA APELLIDOS JOHN NOMBRES FIRMA FECHA DE NACIMIENTO 19-AGO-1965 PUERTO BOYACA (BOYACA) LUGAR DE NACIMIENTO 1.74 ESTATURA O- G.S. RH M SEXO 20-AGO-1983 PUERTO BOYACA FECHA Y LUGAR DE EXPEDICION INDICE DERECHO REGISTRADOR NACIONAL CARLOS ARIEL SANCHEZ TORRES A-0721400-00192696-M-0007250095-20091031 00176676284 1 27615422\" } ```"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 9,
+        "cache_creation_input_tokens": 5136,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 931
+      }
+    },
+    "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 8000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "expected_category": "CECRL",
+  "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+  "api_used": "invoke_model",
+  "pdf_info": {
+    "original_size": 555906,
+    "first_page_size": 555702,
+    "is_scanned": false
+  }
+}

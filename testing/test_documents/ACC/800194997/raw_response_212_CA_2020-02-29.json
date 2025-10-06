@@ -1,0 +1,33 @@
+{
+  "ResponseMetadata": {
+    "RequestId": "7b9ba0cd-6d5b-4d49-b2de-c26417b2f9e1",
+    "HTTPStatusCode": 200,
+    "HTTPHeaders": {
+      "date": "Mon, 16 Jun 2025 20:49:17 GMT",
+      "content-type": "application/json",
+      "content-length": "1603",
+      "connection": "keep-alive",
+      "x-amzn-requestid": "7b9ba0cd-6d5b-4d49-b2de-c26417b2f9e1"
+    },
+    "RetryAttempts": 0
+  },
+  "output": {
+    "message": {
+      "role": "assistant",
+      "content": [
+        {
+          "text": "```json\n{\n  \"path\": \"s3://par-servicios-poc-dev-filling-desk/par-servicios-poc/ACC/800194997/212_CA_2020-02-29.pdf\",\n  \"result\": {\n    \"companyName\": \"DOCUPRINT S.A.S.\",\n    \"documentType\": \"Equity Composition\",\n    \"taxId\": \"800.194.997-1\",\n    \"country\": \"Colombia\",\n    \"identificationDetails\": {\n      \"source\": \"text_reference\",\n      \"indicators\": [\"Medellín\", \"Colombia\"],\n      \"requiresReview\": false\n    },\n    \"relatedParties\": [\n      {\n        \"firstName\": \"CARLOS A.\",\n        \"lastName\": \"MOLINA SUAREZ\",\n        \"identificationType\": \"CC\",\n        \"identificationNumber\": \"12.119.319\",\n        \"relationshipType\": \"Shareholder\",\n        \"participationPercentage\": \"49.99999999999999\",\n        \"timeFound\": 1\n      },\n      {\n        \"firstName\": \"FAST PRINT\",\n        \"lastName\": \"LTDA\",\n        \"identificationType\": \"NIT\",\n        \"identificationNumber\": \"800.149.757\",\n        \"relationshipType\": \"Shareholder\",\n        \"participationPercentage\": \"50.00000000000001\",\n        \"timeFound\": 1\n      }\n    ]\n  },\n  \"document_type\": \"company\",\n  \"document_number\": \"800194997\",\n  \"category\": \"ACC\",\n  \"confidenceScores\": {\n    \"companyName\": 95,\n    \"documentType\": 100,\n    \"taxId\": 95,\n    \"country\": 95,\n    \"relatedParties\": 90\n  }\n}\n```"
+        }
+      ]
+    }
+  },
+  "stopReason": "end_turn",
+  "usage": {
+    "inputTokens": 5435,
+    "outputTokens": 435,
+    "totalTokens": 5870
+  },
+  "metrics": {
+    "latencyMs": 8449
+  }
+}

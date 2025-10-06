@@ -1,0 +1,157 @@
+{
+  "document_name": "131_CA_2020-02-29.pdf",
+  "category": "ACC",
+  "classification_success": true,
+  "extraction_success": true,
+  "overall_success": true,
+  "timestamp": "2025-08-25T01:04:48.039561",
+  "classification_result": {
+    "classification_data": {
+      "category": "ACC",
+      "text": "ASTRID ROCIO LOZANO C.C. 65.800.711 de Purificación Contador Público T.P. 193485-T Universidad Antonio Nariño COMPOSICION ACCIONARIA EL SUSCRIPTO CONTADOR PÚBLICO DE LA SOCIEDAD CONSTRUCTORA E INMOBILIARIA RIVERA INCORA SAS. NIT 901.106.859-4 CERTIFICA QUE: El capital de la sociedad es de DOCIENTOS MILLONES DE PESOS MONEDA LEGAL (200.000.000) integramente suscrito y pagado por los socios accionistas. Repartidos en la siguiente forma o proporción, entre los socios accionistas, en las siguientes proporciones: NOMBRE DE SOCIOS No. DE DOCUMENTO PORCENTAJE VALOR No. ACCIONES LEOWLSTON RIVERA MENDOZA 80.057.686 49% $98.0000.000 196 MARCOS JAIR CUERVO MENDOZA 1.022.372.943 51% $102.000.000 204 TOTAL 100% $200.000.000 400 La presente se expide en la ciudad de Bogotá, á los seis (16) días del mes de Marzo de 2021. ASTRID ROCIO LOZANO CONTADOR PÚBLICO TP.193485-T E-mail: aslozano@hotmail.com CP",
+      "document_number": "901106859",
+      "path": "ACC/901106859/131_CA_2020-02-29.pdf"
+    },
+    "raw_response": {
+      "ResponseMetadata": {
+        "RequestId": "bec9c025-2266-4d1e-9352-8853b9643fea",
+        "HTTPStatusCode": 200,
+        "HTTPHeaders": {
+          "date": "Mon, 25 Aug 2025 06:04:55 GMT",
+          "content-type": "application/json",
+          "content-length": "1155",
+          "connection": "keep-alive",
+          "x-amzn-requestid": "bec9c025-2266-4d1e-9352-8853b9643fea"
+        },
+        "RetryAttempts": 0
+      },
+      "output": {
+        "message": {
+          "role": "assistant",
+          "content": [
+            {
+              "text": "```json { \"category\": \"ACC\", \"text\": \"ASTRID ROCIO LOZANO C.C. 65.800.711 de Purificación Contador Público T.P. 193485-T Universidad Antonio Nariño COMPOSICION ACCIONARIA EL SUSCRIPTO CONTADOR PÚBLICO DE LA SOCIEDAD CONSTRUCTORA E INMOBILIARIA RIVERA INCORA SAS. NIT 901.106.859-4 CERTIFICA QUE: El capital de la sociedad es de DOCIENTOS MILLONES DE PESOS MONEDA LEGAL (200.000.000) integramente suscrito y pagado por los socios accionistas. Repartidos en la siguiente forma o proporción, entre los socios accionistas, en las siguientes proporciones: NOMBRE DE SOCIOS No. DE DOCUMENTO PORCENTAJE VALOR No. ACCIONES LEOWLSTON RIVERA MENDOZA 80.057.686 49% $98.0000.000 196 MARCOS JAIR CUERVO MENDOZA 1.022.372.943 51% $102.000.000 204 TOTAL 100% $200.000.000 400 La presente se expide en la ciudad de Bogotá, á los seis (16) días del mes de Marzo de 2021. ASTRID ROCIO LOZANO CONTADOR PÚBLICO TP.193485-T E-mail: aslozano@hotmail.com CP\" } ```"
+            }
+          ]
+        }
+      },
+      "stopReason": "end_turn",
+      "usage": {
+        "inputTokens": 3161,
+        "outputTokens": 387,
+        "totalTokens": 3548
+      },
+      "metrics": {
+        "latencyMs": 7320
+      },
+      "model_id": "us.amazon.nova-pro-v1:0",
+      "api_used": "converse",
+      "model_params": {
+        "maxTokens": 8200,
+        "topP": 1,
+        "temperature": 0
+      }
+    },
+    "expected_category": "ACC",
+    "model_used": "us.amazon.nova-pro-v1:0",
+    "api_used": "converse",
+    "pdf_info": {
+      "original_size": 349282,
+      "first_page_size": 349248,
+      "is_scanned": true
+    }
+  },
+  "extraction_result": {
+    "extraction_data": {
+      "path": "ACC/901106859/131_CA_2020-02-29.pdf",
+      "result": {
+        "companyName": "CONSTRUCTORA E INMOBILIARIA RIVERA INCORA SAS",
+        "documentType": "Equity Composition",
+        "taxId": "901.106.859-4",
+        "country": "Colombia",
+        "identificationDetails": {
+          "source": "text_reference",
+          "indicators": [
+            "NIT",
+            "Bogotá"
+          ],
+          "conflictingSources": [],
+          "requiresReview": false
+        },
+        "relatedParties": [
+          {
+            "firstName": "LEOWILSTON",
+            "lastName": "RIVERA MENDEZ",
+            "identificationType": "CC",
+            "identificationNumber": "80.057.686",
+            "relationshipType": "Shareholder",
+            "participationPercentage": "49%",
+            "timeFound": 1,
+            "job": ""
+          },
+          {
+            "firstName": "MARCOS JAIR",
+            "lastName": "CUEVO MENDEZ",
+            "identificationType": "CC",
+            "identificationNumber": "1.022.372.943",
+            "relationshipType": "Shareholder",
+            "participationPercentage": "51%",
+            "timeFound": 1,
+            "job": ""
+          }
+        ]
+      },
+      "document_type": "company",
+      "document_number": "901106859",
+      "category": "ACC",
+      "confidenceScores": {
+        "companyName": 95,
+        "taxId": 95,
+        "country": 95,
+        "relatedParties": 90
+      }
+    },
+    "raw_response": {
+      "ResponseMetadata": {
+        "RequestId": "f485dcbe-186b-4c8d-8620-160607668e17",
+        "HTTPStatusCode": 200,
+        "HTTPHeaders": {
+          "date": "Mon, 25 Aug 2025 06:05:03 GMT",
+          "content-type": "application/json",
+          "content-length": "1632",
+          "connection": "keep-alive",
+          "x-amzn-requestid": "f485dcbe-186b-4c8d-8620-160607668e17"
+        },
+        "RetryAttempts": 0
+      },
+      "output": {
+        "message": {
+          "role": "assistant",
+          "content": [
+            {
+              "text": "```json { \"path\": \"ACC/901106859/131_CA_2020-02-29.pdf\", \"result\": { \"companyName\": \"CONSTRUCTORA E INMOBILIARIA RIVERA INCORA SAS\", \"documentType\": \"Equity Composition\", \"taxId\": \"901.106.859-4\", \"country\": \"Colombia\", \"identificationDetails\": { \"source\": \"text_reference\", \"indicators\": [ \"NIT\", \"Bogotá\" ], \"conflictingSources\": [], \"requiresReview\": false }, \"relatedParties\": [ { \"firstName\": \"LEOWILSTON\", \"lastName\": \"RIVERA MENDEZ\", \"identificationType\": \"CC\", \"identificationNumber\": \"80.057.686\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"49%\", \"timeFound\": 1, \"job\": \"\" }, { \"firstName\": \"MARCOS JAIR\", \"lastName\": \"CUEVO MENDEZ\", \"identificationType\": \"CC\", \"identificationNumber\": \"1.022.372.943\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"51%\", \"timeFound\": 1, \"job\": \"\" } ] }, \"document_type\": \"company\", \"document_number\": \"901106859\", \"category\": \"ACC\", \"confidenceScores\": { \"companyName\": 95, \"taxId\": 95, \"country\": 95, \"relatedParties\": 90 } } ```"
+            }
+          ]
+        }
+      },
+      "stopReason": "end_turn",
+      "usage": {
+        "inputTokens": 8602,
+        "outputTokens": 407,
+        "totalTokens": 9009
+      },
+      "metrics": {
+        "latencyMs": 7733
+      },
+      "model_id": "us.amazon.nova-pro-v1:0",
+      "api_used": "converse",
+      "model_params": {
+        "maxTokens": 8200,
+        "topP": 1,
+        "temperature": 0.1
+      }
+    },
+    "model_used": "us.amazon.nova-pro-v1:0",
+    "api_used": "converse"
+  }
+}

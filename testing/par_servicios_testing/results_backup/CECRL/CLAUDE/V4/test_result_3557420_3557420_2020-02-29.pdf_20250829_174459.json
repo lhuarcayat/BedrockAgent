@@ -1,0 +1,183 @@
+{
+  "document_name": "3557420_2020-02-29.pdf",
+  "category": "CECRL",
+  "classification_success": true,
+  "extraction_success": true,
+  "overall_success": true,
+  "timestamp": "2025-08-29T17:44:32.077628",
+  "classification_result": {
+    "classification_data": {
+      "category": "CECRL",
+      "text": "REPUBLICA DE COLOMBIA IDENTIFICACIÓN PERSONAL CÉDULA DE CIUDADANÍA 3.357.420 SANCHEZ DUARTE DARIO FECHA DE NACIMIENTO: 01-AGO-1962 YONDO - CASABE YONDO (ANTIOQUIA) 1.75 O+ M 13-ABR-1991 YONDO FECHA Y LUGAR DE EXPEDICIÓN",
+      "document_number": "3557420",
+      "path": "CECRL/3557420/3557420_2020-02-29.pdf"
+    },
+    "raw_response": {
+      "output": {
+        "message": {
+          "content": [
+            {
+              "text": "```json { \"category\": \"CECRL\", \"text\": \"REPUBLICA DE COLOMBIA\\nIDENTIFICACIÓN PERSONAL\\nCÉDULA DE CIUDADANÍA\\n\\n3.357.420\\nSANCHEZ DUARTE\\nDARIO\\n\\nFECHA DE NACIMIENTO: 01-AGO-1962\\nYONDO - CASABE\\nYONDO (ANTIOQUIA)\\n1.75\\nO+\\nM\\n13-ABR-1991 YONDO\\nFECHA Y LUGAR DE EXPEDICIÓN\" } ```"
+            }
+          ]
+        }
+      },
+      "stopReason": "end_turn",
+      "usage": {
+        "input_tokens": 9,
+        "cache_creation_input_tokens": 4753,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 810
+      },
+      "ResponseMetadata": {
+        "RequestId": "f42a5bed-909a-4d1e-b903-ae8f9f055b87",
+        "HTTPStatusCode": 200,
+        "HTTPHeaders": {
+          "date": "Fri, 29 Aug 2025 22:44:45 GMT",
+          "content-type": "application/json",
+          "content-length": "5749",
+          "connection": "keep-alive",
+          "x-amzn-requestid": "f42a5bed-909a-4d1e-b903-ae8f9f055b87",
+          "x-amzn-bedrock-invocation-latency": "13026",
+          "x-amzn-bedrock-cache-write-input-token-count": "4753",
+          "x-amzn-bedrock-cache-read-input-token-count": "0",
+          "x-amzn-bedrock-output-token-count": "810",
+          "x-amzn-bedrock-input-token-count": "9"
+        },
+        "RetryAttempts": 0
+      },
+      "raw_anthropic_response": {
+        "id": "msg_bdrk_01KTueoWcE2WcQS3ZkHKjS7n",
+        "type": "message",
+        "role": "assistant",
+        "model": "claude-sonnet-4-20250514",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "Let me carefully analyze the document following the classification workflow. 1. **TEXT EXTRACTION** Looking at the document, I can see this is a Colombian identification document. Let me extract all the text: Top card: - REPUBLICA DE COLOMBIA - IDENTIFICACIÓN PERSONAL - CÉDULA DE CIUDADANÍA - Number: 3.357.420 - SANCHEZ DUARTE - DARIO - [There's a signature and photo] Bottom section: - FECHA DE NACIMIENTO: 01-AGO-1962 - YONDO - CASABE - YONDO (ANTIOQUIA) - 1.75 [height] - O+ [blood type] - M [sex] - 13-ABR-1991 YONDO - [Fingerprint image] - [Barcode at bottom] 2. **PRIORITY CHECKS** This is not BLANK (has meaningful content) and not LINK_ONLY (no URLs). 3. **DOCUMENT FUNCTION ANALYSIS** What is the PRIMARY PURPOSE of this document's content? - This is clearly a personal identification document (Cédula de Ciudadanía) - It provides identification information for an individual person - Contains biographical data: birth date (01-AGO-1962), birth place (YONDO-CASABE, ANTIOQUIA), height (1.75), blood type (O+), sex (M) - Has individual photo, signature, and fingerprint - Government-issued personal ID number (3.357.420) with individual name (DARIO SANCHEZ DUARTE) 4. **ISSUER IDENTIFICATION** This is issued by the Colombian government (República de Colombia) as a personal identification document, not by DIAN or Chamber of Commerce. 5. **CATEGORY CLASSIFICATION** Looking at CECRL definition: - ✓ Individual identification terminology: \"IDENTIFICACIÓN PERSONAL\", \"CÉDULA DE CIUDADANÍA\" - ✓ Comprehensive personal details confirm document's identity verification purpose - Matches all key classification criteria for official personal identification 6. **CONFIDENCE VALIDATION** Strong evidence confirms the document's authenticity and completeness. All critical identification elements are present and unambiguous.",
+            "signature": "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"
+          },
+          {
+            "type": "text",
+            "text": "```json { \"category\": \"CECRL\", \"text\": \"REPUBLICA DE COLOMBIA\\nIDENTIFICACIÓN PERSONAL\\nCÉDULA DE CIUDADANÍA\\n\\n3.357.420\\nSANCHEZ DUARTE\\nDARIO\\n\\nFECHA DE NACIMIENTO: 01-AGO-1962\\nYONDO - CASABE\\nYONDO (ANTIOQUIA)\\n1.75\\nO+\\nM\\n13-ABR-1991 YONDO\\nFECHA Y LUGAR DE EXPEDICIÓN\" } ```"
+          }
+        ],
+        "stop_reason": "end_turn",
+        "stop_sequence": null,
+        "usage": {
+          "input_tokens": 9,
+          "cache_creation_input_tokens": 4753,
+          "cache_read_input_tokens": 0,
+          "output_tokens": 810
+        }
+      },
+      "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+      "api_used": "invoke_model",
+      "model_params": {
+        "max_tokens": 8000,
+        "top_p": 1,
+        "temperature": 1,
+        "thinking": {
+          "type": "enabled",
+          "budget_tokens": 4096
+        }
+      }
+    },
+    "expected_category": "CECRL",
+    "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model",
+    "pdf_info": {
+      "original_size": 168469,
+      "first_page_size": 163968,
+      "is_scanned": true
+    }
+  },
+  "extraction_result": {
+    "extraction_data": {
+      "result": {
+        "firstName": "DARIO",
+        "lastName": "SANCHEZ DUARTE",
+        "country_issuer": "Colombia",
+        "nationality": "Colombia",
+        "identificationType": "Cédula de Ciudadanía",
+        "identificationNumber": "3.357.420",
+        "message": ""
+      },
+      "document_type": "person",
+      "category": "CECRL"
+    },
+    "raw_response": {
+      "output": {
+        "message": {
+          "content": [
+            {
+              "text": "```json { \"result\": { \"firstName\": \"DARIO\", \"lastName\": \"SANCHEZ DUARTE\", \"country_issuer\": \"Colombia\", \"nationality\": \"Colombia\", \"identificationType\": \"Cédula de Ciudadanía\", \"identificationNumber\": \"3.357.420\", \"message\": \"\" }, \"document_type\": \"person\", \"category\": \"CECRL\" } ```"
+            }
+          ]
+        }
+      },
+      "stopReason": "end_turn",
+      "usage": {
+        "input_tokens": 10,
+        "cache_creation_input_tokens": 6419,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 708
+      },
+      "ResponseMetadata": {
+        "RequestId": "8576f49a-2a16-4299-ad5c-ee24e3e5a246",
+        "HTTPStatusCode": 200,
+        "HTTPHeaders": {
+          "date": "Fri, 29 Aug 2025 22:44:59 GMT",
+          "content-type": "application/json",
+          "content-length": "5789",
+          "connection": "keep-alive",
+          "x-amzn-requestid": "8576f49a-2a16-4299-ad5c-ee24e3e5a246",
+          "x-amzn-bedrock-invocation-latency": "13999",
+          "x-amzn-bedrock-cache-write-input-token-count": "6419",
+          "x-amzn-bedrock-cache-read-input-token-count": "0",
+          "x-amzn-bedrock-output-token-count": "708",
+          "x-amzn-bedrock-input-token-count": "10"
+        },
+        "RetryAttempts": 0
+      },
+      "raw_anthropic_response": {
+        "id": "msg_bdrk_01ADjwFFwoiH889MvC1Ev8WR",
+        "type": "message",
+        "role": "assistant",
+        "model": "claude-sonnet-4-20250514",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "Let me analyze this Colombian ID document (Cédula de Ciudadanía) step by step following the extraction methodology: **Step 1: Document Structure Analysis** - This is a Colombian \"Cédula de Ciudadanía\" (Citizenship Card) from the \"República de Colombia\" - I can see official headers and government formatting - The document has clear identification sections - This is definitely an official government identification document **Step 2: Field Detection** Looking for field labels and applying dual-mode extraction: - I can see \"REPUBLICA DE COLOMBIA\" at the top - There's \"IDENTIFICACION PERSONAL\" - \"CEDULA DE CIUDADANIA\" - I can see a number: \"3.357.420\" - I can see \"SANCHEZ DUARTE\" - I can see \"DARIO\" - There's a birth date \"01-AGO-1962\" - Place appears to be \"YONDO - CASABE\" - \"YONDO (ANTIOQUIA)\" - Height: \"1.75\" - Blood type: \"O+\" - Sex: \"M\" - Issue date: \"13-ABR-1991 YONDO\" **Step 3: Pattern-Based Text Extraction** From the document structure, I need to identify: firstName: \"DARIO\" appears to be the given name lastName: \"SANCHEZ DUARTE\" appears to be the surnames identificationNumber: \"3.357.420\" appears to be the ID number country_issuer: \"Colombia\" (from \"REPUBLICA DE COLOMBIA\") nationality: Should be \"Colombia\" (same as issuer, no contradictory information) identificationType: \"Cédula de Ciudadanía\" (from document title) **Step 4: Field Mapping and Validation** - firstName: \"DARIO\" - this appears to be the given name - lastName: \"SANCHEZ DUARTE\" - these appear to be the family names - country_issuer: Confirmed as Colombia from official document header - nationality: Matches country of issue without any discrepancies - identificationType: Verified as official citizenship document - identificationNumber: Validated and extracted successfully **Step 5: Quality Control** The extraction process is complete, with all critical fields accurately captured from this official identification document. The systematic approach ensures comprehensive and precise information retrieval.",
+            "signature": "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"
+          },
+          {
+            "type": "text",
+            "text": "```json { \"result\": { \"firstName\": \"DARIO\", \"lastName\": \"SANCHEZ DUARTE\", \"country_issuer\": \"Colombia\", \"nationality\": \"Colombia\", \"identificationType\": \"Cédula de Ciudadanía\", \"identificationNumber\": \"3.357.420\", \"message\": \"\" }, \"document_type\": \"person\", \"category\": \"CECRL\" } ```"
+          }
+        ],
+        "stop_reason": "end_turn",
+        "stop_sequence": null,
+        "usage": {
+          "input_tokens": 10,
+          "cache_creation_input_tokens": 6419,
+          "cache_read_input_tokens": 0,
+          "output_tokens": 708
+        }
+      },
+      "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+      "api_used": "invoke_model",
+      "model_params": {
+        "max_tokens": 8000,
+        "top_p": 1,
+        "temperature": 1,
+        "thinking": {
+          "type": "enabled",
+          "budget_tokens": 4096
+        }
+      }
+    },
+    "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model"
+  }
+}

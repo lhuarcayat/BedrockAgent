@@ -1,0 +1,120 @@
+{
+  "extraction_data": {
+    "path": "ACC/802013773/186_CA_2020-02-29.pdf",
+    "result": {
+      "companyName": "S & T INGENIERIA Y CONSULTORIA SAS",
+      "documentCategory": "Equity Composition",
+      "taxId": "802,013,773-0",
+      "country": "Colombia",
+      "identificationDetails": {
+        "source": "id_analysis",
+        "indicators": [
+          "NIT format",
+          "C.C. identification numbers"
+        ],
+        "conflictingSources": [],
+        "requiresReview": "false"
+      },
+      "relatedParties": [
+        {
+          "type": "person",
+          "firstName": "TANIA ELENA",
+          "lastName": "CHEMAS AVENDAÑO",
+          "identificationType": "C.C.",
+          "identificationNumber": "32.728.993",
+          "relationshipType": "Shareholder",
+          "participationPercentage": "50.00",
+          "timeFound": "1",
+          "job": ""
+        },
+        {
+          "type": "person",
+          "firstName": "FARID EDUARDO",
+          "lastName": "RADI SAGBINI",
+          "identificationType": "C.C.",
+          "identificationNumber": "77.025.796",
+          "relationshipType": "Shareholder",
+          "participationPercentage": "50.00",
+          "timeFound": "1",
+          "job": "Representante Legal"
+        }
+      ]
+    },
+    "documentType": "company",
+    "documentNumber": "802013773",
+    "category": "ACC"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "```json { \"result\": { \"companyName\": \"S & T INGENIERIA Y CONSULTORIA SAS\", \"documentCategory\": \"Equity Composition\", \"taxId\": \"802,013,773-0\", \"country\": \"Colombia\", \"identificationDetails\": { \"source\": \"id_analysis\", \"indicators\": [ \"NIT format\", \"C.C. identification numbers\" ], \"conflictingSources\": [], \"requiresReview\": \"false\" }, \"relatedParties\": [ { \"type\": \"person\", \"firstName\": \"TANIA ELENA\", \"lastName\": \"CHEMAS AVENDAÑO\", \"identificationType\": \"C.C.\", \"identificationNumber\": \"32.728.993\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"50.00\", \"timeFound\": \"1\", \"job\": \"\" }, { \"type\": \"person\", \"firstName\": \"FARID EDUARDO\", \"lastName\": \"RADI SAGBINI\", \"identificationType\": \"C.C.\", \"identificationNumber\": \"77.025.796\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"50.00\", \"timeFound\": \"1\", \"job\": \"Representante Legal\" } ] }, \"documentType\": \"company\", \"category\": \"ACC\" } ```"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 425,
+      "cache_creation_input_tokens": 6074,
+      "cache_read_input_tokens": 0,
+      "output_tokens": 1437
+    },
+    "ResponseMetadata": {
+      "RequestId": "df434b9c-98bf-46b8-9091-e514703a8fdc",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Thu, 28 Aug 2025 08:30:14 GMT",
+        "content-type": "application/json",
+        "content-length": "5440",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "df434b9c-98bf-46b8-9091-e514703a8fdc",
+        "x-amzn-bedrock-invocation-latency": "29147",
+        "x-amzn-bedrock-cache-write-input-token-count": "6074",
+        "x-amzn-bedrock-cache-read-input-token-count": "0",
+        "x-amzn-bedrock-output-token-count": "1437",
+        "x-amzn-bedrock-input-token-count": "425"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_01XU39AorLiUDUJAbueKMZKD",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-3-7-sonnet-20250219",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Let me analyze this document step-by-step following the extraction rules: ## Step 1: Document Analysis The document appears to be a \"COMPOSICION ACCIONARIA\" (Equity Composition) document in Spanish. It presents information about a company called \"S & T INGENIERIA Y CONSULTORIA SAS\" with its shareholders and their participation percentages. Key elements: - Title: \"COMPOSICION ACCIONARIA\" - Company name: \"S & T INGENIERIA Y CONSULTORIA SAS\" - Tax ID (NIT): 802,013,773-0 - Date: \"19 DE MAYO DEL AÑO 2020\" - Two shareholders listed with their information - Signature section with a legal representative and accountant ## Step 2: Root Level Extraction 1. **companyName**: \"S & T INGENIERIA Y CONSULTORIA SAS\" - Found in \"NOMBRE DE LA ENTIDAD\" field - Contains proper company suffix (SAS) 2. **taxId**: \"802,013,773-0\" - Found in the top right section next to NIT - Matches Colombia's NIT format (XXX,XXX,XXX-X) - Need to standardize to Colombia format: \"802,013,773-0\" 3. **country**: \"Colombia\" - Evidence: - Document uses NIT format which is Colombia's tax ID system - Format of the document matches Colombian equity composition reports - ID numbers have the Colombian format (C.C. with numbers) 4. **identificationDetails**: - source: \"id_analysis\" (since we're inferring from tax ID format) - indicators: [\"NIT format\", \"Colombian ID formats (C.C.)\"] - conflictingSources: [] (none detected) - requiresReview: \"false\" (all critical fields have clear values) ## Step 3: Related Parties Processing I see two shareholders listed: 1. First shareholder: - Name: \"TANIA ELENA CHEMAS AVENDAÑO\" - ID: \"32,728,993\" - Type: \"PERSONAL NATURAL\" (Natural Person) - Participation: 50.00% - Shares: 280 - Value per share: $1,000,000 2. Second shareholder: - Name: \"FARID EDUARDO RADI SAGBINI\" - ID: \"77,025,796\" - Type: \"PERSONAL NATURAL\" (Natural Person) - Participation: 50.00% - Shares: 280 - Value per share: $1,000,000 Additionally: - FARID EDUARDO RADI SAGBINI is identified as \"REPRESENTANTE LEGAL\" (Legal Representative) - ZULMA OSPINO ALVAREZ is identified as \"CONTADOR\" (Accountant) Let me parse each person into the required format: ### First shareholder: - type: \"person\" - firstName: \"TANIA ELENA\" - lastName: \"CHEMAS AVENDAÑO\" - identificationType: \"C.C.\" (Colombian Citizen ID) - identificationNumber: \"32,728,993\" - relationshipType: \"Shareholder\" - participationPercentage: \"50.00\" - timeFound: \"1\" - job: \"\" ### Second shareholder: - type: \"person\" - firstName: \"FARID EDUARDO\" - lastName: \"RADI SAGBINI\" - identificationType: \"C.C.\" (Colombian Citizen ID) - identificationNumber: \"77,025,796\" - relationshipType: \"Shareholder\" - participationPercentage: \"50.00\" - timeFound: \"1\" - job: \"Representante Legal\" (since mentioned in signature section) ## Step 4: Validation & Cross-checking 1. **taxId type aligns with country**: Yes, NIT is used in Colombia 2. **identificationType matches country hash tables**: Yes, C.C. is in PERSON_ID[\"Colombia\"] 3. **Percentage conflicts**: None (both add up to 100%) 4. **All required fields present**: Yes 5. **requiresReview**: Should be \"false\" as all fields are clearly identifiable Now I'll prepare the final JSON output according to the required structure.",
+          "signature": "ErcBCkgIBxABGAIiQOzaxPP+VwZ3KWPjnEnfBUdXhdTMmX8hzxMQMcAEWRQHtPV57l80avmCeL1WZV7e+PNf8zq3C2Pkgs3foWbBNpgSDD0BaOzjEpb8519CshoMXE2tZnKaJZfjqPNgIjCCgl2kzeth+b5unji+8KZi50QnzhPrIyAEcwZ1hzR0gaAAIRI/2RHJSO1909vtsZQqHfI3TbAWx6BffHB1tAJwLjZjxTkZX5hmQNxrpsCkGAI="
+        },
+        {
+          "type": "text",
+          "text": "```json { \"result\": { \"companyName\": \"S & T INGENIERIA Y CONSULTORIA SAS\", \"documentCategory\": \"Equity Composition\", \"taxId\": \"802,013,773-0\", \"country\": \"Colombia\", \"identificationDetails\": { \"source\": \"id_analysis\", \"indicators\": [ \"NIT format\", \"C.C. identification numbers\" ], \"conflictingSources\": [], \"requiresReview\": \"false\" }, \"relatedParties\": [ { \"type\": \"person\", \"firstName\": \"TANIA ELENA\", \"lastName\": \"CHEMAS AVENDAÑO\", \"identificationType\": \"C.C.\", \"identificationNumber\": \"32.728.993\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"50.00\", \"timeFound\": \"1\", \"job\": \"\" }, { \"type\": \"person\", \"firstName\": \"FARID EDUARDO\", \"lastName\": \"RADI SAGBINI\", \"identificationType\": \"C.C.\", \"identificationNumber\": \"77.025.796\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"50.00\", \"timeFound\": \"1\", \"job\": \"Representante Legal\" } ] }, \"documentType\": \"company\", \"category\": \"ACC\" } ```"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 425,
+        "cache_creation_input_tokens": 6074,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 1437
+      }
+    },
+    "model_id": "us.anthropic.claude-3-7-sonnet-20250219-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 8000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "model_used": "us.anthropic.claude-3-7-sonnet-20250219-v1:0",
+  "api_used": "invoke_model"
+}

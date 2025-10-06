@@ -1,0 +1,87 @@
+{
+  "classification_data": {
+    "category": "CECRL",
+    "text": "REPUBLICA DE COLOMBIA IDENTIFICACION PERSONAL CEDULA DE CIUDADANIA 3.357.420 SANCHEZ DUARTE DARIO 01-AGO-1962 YONDO - CASABE YONDO (ANTIOQUIA) 1.75 O+ M 13-ABR-1991 YONDO",
+    "document_number": "3557420",
+    "path": "CECRL/3557420/3557420_2020-02-29.pdf"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "```json { \"category\": \"CECRL\", \"text\": \"REPUBLICA DE COLOMBIA\\nIDENTIFICACION PERSONAL\\nCEDULA DE CIUDADANIA\\n\\n3.357.420\\nSANCHEZ DUARTE\\n\\nDARIO\\n\\n01-AGO-1962\\nYONDO - CASABE\\nYONDO (ANTIOQUIA)\\n\\n1.75\\nO+\\nM\\n\\n13-ABR-1991 YONDO\" } ```"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 1584,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 3150,
+      "output_tokens": 670
+    },
+    "ResponseMetadata": {
+      "RequestId": "1b6a3153-fdd4-457e-86ae-1ed1f2e81e2a",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Sun, 31 Aug 2025 21:32:07 GMT",
+        "content-type": "application/json",
+        "content-length": "5056",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "1b6a3153-fdd4-457e-86ae-1ed1f2e81e2a",
+        "x-amzn-bedrock-invocation-latency": "10279",
+        "x-amzn-bedrock-cache-write-input-token-count": "0",
+        "x-amzn-bedrock-cache-read-input-token-count": "3150",
+        "x-amzn-bedrock-output-token-count": "670",
+        "x-amzn-bedrock-input-token-count": "1584"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_011VNa5rj6i57uH68K6dhFZr",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-sonnet-4-20250514",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Let me analyze this document according to the classification workflow: 1. **TEXT EXTRACTION** Looking at the document, I can extract the following text: - \"REPUBLICA DE COLOMBIA\" - \"IDENTIFICACION PERSONAL\" - \"CEDULA DE CIUDADANIA\" - Number: \"3.357.420\" - \"SANCHEZ DUARTE\" - \"DARIO\" - Birth date: \"01-AGO-1962\" - \"YONDO - CASABE\" - \"YONDO (ANTIOQUIA)\" - Height: \"1.75\" - Blood type: \"O+\" - Sex: \"M\" - \"13-ABR-1991 YONDO\" There's also a photograph of a person, a fingerprint, a signature, and a barcode. 2. **PRIORITY CHECKS** - This is not BLANK - there's substantial content - This is not LINK_ONLY - no hyperlinks or URLs redirecting elsewhere 3. **DOCUMENT FUNCTION ANALYSIS** - What is the MAIN PURPOSE of this document? This is clearly a personal identification document. - Is it a personal identification document? YES → CECRL Indicative - The document shows \"CEDULA DE CIUDADANIA\" which is a citizenship card 4. **ISSUER IDENTIFICATION** - This appears to be issued by the Colombian government (República de Colombia) - It's a government identification authority document → CECRL Indicative 5. **CATEGORY CLASSIFICATION** This document has all the essential indicators for CECRL: - Terminology: \"Cédula de ciudadanía\", \"Identificación personal\" - Personal biographical data: date of birth (01-AGO-1962), place of birth (YONDO), blood type (O+), sex (M), height (1.75) - Individual references with photograph, signature and fingerprints (all present) - Government-issued personal identification number (3.357.420) I confirm the document's authenticity through its distinctive security features and standard government identification elements. The barcode and official patterns validate its status as a genuine Colombian citizenship card.",
+          "signature": "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"
+        },
+        {
+          "type": "text",
+          "text": "```json { \"category\": \"CECRL\", \"text\": \"REPUBLICA DE COLOMBIA\\nIDENTIFICACION PERSONAL\\nCEDULA DE CIUDADANIA\\n\\n3.357.420\\nSANCHEZ DUARTE\\n\\nDARIO\\n\\n01-AGO-1962\\nYONDO - CASABE\\nYONDO (ANTIOQUIA)\\n\\n1.75\\nO+\\nM\\n\\n13-ABR-1991 YONDO\" } ```"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 1584,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 3150,
+        "output_tokens": 670
+      }
+    },
+    "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 8000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "expected_category": "CECRL",
+  "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+  "api_used": "invoke_model",
+  "pdf_info": {
+    "original_size": 168469,
+    "first_page_size": 163968,
+    "is_scanned": true
+  }
+}

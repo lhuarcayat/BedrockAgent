@@ -1,0 +1,167 @@
+{
+  "document_name": "240_CA_2020-02-29.pdf",
+  "category": "ACC",
+  "classification_success": true,
+  "extraction_success": true,
+  "overall_success": true,
+  "timestamp": "2025-08-25T01:01:56.563752",
+  "classification_result": {
+    "classification_data": {
+      "category": "ACC",
+      "text": "NewSat Obrando en mi calidad de Revisor Fiscal de NEWSAT S.A.S. NIT. 830.513.366-3 CERTIFICO QUE: He revisado los libros oficiales de contabilidad de la empresa NEWSAT S.A.S., los cuales se encuentran debidamente inscritos en la Cámara de Comercio de Bogota. Para los efectos de esta certificación he revisado información que he considerado necesaria y he seguido los procedimientos establecidos por las Normas de Auditoria Generalmente Aceptadas en Colombia. La composición accionaria de la empresa al 29 de febrero del 2024 es la siguiente: Accionistas NEWSAT S.A.S. Saldos a Feb. 29 de 2024 CC/NIT Nombre del Acionista No. de accione %. 6386024 CARLOS ENRIQUE ROSERO CERON 148,000 $1,480,000,000,00 40% 301680 SHAI BERCOVICH 148,000 $1,480,000,000,00 40% 91499446 DIEGO ALEJANDRO SALAZAR VASQUEZ 74,000 $740,000,000,00 20%. Totales 370,000 $3,700,000,000,00 100% La presente certificación se expide a solicitud de la empresa a los veinte (20) días del mes de marzo de 2024, con destino a entidades Gubernamentales y Financieras. Cordialmente, [SIGNATURE] Revisor Fiscal T.P. 153999-T CALLE 98A Nº 60 - 87 BARRIO ANDES - TELÉFONÓ +(571) 7456579 - BOGOTA D.C.",
+      "document_number": "830513366",
+      "path": "ACC/830513366/240_CA_2020-02-29.pdf"
+    },
+    "raw_response": {
+      "ResponseMetadata": {
+        "RequestId": "1ab41ae9-89da-4adf-8859-02e2d892c11f",
+        "HTTPStatusCode": 200,
+        "HTTPHeaders": {
+          "date": "Mon, 25 Aug 2025 06:02:04 GMT",
+          "content-type": "application/json",
+          "content-length": "1449",
+          "connection": "keep-alive",
+          "x-amzn-requestid": "1ab41ae9-89da-4adf-8859-02e2d892c11f"
+        },
+        "RetryAttempts": 0
+      },
+      "output": {
+        "message": {
+          "role": "assistant",
+          "content": [
+            {
+              "text": "{ \"category\": \"ACC\", \"text\": \"NewSat Obrando en mi calidad de Revisor Fiscal de NEWSAT S.A.S. NIT. 830.513.366-3 CERTIFICO QUE:\\nHe revisado los libros oficiales de contabilidad de la empresa NEWSAT S.A.S., los cuales se encuentran debidamente inscritos en la Cámara de Comercio de Bogota.\\nPara los efectos de esta certificación he revisado información que he considerado necesaria y he seguido los procedimientos establecidos por las Normas de Auditoria Generalmente Aceptadas en Colombia.\\nLa composición accionaria de la empresa al 29 de febrero del 2024 es la siguiente:\\nAccionistas NEWSAT S.A.S.\\nSaldos a Feb. 29 de 2024\\nCC/NIT Nombre del Acionista No. de accione %. 6386024 CARLOS ENRIQUE ROSERO CERON 148,000 $1,480,000,000,00 40%\\n301680 SHAI BERCOVICH 148,000 $1,480,000,000,00 40%\\n91499446 DIEGO ALEJANDRO SALAZAR VASQUEZ 74,000 $740,000,000,00 20%. Totales 370,000 $3,700,000,000,00 100%\\nLa presente certificación se expide a solicitud de la empresa a los veinte (20) días del mes\\nde marzo de 2024, con destino a entidades Gubernamentales y Financieras.\\nCordialmente, [SIGNATURE] Revisor Fiscal T.P. 153999-T CALLE 98A Nº 60 - 87 BARRIO ANDES - TELÉFONÓ +(571) 7456579 - BOGOTA D.C.\" }"
+            }
+          ]
+        }
+      },
+      "stopReason": "end_turn",
+      "usage": {
+        "inputTokens": 3128,
+        "outputTokens": 506,
+        "totalTokens": 3634
+      },
+      "metrics": {
+        "latencyMs": 7910
+      },
+      "model_id": "us.amazon.nova-pro-v1:0",
+      "api_used": "converse",
+      "model_params": {
+        "maxTokens": 8200,
+        "topP": 1,
+        "temperature": 0
+      }
+    },
+    "expected_category": "ACC",
+    "model_used": "us.amazon.nova-pro-v1:0",
+    "api_used": "converse",
+    "pdf_info": {
+      "original_size": 50688,
+      "first_page_size": 42138,
+      "is_scanned": false
+    }
+  },
+  "extraction_result": {
+    "extraction_data": {
+      "path": "ACC/830513366/240_CA_2020-02-29.pdf",
+      "result": {
+        "companyName": "NEWSAT S.A.S.",
+        "documentType": "Equity Composition",
+        "taxId": "830.513.366-3",
+        "country": "Colombia",
+        "identificationDetails": {
+          "source": "text_reference",
+          "indicators": [
+            "NIT",
+            "Colombia"
+          ],
+          "conflictingSources": [],
+          "requiresReview": false
+        },
+        "relatedParties": [
+          {
+            "firstName": "CARLOS ENRIQUE",
+            "lastName": "ROSERO CERON",
+            "identificationType": "CC",
+            "identificationNumber": "6386024",
+            "relationshipType": "Shareholder",
+            "participationPercentage": "40%",
+            "timeFound": 1,
+            "job": ""
+          },
+          {
+            "firstName": "SHAI",
+            "lastName": "BERCOVICH",
+            "identificationType": "CC",
+            "identificationNumber": "301680",
+            "relationshipType": "Shareholder",
+            "participationPercentage": "40%",
+            "timeFound": 1,
+            "job": ""
+          },
+          {
+            "firstName": "DIEGO ALEJANDRO",
+            "lastName": "SALAZAR VASQUEZ",
+            "identificationType": "CC",
+            "identificationNumber": "91499446",
+            "relationshipType": "Shareholder",
+            "participationPercentage": "20%",
+            "timeFound": 1,
+            "job": ""
+          }
+        ]
+      },
+      "document_type": "company",
+      "document_number": "830513366",
+      "category": "ACC",
+      "confidenceScores": {
+        "companyName": 95,
+        "taxId": 95,
+        "country": 98,
+        "relatedParties": 90
+      }
+    },
+    "raw_response": {
+      "ResponseMetadata": {
+        "RequestId": "b8b5ca00-8e43-4ad2-a33a-2a97b4a3f466",
+        "HTTPStatusCode": 200,
+        "HTTPHeaders": {
+          "date": "Mon, 25 Aug 2025 06:02:13 GMT",
+          "content-type": "application/json",
+          "content-length": "1927",
+          "connection": "keep-alive",
+          "x-amzn-requestid": "b8b5ca00-8e43-4ad2-a33a-2a97b4a3f466"
+        },
+        "RetryAttempts": 0
+      },
+      "output": {
+        "message": {
+          "role": "assistant",
+          "content": [
+            {
+              "text": "```json { \"path\": \"ACC/830513366/240_CA_2020-02-29.pdf\", \"result\": { \"companyName\": \"NEWSAT S.A.S.\", \"documentType\": \"Equity Composition\", \"taxId\": \"830.513.366-3\", \"country\": \"Colombia\", \"identificationDetails\": { \"source\": \"text_reference\", \"indicators\": [ \"NIT\", \"Colombia\" ], \"conflictingSources\": [], \"requiresReview\": false }, \"relatedParties\": [ { \"firstName\": \"CARLOS ENRIQUE\", \"lastName\": \"ROSERO CERON\", \"identificationType\": \"CC\", \"identificationNumber\": \"6386024\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"40%\", \"timeFound\": 1, \"job\": \"\" }, { \"firstName\": \"SHAI\", \"lastName\": \"BERCOVICH\", \"identificationType\": \"CC\", \"identificationNumber\": \"301680\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"40%\", \"timeFound\": 1, \"job\": \"\" }, { \"firstName\": \"DIEGO ALEJANDRO\", \"lastName\": \"SALAZAR VASQUEZ\", \"identificationType\": \"CC\", \"identificationNumber\": \"91499446\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"20%\", \"timeFound\": 1, \"job\": \"\" } ] }, \"document_type\": \"company\", \"document_number\": \"830513366\", \"category\": \"ACC\", \"confidenceScores\": { \"companyName\": 95, \"taxId\": 95, \"country\": 98, \"relatedParties\": 90 } } ```"
+            }
+          ]
+        }
+      },
+      "stopReason": "end_turn",
+      "usage": {
+        "inputTokens": 8569,
+        "outputTokens": 468,
+        "totalTokens": 9037
+      },
+      "metrics": {
+        "latencyMs": 8419
+      },
+      "model_id": "us.amazon.nova-pro-v1:0",
+      "api_used": "converse",
+      "model_params": {
+        "maxTokens": 8200,
+        "topP": 1,
+        "temperature": 0.1
+      }
+    },
+    "model_used": "us.amazon.nova-pro-v1:0",
+    "api_used": "converse"
+  }
+}

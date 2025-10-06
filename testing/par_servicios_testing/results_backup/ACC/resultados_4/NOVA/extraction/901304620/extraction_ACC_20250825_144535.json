@@ -1,0 +1,83 @@
+{
+  "extraction_data": {
+    "path": "ACC/901304620/237_CA_2020-02-29.pdf",
+    "result": {
+      "companyName": "PROCESS POINT COLOMBIA S.A.S.",
+      "documentType": "Equity Composition",
+      "taxId": "901.304.620-0",
+      "country": "Colombia",
+      "identificationDetails": {
+        "source": "text_reference",
+        "indicators": [
+          "Colombia",
+          "Bogotá"
+        ],
+        "conflictingSources": [],
+        "requiresReview": false
+      },
+      "relatedParties": [
+        {
+          "firstName": "Todd",
+          "lastName": "Ruderforth",
+          "identificationType": "POR REVISAR",
+          "identificationNumber": "POR REVISAR",
+          "relationshipType": "Shareholder",
+          "participationPercentage": "100%",
+          "timeFound": 1,
+          "job": ""
+        }
+      ]
+    },
+    "document_type": "company",
+    "document_number": "901304620",
+    "category": "ACC",
+    "confidenceScores": {
+      "companyName": 95,
+      "taxId": 95,
+      "country": 98,
+      "relatedParties": "<70"
+    }
+  },
+  "raw_response": {
+    "ResponseMetadata": {
+      "RequestId": "6c32f220-0b3e-4b23-8a54-8a43cb8314d7",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Mon, 25 Aug 2025 19:45:34 GMT",
+        "content-type": "application/json",
+        "content-length": "1287",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "6c32f220-0b3e-4b23-8a54-8a43cb8314d7"
+      },
+      "RetryAttempts": 0
+    },
+    "output": {
+      "message": {
+        "role": "assistant",
+        "content": [
+          {
+            "text": "```json { \"path\": \"ACC/901304620/237_CA_2020-02-29.pdf\", \"result\": { \"companyName\": \"PROCESS POINT COLOMBIA S.A.S.\", \"documentType\": \"Equity Composition\", \"taxId\": \"901.304.620-0\", \"country\": \"Colombia\", \"identificationDetails\": { \"source\": \"text_reference\", \"indicators\": [ \"Colombia\", \"Bogotá\" ], \"conflictingSources\": [], \"requiresReview\": false }, \"relatedParties\": [ { \"firstName\": \"Todd\", \"lastName\": \"Ruderforth\", \"identificationType\": \"POR REVISAR\", \"identificationNumber\": \"POR REVISAR\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"100%\", \"timeFound\": 1, \"job\": \"\" } ] }, \"document_type\": \"company\", \"document_number\": \"901304620\", \"category\": \"ACC\", \"confidenceScores\": { \"companyName\": 95, \"taxId\": 95, \"country\": 98, \"relatedParties\": \"<70\" } } ```"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "inputTokens": 8701,
+      "outputTokens": 314,
+      "totalTokens": 9015
+    },
+    "metrics": {
+      "latencyMs": 6905
+    },
+    "model_id": "us.amazon.nova-pro-v1:0",
+    "api_used": "converse",
+    "model_params": {
+      "maxTokens": 8000,
+      "topP": 1,
+      "temperature": 0
+    }
+  },
+  "model_used": "us.amazon.nova-pro-v1:0",
+  "api_used": "converse"
+}

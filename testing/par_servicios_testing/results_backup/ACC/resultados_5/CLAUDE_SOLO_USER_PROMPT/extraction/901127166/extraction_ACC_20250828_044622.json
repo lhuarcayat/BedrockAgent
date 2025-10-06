@@ -1,0 +1,109 @@
+{
+  "extraction_data": {
+    "path": "ACC/901127166/169_CA_2020-02-29.pdf",
+    "result": {
+      "companyName": "TRITON LOGISTICA Y CONSTRUCCIONES SAS",
+      "documentCategory": "Equity Composition",
+      "taxId": "901.127.166-9",
+      "country": "Colombia",
+      "identificationDetails": {
+        "source": "id_analysis",
+        "indicators": [
+          "NIT tax ID format (Colombia)",
+          "Spanish language document"
+        ],
+        "conflictingSources": [],
+        "requiresReview": "false"
+      },
+      "relatedParties": [
+        {
+          "type": "person",
+          "firstName": "ERNESTO JOSE",
+          "lastName": "CHALELA MARTINEZ",
+          "identificationType": "C.C.",
+          "identificationNumber": "9,287,800",
+          "relationshipType": "Shareholder",
+          "participationPercentage": "100",
+          "timeFound": "1",
+          "job": "Representante Legal"
+        }
+      ]
+    },
+    "documentType": "company",
+    "documentNumber": "901127166",
+    "category": "ACC"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "```json { \"result\": { \"companyName\": \"TRITON LOGISTICA Y CONSTRUCCIONES SAS\", \"documentCategory\": \"Equity Composition\", \"taxId\": \"901.127.166-9\", \"country\": \"Colombia\", \"identificationDetails\": { \"source\": \"id_analysis\", \"indicators\": [ \"NIT tax ID format (Colombia)\", \"Spanish language document\" ], \"conflictingSources\": [], \"requiresReview\": \"false\" }, \"relatedParties\": [ { \"type\": \"person\", \"firstName\": \"ERNESTO JOSE\", \"lastName\": \"CHALELA MARTINEZ\", \"identificationType\": \"C.C.\", \"identificationNumber\": \"9,287,800\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"100\", \"timeFound\": \"1\", \"job\": \"Representante Legal\" } ] }, \"documentType\": \"company\", \"category\": \"ACC\" } ```"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 9,
+      "cache_creation_input_tokens": 6291,
+      "cache_read_input_tokens": 0,
+      "output_tokens": 1549
+    },
+    "ResponseMetadata": {
+      "RequestId": "8d440695-69be-401c-b989-76da36e0f065",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Thu, 28 Aug 2025 09:46:22 GMT",
+        "content-type": "application/json",
+        "content-length": "6214",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "8d440695-69be-401c-b989-76da36e0f065",
+        "x-amzn-bedrock-invocation-latency": "33448",
+        "x-amzn-bedrock-cache-write-input-token-count": "6291",
+        "x-amzn-bedrock-cache-read-input-token-count": "0",
+        "x-amzn-bedrock-output-token-count": "1549",
+        "x-amzn-bedrock-input-token-count": "9"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_01RJxG2n5RJM4TYjrYE6TT3S",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-3-7-sonnet-20250219",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Let me analyze this document and extract the structured data following the provided field rules, workflow, and validation requirements. Step 1: Document Analysis - This appears to be an equity composition document (\"COMPOSICION ACCIONARIA\") for a Colombian company - The main reporting company is \"TRITON LOGISTICA Y CONSTRUCCIONES SAS\" - It has a tax ID (NIT) of 901.127.166-9 - The document is dated January 23, 2020 (\"FECHA: 23 ENERO DEL 2020\") - The document is in Spanish, which aligns with the Colombian origin Step 2: Root Level Extraction - companyName: \"TRITON LOGISTICA Y CONSTRUCCIONES SAS\" - documentCategory: \"Equity Composition\" (as required) - taxId: \"901.127.166 - 9\" (preserving the formatting as it appears in the document) - country: \"Colombia\" (inferred from the \"NIT\" tax ID type, which is Colombia's tax identifier) - identificationDetails: Will build this based on the evidence found Step 3: Related Parties Processing - There appears to be only one shareholder: \"ERNESTO JOSE CHALELA MARTINEZ\" - This is a person (no company markers) with ID number 9,287,800 - He owns 5,000 shares with a nominal value of 10,000 each and a total value of 50,000,000 - His participation percentage is 100% - He is also listed as the \"REPRESENTANTE LEGAL\" (legal representative) Step 4: Validation & Cross-checking - The tax ID format (NIT) aligns with Colombia - The person's identification appears to be a Colombian citizen ID (C.C.) - The participation percentage adds up to 100% - All required fields are present Now let me build the JSON output: ```json { \"result\": { \"companyName\": \"TRITON LOGISTICA Y CONSTRUCCIONES SAS\", \"documentCategory\": \"Equity Composition\", \"taxId\": \"901.127.166 - 9\", \"country\": \"Colombia\", \"identificationDetails\": { \"source\": \"id_analysis\", \"indicators\": [ \"NIT tax ID format (Colombia)\", \"Spanish language document\" ], \"conflictingSources\": [], \"requiresReview\": \"false\" }, \"relatedParties\": [ { \"type\": \"person\", \"firstName\": \"ERNESTO JOSE\", \"lastName\": \"CHALELA MARTINEZ\", \"identificationType\": \"C.C.\", \"identificationNumber\": \"9,287,800\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"100\", \"timeFound\": \"1\", \"job\": \"Representante Legal\" } ] }, \"documentType\": \"company\", \"category\": \"ACC\" } ``` Wait, I need to double check a few things: 1. The tax ID format appears as \"901.127.166 - 9\" in the document, but let me normalize this to match the expected Colombian NIT format (XXX.XXX.XXX-X). The correct format would be \"901.127.166-9\" (removing the spaces around the hyphen). 2. Let me double-check the identification number format for the shareholder. It's shown as \"9,287,800\" which could be written as \"9.287.800\" in Colombian format. According to the colombian_id_type_rules, after removing dots, it would be \"9287800\" which matches the C.C. pattern /^[1-9][0-9]{3,9}$/. Let me revise the JSON: ```json { \"result\": { \"companyName\": \"TRITON LOGISTICA Y CONSTRUCCIONES SAS\", \"documentCategory\": \"Equity Composition\", \"taxId\": \"901.127.166-9\", \"country\": \"Colombia\", \"identificationDetails\": { \"source\": \"id_analysis\", \"indicators\": [ \"NIT tax ID format (Colombia)\", \"Spanish language document\" ], \"conflictingSources\": [], \"requiresReview\": \"false\" }, \"relatedParties\": [ { \"type\": \"person\", \"firstName\": \"ERNESTO JOSE\", \"lastName\": \"CHALELA MARTINEZ\", \"identificationType\": \"C.C.\", \"identificationNumber\": \"9,287,800\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"100\", \"timeFound\": \"1\", \"job\": \"Representante Legal\" } ] }, \"documentType\": \"company\", \"category\": \"ACC\" } ``` Final review: - All required fields are present - The taxId format is corrected to match Colombian standards - The identificationType for the person is correctly set to C.C. (Colombian citizen ID) - The document doesn't appear to contain any conflicts that would require review - All field formats match the expected schema This appears to be the correct structured extraction of the document data.",
+          "signature": "ErcBCkgIBxABGAIiQNRUdG3Gj8TwDPIC4Y7QiswQbVuqOjtEwJWV4XvpTjgQre8WZKyvVtBOZ3T9opg3xTWewIcp3CSvXCsCAFeLc9wSDOhXMhK8T5vK9FrH0BoM2unpawST9xFrTq+6IjCI2zdx3bpa7yzIdWkpMPHfGUr6mdXIQE6t+BrbxheNhoPGFVS99p4SJbiUBEViwLYqHWOqKTpVbKw0nmnK4BetgIvsRsaRGq+AhBs8n7qqGAI="
+        },
+        {
+          "type": "text",
+          "text": "```json { \"result\": { \"companyName\": \"TRITON LOGISTICA Y CONSTRUCCIONES SAS\", \"documentCategory\": \"Equity Composition\", \"taxId\": \"901.127.166-9\", \"country\": \"Colombia\", \"identificationDetails\": { \"source\": \"id_analysis\", \"indicators\": [ \"NIT tax ID format (Colombia)\", \"Spanish language document\" ], \"conflictingSources\": [], \"requiresReview\": \"false\" }, \"relatedParties\": [ { \"type\": \"person\", \"firstName\": \"ERNESTO JOSE\", \"lastName\": \"CHALELA MARTINEZ\", \"identificationType\": \"C.C.\", \"identificationNumber\": \"9,287,800\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"100\", \"timeFound\": \"1\", \"job\": \"Representante Legal\" } ] }, \"documentType\": \"company\", \"category\": \"ACC\" } ```"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 9,
+        "cache_creation_input_tokens": 6291,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 1549
+      }
+    },
+    "model_id": "us.anthropic.claude-3-7-sonnet-20250219-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 8000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "model_used": "us.anthropic.claude-3-7-sonnet-20250219-v1:0",
+  "api_used": "invoke_model"
+}

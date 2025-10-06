@@ -1,0 +1,87 @@
+{
+  "classification_data": {
+    "category": "CECRL",
+    "text": "REPUBLICA DE COLOMBIA IDENTIFICACION PERSONAL CEDULA DE CIUDADANIA NUMERO 72.252.799 QUIÑONES MORALES APELLIDOS ALFONSO ANGEL NOMBRES FIRMA FECHA DE NACIMIENTO 16-JUN-1979 SANTO TOMAS (ATLANTICO) LUGAR DE NACIMIENTO 1.83 A+ M ESTATURA G.S. RH SEXO 23-NOV-1998 BARRANQUILLA FECHA Y LUGAR DE EXPEDICION REGISTRADOR NACIONAL CARLOS ANGEL SANCHEZ TORRES INDICE DERECHO A 0300100-00126242-M-0072252799-20081109 0005637043A1 337001865I",
+    "document_number": "72252799",
+    "path": "CECRL/72252799/cedula_alfonso_quinones.pdf"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "```json { \"category\": \"CECRL\", \"text\": \"REPUBLICA DE COLOMBIA IDENTIFICACION PERSONAL CEDULA DE CIUDADANIA NUMERO 72.252.799 QUIÑONES MORALES APELLIDOS ALFONSO ANGEL NOMBRES FIRMA FECHA DE NACIMIENTO 16-JUN-1979 SANTO TOMAS (ATLANTICO) LUGAR DE NACIMIENTO 1.83 A+ M ESTATURA G.S. RH SEXO 23-NOV-1998 BARRANQUILLA FECHA Y LUGAR DE EXPEDICION REGISTRADOR NACIONAL CARLOS ANGEL SANCHEZ TORRES INDICE DERECHO A 0300100-00126242-M-0072252799-20081109 0005637043A1 337001865I\" } ```"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 9,
+      "cache_creation_input_tokens": 4753,
+      "cache_read_input_tokens": 0,
+      "output_tokens": 739
+    },
+    "ResponseMetadata": {
+      "RequestId": "a517152e-7829-43bf-bb27-caf70a9ce650",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Fri, 29 Aug 2025 22:49:50 GMT",
+        "content-type": "application/json",
+        "content-length": "5194",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "a517152e-7829-43bf-bb27-caf70a9ce650",
+        "x-amzn-bedrock-invocation-latency": "15390",
+        "x-amzn-bedrock-cache-write-input-token-count": "4753",
+        "x-amzn-bedrock-cache-read-input-token-count": "0",
+        "x-amzn-bedrock-output-token-count": "739",
+        "x-amzn-bedrock-input-token-count": "9"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_01Hz4QbBeCbPW8yp9EDXrXdX",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-sonnet-4-20250514",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Looking at the document, I can see it's a personal identification document from Colombia with the following text: From the front side: - \"REPUBLICA DE COLOMBIA\" - \"IDENTIFICACION PERSONAL\" - \"CEDULA DE CIUDADANIA\" - \"NUMERO 72.252.799\" - \"QUIÑONES MORALES\" - \"APELLIDOS\" - \"ALFONSO ANGEL\" - \"NOMBRES\" - There's a signature line marked \"FIRMA\" - There's a photo of a person From the back side: - \"FECHA DE NACIMIENTO 16-JUN-1979\" - \"SANTO TOMAS (ATLANTICO)\" - \"LUGAR DE NACIMIENTO\" - \"1.83 A+ M\" - \"ESTATURA G.S. RH SEXO\" - \"23-NOV-1998 BARRANQUILLA\" - \"FECHA Y LUGAR DE EXPEDICION\" - There's a fingerprint - \"INDICE DERECHO\" - Various security codes and numbers at the bottom This is clearly a Colombian national identity card (Cédula de Ciudadania). Following the classification workflow: 1. **TEXT EXTRACTION**: I can extract meaningful text from both sides of the document. 2. **PRIORITY CHECKS**: This is not blank or link-only. 3. **DOCUMENT FUNCTION ANALYSIS**: The primary purpose is personal identification of an individual. It contains biographical data, photo, fingerprint, signature area, birth information, etc. 4. **ISSUER IDENTIFICATION**: This is issued by the Colombian government identification authority. 5. **CATEGORY CLASSIFICATION**: This clearly falls under CECRL - it's an official personal identification document with: - Individual identification terminology: \"CEDULA DE CIUDADANIA\", \"IDENTIFICACION PERSONAL\" - Personal biographical data: birth date (16-JUN-1979), birth place (SANTO TOMAS), gender (M), blood type (A+), height (1.83)",
+          "signature": "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"
+        },
+        {
+          "type": "text",
+          "text": "```json { \"category\": \"CECRL\", \"text\": \"REPUBLICA DE COLOMBIA IDENTIFICACION PERSONAL CEDULA DE CIUDADANIA NUMERO 72.252.799 QUIÑONES MORALES APELLIDOS ALFONSO ANGEL NOMBRES FIRMA FECHA DE NACIMIENTO 16-JUN-1979 SANTO TOMAS (ATLANTICO) LUGAR DE NACIMIENTO 1.83 A+ M ESTATURA G.S. RH SEXO 23-NOV-1998 BARRANQUILLA FECHA Y LUGAR DE EXPEDICION REGISTRADOR NACIONAL CARLOS ANGEL SANCHEZ TORRES INDICE DERECHO A 0300100-00126242-M-0072252799-20081109 0005637043A1 337001865I\" } ```"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 9,
+        "cache_creation_input_tokens": 4753,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 739
+      }
+    },
+    "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 8000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "expected_category": "CECRL",
+  "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+  "api_used": "invoke_model",
+  "pdf_info": {
+    "original_size": 107312,
+    "first_page_size": 102352,
+    "is_scanned": true
+  }
+}

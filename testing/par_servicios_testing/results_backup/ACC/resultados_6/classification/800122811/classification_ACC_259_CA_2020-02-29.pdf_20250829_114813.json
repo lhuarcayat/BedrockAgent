@@ -1,0 +1,87 @@
+{
+  "classification_data": {
+    "category": "ACC",
+    "text": "EL SUSCRITO REVISOR FISCAL DE LA SOCIEDAD COTEL S.A.S NIT .800.122.811-2 CERTIFICA QUE: De acuerdo con el Acta No. 063 de la Asamblea General Ordinaria de Accionistas de Cotel S.A.S de fecha marzo 29 de 2022, la nueva composición accionaria quedó registrada así: Accionista | Documento Identificación | No. de Acciones | % de Participación James Herney Quijano Morán | 16.758.096 | 5.740.000.000 | 82% María del Pilar Zuluaga Marín | 66.901.361 | 700.000.000 | 10% Nicolle Dayana Quijano Zuluaga | 1.107.089.788 | 210.000.000 | 3% Juan Pablo Quijano Zuluaga | 1.144.109.912 | 210.000.000 | 3% Cotel S.A.S | 800.122.811-2 | 140.000.000 | 2% Total | | 7.000.000.000 | 100% La nueva composición accionaria fue registrada en los libros contables, así mismo fue actualizado el libro de Registro de Accionistas. La presente certificación se expide en Santiago de Cali a los cinco (05) días del mes de febrero de 2024. Gustavo Adolfo Luna Salazar Revisor Fiscal TP No. 77391-T Miembro de Bloodhound Consulting Group SAS www.cotel.com.co",
+    "document_number": "800122811",
+    "path": "ACC/800122811/259_CA_2020-02-29.pdf"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "```json { \"category\": \"ACC\", \"text\": \"EL SUSCRITO REVISOR FISCAL DE LA SOCIEDAD COTEL S.A.S\\nNIT .800.122.811-2\\n\\nCERTIFICA QUE:\\n\\nDe acuerdo con el Acta No. 063 de la Asamblea General Ordinaria de Accionistas de Cotel S.A.S de fecha marzo 29 de 2022, la nueva composición accionaria quedó registrada así:\\n\\nAccionista | Documento Identificación | No. de Acciones | % de Participación\\nJames Herney Quijano Morán | 16.758.096 | 5.740.000.000 | 82%\\nMaría del Pilar Zuluaga Marín | 66.901.361 | 700.000.000 | 10%\\nNicolle Dayana Quijano Zuluaga | 1.107.089.788 | 210.000.000 | 3%\\nJuan Pablo Quijano Zuluaga | 1.144.109.912 | 210.000.000 | 3%\\nCotel S.A.S | 800.122.811-2 | 140.000.000 | 2%\\nTotal | | 7.000.000.000 | 100%\\n\\nLa nueva composición accionaria fue registrada en los libros contables, así mismo fue actualizado el libro de Registro de Accionistas.\\n\\nLa presente certificación se expide en Santiago de Cali a los cinco (05) días del mes de febrero de 2024.\\n\\nGustavo Adolfo Luna Salazar\\nRevisor Fiscal\\nTP No. 77391-T\\nMiembro de Bloodhound Consulting Group SAS\\n\\nwww.cotel.com.co\" } ```"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 9,
+      "cache_creation_input_tokens": 4549,
+      "cache_read_input_tokens": 0,
+      "output_tokens": 1416
+    },
+    "ResponseMetadata": {
+      "RequestId": "fe24c1e3-ff9e-47f6-9f41-a984dffbb83a",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Fri, 29 Aug 2025 16:47:55 GMT",
+        "content-type": "application/json",
+        "content-length": "8369",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "fe24c1e3-ff9e-47f6-9f41-a984dffbb83a",
+        "x-amzn-bedrock-invocation-latency": "20513",
+        "x-amzn-bedrock-cache-write-input-token-count": "4549",
+        "x-amzn-bedrock-cache-read-input-token-count": "0",
+        "x-amzn-bedrock-output-token-count": "1416",
+        "x-amzn-bedrock-input-token-count": "9"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_019ykbHYnfGcRKRWBPxLg8R5",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-sonnet-4-20250514",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Let me analyze this PDF document step by step according to the classification workflow: ## 1. TEXT EXTRACTION The document contains: - Header: \"EL SUSCRITO REVISOR FISCAL DE LA SOCIEDAD COTEL S.A.S NIT .800.122.811-2\" - \"CERTIFICA QUE:\" - Information about an act from March 29, 2022 regarding shareholding composition - A table showing: - Accionista (Shareholder) | Documento Identificación | No. de Acciones | % de Participación - James Herney Quijano Morán | 16.758.096 | 5.740.000.000 | 82% - María del Pilar Zuluaga Marín | 66.901.361 | 700.000.000 | 10% - Nicolle Dayana Quijano Zuluaga | 1.107.089.788 | 210.000.000 | 3% - Juan Pablo Quijano Zuluaga | 1.144.109.912 | 210.000.000 | 3% - Cotel S.A.S | 800.122.811-2 | 140.000.000 | 2% - Total | | 7.000.000.000 | 100% - Information about the composition being registered in books - Date and location: Santiago de Cali, February 5, 2024 - Signed by: Gustavo Adolfo Luna Salazar, Revisor Fiscal, with professional license and company membership ## 2. PRIORITY CHECKS - Not BLANK - contains meaningful content - Not LINK_ONLY - no hyperlinks/URLs as primary content ## 3. ISSUER IDENTIFICATION - This is issued by a \"Revisor Fiscal\" (Tax Auditor) of COTEL S.A.S - It's a corporate entity certification, not from DIAN or Chamber of Commerce ## 4. DOCUMENT FUNCTION ANALYSIS I recognize this as a detailed shareholding certification. The document precisely captures the ownership structure, breaking down individual and corporate shareholders' stakes. It provides a comprehensive view of the company's equity distribution, highlighting the significant majority ownership by James Herney Quijano Morán at 82%. The certification serves as an official record of the company's current shareholding composition. The document demonstrates key characteristics of a legal ownership certification: - Precise shareholder identification - Exact share quantities - Percentage ownership calculations - Official corporate validation ## 5. CATEGORY CLASSIFICATION Analyzing potential document categories reveals the ACC classification as the most appropriate match. The document contains clear shareholder details, ownership percentages, and an official certification, aligning perfectly with the Accionista (Shareholder) Composition category.",
+          "signature": "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"
+        },
+        {
+          "type": "text",
+          "text": "```json { \"category\": \"ACC\", \"text\": \"EL SUSCRITO REVISOR FISCAL DE LA SOCIEDAD COTEL S.A.S\\nNIT .800.122.811-2\\n\\nCERTIFICA QUE:\\n\\nDe acuerdo con el Acta No. 063 de la Asamblea General Ordinaria de Accionistas de Cotel S.A.S de fecha marzo 29 de 2022, la nueva composición accionaria quedó registrada así:\\n\\nAccionista | Documento Identificación | No. de Acciones | % de Participación\\nJames Herney Quijano Morán | 16.758.096 | 5.740.000.000 | 82%\\nMaría del Pilar Zuluaga Marín | 66.901.361 | 700.000.000 | 10%\\nNicolle Dayana Quijano Zuluaga | 1.107.089.788 | 210.000.000 | 3%\\nJuan Pablo Quijano Zuluaga | 1.144.109.912 | 210.000.000 | 3%\\nCotel S.A.S | 800.122.811-2 | 140.000.000 | 2%\\nTotal | | 7.000.000.000 | 100%\\n\\nLa nueva composición accionaria fue registrada en los libros contables, así mismo fue actualizado el libro de Registro de Accionistas.\\n\\nLa presente certificación se expide en Santiago de Cali a los cinco (05) días del mes de febrero de 2024.\\n\\nGustavo Adolfo Luna Salazar\\nRevisor Fiscal\\nTP No. 77391-T\\nMiembro de Bloodhound Consulting Group SAS\\n\\nwww.cotel.com.co\" } ```"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 9,
+        "cache_creation_input_tokens": 4549,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 1416
+      }
+    },
+    "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 8000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "expected_category": "ACC",
+  "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+  "api_used": "invoke_model",
+  "pdf_info": {
+    "original_size": 250434,
+    "first_page_size": 250244,
+    "is_scanned": true
+  }
+}

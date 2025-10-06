@@ -1,0 +1,18 @@
+Please process the following PDF and extract the company data according to the ACC schema:
+
+- PDF to process: `$pdf_path`
+- Classification metadata:
+  - document_number: `$document_number`
+  - document_type: `$document_type`
+  - category: `$category`
+
+**Expected output:**
+Save a JSON file at `ACC/{document_number}/ACC_{document_number}.json` with this exact structure:
+
+{
+  "path": "$pdf_path",
+  "result": { {/* fields as defined by schema.json */ }},
+  "document_type": "$document_type",
+  "document_number": "$document_number",
+  "category": "$category"
+}

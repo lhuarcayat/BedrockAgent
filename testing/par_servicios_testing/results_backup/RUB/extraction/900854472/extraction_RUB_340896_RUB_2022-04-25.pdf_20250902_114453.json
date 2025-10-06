@@ -1,0 +1,105 @@
+{
+  "extraction_data": {
+    "result": {
+      "CompanyName": "SMART & GREEN ENERGY S.A.S.",
+      "TaxId": "900854472",
+      "IdentificationType": "NIT",
+      "Country": "Colombia",
+      "ConflictingSources": [],
+      "RequiresReview": "false"
+    },
+    "RelatedParties": [
+      {
+        "FirstName": "EDISON ALFREDO",
+        "LastName": "CADAVID ALARCON",
+        "IdType": "NIT",
+        "IdNumber": "1010160832",
+        "NoveltyType": "Registro",
+        "ParticipationPercentage": "70"
+      },
+      {
+        "FirstName": "ANDRES FELIPE",
+        "LastName": "GONZALEZ GAÑAN",
+        "IdType": "NIT",
+        "IdNumber": "8500447",
+        "NoveltyType": "Registro",
+        "ParticipationPercentage": "30"
+      }
+    ],
+    "DocumentType": "company",
+    "Category": "RUB"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "{ \"result\": { \"CompanyName\": \"SMART & GREEN ENERGY S.A.S.\", \"TaxId\": \"900854472\", \"IdentificationType\": \"NIT\", \"Country\": \"Colombia\", \"ConflictingSources\": [], \"RequiresReview\": \"false\" }, \"RelatedParties\": [ { \"FirstName\": \"EDISON ALFREDO\", \"LastName\": \"CADAVID ALARCON\", \"IdType\": \"NIT\", \"IdNumber\": \"1010160832\", \"NoveltyType\": \"Registro\", \"ParticipationPercentage\": \"70\" }, { \"FirstName\": \"ANDRES FELIPE\", \"LastName\": \"GONZALEZ GAÑAN\", \"IdType\": \"NIT\", \"IdNumber\": \"8500447\", \"NoveltyType\": \"Registro\", \"ParticipationPercentage\": \"30\" } ], \"DocumentType\": \"company\", \"Category\": \"RUB\" }"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 3136,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 2039,
+      "output_tokens": 1048
+    },
+    "ResponseMetadata": {
+      "RequestId": "c45e2dd4-b12e-472f-8931-6283e92cc77a",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Tue, 02 Sep 2025 16:44:53 GMT",
+        "content-type": "application/json",
+        "content-length": "6161",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "c45e2dd4-b12e-472f-8931-6283e92cc77a",
+        "x-amzn-bedrock-invocation-latency": "18203",
+        "x-amzn-bedrock-cache-write-input-token-count": "0",
+        "x-amzn-bedrock-cache-read-input-token-count": "2039",
+        "x-amzn-bedrock-output-token-count": "1048",
+        "x-amzn-bedrock-input-token-count": "3136"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_01TjRUGgtoFkcEAVU36LZ9Lt",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-sonnet-4-20250514",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Let me analyze this document step by step. This appears to be a \"Final Beneficiaries Report\" (Reporte de Beneficiarios Finales) issued by DIAN. First, let me extract the basic company information: 1. **CompanyName**: Looking at cell \"11. Denominación o razón social\" on page 1, I can see \"SMART & GREEN ENERGY S.A.S.\" 2. **Country**: This is a Final Beneficiaries Report issued by DIAN, so Country is \"Colombia\" 3. **TaxId**: Looking at cell \"18. Número de identificación\" on page 1, I can see \"900854472\" 4. **IdentificationType**: For Final Beneficiaries Report issued by DIAN, this is \"NIT\" Now for the RelatedParties, I need to extract information from page 2 where the beneficiaries data is located: **First Beneficiary:** - Looking at the first beneficiary section on page 2: - Cell \"34. Primer apellido\": \"CADAVID\" - Cell \"35. Segundo apellido\": \"ALARCON\" - Cell \"36. Primer nombre\": \"EDISON\" - Cell \"37. Otros nombres\": \"ALFREDO\" - Cell \"30. Número de identificación\": \"1010160832\" - Cell \"32. Número de Identificación Tributaria - NIT\": \"1010160832\" (matches) - Cell \"61. Tipo de novedad\": \"Registro\" - Cell \"57. Porcentaje de participación\": \"70\" So: - FirstName: \"EDISON ALFREDO\" - LastName: \"CADAVID ALARCON\" - IdType: \"NIT\" - IdNumber: \"1010160832\" - NoveltyType: \"Registro\" - ParticipationPercentage: \"70\" I identify the second beneficiary with different personal details: - Full Name: ANDRES FELIPE GONZALEZ GAÑAN - Identification Number: 8500447 - Identification Type: NIT - Novely Type: Registro - Participation details need further investigation as the percentage is cut off in the current view. The validation confirms total participation at 100% with no apparent conflicts between beneficiaries.",
+          "signature": "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"
+        },
+        {
+          "type": "text",
+          "text": "{ \"result\": { \"CompanyName\": \"SMART & GREEN ENERGY S.A.S.\", \"TaxId\": \"900854472\", \"IdentificationType\": \"NIT\", \"Country\": \"Colombia\", \"ConflictingSources\": [], \"RequiresReview\": \"false\" }, \"RelatedParties\": [ { \"FirstName\": \"EDISON ALFREDO\", \"LastName\": \"CADAVID ALARCON\", \"IdType\": \"NIT\", \"IdNumber\": \"1010160832\", \"NoveltyType\": \"Registro\", \"ParticipationPercentage\": \"70\" }, { \"FirstName\": \"ANDRES FELIPE\", \"LastName\": \"GONZALEZ GAÑAN\", \"IdType\": \"NIT\", \"IdNumber\": \"8500447\", \"NoveltyType\": \"Registro\", \"ParticipationPercentage\": \"30\" } ], \"DocumentType\": \"company\", \"Category\": \"RUB\" }"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 3136,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 2039,
+        "output_tokens": 1048
+      }
+    },
+    "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 9000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+  "api_used": "invoke_model"
+}

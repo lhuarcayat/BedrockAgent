@@ -1,0 +1,33 @@
+{
+  "ResponseMetadata": {
+    "RequestId": "3d015016-ec13-4556-83a6-01c46495bedf",
+    "HTTPStatusCode": 200,
+    "HTTPHeaders": {
+      "date": "Thu, 05 Jun 2025 03:11:38 GMT",
+      "content-type": "application/json",
+      "content-length": "3530",
+      "connection": "keep-alive",
+      "x-amzn-requestid": "3d015016-ec13-4556-83a6-01c46495bedf"
+    },
+    "RetryAttempts": 0
+  },
+  "output": {
+    "message": {
+      "role": "assistant",
+      "content": [
+        {
+          "text": "1. **Document Analysis**:\n   - The document provided is a RUT (Registro Único Tributario) document issued by DIAN in Colombia.\n   - The document contains multiple pages, but the essential information for extraction is present in the first few pages.\n\n2. **Page Count Determination**:\n   - The document structure indicates multiple pages, but the key information for extraction (company details, tax ID, verification digit, person type, address, and generation date) is found within the first few pages.\n\n3. **Company Information Extraction**:\n   - **companyName**: \"FARMACIA INSTITUCIONAL S A S\"\n     - Extracted directly from the document.\n   - **documentType**: \"NIT\"\n     - Inferenced from the document context and Colombian document types.\n   - **taxId**: \"14699744621\"\n     - Extracted directly from the document.\n   - **verificationDigit**: \"9\"\n     - Extracted directly after the tax ID.\n   - **personType**: \"Persona Jurídica\"\n     - Extracted directly from the document.\n\n4. **Country Determination**:\n   - **country**: \"COLOMBIA\"\n     - Directly mentioned in the document.\n\n5. **Address Composition**:\n   - **address**: \"TV 93  53   32 IN 9\"\n     - Extracted directly, but it seems there might be more detailed address information available in other sections or pages.\n\n6. **Document Generation Date**:\n   - **documentGenerationDate**: \"2021-02-08\"\n     - Extracted from the document.\n\n7. **Related Parties Handling**:\n   - Multiple related parties are listed across different pages, including representatives and other associated individuals or companies.\n     - Extracted with details such as names, identification types, identification numbers, and relationship types.\n\n8. **Validation and Confidence Scoring**:\n   - All extracted fields will be validated against the provided schema.\n   - Confidence scores will be assigned based on the extraction certainty.\n\n### Final JSON Output:\n\n```json\n{\n  \"companyName\": \"FARMACIA INSTITUCIONAL S A S\",\n  \"country\": \"COLOMBIA\",\n  \"documentType\": \"NIT\",\n  \"taxId\": \"14699744621\",\n  \"verificationDigit\": \"9\",\n  \"personType\": \"Persona Jurídica\",\n  \"relatedParties\": [\n    {\n      \"identificationType\": \"Cédula de Ciudadanía\",\n      \"identificationNumber\": \"1380230151\",\n      \"relationshipType\": \"REPRS LEGAL PRIN\",\n      \"firstName\": \"TOVAR\",\n      \"lastName\": \"OSORIO LEON ALEXANDER\"\n    },\n    {\n      \"identificationType\": \"Cédula de Ciudadanía\",\n      \"identificationNumber\": \"5205335354\",\n      \"relationshipType\": \"REPRS LEGAL SUPL\",\n      \"firstName\": \"OLGA LUCIA\",\n      \"lastName\": \"RUGE TOVAR\"\n    },\n    {\n      \"identificationType\": \"Cédula de Ciudadanía\",\n      \"identificationNumber\": \"79474741\",\n      \"relationshipType\": \"Contador\",\n      \"firstName\": \"MARIA DEL CARMEN\",\n      \"lastName\": \"VALDERRAMA ESQUIVEL WILIAN ANDRES\"\n    },\n    {\n      \"identificationType\": \"Cédula de Ciudadanía\",\n      \"identificationNumber\": \"1379663905\",\n      \"relationshipType\": \"Revisor Fiscal Principal\",\n      \"firstName\": \"MILCIADES\",\n      \"lastName\": \"TAPIAS MENDIETA\"\n    }\n  ],\n  \"address\": \"TV 93  53   32 IN 9\",\n  \"documentGenerationDate\": \"2021-02-08\"\n}\n```"
+        }
+      ]
+    }
+  },
+  "stopReason": "end_turn",
+  "usage": {
+    "inputTokens": 10553,
+    "outputTokens": 787,
+    "totalTokens": 11340
+  },
+  "metrics": {
+    "latencyMs": 7156
+  }
+}

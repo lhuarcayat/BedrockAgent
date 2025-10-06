@@ -1,0 +1,97 @@
+{
+  "extraction_data": {
+    "result": {
+      "CompanyName": "EM CONSULTORIA & CONSTRUCCION SAS",
+      "TaxId": "901363538-6",
+      "IdentificationType": "NIT",
+      "Country": "Colombia",
+      "ConflictingSources": [],
+      "RequiresReview": "false"
+    },
+    "RelatedParties": [
+      {
+        "FirstName": "EDWIN ANDRES",
+        "LastName": "MORA PORTILLA",
+        "IdType": "NIT",
+        "IdNumber": "87070211",
+        "NoveltyType": "Actualización",
+        "ParticipationPercentage": "100"
+      }
+    ],
+    "DocumentType": "company",
+    "Category": "RUB"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "{ \"result\": { \"CompanyName\": \"EM CONSULTORIA & CONSTRUCCION SAS\", \"TaxId\": \"901363538-6\", \"IdentificationType\": \"NIT\", \"Country\": \"Colombia\", \"ConflictingSources\": [], \"RequiresReview\": \"false\" }, \"RelatedParties\": [ { \"FirstName\": \"EDWIN ANDRES\", \"LastName\": \"MORA PORTILLA\", \"IdType\": \"NIT\", \"IdNumber\": \"87070211\", \"NoveltyType\": \"Actualización\", \"ParticipationPercentage\": \"100\" } ], \"DocumentType\": \"company\", \"Category\": \"RUB\" }"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 4814,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 2039,
+      "output_tokens": 737
+    },
+    "ResponseMetadata": {
+      "RequestId": "3ba119db-3d62-413a-89d3-22b585cee9de",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Tue, 02 Sep 2025 16:46:23 GMT",
+        "content-type": "application/json",
+        "content-length": "4962",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "3ba119db-3d62-413a-89d3-22b585cee9de",
+        "x-amzn-bedrock-invocation-latency": "16040",
+        "x-amzn-bedrock-cache-write-input-token-count": "0",
+        "x-amzn-bedrock-cache-read-input-token-count": "2039",
+        "x-amzn-bedrock-output-token-count": "737",
+        "x-amzn-bedrock-input-token-count": "4814"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_01Pk3YvtHzSALj2nSggXkXLf",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-sonnet-4-20250514",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Let me analyze this \"Final Beneficiaries Report\" issued by DIAN (Colombian tax authority). From the document, I can identify: **Company Information:** - Cell \"11. Denominación o razón social\": \"EM CONSULTORIA & CONSTRUCCION SAS\" - Cell \"18. Número de identificación\": \"901363538\" - DV: 6 (shown in \"6. DV\") - This is a Colombian DIAN RUB document, so IdentificationType should be \"NIT\" - Country: \"Colombia\" (DIAN document) **Related Parties:** Looking at the \"Datos beneficiarios finales\" section on page 2, I can see one beneficiary: 1. First beneficiary: - Cell \"30. Número de identificación\": \"87070211\" - Cell \"32. Número de Identificación Tributaria - NIT\": \"87070211\" (matches) - Cell \"34. Primer apellido\": \"MORA\" - Cell \"35. Segundo apellido\": \"PORTILLA\" - Cell \"36. Primer nombre\": \"EDWIN\" - Cell \"37. Otros nombres\": \"ANDRES\" - Cell \"57. Porcentaje de participación\": \"100\" - Cell \"61. Tipo de novedad\": \"Actualización\" (code 2) So: - FirstName: \"EDWIN ANDRES\" (combining 36 and 37) - LastName: \"MORA PORTILLA\" (combining 34 and 35) - IdType: \"NIT\" (this is a DIAN RUB) - IdNumber: \"87070211\" - NoveltyType: \"Actualización\" - ParticipationPercentage: \"100\" The participation percentage is 100%, which makes sense. There appears to be a second section for another beneficiary, but it's empty (no data filled in the cells). I verify the document's details, confirming the full NIT as \"901363538-6\" and noting no review flags are present. The information appears consistent and complete.",
+          "signature": "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"
+        },
+        {
+          "type": "text",
+          "text": "{ \"result\": { \"CompanyName\": \"EM CONSULTORIA & CONSTRUCCION SAS\", \"TaxId\": \"901363538-6\", \"IdentificationType\": \"NIT\", \"Country\": \"Colombia\", \"ConflictingSources\": [], \"RequiresReview\": \"false\" }, \"RelatedParties\": [ { \"FirstName\": \"EDWIN ANDRES\", \"LastName\": \"MORA PORTILLA\", \"IdType\": \"NIT\", \"IdNumber\": \"87070211\", \"NoveltyType\": \"Actualización\", \"ParticipationPercentage\": \"100\" } ], \"DocumentType\": \"company\", \"Category\": \"RUB\" }"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 4814,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 2039,
+        "output_tokens": 737
+      }
+    },
+    "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 9000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+  "api_used": "invoke_model"
+}

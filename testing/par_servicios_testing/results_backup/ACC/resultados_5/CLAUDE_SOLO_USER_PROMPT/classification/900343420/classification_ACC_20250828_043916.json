@@ -1,0 +1,87 @@
+{
+  "classification_data": {
+    "category": "ACC",
+    "text": "CERTIFICACIÓN COMPOSICIÓN ACCIONARIA La suscrita Contadora Pública de PUNTO ESTRATÉGICO RED DE CONSULTORES SAS., identificada con NIT 900.343.420-7, hace constar que, de acuerdo con el libro oficial de registro de accionistas, inscrito en el registro mercantil, de conformidad con las normas de auditoria generalmente aceptadas en Colombia. CERTIFICA QUE: La composición accionaria es la siguiente: CC/NIT NOMBRE DEL ACCIONISTA No. DE ACCIONES VALOR NOMINAL % 72335489 ADALBERTO DE JESUS ESCORCIA GUZMAN 200.000 $200.000.000,00 100% TOTALES 200.000 $200.000.000,00 100% Se expide la presente certificación a solicitud del interesado a los diecisiete (17) días del mes de enero de 2020. Cordialmente, NADIA NIEBLES RACEDO Contador Público T.P. 113237-T Punto Estratégico Red de Consultores SAS Cra. 55 No. 100-51 Oficina 712 3748822 3175174880 info@puntoestrategico.com.co puntoestrategico.com.co",
+    "document_number": "900343420",
+    "path": "ACC/900343420/199_CA_2020-02-29.pdf"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "```json { \"category\": \"ACC\", \"text\": \"CERTIFICACIÓN COMPOSICIÓN ACCIONARIA\\n\\nLa suscrita Contadora Pública de PUNTO ESTRATÉGICO RED DE CONSULTORES SAS., identificada con NIT 900.343.420-7, hace constar que, de acuerdo con el libro oficial de registro de accionistas, inscrito en el registro mercantil, de conformidad con las normas de auditoria generalmente aceptadas en Colombia.\\n\\nCERTIFICA QUE:\\n\\nLa composición accionaria es la siguiente:\\n\\nCC/NIT NOMBRE DEL ACCIONISTA No. DE ACCIONES VALOR NOMINAL %\\n72335489 ADALBERTO DE JESUS ESCORCIA GUZMAN 200.000 $200.000.000,00 100%\\nTOTALES 200.000 $200.000.000,00 100%\\n\\nSe expide la presente certificación a solicitud del interesado a los diecisiete (17) días del mes de enero de 2020.\\n\\nCordialmente,\\n\\nNADIA NIEBLES RACEDO\\nContador Público\\nT.P. 113237-T\\nPunto Estratégico Red de Consultores SAS\\n\\nCra. 55 No. 100-51 Oficina 712 3748822 3175174880 info@puntoestrategico.com.co puntoestrategico.com.co\" } ```"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 9,
+      "cache_creation_input_tokens": 4475,
+      "cache_read_input_tokens": 0,
+      "output_tokens": 1185
+    },
+    "ResponseMetadata": {
+      "RequestId": "caf4b102-bdc1-4c88-9a71-9446863fa90b",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Thu, 28 Aug 2025 09:39:00 GMT",
+        "content-type": "application/json",
+        "content-length": "4853",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "caf4b102-bdc1-4c88-9a71-9446863fa90b",
+        "x-amzn-bedrock-invocation-latency": "36082",
+        "x-amzn-bedrock-cache-write-input-token-count": "4475",
+        "x-amzn-bedrock-cache-read-input-token-count": "0",
+        "x-amzn-bedrock-output-token-count": "1185",
+        "x-amzn-bedrock-input-token-count": "9"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_01BSi2bk8mPgNi99w4pgte2e",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-3-7-sonnet-20250219",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Let me analyze this document carefully following the classification workflow: ## 1. TEXT EXTRACTION The document is in Spanish and appears to be a certification of shareholding composition. Key text elements include: - Title: \"CERTIFICACIÓN COMPOSICIÓN ACCIONARIA\" - Issuer: \"PUNTO ESTRATÉGICO RED DE CONSULTORES SAS\" with NIT 900.343.420-7 - The document certifies the shareholder composition (\"La composición accionaria es la siguiente:\") - Lists a shareholder: \"ADALBERTO DE JESUS ESCORCIA GUZMAN\" with 200,000 shares at a nominal value of $200,000,000.00, representing 100% ownership - Issued on January 17, 2020 (\"Se expide la presente certificación a solicitud del interesado a los diecisiete (17) días del mes de enero de 2020\") - Signed by: \"NADIA NIEBLES RACEDO, Contador Público, T.P. 113237-T\" - Company contact details at the bottom ## 2. PRIORITY CHECKS - Not BLANK: Contains substantial meaningful content - Not LINK_ONLY: Contains full document content, not just hyperlinks ## 3. ISSUER IDENTIFICATION - This is a corporate document issued by \"PUNTO ESTRATÉGICO RED DE CONSULTORES SAS\" - It's signed by their Certified Public Accountant (\"Contadora Pública\") - Not issued by DIAN or Chamber of Commerce ## 4. DOCUMENT FUNCTION ANALYSIS - The document's primary function is to certify the ownership structure of the company - It details the exact shareholding/ownership percentages (100% owned by one individual) - It includes formal certification language (\"certifica que\") - Lists the specific number of shares and their nominal value ## 5. CATEGORY CLASSIFICATION Evaluating in the required order: - CECRL: No, this is not a personal identification document - RUT: No, this is not a tax registration document issued by DIAN - CERL: No, this is not a Certificate of Existence and Legal Representation issued by Chamber of Commerce - ACC: YES, this is clearly a document certifying the shareholding composition (Composición Accionaria) - Contains \"CERTIFICACIÓN COMPOSICIÓN ACCIONARIA\" as title - Shows ownership data with explicit percentages (100%) - Lists the shareholder with name and ID number - Includes number of shares (200,000) - Shows nominal value ($200,000,000.00) - Is certified by an accountant of the company - RUB: No, this is not a DIAN document about beneficial owners - POR_REVISAR: No, since it clearly fits into the ACC category ## 6. CONFIDENCE VALIDATION - Strong evidence for ACC category: - Title explicitly states \"CERTIFICACIÓN COMPOSICIÓN ACCIONARIA\" - Document's sole purpose is to certify shareholding structure - Contains comprehensive ownership percentages (100%) - Lists shareholder by name with specific number of shares - Shows nominal value of shares - Certified by company representative (public accountant) - No conflicting signals or ambiguity about document purpose Based on this analysis, the document is clearly an \"ACC\" - Shareholder Composition Certificate.",
+          "signature": "ErcBCkgIBxABGAIiQE/4IivjJSJHbHeH1L98JZgxFWac17SVVAvtSkQ7pKHCPJ6uc3+PTWieMZId9CJd2q9epjZb8rJzOdfLBffe8wUSDOiVJNP2kz/rvhEp9BoMCQtGXELdVJ1B6AigIjDHpJ+MJpkb81uuon6V3+kUhq0+XOqNyVsJsvZb2dDyJ3XJjnkAuIQAsBInVep6Ly0qHb1OOrFzyJKiabtvH3veRWPbBV7mfLWV3sAGXHGCGAI="
+        },
+        {
+          "type": "text",
+          "text": "```json { \"category\": \"ACC\", \"text\": \"CERTIFICACIÓN COMPOSICIÓN ACCIONARIA\\n\\nLa suscrita Contadora Pública de PUNTO ESTRATÉGICO RED DE CONSULTORES SAS., identificada con NIT 900.343.420-7, hace constar que, de acuerdo con el libro oficial de registro de accionistas, inscrito en el registro mercantil, de conformidad con las normas de auditoria generalmente aceptadas en Colombia.\\n\\nCERTIFICA QUE:\\n\\nLa composición accionaria es la siguiente:\\n\\nCC/NIT NOMBRE DEL ACCIONISTA No. DE ACCIONES VALOR NOMINAL %\\n72335489 ADALBERTO DE JESUS ESCORCIA GUZMAN 200.000 $200.000.000,00 100%\\nTOTALES 200.000 $200.000.000,00 100%\\n\\nSe expide la presente certificación a solicitud del interesado a los diecisiete (17) días del mes de enero de 2020.\\n\\nCordialmente,\\n\\nNADIA NIEBLES RACEDO\\nContador Público\\nT.P. 113237-T\\nPunto Estratégico Red de Consultores SAS\\n\\nCra. 55 No. 100-51 Oficina 712 3748822 3175174880 info@puntoestrategico.com.co puntoestrategico.com.co\" } ```"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 9,
+        "cache_creation_input_tokens": 4475,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 1185
+      }
+    },
+    "model_id": "us.anthropic.claude-3-7-sonnet-20250219-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 8000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "expected_category": "ACC",
+  "model_used": "us.anthropic.claude-3-7-sonnet-20250219-v1:0",
+  "api_used": "invoke_model",
+  "pdf_info": {
+    "original_size": 173068,
+    "first_page_size": 173112,
+    "is_scanned": true
+  }
+}

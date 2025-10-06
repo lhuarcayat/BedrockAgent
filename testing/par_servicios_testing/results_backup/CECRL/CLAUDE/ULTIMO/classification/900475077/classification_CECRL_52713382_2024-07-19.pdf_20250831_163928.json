@@ -1,0 +1,87 @@
+{
+  "classification_data": {
+    "category": "CECRL",
+    "text": "REPUBLICA DE COLOMBIA IDENTIFICACION PERSONAL CEDULA DE CIUDADANIA NUMERO 52.713.382 CORDON SALAZAR APELLIDOS MARIA DEL ROSARIO NOMBRES FIRMA FECHA DE NACIMIENTO 10-JUL-1981 SAN MATEO (BOYACA) LUGAR DE NACIMIENTO 1.51 O+ F ESTATURA G. S. RH SEXO 21-JUL-1999 BOGOTA D.C. FECHA Y LUGAR DE EXPEDICION REGISTRADOR NACIONAL CARLOS ARIEL SANCHEZ TORRES INDICE DERECHO A-15001S0-00180668-F-0052713382-20000024 0018501767A 1 1280107662",
+    "document_number": "UNKNOWN",
+    "path": "CECRL/900475077_52713382_2024-07-19/52713382_2024-07-19.pdf"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "```json { \"category\": \"CECRL\", \"text\": \"REPUBLICA DE COLOMBIA\\nIDENTIFICACION PERSONAL\\nCEDULA DE CIUDADANIA\\n\\nNUMERO 52.713.382\\nCORDON SALAZAR\\n\\nAPELLIDOS\\nMARIA DEL ROSARIO\\n\\nNOMBRES\\n\\nFIRMA\\n\\nFECHA DE NACIMIENTO 10-JUL-1981\\nSAN MATEO\\n(BOYACA)\\nLUGAR DE NACIMIENTO\\n\\n1.51 O+ F\\nESTATURA G. S. RH SEXO\\n\\n21-JUL-1999 BOGOTA D.C.\\nFECHA Y LUGAR DE EXPEDICION\\n\\nREGISTRADOR NACIONAL\\nCARLOS ARIEL SANCHEZ TORRES\\n\\nINDICE DERECHO\\n\\nA-15001S0-00180668-F-0052713382-20000024 0018501767A 1 1280107662\" } ```"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 1605,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 3150,
+      "output_tokens": 857
+    },
+    "ResponseMetadata": {
+      "RequestId": "309c58cd-a805-43e6-8451-6ba2e7de26d9",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Sun, 31 Aug 2025 21:39:28 GMT",
+        "content-type": "application/json",
+        "content-length": "5384",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "309c58cd-a805-43e6-8451-6ba2e7de26d9",
+        "x-amzn-bedrock-invocation-latency": "13072",
+        "x-amzn-bedrock-cache-write-input-token-count": "0",
+        "x-amzn-bedrock-cache-read-input-token-count": "3150",
+        "x-amzn-bedrock-output-token-count": "857",
+        "x-amzn-bedrock-input-token-count": "1605"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_0151eCvYQFxkPie2XmKBf9r1",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-sonnet-4-20250514",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Let me carefully extract the text from this document and analyze it according to the classification workflow. 1. TEXT EXTRACTION: From the document, I can see: - \"REPUBLICA DE COLOMBIA\" - \"IDENTIFICACION PERSONAL\" - \"CEDULA DE CIUDADANIA\" - \"NUMERO 52.713.382\" - \"CORDON SALAZAR\" - \"APELLIDOS\" - \"MARIA DEL ROSARIO\" - \"NOMBRES\" - There's a signature (\"FIRMA\") - A photograph is visible - \"FECHA DE NACIMIENTO 10-JUL-1981\" - \"SAN MATEO\" - \"(BOYACA)\" - \"LUGAR DE NACIMIENTO\" - \"1.51 O+ F\" - \"ESTATURA G. S. RH SEXO\" - \"21-JUL-1999 BOGOTA D.C.\" - \"FECHA Y LUGAR DE EXPEDICION\" - \"REGISTRADOR NACIONAL\" - \"INDICE DERECHO\" - A barcode section - Additional reference numbers 2. PRIORITY CHECKS: - BLANK: This is clearly not blank as there is substantial content - LINK_ONLY: This is not a document with only links 3. DOCUMENT FUNCTION ANALYSIS: This document's main purpose is personal identification. It shows: - Personal biographical data (name, last name, ID number, date of birth, place of birth, blood type, sex) - Official photograph and signature - Government identification numbers - Security elements (barcode, official format) 4. ISSUER IDENTIFICATION: This is clearly issued by the Colombian government as an official identification document (\"REPUBLICA DE COLOMBIA\"). 5. CATEGORY CLASSIFICATION: Based on the analysis, this is clearly a CECRL document because: - It's an official personal identification document (\"CEDULA DE CIUDADANIA\") - Matches all key identification criteria with precise government-issued details - Includes comprehensive personal information and official security features",
+          "signature": "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"
+        },
+        {
+          "type": "text",
+          "text": "```json { \"category\": \"CECRL\", \"text\": \"REPUBLICA DE COLOMBIA\\nIDENTIFICACION PERSONAL\\nCEDULA DE CIUDADANIA\\n\\nNUMERO 52.713.382\\nCORDON SALAZAR\\n\\nAPELLIDOS\\nMARIA DEL ROSARIO\\n\\nNOMBRES\\n\\nFIRMA\\n\\nFECHA DE NACIMIENTO 10-JUL-1981\\nSAN MATEO\\n(BOYACA)\\nLUGAR DE NACIMIENTO\\n\\n1.51 O+ F\\nESTATURA G. S. RH SEXO\\n\\n21-JUL-1999 BOGOTA D.C.\\nFECHA Y LUGAR DE EXPEDICION\\n\\nREGISTRADOR NACIONAL\\nCARLOS ARIEL SANCHEZ TORRES\\n\\nINDICE DERECHO\\n\\nA-15001S0-00180668-F-0052713382-20000024 0018501767A 1 1280107662\" } ```"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 1605,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 3150,
+        "output_tokens": 857
+      }
+    },
+    "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 8000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "expected_category": "CECRL",
+  "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+  "api_used": "invoke_model",
+  "pdf_info": {
+    "original_size": 185016,
+    "first_page_size": 184840,
+    "is_scanned": true
+  }
+}

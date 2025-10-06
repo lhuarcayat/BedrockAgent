@@ -1,0 +1,87 @@
+{
+  "classification_data": {
+    "category": "ACC",
+    "text": "COMPOSICION ACCIONARIA CERTIFICACIÓN DEL CONTADOR PÚBLICO El suscrito Contador Público de LA EMPRESA ROMEGAS SAS., identificada con NIT 900.127.447 - 1, hace constar que, de acuerdo con el libro oficial de registro de accionistas, inscrito en el registro mercantil, CERTIFICA QUE: La composición accionaria es la siguiente: Se expide a los veinticinco (31) días del mes de mayo de 2023 Cordialmente, LAURA I. OVIEDO GOMEZ TP 304428 – T CONTADORA PÚBLICA DOCUMENTO ACCIONISTAS % PARTICIPACION ACCIONES SUSCRITAS VALOR NOMINAL CC. 79.735.871 JULIO CESAR ROMERO MUÑOZ 100% 2.000 $10.000 TOTAL 100% 2.000 $10.000",
+    "document_number": "900127447",
+    "path": "ACC/900127447/217_CA_2020-02-29.pdf"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "```json { \"category\": \"ACC\", \"text\": \"COMPOSICION ACCIONARIA\\nCERTIFICACIÓN DEL CONTADOR PÚBLICO\\nEl suscrito Contador Público de LA EMPRESA ROMEGAS SAS., identificada con NIT 900.127.447 - 1, hace constar que, de acuerdo con el libro oficial de registro de accionistas, inscrito en el registro mercantil,\\nCERTIFICA QUE:\\nLa composición accionaria es la siguiente:\\nSe expide a los veinticinco (31) días del mes de mayo de 2023\\nCordialmente,\\nLAURA I. OVIEDO GOMEZ\\nTP 304428 – T\\nCONTADORA PÚBLICA\\nDOCUMENTO ACCIONISTAS % PARTICIPACION ACCIONES SUSCRITAS VALOR NOMINAL\\nCC. 79.735.871 JULIO CESAR ROMERO MUÑOZ 100% 2.000 $10.000\\nTOTAL 100% 2.000 $10.000\" } ```"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 207,
+      "cache_creation_input_tokens": 4725,
+      "cache_read_input_tokens": 0,
+      "output_tokens": 1122
+    },
+    "ResponseMetadata": {
+      "RequestId": "cf37bd7a-b6b1-4c49-a5c0-66916604312e",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Mon, 25 Aug 2025 20:37:01 GMT",
+        "content-type": "application/json",
+        "content-length": "7549",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "cf37bd7a-b6b1-4c49-a5c0-66916604312e",
+        "x-amzn-bedrock-invocation-latency": "17414",
+        "x-amzn-bedrock-cache-write-input-token-count": "4725",
+        "x-amzn-bedrock-cache-read-input-token-count": "0",
+        "x-amzn-bedrock-output-token-count": "1122",
+        "x-amzn-bedrock-input-token-count": "207"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_019C3Xp9CcuwSC2hXyqksHnt",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-sonnet-4-20250514",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Looking at this PDF document, let me analyze it according to the workflow: 1. **TEXT EXTRACTION** I can extract the following text from the document: COMPOSICION ACCIONARIA CERTIFICACIÓN DEL CONTADOR PÚBLICO El suscrito Contador Público de LA EMPRESA ROMEGAS SAS., identificada con NIT 900.127.447 - 1, hace constar que, de acuerdo con el libro oficial de registro de accionistas, inscrito en el registro mercantil, CERTIFICA QUE: La composición accionaria es la siguiente: Se expide a los veinticinco (31) días del mes de mayo de 2023 Cordialmente, LAURA I. OVIEDO GOMEZ TP 304428 – T CONTADORA PÚBLICA DOCUMENTO ACCIONISTAS % PARTICIPACION ACCIONES SUSCRITAS VALOR NOMINAL CC. 79.735.871 JULIO CESAR ROMERO MUÑOZ 100% 2.000 $10.000 TOTAL 100% 2.000 $10.000 2. **PRIORITY CHECKS** - Not BLANK: This document has substantial, meaningful content - Not LINK_ONLY: No hyperlinks or URLs directing elsewhere 3. **ISSUER IDENTIFICATION** This is issued by a Contador Público (Public Accountant), specifically LAURA I. OVIEDO GOMEZ, not by a government agency, Chamber of Commerce, or other official entity. 4. **DOCUMENT FUNCTION ANALYSIS** This document is focused on: - Corporate shareholding structure - Ownership composition (\"Composición Accionaria\") - Shareholder identification with ownership percentages - Share quantities and nominal values - Certification by public accountant based on official shareholder registry 5. **CATEGORY CLASSIFICATION** I confirm this is an Accionistas (Shareholders) document. It precisely captures the ownership details of ROMEGAS SAS, with Julio Cesar Romero Muñoz holding 100% of the company's shares. The document provides critical corporate ownership information certified by a professional accountant. The certificate validates key shareholder data: 2,000 subscribed shares, $10,000 nominal value, and complete ownership by a single shareholder with clear identification. This structured document definitively represents a shareholder composition certification. The classification confirms the ACC document type with high confidence, reflecting a standard corporate ownership record.",
+          "signature": "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"
+        },
+        {
+          "type": "text",
+          "text": "```json { \"category\": \"ACC\", \"text\": \"COMPOSICION ACCIONARIA\\nCERTIFICACIÓN DEL CONTADOR PÚBLICO\\nEl suscrito Contador Público de LA EMPRESA ROMEGAS SAS., identificada con NIT 900.127.447 - 1, hace constar que, de acuerdo con el libro oficial de registro de accionistas, inscrito en el registro mercantil,\\nCERTIFICA QUE:\\nLa composición accionaria es la siguiente:\\nSe expide a los veinticinco (31) días del mes de mayo de 2023\\nCordialmente,\\nLAURA I. OVIEDO GOMEZ\\nTP 304428 – T\\nCONTADORA PÚBLICA\\nDOCUMENTO ACCIONISTAS % PARTICIPACION ACCIONES SUSCRITAS VALOR NOMINAL\\nCC. 79.735.871 JULIO CESAR ROMERO MUÑOZ 100% 2.000 $10.000\\nTOTAL 100% 2.000 $10.000\" } ```"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 207,
+        "cache_creation_input_tokens": 4725,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 1122
+      }
+    },
+    "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 8000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "expected_category": "ACC",
+  "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+  "api_used": "invoke_model",
+  "pdf_info": {
+    "original_size": 353898,
+    "first_page_size": 352312,
+    "is_scanned": false
+  }
+}

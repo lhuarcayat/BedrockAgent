@@ -1,0 +1,144 @@
+{
+  "document_name": "CERTIFICADO_COMPOCISION_ACCIONARIA_FEBRERO_2024.pdf",
+  "category": "ACC",
+  "classification_success": true,
+  "extraction_success": true,
+  "overall_success": true,
+  "timestamp": "2025-08-28T02:36:42.428749",
+  "classification_result": {
+    "classification_data": {
+      "category": "ACC",
+      "text": "grupo éxito RELACIÓN PRINCIPALES ACCIONISTAS De acuerdo con su solicitud, nos permitimos informar que la relación de nuestros principales accionistas se encuentra debidamente actualizada en la página web del Grupo. A continuación, relacionamos el link en el cual puede encontrarla: https://www.grupoexito.com.co/es/principales-accionistas La presente certificación se expide a los 01 días del mes de Febrero de 2024. Cualquier información adicional que requieran, no duden en contactarnos. Cordialmente, Giovanni Humberto Velasquez Ruiz Apodermado Especial grupo éxito @GrupoExitoColombia @GrupoExito @Grupo_Exito @GrupoExitoColombia www.grupoexito.com.co Línea de transparencia: 01 8000 522526",
+      "document_number": "890900608",
+      "path": "ACC/890900608/CERTIFICADO_COMPOCISION_ACCIONARIA_FEBRERO_2024.pdf"
+    },
+    "raw_response": {
+      "ResponseMetadata": {
+        "RequestId": "5dbeafa0-6ff8-4c6e-b3b6-f54c28a8b763",
+        "HTTPStatusCode": 200,
+        "HTTPHeaders": {
+          "date": "Thu, 28 Aug 2025 07:36:49 GMT",
+          "content-type": "application/json",
+          "content-length": "1069",
+          "connection": "keep-alive",
+          "x-amzn-requestid": "5dbeafa0-6ff8-4c6e-b3b6-f54c28a8b763"
+        },
+        "RetryAttempts": 0
+      },
+      "output": {
+        "message": {
+          "role": "assistant",
+          "content": [
+            {
+              "text": "```json { \"category\": \"ACC\", \"text\": \"grupo éxito RELACIÓN PRINCIPALES ACCIONISTAS De acuerdo con su solicitud, nos permitimos informar que la relación de nuestros principales accionistas se encuentra debidamente actualizada en la página web del Grupo. A continuación, relacionamos el link en el cual puede encontrarla: https://www.grupoexito.com.co/es/principales-accionistas La presente certificación se expide a los 01 días del mes de Febrero de 2024. Cualquier información adicional que requieran, no duden en contactarnos. Cordialmente, Giovanni Humberto Velasquez Ruiz Apodermado Especial grupo éxito @GrupoExitoColombia @GrupoExito @Grupo_Exito @GrupoExitoColombia www.grupoexito.com.co Línea de transparencia: 01 8000 522526\" } ```"
+            }
+          ]
+        }
+      },
+      "stopReason": "end_turn",
+      "usage": {
+        "inputTokens": 1922,
+        "outputTokens": 198,
+        "totalTokens": 4264,
+        "cacheReadInputTokens": 2144,
+        "cacheWriteInputTokens": 0
+      },
+      "metrics": {
+        "latencyMs": 7429
+      },
+      "model_id": "us.amazon.nova-pro-v1:0",
+      "api_used": "converse",
+      "model_params": {
+        "maxTokens": 8000,
+        "topP": 1,
+        "temperature": 0
+      }
+    },
+    "expected_category": "ACC",
+    "model_used": "us.amazon.nova-pro-v1:0",
+    "api_used": "converse",
+    "pdf_info": {
+      "original_size": 169698,
+      "first_page_size": 169690,
+      "is_scanned": false
+    }
+  },
+  "extraction_result": {
+    "extraction_data": {
+      "path": "ACC/890900608/CERTIFICADO_COMPOCISION_ACCIONARIA_FEBRERO_2024.pdf",
+      "result": {
+        "companyName": "GRUPO ÉXITO S.A.",
+        "documentCategory": "Equity Composition",
+        "taxId": "900.114.184-5",
+        "country": "Colombia",
+        "identificationDetails": {
+          "source": "text_reference",
+          "indicators": [
+            "Colombia",
+            "Bogotá"
+          ],
+          "conflictingSources": [],
+          "requiresReview": "false"
+        },
+        "relatedParties": [
+          {
+            "type": "person",
+            "firstName": "Giovanni",
+            "lastName": "Humberto Velasquez Ruiz",
+            "identificationType": "CC",
+            "identificationNumber": "37.608.077",
+            "relationshipType": "Shareholder",
+            "participationPercentage": "POR REVISAR",
+            "timeFound": "1",
+            "job": "Apoderado Especial"
+          }
+        ]
+      },
+      "documentType": "company",
+      "documentNumber": "890900608",
+      "category": "ACC"
+    },
+    "raw_response": {
+      "ResponseMetadata": {
+        "RequestId": "52edf18a-dbf4-4cc1-b82c-a2ce08ab5f96",
+        "HTTPStatusCode": 200,
+        "HTTPHeaders": {
+          "date": "Thu, 28 Aug 2025 07:36:54 GMT",
+          "content-type": "application/json",
+          "content-length": "1122",
+          "connection": "keep-alive",
+          "x-amzn-requestid": "52edf18a-dbf4-4cc1-b82c-a2ce08ab5f96"
+        },
+        "RetryAttempts": 0
+      },
+      "output": {
+        "message": {
+          "role": "assistant",
+          "content": [
+            {
+              "text": "```json { \"result\": { \"companyName\": \"GRUPO ÉXITO S.A.\", \"documentCategory\": \"Equity Composition\", \"taxId\": \"900.114.184-5\", \"country\": \"Colombia\", \"identificationDetails\": { \"source\": \"text_reference\", \"indicators\": [ \"Colombia\", \"Bogotá\" ], \"conflictingSources\": [], \"requiresReview\": \"false\" }, \"relatedParties\": [ { \"type\": \"person\", \"firstName\": \"Giovanni\", \"lastName\": \"Humberto Velasquez Ruiz\", \"identificationType\": \"CC\", \"identificationNumber\": \"37.608.077\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"POR REVISAR\", \"timeFound\": \"1\", \"job\": \"Apoderado Especial\" } ] }, \"documentType\": \"company\", \"category\": \"ACC\" } ```"
+            }
+          ]
+        }
+      },
+      "stopReason": "end_turn",
+      "usage": {
+        "inputTokens": 5539,
+        "outputTokens": 232,
+        "totalTokens": 5771
+      },
+      "metrics": {
+        "latencyMs": 4898
+      },
+      "model_id": "us.amazon.nova-pro-v1:0",
+      "api_used": "converse",
+      "model_params": {
+        "maxTokens": 8000,
+        "topP": 1,
+        "temperature": 0
+      }
+    },
+    "model_used": "us.amazon.nova-pro-v1:0",
+    "api_used": "converse"
+  }
+}

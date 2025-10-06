@@ -1,0 +1,59 @@
+{
+  "success": true,
+  "data": {
+    "path": "s3://par-servicios-poc-qa-filling-desk/par-servicios-poc/CECRL/900397317/19200964_2020-02-29.pdf",
+    "result": {
+      "firstName": "Hernández Díaz",
+      "lastName": "Luis Ignacio",
+      "country_issuer": "Colombia",
+      "nationality": "Colombia",
+      "identificationType": "Cédula de Ciudadanía",
+      "identificationNumber": "19.200.964"
+    },
+    "confidenceScores": {
+      "firstName": 95,
+      "lastName": 95,
+      "country_issuer": 100,
+      "nationality": 100,
+      "identificationType": 100,
+      "identificationNumber": 100
+    },
+    "document_type": "person",
+    "document_number": "test",
+    "category": "CECRL"
+  },
+  "raw_response": {
+    "ResponseMetadata": {
+      "RequestId": "2f9a0360-b37b-48f5-b765-daa4657d87f1",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Tue, 12 Aug 2025 18:38:02 GMT",
+        "content-type": "application/json",
+        "content-length": "921",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "2f9a0360-b37b-48f5-b765-daa4657d87f1"
+      },
+      "RetryAttempts": 0
+    },
+    "output": {
+      "message": {
+        "role": "assistant",
+        "content": [
+          {
+            "text": "```json\n{\n  \"path\": \"s3://par-servicios-poc-qa-filling-desk/par-servicios-poc/CECRL/900397317/19200964_2020-02-29.pdf\",\n  \"result\": {\n    \"firstName\": \"Hern\\u00e1ndez D\\u00edaz\",\n    \"lastName\": \"Luis Ignacio\",\n    \"country_issuer\": \"Colombia\",\n    \"nationality\": \"Colombia\",\n    \"identificationType\": \"C\\u00e9dula de Ciudadan\\u00eda\",\n    \"identificationNumber\": \"19.200.964\"\n  },\n  \"confidenceScores\": {\n    \"firstName\": 95,\n    \"lastName\": 95,\n    \"country_issuer\": 100,\n    \"nationality\": 100,\n    \"identificationType\": 100,\n    \"identificationNumber\": 100\n  },\n  \"document_type\": \"person\",\n  \"document_number\": \"test\",\n  \"category\": \"CECRL\"\n}\n```"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "inputTokens": 5366,
+      "outputTokens": 257,
+      "totalTokens": 5623
+    },
+    "metrics": {
+      "latencyMs": 5376
+    }
+  },
+  "model_used": "us.amazon.nova-pro-v1:0"
+}

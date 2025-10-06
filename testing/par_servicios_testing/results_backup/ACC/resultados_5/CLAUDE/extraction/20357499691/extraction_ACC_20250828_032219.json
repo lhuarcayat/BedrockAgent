@@ -1,0 +1,132 @@
+{
+  "extraction_data": {
+    "path": "ACC/20357499691/244_CA_2020-02-29.pdf",
+    "result": {
+      "companyName": "PRONTE INGENIEROS S.A.C.",
+      "documentCategory": "Equity Composition",
+      "taxId": "POR REVISAR",
+      "country": "Perú",
+      "identificationDetails": {
+        "source": "text_reference",
+        "indicators": [
+          "Piura",
+          "SOLES",
+          "NOTARIA DE PIURA"
+        ],
+        "conflictingSources": [],
+        "requiresReview": "true"
+      },
+      "relatedParties": [
+        {
+          "type": "person",
+          "firstName": "César Enrique",
+          "lastName": "Baffi Arburua",
+          "identificationType": "DNI",
+          "identificationNumber": "POR REVISAR",
+          "relationshipType": "Shareholder",
+          "participationPercentage": "96.10",
+          "timeFound": "1",
+          "job": ""
+        },
+        {
+          "type": "person",
+          "firstName": "Enrique",
+          "lastName": "Baffi Arroyo",
+          "identificationType": "DNI",
+          "identificationNumber": "70462089",
+          "relationshipType": "Shareholder",
+          "participationPercentage": "3.76",
+          "timeFound": "1",
+          "job": ""
+        },
+        {
+          "type": "person",
+          "firstName": "Mario",
+          "lastName": "Lazo Ruiz",
+          "identificationType": "DNI",
+          "identificationNumber": "POR REVISAR",
+          "relationshipType": "Shareholder",
+          "participationPercentage": "0.14",
+          "timeFound": "1",
+          "job": ""
+        }
+      ]
+    },
+    "documentType": "company",
+    "documentNumber": "20357499691",
+    "category": "ACC"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "```json { \"result\": { \"companyName\": \"PRONTE INGENIEROS S.A.C.\", \"documentCategory\": \"Equity Composition\", \"taxId\": \"POR REVISAR\", \"country\": \"Perú\", \"identificationDetails\": { \"source\": \"text_reference\", \"indicators\": [ \"Piura\", \"SOLES\", \"NOTARIA DE PIURA\" ], \"conflictingSources\": [], \"requiresReview\": \"true\" }, \"relatedParties\": [ { \"type\": \"person\", \"firstName\": \"César Enrique\", \"lastName\": \"Baffi Arburua\", \"identificationType\": \"DNI\", \"identificationNumber\": \"POR REVISAR\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"96.10\", \"timeFound\": \"1\", \"job\": \"\" }, { \"type\": \"person\", \"firstName\": \"Enrique\", \"lastName\": \"Baffi Arroyo\", \"identificationType\": \"DNI\", \"identificationNumber\": \"70462089\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"3.76\", \"timeFound\": \"1\", \"job\": \"\" }, { \"type\": \"person\", \"firstName\": \"Mario\", \"lastName\": \"Lazo Ruiz\", \"identificationType\": \"DNI\", \"identificationNumber\": \"POR REVISAR\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"0.14\", \"timeFound\": \"1\", \"job\": \"\" } ] }, \"documentType\": \"company\", \"category\": \"ACC\" } ```"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 425,
+      "cache_creation_input_tokens": 6095,
+      "cache_read_input_tokens": 0,
+      "output_tokens": 1783
+    },
+    "ResponseMetadata": {
+      "RequestId": "d2d0b838-0cb9-4bbb-9326-b89fe1996597",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Thu, 28 Aug 2025 08:22:18 GMT",
+        "content-type": "application/json",
+        "content-length": "6488",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "d2d0b838-0cb9-4bbb-9326-b89fe1996597",
+        "x-amzn-bedrock-invocation-latency": "36380",
+        "x-amzn-bedrock-cache-write-input-token-count": "6095",
+        "x-amzn-bedrock-cache-read-input-token-count": "0",
+        "x-amzn-bedrock-output-token-count": "1783",
+        "x-amzn-bedrock-input-token-count": "425"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_01QpDQQrEAhNzmfAEWo6ETa1",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-3-7-sonnet-20250219",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Let me analyze this document step-by-step to extract the equity composition data according to the requirements. ### Step 1: Document Analysis The document appears to be a notarized document from Piura, Peru (indicated by \"NOTARIA DE PIURA\") that details a transfer of shares in a company. Let's identify the key elements: - The notary is \"CAROLINA M. NÚÑEZ RICALDE\" - The document references \"PRONTE INGENIEROS S.A.C.\" as the main company - The document records a transfer of shares from \"SERGIO FRANCISCO VIDAL CASTILLO\" to \"ENRIQUE BAFFI ARROYO\" - There's a partida electrónica number: 00111305 - The document shows the capital distribution and equity composition after the transfer ### Step 2: Root Level Extraction **companyName**: \"PRONTE INGENIEROS S.A.C.\" This is stated in the \"PRIMERO\" clause. **taxId**: This is not explicitly mentioned in the document. Will set to \"POR REVISAR\". **country**: \"Perú\" Evidence: - The document mentions \"PIURA\" multiple times - References to \"SOLES\" as currency - \"OFICINA REGISTRAL DE PIURA\" - \"NOTARIA DE PIURA\" ### Step 3: Related Parties Processing The document shows the shareholders after the transaction has been completed. From the \"TERCERO\" and \"CUARTO\" sections, we can see the capital distribution after the share transfer: 1. CÉSAR ENRIQUE BAFFI ARBURUA: 77,847,828 shares, 96.10% 2. ENRIQUE BAFFI ARROYO: 3,052,172 shares, 3.76% 3. MARIO LAZO RUIZ: 100,000 shares, 0.14% Let's create the related parties entries based on this information. ### Step 4: Validation & Cross-checking - The document is clearly from Peru, so the identificationType should be \"RUC\" for companies, and \"DNI\" for persons. - The document doesn't mention the company's RUC, so we'll mark it as \"POR REVISAR\" - The document mentions identification numbers for individuals, but not their type explicitly. - The percentages add up to 100%, which is good. Now let's structure the final output: **identificationDetails**: - source: \"text_reference\" (explicit mentions of Piura, Peru) - indicators: [\"Piura\", \"Peru\", \"SOLES\"] - conflictingSources: [] (no conflicts identified) - requiresReview: \"true\" (because taxId is missing) **relatedParties**: 1. CÉSAR ENRIQUE BAFFI ARBURUA: person, 96.10% 2. ENRIQUE BAFFI ARROYO: person, 3.76% 3. MARIO LAZO RUIZ: person, 0.14% Let me create the proper JSON structure now: For CÉSAR ENRIQUE BAFFI ARBURUA: - type: \"person\" - firstName: \"César Enrique\" - lastName: \"Baffi Arburua\" - identificationType: \"DNI\" (based on Peru's person identification) - identificationNumber: \"POR REVISAR\" (not provided in document) - relationshipType: \"Shareholder\" - participationPercentage: \"96.10\" - timeFound: \"1\" - job: \"\" (not mentioned) For ENRIQUE BAFFI ARROYO: - type: \"person\" - firstName: \"Enrique\" - lastName: \"Baffi Arroyo\" - identificationType: \"DNI\" (based on Peru's person identification) - identificationNumber: \"70462089\" (mentioned in the document) - relationshipType: \"Shareholder\" - participationPercentage: \"3.76\" - timeFound: \"1\" - job: \"EL ADQUIRENTE\" (mentioned in document) For MARIO LAZO RUIZ: - type: \"person\" - firstName: \"Mario\" - lastName: \"Lazo Ruiz\" - identificationType: \"DNI\" (based on Peru's person identification) - identificationNumber: \"POR REVISAR\" (not provided in document) - relationshipType: \"Shareholder\" - participationPercentage: \"0.14\" - timeFound: \"1\" - job: \"\" (not mentioned) Additional notes from my review: 1. It shows ENRIQUE BAFFI ARROYO has DNI: 70462089 and is described as \"SOLTERO\" (single) 2. SERGIO FRANCISCO VIDAL CASTILLO has DNI: 46070304, is described as married (\"CASADO\") under separation of property regime 3. The document is describing a share transfer where SERGIO VIDAL transferred all his shares (42,500) to ENRIQUE BAFFI ARROYO 4. Each share is valued at S/. 0.10 (10 céntimos de sol) 5. The total value of the transfer is S/. 4,250.00 6. The document is dated May 21, 2019, in Piura Let me double-check all the information and create the final JSON:",
+          "signature": "ErcBCkgIBxABGAIiQA5PUvbND3piD6lpoFxVN86nvmR/pSSyH3CqZCPWF1afglBrKFBP3TDa3KMPlCQ4QPxTX4mmsej6XnbQHBtzhxQSDNE8UtMh2Xnn5/iv1xoMVgCT+fhauS66dQIpIjAKO6gK5mTJKHqGIRTTxGdsgj5z29X0QPNZ4YxINXqlzuxzhuQtf3XMQkA9cz6zrOAqHeVHDFEshaeCXk+7qI+nFNZS2h4QQVOyf3UP+M++GAI="
+        },
+        {
+          "type": "text",
+          "text": "```json { \"result\": { \"companyName\": \"PRONTE INGENIEROS S.A.C.\", \"documentCategory\": \"Equity Composition\", \"taxId\": \"POR REVISAR\", \"country\": \"Perú\", \"identificationDetails\": { \"source\": \"text_reference\", \"indicators\": [ \"Piura\", \"SOLES\", \"NOTARIA DE PIURA\" ], \"conflictingSources\": [], \"requiresReview\": \"true\" }, \"relatedParties\": [ { \"type\": \"person\", \"firstName\": \"César Enrique\", \"lastName\": \"Baffi Arburua\", \"identificationType\": \"DNI\", \"identificationNumber\": \"POR REVISAR\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"96.10\", \"timeFound\": \"1\", \"job\": \"\" }, { \"type\": \"person\", \"firstName\": \"Enrique\", \"lastName\": \"Baffi Arroyo\", \"identificationType\": \"DNI\", \"identificationNumber\": \"70462089\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"3.76\", \"timeFound\": \"1\", \"job\": \"\" }, { \"type\": \"person\", \"firstName\": \"Mario\", \"lastName\": \"Lazo Ruiz\", \"identificationType\": \"DNI\", \"identificationNumber\": \"POR REVISAR\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"0.14\", \"timeFound\": \"1\", \"job\": \"\" } ] }, \"documentType\": \"company\", \"category\": \"ACC\" } ```"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 425,
+        "cache_creation_input_tokens": 6095,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 1783
+      }
+    },
+    "model_id": "us.anthropic.claude-3-7-sonnet-20250219-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 8000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "model_used": "us.anthropic.claude-3-7-sonnet-20250219-v1:0",
+  "api_used": "invoke_model"
+}

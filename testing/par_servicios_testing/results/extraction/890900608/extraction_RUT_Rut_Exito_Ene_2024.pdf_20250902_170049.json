@@ -1,0 +1,92 @@
+{
+  "extraction_data": {
+    "result": {
+      "CompanyName": "ALMACENES EXITO S A",
+      "Country": "COLOMBIA",
+      "TaxId": "890900608",
+      "VerificationDigit": "9",
+      "IdentificationType": "NIT",
+      "PersonType": "Persona jurídica",
+      "ConflictingSources": [],
+      "RequiresReview": "false"
+    },
+    "RelatedParties": [],
+    "Address": "CR 48 NO 32 B SUR 139, Envigado, Antioquia",
+    "DocumentGenerationDate": "03-01-2024 01:54:25PM",
+    "DocumentType": "company",
+    "Category": "RUT"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "{ \"result\": { \"CompanyName\": \"ALMACENES EXITO S A\", \"Country\": \"COLOMBIA\", \"TaxId\": \"890900608\", \"VerificationDigit\": \"9\", \"IdentificationType\": \"NIT\", \"PersonType\": \"Persona jurídica\", \"ConflictingSources\": [], \"RequiresReview\": \"false\" }, \"RelatedParties\": [], \"Address\": \"CR 48 NO 32 B SUR 139, Envigado, Antioquia\", \"DocumentGenerationDate\": \"03-01-2024 01:54:25PM\", \"DocumentType\": \"company\", \"Category\": \"RUT\" }"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 1605,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 2990,
+      "output_tokens": 833
+    },
+    "ResponseMetadata": {
+      "RequestId": "d830f3e1-6fce-4269-b921-d79ab3f76f36",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Tue, 02 Sep 2025 22:00:49 GMT",
+        "content-type": "application/json",
+        "content-length": "5506",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "d830f3e1-6fce-4269-b921-d79ab3f76f36",
+        "x-amzn-bedrock-invocation-latency": "12401",
+        "x-amzn-bedrock-cache-write-input-token-count": "0",
+        "x-amzn-bedrock-cache-read-input-token-count": "2990",
+        "x-amzn-bedrock-output-token-count": "833",
+        "x-amzn-bedrock-input-token-count": "1605"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_01E9uZZaudtEV2ehMEate49g",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-sonnet-4-20250514",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Let me analyze this RUT document step by step following the extraction rules. Looking at the document, I can see: 1. CompanyName: Looking for cell \"35. Razón social\" - I can see \"ALMACENES EXITO S A\" 2. Country: Looking for cell \"38. País\" - I can see \"COLOMBIA\" 3. TaxId: Looking for cell \"5. Número de Identificación Tributaria (NIT)\" - I can see \"890900608\" 4. VerificationDigit: Looking for cell \"6. DV\" - I can see \"9\" 5. IdentificationType: For RUT documents, this is \"NIT\" 6. PersonType: Looking for cell \"24. Tipo de contribuyente\" - I can see \"Persona jurídica\" 7. RelatedParties: I need to look for sections \"Socios y/o miembros de Juntas Directivas, Consorcios, Uniones Temporales\" and \"Revisor Fiscal y contador\" - I don't see these sections filled out in this document, so RelatedParties should be empty array. 8. Address: Looking for cells \"41. Dirección principal\", \"40. Ciudad/Municipio\", \"39. Departamento\" - I can see: - 41. Dirección principal: \"CR 48 NO 32 B SUR 139\" - 40. Ciudad/Municipio: \"Envigado\" - 39. Departamento: \"Antioquia\" 9. DocumentGenerationDate: Looking at the bottom - I can see \"Fecha generación documento PDF: 03-01-2024 01:54:25PM\" 10. DocumentType: Always \"company\" 11. Category: Always \"RUT\" Let me double-check all the values: - CompanyName: \"ALMACENES EXITO S A\" (from cell 35) - Country: \"COLOMBIA\" (from cell 38) - TaxId: \"890900608\" (from cell 5) - VerificationDigit: \"9\" (from cell 6) - IdentificationType: \"NIT\" - PersonType: \"Persona jurídica\" (from cell 24) - Address details confirm the company's location in Envigado, Antioquia - Document generated on 03-01-2024 at 01:54:25PM - No related parties information is present in the document I've verified the key details extracted from the RUT document, ensuring accuracy of the company's identification and location information.",
+          "signature": "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"
+        },
+        {
+          "type": "text",
+          "text": "{ \"result\": { \"CompanyName\": \"ALMACENES EXITO S A\", \"Country\": \"COLOMBIA\", \"TaxId\": \"890900608\", \"VerificationDigit\": \"9\", \"IdentificationType\": \"NIT\", \"PersonType\": \"Persona jurídica\", \"ConflictingSources\": [], \"RequiresReview\": \"false\" }, \"RelatedParties\": [], \"Address\": \"CR 48 NO 32 B SUR 139, Envigado, Antioquia\", \"DocumentGenerationDate\": \"03-01-2024 01:54:25PM\", \"DocumentType\": \"company\", \"Category\": \"RUT\" }"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 1605,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 2990,
+        "output_tokens": 833
+      }
+    },
+    "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 9000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+  "api_used": "invoke_model"
+}

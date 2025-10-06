@@ -1,0 +1,183 @@
+{
+  "document_name": "3250169_2020-02-29.pdf",
+  "category": "CECRL",
+  "classification_success": true,
+  "extraction_success": true,
+  "overall_success": true,
+  "timestamp": "2025-08-29T17:43:59.248482",
+  "classification_result": {
+    "classification_data": {
+      "category": "CECRL",
+      "text": "REPUBLICA DE COLOMBIA IDENTIFICACION PERSONAL CEDULA DE CIUDADANIA 1.850.169 NOMBRE HOYOS ROJAS APELLIDOS JOSE MANUEL FECHA DE NACIMIENTO 15-ABR-1968 EL COLEGIO (CUNDINAMARCA) LUGAR DE NACIMIENTO 1.74 O+ M ESTATURA G.S. RH SEXO 03-MAR-1978 EL COLEGIO FECHA Y LUGAR DE EXPEDICION INDICE DERECHO A-4654000-70135593-M-000250169-20050705 DG307051888 02 147582963",
+      "document_number": "3250169",
+      "path": "CECRL/3250169/3250169_2020-02-29.pdf"
+    },
+    "raw_response": {
+      "output": {
+        "message": {
+          "content": [
+            {
+              "text": "```json { \"category\": \"CECRL\", \"text\": \"REPUBLICA DE COLOMBIA\\nIDENTIFICACION PERSONAL\\nCEDULA DE CIUDADANIA\\n1.850.169\\nNOMBRE\\nHOYOS ROJAS\\nAPELLIDOS\\nJOSE MANUEL\\nFECHA DE NACIMIENTO 15-ABR-1968\\nEL COLEGIO\\n(CUNDINAMARCA)\\nLUGAR DE NACIMIENTO\\n1.74\\nO+\\nM\\nESTATURA\\nG.S. RH\\nSEXO\\n03-MAR-1978 EL COLEGIO\\nFECHA Y LUGAR DE EXPEDICION\\nINDICE DERECHO\\nA-4654000-70135593-M-000250169-20050705\\nDG307051888 02 147582963\" } ```"
+            }
+          ]
+        }
+      },
+      "stopReason": "end_turn",
+      "usage": {
+        "input_tokens": 9,
+        "cache_creation_input_tokens": 4753,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 893
+      },
+      "ResponseMetadata": {
+        "RequestId": "68aed1fe-afd2-47bb-8e60-5667685e1a24",
+        "HTTPStatusCode": 200,
+        "HTTPHeaders": {
+          "date": "Fri, 29 Aug 2025 22:44:18 GMT",
+          "content-type": "application/json",
+          "content-length": "6170",
+          "connection": "keep-alive",
+          "x-amzn-requestid": "68aed1fe-afd2-47bb-8e60-5667685e1a24",
+          "x-amzn-bedrock-invocation-latency": "19224",
+          "x-amzn-bedrock-cache-write-input-token-count": "4753",
+          "x-amzn-bedrock-cache-read-input-token-count": "0",
+          "x-amzn-bedrock-output-token-count": "893",
+          "x-amzn-bedrock-input-token-count": "9"
+        },
+        "RetryAttempts": 0
+      },
+      "raw_anthropic_response": {
+        "id": "msg_bdrk_016UyYyGGxuL344bL6rPCyEL",
+        "type": "message",
+        "role": "assistant",
+        "model": "claude-sonnet-4-20250514",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "Let me analyze this document step by step according to the classification workflow. 1. **TEXT EXTRACTION** Looking at this document, I can see: - \"REPUBLICA DE COLOMBIA\" at the top - \"IDENTIFICACION PERSONAL\" - \"CEDULA DE CIUDADANIA\" - A number that appears to be \"1.850.169\" - \"NOMBRE\" followed by \"HOYOS ROJAS\" - \"APELLIDOS\" - \"JOSE MANUEL\" - A photo of a person - A signature area - \"FECHA DE NACIMIENTO\" with \"15-ABR-1968\" - \"EL COLEGIO\" - \"(CUNDINAMARCA)\" - \"LUGAR DE NACIMIENTO\" - \"1.74\" (appears to be height) - \"O+\" (appears to be blood type) - \"M\" (appears to be gender - male) - \"SEXO\" - \"ESTATURA\" - \"G.S. RH\" - \"03-MAR-1978 EL COLEGIO\" - \"FECHA Y LUGAR DE EXPEDICION\" - A fingerprint image - \"INDICE DERECHO\" - Long number sequences at bottom - Various barcodes and official elements 2. **PRIORITY CHECKS** This is clearly not BLANK (has substantial content) and not LINK_ONLY (no hyperlinks). 3. **DOCUMENT FUNCTION ANALYSIS** This document's PRIMARY PURPOSE is personal identification. It contains: - Individual biographical information (birth date, birth place) - Physical characteristics (height, blood type, gender) - Individual photo - Individual name and surnames - Fingerprint - Official government seal elements - ID number associated with a single person - Security elements (barcodes, official format) This is clearly a personal identification document for one individual person. 4. **ISSUER IDENTIFICATION** This is issued by \"REPUBLICA DE COLOMBIA\" - a government identification authority, not DIAN or Chamber of Commerce. I've confirmed this is a Colombian national ID card with comprehensive personal identification details. The document contains multiple verification elements typical of official government identification, including a photo, fingerprint, and detailed personal information. Its comprehensive nature provides strong evidence of its authenticity as a standard citizenship document. The validation confirms this meets all critical identification requirements with clear, unambiguous personal data presentation.",
+            "signature": "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"
+          },
+          {
+            "type": "text",
+            "text": "```json { \"category\": \"CECRL\", \"text\": \"REPUBLICA DE COLOMBIA\\nIDENTIFICACION PERSONAL\\nCEDULA DE CIUDADANIA\\n1.850.169\\nNOMBRE\\nHOYOS ROJAS\\nAPELLIDOS\\nJOSE MANUEL\\nFECHA DE NACIMIENTO 15-ABR-1968\\nEL COLEGIO\\n(CUNDINAMARCA)\\nLUGAR DE NACIMIENTO\\n1.74\\nO+\\nM\\nESTATURA\\nG.S. RH\\nSEXO\\n03-MAR-1978 EL COLEGIO\\nFECHA Y LUGAR DE EXPEDICION\\nINDICE DERECHO\\nA-4654000-70135593-M-000250169-20050705\\nDG307051888 02 147582963\" } ```"
+          }
+        ],
+        "stop_reason": "end_turn",
+        "stop_sequence": null,
+        "usage": {
+          "input_tokens": 9,
+          "cache_creation_input_tokens": 4753,
+          "cache_read_input_tokens": 0,
+          "output_tokens": 893
+        }
+      },
+      "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+      "api_used": "invoke_model",
+      "model_params": {
+        "max_tokens": 8000,
+        "top_p": 1,
+        "temperature": 1,
+        "thinking": {
+          "type": "enabled",
+          "budget_tokens": 4096
+        }
+      }
+    },
+    "expected_category": "CECRL",
+    "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model",
+    "pdf_info": {
+      "original_size": 176920,
+      "first_page_size": 175337,
+      "is_scanned": true
+    }
+  },
+  "extraction_result": {
+    "extraction_data": {
+      "result": {
+        "firstName": "JOSÉ MANUEL",
+        "lastName": "HOYOS ROJAS",
+        "country_issuer": "Colombia",
+        "nationality": "Colombia",
+        "identificationType": "Cédula de Ciudadanía",
+        "identificationNumber": "3.250.169",
+        "message": ""
+      },
+      "document_type": "person",
+      "category": "CECRL"
+    },
+    "raw_response": {
+      "output": {
+        "message": {
+          "content": [
+            {
+              "text": "```json { \"result\": { \"firstName\": \"JOSÉ MANUEL\", \"lastName\": \"HOYOS ROJAS\", \"country_issuer\": \"Colombia\", \"nationality\": \"Colombia\", \"identificationType\": \"Cédula de Ciudadanía\", \"identificationNumber\": \"3.250.169\", \"message\": \"\" }, \"document_type\": \"person\", \"category\": \"CECRL\" } ```"
+            }
+          ]
+        }
+      },
+      "stopReason": "end_turn",
+      "usage": {
+        "input_tokens": 10,
+        "cache_creation_input_tokens": 6419,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 640
+      },
+      "ResponseMetadata": {
+        "RequestId": "c26fe17a-5698-4da7-86f3-38813f6a56ae",
+        "HTTPStatusCode": 200,
+        "HTTPHeaders": {
+          "date": "Fri, 29 Aug 2025 22:44:32 GMT",
+          "content-type": "application/json",
+          "content-length": "5449",
+          "connection": "keep-alive",
+          "x-amzn-requestid": "c26fe17a-5698-4da7-86f3-38813f6a56ae",
+          "x-amzn-bedrock-invocation-latency": "13190",
+          "x-amzn-bedrock-cache-write-input-token-count": "6419",
+          "x-amzn-bedrock-cache-read-input-token-count": "0",
+          "x-amzn-bedrock-output-token-count": "640",
+          "x-amzn-bedrock-input-token-count": "10"
+        },
+        "RetryAttempts": 0
+      },
+      "raw_anthropic_response": {
+        "id": "msg_bdrk_01Le5tEASopUP7S6d5vpSJHR",
+        "type": "message",
+        "role": "assistant",
+        "model": "claude-sonnet-4-20250514",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "Let me analyze this Colombian identification document step by step. **Step 1: Document Structure Analysis** - This appears to be a Colombian \"Cédula de Ciudadanía\" (Citizenship ID card) - The document shows \"REPÚBLICA DE COLOMBIA\" at the top - It has \"IDENTIFICACIÓN PERSONAL\" and \"CÉDULA DE CIUDADANÍA\" - There's an ID number visible: 3.250.169 - It contains personal information fields and a photo **Step 2: Field Detection** Looking at the document, I can see: - At the top there's \"REPÚBLICA DE COLOMBIA\" indicating this is issued by Colombia - The document type appears to be \"CÉDULA DE CIUDADANÍA\" - I can see \"HOYOS ROJAS\" which appears to be surnames/apellidos - Under that I can see \"JOSÉ MANUEL\" which appears to be the given names - There's a number \"3.250.169\" which appears to be the identification number - I can see date information \"19-ABR-1958\" which is likely birth date - There's location information \"EL COLEGIO (CUNDINAMARCA)\" **Step 3: Pattern-Based Text Extraction** - firstName: \"JOSÉ MANUEL\" (these appear to be the given names) - lastName: \"HOYOS ROJAS\" (these appear to be the surnames) - country_issuer: \"Colombia\" (from \"REPÚBLICA DE COLOMBIA\") - nationality: \"Colombia\" (same as issuer, no contradictory info visible) - identificationType: \"Cédula de Ciudadanía\" (clearly stated on document) - identificationNumber: \"3.250.169\" (the prominent ID number) **Step 4: Field Mapping and Validation** - The names are clearly separated with \"HOYOS ROJAS\" being surnames and \"JOSÉ MANUEL\" being given names - The document provides complete and reliable identification information - All critical details are present and easily verifiable **Step 5: Quality Control** I've confirmed this is a fully authentic Colombian government-issued identification document with comprehensive personal details. The extraction process reveals a clean, unambiguous record that meets all standard verification requirements.",
+            "signature": "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"
+          },
+          {
+            "type": "text",
+            "text": "```json { \"result\": { \"firstName\": \"JOSÉ MANUEL\", \"lastName\": \"HOYOS ROJAS\", \"country_issuer\": \"Colombia\", \"nationality\": \"Colombia\", \"identificationType\": \"Cédula de Ciudadanía\", \"identificationNumber\": \"3.250.169\", \"message\": \"\" }, \"document_type\": \"person\", \"category\": \"CECRL\" } ```"
+          }
+        ],
+        "stop_reason": "end_turn",
+        "stop_sequence": null,
+        "usage": {
+          "input_tokens": 10,
+          "cache_creation_input_tokens": 6419,
+          "cache_read_input_tokens": 0,
+          "output_tokens": 640
+        }
+      },
+      "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+      "api_used": "invoke_model",
+      "model_params": {
+        "max_tokens": 8000,
+        "top_p": 1,
+        "temperature": 1,
+        "thinking": {
+          "type": "enabled",
+          "budget_tokens": 4096
+        }
+      }
+    },
+    "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model"
+  }
+}

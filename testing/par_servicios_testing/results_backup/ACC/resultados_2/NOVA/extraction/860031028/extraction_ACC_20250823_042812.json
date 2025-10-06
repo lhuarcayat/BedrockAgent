@@ -1,0 +1,74 @@
+{
+  "extraction_data": {
+    "path": "$pdf_path",
+    "result": {
+      "companyName": "Siemens Sociedad por Acciones Simplificada",
+      "documentType": "Equity Composition",
+      "taxId": "860.031.028-9",
+      "country": "Colombia",
+      "identificationDetails": {
+        "source": "text_reference",
+        "indicators": [
+          "Bogotá",
+          "D.C."
+        ],
+        "conflictingSources": [],
+        "requiresReview": false
+      },
+      "relatedParties": [
+        {
+          "companyName": "Siemens International Holding B.V.",
+          "identificationType": "NIT",
+          "identificationNumber": "NL001781029801",
+          "relationshipType": "Shareholder",
+          "participationPercentage": "100%",
+          "timeFound": 1,
+          "job": ""
+        }
+      ]
+    },
+    "document_type": "company",
+    "document_number": "$document_number",
+    "category": "ACC",
+    "confidenceScores": {
+      "companyName": 95,
+      "taxId": 95,
+      "country": 95,
+      "relatedParties": 90
+    }
+  },
+  "raw_response": {
+    "ResponseMetadata": {
+      "RequestId": "c53d2f65-e05a-4e25-83f8-5ca629e5b981",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Sat, 23 Aug 2025 09:28:12 GMT",
+        "content-type": "application/json",
+        "content-length": "1260",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "c53d2f65-e05a-4e25-83f8-5ca629e5b981"
+      },
+      "RetryAttempts": 0
+    },
+    "output": {
+      "message": {
+        "role": "assistant",
+        "content": [
+          {
+            "text": "```json\n{\n  \"path\": \"$pdf_path\",\n  \"result\": {\n    \"companyName\": \"Siemens Sociedad por Acciones Simplificada\",\n    \"documentType\": \"Equity Composition\",\n    \"taxId\": \"860.031.028-9\",\n    \"country\": \"Colombia\",\n    \"identificationDetails\": {\n      \"source\": \"text_reference\",\n      \"indicators\": [\n        \"Bogotá\",\n        \"D.C.\"\n      ],\n      \"conflictingSources\": [],\n      \"requiresReview\": false\n    },\n    \"relatedParties\": [\n      {\n        \"companyName\": \"Siemens International Holding B.V.\",\n        \"identificationType\": \"NIT\",\n        \"identificationNumber\": \"NL001781029801\",\n        \"relationshipType\": \"Shareholder\",\n        \"participationPercentage\": \"100%\",\n        \"timeFound\": 1,\n        \"job\": \"\"\n      }\n    ]\n  },\n  \"document_type\": \"company\",\n  \"document_number\": \"$document_number\",\n  \"category\": \"ACC\",\n  \"confidenceScores\": {\n    \"companyName\": 95,\n    \"taxId\": 95,\n    \"country\": 95,\n    \"relatedParties\": 90\n  }\n}\n```"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "inputTokens": 8536,
+      "outputTokens": 287,
+      "totalTokens": 8823
+    },
+    "metrics": {
+      "latencyMs": 7089
+    }
+  },
+  "model_used": "us.amazon.nova-pro-v1:0"
+}

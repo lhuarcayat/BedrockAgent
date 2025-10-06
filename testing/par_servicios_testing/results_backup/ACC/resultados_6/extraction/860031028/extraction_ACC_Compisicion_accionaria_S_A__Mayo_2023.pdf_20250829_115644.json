@@ -1,0 +1,108 @@
+{
+  "extraction_data": {
+    "result": {
+      "companyName": "Siemens Sociedad por Acciones Simplificada",
+      "documentCategory": "Equity Composition",
+      "taxId": "860.031.028-9",
+      "country": "Colombia",
+      "identificationDetails": {
+        "source": "text_reference",
+        "indicators": [
+          "Bogotá D.C.",
+          "Colombia",
+          "Colombian NIT format",
+          "Ernst & Young Colombia offices"
+        ],
+        "conflictingSources": [],
+        "requiresReview": "false"
+      },
+      "relatedParties": [
+        {
+          "type": "company",
+          "companyName": "Siemens International Holding B.V.",
+          "identificationType": "NIT",
+          "identificationNumber": "NL001781029B01",
+          "relationshipType": "Shareholder",
+          "participationPercentage": "100%",
+          "timeFound": "1",
+          "job": ""
+        }
+      ]
+    },
+    "documentType": "company",
+    "category": "ACC"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "{ \"result\": { \"companyName\": \"Siemens Sociedad por Acciones Simplificada\", \"documentCategory\": \"Equity Composition\", \"taxId\": \"860.031.028-9\", \"country\": \"Colombia\", \"identificationDetails\": { \"source\": \"text_reference\", \"indicators\": [ \"Bogotá D.C.\", \"Colombia\", \"Colombian NIT format\", \"Ernst & Young Colombia offices\" ], \"conflictingSources\": [], \"requiresReview\": \"false\" }, \"relatedParties\": [ { \"type\": \"company\", \"companyName\": \"Siemens International Holding B.V.\", \"identificationType\": \"NIT\", \"identificationNumber\": \"NL001781029B01\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"100%\", \"timeFound\": \"1\", \"job\": \"\" } ] }, \"documentType\": \"company\", \"category\": \"ACC\" }"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 9,
+      "cache_creation_input_tokens": 7122,
+      "cache_read_input_tokens": 0,
+      "output_tokens": 886
+    },
+    "ResponseMetadata": {
+      "RequestId": "dd4a8529-e050-4524-aedd-27d562d523fa",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Fri, 29 Aug 2025 16:56:44 GMT",
+        "content-type": "application/json",
+        "content-length": "6397",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "dd4a8529-e050-4524-aedd-27d562d523fa",
+        "x-amzn-bedrock-invocation-latency": "12837",
+        "x-amzn-bedrock-cache-write-input-token-count": "7122",
+        "x-amzn-bedrock-cache-read-input-token-count": "0",
+        "x-amzn-bedrock-output-token-count": "886",
+        "x-amzn-bedrock-input-token-count": "9"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_01FQYxh35F7xNSwWevkR85L6",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-sonnet-4-20250514",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Let me analyze this document to extract the required information. 1. **Document Analysis**: This appears to be an audit certification from Ernst & Young for Siemens S.A.S. in Colombia, dated June 7, 2023. It shows the shareholding composition. 2. **Root Level Extraction**: - **companyName**: The document is about \"Siemens Sociedad por Acciones Simplificada\" or \"Siemens S.A.S.\" - **taxId**: The document mentions \"identificada con NIT. 860.031.028-9\" - **country**: The document is clearly from Colombia - mentions \"Bogotá D.C.\" multiple times and uses Colombian NIT format - **documentCategory**: \"Equity Composition\" 3. **Related Parties Processing**: From the shareholding table, I can see: - NIT: NL001781029B01 - Accionistas: Siemens International Holding B.V. - N° Acciones: 5,468,220 - Valor en pesos colombianos: $95,693,850,000 - Participación %: 100% This is clearly a company (has B.V. designation which is Dutch), not a person. - type: \"company\" - companyName: \"Siemens International Holding B.V.\" - identificationType: Since this is a foreign company with NIT starting with \"NL\", this might be challenging to classify using Colombian standards. The NIT format \"NL001781029B01\" doesn't follow typical Colombian NIT patterns, but since this is in Colombia and uses NIT designation, I'll set it as \"NIT\" - identificationNumber: \"NL001781029B01\" - relationshipType: \"Shareholder\" - participationPercentage: \"100%\" - timeFound: Minimal reference with \"1\" appearing once - job: No specific role identified in the document 4. **Country Identification**: - Clear text references to \"Bogotá D.C.\" multiple times - Uses Colombian NIT format for the main company (860.031.028-9) - Ernst & Young offices listed are all in Colombian cities - Document is in Spanish with Colombian legal terminology 5. **Validation**: - taxId \"860.031.028-9\" aligns with Colombian NIT format - Country is clearly Colombia - No conflicts detected - All required fields are present",
+          "signature": "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"
+        },
+        {
+          "type": "text",
+          "text": "{ \"result\": { \"companyName\": \"Siemens Sociedad por Acciones Simplificada\", \"documentCategory\": \"Equity Composition\", \"taxId\": \"860.031.028-9\", \"country\": \"Colombia\", \"identificationDetails\": { \"source\": \"text_reference\", \"indicators\": [ \"Bogotá D.C.\", \"Colombia\", \"Colombian NIT format\", \"Ernst & Young Colombia offices\" ], \"conflictingSources\": [], \"requiresReview\": \"false\" }, \"relatedParties\": [ { \"type\": \"company\", \"companyName\": \"Siemens International Holding B.V.\", \"identificationType\": \"NIT\", \"identificationNumber\": \"NL001781029B01\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"100%\", \"timeFound\": \"1\", \"job\": \"\" } ] }, \"documentType\": \"company\", \"category\": \"ACC\" }"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 9,
+        "cache_creation_input_tokens": 7122,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 886
+      }
+    },
+    "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 8000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+  "api_used": "invoke_model"
+}

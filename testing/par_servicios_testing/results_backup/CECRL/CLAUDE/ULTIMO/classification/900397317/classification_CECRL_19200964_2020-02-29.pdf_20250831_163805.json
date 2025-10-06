@@ -1,0 +1,87 @@
+{
+  "classification_data": {
+    "category": "CECRL",
+    "text": "T:' w üi.' ,& ¡i w ffi ryo,, REPUBLICA DE COLOMBIA IDENTIFICACION PERSONAL CEDULA DE CIUDADANIA NUMERO 19.200.964 HERNANDEZ DIAZ APELLIDOS LUIS IGNACIO NOMBRES FECHA DENACIMIENTO: 09-MAY-1953 BOGOTA D.C. (CUNDINAMARCA) LUGAR DE NACIMIENTO 1.66 B- M ESTATURA EST. RH SEXO 28-AGO-1974 BOGOTA D.C. FECHA Y LUGAR DE EXPEDICION A-1556111-4213461530019200864-200009301 02798652644 02 1765131373",
+    "document_number": "UNKNOWN",
+    "path": "CECRL/900397317_19200964_2020-02-29/19200964_2020-02-29.pdf"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "```json { \"category\": \"CECRL\", \"text\": \"T:'\\nw\\nüi.'\\n,&\\n¡i\\nw\\nffi \\nryo,,\\n\\nREPUBLICA DE COLOMBIA\\nIDENTIFICACION PERSONAL\\nCEDULA DE CIUDADANIA\\nNUMERO 19.200.964\\nHERNANDEZ DIAZ\\nAPELLIDOS\\nLUIS IGNACIO\\nNOMBRES\\n\\nFECHA DENACIMIENTO: 09-MAY-1953\\nBOGOTA D.C.\\n(CUNDINAMARCA)\\nLUGAR DE NACIMIENTO\\n1.66 B- M\\nESTATURA EST. RH SEXO\\n28-AGO-1974 BOGOTA D.C.\\nFECHA Y LUGAR DE EXPEDICION\\nA-1556111-4213461530019200864-200009301 02798652644 02 1765131373\" } ```"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 1641,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 3150,
+      "output_tokens": 914
+    },
+    "ResponseMetadata": {
+      "RequestId": "47a44f0f-5fb6-46dd-a4d3-26b57957cc7d",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Sun, 31 Aug 2025 21:38:04 GMT",
+        "content-type": "application/json",
+        "content-length": "5852",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "47a44f0f-5fb6-46dd-a4d3-26b57957cc7d",
+        "x-amzn-bedrock-invocation-latency": "14952",
+        "x-amzn-bedrock-cache-write-input-token-count": "0",
+        "x-amzn-bedrock-cache-read-input-token-count": "3150",
+        "x-amzn-bedrock-output-token-count": "914",
+        "x-amzn-bedrock-input-token-count": "1641"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_017XY4geCq5sNuer9aF1SLC2",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-sonnet-4-20250514",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Let me analyze this document step by step according to the classification workflow. 1. **TEXT EXTRACTION**: From the document I can extract: Top card: - REPUBLICA DE COLOMBIA - IDENTIFICACION PERSONAL - CEDULA DE CIUDADANIA - Numero: 19.200.964 - HERNANDEZ DIAZ - APELLIDOS - LUIS IGNACIO - NOMBRES - [There appears to be a photo and signature] Bottom card: - FECHA DENACIMIENTO: 09-MAY-1953 - BOGOTA D.C. - (CUNDINAMARCA) - LUGAR DE NACIMIENTO - 1.66 B- M - ESTATURA EST. RH SEXO - 28-AGO-1974 BOGOTA D.C. - FECHA Y LUGAR DE EXPEDICION - [Fingerprint visible] - [Barcode at bottom] - A-1556111-4213461530019200864-200009301 This appears to be both sides of a Colombian identity card (Cédula de Ciudadanía). 2. **PRIORITY CHECKS**: This is not BLANK - there is substantial meaningful content. This is not LINK_ONLY - no hyperlinks or URLs redirecting to external sources. 3. **DOCUMENT FUNCTION ANALYSIS**: This is clearly a personal identification document. The main purpose is to identify an individual person (Luis Ignacio Hernández Díaz). It contains: - Personal identification number (19.200.964) - Full name - Date of birth - Place of birth - Physical characteristics (height, blood type, sex) - Photo - Fingerprint - Signature - Official government formatting from República de Colombia 4. **ISSUER IDENTIFICATION**: This is issued by a government identification authority - \"REPÚBLICA DE COLOMBIA\" for personal identification purposes. 5. **CATEGORY CLASSIFICATION**: I recognize this as a standard Colombian national identity document that perfectly matches all verification criteria. The document contains comprehensive personal identification details, including unique government-issued identifiers, biometric information, and official state formatting. It meets every standard requirement for a primary personal identification document from the Colombian government.",
+          "signature": "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"
+        },
+        {
+          "type": "text",
+          "text": "```json { \"category\": \"CECRL\", \"text\": \"T:'\\nw\\nüi.'\\n,&\\n¡i\\nw\\nffi \\nryo,,\\n\\nREPUBLICA DE COLOMBIA\\nIDENTIFICACION PERSONAL\\nCEDULA DE CIUDADANIA\\nNUMERO 19.200.964\\nHERNANDEZ DIAZ\\nAPELLIDOS\\nLUIS IGNACIO\\nNOMBRES\\n\\nFECHA DENACIMIENTO: 09-MAY-1953\\nBOGOTA D.C.\\n(CUNDINAMARCA)\\nLUGAR DE NACIMIENTO\\n1.66 B- M\\nESTATURA EST. RH SEXO\\n28-AGO-1974 BOGOTA D.C.\\nFECHA Y LUGAR DE EXPEDICION\\nA-1556111-4213461530019200864-200009301 02798652644 02 1765131373\" } ```"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 1641,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 3150,
+        "output_tokens": 914
+      }
+    },
+    "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 8000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "expected_category": "CECRL",
+  "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+  "api_used": "invoke_model",
+  "pdf_info": {
+    "original_size": 432516,
+    "first_page_size": 432312,
+    "is_scanned": false
+  }
+}

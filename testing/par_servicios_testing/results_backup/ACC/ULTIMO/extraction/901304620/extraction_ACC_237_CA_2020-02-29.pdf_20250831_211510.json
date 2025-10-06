@@ -1,0 +1,111 @@
+{
+  "extraction_data": {
+    "result": {
+      "PrincipalCompanyName": "PROCESS POINT COLOMBIA S.A.S.",
+      "DocumentCategory": "Equity Composition",
+      "TaxId": "901.304.620-0",
+      "IdentificationType": "NIT",
+      "Country": "Colombia",
+      "IdentificationDetails": {
+        "Source": "TextReference",
+        "Indicators": [
+          "Bogotá D.C.",
+          "Colombia"
+        ],
+        "ConflictingSources": [
+          "Shareholder name inconsistency: 'TODD RUDERFORTH' in table vs 'JAMIE TODD RUTHERFORD' in text",
+          "Missing identification details for shareholder JAMIE TODD RUTHERFORD"
+        ],
+        "RequiresReview": "true"
+      },
+      "RelatedParties": [
+        {
+          "Type": "person",
+          "FirstName": "Jamie Todd",
+          "LastName": "Rutherford",
+          "IdType": "ForReview",
+          "IdNumber": "ForReview",
+          "RelationshipType": "Shareholder",
+          "ParticipationPercentage": "100%",
+          "TimesFound": "2",
+          "Job": ""
+        }
+      ]
+    },
+    "DocumentType": "company",
+    "Category": "ACC"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "{ \"result\": { \"PrincipalCompanyName\": \"PROCESS POINT COLOMBIA S.A.S.\", \"DocumentCategory\": \"Equity Composition\", \"TaxId\": \"901.304.620-0\", \"IdentificationType\": \"NIT\", \"Country\": \"Colombia\", \"IdentificationDetails\": { \"Source\": \"TextReference\", \"Indicators\": [ \"Bogotá D.C.\", \"Colombia\" ], \"ConflictingSources\": [ \"Shareholder name inconsistency: 'TODD RUDERFORTH' in table vs 'JAMIE TODD RUTHERFORD' in text\", \"Missing identification details for shareholder JAMIE TODD RUTHERFORD\" ], \"RequiresReview\": \"true\" }, \"RelatedParties\": [ { \"Type\": \"person\", \"FirstName\": \"Jamie Todd\", \"LastName\": \"Rutherford\", \"IdType\": \"ForReview\", \"IdNumber\": \"ForReview\", \"RelationshipType\": \"Shareholder\", \"ParticipationPercentage\": \"100%\", \"TimesFound\": \"2\", \"Job\": \"\" } ] }, \"DocumentType\": \"company\", \"Category\": \"ACC\" }"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 1605,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 4822,
+      "output_tokens": 1066
+    },
+    "ResponseMetadata": {
+      "RequestId": "1a57c261-473d-4b5f-84c7-c10e7b2cbb9f",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Mon, 01 Sep 2025 02:15:10 GMT",
+        "content-type": "application/json",
+        "content-length": "7124",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "1a57c261-473d-4b5f-84c7-c10e7b2cbb9f",
+        "x-amzn-bedrock-invocation-latency": "19660",
+        "x-amzn-bedrock-cache-write-input-token-count": "0",
+        "x-amzn-bedrock-cache-read-input-token-count": "4822",
+        "x-amzn-bedrock-output-token-count": "1066",
+        "x-amzn-bedrock-input-token-count": "1605"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_013iHKumZXZLoc6rMUtL79Ai",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-sonnet-4-20250514",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Let me analyze this PDF document carefully to extract all the required information. The document appears to be a Colombian shareholder composition certification. Let me go through each field: 1. **PrincipalCompanyName**: Looking at the header, I can see \"CERTIFICACIÓN COMPOSICIÓN ACCIONARIA PROCESS POINT COLOMBIA S.A.S.\" So the company name is \"PROCESS POINT COLOMBIA S.A.S.\" 2. **TaxId**: I can see \"Nit. 901.304.620-0\" in the header, so the TaxId is \"901.304.620-0\" 3. **IdentificationType**: Since it says \"Nit.\", this would be \"NIT\" 4. **Country**: The document mentions \"Bogotá D.C.\" and references Colombian tax structures, so this is Colombia. 5. **DocumentCategory**: Should always be \"Equity Composition\" 6. **IdentificationDetails**: - Source: \"TextReference\" (since Bogotá D.C. is mentioned) - Indicators: [\"Bogotá D.C.\", \"Colombia\"] - ConflictingSources: Need to check for conflicts - RequiresReview: Need to determine based on any conflicts 7. **RelatedParties**: Looking at the table, I can see: - TODD RUDERFORTH (appears to be a person's name) with 696 shares (100%) - The document also mentions \"JAMIE TODD RUTHERFORD con domicilio en Texas, Estados Unidos de América\" - this seems to be the same person but with full name and address details. - There's a person acting as \"Contador\" (accountant): JAVIER HERNÁN BECERRA RODRIGUEZ with C.C. 79.717.267 Let me extract the shareholder information: - JAMIE TODD RUTHERFORD (or TODD RUDERFORTH - seems to be the same person) - 100% participation - I notice a potential discrepancy in the name between the table and paragraph - The shareholder appears to be a foreign individual from Texas, USA - His exact identification type is unclear, potentially a foreign resident ID (CE) I'll flag this record for further verification due to incomplete identification details. The accountant's role and information seem clear, but the shareholder's information needs additional confirmation.",
+          "signature": "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"
+        },
+        {
+          "type": "text",
+          "text": "{ \"result\": { \"PrincipalCompanyName\": \"PROCESS POINT COLOMBIA S.A.S.\", \"DocumentCategory\": \"Equity Composition\", \"TaxId\": \"901.304.620-0\", \"IdentificationType\": \"NIT\", \"Country\": \"Colombia\", \"IdentificationDetails\": { \"Source\": \"TextReference\", \"Indicators\": [ \"Bogotá D.C.\", \"Colombia\" ], \"ConflictingSources\": [ \"Shareholder name inconsistency: 'TODD RUDERFORTH' in table vs 'JAMIE TODD RUTHERFORD' in text\", \"Missing identification details for shareholder JAMIE TODD RUTHERFORD\" ], \"RequiresReview\": \"true\" }, \"RelatedParties\": [ { \"Type\": \"person\", \"FirstName\": \"Jamie Todd\", \"LastName\": \"Rutherford\", \"IdType\": \"ForReview\", \"IdNumber\": \"ForReview\", \"RelationshipType\": \"Shareholder\", \"ParticipationPercentage\": \"100%\", \"TimesFound\": \"2\", \"Job\": \"\" } ] }, \"DocumentType\": \"company\", \"Category\": \"ACC\" }"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 1605,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 4822,
+        "output_tokens": 1066
+      }
+    },
+    "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 8000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+  "api_used": "invoke_model"
+}

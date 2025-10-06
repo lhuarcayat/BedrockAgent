@@ -1,0 +1,32 @@
+<task>
+Analyze the attached PDF document and classify it according to the established workflow.
+</task>
+
+<instructions>
+<text_extraction>
+Extract all readable text from the document (include partial text and tolerate OCR errors).
+</text_extraction>
+
+<evaluation_order>
+1. First check: BLANK (empty/meaningless content)
+2. Second check: LINK_ONLY (primarily hyperlinks)
+3. Then evaluate: CECRL, RUT, CERL, ACC, RUB based on content indicators
+4. If uncertain or conflicting evidence → POR_REVISAR
+</evaluation_order>
+
+<output_format>
+Return ONLY a valid JSON object with this exact structure:
+{
+  "category": "CATEGORY_NAME",
+  "text": "complete extracted text with proper JSON escaping"
+}
+</output_format>
+</instructions>
+
+<critical_requirements>
+- Use EXACT category names: CERL, CECRL, RUT, RUB, ACC, BLANK, LINK_ONLY, POR_REVISAR
+- For BLANK category: "text" field must be empty string ""
+- Properly escape JSON special characters (quotes, newlines, backslashes)
+- NO explanations, comments, or additional content outside the JSON
+- When in doubt, prefer POR_REVISAR over incorrect classification
+</critical_requirements>

@@ -1,0 +1,88 @@
+{
+  "extraction_data": {
+    "result": {
+      "firstName": "CAMILO",
+      "lastName": "ROJAS SALAZAR",
+      "country_issuer": "Colombia",
+      "nationality": "Colombia",
+      "identificationType": "Cédula de Ciudadanía",
+      "identificationNumber": "4.951.616",
+      "message": ""
+    },
+    "document_type": "person",
+    "category": "CECRL"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "```json { \"result\": { \"firstName\": \"CAMILO\", \"lastName\": \"ROJAS SALAZAR\", \"country_issuer\": \"Colombia\", \"nationality\": \"Colombia\", \"identificationType\": \"Cédula de Ciudadanía\", \"identificationNumber\": \"4.951.616\", \"message\": \"\" }, \"document_type\": \"person\", \"category\": \"CECRL\" } ```"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 10,
+      "cache_creation_input_tokens": 8261,
+      "cache_read_input_tokens": 0,
+      "output_tokens": 1013
+    },
+    "ResponseMetadata": {
+      "RequestId": "64be4d42-9ed0-4a61-baa5-9a8e4c2ecdfc",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Fri, 29 Aug 2025 22:46:38 GMT",
+        "content-type": "application/json",
+        "content-length": "6949",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "64be4d42-9ed0-4a61-baa5-9a8e4c2ecdfc",
+        "x-amzn-bedrock-invocation-latency": "20843",
+        "x-amzn-bedrock-cache-write-input-token-count": "8261",
+        "x-amzn-bedrock-cache-read-input-token-count": "0",
+        "x-amzn-bedrock-output-token-count": "1013",
+        "x-amzn-bedrock-input-token-count": "10"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_01DQgxrJP278Mz5Gec7NxyGi",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-sonnet-4-20250514",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Let me analyze this Colombian identification document carefully. Looking at the document: 1. **Document Type**: This is clearly a \"CEDULA DE CIUDADANIA\" from \"REPUBLICA DE COLOMBIA\" - so this is a Colombian citizenship card (Cédula de Ciudadanía). 2. **Names**: I can see: - \"ROJAS SALAZAR\" appears prominently near the top - \"CAMILO\" appears under \"APELLIDOS\" Wait, let me look more carefully at the structure. I see: - \"NUMERO: 4.951.616\" - \"ROJAS SALAZAR\" - \"APELLIDOS\" - \"CAMILO\" - \"NOMBRES\" This is confusing because typically \"APELLIDOS\" means surnames and \"NOMBRES\" means first names. But here it seems like: - \"ROJAS SALAZAR\" appears to be the prominent name at the top - Under \"APELLIDOS\" I see \"CAMILO\" - Under \"NOMBRES\" there seems to be a signature This doesn't make typical sense. Let me look at the second page for more clarity. On the second page I can see: - \"FECHA DE NACIMIENTO: 19-ABR-1958\" - \"YAGUARA (HUILA)\" - \"LUGAR DE NACIMIENTO\" - \"1.74 O+ M\" (height, blood type, sex) - \"ESTATURA G.S. RH SEXO\" - \"19-JUL-1977 YAGUARA\" - \"FECHA Y LUGAR DE EXPEDICION\" The structure seems unusual. Let me reconsider. Looking at this more carefully: The first page shows: - Document header: \"REPUBLICA DE COLOMBIA IDENTIFICACION PERSONAL CEDULA DE CIUDADANIA\" I suspect there's an unusual document layout or potential OCR misalignment. The identification number 4.951.616 seems standard, but the name placement looks irregular. Rojas Salazar is likely the primary surname, with Camilo potentially being the first name, though the positioning is atypical for a standard Colombian identification document. The document confirms Colombian origin, with birth details indicating the individual was born in Yaguara, Huila on April 19, 1958. The citizenship card validates Colombian nationality through its official documentation format. Key details include a full name of Camilo Rojas Salazar, with a standard identification number typical of Colombian national records. The extraction process successfully captured all primary identification information without complications.",
+          "signature": "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"
+        },
+        {
+          "type": "text",
+          "text": "```json { \"result\": { \"firstName\": \"CAMILO\", \"lastName\": \"ROJAS SALAZAR\", \"country_issuer\": \"Colombia\", \"nationality\": \"Colombia\", \"identificationType\": \"Cédula de Ciudadanía\", \"identificationNumber\": \"4.951.616\", \"message\": \"\" }, \"document_type\": \"person\", \"category\": \"CECRL\" } ```"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 10,
+        "cache_creation_input_tokens": 8261,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 1013
+      }
+    },
+    "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 8000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+  "api_used": "invoke_model"
+}

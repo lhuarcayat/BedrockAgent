@@ -1,0 +1,107 @@
+{
+  "extraction_data": {
+    "result": {
+      "CompanyName": "ENTERPRISE TECHNOLOGICAL INNOVATION S.A.S.",
+      "Country": "COLOMBIA",
+      "TaxId": "900337790",
+      "VerificationDigit": "2",
+      "IdentificationType": "NIT",
+      "PersonType": "Persona jurídica",
+      "ConflictingSources": [],
+      "RequiresReview": "false"
+    },
+    "RelatedParties": [
+      {
+        "FirstName": "RENE",
+        "LastName": "STERLING NEIRA",
+        "IdType": "Cédula de Ciudadanía",
+        "IdNumber": "79214402",
+        "RelationshipType": "Representante legal principal"
+      },
+      {
+        "FirstName": "JOHN WILTER",
+        "LastName": "STERLING NEIRA",
+        "IdType": "Cédula de Ciudadanía",
+        "IdNumber": "79211501",
+        "RelationshipType": "Representante legal suplente"
+      }
+    ],
+    "Address": "CR 97 24 B 35 OF 113, Bogotá, D.C., Bogotá D.C.",
+    "DocumentGenerationDate": "24-07-2023 01:58:26PM",
+    "DocumentType": "company",
+    "Category": "RUT"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "```json { \"result\": { \"CompanyName\": \"ENTERPRISE TECHNOLOGICAL INNOVATION S.A.S.\", \"Country\": \"COLOMBIA\", \"TaxId\": \"900337790\", \"VerificationDigit\": \"2\", \"IdentificationType\": \"NIT\", \"PersonType\": \"Persona jurídica\", \"ConflictingSources\": [], \"RequiresReview\": \"false\" }, \"RelatedParties\": [ { \"FirstName\": \"RENE\", \"LastName\": \"STERLING NEIRA\", \"IdType\": \"Cédula de Ciudadanía\", \"IdNumber\": \"79214402\", \"RelationshipType\": \"Representante legal principal\" }, { \"FirstName\": \"JOHN WILTER\", \"LastName\": \"STERLING NEIRA\", \"IdType\": \"Cédula de Ciudadanía\", \"IdNumber\": \"79211501\", \"RelationshipType\": \"Representante legal suplente\" } ], \"Address\": \"CR 97 24 B 35 OF 113, Bogotá, D.C., Bogotá D.C.\", \"DocumentGenerationDate\": \"24-07-2023 01:58:26PM\", \"DocumentType\": \"company\", \"Category\": \"RUT\" } ```"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 7391,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 2990,
+      "output_tokens": 1103
+    },
+    "ResponseMetadata": {
+      "RequestId": "35f94983-65ff-4075-a08f-2a610ec60d89",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Tue, 02 Sep 2025 22:02:10 GMT",
+        "content-type": "application/json",
+        "content-length": "6916",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "35f94983-65ff-4075-a08f-2a610ec60d89",
+        "x-amzn-bedrock-invocation-latency": "16416",
+        "x-amzn-bedrock-cache-write-input-token-count": "0",
+        "x-amzn-bedrock-cache-read-input-token-count": "2990",
+        "x-amzn-bedrock-output-token-count": "1103",
+        "x-amzn-bedrock-input-token-count": "7391"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_017pMyW2uTparsngqf1duCzL",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-sonnet-4-20250514",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Let me analyze this RUT document step by step to extract the requested information. Looking at the document: 1. **CompanyName**: In cell \"35. Razón social\" I can see \"ENTERPRISE TECHNOLOGICAL INNOVATION S.A.S.\" 2. **Country**: In cell \"38. País\" I can see \"COLOMBIA\" and there's also \"169\" which seems to be a code, and \"Bogotá D.C.\" mentioned. 3. **TaxId**: In cell \"5. Número de Identificación Tributaria (NIT)\" I can see \"900337790\" 4. **VerificationDigit**: In cell \"6. DV\" I can see \"2\" 5. **IdentificationType**: Since this is a RUT document from DIAN, this should be \"NIT\" 6. **PersonType**: In cell \"24. Tipo de contribuyente\" I can see \"Persona jurídica\" 7. **Address**: I need to combine values from cells: - \"41. Dirección principal\": \"CR 97 24 B 35 OF 113\" - \"40. Ciudad/Municipio\": \"Bogotá, D.C.\" - \"39. Departamento\": \"Bogotá D.C.\" 8. **DocumentGenerationDate**: At the bottom I can see \"Fecha generación documento PDF: 24-07-2023 01:58:26PM\" 9. **RelatedParties**: Looking at the representation section on page 3, I can see: - Two representatives listed: First representative (REPRS LEGAL PRIN): - 104. Primer apellido: STERLING - 105. Segundo apellido: NEIRA - 106. Primer nombre: RENE - 107. Otros nombres: (appears empty) - 100. Tipo de documento: Cédula de Ciudadanía (abbreviated as \"Cédula de Ciudadan\") - 101. Número de identificación: 79214402 - RelationshipType: This would be \"Representante legal principal\" Second representative (REPRS LEGAL SUPL): - 104. Primer apellido: STERLING - 105. Segundo apellido: NEIRA - 106. Primer nombre: JOHN - 107. Otros nombres: WILTER - 100. Tipo de documento: Cédula de Ciudadanía (abbreviated as \"Cédula de Ciudadan\") - 101. Número de identificación: 79211 - RelationshipType: Appears to be \"Representante legal suplente\" I've identified two legal representatives sharing the same last names but with different first names and identification numbers. Both are listed with Cédula de Ciudadanía as their document type. The document appears to be a company RUT with a fixed document type and category. No additional party information is present beyond these two representatives.",
+          "signature": "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"
+        },
+        {
+          "type": "text",
+          "text": "```json { \"result\": { \"CompanyName\": \"ENTERPRISE TECHNOLOGICAL INNOVATION S.A.S.\", \"Country\": \"COLOMBIA\", \"TaxId\": \"900337790\", \"VerificationDigit\": \"2\", \"IdentificationType\": \"NIT\", \"PersonType\": \"Persona jurídica\", \"ConflictingSources\": [], \"RequiresReview\": \"false\" }, \"RelatedParties\": [ { \"FirstName\": \"RENE\", \"LastName\": \"STERLING NEIRA\", \"IdType\": \"Cédula de Ciudadanía\", \"IdNumber\": \"79214402\", \"RelationshipType\": \"Representante legal principal\" }, { \"FirstName\": \"JOHN WILTER\", \"LastName\": \"STERLING NEIRA\", \"IdType\": \"Cédula de Ciudadanía\", \"IdNumber\": \"79211501\", \"RelationshipType\": \"Representante legal suplente\" } ], \"Address\": \"CR 97 24 B 35 OF 113, Bogotá, D.C., Bogotá D.C.\", \"DocumentGenerationDate\": \"24-07-2023 01:58:26PM\", \"DocumentType\": \"company\", \"Category\": \"RUT\" } ```"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 7391,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 2990,
+        "output_tokens": 1103
+      }
+    },
+    "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 9000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+  "api_used": "invoke_model"
+}

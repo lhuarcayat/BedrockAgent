@@ -1,0 +1,183 @@
+{
+  "document_name": "52862237_2020-02-29.pdf",
+  "category": "CECRL",
+  "classification_success": true,
+  "extraction_success": true,
+  "overall_success": true,
+  "timestamp": "2025-08-29T10:53:38.654922",
+  "classification_result": {
+    "classification_data": {
+      "category": "CECRL",
+      "text": "A-1500111-42134643-F-00528622~7-2~9éR~~~DELE~r~i~ 05234A 02 179281325 REPUBLICA DE COLOMBIA IDENTIFICACION PERSONAL CEDULA DE CIUDADANIA NUMERO 52.862.237 HERNANDEZ RAMIREZ KELLY ANDREA FECHA DE NACIMIENTO 21-ABR-1981 BOGOTA D.C. CUNDINAMARCA LUGAR DE NACIMIENTO 1.55 B+ F ESTATURA G.S. RH SEXO 15-JUL-1999 BOGOTA D.C. FECHA Y LUGAR DE EXPEDICION REGISTRADOR NACIONAL INDICE DERECHO A-1500111-42134643-F-00528622237-20050622 00932 05234A 02 179281325",
+      "document_number": "UNKNOWN",
+      "path": "CECRL/900397317_52862237_2020-02-29/52862237_2020-02-29.pdf"
+    },
+    "raw_response": {
+      "output": {
+        "message": {
+          "content": [
+            {
+              "text": "```json { \"category\": \"CECRL\", \"text\": \"A-1500111-42134643-F-00528622~7-2~9éR~~~DELE~r~i~ 05234A 02 179281325\\nREPUBLICA DE COLOMBIA\\nIDENTIFICACION PERSONAL\\nCEDULA DE CIUDADANIA\\nNUMERO 52.862.237\\nHERNANDEZ RAMIREZ\\nKELLY ANDREA\\nFECHA DE NACIMIENTO 21-ABR-1981\\nBOGOTA D.C.\\nCUNDINAMARCA\\nLUGAR DE NACIMIENTO\\n1.55 B+ F\\nESTATURA G.S. RH SEXO\\n15-JUL-1999 BOGOTA D.C.\\nFECHA Y LUGAR DE EXPEDICION\\nREGISTRADOR NACIONAL\\nINDICE DERECHO\\nA-1500111-42134643-F-00528622237-20050622 00932 05234A 02 179281325\" } ```"
+            }
+          ]
+        }
+      },
+      "stopReason": "end_turn",
+      "usage": {
+        "input_tokens": 9,
+        "cache_creation_input_tokens": 4697,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 966
+      },
+      "ResponseMetadata": {
+        "RequestId": "71e4d61e-a44e-46c4-8e2a-782b04886b9f",
+        "HTTPStatusCode": 200,
+        "HTTPHeaders": {
+          "date": "Fri, 29 Aug 2025 15:54:01 GMT",
+          "content-type": "application/json",
+          "content-length": "6188",
+          "connection": "keep-alive",
+          "x-amzn-requestid": "71e4d61e-a44e-46c4-8e2a-782b04886b9f",
+          "x-amzn-bedrock-invocation-latency": "22272",
+          "x-amzn-bedrock-cache-write-input-token-count": "4697",
+          "x-amzn-bedrock-cache-read-input-token-count": "0",
+          "x-amzn-bedrock-output-token-count": "966",
+          "x-amzn-bedrock-input-token-count": "9"
+        },
+        "RetryAttempts": 0
+      },
+      "raw_anthropic_response": {
+        "id": "msg_bdrk_01LiFhQASizkem36qR9avGbe",
+        "type": "message",
+        "role": "assistant",
+        "model": "claude-sonnet-4-20250514",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "Let me analyze this document: 1. **TEXT EXTRACTION** Looking at the document, I can see: - \"REPUBLICA DE COLOMBIA\" - \"IDENTIFICACION PERSONAL\" - \"CEDULA DE CIUDADANIA\" - \"NUMERO\" followed by \"52.862.237\" - \"HERNANDEZ RAMIREZ\" - \"KELLY ANDREA\" (appears to be first name) - There's a photograph of a person - There's a signature - \"FECHA DE NACIMIENTO: 21-ABR-1981\" - \"BOGOTA D.C.\" - \"CUNDINAMARCA\" - \"1.55\" (appears to be height) - \"B+\" (blood type) - \"F\" (gender/sex) - \"15-JUL-1999 BOGOTA D.C.\" (appears to be issue date) - There's a fingerprint box - There are barcodes and various reference numbers 2. **PRIORITY CHECKS** This is not BLANK - there's substantial meaningful content. This is not LINK_ONLY - this is not redirecting to external URLs. 3. **ISSUER IDENTIFICATION** This appears to be issued by the Colombian government identification authority (República de Colombia), not DIAN or Chamber of Commerce. 4. **DOCUMENT FUNCTION ANALYSIS** This is clearly a personal identification document - it's a Colombian national ID card (Cédula de Ciudadanía). It contains: - Personal biographical data (birth date, birth place) - Physical characteristics (height, blood type) - Individual photo - Signature - Fingerprint reference - Government-issued ID number with individual name - Security elements (barcodes, official format) 5. **CATEGORY CLASSIFICATION** This fits perfectly into CECRL: - It's an official personal identification document (cédula) - Contains individual identification terminology: \"Cédula de Ciudadanía\", \"Identificación Personal\" - Comprehensive personal profile for Kelly Andrea Hernandez Ramirez - Verifies individual identity through multiple biometric and documentary elements 6. **CONFIDENCE VALIDATION** This is strong evidence for CECRL - all key identification markers are present and consistent.",
+            "signature": "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"
+          },
+          {
+            "type": "text",
+            "text": "```json { \"category\": \"CECRL\", \"text\": \"A-1500111-42134643-F-00528622~7-2~9éR~~~DELE~r~i~ 05234A 02 179281325\\nREPUBLICA DE COLOMBIA\\nIDENTIFICACION PERSONAL\\nCEDULA DE CIUDADANIA\\nNUMERO 52.862.237\\nHERNANDEZ RAMIREZ\\nKELLY ANDREA\\nFECHA DE NACIMIENTO 21-ABR-1981\\nBOGOTA D.C.\\nCUNDINAMARCA\\nLUGAR DE NACIMIENTO\\n1.55 B+ F\\nESTATURA G.S. RH SEXO\\n15-JUL-1999 BOGOTA D.C.\\nFECHA Y LUGAR DE EXPEDICION\\nREGISTRADOR NACIONAL\\nINDICE DERECHO\\nA-1500111-42134643-F-00528622237-20050622 00932 05234A 02 179281325\" } ```"
+          }
+        ],
+        "stop_reason": "end_turn",
+        "stop_sequence": null,
+        "usage": {
+          "input_tokens": 9,
+          "cache_creation_input_tokens": 4697,
+          "cache_read_input_tokens": 0,
+          "output_tokens": 966
+        }
+      },
+      "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+      "api_used": "invoke_model",
+      "model_params": {
+        "max_tokens": 8000,
+        "top_p": 1,
+        "temperature": 1,
+        "thinking": {
+          "type": "enabled",
+          "budget_tokens": 4096
+        }
+      }
+    },
+    "expected_category": "CECRL",
+    "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model",
+    "pdf_info": {
+      "original_size": 221177,
+      "first_page_size": 219787,
+      "is_scanned": false
+    }
+  },
+  "extraction_result": {
+    "extraction_data": {
+      "result": {
+        "firstName": "KELLY ANDREA",
+        "lastName": "HERNANDEZ RAMIREZ",
+        "country_issuer": "Colombia",
+        "nationality": "Colombia",
+        "identificationType": "Cédula de Ciudadanía",
+        "identificationNumber": "52.862.237",
+        "message": ""
+      },
+      "document_type": "person",
+      "category": "CECRL"
+    },
+    "raw_response": {
+      "output": {
+        "message": {
+          "content": [
+            {
+              "text": "```json { \"result\": { \"firstName\": \"KELLY ANDREA\", \"lastName\": \"HERNANDEZ RAMIREZ\", \"country_issuer\": \"Colombia\", \"nationality\": \"Colombia\", \"identificationType\": \"Cédula de Ciudadanía\", \"identificationNumber\": \"52.862.237\", \"message\": \"\" }, \"document_type\": \"person\", \"category\": \"CECRL\" } ```"
+            }
+          ]
+        }
+      },
+      "stopReason": "end_turn",
+      "usage": {
+        "input_tokens": 10,
+        "cache_creation_input_tokens": 6130,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 523
+      },
+      "ResponseMetadata": {
+        "RequestId": "31d56a7e-3f4b-4019-8a2c-2b8b41b4dab5",
+        "HTTPStatusCode": 200,
+        "HTTPHeaders": {
+          "date": "Fri, 29 Aug 2025 15:54:12 GMT",
+          "content-type": "application/json",
+          "content-length": "4254",
+          "connection": "keep-alive",
+          "x-amzn-requestid": "31d56a7e-3f4b-4019-8a2c-2b8b41b4dab5",
+          "x-amzn-bedrock-invocation-latency": "10604",
+          "x-amzn-bedrock-cache-write-input-token-count": "6130",
+          "x-amzn-bedrock-cache-read-input-token-count": "0",
+          "x-amzn-bedrock-output-token-count": "523",
+          "x-amzn-bedrock-input-token-count": "10"
+        },
+        "RetryAttempts": 0
+      },
+      "raw_anthropic_response": {
+        "id": "msg_bdrk_01CeXMeGwo8jBRqZuZgaLYbt",
+        "type": "message",
+        "role": "assistant",
+        "model": "claude-sonnet-4-20250514",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "Let me analyze this Colombian ID document carefully using the dual-mode extraction system. Looking at the image, I can see this is a Colombian Cédula de Ciudadanía (Citizen ID Card). The document has: 1. **Document Header**: \"REPÚBLICA DE COLOMBIA\" and \"IDENTIFICACIÓN PERSONAL\" and \"CÉDULA DE CIUDADANÍA\" 2. **Personal Information**: I can see: - A number: 52.862.237 - Names section: I can see \"HERNANDEZ RAMIREZ\" - I can also see \"KELLY ANDREA\" - There appears to be a signature 3. **Additional Information Section**: - Birth date: \"21-ABR-1981\" - Birth place: \"BOGOTA D.C.\" - Some other details including height \"1.55\", blood type \"B+\", sex \"F\" Let me apply the field detection methodology: **firstName**: Looking for \"NOMBRES:\" field - I can see \"KELLY ANDREA\" which appears to be the given names **lastName**: Looking for \"APELLIDOS:\" field - I can see \"HERNANDEZ RAMIREZ\" which appears to be the surnames **country_issuer**: This is clearly \"REPÚBLICA DE COLOMBIA\" so \"Colombia\" **nationality**: Since this is a Colombian cédula and birth place is \"BOGOTA D.C.\" (Colombia), nationality should be \"Colombia\" **identificationType**: This is a \"CÉDULA DE CIUDADANÍA\" **identificationNumber**: The number appears to be \"52.862.237\" The document appears to be an official Colombian government-issued ID card, so this is legitimate.",
+            "signature": "EosMCkgIBxABGAIqQLNQGc+E1/BF9D9WlUgAjpSj/5wA1IL95/IXnmpC3iNoG4fFa/gIlIC6dEQUSBS0cq1SofPespsGceJYxIqJU98SDIKarkdX2Zd2g72RZRoMkxJ7tnOK0+4dnJSHIjBD15MwtSAy+WDXQ0qY/wQ5/b+8+zmhZYirvHUPD4uUSomSnAINnFIF2AYDaw7KpYgq8AovXMgx4abo2hYKSK0nOou2vSdp4sTnvV0iaKdc/jBO1LnuWK6DS+eTwC5w4UdKoekF2OD97iOkBcFftQm1edTUPXRLzdtDiW7kQHgCMmXEXp6SyGAuuUMmbnEzsIyPRoMVkfPXmpc3IHPzwjkT2v6CDhUPI6gSVXM30GEon3VjG+duBGr7hO3GNfQtXQ2WolZuPfc8kB54xqvbHoBZJmFPZak/Qicwv9uM9m7qKb5vjyfKGPmdQftjjx/ibWyi90Slu/hD2/SK7wi6ihp1rpZUZHWKEtBwT0g/iiL8ISMoyB3uQthbfX8xVNKKx5IsGUEzkrUTh8iGawkQu9lm25O9GMbZihlO7Hr/pWybQDUaA4lY6g3DhO2M/f05NE4PA2jx08XHJF7kS47iGALq5nvhWJyR0EuJMlQyCmZd1pv+7g2QEjGQ2Mk+KzofvYZwPk6EkelvMYwz3AV7lDEaWtcPb4sBk7W0xQvy9mER1nhqmjcxKqAHAs0nS7nnfW8rL7XC97Rlp8u7gZsVKgzbAV1rBMZXnX1Y6gL3n2spIq6HOKEhPOONDiUeN+yqlw5iM9h0DxQNc06+AcLMyR3QQXL0UF5EeB88VDLwz29BPQTcJ9+AxY6fs6MS81/MZlvm71Xq1zvdQSaKo2pJVE6yzpufal49z6SG0Bhjez8bkgCM3eR9xx3BiLWPGfDF5/Vm+5H1Bih4BbfX3JTsz1xjGF8b3b1tyNTaU+ALdJp9+iHK/DwE+5Tkbi2jA8E+0dzCVawg34a59uhHh8NdM7NdUOvNFzNY/Y3iQ0JiH4it1iU9v4RvjYaSBbowvwVjqumtJJlvROv9Czvywx1LPYszW+saf4eKbKo76Vqr0YhdKimDFWFKbjauJZUzSS5ROx5lO0DC2KpKY0GM+HA0JYDV+nLHxWRAWTotoR99Wcq6PDUjzw0GYsn+lxAauhzQ8e8W4+Yleo4dsxBaTrq2LarATHnGL7lJY5rd42xFWR/3TwjhMAUZAgRY21TVCCiuFhPyPn5KX2Qnt9GFhhcnsa+4dFRXRCEuc/aC4n1inDX/VngDkcpKdIpNJFG3yVjRLRg36K2bYC88d3Rq4WbkEgsMVqP2tJIgK0qhjjy5kZq2JXIhUXujnUadZnS+ge7uF/KoOXyAdZPwx4Sc2ygw8wmQf7I0VpnV5MgkcvVlB3zeZtpTA1gZ5C3SdyzjsICVDCix/2Tou7V1xpIczpmZowx6wX3oDrZE9l37ioGc32shnpIGsBycypeGaB5uXdE/KK/lf0UPieZGdY9A8Hg6MVQyvSNAAiY6FDy+kv4Mnbcyjr7it2uqhN9gs+YiTfA2WCO8LhSwXLDHZYHVWOWVnXDmbAyMSoCJwFcHVl1gjNnkFrVP91NoMri+sG5iFD/uPYY/7BW50jj8Qj/VkAbPyjYAgoqzi3W/R/D9rtoxrveVppcjxyX99qdgUazvFaVjksKVl5ZFzpUoPzpPo/CUEt0NJ0auqhsuAqEpJ4Mxfrx1qYMJYXfmlxXWHtgwqevUiwtuIXtXxYV/1+APplfjTzHGsEQODGg7hNvk9tbOhJxpIvis6QauSplLT71LyIiww7X8q+1EMV+yZUCcRcpXrY/cnpSuyATQn7dCK0qLOePJUMhh6TJXal4hArAj7VH4S0xNocFWZieBVXHS/Esp43xNyCbqFkwN2WhgfNg8OKMLG/Duxy8kKBs4nLYHLmgxCXAuvhG9YQzy4YoRI8ofcZRq06ZE/OWj6qLQRf9NDBPHCMt6sDDnDE7TGzR9zF19bTokL0fF1sCAPDLlkynpLFQSGCChYX4twRJdo//kiLV6Rp4yqrKzGgW04pXAOMqzzFkvbyIYAQ=="
+          },
+          {
+            "type": "text",
+            "text": "```json { \"result\": { \"firstName\": \"KELLY ANDREA\", \"lastName\": \"HERNANDEZ RAMIREZ\", \"country_issuer\": \"Colombia\", \"nationality\": \"Colombia\", \"identificationType\": \"Cédula de Ciudadanía\", \"identificationNumber\": \"52.862.237\", \"message\": \"\" }, \"document_type\": \"person\", \"category\": \"CECRL\" } ```"
+          }
+        ],
+        "stop_reason": "end_turn",
+        "stop_sequence": null,
+        "usage": {
+          "input_tokens": 10,
+          "cache_creation_input_tokens": 6130,
+          "cache_read_input_tokens": 0,
+          "output_tokens": 523
+        }
+      },
+      "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+      "api_used": "invoke_model",
+      "model_params": {
+        "max_tokens": 8000,
+        "top_p": 1,
+        "temperature": 1,
+        "thinking": {
+          "type": "enabled",
+          "budget_tokens": 4096
+        }
+      }
+    },
+    "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model"
+  }
+}

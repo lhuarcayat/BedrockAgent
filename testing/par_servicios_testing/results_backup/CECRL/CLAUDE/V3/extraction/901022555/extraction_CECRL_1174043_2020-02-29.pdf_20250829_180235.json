@@ -1,0 +1,88 @@
+{
+  "extraction_data": {
+    "result": {
+      "firstName": "PUBLIO ROBERTO",
+      "lastName": "SIERRA",
+      "country_issuer": "Colombia",
+      "nationality": "Colombia",
+      "identificationType": "Cédula de Ciudadanía",
+      "identificationNumber": "1.174.043",
+      "message": "Posible desalineación entre etiquetas y valores de nombres en el documento"
+    },
+    "document_type": "person",
+    "category": "CECRL"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "```json { \"result\": { \"firstName\": \"PUBLIO ROBERTO\", \"lastName\": \"SIERRA\", \"country_issuer\": \"Colombia\", \"nationality\": \"Colombia\", \"identificationType\": \"Cédula de Ciudadanía\", \"identificationNumber\": \"1.174.043\", \"message\": \"Posible desalineación entre etiquetas y valores de nombres en el documento\" }, \"document_type\": \"person\", \"category\": \"CECRL\" } ```"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 10,
+      "cache_creation_input_tokens": 6419,
+      "cache_read_input_tokens": 0,
+      "output_tokens": 1047
+    },
+    "ResponseMetadata": {
+      "RequestId": "1b765e41-97c1-4ecf-ae9c-6047a278ecb3",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Fri, 29 Aug 2025 23:02:35 GMT",
+        "content-type": "application/json",
+        "content-length": "7807",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "1b765e41-97c1-4ecf-ae9c-6047a278ecb3",
+        "x-amzn-bedrock-invocation-latency": "18441",
+        "x-amzn-bedrock-cache-write-input-token-count": "6419",
+        "x-amzn-bedrock-cache-read-input-token-count": "0",
+        "x-amzn-bedrock-output-token-count": "1047",
+        "x-amzn-bedrock-input-token-count": "10"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_01KZfyh2aiHZ6qnPSunVZoSX",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-sonnet-4-20250514",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Let me analyze this Colombian identification document carefully. Looking at the document, I can see: 1. At the top: \"REPUBLICA DE COLOMBIA\" and \"IDENTIFICACION PERSONAL\" and \"CEDULA DE CIUDADANIA\" 2. There's a number: 1.174.043 with \"SIERRA\" next to it 3. I can see \"APELLIDOS\" with what appears to be \"PUBLIO ROBERTO\" next to it 4. There's a signature area 5. In the bottom section, I can see: - \"FECHA DE NACIMIENTO: 11-OCT-1965\" - \"CHIQUINQUIRA (BOYACA)\" - \"LUGAR DE NACIMIENTO\" - Height: 1.71 - Blood type: O+ - Sex: M - \"12-OCT-1983 TINJACA\" - \"FECHA Y LUGAR DE EXPEDICION\" Wait, let me look more carefully at the names section. I see \"APELLIDOS\" and then what looks like \"PUBLIO ROBERTO\". But this seems inconsistent - usually apellidos (surnames) would be family names, not given names like \"PUBLIO ROBERTO\" which sound like first names. Let me re-examine this more carefully. Looking at the structure: - The document shows \"REPUBLICA DE COLOMBIA\" - It says \"CEDULA DE CIUDADANIA\" - Number appears to be 1.174.043 - There's text that says \"SIERRA\" - Under \"APELLIDOS\" I see text that looks like it could be \"PUBLIO ROBERTO\" But wait, I need to be careful here. Let me look at this again with the contextual analysis approach. The document structure shows: - This is clearly a Colombian \"Cédula de Ciudadanía\" - The number appears to be 1.174.043 - There's \"SIERRA\" which could be a surname - The name configuration seems unusual and requires careful interpretation I'm noticing a potential discrepancy in the document's name layout. The positioning of \"SIERRA\" and \"PUBLIO ROBERTO\" doesn't follow typical Colombian identification document naming conventions. There might be an unexpected arrangement or potential misalignment in how the names are recorded. The semantic analysis suggests \"PUBLIO ROBERTO\" functions as given names, while \"SIERRA\" appears more characteristic of a surname placement. This interpretation aligns with standard naming structures, indicating a likely correct extraction of personal identification details. The document reveals clear Colombian origin, with identification type specified as Cédula de Ciudadanía and a unique numerical identifier present. Careful cross-referencing of labels and values ensures accurate information capture.",
+          "signature": "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"
+        },
+        {
+          "type": "text",
+          "text": "```json { \"result\": { \"firstName\": \"PUBLIO ROBERTO\", \"lastName\": \"SIERRA\", \"country_issuer\": \"Colombia\", \"nationality\": \"Colombia\", \"identificationType\": \"Cédula de Ciudadanía\", \"identificationNumber\": \"1.174.043\", \"message\": \"Posible desalineación entre etiquetas y valores de nombres en el documento\" }, \"document_type\": \"person\", \"category\": \"CECRL\" } ```"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 10,
+        "cache_creation_input_tokens": 6419,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 1047
+      }
+    },
+    "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 8000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+  "api_used": "invoke_model"
+}

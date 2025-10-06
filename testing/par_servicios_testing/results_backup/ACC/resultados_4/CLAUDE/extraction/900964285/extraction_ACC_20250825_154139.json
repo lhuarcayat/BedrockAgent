@@ -1,0 +1,144 @@
+{
+  "extraction_data": {
+    "path": "",
+    "result": {
+      "companyName": "ASESORÍAS Y GESTIONES AMBIENTALES SAS",
+      "documentType": "Equity Composition",
+      "taxId": "900.964.285-3",
+      "country": "Colombia",
+      "identificationDetails": {
+        "source": "id_analysis",
+        "indicators": [
+          "NIT 900.964.285-3",
+          "CC identification numbers for individuals"
+        ],
+        "conflictingSources": [],
+        "requiresReview": true
+      },
+      "relatedParties": [
+        {
+          "firstName": "JAIME ALEXANDER",
+          "lastName": "FRANCO PEDRAZA",
+          "identificationType": "CC",
+          "identificationNumber": "79770147",
+          "relationshipType": "Shareholder",
+          "participationPercentage": "33,33%",
+          "timeFound": 1,
+          "job": ""
+        },
+        {
+          "firstName": "JAIME ALEXANDER",
+          "lastName": "FRANCO PEDRAZA",
+          "identificationType": "CC",
+          "identificationNumber": "79770147",
+          "relationshipType": "Shareholder",
+          "participationPercentage": "",
+          "timeFound": 2,
+          "job": "Representante Legal"
+        },
+        {
+          "firstName": "MARTHA LILIA",
+          "lastName": "CELIS GORDO",
+          "identificationType": "CC",
+          "identificationNumber": "51880385",
+          "relationshipType": "Shareholder",
+          "participationPercentage": "33,33%",
+          "timeFound": 1,
+          "job": ""
+        },
+        {
+          "firstName": "GIOVANNY ANDRES",
+          "lastName": "VEGA FORERO",
+          "identificationType": "CC",
+          "identificationNumber": "79958347",
+          "relationshipType": "Shareholder",
+          "participationPercentage": "33,33%",
+          "timeFound": 1,
+          "job": ""
+        }
+      ]
+    },
+    "document_type": "company",
+    "document_number": "900964285",
+    "category": "ACC",
+    "confidenceScores": {
+      "companyName": 95,
+      "taxId": 95,
+      "country": 98,
+      "relatedParties": 65
+    }
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "```json { \"path\": \"\", \"result\": { \"companyName\": \"ASESORÍAS Y GESTIONES AMBIENTALES SAS\", \"documentType\": \"Equity Composition\", \"taxId\": \"900.964.285-3\", \"country\": \"Colombia\", \"identificationDetails\": { \"source\": \"id_analysis\", \"indicators\": [ \"NIT 900.964.285-3\", \"CC identification numbers for individuals\" ], \"conflictingSources\": [], \"requiresReview\": true }, \"relatedParties\": [ { \"firstName\": \"JAIME ALEXANDER\", \"lastName\": \"FRANCO PEDRAZA\", \"identificationType\": \"CC\", \"identificationNumber\": \"79770147\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"33,33%\", \"timeFound\": 1, \"job\": \"\" }, { \"firstName\": \"JAIME ALEXANDER\", \"lastName\": \"FRANCO PEDRAZA\", \"identificationType\": \"CC\", \"identificationNumber\": \"79770147\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"\", \"timeFound\": 2, \"job\": \"Representante Legal\" }, { \"firstName\": \"MARTHA LILIA\", \"lastName\": \"CELIS GORDO\", \"identificationType\": \"CC\", \"identificationNumber\": \"51880385\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"33,33%\", \"timeFound\": 1, \"job\": \"\" }, { \"firstName\": \"GIOVANNY ANDRES\", \"lastName\": \"VEGA FORERO\", \"identificationType\": \"CC\", \"identificationNumber\": \"79958347\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"33,33%\", \"timeFound\": 1, \"job\": \"\" } ] }, \"document_type\": \"company\", \"document_number\": \"900964285\", \"category\": \"ACC\", \"confidenceScores\": { \"companyName\": 95, \"taxId\": 95, \"country\": 98, \"relatedParties\": 65 } } ```"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 496,
+      "cache_creation_input_tokens": 9452,
+      "cache_read_input_tokens": 0,
+      "output_tokens": 1386
+    },
+    "ResponseMetadata": {
+      "RequestId": "5ee3c09d-ec22-4e74-a32a-5b8d537f7b23",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Mon, 25 Aug 2025 20:41:38 GMT",
+        "content-type": "application/json",
+        "content-length": "8704",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "5ee3c09d-ec22-4e74-a32a-5b8d537f7b23",
+        "x-amzn-bedrock-invocation-latency": "20755",
+        "x-amzn-bedrock-cache-write-input-token-count": "9452",
+        "x-amzn-bedrock-cache-read-input-token-count": "0",
+        "x-amzn-bedrock-output-token-count": "1386",
+        "x-amzn-bedrock-input-token-count": "496"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_01RAtaVmQ7YKJdnxvnehgKQX",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-sonnet-4-20250514",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Let me analyze this equity composition document step by step: 1. **Country Identification**: - I can see explicit references to Colombia based on Colombian tax ID patterns (NIT) and the fact that all shareholders have Colombian cedula numbers. The company has a NIT number which is specific to Colombia. - The domain \"agambientales.com\" doesn't help with country identification. - The identification patterns (NIT for company, CC for persons) strongly indicate Colombia. 2. **Root-Level Company Information**: - Company Name: \"ASESORÍAS Y GESTIONES AMBIENTALES SAS\" - this appears in the header and certification text - Tax ID: \"900.964.285-3\" - clearly stated as NIT - Document Type: This is clearly an equity composition document (\"composición accionaria\") 3. **Related Parties Extraction**: Looking at the table, I can see three shareholders: a) JAIME ALEXANDER FRANCO PEDRAZA - NIT: 79770147 (but this should be CC for a person) - Capital: 20.000.000, Shares: 20.000, Percentage: 33,33% b) MARTHA LILIA CELIS GORDO - NIT: 51880385 (but this should be CC for a person) - Capital: 20.000.000, Shares: 20.000, Percentage: 33,33% c) GIOVANNY ANDRES VEGA FORERO - NIT: 79958347 (but this should be CC for a person) - Capital: 20.000.000, Shares: 20.000, Percentage: 33,33% All three appear to be individual persons based on their names, but they're listed under \"NIT\" column. Since these are Colombian personal identification numbers and they represent individuals, I should classify them as CC (Colombian personal ID). I observe that Jaime Alexander Franco Pedraza serves dual roles - he's both a shareholder and the legal representative. This suggests he has multiple significant positions within the company, with different time-based identifications for each role. 4. **Name Splitting**: I'll break down the full names into first and last name components, noting the nuanced structure of Colombian names: - Jaime Alexander Franco Pedraza has a compound first name and a two-part last name - Martha Lilia Celis Gordo similarly has a compound first name and two-part last name - Giovanny Andres Vega Forero follows the same naming pattern The identification types reveal potential data inconsistencies that require careful verification. The misalignment between NIT and CC for individual records introduces uncertainty, prompting a need for thorough review and potential data correction.",
+          "signature": "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"
+        },
+        {
+          "type": "text",
+          "text": "```json { \"path\": \"\", \"result\": { \"companyName\": \"ASESORÍAS Y GESTIONES AMBIENTALES SAS\", \"documentType\": \"Equity Composition\", \"taxId\": \"900.964.285-3\", \"country\": \"Colombia\", \"identificationDetails\": { \"source\": \"id_analysis\", \"indicators\": [ \"NIT 900.964.285-3\", \"CC identification numbers for individuals\" ], \"conflictingSources\": [], \"requiresReview\": true }, \"relatedParties\": [ { \"firstName\": \"JAIME ALEXANDER\", \"lastName\": \"FRANCO PEDRAZA\", \"identificationType\": \"CC\", \"identificationNumber\": \"79770147\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"33,33%\", \"timeFound\": 1, \"job\": \"\" }, { \"firstName\": \"JAIME ALEXANDER\", \"lastName\": \"FRANCO PEDRAZA\", \"identificationType\": \"CC\", \"identificationNumber\": \"79770147\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"\", \"timeFound\": 2, \"job\": \"Representante Legal\" }, { \"firstName\": \"MARTHA LILIA\", \"lastName\": \"CELIS GORDO\", \"identificationType\": \"CC\", \"identificationNumber\": \"51880385\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"33,33%\", \"timeFound\": 1, \"job\": \"\" }, { \"firstName\": \"GIOVANNY ANDRES\", \"lastName\": \"VEGA FORERO\", \"identificationType\": \"CC\", \"identificationNumber\": \"79958347\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"33,33%\", \"timeFound\": 1, \"job\": \"\" } ] }, \"document_type\": \"company\", \"document_number\": \"900964285\", \"category\": \"ACC\", \"confidenceScores\": { \"companyName\": 95, \"taxId\": 95, \"country\": 98, \"relatedParties\": 65 } } ```"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 496,
+        "cache_creation_input_tokens": 9452,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 1386
+      }
+    },
+    "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 8000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+  "api_used": "invoke_model"
+}

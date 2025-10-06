@@ -1,0 +1,103 @@
+{
+  "extraction_data": {
+    "result": {
+      "CompanyName": "PROFESIONALES TECNICOS SAS",
+      "CompanyType": "SAS",
+      "Country": "COLOMBIA",
+      "DocumentPages": "2",
+      "DocumentType": "CERL",
+      "TaxId": "800159379-1",
+      "MainAddress": "CARRERA 26 NO. 19 - 72, Neiva",
+      "IncorporationDate": "1992-04-03",
+      "CompanyDuration": "",
+      "RegistrationNumber": "00055898",
+      "Size": "Medianas",
+      "RelatedParties": [
+        {
+          "FirstName": "HECTOR RAMON",
+          "LastName": "CASTAÑEDA MAYOR",
+          "IdType": "C.C.",
+          "IdNumber": "000000019354584",
+          "RelationshipType": "Representante Legal"
+        }
+      ],
+      "Embargoes": "",
+      "Liquidations": "",
+      "DocumentIssueDate": "2018-09-18",
+      "LastRegistrationRenewalDate": "2016-06-10"
+    }
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "```json { \"result\": { \"CompanyName\": \"PROFESIONALES TECNICOS SAS\", \"CompanyType\": \"SAS\", \"Country\": \"COLOMBIA\", \"DocumentPages\": \"2\", \"DocumentType\": \"CERL\", \"TaxId\": \"800159379-1\", \"MainAddress\": \"CARRERA 26 NO. 19 - 72, Neiva\", \"IncorporationDate\": \"1992-04-03\", \"CompanyDuration\": \"\", \"RegistrationNumber\": \"00055898\", \"Size\": \"Medianas\", \"RelatedParties\": [ { \"FirstName\": \"HECTOR RAMON\", \"LastName\": \"CASTAÑEDA MAYOR\", \"IdType\": \"C.C.\", \"IdNumber\": \"000000019354584\", \"RelationshipType\": \"Representante Legal\" } ], \"Embargoes\": \"\", \"Liquidations\": \"\", \"DocumentIssueDate\": \"2018-09-18\", \"LastRegistrationRenewalDate\": \"2016-06-10\" } } ```"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 3798,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 2304,
+      "output_tokens": 901
+    },
+    "ResponseMetadata": {
+      "RequestId": "8461bf7b-c664-4598-b334-78e3993600a0",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Mon, 01 Sep 2025 06:22:05 GMT",
+        "content-type": "application/json",
+        "content-length": "5624",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "8461bf7b-c664-4598-b334-78e3993600a0",
+        "x-amzn-bedrock-invocation-latency": "13158",
+        "x-amzn-bedrock-cache-write-input-token-count": "0",
+        "x-amzn-bedrock-cache-read-input-token-count": "2304",
+        "x-amzn-bedrock-output-token-count": "901",
+        "x-amzn-bedrock-input-token-count": "3798"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_015GYsyYsB18wFin59EzmJ4c",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-sonnet-4-20250514",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Let me analyze this Colombian business registration document step by step according to the extraction rules. ### 1. Page Count I can see at the bottom of both pages \"Pagina 1 de 2\" and \"Pagina 2 de 2\", indicating this is a 2-page document. ### 2. Company Information - CompanyName: \"PROFESIONALES TECNICOS SAS\" (appears in \"Razón Social\" field) - CompanyType: \"SAS\" (from the company name and also mentioned as \"Sociedad por Acciones Simplificada\") - Country: \"COLOMBIA\" (appears in País field, and this is issued by Cámara de Comercio) - TaxId: \"800159379-1\" (appears in NIT field) - IdentificationType: \"NIT\" (standard for Colombian companies) ### 3. Address and Location - MainAddress: \"CARRERA 26 NO. 19 - 72, Neiva\" (combining the Dirección and Ciudad fields) ### 4. Dates - IncorporationDate: \"1992-04-03\" (from \"Fecha Registro Mercantil\" which shows the registration date) - DocumentIssueDate: \"2018-09-18\" (from the top of the document \"2018/09/18 Camara de comercio descargada en linea\") - LastRegistrationRenewalDate: \"2016-06-10\" (from \"Fecha Última Renovación: 10/06/2016\") - CompanyDuration: Not mentioned in the document, so should be empty ### 5. Registration and Size - RegistrationNumber: \"00055898\" (from \"Matricula Registro Mercantil\") - Size: \"Medianas\" (from \"Tamaño: Medianas\") ### 6. Related Parties I can see: The legal representative is Hector Ramon Castañeda Mayor, identified with a Colombian ID (C.C.) number 000000019354584. This individual serves as the company's legal representative, holding a key leadership role in the organization. ### 7. Extra Fields - Liquidations: No information about liquidations mentioned - Embargoes: No information about embargoes mentioned",
+          "signature": "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"
+        },
+        {
+          "type": "text",
+          "text": "```json { \"result\": { \"CompanyName\": \"PROFESIONALES TECNICOS SAS\", \"CompanyType\": \"SAS\", \"Country\": \"COLOMBIA\", \"DocumentPages\": \"2\", \"DocumentType\": \"CERL\", \"TaxId\": \"800159379-1\", \"MainAddress\": \"CARRERA 26 NO. 19 - 72, Neiva\", \"IncorporationDate\": \"1992-04-03\", \"CompanyDuration\": \"\", \"RegistrationNumber\": \"00055898\", \"Size\": \"Medianas\", \"RelatedParties\": [ { \"FirstName\": \"HECTOR RAMON\", \"LastName\": \"CASTAÑEDA MAYOR\", \"IdType\": \"C.C.\", \"IdNumber\": \"000000019354584\", \"RelationshipType\": \"Representante Legal\" } ], \"Embargoes\": \"\", \"Liquidations\": \"\", \"DocumentIssueDate\": \"2018-09-18\", \"LastRegistrationRenewalDate\": \"2016-06-10\" } } ```"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 3798,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 2304,
+        "output_tokens": 901
+      }
+    },
+    "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 8000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+  "api_used": "invoke_model"
+}

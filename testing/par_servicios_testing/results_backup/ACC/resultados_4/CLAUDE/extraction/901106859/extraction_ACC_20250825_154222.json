@@ -1,0 +1,124 @@
+{
+  "extraction_data": {
+    "path": "ACC/901106859/131_CA_2020-02-29.pdf",
+    "result": {
+      "companyName": "CONSTRUCTORA E INMOBILIARIA RIVERA INCORA SAS",
+      "documentType": "Equity Composition",
+      "taxId": "901.106.859-4",
+      "country": "Colombia",
+      "identificationDetails": {
+        "source": "text_reference",
+        "indicators": [
+          "Bogotá",
+          "NIT (Colombia tax ID)"
+        ],
+        "conflictingSources": [],
+        "requiresReview": false
+      },
+      "relatedParties": [
+        {
+          "firstName": "LEOWILSTON",
+          "lastName": "RIVERA MENDEZ",
+          "identificationType": "CC",
+          "identificationNumber": "80.057.686",
+          "relationshipType": "Shareholder",
+          "participationPercentage": "49%",
+          "timeFound": 1,
+          "job": ""
+        },
+        {
+          "firstName": "MARCOS JAIR",
+          "lastName": "CUERVO MENDEZ",
+          "identificationType": "CC",
+          "identificationNumber": "1.022.372.943",
+          "relationshipType": "Shareholder",
+          "participationPercentage": "51%",
+          "timeFound": 1,
+          "job": ""
+        }
+      ]
+    },
+    "document_type": "company",
+    "document_number": "901106859",
+    "category": "ACC",
+    "confidenceScores": {
+      "companyName": 95,
+      "taxId": 95,
+      "country": 98,
+      "relatedParties": 95
+    }
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "```json { \"path\": \"ACC/901106859/131_CA_2020-02-29.pdf\", \"result\": { \"companyName\": \"CONSTRUCTORA E INMOBILIARIA RIVERA INCORA SAS\", \"documentType\": \"Equity Composition\", \"taxId\": \"901.106.859-4\", \"country\": \"Colombia\", \"identificationDetails\": { \"source\": \"text_reference\", \"indicators\": [ \"Bogotá\", \"NIT (Colombia tax ID)\" ], \"conflictingSources\": [], \"requiresReview\": false }, \"relatedParties\": [ { \"firstName\": \"LEOWILSTON\", \"lastName\": \"RIVERA MENDEZ\", \"identificationType\": \"CC\", \"identificationNumber\": \"80.057.686\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"49%\", \"timeFound\": 1, \"job\": \"\" }, { \"firstName\": \"MARCOS JAIR\", \"lastName\": \"CUERVO MENDEZ\", \"identificationType\": \"CC\", \"identificationNumber\": \"1.022.372.943\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"51%\", \"timeFound\": 1, \"job\": \"\" } ] }, \"document_type\": \"company\", \"document_number\": \"901106859\", \"category\": \"ACC\", \"confidenceScores\": { \"companyName\": 95, \"taxId\": 95, \"country\": 98, \"relatedParties\": 95 } } ```"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 496,
+      "cache_creation_input_tokens": 9452,
+      "cache_read_input_tokens": 0,
+      "output_tokens": 1021
+    },
+    "ResponseMetadata": {
+      "RequestId": "0034214b-016e-40f4-bdd4-31eab5f8c099",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Mon, 25 Aug 2025 20:42:22 GMT",
+        "content-type": "application/json",
+        "content-length": "6162",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "0034214b-016e-40f4-bdd4-31eab5f8c099",
+        "x-amzn-bedrock-invocation-latency": "17584",
+        "x-amzn-bedrock-cache-write-input-token-count": "9452",
+        "x-amzn-bedrock-cache-read-input-token-count": "0",
+        "x-amzn-bedrock-output-token-count": "1021",
+        "x-amzn-bedrock-input-token-count": "496"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_01MSXihFhteXQ6eVf24UtBmq",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-sonnet-4-20250514",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Let me carefully analyze this PDF document following the system instructions. 1. First, let me identify the country: - Looking for explicit references: I can see \"La presente se expide en la ciudad de Bogotá, a los seis (16) días del mes de Marzo de 2021\" - This explicitly mentions \"Bogotá\" which is in Colombia - The document also contains \"NIT\" which is Colombia's tax ID type 2. Root-Level main reporting company fields: - CompanyName: Looking at the document header/title: \"EL SUSCRITO CONTADOR PÚBLICO DE LA SOCIEDAD CONSTRUCTORA E INMOBILIARIA RIVERA INCORA SAS\" - So the company name is \"CONSTRUCTORA E INMOBILIARIA RIVERA INCORA SAS\" - TaxId: \"NIT 901.106.859-4\" 3. Related Parties Extraction: Looking at the table, I see two shareholders: - LEOWILSTON RIVERA MENDEZ with document number 80.057.686, 49% participation, $98.000.000 value, 196 shares - MARCOS JAIR CUERVO MENDEZ with document number 1.022.372.943, 51% participation, $102.000.000 value, 204 shares These appear to be individuals (personal names), not companies. Based on the document numbers and the fact we're in Colombia, these should be \"CC\" (Cédula de Ciudadanía) identification types. Let me check the ID patterns for Colombia: - For CC: should match /^[1-9][0-9]{3,9}$/ - 80057686 (removing dots) - matches the pattern for CC - 1022372943 - matches the pattern for CC 4. Name splitting: - LEOWILSTON RIVERA MENDEZ: firstName = \"LEOWILSTON\", lastName = \"RIVERA MENDEZ\" - MARCOS JAIR CUERVO MENDEZ: firstName = \"MARCOS JAIR\", lastName = \"CUERVO MENDEZ\" I've confirmed the name splitting for both shareholders, identifying their first and last names based on the Colombian naming convention.",
+          "signature": "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"
+        },
+        {
+          "type": "text",
+          "text": "```json { \"path\": \"ACC/901106859/131_CA_2020-02-29.pdf\", \"result\": { \"companyName\": \"CONSTRUCTORA E INMOBILIARIA RIVERA INCORA SAS\", \"documentType\": \"Equity Composition\", \"taxId\": \"901.106.859-4\", \"country\": \"Colombia\", \"identificationDetails\": { \"source\": \"text_reference\", \"indicators\": [ \"Bogotá\", \"NIT (Colombia tax ID)\" ], \"conflictingSources\": [], \"requiresReview\": false }, \"relatedParties\": [ { \"firstName\": \"LEOWILSTON\", \"lastName\": \"RIVERA MENDEZ\", \"identificationType\": \"CC\", \"identificationNumber\": \"80.057.686\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"49%\", \"timeFound\": 1, \"job\": \"\" }, { \"firstName\": \"MARCOS JAIR\", \"lastName\": \"CUERVO MENDEZ\", \"identificationType\": \"CC\", \"identificationNumber\": \"1.022.372.943\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"51%\", \"timeFound\": 1, \"job\": \"\" } ] }, \"document_type\": \"company\", \"document_number\": \"901106859\", \"category\": \"ACC\", \"confidenceScores\": { \"companyName\": 95, \"taxId\": 95, \"country\": 98, \"relatedParties\": 95 } } ```"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 496,
+        "cache_creation_input_tokens": 9452,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 1021
+      }
+    },
+    "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 8000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+  "api_used": "invoke_model"
+}

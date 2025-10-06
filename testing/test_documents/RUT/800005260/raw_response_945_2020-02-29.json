@@ -1,0 +1,33 @@
+{
+  "ResponseMetadata": {
+    "RequestId": "330a3529-0ad3-4945-940e-90fdc7907d0b",
+    "HTTPStatusCode": 200,
+    "HTTPHeaders": {
+      "date": "Tue, 17 Jun 2025 14:30:27 GMT",
+      "content-type": "application/json",
+      "content-length": "1340",
+      "connection": "keep-alive",
+      "x-amzn-requestid": "330a3529-0ad3-4945-940e-90fdc7907d0b"
+    },
+    "RetryAttempts": 0
+  },
+  "output": {
+    "message": {
+      "role": "assistant",
+      "content": [
+        {
+          "text": "```json\n{\n  \"path\": \"s3://par-servicios-poc-dev-filling-desk/par-servicios-poc/RUT/800005260/945_2020-02-29.pdf\",\n  \"result\": {\n    \"companyName\": \"INDUSTRIAS INVERSIONES Y SERVICIOS DELRIO S A S\",\n    \"country\": \"COLOMBIA\",\n    \"documentType\": \"NIT\",\n    \"taxId\": \"800005260\",\n    \"verificationDigit\": \"3\",\n    \"personType\": \"Persona Jurídica\",\n    \"relatedParties\": [\n      {\n        \"firstName\": \"VILLABONA\",\n        \"lastName\": \"REYES OSCAR HERNANDO\",\n        \"identificationType\": \"C.C.\",\n        \"identificationNumber\": \"4984\",\n        \"relationshipType\": \"Representante Legal Suplete Certificado\"\n      }\n    ],\n    \"address\": \"CR 11 94 47 P 8 BRR EL CHICO, BOGOTA, D.C.\",\n    \"documentGenerationDate\": \"2023-09-09\"\n  },\n  \"confidenceScores\": {\n    \"companyName\": 95,\n    \"documentType\": 90,\n    \"country\": 100,\n    \"taxId\": 100,\n    \"verificationDigit\": 95,\n    \"personType\": 90,\n    \"address\": 85,\n    \"relatedParties\": 85\n  },\n  \"document_type\": \"company\",\n  \"document_number\": \"800005260\",\n  \"category\": \"RUT\"\n}\n```"
+        }
+      ]
+    }
+  },
+  "stopReason": "end_turn",
+  "usage": {
+    "inputTokens": 7089,
+    "outputTokens": 383,
+    "totalTokens": 7472
+  },
+  "metrics": {
+    "latencyMs": 8624
+  }
+}

@@ -1,0 +1,205 @@
+{
+  "document_name": "58_CA_2020-02-29.pdf",
+  "category": "ACC",
+  "classification_success": true,
+  "extraction_success": true,
+  "overall_success": true,
+  "timestamp": "2025-08-28T04:39:16.840961",
+  "classification_result": {
+    "classification_data": {
+      "category": "ACC",
+      "text": "CERTIFICADO DE COMPOSICIÓN ACCIONARIA Yo, _HENRY ANTONIO ALTERIO GONZÁLEZ , identificado con (CC/CE/PP/ID) _CC _ECOSIMPLE SAS No._79694634 obrando en representación de (nombre del representado) identificado con (NIT/TAX ID /Otro) _NIT No. 900365151-5 certifico bajo la gravedad del juramento, sujeto a las sanciones establecidas en el Código Penal, que los asociados, socios o accionistas que tienen más del CINCO PORCIENTO (5%) de participación en el capital social de la entidad que represento son las personas naturales o jurídicas que aparecen en la siguiente relación: NOMBRE DEL ACCIONISTA, SOCIO O ASOCIADO IDENTIFICACIÓN PARTICIPACIÓN EN EL CAPITALSOCIAL (%) HENRY ANTONIO ALTERIO GONZÁLEZ 79694634 100 Fecha de diligenciamiento: 27 DE FEBRERO DE 2023 Nombre de la entidad: ECOSIMPLE SAS No. 900365151-5 Firma del representante legal Nombre del representante legal: HENRY ANTONIO ALTERIO GONZÁLEZ Documento de Identificación: 79694634",
+      "document_number": "900365151",
+      "path": "ACC/900365151/58_CA_2020-02-29.pdf"
+    },
+    "raw_response": {
+      "output": {
+        "message": {
+          "content": [
+            {
+              "text": "```json { \"category\": \"ACC\", \"text\": \"CERTIFICADO DE COMPOSICIÓN ACCIONARIA\\nYo, _HENRY ANTONIO ALTERIO GONZÁLEZ ,\\nidentificado con (CC/CE/PP/ID) _CC\\n_ECOSIMPLE SAS\\nNo._79694634 obrando en representación de (nombre del representado)\\nidentificado con (NIT/TAX ID /Otro) _NIT\\nNo. 900365151-5 certifico bajo la gravedad del juramento, sujeto a las sanciones establecidas en el Código Penal, que\\nlos asociados, socios o accionistas que tienen más del CINCO PORCIENTO (5%) de participación en el capital social de la\\nentidad que represento son las personas naturales o jurídicas que aparecen en la siguiente relación:\\nNOMBRE DEL ACCIONISTA,\\nSOCIO O ASOCIADO IDENTIFICACIÓN PARTICIPACIÓN EN EL CAPITALSOCIAL (%)\\nHENRY ANTONIO ALTERIO\\nGONZÁLEZ\\n79694634 100\\nFecha de diligenciamiento: 27 DE FEBRERO DE 2023\\nNombre de la entidad: ECOSIMPLE SAS\\nNo. 900365151-5\\nFirma del representante legal\\nNombre del representante legal: HENRY ANTONIO ALTERIO GONZÁLEZ\\nDocumento de Identificación: 79694634\" } ```"
+            }
+          ]
+        }
+      },
+      "stopReason": "end_turn",
+      "usage": {
+        "input_tokens": 9,
+        "cache_creation_input_tokens": 4834,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 900
+      },
+      "ResponseMetadata": {
+        "RequestId": "5840f052-5240-4e49-b8f6-2f0ad4eeeb32",
+        "HTTPStatusCode": 200,
+        "HTTPHeaders": {
+          "date": "Thu, 28 Aug 2025 09:39:39 GMT",
+          "content-type": "application/json",
+          "content-length": "3786",
+          "connection": "keep-alive",
+          "x-amzn-requestid": "5840f052-5240-4e49-b8f6-2f0ad4eeeb32",
+          "x-amzn-bedrock-invocation-latency": "22625",
+          "x-amzn-bedrock-cache-write-input-token-count": "4834",
+          "x-amzn-bedrock-cache-read-input-token-count": "0",
+          "x-amzn-bedrock-output-token-count": "900",
+          "x-amzn-bedrock-input-token-count": "9"
+        },
+        "RetryAttempts": 0
+      },
+      "raw_anthropic_response": {
+        "id": "msg_bdrk_01NJLXqP9JfcVorzpMycFpUd",
+        "type": "message",
+        "role": "assistant",
+        "model": "claude-3-7-sonnet-20250219",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "Let me analyze this document carefully to properly classify it. First, I'll extract all the readable text: The document is titled \"CERTIFICADO DE COMPOSICIÓN ACCIONARIA\" (Certificate of Shareholding Composition). The document shows that Henry Antonio Alterio González (ID CC 79694634) is representing ECOSIMPLE SAS (NIT 900365151-5). He certifies under oath that the associates, partners, or shareholders who have more than 5% participation in the company's capital are listed in the document. In the table, there is only one shareholder listed: - Name: HENRY ANTONIO ALTERIO GONZÁLEZ - ID: 79694634 - Participation in capital: 100% The document was completed on February 27, 2023. The document is signed by the legal representative, Henry Antonio Alterio González. Now, let me classify this document according to the defined categories: 1. Is this BLANK? No, it contains meaningful content. 2. Is this LINK_ONLY? No, it's not primarily hyperlinks. 3. Is this CECRL? No, this is not a personal identification document. While it mentions an individual, it's in the context of company representation, not personal identification. 4. Is this RUT? No, this is not a tax registration document issued by DIAN. 5. Is this CERL? No, this is not a certificate of legal existence and representation issued by a Chamber of Commerce. 6. Is this ACC? Yes, this document meets the criteria for an ACC: - It's titled \"CERTIFICADO DE COMPOSICIÓN ACCIONARIA\" (Certificate of Shareholding Composition) - It explicitly states shareholding/ownership percentages (100% for Henry Antonio Alterio González) - It identifies the owner with name and ID number - It's certified by the legal representative - Its main purpose is to document the ownership structure of ECOSIMPLE SAS 7. Is this RUB? No, this is not a DIAN report about beneficial owners. Therefore, this document is clearly an ACC (Certificado de Composición Accionaria). It focuses on documenting the ownership structure of ECOSIMPLE SAS, showing that Henry Antonio Alterio González owns 100% of the company's shares.",
+            "signature": "ErcBCkgIBxABGAIiQFi0Kdhw5O5K9kWTJx7xED8MEVrNeWRV/5ZASNvXVmiTBvj9Kg+W+MvR67zoXifbRkZWwvGoRoh/ZWEEdL4bAucSDJl6MV5n4wu/C/AcKhoMAyv9Qz4DXW8ipZD4IjA3n1Vrt4QfKealr1gJGKdgcjpYqJIVKXN5fQQqUQ48+2v3y8Wh/vjVy72o/z7xNNoqHSPMrvUBBM5735yzfGtcuiwAvBwrALsq4III7uReGAI="
+          },
+          {
+            "type": "text",
+            "text": "```json { \"category\": \"ACC\", \"text\": \"CERTIFICADO DE COMPOSICIÓN ACCIONARIA\\nYo, _HENRY ANTONIO ALTERIO GONZÁLEZ ,\\nidentificado con (CC/CE/PP/ID) _CC\\n_ECOSIMPLE SAS\\nNo._79694634 obrando en representación de (nombre del representado)\\nidentificado con (NIT/TAX ID /Otro) _NIT\\nNo. 900365151-5 certifico bajo la gravedad del juramento, sujeto a las sanciones establecidas en el Código Penal, que\\nlos asociados, socios o accionistas que tienen más del CINCO PORCIENTO (5%) de participación en el capital social de la\\nentidad que represento son las personas naturales o jurídicas que aparecen en la siguiente relación:\\nNOMBRE DEL ACCIONISTA,\\nSOCIO O ASOCIADO IDENTIFICACIÓN PARTICIPACIÓN EN EL CAPITALSOCIAL (%)\\nHENRY ANTONIO ALTERIO\\nGONZÁLEZ\\n79694634 100\\nFecha de diligenciamiento: 27 DE FEBRERO DE 2023\\nNombre de la entidad: ECOSIMPLE SAS\\nNo. 900365151-5\\nFirma del representante legal\\nNombre del representante legal: HENRY ANTONIO ALTERIO GONZÁLEZ\\nDocumento de Identificación: 79694634\" } ```"
+          }
+        ],
+        "stop_reason": "end_turn",
+        "stop_sequence": null,
+        "usage": {
+          "input_tokens": 9,
+          "cache_creation_input_tokens": 4834,
+          "cache_read_input_tokens": 0,
+          "output_tokens": 900
+        }
+      },
+      "model_id": "us.anthropic.claude-3-7-sonnet-20250219-v1:0",
+      "api_used": "invoke_model",
+      "model_params": {
+        "max_tokens": 8000,
+        "top_p": 1,
+        "temperature": 1,
+        "thinking": {
+          "type": "enabled",
+          "budget_tokens": 4096
+        }
+      }
+    },
+    "expected_category": "ACC",
+    "model_used": "us.anthropic.claude-3-7-sonnet-20250219-v1:0",
+    "api_used": "invoke_model",
+    "pdf_info": {
+      "original_size": 54956,
+      "first_page_size": 45636,
+      "is_scanned": false
+    }
+  },
+  "extraction_result": {
+    "extraction_data": {
+      "path": "ACC/900365151/58_CA_2020-02-29.pdf",
+      "result": {
+        "companyName": "ECOSIMPLE SAS",
+        "documentCategory": "Equity Composition",
+        "taxId": "900365151-5",
+        "country": "Colombia",
+        "identificationDetails": {
+          "source": "id_analysis",
+          "indicators": [
+            "NIT format tax ID",
+            "CC (Cédula de Ciudadanía) identification type",
+            "Document in Spanish"
+          ],
+          "conflictingSources": [],
+          "requiresReview": "false"
+        },
+        "relatedParties": [
+          {
+            "type": "person",
+            "firstName": "HENRY ANTONIO",
+            "lastName": "ALTERIO GONZÁLEZ",
+            "identificationType": "C.C.",
+            "identificationNumber": "79694634",
+            "relationshipType": "Shareholder",
+            "participationPercentage": "100",
+            "timeFound": "1",
+            "job": "Representante Legal"
+          }
+        ]
+      },
+      "documentType": "company",
+      "documentNumber": "900365151",
+      "category": "ACC"
+    },
+    "raw_response": {
+      "output": {
+        "message": {
+          "content": [
+            {
+              "text": "```json { \"result\": { \"companyName\": \"ECOSIMPLE SAS\", \"documentCategory\": \"Equity Composition\", \"taxId\": \"900365151-5\", \"country\": \"Colombia\", \"identificationDetails\": { \"source\": \"id_analysis\", \"indicators\": [ \"NIT format tax ID\", \"CC (Cédula de Ciudadanía) identification type\", \"Document in Spanish\" ], \"conflictingSources\": [], \"requiresReview\": \"false\" }, \"relatedParties\": [ { \"type\": \"person\", \"firstName\": \"HENRY ANTONIO\", \"lastName\": \"ALTERIO GONZÁLEZ\", \"identificationType\": \"C.C.\", \"identificationNumber\": \"79694634\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"100\", \"timeFound\": \"1\", \"job\": \"Representante Legal\" } ] }, \"documentType\": \"company\", \"category\": \"ACC\" } ```"
+            }
+          ]
+        }
+      },
+      "stopReason": "end_turn",
+      "usage": {
+        "input_tokens": 9,
+        "cache_creation_input_tokens": 6432,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 1128
+      },
+      "ResponseMetadata": {
+        "RequestId": "a79117e3-1189-4488-8761-3178a2fc288e",
+        "HTTPStatusCode": 200,
+        "HTTPHeaders": {
+          "date": "Thu, 28 Aug 2025 09:40:02 GMT",
+          "content-type": "application/json",
+          "content-length": "4810",
+          "connection": "keep-alive",
+          "x-amzn-requestid": "a79117e3-1189-4488-8761-3178a2fc288e",
+          "x-amzn-bedrock-invocation-latency": "22540",
+          "x-amzn-bedrock-cache-write-input-token-count": "6432",
+          "x-amzn-bedrock-cache-read-input-token-count": "0",
+          "x-amzn-bedrock-output-token-count": "1128",
+          "x-amzn-bedrock-input-token-count": "9"
+        },
+        "RetryAttempts": 0
+      },
+      "raw_anthropic_response": {
+        "id": "msg_bdrk_01Gsnp87HYP7evyfyWWWWCRE",
+        "type": "message",
+        "role": "assistant",
+        "model": "claude-3-7-sonnet-20250219",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "Let's analyze the document and extract the required information following the structure in the schema. ## Step 1: Document Analysis The document is titled \"CERTIFICADO DE COMPOSICIÓN ACCIONARIA\" which translates to \"Certificate of Shareholding Composition.\" This is a legal document that shows the ownership structure of a company. The main reporting company appears to be ECOSIMPLE SAS with a NIT (Colombian tax ID) number of 900365151-5. The document is in Spanish and mentions a legal representative named HENRY ANTONIO ALTERIO GONZÁLEZ who is also shown as the sole shareholder with 100% participation in the capital. The document is dated February 27, 2023. ## Step 2: Root Level Extraction - **companyName**: ECOSIMPLE SAS - **documentCategory**: Equity Composition (fixed value) - **taxId**: 900365151-5 (NIT format consistent with Colombia) - **country**: Colombia (inferred from NIT identifier and Spanish language) - **identificationDetails**: Will build this based on the evidence ## Step 3: Related Parties Processing I identified one shareholder: - HENRY ANTONIO ALTERIO GONZÁLEZ - CC (Cédula de Ciudadanía) number: 79694634 - Participation percentage: 100% - He's also the legal representative (Representante Legal) ## Step 4: Validation & Cross-checking - The taxId format (NIT) aligns with Colombia - The identification type (CC) is in the PERSON_ID hash table for Colombia - There's only one shareholder with 100% ownership, which is valid - All mandatory fields are present Now, I'll organize this information according to the schema: ```json { \"result\": { \"companyName\": \"ECOSIMPLE SAS\", \"documentCategory\": \"Equity Composition\", \"taxId\": \"900365151-5\", \"country\": \"Colombia\", \"identificationDetails\": { \"source\": \"id_analysis\", \"indicators\": [ \"NIT format tax ID\", \"CC (Cédula de Ciudadanía) identification type\", \"Document in Spanish\" ], \"conflictingSources\": [], \"requiresReview\": \"false\" }, \"relatedParties\": [ { \"type\": \"person\", \"firstName\": \"HENRY ANTONIO\", \"lastName\": \"ALTERIO GONZÁLEZ\", \"identificationType\": \"C.C.\", \"identificationNumber\": \"79694634\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"100\", \"timeFound\": \"1\", \"job\": \"Representante Legal\" } ] }, \"documentType\": \"company\", \"category\": \"ACC\" } ``` Let me check this against our validation checklist one more time: 1. All mandatory fields are present 2. The taxId (NIT) aligns with Colombia ✓ 3. The identification type (C.C.) exists in PERSON_ID hash table for Colombia ✓ 4. There's only one instance of this person, so timeFound=1 ✓ 5. Job field is correctly populated ✓ 6. No percentage conflicts ✓ 7. The total participation percentage is 100%, which is correct ✓ 8. No extra fields added ✓ The data looks correct and complete according to the requirements. I'll return the JSON object as requested.",
+            "signature": "ErcBCkgIBxABGAIiQFT8ajrKdzFZVgdsC/CyZG5G/n5ODfepoj+miVF9M0wiPazleRlySN0OD4x8bkPTHhC2aTOTrScXylHNXN4IcAYSDDG3juUY/efHNr2qKBoMsujZMgnLH9HCyJUiIjAV4F2kTmk/M+F4ibHftK7+oAltl2b4c3eK54Vtm7Ujln9wfeau2EP4dUQnHXtK5QEqHYCwi4qxhPsQ9Wa7ctDZ+pZYdVGN1dIqUF6R533nGAI="
+          },
+          {
+            "type": "text",
+            "text": "```json { \"result\": { \"companyName\": \"ECOSIMPLE SAS\", \"documentCategory\": \"Equity Composition\", \"taxId\": \"900365151-5\", \"country\": \"Colombia\", \"identificationDetails\": { \"source\": \"id_analysis\", \"indicators\": [ \"NIT format tax ID\", \"CC (Cédula de Ciudadanía) identification type\", \"Document in Spanish\" ], \"conflictingSources\": [], \"requiresReview\": \"false\" }, \"relatedParties\": [ { \"type\": \"person\", \"firstName\": \"HENRY ANTONIO\", \"lastName\": \"ALTERIO GONZÁLEZ\", \"identificationType\": \"C.C.\", \"identificationNumber\": \"79694634\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"100\", \"timeFound\": \"1\", \"job\": \"Representante Legal\" } ] }, \"documentType\": \"company\", \"category\": \"ACC\" } ```"
+          }
+        ],
+        "stop_reason": "end_turn",
+        "stop_sequence": null,
+        "usage": {
+          "input_tokens": 9,
+          "cache_creation_input_tokens": 6432,
+          "cache_read_input_tokens": 0,
+          "output_tokens": 1128
+        }
+      },
+      "model_id": "us.anthropic.claude-3-7-sonnet-20250219-v1:0",
+      "api_used": "invoke_model",
+      "model_params": {
+        "max_tokens": 8000,
+        "top_p": 1,
+        "temperature": 1,
+        "thinking": {
+          "type": "enabled",
+          "budget_tokens": 4096
+        }
+      }
+    },
+    "model_used": "us.anthropic.claude-3-7-sonnet-20250219-v1:0",
+    "api_used": "invoke_model"
+  }
+}

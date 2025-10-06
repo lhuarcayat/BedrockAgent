@@ -1,0 +1,33 @@
+{
+  "ResponseMetadata": {
+    "RequestId": "de75f5dc-2c6e-4ebb-bf50-237a9b8bb909",
+    "HTTPStatusCode": 200,
+    "HTTPHeaders": {
+      "date": "Mon, 16 Jun 2025 20:49:42 GMT",
+      "content-type": "application/json",
+      "content-length": "2236",
+      "connection": "keep-alive",
+      "x-amzn-requestid": "de75f5dc-2c6e-4ebb-bf50-237a9b8bb909"
+    },
+    "RetryAttempts": 0
+  },
+  "output": {
+    "message": {
+      "role": "assistant",
+      "content": [
+        {
+          "text": "```json\n{\n  \"path\": \"s3://par-servicios-poc-dev-filling-desk/par-servicios-poc/ACC/802020036/251_CA_2020-02-29.pdf\",\n  \"result\": {\n    \"companyName\": \"V.P. GLOBAL LTDA.\",\n    \"documentType\": \"Equity Composition\",\n    \"taxId\": \"900.266.513-3\",\n    \"country\": \"Colombia\",\n    \"identificationDetails\": {\n      \"source\": \"text_reference\",\n      \"indicators\": [\"Colombia\", \"NIT\", \"CC\"],\n      \"requiresReview\": false\n    },\n    \"relatedParties\": [\n      {\n        \"firstName\": \"VILLAFAÑEZ\",\n        \"lastName\": \"PILANELLS JOSE MIGUEL\",\n        \"identificationType\": \"CC\",\n        \"identificationNumber\": \"7474165\",\n        \"relationshipType\": \"Shareholder\",\n        \"participationPercentage\": \"49.00\",\n        \"timeFound\": 1\n      },\n      {\n        \"firstName\": \"JABBA\",\n        \"lastName\": \"GALINDO VILMA LEONOR\",\n        \"identificationType\": \"CC\",\n        \"identificationNumber\": \"22430683\",\n        \"relationshipType\": \"Shareholder\",\n        \"participationPercentage\": \"49.00\",\n        \"timeFound\": 1\n      },\n      {\n        \"firstName\": \"VILLAFAÑEZ\",\n        \"lastName\": \"JABBA JOSE ELIAS\",\n        \"identificationType\": \"CC\",\n        \"identificationNumber\": \"72302912\",\n        \"relationshipType\": \"Shareholder\",\n        \"participationPercentage\": \"1.00\",\n        \"timeFound\": 1\n      },\n      {\n        \"firstName\": \"VILLAFAÑEZ\",\n        \"lastName\": \"JABBA ANDRES FELIPE\",\n        \"identificationType\": \"CC\",\n        \"identificationNumber\": \"1129577148\",\n        \"relationshipType\": \"Shareholder\",\n        \"participationPercentage\": \"1.00\",\n        \"timeFound\": 1\n      }\n    ]\n  },\n  \"document_type\": \"company\",\n  \"document_number\": \"802020036\",\n  \"category\": \"ACC\",\n  \"confidenceScores\": {\n    \"companyName\": 95,\n    \"documentType\": 100,\n    \"taxId\": 95,\n    \"country\": 95,\n    \"relatedParties\": 90\n  }\n}\n```"
+        }
+      ]
+    }
+  },
+  "stopReason": "end_turn",
+  "usage": {
+    "inputTokens": 5435,
+    "outputTokens": 575,
+    "totalTokens": 6010
+  },
+  "metrics": {
+    "latencyMs": 11038
+  }
+}

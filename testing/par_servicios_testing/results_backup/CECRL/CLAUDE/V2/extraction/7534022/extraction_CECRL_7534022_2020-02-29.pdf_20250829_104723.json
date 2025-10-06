@@ -1,0 +1,88 @@
+{
+  "extraction_data": {
+    "result": {
+      "firstName": "JORGE DIEGO",
+      "lastName": "RESTREPO PEREZ",
+      "country_issuer": "Colombia",
+      "nationality": "Colombia",
+      "identificationType": "Cédula de Ciudadanía",
+      "identificationNumber": "7.534.022",
+      "message": ""
+    },
+    "document_type": "person",
+    "category": "CECRL"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "```json { \"result\": { \"firstName\": \"JORGE DIEGO\", \"lastName\": \"RESTREPO PEREZ\", \"country_issuer\": \"Colombia\", \"nationality\": \"Colombia\", \"identificationType\": \"Cédula de Ciudadanía\", \"identificationNumber\": \"7.534.022\", \"message\": \"\" }, \"document_type\": \"person\", \"category\": \"CECRL\" } ```"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 10,
+      "cache_creation_input_tokens": 5982,
+      "cache_read_input_tokens": 0,
+      "output_tokens": 493
+    },
+    "ResponseMetadata": {
+      "RequestId": "61b7f44e-d1ed-406d-a1b0-a41943f64fea",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Fri, 29 Aug 2025 15:47:23 GMT",
+        "content-type": "application/json",
+        "content-length": "4316",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "61b7f44e-d1ed-406d-a1b0-a41943f64fea",
+        "x-amzn-bedrock-invocation-latency": "28561",
+        "x-amzn-bedrock-cache-write-input-token-count": "5982",
+        "x-amzn-bedrock-cache-read-input-token-count": "0",
+        "x-amzn-bedrock-output-token-count": "493",
+        "x-amzn-bedrock-input-token-count": "10"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_01X95A4MFzsMAhj39CfDcVmf",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-sonnet-4-20250514",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Let me analyze this document. It appears to be a Colombian identification document (\"REPÚBLICA DE COLOMBIA\" is visible on the document header). I can see: - Top document has \"CÉDULA DE CIUDADANÍA\" text visible - I can see \"RESTREPO PEREZ\" which appears to be a surname - I can see \"JORGE DIEGO\" which appears to be a first name - The number \"7.534.022\" appears to be the identification number - There's a signature visible - The bottom document seems to show additional information with a date \"05-JUN-1960\" and location \"ARMENIA (QUINDIO)\" which suggests birth information Let me extract the information systematically: 1. firstName: \"JORGE DIEGO\" - this appears after what looks like a first names section 2. lastName: \"RESTREPO PEREZ\" - this appears to be the surname section 3. country_issuer: \"Colombia\" - clearly stated as \"REPÚBLICA DE COLOMBIA\" 4. nationality: Since this is a Colombian cédula and I see birth place as Armenia, Quindío (which is in Colombia), the nationality should be \"Colombia\" 5. identificationType: This appears to be a \"Cédula de Ciudadanía\" based on the document type visible 6. identificationNumber: \"7.534.022\" - this number is clearly visible 7. message: The document appears to be an official Colombian ID document, so message should be empty The document appears to be a legitimate Colombian Cédula de Ciudadanía with all the required official elements visible.",
+          "signature": "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"
+        },
+        {
+          "type": "text",
+          "text": "```json { \"result\": { \"firstName\": \"JORGE DIEGO\", \"lastName\": \"RESTREPO PEREZ\", \"country_issuer\": \"Colombia\", \"nationality\": \"Colombia\", \"identificationType\": \"Cédula de Ciudadanía\", \"identificationNumber\": \"7.534.022\", \"message\": \"\" }, \"document_type\": \"person\", \"category\": \"CECRL\" } ```"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 10,
+        "cache_creation_input_tokens": 5982,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 493
+      }
+    },
+    "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 8000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+  "api_used": "invoke_model"
+}

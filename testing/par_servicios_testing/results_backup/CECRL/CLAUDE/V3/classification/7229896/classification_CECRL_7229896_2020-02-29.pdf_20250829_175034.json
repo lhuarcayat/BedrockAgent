@@ -1,0 +1,87 @@
+{
+  "classification_data": {
+    "category": "CECRL",
+    "text": "REPUBLICA DE COLOMBIA IDENTIFICACION PERSONAL CEDULA DE CIUDADANIA NUMERO 7.229.896 JEREZ BERRIO APELLIDOS CESAR AUGUSTO NOMBRES FIRMA FECHA DE NACIMIENTO 30-MAY-1974 DUITAMA (BOYACA) LUGAR DE NACIMIENTO 1.67 ESTATURA O+ G.S RH M SEXO 21-SEP-1992 DUITAMA FECHA Y LUGAR DE EXPEDICION INDICE DERECHO REGISTRADOR NACIONAL CARLOS ARIEL SANCHEZ TORRES A-4604000-002174J6-M 0007229896-201 00023 002121717A 1 816003416",
+    "document_number": "7229896",
+    "path": "CECRL/7229896/7229896_2020-02-29.pdf"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "```json { \"category\": \"CECRL\", \"text\": \"REPUBLICA DE COLOMBIA\\nIDENTIFICACION PERSONAL\\nCEDULA DE CIUDADANIA\\n\\nNUMERO 7.229.896\\nJEREZ BERRIO\\nAPELLIDOS\\n\\nCESAR AUGUSTO\\nNOMBRES\\n\\nFIRMA\\n\\nFECHA DE NACIMIENTO 30-MAY-1974\\nDUITAMA\\n(BOYACA)\\nLUGAR DE NACIMIENTO\\n\\n1.67\\nESTATURA\\n\\nO+\\nG.S RH\\n\\nM\\nSEXO\\n\\n21-SEP-1992 DUITAMA\\nFECHA Y LUGAR DE EXPEDICION\\n\\nINDICE DERECHO\\n\\nREGISTRADOR NACIONAL\\nCARLOS ARIEL SANCHEZ TORRES\\n\\nA-4604000-002174J6-M 0007229896-201 00023 002121717A 1 816003416\" } ```"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 9,
+      "cache_creation_input_tokens": 4753,
+      "cache_read_input_tokens": 0,
+      "output_tokens": 934
+    },
+    "ResponseMetadata": {
+      "RequestId": "b48696d5-3b01-4c7f-9299-96182d87654b",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Fri, 29 Aug 2025 22:50:19 GMT",
+        "content-type": "application/json",
+        "content-length": "6176",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "b48696d5-3b01-4c7f-9299-96182d87654b",
+        "x-amzn-bedrock-invocation-latency": "18692",
+        "x-amzn-bedrock-cache-write-input-token-count": "4753",
+        "x-amzn-bedrock-cache-read-input-token-count": "0",
+        "x-amzn-bedrock-output-token-count": "934",
+        "x-amzn-bedrock-input-token-count": "9"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_01Y1ksrvqm3v4kiK9QetjQhZ",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-sonnet-4-20250514",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Let me analyze this document step by step: 1. **TEXT EXTRACTION**: From the document I can extract the following text: - \"REPUBLICA DE COLOMBIA\" - \"IDENTIFICACION PERSONAL\" - \"CEDULA DE CIUDADANIA\" - \"NUMERO 7.229.896\" - \"JEREZ BERRIO\" - \"APELLIDOS\" - \"CESAR AUGUSTO\" - \"NOMBRES\" - There's a signature (\"FIRMA\") - There's a photo of a person - \"FECHA DE NACIMIENTO 30-MAY-1974\" - \"DUITAMA\" - \"(BOYACA)\" - \"LUGAR DE NACIMIENTO\" - \"1.67\" \"O+\" \"M\" - \"ESTATURA\" \"G.S RH\" \"SEXO\" - \"21-SEP-1992 DUITAMA\" - \"FECHA Y LUGAR DE EXPEDICION\" - There's a fingerprint - \"INDICE DERECHO\" - There's a barcode at the bottom - Various reference numbers 2. **PRIORITY CHECKS**: This is not blank or link-only. 3. **DOCUMENT FUNCTION ANALYSIS**: This document's PRIMARY PURPOSE is personal identification. It contains: - Individual identification (\"IDENTIFICACION PERSONAL\") - Personal biographical data (birth date, birth place, height, blood type, gender) - Individual photo - Individual signature reference (\"FIRMA\") - Fingerprint reference (\"INDICE DERECHO\") - Personal ID number with individual name - Security elements (barcode, official format) - Issued by Colombian government identification authority 4. **ISSUER IDENTIFICATION**: This is issued by the Colombian government identification authority (REPUBLICA DE COLOMBIA IDENTIFICACION PERSONAL), not by DIAN or Chamber of Commerce. 5. **CATEGORY CLASSIFICATION**: This clearly fits CECRL category: A comprehensive Colombian national ID document uniquely identifying Cesar Augusto Jerez Berrio. It provides detailed personal information with multiple verification elements like photo, signature, and fingerprint. The document serves as an official government-issued personal identification credential with robust security features. 6. **CONFIDENCE VALIDATION**: The document appears to be a genuine, official Colombian citizenship identification card with multiple layers of personal verification and government authentication.",
+          "signature": "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"
+        },
+        {
+          "type": "text",
+          "text": "```json { \"category\": \"CECRL\", \"text\": \"REPUBLICA DE COLOMBIA\\nIDENTIFICACION PERSONAL\\nCEDULA DE CIUDADANIA\\n\\nNUMERO 7.229.896\\nJEREZ BERRIO\\nAPELLIDOS\\n\\nCESAR AUGUSTO\\nNOMBRES\\n\\nFIRMA\\n\\nFECHA DE NACIMIENTO 30-MAY-1974\\nDUITAMA\\n(BOYACA)\\nLUGAR DE NACIMIENTO\\n\\n1.67\\nESTATURA\\n\\nO+\\nG.S RH\\n\\nM\\nSEXO\\n\\n21-SEP-1992 DUITAMA\\nFECHA Y LUGAR DE EXPEDICION\\n\\nINDICE DERECHO\\n\\nREGISTRADOR NACIONAL\\nCARLOS ARIEL SANCHEZ TORRES\\n\\nA-4604000-002174J6-M 0007229896-201 00023 002121717A 1 816003416\" } ```"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 9,
+        "cache_creation_input_tokens": 4753,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 934
+      }
+    },
+    "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 8000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "expected_category": "CECRL",
+  "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+  "api_used": "invoke_model",
+  "pdf_info": {
+    "original_size": 168479,
+    "first_page_size": 163978,
+    "is_scanned": true
+  }
+}

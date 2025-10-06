@@ -1,0 +1,90 @@
+{
+  "extraction_data": {
+    "path": "CECRL/7229896/7229896_2020-02-29.pdf",
+    "result": {
+      "firstName": "CESAR AUGUSTO",
+      "lastName": "JEREZ BERRIO",
+      "country_issuer": "Colombia",
+      "nationality": "Colombia",
+      "identificationType": "Cédula de Ciudadanía",
+      "identificationNumber": "7.229.896",
+      "message": ""
+    },
+    "document_type": "person",
+    "documentNumber": "7229896",
+    "category": "CECRL"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "```json { \"result\": { \"firstName\": \"CESAR AUGUSTO\", \"lastName\": \"JEREZ BERRIO\", \"country_issuer\": \"Colombia\", \"nationality\": \"Colombia\", \"identificationType\": \"Cédula de Ciudadanía\", \"identificationNumber\": \"7.229.896\", \"message\": \"\" }, \"document_type\": \"person\", \"category\": \"CECRL\" } ```"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 10,
+      "cache_creation_input_tokens": 5982,
+      "cache_read_input_tokens": 0,
+      "output_tokens": 572
+    },
+    "ResponseMetadata": {
+      "RequestId": "443db1a8-5d2a-42c4-a2d7-0de8b973a4fe",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Thu, 28 Aug 2025 15:38:51 GMT",
+        "content-type": "application/json",
+        "content-length": "2623",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "443db1a8-5d2a-42c4-a2d7-0de8b973a4fe",
+        "x-amzn-bedrock-invocation-latency": "14491",
+        "x-amzn-bedrock-cache-write-input-token-count": "5982",
+        "x-amzn-bedrock-cache-read-input-token-count": "0",
+        "x-amzn-bedrock-output-token-count": "572",
+        "x-amzn-bedrock-input-token-count": "10"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_01P5weACgrDjFeRgvtQVYoyo",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-3-7-sonnet-20250219",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Let me analyze this document carefully to extract all the required information according to the schema. ### Document Analysis - This appears to be a Colombian identification document (\"REPUBLICA DE COLOMBIA\"). - The document type is \"CEDULA DE CIUDADANIA\" which translates to \"Citizenship ID Card\". - The document contains personal identification information. ### Field Extraction: 1. **identificationNumber**: - Clearly visible as \"7.229.896\" 2. **lastName**: - The field \"APELLIDOS\" shows \"JEREZ BERRIO\" - This would be the full last name. 3. **firstName**: - The field \"NOMBRES\" shows \"CESAR AUGUSTO\" 4. **country_issuer**: - The header clearly states \"REPUBLICA DE COLOMBIA\" - So the country issuer is Colombia 5. **nationality**: - Not explicitly stated, but since this is a \"CEDULA DE CIUDADANIA\" (Citizenship ID) from Colombia, the nationality is most likely Colombian - Following the rules, if nationality isn't explicitly stated, we assume it's the same as the country_issuer 6. **identificationType**: - The document type is \"CEDULA DE CIUDADANIA\" - This is already in Spanish, so no translation needed 7. **Additional Information** (not required in schema but visible in document): - Date of birth: \"30-MAY-1974\" - Place of birth: \"DUITAMA (BOYACA)\" - Height: \"1.67\" - Blood type: \"O+\" - Sex: \"M\" - Issue date and place: \"21-SEP-1992 DUITAMA\" 8. **message**: - No issues with the document extraction, so this can be empty \"\" Now I'll prepare the JSON output according to the schema.",
+          "signature": "ErcBCkgIBxABGAIiQPrJrrXiGOumWUs8+wHEXEbZucj65CsOuk3j+yhIxejqgoCQRaO9heKqZ7akXaQ+lIHYDV/TzbZmheZ3+5yWYakSDEnZdUQbAuDlMpJKGRoMHflyCUa66qWbFb6tIjA/KxDkdLbSrXsbDgW8EMEojyJLxEUBtIDwC20RG3w61YFP4Rx976o28pwRxBih0xMqHf5SFTHQ+koKPcMPAmmmY0AeV9AS7Qa+eBUwoE2YGAI="
+        },
+        {
+          "type": "text",
+          "text": "```json { \"result\": { \"firstName\": \"CESAR AUGUSTO\", \"lastName\": \"JEREZ BERRIO\", \"country_issuer\": \"Colombia\", \"nationality\": \"Colombia\", \"identificationType\": \"Cédula de Ciudadanía\", \"identificationNumber\": \"7.229.896\", \"message\": \"\" }, \"document_type\": \"person\", \"category\": \"CECRL\" } ```"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 10,
+        "cache_creation_input_tokens": 5982,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 572
+      }
+    },
+    "model_id": "us.anthropic.claude-3-7-sonnet-20250219-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 8000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "model_used": "us.anthropic.claude-3-7-sonnet-20250219-v1:0",
+  "api_used": "invoke_model"
+}

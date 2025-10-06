@@ -1,0 +1,35 @@
+{
+  "ResponseMetadata": {
+    "RequestId": "2f972b92-f7ac-476e-96d1-3993897e3074",
+    "HTTPStatusCode": 200,
+    "HTTPHeaders": {
+      "date": "Thu, 05 Jun 2025 16:40:59 GMT",
+      "content-type": "application/json",
+      "content-length": "3690",
+      "connection": "keep-alive",
+      "x-amzn-requestid": "2f972b92-f7ac-476e-96d1-3993897e3074"
+    },
+    "RetryAttempts": 0
+  },
+  "output": {
+    "message": {
+      "role": "assistant",
+      "content": [
+        {
+          "text": "Looking at this document, I can see it's a Colombian RUB (Registro Único de Beneficiarios) form from DIAN. Let me analyze it step by step:\n\n## Step-by-Step Reasoning:\n\n1. **Document Structure Analysis**: This appears to be a multi-page RUB form with company information and a detailed beneficiaries table.\n\n2. **Company Information Extraction**:\n   - Company Name: \"PAR SERVICIOS INTEGRALES S A\" (found in multiple locations)\n   - Tax ID: \"830067329\" (NIT number found in header and throughout document)\n   - Document Type: \"NIT\" (standard Colombian company identifier)\n   - Country: \"Colombia\" (inferred from NIT document type and explicit mentions)\n\n3. **Related Parties Processing**: The document contains a detailed table with beneficiary information. Each row represents a different person with complete details including names, identification, participation percentages, and novelty type.\n\n4. **Data Mapping**: All beneficiaries show \"Registro\" as the novelty type and have participation percentages clearly listed. The identification numbers are complete (not anonymized).\n\n5. **Validation**: All required schema fields are present and properly formatted.\n\n```json\n{\n  \"companyName\": \"PAR SERVICIOS INTEGRALES S A\",\n  \"documentType\": \"NIT\",\n  \"country\": \"Colombia\",\n  \"taxId\": \"830067329\",\n  \"relatedParties\": [\n    {\n      \"firstName\": \"ANDRES LEONARDO\",\n      \"lastName\": \"RODRIGUEZ RAMIREZ\",\n      \"identificationType\": \"Cédula de Ciudadanía\",\n      \"identificationNumber\": \"80074122\",\n      \"noveltyType\": \"Registro\",\n      \"participationPercentage\": \"14.99\"\n    },\n    {\n      \"firstName\": \"LUIS ALBERTO\",\n      \"lastName\": \"RODRIGUEZ SAMUDIO\",\n      \"identificationType\": \"Cédula de Ciudadanía\",\n      \"identificationNumber\": \"19193304\",\n      \"noveltyType\": \"Registro\",\n      \"participationPercentage\": \"29.98\"\n    },\n    {\n      \"firstName\": \"DIANA PAOLA\",\n      \"lastName\": \"RODRIGUEZ RAMIREZ\",\n      \"identificationType\": \"Cédula de Ciudadanía\",\n      \"identificationNumber\": \"52817177\",\n      \"noveltyType\": \"Registro\",\n      \"participationPercentage\": \"14.99\"\n    },\n    {\n      \"firstName\": \"ESTEFANIA\",\n      \"lastName\": \"CORREDOR RODRIGUEZ\",\n      \"identificationType\": \"Cédula de Ciudadanía\",\n      \"identificationNumber\": \"1019026903\",\n      \"noveltyType\": \"Registro\",\n      \"participationPercentage\": \"5.02\"\n    },\n    {\n      \"firstName\": \"LUIS MIGUEL\",\n      \"lastName\": \"ZUBIETA URIBE\",\n      \"identificationType\": \"Cédula de Ciudadanía\",\n      \"identificationNumber\": \"79939362\",\n      \"noveltyType\": \"Registro\",\n      \"participationPercentage\": \"14.99\"\n    },\n    {\n      \"firstName\": \"CAROLINA\",\n      \"lastName\": \"CORREDOR RODRIGUEZ\",\n      \"identificationType\": \"Cédula de Ciudadanía\",\n      \"identificationNumber\": \"52799584\",\n      \"noveltyType\": \"Registro\",\n      \"participationPercentage\": \"5.02\"\n    },\n    {\n      \"firstName\": \"ENRIQUE\",\n      \"lastName\": \"MERCADO IDARRAGA\",\n      \"identificationType\": \"Cédula de Ciudadanía\",\n      \"identificationNumber\": \"80134782\",\n      \"noveltyType\": \"Registro\",\n      \"participationPercentage\": \"10.05\"\n    }\n  ]\n}\n```"
+        }
+      ]
+    }
+  },
+  "stopReason": "end_turn",
+  "usage": {
+    "inputTokens": 7844,
+    "outputTokens": 942,
+    "totalTokens": 8786,
+    "cacheReadInputTokens": 0,
+    "cacheWriteInputTokens": 0
+  },
+  "metrics": {
+    "latencyMs": 29472
+  }
+}

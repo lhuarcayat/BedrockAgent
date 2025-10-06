@@ -1,0 +1,88 @@
+{
+  "extraction_data": {
+    "result": {
+      "firstName": "JUAN MANUEL",
+      "lastName": "MARTINEZ FERNANDEZ",
+      "country_issuer": "Colombia",
+      "nationality": "Colombia",
+      "identificationType": "Cédula de Ciudadanía",
+      "identificationNumber": "76319806",
+      "message": ""
+    },
+    "document_type": "person",
+    "category": "CECRL"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "```json { \"result\": { \"firstName\": \"JUAN MANUEL\", \"lastName\": \"MARTINEZ FERNANDEZ\", \"country_issuer\": \"Colombia\", \"nationality\": \"Colombia\", \"identificationType\": \"Cédula de Ciudadanía\", \"identificationNumber\": \"76319806\", \"message\": \"\" }, \"document_type\": \"person\", \"category\": \"CECRL\" } ```"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 10,
+      "cache_creation_input_tokens": 7971,
+      "cache_read_input_tokens": 0,
+      "output_tokens": 501
+    },
+    "ResponseMetadata": {
+      "RequestId": "e3fc4011-647e-4bc3-9bb1-022f7757f293",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Fri, 29 Aug 2025 22:53:12 GMT",
+        "content-type": "application/json",
+        "content-length": "4097",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "e3fc4011-647e-4bc3-9bb1-022f7757f293",
+        "x-amzn-bedrock-invocation-latency": "11124",
+        "x-amzn-bedrock-cache-write-input-token-count": "7971",
+        "x-amzn-bedrock-cache-read-input-token-count": "0",
+        "x-amzn-bedrock-output-token-count": "501",
+        "x-amzn-bedrock-input-token-count": "10"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_01AW41SCeApFxpwhB9bimKTi",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-sonnet-4-20250514",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "I need to carefully analyze this Colombian ID document to extract the required information. Let me examine both pages: Page 1 shows: - REPUBLICA DE COLOMBIA - IDENTIFICACION PERSONAL - CEDULA DE CIUDADANIA - NUMERO: 76319806 - MARTINEZ FERNANDEZ (under \"APELLIDOS\") - JUAN MANUEL (under \"NOMBRES\") - A photo of a person Page 2 shows: - FECHA DE NACIMIENTO: 17-AGO-1973 - POPAYAN (CAUCA) as place of birth - 1.83 height - O+ blood type - M (male) sex - 16-JUL-1992 POPAYAN as date and place of expedition - A fingerprint - Barcode and other identification numbers Let me extract the information according to the schema: firstName: Looking for \"NOMBRES:\" - I can see \"JUAN MANUEL\" under \"NOMBRES\" lastName: Looking for \"APELLIDOS:\" - I can see \"MARTINEZ FERNANDEZ\" under \"APELLIDOS\" country_issuer: This is clearly from Colombia as stated \"REPUBLICA DE COLOMBIA\" in the header nationality: Since this is a Colombian citizenship document and birth place is in Colombia (Popayan, Cauca), nationality would be Colombia identificationType: This is clearly stated as \"CEDULA DE CIUDADANIA\" identificationNumber: The number is clearly shown as \"76319806\" message: The document appears to be an official Colombian ID, so no issues to report All fields are clearly identifiable, so this should be a complete extraction.",
+          "signature": "Es0LCkgIBxABGAIqQH+9waIFMsNihEnxRPDl0f1viS1rRZDM4OdgYS5z68P3ZM0C2BRSGXlpadz0dTwWEqxVi4II1W6jojmNMlIyTCgSDF8zKtWgSNr1uavrCBoMlIwcFR9fq0+50uHtIjD+oZM1NJ6LvwnZhLedmfd/Rmhoa4XnozSKrPHcW/I6u/dEpdxSR2x4me37Ccu5vv8qsgrAnG+yeclY2Li73oNWqFN3WUtNlg3qNSlxHVuq+69ednXzdNtCseFHgfeyN3McxZSwTmpm1aNswJbHXPIsmxzPn4qksHRQa70XGud15KYxbOwhX1AFpRfnNebLfCdIo9e41tN9PiQvphRKngZUK+I45cwTma8nM2BUGuOYa5o4J/hcxgugVkZeksR7kQYxxChMvgH86aDVWHXfMt9sN1M/KntYKNOPvhwgIz4TRGXvz2yt9+tIdXbe+TWx38Rn0hiudwttMuUZUfsY4bSvVxZtAnf4C8ygNm84LmvxjFq7nKc2l/+L8N+CM53SgmHCu1ees/uZHCNs4bG/aKy+n6pDvK1fT+RTNFsM85ZfEAPoK5gorkm/x1W1852KRHIHRsfiU8P+3iUjm0JjzDLuMAJD9gUB4HK+8gMMDQa2rWFHuXTlPbQu07/zu0TJcRVvg+s62t0/QN33exaX1nWS1OtqMXcgKUNvTfen3KxDaK9tPwcJDHq6gNlGQ94hxF5cN3qJCcIWYHYhX+H3rTg8Q588DH6c0cNcAW0MrjJk1p1Cz8eY8IrgoNwJJjlUE+g59zly1VnAm6h+AktctH51TyaQwLqh6Jz4Q8lRQj8r3Q1fxSa78SaH3hBWToCkRzlOoUG9cAfRnZUmNuDvWohuqS6FSKYMIWcO7OqZtoSLd+rQBFhun9Eh/PmO/JpIVqJlFdmc0EEHCyZ5huGYti1Ese0TyDF8Zx4iDx/KAbQYtlaAVzIezYjq+mklHSU6Q+Lg8+1hVIIJLJY9TXca8R0ZrVdm1RdIwpQOaPpqmGpRdxvmAZtKYu+QM651qXTr6+vvWcNbPC6rD07ltxPrRg/YhpXZ93MuhphflaAuOWtF/tliB8tt90VFhAmgRCPvlx14RPHy0S6SrNFrOVdA6TQyJjHOl/HQCg+bhJiOye40Faqycgxf/E2ppKbzi4ngyj8ZgVjwtg7xwbiVRQWR+bTOkQyLJ8k00cDaBDS9cHhWRreNHP0T9XHFUOGMePpftDuF064XLU+K7o2lfqwUyeXU42KUB9Ty4DrU7xKKco9V0BvLsPaAE4DMCXIFKf+LUakMU9X+W9JK5LGYjM5zPNypB8DtVfM5X0tqpz6j/bzj3bsj3MKGO8v6SEXvAqsICzfP1zV0pgne1Dx/2o/nvUMy+WZZLPFpkc8tzysVPOnbjbYFCORqwxtC/bFyEP4Pv4f49r4Ixy1sJVBJ1L87PKUmuD0X5hYV6wC2XU1dLdQKrgVzA3feEAmUywr6Y4NNN8qai0ZuLUHSUWqtDLB1RrxWLYuMh5R8FmjSWX/h57wxykBktB/KsH1JefFJT67vUBPY/ehOjQ2+0DhZO4VmP2GVjeF1aAUEVN7+wxzlJyz7Oqrc6Lj5bUqmA3Cx1UQ1x8zdfl9oFfV9sWzSc0ylKQJbqsi7Sipe+9bWu9o4hboI8eWJ0Bq+vzaYxyHd7bUCuXSI7HQBJNuXmWxXAKyeDIcpuHZJzwMXjTq8j8Hn0kJEMQi1SIWe6NOx76xKED99ZPwFnv8F/74iDyb6eavvKJGDfR0HCoLQZllayTtMLFU+ntpTPvnjaYGHcwiYCYoZIVBv/sl5sr6mznKIEOU9pKl7qwq45PyU5n36YSi5/U67y3o/gZXzFZDF9+5x0Db8AQbXvaXlYhmOZKthzcXPyxfLljFO0AIiZl7gdh6ZZdLJYetHMT7+uZNFXZ5GC+mopFG+OPOHCIl2BxhNRhoYBN14XjG9RJWooobl+PAaVE6QKA8RyCqcGAE="
+        },
+        {
+          "type": "text",
+          "text": "```json { \"result\": { \"firstName\": \"JUAN MANUEL\", \"lastName\": \"MARTINEZ FERNANDEZ\", \"country_issuer\": \"Colombia\", \"nationality\": \"Colombia\", \"identificationType\": \"Cédula de Ciudadanía\", \"identificationNumber\": \"76319806\", \"message\": \"\" }, \"document_type\": \"person\", \"category\": \"CECRL\" } ```"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 10,
+        "cache_creation_input_tokens": 7971,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 501
+      }
+    },
+    "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 8000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+  "api_used": "invoke_model"
+}

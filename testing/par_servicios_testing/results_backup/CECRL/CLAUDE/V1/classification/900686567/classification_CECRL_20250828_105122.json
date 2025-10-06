@@ -1,0 +1,87 @@
+{
+  "classification_data": {
+    "category": "CECRL",
+    "text": "REPUBLICA DE COLOMBIA IDENTIFICACION PERSONAL CEDULA DE CIUDADANIA NUMERO 12.097.982 POLANIA ANDRADE APELLIDOS ENRIQUE NOMBRES FIRMA FECHA DE NACIMIENTO 04-DIC-1947 NEIVA (HUILA) LUGAR DE NACIMIENTO 1.69 O+ M ESTATURA G.S. RH SEXO 18-ABR-1969 NEIVA FECHA Y LUGAR DE EXPEDICION REGISTRADOR NACIONAL CARLOS ARIEL SANCHEZ TORRES INDICE DERECHO",
+    "document_number": "900686567",
+    "path": "CECRL/900686567/12097982_2020-02-29.pdf"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "```json { \"category\": \"CECRL\", \"text\": \"REPUBLICA DE COLOMBIA\\nIDENTIFICACION PERSONAL\\nCEDULA DE CIUDADANIA\\n\\nNUMERO 12.097.982\\nPOLANIA ANDRADE\\nAPELLIDOS\\nENRIQUE\\nNOMBRES\\n\\nFIRMA\\n\\nFECHA DE NACIMIENTO 04-DIC-1947\\nNEIVA\\n(HUILA)\\nLUGAR DE NACIMIENTO\\n\\n1.69 O+ M\\nESTATURA G.S. RH SEXO\\n\\n18-ABR-1969 NEIVA\\nFECHA Y LUGAR DE EXPEDICION\\nREGISTRADOR NACIONAL\\nCARLOS ARIEL SANCHEZ TORRES\\n\\nINDICE DERECHO\" } ```"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 9,
+      "cache_creation_input_tokens": 4485,
+      "cache_read_input_tokens": 0,
+      "output_tokens": 1005
+    },
+    "ResponseMetadata": {
+      "RequestId": "27a1cba5-02fc-4ba7-95ca-8b4968c10dae",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Thu, 28 Aug 2025 15:50:59 GMT",
+        "content-type": "application/json",
+        "content-length": "4027",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "27a1cba5-02fc-4ba7-95ca-8b4968c10dae",
+        "x-amzn-bedrock-invocation-latency": "24886",
+        "x-amzn-bedrock-cache-write-input-token-count": "4485",
+        "x-amzn-bedrock-cache-read-input-token-count": "0",
+        "x-amzn-bedrock-output-token-count": "1005",
+        "x-amzn-bedrock-input-token-count": "9"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_01Ah2T6tnfj453Jw6urkE8kY",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-3-7-sonnet-20250219",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Let me analyze the document following the classification workflow: ## 1. TEXT EXTRACTION The document appears to be a Colombian identification card (Cédula de Ciudadanía). I can extract the following text: ``` REPUBLICA DE COLOMBIA IDENTIFICACION PERSONAL CEDULA DE CIUDADANIA NUMERO 12.097.982 POLANIA ANDRADE APELLIDOS ENRIQUE NOMBRES [signature] FIRMA FECHA DE NACIMIENTO 04-DIC-1947 NEIVA (HUILA) LUGAR DE NACIMIENTO 1.69 O+ M ESTATURA G.S. RH SEXO 18-ABR-1969 NEIVA FECHA Y LUGAR DE EXPEDICION REGISTRADOR NACIONAL CARLOS ARIEL SANCHEZ TORRES [fingerprint image] INDICE DERECHO [barcode and identification numbers at bottom] ``` ## 2. PRIORITY CHECKS - Not BLANK: Contains substantial text - Not LINK_ONLY: No hyperlinks or URLs ## 3. ISSUER IDENTIFICATION This is a government-issued personal identification document from Colombia (Cédula de Ciudadanía). ## 4. DOCUMENT FUNCTION ANALYSIS This is clearly a personal identification document issued by the Colombian government. It serves to identify an individual person. ## 5. CATEGORY CLASSIFICATION Following the evaluation order: - CECRL? This appears to be a personal identification document (cédula) that contains: - Individual identification terminology: \"IDENTIFICACION PERSONAL\", \"CEDULA DE CIUDADANIA\" - Personal biographical data: birth date/place, blood type, gender - Individual photo (faint but visible) - Signature - Fingerprint reference - Government-issued personal ID number - Security elements (appears to have barcode) However, to classify as CECRL, I need to determine if this person is a legal representative of a company. The document itself doesn't indicate whether this individual is a legal representative of any company. It's just a standard Colombian ID card with no mention of corporate representation. Since this is just a personal identification document without any indication that the person is a legal representative of a company, it doesn't fully meet the criteria for CECRL. - RUT? No, this is not a tax registration document issued by DIAN. - CERL? No, this is not a Chamber of Commerce certificate. - ACC? No, this is not a shareholder document. - RUB? No, this is not a beneficial ownership document. ## 6. CONFIDENCE VALIDATION This document is clearly a Colombian ID card (Cédula de Ciudadanía), but it doesn't explicitly indicate that this person is a legal representative of a company, which is required for the CECRL classification. The document is a standard government-issued ID. Based on the categories provided, this would best fit into POR_REVISAR since it doesn't clearly match any of the specific document categories. While it is an ID document (which could be part of CECRL), without evidence that the individual is a legal representative of a company, it doesn't fully satisfy the CECRL requirements.",
+          "signature": "ErcBCkgIBxABGAIiQFbTh6T0QPXTCqVBdB+Vkvb/nRpnJjLpo2ugCIooStaviASlw1OJbCPB4AJrW5kQW2gZjeE51zoJgqqLs5nEXNMSDMrFRirS1ifBno5llhoMRwC+Jfp38o33n7weIjBWUaNYgKsqfxCoXJMIOyERzptjp6qi9WUq6Ghv0supOKLxRo7+ExrZswcjmqqMjF4qHX+J7WUGRwdgrCqcJvBsXAN6xIg7ZMfdlGfPa49qGAI="
+        },
+        {
+          "type": "text",
+          "text": "```json { \"category\": \"CECRL\", \"text\": \"REPUBLICA DE COLOMBIA\\nIDENTIFICACION PERSONAL\\nCEDULA DE CIUDADANIA\\n\\nNUMERO 12.097.982\\nPOLANIA ANDRADE\\nAPELLIDOS\\nENRIQUE\\nNOMBRES\\n\\nFIRMA\\n\\nFECHA DE NACIMIENTO 04-DIC-1947\\nNEIVA\\n(HUILA)\\nLUGAR DE NACIMIENTO\\n\\n1.69 O+ M\\nESTATURA G.S. RH SEXO\\n\\n18-ABR-1969 NEIVA\\nFECHA Y LUGAR DE EXPEDICION\\nREGISTRADOR NACIONAL\\nCARLOS ARIEL SANCHEZ TORRES\\n\\nINDICE DERECHO\" } ```"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 9,
+        "cache_creation_input_tokens": 4485,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 1005
+      }
+    },
+    "model_id": "us.anthropic.claude-3-7-sonnet-20250219-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 8000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "expected_category": "CECRL",
+  "model_used": "us.anthropic.claude-3-7-sonnet-20250219-v1:0",
+  "api_used": "invoke_model",
+  "pdf_info": {
+    "original_size": 775594,
+    "first_page_size": 773947,
+    "is_scanned": true
+  }
+}

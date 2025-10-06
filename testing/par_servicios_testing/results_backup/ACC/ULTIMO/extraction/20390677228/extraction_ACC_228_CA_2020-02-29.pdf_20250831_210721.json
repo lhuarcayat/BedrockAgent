@@ -1,0 +1,121 @@
+{
+  "extraction_data": {
+    "result": {
+      "PrincipalCompanyName": "APROGAS S.A.C.",
+      "DocumentCategory": "Equity Composition",
+      "TaxId": "ForReview",
+      "IdentificationType": "ForReview",
+      "Country": "Peru",
+      "IdentificationDetails": {
+        "Source": "TextReference",
+        "Indicators": [
+          "LIMA",
+          "DNI"
+        ],
+        "ConflictingSources": [
+          "Company tax identification (RUC) not found in document"
+        ],
+        "RequiresReview": "true"
+      },
+      "RelatedParties": [
+        {
+          "Type": "person",
+          "FirstName": "TICIANO",
+          "LastName": "MUÑOZ SANCHEZ",
+          "IdType": "DNI",
+          "IdNumber": "09163077",
+          "RelationshipType": "Shareholder",
+          "ParticipationPercentage": "99.9",
+          "TimeFound": "3",
+          "Job": "GERENTE GENERAL"
+        },
+        {
+          "Type": "person",
+          "FirstName": "CHANO",
+          "LastName": "MUÑOZ LLONTOP",
+          "IdType": "DNI",
+          "IdNumber": "70008642",
+          "RelationshipType": "Shareholder",
+          "ParticipationPercentage": "0.1",
+          "TimeFound": "3",
+          "Job": "SECRETARIO"
+        }
+      ]
+    },
+    "DocumentType": "company",
+    "Category": "ACC"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "{ \"result\": { \"PrincipalCompanyName\": \"APROGAS S.A.C.\", \"DocumentCategory\": \"Equity Composition\", \"TaxId\": \"ForReview\", \"IdentificationType\": \"ForReview\", \"Country\": \"Peru\", \"IdentificationDetails\": { \"Source\": \"TextReference\", \"Indicators\": [ \"LIMA\", \"DNI\" ], \"ConflictingSources\": [\"Company tax identification (RUC) not found in document\"], \"RequiresReview\": \"true\" }, \"RelatedParties\": [ { \"Type\": \"person\", \"FirstName\": \"TICIANO\", \"LastName\": \"MUÑOZ SANCHEZ\", \"IdType\": \"DNI\", \"IdNumber\": \"09163077\", \"RelationshipType\": \"Shareholder\", \"ParticipationPercentage\": \"99.9\", \"TimeFound\": \"3\", \"Job\": \"GERENTE GENERAL\" }, { \"Type\": \"person\", \"FirstName\": \"CHANO\", \"LastName\": \"MUÑOZ LLONTOP\", \"IdType\": \"DNI\", \"IdNumber\": \"70008642\", \"RelationshipType\": \"Shareholder\", \"ParticipationPercentage\": \"0.1\", \"TimeFound\": \"3\", \"Job\": \"SECRETARIO\" } ] }, \"DocumentType\": \"company\", \"Category\": \"ACC\" }"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 15762,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 4822,
+      "output_tokens": 1103
+    },
+    "ResponseMetadata": {
+      "RequestId": "38720cf5-810f-4684-87b9-c63b163ea94b",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Mon, 01 Sep 2025 02:07:21 GMT",
+        "content-type": "application/json",
+        "content-length": "6375",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "38720cf5-810f-4684-87b9-c63b163ea94b",
+        "x-amzn-bedrock-invocation-latency": "27219",
+        "x-amzn-bedrock-cache-write-input-token-count": "0",
+        "x-amzn-bedrock-cache-read-input-token-count": "4822",
+        "x-amzn-bedrock-output-token-count": "1103",
+        "x-amzn-bedrock-input-token-count": "15762"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_016ho6ceZZzDv8e4LYQhacqP",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-sonnet-4-20250514",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Let me analyze this document step by step according to the field rules: 1. **PrincipalCompanyName**: Looking for the main company name. - I can see \"ACTA GENERAL DE ACCIONISTAS DE APROGAS SAC\" and later \"APROGAS S.A.C.\" - Also \"APROGAS SOCIEDAD ANONIMA CERRADA\" - It appears to be consistently \"APROGAS S.A.C.\" 2. **DocumentCategory**: Should always be \"Equity Composition\" 3. **Country**: Need to identify the country. - I see \"LIMA\" mentioned multiple times - \"DNI\" is mentioned (which is Peru identification) - The document appears to be from Peru 4. **TaxId**: Looking for tax ID of the main company. - I need to look for RUC (Peru's company ID) but I don't see it clearly mentioned for the company itself. - I see individual DNI numbers but not company RUC. 5. **IdentificationType**: Should be \"RUC\" for Peru companies, but I don't see it explicitly stated. 6. **IdentificationDetails**: Need to analyze sources and conflicts. 7. **RelatedParties**: I can see two individuals mentioned: - TICIANO MUÑOZ SANCHEZ, identified with DNI N° 09163077, TITULAR DE 549,945 ACCIONES - CHANO MUÑOZ LLONTOP, identified with DNI N° 70008642, TITULAR DE 55 ACCIONES From page 4, I can see: - TICIANO MUÑOZ SANCHEZ: DNI 09163077, 549,945 acciones - CHANO MUÑOZ LLONTOP: DNI 70008642, 55 acciones I verify the total shares and ownership percentages: - Total shares are 550,000 - Ticiano owns 99.9% with 549,945 shares - Chano owns 0.1% with 55 shares - Ticiano serves as President, while Chano is the Secretary The document suggests a Peruvian corporate structure with key details requiring further verification.",
+          "signature": "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"
+        },
+        {
+          "type": "text",
+          "text": "{ \"result\": { \"PrincipalCompanyName\": \"APROGAS S.A.C.\", \"DocumentCategory\": \"Equity Composition\", \"TaxId\": \"ForReview\", \"IdentificationType\": \"ForReview\", \"Country\": \"Peru\", \"IdentificationDetails\": { \"Source\": \"TextReference\", \"Indicators\": [ \"LIMA\", \"DNI\" ], \"ConflictingSources\": [\"Company tax identification (RUC) not found in document\"], \"RequiresReview\": \"true\" }, \"RelatedParties\": [ { \"Type\": \"person\", \"FirstName\": \"TICIANO\", \"LastName\": \"MUÑOZ SANCHEZ\", \"IdType\": \"DNI\", \"IdNumber\": \"09163077\", \"RelationshipType\": \"Shareholder\", \"ParticipationPercentage\": \"99.9\", \"TimeFound\": \"3\", \"Job\": \"GERENTE GENERAL\" }, { \"Type\": \"person\", \"FirstName\": \"CHANO\", \"LastName\": \"MUÑOZ LLONTOP\", \"IdType\": \"DNI\", \"IdNumber\": \"70008642\", \"RelationshipType\": \"Shareholder\", \"ParticipationPercentage\": \"0.1\", \"TimeFound\": \"3\", \"Job\": \"SECRETARIO\" } ] }, \"DocumentType\": \"company\", \"Category\": \"ACC\" }"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 15762,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 4822,
+        "output_tokens": 1103
+      }
+    },
+    "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 8000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+  "api_used": "invoke_model"
+}

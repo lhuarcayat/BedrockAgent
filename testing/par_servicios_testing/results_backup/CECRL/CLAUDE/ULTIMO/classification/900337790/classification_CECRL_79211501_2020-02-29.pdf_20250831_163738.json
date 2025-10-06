@@ -1,0 +1,87 @@
+{
+  "classification_data": {
+    "category": "CECRL",
+    "text": "T{}LOM&T,d REPUBLICA DE COLOMBIA IDENTIFICACION PERSONAL CEDULA DE CIUDADANIA NUMERO 79.211.501 STERLING NEIRA APELLIDOS JOHN WILTER NOMBRES FIRMA",
+    "document_number": "UNKNOWN",
+    "path": "CECRL/900337790_79211501_2020-02-29/79211501_2020-02-29.pdf"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "```json { \"category\": \"CECRL\", \"text\": \"T{}LOM&T,d\\n\\nREPUBLICA DE COLOMBIA\\nIDENTIFICACION PERSONAL\\nCEDULA DE CIUDADANIA\\n\\nNUMERO 79.211.501\\nSTERLING NEIRA\\n\\nAPELLIDOS\\nJOHN WILTER\\n\\nNOMBRES\\n\\nFIRMA\" } ```"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 1628,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 3150,
+      "output_tokens": 515
+    },
+    "ResponseMetadata": {
+      "RequestId": "294244a8-525b-44e9-a87f-35a2c3f5c962",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Sun, 31 Aug 2025 21:37:38 GMT",
+        "content-type": "application/json",
+        "content-length": "4510",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "294244a8-525b-44e9-a87f-35a2c3f5c962",
+        "x-amzn-bedrock-invocation-latency": "8552",
+        "x-amzn-bedrock-cache-write-input-token-count": "0",
+        "x-amzn-bedrock-cache-read-input-token-count": "3150",
+        "x-amzn-bedrock-output-token-count": "515",
+        "x-amzn-bedrock-input-token-count": "1628"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_01CSiyjThdXW9NW13YZ6YXZ6",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-sonnet-4-20250514",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Looking at the document, I can see the following text extracted: \"T{}LOM&T,d\" (this appears to be some OCR noise at the top) \"REPUBLICA DE COLOMBIA IDENTIFICACION PERSONAL CEDULA DE CIUDADANIA NUMERO 79.211.501 STERLING NEIRA APELLIDOS JOHN WILTER NOMBRES [signature area] FIRMA\" There's also a photo of a person on the right side of the document. Now let me analyze this following the classification workflow: 1. **TEXT EXTRACTION**: I've extracted the text above, including some OCR artifacts. 2. **PRIORITY CHECKS**: This is not blank and not link-only - it has substantial content. 3. **DOCUMENT FUNCTION ANALYSIS**: This document clearly serves as personal identification. The main purpose is to identify an individual person with their personal data, photograph, and signature. 4. **ISSUER IDENTIFICATION**: This appears to be issued by the Colombian government (República de Colombia). 5. **CATEGORY CLASSIFICATION**: Looking at the indicators: - This has \"REPÚBLICA DE COLOMBIA IDENTIFICACIÓN PERSONAL\" which matches the CECRL pattern mentioned in the definition - It contains \"CÉDULA DE CIUDADANÍA\" which is specifically mentioned as an essential indicator for CECRL - It has personal biographical data (name, identification number) - It has a photograph and signature area - It's a government-issued personal identification document This clearly fits the CECRL category definition for official personal identification documents. The text I need to include should be all the extracted text, properly escaped for JSON:",
+          "signature": "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"
+        },
+        {
+          "type": "text",
+          "text": "```json { \"category\": \"CECRL\", \"text\": \"T{}LOM&T,d\\n\\nREPUBLICA DE COLOMBIA\\nIDENTIFICACION PERSONAL\\nCEDULA DE CIUDADANIA\\n\\nNUMERO 79.211.501\\nSTERLING NEIRA\\n\\nAPELLIDOS\\nJOHN WILTER\\n\\nNOMBRES\\n\\nFIRMA\" } ```"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 1628,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 3150,
+        "output_tokens": 515
+      }
+    },
+    "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 8000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "expected_category": "CECRL",
+  "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+  "api_used": "invoke_model",
+  "pdf_info": {
+    "original_size": 229067,
+    "first_page_size": 133257,
+    "is_scanned": false
+  }
+}

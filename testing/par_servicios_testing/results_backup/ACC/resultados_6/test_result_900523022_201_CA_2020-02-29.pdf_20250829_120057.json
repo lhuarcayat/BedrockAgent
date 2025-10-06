@@ -1,0 +1,202 @@
+{
+  "document_name": "201_CA_2020-02-29.pdf",
+  "category": "ACC",
+  "classification_success": true,
+  "extraction_success": true,
+  "overall_success": true,
+  "timestamp": "2025-08-29T12:00:23.808558",
+  "classification_result": {
+    "classification_data": {
+      "category": "ACC",
+      "text": "Bogota D.C. El suscrito Contador Público de PUBLIART COLORS SAS identificada con Nit No. 900.523.022-1, hace constar que, de acuerdo con el libro oficial de registro de accionistas, inscrito en el registro mercantil de conformidad con las normas de auditoria generalmente aceptadas en Colombia. CERTIFICA QUE: La composición accionara es la siguiente: NOMBRE: JOHN FABIO MARTINEZ LIEVANO NUMERO DE DOCUMENTO: 1.010.168.875 CARGO: GERENTE % PARTICIPACION: 100% TIPO DE DOCUMENTO: C.C NACIONALIDAD: COLOMBIANO La presente certificación se expide al 18 día del mes de noviembre de 2019 con destino a registro de proveedores. OSCAR ALBERTO LLANOS GONZALEZ CC 72.257.114 TP 144030-T",
+      "document_number": "900523022",
+      "path": "ACC/900523022/201_CA_2020-02-29.pdf"
+    },
+    "raw_response": {
+      "output": {
+        "message": {
+          "content": [
+            {
+              "text": "```json { \"category\": \"ACC\", \"text\": \"Bogota D.C.\\n\\nEl suscrito Contador Público de PUBLIART COLORS SAS identificada con Nit No. 900.523.022-1, hace constar que, de acuerdo con el libro oficial de registro de accionistas, inscrito en el registro mercantil de conformidad con las normas de auditoria generalmente aceptadas en Colombia.\\n\\nCERTIFICA QUE:\\n\\nLa composición accionara es la siguiente:\\n\\nNOMBRE: JOHN FABIO MARTINEZ LIEVANO\\nNUMERO DE DOCUMENTO: 1.010.168.875\\nCARGO: GERENTE\\n% PARTICIPACION: 100%\\nTIPO DE DOCUMENTO: C.C\\nNACIONALIDAD: COLOMBIANO\\n\\nLa presente certificación se expide al 18 día del mes de noviembre de 2019 con destino a registro de proveedores.\\n\\nOSCAR ALBERTO LLANOS GONZALEZ\\nCC 72.257.114\\nTP 144030-T\" } ```"
+            }
+          ]
+        }
+      },
+      "stopReason": "end_turn",
+      "usage": {
+        "input_tokens": 9,
+        "cache_creation_input_tokens": 4549,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 1249
+      },
+      "ResponseMetadata": {
+        "RequestId": "e5cf124b-2032-4279-812e-f17870f64ea5",
+        "HTTPStatusCode": 200,
+        "HTTPHeaders": {
+          "date": "Fri, 29 Aug 2025 17:00:44 GMT",
+          "content-type": "application/json",
+          "content-length": "8509",
+          "connection": "keep-alive",
+          "x-amzn-requestid": "e5cf124b-2032-4279-812e-f17870f64ea5",
+          "x-amzn-bedrock-invocation-latency": "19823",
+          "x-amzn-bedrock-cache-write-input-token-count": "4549",
+          "x-amzn-bedrock-cache-read-input-token-count": "0",
+          "x-amzn-bedrock-output-token-count": "1249",
+          "x-amzn-bedrock-input-token-count": "9"
+        },
+        "RetryAttempts": 0
+      },
+      "raw_anthropic_response": {
+        "id": "msg_bdrk_01Cu4eWSXszWz12K4k28t3F3",
+        "type": "message",
+        "role": "assistant",
+        "model": "claude-sonnet-4-20250514",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "Let me analyze this document step by step according to the workflow: 1. **TEXT EXTRACTION** Looking at the document, I can see: - Header: \"Bogota D.C.\" - Text about \"El suscrito Contador Público de PUBLIART COLORS SAS identificada con Nit No. 900.523.022-1\" - Text stating this is about shareholder composition: \"La composición accionara es la siguiente:\" - A table with columns: NOMBRE, NUMERO DE DOCUMENTO, CARGO, % PARTICIPACION, TIPO DE DOCUMENTO, NACIONALIDAD - Table entry: JOHN FABIO MARTINEZ LIEVANO, 1.010.168.875, GERENTE, 100%, C.C, COLOMBIANO - Text about certification expiring on November 18, 2019 - Signature and name: OSCAR ALBERTO LLANOS GONZALEZ with CC and TP numbers 2. **PRIORITY CHECKS** - Not BLANK - has meaningful content - Not LINK_ONLY - no URLs, substantial document content 3. **ISSUER IDENTIFICATION** - This appears to be issued by a \"Contador Público\" (Public Accountant) - No DIAN logo or header visible - No Chamber of Commerce identification - This appears to be a corporate certification by an accountant 4. **DOCUMENT FUNCTION ANALYSIS** - This is clearly about shareholding composition (\"composición accionara\") - Shows ownership structure with percentage (100%) - Identifies shareholders with participation percentages - Corporate documentation, not personal identification - Not tax registration, but ownership certification 5. **CATEGORY CLASSIFICATION** Let me evaluate each category: - CECRL: This is not a personal identification document. It's about corporate ownership. - RUT: This is not a tax registration document issued by DIAN. - CERL: This is not a certificate of existence and legal representation from Chamber of Commerce. - ACC: This looks like an ownership certification document. It confirms 100% shareholding for JOHN FABIO MARTINEZ LIEVANO, with clear identification details and professional certification by an accountant. - RUB: Not a beneficial ownership report from DIAN. The document meets key ACC criteria with precise shareholder information and professional validation. Certification details strongly indicate an authentic ownership composition record for PUBLIART COLORS SAS, with high confidence in its accuracy and legal standing. The document precisely confirms John Fabio Martinez Lievano as the sole 100% shareholder, holding a management role and possessing Colombian nationality, validated through official registration processes.",
+            "signature": "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"
+          },
+          {
+            "type": "text",
+            "text": "```json { \"category\": \"ACC\", \"text\": \"Bogota D.C.\\n\\nEl suscrito Contador Público de PUBLIART COLORS SAS identificada con Nit No. 900.523.022-1, hace constar que, de acuerdo con el libro oficial de registro de accionistas, inscrito en el registro mercantil de conformidad con las normas de auditoria generalmente aceptadas en Colombia.\\n\\nCERTIFICA QUE:\\n\\nLa composición accionara es la siguiente:\\n\\nNOMBRE: JOHN FABIO MARTINEZ LIEVANO\\nNUMERO DE DOCUMENTO: 1.010.168.875\\nCARGO: GERENTE\\n% PARTICIPACION: 100%\\nTIPO DE DOCUMENTO: C.C\\nNACIONALIDAD: COLOMBIANO\\n\\nLa presente certificación se expide al 18 día del mes de noviembre de 2019 con destino a registro de proveedores.\\n\\nOSCAR ALBERTO LLANOS GONZALEZ\\nCC 72.257.114\\nTP 144030-T\" } ```"
+          }
+        ],
+        "stop_reason": "end_turn",
+        "stop_sequence": null,
+        "usage": {
+          "input_tokens": 9,
+          "cache_creation_input_tokens": 4549,
+          "cache_read_input_tokens": 0,
+          "output_tokens": 1249
+        }
+      },
+      "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+      "api_used": "invoke_model",
+      "model_params": {
+        "max_tokens": 8000,
+        "top_p": 1,
+        "temperature": 1,
+        "thinking": {
+          "type": "enabled",
+          "budget_tokens": 4096
+        }
+      }
+    },
+    "expected_category": "ACC",
+    "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model",
+    "pdf_info": {
+      "original_size": 17294,
+      "first_page_size": 17107,
+      "is_scanned": true
+    }
+  },
+  "extraction_result": {
+    "extraction_data": {
+      "result": {
+        "companyName": "PUBLIART COLORS SAS",
+        "documentCategory": "Equity Composition",
+        "taxId": "900.523.022-1",
+        "country": "Colombia",
+        "identificationDetails": {
+          "source": "text_reference",
+          "indicators": [
+            "Bogotá D.C.",
+            "Colombia"
+          ],
+          "conflictingSources": [],
+          "requiresReview": "false"
+        },
+        "relatedParties": [
+          {
+            "type": "person",
+            "firstName": "JOHN FABIO",
+            "lastName": "MARTINEZ LIEVANO",
+            "identificationType": "C.C.",
+            "identificationNumber": "1.010.168.875",
+            "relationshipType": "Shareholder",
+            "participationPercentage": "100%",
+            "timeFound": "1",
+            "job": "GERENTE"
+          }
+        ]
+      },
+      "documentType": "company",
+      "category": "ACC"
+    },
+    "raw_response": {
+      "output": {
+        "message": {
+          "content": [
+            {
+              "text": "{ \"result\": { \"companyName\": \"PUBLIART COLORS SAS\", \"documentCategory\": \"Equity Composition\", \"taxId\": \"900.523.022-1\", \"country\": \"Colombia\", \"identificationDetails\": { \"source\": \"text_reference\", \"indicators\": [ \"Bogotá D.C.\", \"Colombia\" ], \"conflictingSources\": [], \"requiresReview\": \"false\" }, \"relatedParties\": [ { \"type\": \"person\", \"firstName\": \"JOHN FABIO\", \"lastName\": \"MARTINEZ LIEVANO\", \"identificationType\": \"C.C.\", \"identificationNumber\": \"1.010.168.875\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"100%\", \"timeFound\": \"1\", \"job\": \"GERENTE\" } ] }, \"documentType\": \"company\", \"category\": \"ACC\" }"
+            }
+          ]
+        }
+      },
+      "stopReason": "end_turn",
+      "usage": {
+        "input_tokens": 9,
+        "cache_creation_input_tokens": 6073,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 885
+      },
+      "ResponseMetadata": {
+        "RequestId": "5a4a7549-f6e7-474a-974f-2095aa07ab72",
+        "HTTPStatusCode": 200,
+        "HTTPHeaders": {
+          "date": "Fri, 29 Aug 2025 17:00:58 GMT",
+          "content-type": "application/json",
+          "content-length": "6113",
+          "connection": "keep-alive",
+          "x-amzn-requestid": "5a4a7549-f6e7-474a-974f-2095aa07ab72",
+          "x-amzn-bedrock-invocation-latency": "13743",
+          "x-amzn-bedrock-cache-write-input-token-count": "6073",
+          "x-amzn-bedrock-cache-read-input-token-count": "0",
+          "x-amzn-bedrock-output-token-count": "885",
+          "x-amzn-bedrock-input-token-count": "9"
+        },
+        "RetryAttempts": 0
+      },
+      "raw_anthropic_response": {
+        "id": "msg_bdrk_01LBsQSaUFPU1SbeCHaQ2VfF",
+        "type": "message",
+        "role": "assistant",
+        "model": "claude-sonnet-4-20250514",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "Let me analyze this Spanish document step by step. **Step 1: Document Analysis** - This is a certification from Bogotá D.C. - It's issued by a public accountant (Contador Público) for PUBLIART COLORS SAS - The document certifies the company's shareholding composition (composición accionaria) **Step 2: Root Level Extraction** **companyName**: The document is about \"PUBLIART COLORS SAS\" - this is mentioned as \"El suscrito Contador Público de PUBLIART COLORS SAS\" **taxId**: The document states \"identificada con Nit No. 900.523.022-1\" - so the NIT is 900.523.022-1 **country**: The document header shows \"Bogotá D.C.\" and mentions \"Colombia\" in the text \"aceptadas en Colombia\" - clear indicators this is Colombia **Step 3: Related Parties Processing** Looking at the table: - NOMBRE: JOHN FABIO MARTINEZ LIEVANO - NUMERO DE DOCUMENTO: 1.010.168.875 - CARGO: GERENTE - % PARTICIPACION: 100% - TIPO DE DOCUMENTO: C.C - NACIONALIDAD: COLOMBIANO This is clearly a person (individual name, C.C. document type which is Colombian citizen ID). **Name splitting**: - firstName: \"JOHN FABIO\" (two given names) - lastName: \"MARTINEZ LIEVANO\" (two family names) **identificationType**: \"C.C.\" - this matches Colombia's PERSON_ID hash table **identificationNumber**: \"1.010.168.875\" - preserving the format with dots **participationPercentage**: \"100%\" from the table **job**: \"GERENTE\" from the CARGO column **timeFound**: This person appears once in the document, so \"1\" I've verified the document's key details and cross-checked critical information. The validation confirms all critical elements align perfectly. The single shareholder's details match official Colombian identification standards, with no discrepancies detected. The document's source is credible, originating from Bogotá D.C. and explicitly referencing Colombian regulations. All required fields are present and consistent.",
+            "signature": "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"
+          },
+          {
+            "type": "text",
+            "text": "{ \"result\": { \"companyName\": \"PUBLIART COLORS SAS\", \"documentCategory\": \"Equity Composition\", \"taxId\": \"900.523.022-1\", \"country\": \"Colombia\", \"identificationDetails\": { \"source\": \"text_reference\", \"indicators\": [ \"Bogotá D.C.\", \"Colombia\" ], \"conflictingSources\": [], \"requiresReview\": \"false\" }, \"relatedParties\": [ { \"type\": \"person\", \"firstName\": \"JOHN FABIO\", \"lastName\": \"MARTINEZ LIEVANO\", \"identificationType\": \"C.C.\", \"identificationNumber\": \"1.010.168.875\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"100%\", \"timeFound\": \"1\", \"job\": \"GERENTE\" } ] }, \"documentType\": \"company\", \"category\": \"ACC\" }"
+          }
+        ],
+        "stop_reason": "end_turn",
+        "stop_sequence": null,
+        "usage": {
+          "input_tokens": 9,
+          "cache_creation_input_tokens": 6073,
+          "cache_read_input_tokens": 0,
+          "output_tokens": 885
+        }
+      },
+      "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+      "api_used": "invoke_model",
+      "model_params": {
+        "max_tokens": 8000,
+        "top_p": 1,
+        "temperature": 1,
+        "thinking": {
+          "type": "enabled",
+          "budget_tokens": 4096
+        }
+      }
+    },
+    "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model"
+  }
+}

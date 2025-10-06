@@ -1,0 +1,117 @@
+{
+  "extraction_data": {
+    "result": {
+      "CompanyName": "ARA ASESORES PROFESIONALES PETROLEROS LTDA",
+      "CompanyType": "LTDA",
+      "Country": "Colombia",
+      "DocumentPages": "3",
+      "DocumentType": "Informe Existencia y Representación Legal",
+      "TaxId": "8300661192",
+      "MainAddress": "TRV 60 AV SUBA NO 115 58 TA OF 506, Bogotá D.C.",
+      "IncorporationDate": "1999-12-30",
+      "CompanyDuration": "2049-12-30",
+      "RegistrationNumber": "00984331",
+      "Size": "",
+      "RelatedParties": [
+        {
+          "FirstName": "FLAVIO ARMANDO",
+          "LastName": "RUSSI",
+          "IdType": "C.C.",
+          "IdNumber": "00017180660",
+          "RelationshipType": "GERENTE"
+        },
+        {
+          "FirstName": "RAUL",
+          "LastName": "ORTEGA ROJAS",
+          "IdType": "C.C.",
+          "IdNumber": "00017154292",
+          "RelationshipType": "SUPLENTE DEL GERENTE"
+        },
+        {
+          "FirstName": "ALCIBIADES",
+          "LastName": "BURITICA M",
+          "IdType": "C.C.",
+          "IdNumber": "00000241308",
+          "RelationshipType": "SUPLENTE DEL GERENTE"
+        }
+      ],
+      "Embargoes": "",
+      "Liquidations": "",
+      "DocumentIssueDate": "2015-05-19",
+      "LastRegistrationRenewalDate": "2014-03-31"
+    }
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "```json { \"result\": { \"CompanyName\": \"ARA ASESORES PROFESIONALES PETROLEROS LTDA\", \"CompanyType\": \"LTDA\", \"Country\": \"Colombia\", \"DocumentPages\": \"3\", \"DocumentType\": \"Informe Existencia y Representación Legal\", \"TaxId\": \"8300661192\", \"MainAddress\": \"TRV 60 AV SUBA NO 115 58 TA OF 506, Bogotá D.C.\", \"IncorporationDate\": \"1999-12-30\", \"CompanyDuration\": \"2049-12-30\", \"RegistrationNumber\": \"00984331\", \"Size\": \"\", \"RelatedParties\": [ { \"FirstName\": \"FLAVIO ARMANDO\", \"LastName\": \"RUSSI\", \"IdType\": \"C.C.\", \"IdNumber\": \"00017180660\", \"RelationshipType\": \"GERENTE\" }, { \"FirstName\": \"RAUL\", \"LastName\": \"ORTEGA ROJAS\", \"IdType\": \"C.C.\", \"IdNumber\": \"00017154292\", \"RelationshipType\": \"SUPLENTE DEL GERENTE\" }, { \"FirstName\": \"ALCIBIADES\", \"LastName\": \"BURITICA M\", \"IdType\": \"C.C.\", \"IdNumber\": \"00000241308\", \"RelationshipType\": \"SUPLENTE DEL GERENTE\" } ], \"Embargoes\": \"\", \"Liquidations\": \"\", \"DocumentIssueDate\": \"2015-05-19\", \"LastRegistrationRenewalDate\": \"2014-03-31\" } } ```"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 7217,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 2304,
+      "output_tokens": 1160
+    },
+    "ResponseMetadata": {
+      "RequestId": "3fa3074e-fb68-4eef-b103-aade9772afeb",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Mon, 01 Sep 2025 06:25:22 GMT",
+        "content-type": "application/json",
+        "content-length": "6542",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "3fa3074e-fb68-4eef-b103-aade9772afeb",
+        "x-amzn-bedrock-invocation-latency": "16275",
+        "x-amzn-bedrock-cache-write-input-token-count": "0",
+        "x-amzn-bedrock-cache-read-input-token-count": "2304",
+        "x-amzn-bedrock-output-token-count": "1160",
+        "x-amzn-bedrock-input-token-count": "7217"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_01VeRfGjbKfQX9ssXkqMUtYW",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-sonnet-4-20250514",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "I need to analyze this Colombian business registration document and extract the required information according to the specified schema. Let me work through this systematically: ### 1. Page Count I can see at the bottom of each page \"1 de 3\", \"2 de 3\", \"3 de 3\", so this document has 3 pages. ### 2. Company Information - CompanyName: Looking for the company name near \"La cámara de comercio certifica\" or \"Certifica\". I can see \"ARA ASESORES PROFESIONALES PETROLEROS LTDA\" - CompanyType: From the company name, it's \"LTDA\" - Country: This is issued by \"Cámara de Comercio de Bogotá\", so Colombia - TaxId: I see \"NIT - 8300661192\" - IdentificationType: \"NIT\" (Colombian identification type) ### 3. Address and Location - MainAddress: I see \"Dirección: TRV 60 AV SUBA NO 115 58 TA OF 506\" and the document is from Bogotá, so it should be \"TRV 60 AV SUBA NO 115 58 TA OF 506, Bogotá D.C.\" ### 4. Dates - IncorporationDate: Looking at the constitution section, I see \"DEL 30 DE DICIEMBRE DE 1999\", so 1999-12-30 - CompanyDuration: I see \"DURACION HASTA EL 30 DE DICIEMBRE DEL 2049\", so 2049-12-30 - DocumentIssueDate: At the top I see \"Fecha y Hora de la consulta: 19/05/2015 19:16\", so 2015-05-19 - LastRegistrationRenewalDate: I see \"Fecha última Renovación: 2014-03-31\", so 2014-03-31 ### 5. Registration Information I've identified the registration number as 00984331. However, no specific size information is present in the document. ### 6. Related Parties The document reveals key leadership roles: Flavio Armando Russi is the primary manager, with Raul Ortega Rojas and Alcibiades Buritica serving as alternate managers. Their identification numbers are clearly listed, indicating their official positions within the company. ### 7. Additional Fields The document type is a legal existence and representation report. No details about liquidations or embargoes are included in the current documentation.",
+          "signature": "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"
+        },
+        {
+          "type": "text",
+          "text": "```json { \"result\": { \"CompanyName\": \"ARA ASESORES PROFESIONALES PETROLEROS LTDA\", \"CompanyType\": \"LTDA\", \"Country\": \"Colombia\", \"DocumentPages\": \"3\", \"DocumentType\": \"Informe Existencia y Representación Legal\", \"TaxId\": \"8300661192\", \"MainAddress\": \"TRV 60 AV SUBA NO 115 58 TA OF 506, Bogotá D.C.\", \"IncorporationDate\": \"1999-12-30\", \"CompanyDuration\": \"2049-12-30\", \"RegistrationNumber\": \"00984331\", \"Size\": \"\", \"RelatedParties\": [ { \"FirstName\": \"FLAVIO ARMANDO\", \"LastName\": \"RUSSI\", \"IdType\": \"C.C.\", \"IdNumber\": \"00017180660\", \"RelationshipType\": \"GERENTE\" }, { \"FirstName\": \"RAUL\", \"LastName\": \"ORTEGA ROJAS\", \"IdType\": \"C.C.\", \"IdNumber\": \"00017154292\", \"RelationshipType\": \"SUPLENTE DEL GERENTE\" }, { \"FirstName\": \"ALCIBIADES\", \"LastName\": \"BURITICA M\", \"IdType\": \"C.C.\", \"IdNumber\": \"00000241308\", \"RelationshipType\": \"SUPLENTE DEL GERENTE\" } ], \"Embargoes\": \"\", \"Liquidations\": \"\", \"DocumentIssueDate\": \"2015-05-19\", \"LastRegistrationRenewalDate\": \"2014-03-31\" } } ```"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 7217,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 2304,
+        "output_tokens": 1160
+      }
+    },
+    "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 8000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+  "api_used": "invoke_model"
+}

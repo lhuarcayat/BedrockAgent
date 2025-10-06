@@ -1,0 +1,87 @@
+{
+  "classification_data": {
+    "category": "CECRL",
+    "text": "REPUBLICA DE COLOMBIA IDENTIFICACION PERSONAL CEDULA DE CIUDADANIA NUMERO 79.474.197 TOVAR OSORIO APELLIDOS ALEXANDER NOMBRES FECHA DE NACIMIENTO 13-ENE-1969 BOGOTA D.C. (CUNDINAMARCA) LUGAR DE NACIMIENTO 1.70 O+ M 31-MAR-1987 BOGOTA D.C. FECHA Y LUGAR DE EXPEDICION INDICE DERECHO A-1500112-47153271-M-007947417-2007012D 06568 0702DA 03 220953006",
+    "document_number": "900285194",
+    "path": "CECRL/900285194/79474197_2020-02-29.pdf"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "```json { \"category\": \"CECRL\", \"text\": \"REPUBLICA DE COLOMBIA\\nIDENTIFICACION PERSONAL\\nCEDULA DE CIUDADANIA\\nNUMERO 79.474.197\\nTOVAR OSORIO\\nAPELLIDOS\\nALEXANDER\\nNOMBRES\\nFECHA DE NACIMIENTO 13-ENE-1969\\nBOGOTA D.C.\\n(CUNDINAMARCA)\\nLUGAR DE NACIMIENTO\\n1.70\\nO+\\nM\\n31-MAR-1987 BOGOTA D.C.\\nFECHA Y LUGAR DE EXPEDICION\\nINDICE DERECHO\\nA-1500112-47153271-M-007947417-2007012D\\n06568 0702DA 03 220953006\" } ```"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 9,
+      "cache_creation_input_tokens": 4549,
+      "cache_read_input_tokens": 0,
+      "output_tokens": 974
+    },
+    "ResponseMetadata": {
+      "RequestId": "f0c371ab-cbbe-49eb-b6a1-47b2dc375f87",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Fri, 29 Aug 2025 15:50:17 GMT",
+        "content-type": "application/json",
+        "content-length": "6740",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "f0c371ab-cbbe-49eb-b6a1-47b2dc375f87",
+        "x-amzn-bedrock-invocation-latency": "16111",
+        "x-amzn-bedrock-cache-write-input-token-count": "4549",
+        "x-amzn-bedrock-cache-read-input-token-count": "0",
+        "x-amzn-bedrock-output-token-count": "974",
+        "x-amzn-bedrock-input-token-count": "9"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_01U1NKHiz8uBWyYfhQSPuiCn",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-sonnet-4-20250514",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Let me analyze this document step by step following the classification workflow: 1. **TEXT EXTRACTION** Looking at the document, I can see: - Page shows two identification cards - First card: \"REPUBLICA DE COLOMBIA IDENTIFICACION PERSONAL CEDULA DE CIUDADANIA\" with number 79.474.197, name \"TOVAR OSORIO ALEXANDER\", and a photo - Second card (back side): Shows birth date \"13-ENE-1969\", place \"BOGOTA D.C. (CUNDINAMARCA)\", height \"1.70\", blood type \"O+\", gender \"M\", and other personal details, plus a fingerprint, barcode, and various identification numbers 2. **PRIORITY CHECKS** - This is not BLANK - there's meaningful content - This is not LINK_ONLY - no hyperlinks, just identification cards 3. **ISSUER IDENTIFICATION** The document shows \"REPUBLICA DE COLOMBIA IDENTIFICACION PERSONAL CEDULA DE CIUDADANIA\" which indicates this is issued by Colombian government identification authorities, not DIAN or Chamber of Commerce. 4. **DOCUMENT FUNCTION ANALYSIS** This is clearly personal identification documentation for an individual (Alexander Tovar Osorio). It contains: - Personal biographical data (birth date/place) - Physical characteristics (height, blood type, gender) - Individual photo - Fingerprint - Government-issued ID number with individual name - Security elements (barcode, official formatting) 5. **CATEGORY CLASSIFICATION** This fits perfectly with CECRL: - Official personal identification document (cédula de ciudadanía) - Individual identification terminology present - Personal biographical data: birth date (13-ENE-1969), birth place (Bogotá D.C.), blood type (O+), gender (M) - Individual photo, fingerprint reference - Government-issued personal ID number (79.474.197) with individual name - Security elements: barcode, official Colombian government format - Issued by government identification authorities (República de Colombia) 6. **CONFIDENCE VALIDATION** The document provides robust evidence for CECRL classification, with clear and unambiguous identification markers from an official government source. Identifying details confirm a Colombian national identity card with comprehensive personal information, including birthplace, physical characteristics, and administrative registration specifics.",
+          "signature": "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"
+        },
+        {
+          "type": "text",
+          "text": "```json { \"category\": \"CECRL\", \"text\": \"REPUBLICA DE COLOMBIA\\nIDENTIFICACION PERSONAL\\nCEDULA DE CIUDADANIA\\nNUMERO 79.474.197\\nTOVAR OSORIO\\nAPELLIDOS\\nALEXANDER\\nNOMBRES\\nFECHA DE NACIMIENTO 13-ENE-1969\\nBOGOTA D.C.\\n(CUNDINAMARCA)\\nLUGAR DE NACIMIENTO\\n1.70\\nO+\\nM\\n31-MAR-1987 BOGOTA D.C.\\nFECHA Y LUGAR DE EXPEDICION\\nINDICE DERECHO\\nA-1500112-47153271-M-007947417-2007012D\\n06568 0702DA 03 220953006\" } ```"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 9,
+        "cache_creation_input_tokens": 4549,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 974
+      }
+    },
+    "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 8000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "expected_category": "CECRL",
+  "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+  "api_used": "invoke_model",
+  "pdf_info": {
+    "original_size": 184804,
+    "first_page_size": 183392,
+    "is_scanned": true
+  }
+}

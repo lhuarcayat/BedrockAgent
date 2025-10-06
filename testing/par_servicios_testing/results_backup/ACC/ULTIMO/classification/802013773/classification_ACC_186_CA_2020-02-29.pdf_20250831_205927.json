@@ -1,0 +1,87 @@
+{
+  "classification_data": {
+    "category": "ACC",
+    "text": "COMPOSICIÓN ACCIONARIA NOMBRE DE LA ENTIDAD: S & T INGENIERIA Y CONSULTORIA SAS NIT 802,013,773-0 INFORMACION A: 19 DE MAYO DEL AÑO 2020 NOMBRE DEL ACCIONISTA | C.C. | NATURALEZA JURÍDICA DEL SOCIO | Nº DE ACCIONES | VALOR UNITARIO DE LAS ACCIONES | % DE PARTICIPACIÓN SOBRE EL CAPITAL TANIA ELENA CHEMAS AVENDAÑO | 32.728.993 | PERSONAL NATURAL | 280 | $ 1.000.000 | 50,00% FARID EDUARDO RADI SAGBINI | 77.025.796 | PERSONAL NATURAL | 280 | $ 1.000.000 | 50,00% TOTAL ACCIONES | | | 560 | | 100% FARID EDUARDO RADI SAGBINI REPRESENTANTE LEGAL ZULMA OSPINO ALVAREZ CONTADOR TP-49271-T",
+    "document_number": "802013773",
+    "path": "ACC/802013773/186_CA_2020-02-29.pdf"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "```json { \"category\": \"ACC\", \"text\": \"COMPOSICIÓN ACCIONARIA\\nNOMBRE DE LA ENTIDAD: S & T INGENIERIA Y CONSULTORIA SAS\\nNIT 802,013,773-0\\nINFORMACION A: 19 DE MAYO DEL AÑO 2020\\n\\nNOMBRE DEL ACCIONISTA | C.C. | NATURALEZA JURÍDICA DEL SOCIO | Nº DE ACCIONES | VALOR UNITARIO DE LAS ACCIONES | % DE PARTICIPACIÓN SOBRE EL CAPITAL\\n\\nTANIA ELENA CHEMAS AVENDAÑO | 32.728.993 | PERSONAL NATURAL | 280 | $ 1.000.000 | 50,00%\\n\\nFARID EDUARDO RADI SAGBINI | 77.025.796 | PERSONAL NATURAL | 280 | $ 1.000.000 | 50,00%\\nTOTAL ACCIONES | | | 560 | | 100%\\n\\nFARID EDUARDO RADI SAGBINI\\nREPRESENTANTE LEGAL\\n\\nZULMA OSPINO ALVAREZ\\nCONTADOR\\nTP-49271-T\" } ```"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 1584,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 3150,
+      "output_tokens": 879
+    },
+    "ResponseMetadata": {
+      "RequestId": "9824cfdb-ee95-4812-b1b4-82c468938a72",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Mon, 01 Sep 2025 01:59:26 GMT",
+        "content-type": "application/json",
+        "content-length": "5941",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "9824cfdb-ee95-4812-b1b4-82c468938a72",
+        "x-amzn-bedrock-invocation-latency": "15977",
+        "x-amzn-bedrock-cache-write-input-token-count": "0",
+        "x-amzn-bedrock-cache-read-input-token-count": "3150",
+        "x-amzn-bedrock-output-token-count": "879",
+        "x-amzn-bedrock-input-token-count": "1584"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_01W6AnhYwdbvvpMqy7dWnvLr",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-sonnet-4-20250514",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Let me analyze this document following the classification workflow: 1. **TEXT EXTRACTION** The document contains significant content including: - \"COMPOSICIÓN ACCIONARIA\" (shareholder composition) as the title - Name of entity: \"S & T INGENIERIA Y CONSULTORIA SAS\" - NIT number: 802,013,773-0 - Date: 19 DE MAYO DEL AÑO 2020 - Table showing shareholder information with names, natural legal status, number of shares, unit value, and participation percentages - Two shareholders: TANIA ELENA CHEMAS AVENDAÑO (50%) and FARID EDUARDO RADI SAGBINI (50%) - Signatures and identification of legal representative and accountant 2. **PRIORITY CHECKS** - Not BLANK - has substantial content - Not LINK_ONLY - no URLs or redirect text 3. **DOCUMENT FUNCTION ANALYSIS** This document's main purpose is to show the shareholding composition of a company. It specifically shows: - The shareholders' names - Their participation percentages (50% each) - Number of shares (280 each) - Unit value of shares ($1,000,000) - This clearly indicates ACC (shareholder composition document) 4. **ISSUER IDENTIFICATION** The document appears to be issued by the company itself (S & T INGENIERIA Y CONSULTORIA SAS), as evidenced by the legal representative's signature. There's no indication this is from a Chamber of Commerce or tax authority. 5. **CATEGORY CLASSIFICATION** Following the order: CECRL → CERL → ACC → RUT → RUB → BY_REVIEW - CECRL: Not a personal identification document - CERL: Not a certificate of existence issued by Chamber of Commerce - ACC: YES - This is clearly a shareholder composition document showing: - Terminology: \"COMPOSICIÓN ACCIONARIA\" (shareholder composition) - Precise details of ownership structure - Equal 50% ownership split between two shareholders - Confirms the document perfectly fits the ACC category definition",
+          "signature": "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"
+        },
+        {
+          "type": "text",
+          "text": "```json { \"category\": \"ACC\", \"text\": \"COMPOSICIÓN ACCIONARIA\\nNOMBRE DE LA ENTIDAD: S & T INGENIERIA Y CONSULTORIA SAS\\nNIT 802,013,773-0\\nINFORMACION A: 19 DE MAYO DEL AÑO 2020\\n\\nNOMBRE DEL ACCIONISTA | C.C. | NATURALEZA JURÍDICA DEL SOCIO | Nº DE ACCIONES | VALOR UNITARIO DE LAS ACCIONES | % DE PARTICIPACIÓN SOBRE EL CAPITAL\\n\\nTANIA ELENA CHEMAS AVENDAÑO | 32.728.993 | PERSONAL NATURAL | 280 | $ 1.000.000 | 50,00%\\n\\nFARID EDUARDO RADI SAGBINI | 77.025.796 | PERSONAL NATURAL | 280 | $ 1.000.000 | 50,00%\\nTOTAL ACCIONES | | | 560 | | 100%\\n\\nFARID EDUARDO RADI SAGBINI\\nREPRESENTANTE LEGAL\\n\\nZULMA OSPINO ALVAREZ\\nCONTADOR\\nTP-49271-T\" } ```"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 1584,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 3150,
+        "output_tokens": 879
+      }
+    },
+    "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 8000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "expected_category": "ACC",
+  "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+  "api_used": "invoke_model",
+  "pdf_info": {
+    "original_size": 53159,
+    "first_page_size": 51968,
+    "is_scanned": true
+  }
+}

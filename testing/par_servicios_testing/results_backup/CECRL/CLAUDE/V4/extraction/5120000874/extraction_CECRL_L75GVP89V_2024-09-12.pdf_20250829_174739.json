@@ -1,0 +1,88 @@
+{
+  "extraction_data": {
+    "result": {
+      "firstName": "ANDREAS",
+      "lastName": "BETZLER",
+      "country_issuer": "Alemania",
+      "nationality": "Alemania",
+      "identificationType": "documento de identidad personal",
+      "identificationNumber": "L75GVP89V",
+      "message": ""
+    },
+    "document_type": "person",
+    "category": "CECRL"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "```json { \"result\": { \"firstName\": \"ANDREAS\", \"lastName\": \"BETZLER\", \"country_issuer\": \"Alemania\", \"nationality\": \"Alemania\", \"identificationType\": \"documento de identidad personal\", \"identificationNumber\": \"L75GVP89V\", \"message\": \"\" }, \"document_type\": \"person\", \"category\": \"CECRL\" } ```"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 10,
+      "cache_creation_input_tokens": 6419,
+      "cache_read_input_tokens": 0,
+      "output_tokens": 577
+    },
+    "ResponseMetadata": {
+      "RequestId": "5bf34a16-ecfb-470f-9c5e-c02d48aba287",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Fri, 29 Aug 2025 22:47:40 GMT",
+        "content-type": "application/json",
+        "content-length": "5131",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "5bf34a16-ecfb-470f-9c5e-c02d48aba287",
+        "x-amzn-bedrock-invocation-latency": "10874",
+        "x-amzn-bedrock-cache-write-input-token-count": "6419",
+        "x-amzn-bedrock-cache-read-input-token-count": "0",
+        "x-amzn-bedrock-output-token-count": "577",
+        "x-amzn-bedrock-input-token-count": "10"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_01TiHHHjpDRAp3FKQhjq1wvw",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-sonnet-4-20250514",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "I need to analyze this German identity document. Let me carefully examine all the information present in this document: Looking at the document, I can see: 1. This appears to be a German identity document (PERSONALAUSWEIS) - indicated by the German text and official format 2. Header shows \"BUNDESREPUBLIK DEUTSCHLAND\" 3. The document has the EU symbol and German official layout Let me extract the fields systematically: **firstName**: I need to look for given names. I can see \"ANDREAS\" as what appears to be the given name. **lastName**: I need to look for the surname. I can see \"BETZLER\" which appears to be the surname. **country_issuer**: This is clearly a German document based on \"BUNDESREPUBLIK DEUTSCHLAND\" header, so this should be \"Alemania\" in Spanish. **nationality**: I can see \"DEUTSCH\" which indicates German nationality, so \"Alemania\" in Spanish. **identificationType**: This appears to be a \"PERSONALAUSWEIS\" which is a German identity card, so in Spanish this would be \"documento de identidad personal\" **identificationNumber**: I can see the document number \"L75GVP89V\" at the top **Date information**: I can see birth date \"29.07.1975\" and what appears to be a place \"PLETTENBERG\" **Address**: I can see \"LEVERKUSEN\" and \"EINTRACHTSTRASSE 86\" **Other details**: Height \"186 cm\", eye color \"BLAU\", issue date \"05.06.24\", issuing authority \"STADT LEVERKUSEN\" Let me double-check the name extraction: Looking at the document structure, \"BETZLER\" appears to be positioned where surnames typically appear, and \"ANDREAS\" appears to be the given name. The document shows these clearly. The document appears to be legitimate with official seals, proper formatting, and all the expected elements of a German Personalausweis.",
+          "signature": "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"
+        },
+        {
+          "type": "text",
+          "text": "```json { \"result\": { \"firstName\": \"ANDREAS\", \"lastName\": \"BETZLER\", \"country_issuer\": \"Alemania\", \"nationality\": \"Alemania\", \"identificationType\": \"documento de identidad personal\", \"identificationNumber\": \"L75GVP89V\", \"message\": \"\" }, \"document_type\": \"person\", \"category\": \"CECRL\" } ```"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 10,
+        "cache_creation_input_tokens": 6419,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 577
+      }
+    },
+    "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 8000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+  "api_used": "invoke_model"
+}

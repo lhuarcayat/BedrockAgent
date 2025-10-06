@@ -1,0 +1,107 @@
+{
+  "extraction_data": {
+    "result": {
+      "companyName": "PUNTO ESTRATÉGICO RED DE CONSULTORES SAS",
+      "documentCategory": "Equity Composition",
+      "taxId": "900.343.420-7",
+      "country": "Colombia",
+      "identificationDetails": {
+        "source": "text_reference",
+        "indicators": [
+          "Colombia",
+          "NIT format"
+        ],
+        "conflictingSources": [],
+        "requiresReview": "false"
+      },
+      "relatedParties": [
+        {
+          "type": "person",
+          "firstName": "ADALBERTO DE JESUS",
+          "lastName": "ESCORCIA GUZMAN",
+          "identificationType": "C.C.",
+          "identificationNumber": "72335489",
+          "relationshipType": "Shareholder",
+          "participationPercentage": "100",
+          "timeFound": "1",
+          "job": ""
+        }
+      ]
+    },
+    "documentType": "company",
+    "category": "ACC"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "{ \"result\": { \"companyName\": \"PUNTO ESTRATÉGICO RED DE CONSULTORES SAS\", \"documentCategory\": \"Equity Composition\", \"taxId\": \"900.343.420-7\", \"country\": \"Colombia\", \"identificationDetails\": { \"source\": \"text_reference\", \"indicators\": [ \"Colombia\", \"NIT format\" ], \"conflictingSources\": [], \"requiresReview\": \"false\" }, \"relatedParties\": [ { \"type\": \"person\", \"firstName\": \"ADALBERTO DE JESUS\", \"lastName\": \"ESCORCIA GUZMAN\", \"identificationType\": \"C.C.\", \"identificationNumber\": \"72335489\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"100\", \"timeFound\": \"1\", \"job\": \"\" } ] }, \"documentType\": \"company\", \"category\": \"ACC\" }"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 9,
+      "cache_creation_input_tokens": 6073,
+      "cache_read_input_tokens": 0,
+      "output_tokens": 867
+    },
+    "ResponseMetadata": {
+      "RequestId": "bcab9d57-446e-4e61-ad3b-dc2b22a9077b",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Fri, 29 Aug 2025 19:51:26 GMT",
+        "content-type": "application/json",
+        "content-length": "6123",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "bcab9d57-446e-4e61-ad3b-dc2b22a9077b",
+        "x-amzn-bedrock-invocation-latency": "15495",
+        "x-amzn-bedrock-cache-write-input-token-count": "6073",
+        "x-amzn-bedrock-cache-read-input-token-count": "0",
+        "x-amzn-bedrock-output-token-count": "867",
+        "x-amzn-bedrock-input-token-count": "9"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_01GtMCEsNF9cCzeJX6mYig39",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-sonnet-4-20250514",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Let me carefully analyze this PDF document to extract structured data following the given rules and schema. First, let me identify what type of document this is: - The document title is \"CERTIFICACIÓN COMPOSICIÓN ACCIONARIA\" (Equity Composition Certification) - This is issued by \"PUNTO ESTRATÉGICO RED DE CONSULTORES SAS.\" - The document shows shareholding composition Key information I can extract: 1. **Company Name**: Looking at the letterhead and signature section, the issuing entity appears to be \"PUNTO ESTRATÉGICO RED DE CONSULTORES SAS\" with NIT 900.343.420-7 2. **Tax ID**: The document clearly states \"NIT 900.343.420-7\" 3. **Country**: The document mentions \"Colombia\" explicitly in the text \"normas de auditoría generalmente aceptadas en Colombia\" and the format uses NIT (Colombian tax ID format) 4. **Related Parties**: The table shows: - ADALBERTO DE JESUS ESCORCIA GUZMAN with ID 72335489 - 200,000 shares - $200,000,000.00 nominal value - 100% participation 5. **Document Details**: - Issued on January 17, 2020 (\"diecisiete (17) días del mes de enero de 2020\") - Signed by \"NADIA NIEBLES RACEDO\" as \"Contador Público\" with T.P. 113237-T Let me structure this according to the schema: - companyName: \"PUNTO ESTRATÉGICO RED DE CONSULTORES SAS\" (the issuing company) - documentCategory: \"Equity Composition\" - taxId: \"900.343.420-7\" - country: \"Colombia\" (based on NIT format and explicit mention of Colombia) - identificationDetails: Evidence from text references - relatedParties: Only ADALBERTO DE JESUS ESCORCIA GUZMAN as he's the shareholder with 100% participation I've identified a single individual shareholder with full ownership. His Colombian national ID suggests he's a local citizen with complete control of the company's equity. The documentation provides clear details about his full name, identification number, and total shareholding percentage.",
+          "signature": "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"
+        },
+        {
+          "type": "text",
+          "text": "{ \"result\": { \"companyName\": \"PUNTO ESTRATÉGICO RED DE CONSULTORES SAS\", \"documentCategory\": \"Equity Composition\", \"taxId\": \"900.343.420-7\", \"country\": \"Colombia\", \"identificationDetails\": { \"source\": \"text_reference\", \"indicators\": [ \"Colombia\", \"NIT format\" ], \"conflictingSources\": [], \"requiresReview\": \"false\" }, \"relatedParties\": [ { \"type\": \"person\", \"firstName\": \"ADALBERTO DE JESUS\", \"lastName\": \"ESCORCIA GUZMAN\", \"identificationType\": \"C.C.\", \"identificationNumber\": \"72335489\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"100\", \"timeFound\": \"1\", \"job\": \"\" } ] }, \"documentType\": \"company\", \"category\": \"ACC\" }"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 9,
+        "cache_creation_input_tokens": 6073,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 867
+      }
+    },
+    "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 8000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+  "api_used": "invoke_model"
+}

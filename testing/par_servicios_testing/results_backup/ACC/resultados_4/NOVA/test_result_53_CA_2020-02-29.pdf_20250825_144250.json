@@ -1,0 +1,161 @@
+{
+  "document_name": "53_CA_2020-02-29.pdf",
+  "category": "ACC",
+  "classification_success": true,
+  "extraction_success": true,
+  "overall_success": true,
+  "timestamp": "2025-08-25T14:42:34.446824",
+  "classification_result": {
+    "classification_data": {
+      "category": "ACC",
+      "text": "EL SUSCRIPTO, SAMIR ENRIQUE MARTINEZ ESTRADA EN CALIDAD DE REVISOR FISCAL DE LA SOCIEDAD BUSSNIESS PROCESS MANAGEMENT LATINOAMERICA SAS. CERTIFICO QUE LA SOCIEDAD BUSSNIESS PROCESS MANAGEMENT LATINOAMERICA SAS, DE NIT 900.266.513-3 DOMICILIARIA EN BOGOTA D.C., FUE CREADA POR DOCUMENTO PRIVADO EL 12 DE FEBRERO DE 2009 Y DE ACUERDO CON LAS NORMAS COLOMBIANAS. QUE SU CAPITAL SOCIAL AUTORIZADO, COMPUESTO POR 70.000 ACCIONES DE UN VALOR NOMINAL DE $1.000,00, PARA UN TOTAL DE $70.000.000. DEL CUAL SUSCRIPTO Y PAGADO ES EL SIGUIENTE: NOMBRE NUMERO DE DOCUMENTO CARGO % PARTICIPACION TIPO DE DOCUMENTO NACIONALIDAD Maurício Obregón Gutiérrez 79.425.769 GERENTE 80% C.C COLOMBIANO Mónica María Gutiérrez Obregón 51.826.093 SUBGERETE 20% C.C COLOMBIA SE EXPIDE EN BOGOTA A LOS DIEZ Y SIETE DÍAS DEL MES DE SEPTIEMBRE DE 2020. SAMIR ENRIQUE MARTINEZ ESTRADA REVISOR FISCAL C.C. 79.862.372 EXPEDIDA EN BARRANQUILLA CPT 85.571-T",
+      "document_number": "900266513",
+      "path": "ACC/900266513/53_CA_2020-02-29.pdf"
+    },
+    "raw_response": {
+      "ResponseMetadata": {
+        "RequestId": "62e2dd15-18b1-4445-b0ef-4670128207c2",
+        "HTTPStatusCode": 200,
+        "HTTPHeaders": {
+          "date": "Mon, 25 Aug 2025 19:42:42 GMT",
+          "content-type": "application/json",
+          "content-length": "1318",
+          "connection": "keep-alive",
+          "x-amzn-requestid": "62e2dd15-18b1-4445-b0ef-4670128207c2"
+        },
+        "RetryAttempts": 0
+      },
+      "output": {
+        "message": {
+          "role": "assistant",
+          "content": [
+            {
+              "text": "```json { \"category\": \"ACC\", \"text\": \"EL SUSCRIPTO, SAMIR ENRIQUE MARTINEZ ESTRADA EN CALIDAD DE REVISOR FISCAL DE LA SOCIEDAD BUSSNIESS PROCESS MANAGEMENT LATINOAMERICA SAS. \\nCERTIFICO \\nQUE LA SOCIEDAD BUSSNIESS PROCESS MANAGEMENT LATINOAMERICA SAS, DE NIT 900.266.513-3 DOMICILIARIA EN BOGOTA D.C., FUE CREADA POR DOCUMENTO PRIVADO EL 12 DE FEBRERO DE 2009 Y DE ACUERDO CON LAS NORMAS COLOMBIANAS. \\nQUE SU CAPITAL SOCIAL AUTORIZADO, COMPUESTO POR 70.000 ACCIONES DE UN VALOR NOMINAL DE $1.000,00, PARA UN TOTAL DE $70.000.000. DEL CUAL SUSCRIPTO Y PAGADO ES EL SIGUIENTE: \\nNOMBRE NUMERO DE DOCUMENTO CARGO % PARTICIPACION TIPO DE DOCUMENTO NACIONALIDAD \\nMaurício Obregón Gutiérrez 79.425.769 GERENTE 80% C.C COLOMBIANO \\nMónica María Gutiérrez Obregón 51.826.093 SUBGERETE 20% C.C COLOMBIA \\nSE EXPIDE EN BOGOTA A LOS DIEZ Y SIETE DÍAS DEL MES DE SEPTIEMBRE DE 2020. \\nSAMIR ENRIQUE MARTINEZ ESTRADA REVISOR FISCAL C.C. 79.862.372 EXPEDIDA EN BARRANQUILLA CPT 85.571-T\" } ```"
+            }
+          ]
+        }
+      },
+      "stopReason": "end_turn",
+      "usage": {
+        "inputTokens": 1790,
+        "outputTokens": 404,
+        "totalTokens": 4338,
+        "cacheReadInputTokens": 2144,
+        "cacheWriteInputTokens": 0
+      },
+      "metrics": {
+        "latencyMs": 8609
+      },
+      "model_id": "us.amazon.nova-pro-v1:0",
+      "api_used": "converse",
+      "model_params": {
+        "maxTokens": 8000,
+        "topP": 1,
+        "temperature": 0
+      }
+    },
+    "expected_category": "ACC",
+    "model_used": "us.amazon.nova-pro-v1:0",
+    "api_used": "converse",
+    "pdf_info": {
+      "original_size": 19440,
+      "first_page_size": 12694,
+      "is_scanned": false
+    }
+  },
+  "extraction_result": {
+    "extraction_data": {
+      "path": "ACC/900266513/53_CA_2020-02-29.pdf",
+      "result": {
+        "companyName": "BUSINESS PROCESS MANAGEMENT LATINOAMERICA SAS",
+        "documentType": "Equity Composition",
+        "taxId": "900.266.513-3",
+        "country": "Colombia",
+        "identificationDetails": {
+          "source": "text_reference",
+          "indicators": [
+            "Bogotá",
+            "Colombia",
+            "NIT",
+            "C.C."
+          ],
+          "conflictingSources": [],
+          "requiresReview": false
+        },
+        "relatedParties": [
+          {
+            "firstName": "Mauricio",
+            "lastName": "Obregon Gutierrez",
+            "identificationType": "C.C.",
+            "identificationNumber": "79.425.769",
+            "relationshipType": "Shareholder",
+            "participationPercentage": "80%",
+            "timeFound": 1,
+            "job": ""
+          },
+          {
+            "firstName": "Monica María",
+            "lastName": "Gutierrez Obregon",
+            "identificationType": "C.C.",
+            "identificationNumber": "51.826.093",
+            "relationshipType": "Shareholder",
+            "participationPercentage": "20%",
+            "timeFound": 1,
+            "job": ""
+          }
+        ]
+      },
+      "document_type": "company",
+      "document_number": "900266513",
+      "category": "ACC",
+      "confidenceScores": {
+        "companyName": 95,
+        "taxId": 95,
+        "country": 98,
+        "relatedParties": 90
+      }
+    },
+    "raw_response": {
+      "ResponseMetadata": {
+        "RequestId": "84696519-94dd-456d-8adf-f958eeb1f879",
+        "HTTPStatusCode": 200,
+        "HTTPHeaders": {
+          "date": "Mon, 25 Aug 2025 19:42:50 GMT",
+          "content-type": "application/json",
+          "content-length": "1683",
+          "connection": "keep-alive",
+          "x-amzn-requestid": "84696519-94dd-456d-8adf-f958eeb1f879"
+        },
+        "RetryAttempts": 0
+      },
+      "output": {
+        "message": {
+          "role": "assistant",
+          "content": [
+            {
+              "text": "```json { \"path\": \"ACC/900266513/53_CA_2020-02-29.pdf\", \"result\": { \"companyName\": \"BUSINESS PROCESS MANAGEMENT LATINOAMERICA SAS\", \"documentType\": \"Equity Composition\", \"taxId\": \"900.266.513-3\", \"country\": \"Colombia\", \"identificationDetails\": { \"source\": \"text_reference\", \"indicators\": [ \"Bogotá\", \"Colombia\", \"NIT\", \"C.C.\" ], \"conflictingSources\": [], \"requiresReview\": false }, \"relatedParties\": [ { \"firstName\": \"Mauricio\", \"lastName\": \"Obregon Gutierrez\", \"identificationType\": \"C.C.\", \"identificationNumber\": \"79.425.769\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"80%\", \"timeFound\": 1, \"job\": \"\" }, { \"firstName\": \"Monica María\", \"lastName\": \"Gutierrez Obregon\", \"identificationType\": \"C.C.\", \"identificationNumber\": \"51.826.093\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"20%\", \"timeFound\": 1, \"job\": \"\" } ] }, \"document_type\": \"company\", \"document_number\": \"900266513\", \"category\": \"ACC\", \"confidenceScores\": { \"companyName\": 95, \"taxId\": 95, \"country\": 98, \"relatedParties\": 90 } } ```"
+            }
+          ]
+        }
+      },
+      "stopReason": "end_turn",
+      "usage": {
+        "inputTokens": 8568,
+        "outputTokens": 410,
+        "totalTokens": 8978
+      },
+      "metrics": {
+        "latencyMs": 7319
+      },
+      "model_id": "us.amazon.nova-pro-v1:0",
+      "api_used": "converse",
+      "model_params": {
+        "maxTokens": 8000,
+        "topP": 1,
+        "temperature": 0
+      }
+    },
+    "model_used": "us.amazon.nova-pro-v1:0",
+    "api_used": "converse"
+  }
+}

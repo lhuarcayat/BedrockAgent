@@ -1,0 +1,88 @@
+{
+  "extraction_data": {
+    "result": {
+      "FirstName": "CAMILO",
+      "LastName": "ROJAS SALAZAR",
+      "CountryIssuer": "Colombia",
+      "Nationality": "colombiano",
+      "IdentificationType": "Cédula de Ciudadanía",
+      "IdentificationNumber": "4.951.616",
+      "Message": ""
+    },
+    "document_type": "person",
+    "category": "CECRL"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "```json { \"result\": { \"FirstName\": \"CAMILO\", \"LastName\": \"ROJAS SALAZAR\", \"CountryIssuer\": \"Colombia\", \"Nationality\": \"colombiano\", \"IdentificationType\": \"Cédula de Ciudadanía\", \"IdentificationNumber\": \"4.951.616\", \"Message\": \"\" }, \"document_type\": \"person\", \"category\": \"CECRL\" } ```"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 3425,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 4300,
+      "output_tokens": 614
+    },
+    "ResponseMetadata": {
+      "RequestId": "5954b120-d725-4d4c-bac9-e2d5d2d82a27",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Sun, 31 Aug 2025 21:42:00 GMT",
+        "content-type": "application/json",
+        "content-length": "5011",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "5954b120-d725-4d4c-bac9-e2d5d2d82a27",
+        "x-amzn-bedrock-invocation-latency": "13096",
+        "x-amzn-bedrock-cache-write-input-token-count": "0",
+        "x-amzn-bedrock-cache-read-input-token-count": "4300",
+        "x-amzn-bedrock-output-token-count": "614",
+        "x-amzn-bedrock-input-token-count": "3425"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_01XgNxLYPBKtJYrTDuShxsd9",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-sonnet-4-20250514",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Let me analyze this Colombian ID document (Cédula de Ciudadanía) step by step: **Document Header Analysis:** - \"REPUBLICA DE COLOMBIA\" - \"IDENTIFICACION PERSONAL\" - \"CEDULA DE CIUDADANIA\" This clearly identifies this as a Colombian citizenship card. **Field Analysis:** 1. **NUMERO**: 4.951.616 - This is the identification number 2. The document shows what appears to be a misaligned layout mentioned in the instructions: - After \"NUMERO 4.951.616\" I can see \"ROJAS SALAZAR\" - Then \"APELLIDOS\" followed by \"CAMILO\" - Then \"NOMBRES\" with what appears to be a signature area below This is exactly the Colombian document misalignment issue described in the instructions. Let me analyze: The text flow shows: - NUMERO: 4.951.616 - ROJAS SALAZAR (this appears between NUMERO and APELLIDOS labels) - APELLIDOS: CAMILO (but this should be the names) - NOMBRES: [appears to have signature/empty space] According to the contextual analysis rules for Colombian documents: - The surnames appear first: \"ROJAS SALAZAR\" - Then the \"APELLIDOS\" label appears with the first name(s): \"CAMILO\" - The \"NOMBRES\" label appears to be empty/separated So the correct extraction should be: - FirstName: \"CAMILO\" (what appears after APELLIDOS label) - LastName: \"ROJAS SALAZAR\" (what appears before APELLIDOS label) **Other fields from the document:** - CountryIssuer: Colombia (from header \"REPUBLICA DE COLOMBIA\") - Nationality: Should be Colombian (from place of birth \"YAGUARA (HUILA)\" which is in Colombia) - IdentificationType: \"Cédula de Ciudadanía\" (from document header) - IdentificationNumber: \"4.951.616\" (unique identifier for the individual) I've extracted the key identification details, focusing on the precise document number that uniquely identifies this person.",
+          "signature": "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"
+        },
+        {
+          "type": "text",
+          "text": "```json { \"result\": { \"FirstName\": \"CAMILO\", \"LastName\": \"ROJAS SALAZAR\", \"CountryIssuer\": \"Colombia\", \"Nationality\": \"colombiano\", \"IdentificationType\": \"Cédula de Ciudadanía\", \"IdentificationNumber\": \"4.951.616\", \"Message\": \"\" }, \"document_type\": \"person\", \"category\": \"CECRL\" } ```"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 3425,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 4300,
+        "output_tokens": 614
+      }
+    },
+    "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 8000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+  "api_used": "invoke_model"
+}

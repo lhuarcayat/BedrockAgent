@@ -1,0 +1,88 @@
+{
+  "extraction_data": {
+    "result": {
+      "firstName": "JUAN MANUEL",
+      "lastName": "MARTINEZ FERNANDEZ",
+      "country_issuer": "Colombia",
+      "nationality": "Colombia",
+      "identificationType": "Cédula de Ciudadanía",
+      "identificationNumber": "76319806",
+      "message": ""
+    },
+    "document_type": "person",
+    "category": "CECRL"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "```json { \"result\": { \"firstName\": \"JUAN MANUEL\", \"lastName\": \"MARTINEZ FERNANDEZ\", \"country_issuer\": \"Colombia\", \"nationality\": \"Colombia\", \"identificationType\": \"Cédula de Ciudadanía\", \"identificationNumber\": \"76319806\", \"message\": \"\" }, \"document_type\": \"person\", \"category\": \"CECRL\" } ```"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 10,
+      "cache_creation_input_tokens": 7534,
+      "cache_read_input_tokens": 0,
+      "output_tokens": 596
+    },
+    "ResponseMetadata": {
+      "RequestId": "b6a5d184-e97f-4343-9852-43fe01083a04",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Fri, 29 Aug 2025 15:47:55 GMT",
+        "content-type": "application/json",
+        "content-length": "4895",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "b6a5d184-e97f-4343-9852-43fe01083a04",
+        "x-amzn-bedrock-invocation-latency": "13834",
+        "x-amzn-bedrock-cache-write-input-token-count": "7534",
+        "x-amzn-bedrock-cache-read-input-token-count": "0",
+        "x-amzn-bedrock-output-token-count": "596",
+        "x-amzn-bedrock-input-token-count": "10"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_013egYC469k1YpLzBJkWkN4A",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-sonnet-4-20250514",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "I need to analyze this Colombian identification document. Let me break down what I can see: This appears to be a Colombian Cédula de Ciudadanía (citizenship ID card) with: Page 1 (Front): - Header: \"REPUBLICA DE COLOMBIA\" and \"IDENTIFICACION PERSONAL\" and \"CEDULA DE CIUDADANIA\" - Number: 76319806 - Names section shows: \"MARTINEZ FERNANDEZ\" (appears to be surnames) and \"JUAN MANUEL\" (appears to be given names) - There's a photo of a person - There's a signature Page 2 (Back): - Birth date: 17-AGO-1973 (August 17, 1973) - Birth place: POPAYAN (CAUCA) - Height: 1.83 - Blood type: O+ - Sex: M (Male) - Issue date and place: 16-JUL-1992 POPAYAN - Fingerprint - Barcode and other official markings Let me extract the information according to the schema: 1. **firstName**: The document shows \"JUAN MANUEL\" in the names section - this appears to be the given names 2. **lastName**: The document shows \"MARTINEZ FERNANDEZ\" in the surnames section - these are the family names 3. **country_issuer**: This is clearly \"Colombia\" as stated in the header \"REPUBLICA DE COLOMBIA\" 4. **nationality**: Since this is a Colombian citizenship document (Cédula de Ciudadanía), the nationality would be \"Colombia\" 5. **identificationType**: This is a \"Cédula de Ciudadanía\" as clearly stated on the document 6. **identificationNumber**: The number shown is \"76319806\" 7. **message**: The document appears to be a legitimate official Colombian ID document, so no issues to report This is definitely an official government-issued identification document with all the proper seals, formatting, and security features expected of a Colombian Cédula de Ciudadanía.",
+          "signature": "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"
+        },
+        {
+          "type": "text",
+          "text": "```json { \"result\": { \"firstName\": \"JUAN MANUEL\", \"lastName\": \"MARTINEZ FERNANDEZ\", \"country_issuer\": \"Colombia\", \"nationality\": \"Colombia\", \"identificationType\": \"Cédula de Ciudadanía\", \"identificationNumber\": \"76319806\", \"message\": \"\" }, \"document_type\": \"person\", \"category\": \"CECRL\" } ```"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 10,
+        "cache_creation_input_tokens": 7534,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 596
+      }
+    },
+    "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 8000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+  "api_used": "invoke_model"
+}

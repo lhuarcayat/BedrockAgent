@@ -1,0 +1,108 @@
+{
+  "extraction_data": {
+    "result": {
+      "companyName": "ECOSIMPLE SAS",
+      "documentCategory": "Equity Composition",
+      "taxId": "900365151-5",
+      "country": "Colombia",
+      "identificationDetails": {
+        "source": "text_reference",
+        "indicators": [
+          "NIT",
+          "Spanish language",
+          "Colombian document format"
+        ],
+        "conflictingSources": [],
+        "requiresReview": "false"
+      },
+      "relatedParties": [
+        {
+          "type": "person",
+          "firstName": "Henry Antonio",
+          "lastName": "Alterio González",
+          "identificationType": "C.C.",
+          "identificationNumber": "79694634",
+          "relationshipType": "Shareholder",
+          "participationPercentage": "100",
+          "timeFound": "1",
+          "job": "Representante Legal"
+        }
+      ]
+    },
+    "documentType": "company",
+    "category": "ACC"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "{ \"result\": { \"companyName\": \"ECOSIMPLE SAS\", \"documentCategory\": \"Equity Composition\", \"taxId\": \"900365151-5\", \"country\": \"Colombia\", \"identificationDetails\": { \"source\": \"text_reference\", \"indicators\": [ \"NIT\", \"Spanish language\", \"Colombian document format\" ], \"conflictingSources\": [], \"requiresReview\": \"false\" }, \"relatedParties\": [ { \"type\": \"person\", \"firstName\": \"Henry Antonio\", \"lastName\": \"Alterio González\", \"identificationType\": \"C.C.\", \"identificationNumber\": \"79694634\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"100\", \"timeFound\": \"1\", \"job\": \"Representante Legal\" } ] }, \"documentType\": \"company\", \"category\": \"ACC\" }"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 9,
+      "cache_creation_input_tokens": 6432,
+      "cache_read_input_tokens": 0,
+      "output_tokens": 857
+    },
+    "ResponseMetadata": {
+      "RequestId": "41844754-728d-4376-95ff-af42518a1af9",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Sun, 31 Aug 2025 05:50:29 GMT",
+        "content-type": "application/json",
+        "content-length": "6426",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "41844754-728d-4376-95ff-af42518a1af9",
+        "x-amzn-bedrock-invocation-latency": "14600",
+        "x-amzn-bedrock-cache-write-input-token-count": "6432",
+        "x-amzn-bedrock-cache-read-input-token-count": "0",
+        "x-amzn-bedrock-output-token-count": "857",
+        "x-amzn-bedrock-input-token-count": "9"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_014mtQmE7PiLZK7fqNrDiyDK",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-sonnet-4-20250514",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Let me analyze the document provided. This is a \"Certificado de Composición Accionaria\" (Equity Composition Certificate) document in Spanish. From the document, I can extract the following information: 1. **Company Name**: \"ECOSIMPLE SAS\" - mentioned multiple times in the document 2. **Tax ID**: \"900365151-5\" - shown as NIT number 3. **Country**: Since it uses NIT (Número de Identificación Tributaria) and is in Spanish, this appears to be from Colombia 4. **Related Parties**: - Henry Antonio Alterio González with identification 79694634 and 100% participation Let me extract the details: **Root Level Information:** - companyName: \"ECOSIMPLE SAS\" - documentCategory: \"Equity Composition\" - taxId: \"900365151-5\" (preserving the format with hyphens) - country: \"Colombia\" (based on NIT usage and Spanish language) - documentType: \"company\" - category: \"ACC\" **Related Parties:** There's one shareholder: - Name: \"HENRY ANTONIO ALTERIO GONZÁLEZ\" - This is a person (no company markers) - Identification: \"79694634\" - Participation: \"100\" (100%) - Position: He's also the \"representante legal\" (legal representative) For the identification type, since this is Colombia and the ID is \"79694634\" (8 digits, no letters), using the Colombia ID type rules: - C.C.: if matches /^[1-9][0-9]{3,9}$/ - Yes, this matches (79694634 is 8 digits starting with 7) - So identificationType should be \"C.C.\" **Name splitting for Henry Antonio Alterio González:** - firstName: \"Henry Antonio\" - lastName: \"Alterio González\" **identificationDetails:** I've identified the document's source as a text reference from Colombia, with clear indicators like NIT and language. No conflicting sources were found, and all fields appear straightforward. The single shareholder's 100% participation and matching identification details support the document's reliability. The document is dated \"27 DE FEBRERO DE 2023\" and signed by Henry Antonio Alterio González as the legal representative.",
+          "signature": "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"
+        },
+        {
+          "type": "text",
+          "text": "{ \"result\": { \"companyName\": \"ECOSIMPLE SAS\", \"documentCategory\": \"Equity Composition\", \"taxId\": \"900365151-5\", \"country\": \"Colombia\", \"identificationDetails\": { \"source\": \"text_reference\", \"indicators\": [ \"NIT\", \"Spanish language\", \"Colombian document format\" ], \"conflictingSources\": [], \"requiresReview\": \"false\" }, \"relatedParties\": [ { \"type\": \"person\", \"firstName\": \"Henry Antonio\", \"lastName\": \"Alterio González\", \"identificationType\": \"C.C.\", \"identificationNumber\": \"79694634\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"100\", \"timeFound\": \"1\", \"job\": \"Representante Legal\" } ] }, \"documentType\": \"company\", \"category\": \"ACC\" }"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 9,
+        "cache_creation_input_tokens": 6432,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 857
+      }
+    },
+    "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 8000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+  "api_used": "invoke_model"
+}

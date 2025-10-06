@@ -1,0 +1,88 @@
+{
+  "extraction_data": {
+    "result": {
+      "firstName": "MONICA",
+      "lastName": "CATALDO",
+      "country_issuer": "Colombia",
+      "nationality": "Italia",
+      "identificationType": "Cédula de Extranjería",
+      "identificationNumber": "7908085",
+      "message": ""
+    },
+    "document_type": "person",
+    "category": "CECRL"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "```json { \"result\": { \"firstName\": \"MONICA\", \"lastName\": \"CATALDO\", \"country_issuer\": \"Colombia\", \"nationality\": \"Italia\", \"identificationType\": \"Cédula de Extranjería\", \"identificationNumber\": \"7908085\", \"message\": \"\" }, \"document_type\": \"person\", \"category\": \"CECRL\" } ```"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 10,
+      "cache_creation_input_tokens": 6419,
+      "cache_read_input_tokens": 0,
+      "output_tokens": 455
+    },
+    "ResponseMetadata": {
+      "RequestId": "744dc74e-e52f-4f60-80e4-f6bef73a88e8",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Fri, 29 Aug 2025 22:54:12 GMT",
+        "content-type": "application/json",
+        "content-length": "3936",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "744dc74e-e52f-4f60-80e4-f6bef73a88e8",
+        "x-amzn-bedrock-invocation-latency": "8369",
+        "x-amzn-bedrock-cache-write-input-token-count": "6419",
+        "x-amzn-bedrock-cache-read-input-token-count": "0",
+        "x-amzn-bedrock-output-token-count": "455",
+        "x-amzn-bedrock-input-token-count": "10"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_01BtN4EFzSpZmpecF8tj1dVF",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-sonnet-4-20250514",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Let me analyze this document carefully using the dual-mode extraction system. The document is a Colombian \"Cédula de Extranjería\" (Foreign Resident Card). Looking at the document structure: - Header shows \"REPÚBLICA DE COLOMBIA\" and \"Cédula de Extranjería\" - This is clearly an official government identification document Let me extract the information: 1. **firstName/lastName**: I can see: - \"APELLIDOS: CATALDO\" - \"NOMBRES: MONICA\" So firstName = \"MONICA\", lastName = \"CATALDO\" 2. **country_issuer**: The header clearly shows \"REPÚBLICA DE COLOMBIA\", so this is \"Colombia\" 3. **nationality**: I can see \"NACIONALIDAD: ITA\" - this appears to be Italy (ITA is the country code for Italy) 4. **identificationType**: This is a \"Cédula de Extranjería\" which translates to \"Cédula de Extranjería\" in Spanish 5. **identificationNumber**: I can see \"MIGRANTE No. 7908085\" - so the number is \"7908085\" 6. **message**: This appears to be a legitimate official Colombian foreign resident card, so the message should be empty. Let me double-check the nationality - \"ITA\" typically stands for Italy in international codes, so nationality should be \"Italia\" in Spanish. Everything seems clear and extractable from this document.",
+          "signature": "Eo4LCkgIBxABGAIqQEdw1WkKDCKQeFag7RuEM7vc2PNDmqtJzL/vTgWNBjTaAO8mGvEjLChM4U0TiRNIo7qYDiL1Fi8R5yjVhyKU6+cSDFB4NxwHeSSfEsJ3pRoMZoKGlNIbZ4lV+R7vIjChFjNXnjoxNlkCLT43iDAkHByxHwulHSpzEbaDqZcrVX9j5ySgM5GyrNWr2qDMgRwq8wnP4YOawHpsnY4bnkVCclq99VBAPRK3Blng+935EfaTsyduGXzrPmBJqFgfqSRNy/nYKCgdiHo8TeX6fdkTjxFSZnZg6Ie+oN95silvmjzco+dAitl9QSZ4D7aEDJiCerr/kZza/5+ViI2uhWedFce0V9tVIIFM6MFEvzQtNqTuEJdmAxUtFUKww/bCP4IVYoaMM/a0I0UgHD/BvD67Uf5/yZLO4jo16TmHUiCIMdxP0jXXMGoXfmpEPpJfQlqs4xL13DLxld5QJDUt7Brirh7/1PmAD68uLgC6/7EREhGCH7/NVPyL2C8ro6EOjbtl5Qxyc5/8b8xNgJssk+FLbH1Ui6aei5DR/Qo0z6fD3tLrvwuzquoFoOcV2vEKHuDB1fts4bxNuz7NfeswtEbwZ/Uhi7bv4ZLPg/FJ9u6Xcz05IdMh3TalztVaWXBDxO3lrACvPO6sM57ArQXCneQ6AO+WlZ7DbkdqwwQGd6hHCTkz2TZN3FkiT5UgB5HblljF6jEQlUJ7iZDrLW4/nstsF5GnFih/IC4h9cK+vXlhNOED17oQTf9rD2oz5dulXRJP3f/NHyiLknECyVxYmBUBx/wZUMV0wtnp7iRJFh2tH6ddSxUxYcAJIw+2eP0T90WnSrn1pbsz7AYAlUINWTxBDojeiFw7QFQbCvw2C+K1Bwjw9J1v8ZbV83Bc2OoDp6jHjpL9EdqVvR/0/0sgkxFwNlENxgCVTuXD6R3XvNYD/sRNWV9mxGeHxtsmXcWR5oS8DCVZQeAAY/gZ56l3iw6YMQHVUjPy6SfqHDuf/1pa4Isu1lnC5Af3VwCGn5odVWdz+KmEpKCepqtjZ+073dxEEoQCE5Ggk0g5jcdXWDhLfrQchJjSfUWj2NiLLiE5JU18jAsXnIhoa6G22jLASg4BxS6/3o4MuKC35G/RQ5wle0/iDHncQX79ThREVYcWtQALYFtrIL1p4EwuVIj65E7flE427eqNW6CMtJDQ/kNPbWTU0DvJgiTfImwMyxzIZMXC7uJk/vEB3sTYt+TRNxfcCfcZtz0j7efgEms1VAbsFlcvA/ROADJ9RGqPNAh9CVto7am1RLPn5UBqn3XRklHwBs/ij/89lAGzo6sdd4P7lPitsgLMOReUmhu8srtZkt21fGg5GedG2N+e2HZMeY298YZaXlf+ny4DNFxbq4FQ1j0mYa5x2YqLNEEeLKvVXjzsgacDeHaB57R5osyHc8FWxuoyTkQzMm0b6ezTMjA2qqp0SJgPUT8muCf+rG2i6gxP0GplzgBDZVvvLQD5dkmP77v+UHpC4bhkfFTWT6gTixk2Jst0D3DCHoLTCfOPnIIBVAC6QwL+BZMruU3LiibQ2jtXEF7PEA5ZlBN1Henm59bAyU5g+RgZ+63ton4JNWsjQpnp/kJ6+zTk1ctnZ6ppwPyk6sib0Gnt7uymGskskLx1fFozTcjI2gWu4PAojSH9rmDDVL6J6iZS9awPe8XJPM2QbQianAUXPiuSTAVYijjgIBu1zKp9oofhJtd6XHe0xrjmPyR39GMC1u8d2gH9MZ56Jftj1eoNGhp6lD1mx/pp/Dver/6rM/SbiZ2F+8gTWk4rURfoVtt3eYSmPxp/TkXpBPIU/oyBlndKK8tiogQqZLeEJFcs4AMjRZH53CA6YGQn5EZLTY9Ob4pPYfmVWFYIom/QGAE="
+        },
+        {
+          "type": "text",
+          "text": "```json { \"result\": { \"firstName\": \"MONICA\", \"lastName\": \"CATALDO\", \"country_issuer\": \"Colombia\", \"nationality\": \"Italia\", \"identificationType\": \"Cédula de Extranjería\", \"identificationNumber\": \"7908085\", \"message\": \"\" }, \"document_type\": \"person\", \"category\": \"CECRL\" } ```"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 10,
+        "cache_creation_input_tokens": 6419,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 455
+      }
+    },
+    "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 8000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+  "api_used": "invoke_model"
+}

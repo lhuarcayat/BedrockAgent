@@ -1,0 +1,142 @@
+{
+  "extraction_data": {
+    "result": {
+      "PrincipalCompanyName": "AEROSUPPORT S.A.S.",
+      "DocumentCategory": "Equity Composition",
+      "TaxId": "800.216.686-2",
+      "IdentificationType": "NIT",
+      "Country": "Colombia",
+      "IdentificationDetails": {
+        "Source": "TextReference",
+        "Indicators": [
+          "Bogota",
+          "Colombia"
+        ],
+        "ConflictingSources": [
+          "Non-standard identification format for entity: GLOBAL AVIATION SUPPORT CORP (1045179-1-546162)"
+        ],
+        "RequiresReview": "true"
+      },
+      "RelatedParties": [
+        {
+          "Type": "person",
+          "FirstName": "GERMAN",
+          "LastName": "SALGADO VERGARA",
+          "IdType": "CC",
+          "IdNumber": "19306991",
+          "RelationshipType": "Shareholder",
+          "ParticipationPercentage": "49.50",
+          "TimeFound": "2",
+          "Job": "Representante Legal"
+        },
+        {
+          "Type": "company",
+          "CompanyName": "GLOBAL AVIATION SUPPORT CORP",
+          "IdType": "ForReview",
+          "IdNumber": "1045179-1-546162",
+          "RelationshipType": "Shareholder",
+          "ParticipationPercentage": "49.00",
+          "TimeFound": "2",
+          "Job": ""
+        },
+        {
+          "Type": "person",
+          "FirstName": "ADRIANA",
+          "LastName": "ARANGO JARAMILLO",
+          "IdType": "CC",
+          "IdNumber": "35469632",
+          "RelationshipType": "Shareholder",
+          "ParticipationPercentage": "1.00",
+          "TimeFound": "2",
+          "Job": ""
+        },
+        {
+          "Type": "person",
+          "FirstName": "NICOLAS",
+          "LastName": "SALGADO ARANGO",
+          "IdType": "CC",
+          "IdNumber": "1020763136",
+          "RelationshipType": "Shareholder",
+          "ParticipationPercentage": "0.50",
+          "TimeFound": "2",
+          "Job": ""
+        }
+      ]
+    },
+    "DocumentType": "company",
+    "Category": "ACC"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "{ \"result\": { \"PrincipalCompanyName\": \"AEROSUPPORT S.A.S.\", \"DocumentCategory\": \"Equity Composition\", \"TaxId\": \"800.216.686-2\", \"IdentificationType\": \"NIT\", \"Country\": \"Colombia\", \"IdentificationDetails\": { \"Source\": \"TextReference\", \"Indicators\": [ \"Bogota\", \"Colombia\" ], \"ConflictingSources\": [\"Non-standard identification format for entity: GLOBAL AVIATION SUPPORT CORP (1045179-1-546162)\"], \"RequiresReview\": \"true\" }, \"RelatedParties\": [ { \"Type\": \"person\", \"FirstName\": \"GERMAN\", \"LastName\": \"SALGADO VERGARA\", \"IdType\": \"CC\", \"IdNumber\": \"19306991\", \"RelationshipType\": \"Shareholder\", \"ParticipationPercentage\": \"49.50\", \"TimeFound\": \"2\", \"Job\": \"Representante Legal\" }, { \"Type\": \"company\", \"CompanyName\": \"GLOBAL AVIATION SUPPORT CORP\", \"IdType\": \"ForReview\", \"IdNumber\": \"1045179-1-546162\", \"RelationshipType\": \"Shareholder\", \"ParticipationPercentage\": \"49.00\", \"TimeFound\": \"2\", \"Job\": \"\" }, { \"Type\": \"person\", \"FirstName\": \"ADRIANA\", \"LastName\": \"ARANGO JARAMILLO\", \"IdType\": \"CC\", \"IdNumber\": \"35469632\", \"RelationshipType\": \"Shareholder\", \"ParticipationPercentage\": \"1.00\", \"TimeFound\": \"2\", \"Job\": \"\" }, { \"Type\": \"person\", \"FirstName\": \"NICOLAS\", \"LastName\": \"SALGADO ARANGO\", \"IdType\": \"CC\", \"IdNumber\": \"1020763136\", \"RelationshipType\": \"Shareholder\", \"ParticipationPercentage\": \"0.50\", \"TimeFound\": \"2\", \"Job\": \"\" } ] }, \"DocumentType\": \"company\", \"Category\": \"ACC\" }"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 2120,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 4822,
+      "output_tokens": 1751
+    },
+    "ResponseMetadata": {
+      "RequestId": "4867c697-e772-42c9-a40c-5fc1b3f314c2",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Mon, 01 Sep 2025 02:08:25 GMT",
+        "content-type": "application/json",
+        "content-length": "9745",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "4867c697-e772-42c9-a40c-5fc1b3f314c2",
+        "x-amzn-bedrock-invocation-latency": "23486",
+        "x-amzn-bedrock-cache-write-input-token-count": "0",
+        "x-amzn-bedrock-cache-read-input-token-count": "4822",
+        "x-amzn-bedrock-output-token-count": "1751",
+        "x-amzn-bedrock-input-token-count": "2120"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_01RbJwA4J6sfhoBeuoiYsGz2",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-sonnet-4-20250514",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "I need to extract data from this Colombian shareholder composition document carefully. Let me analyze it section by section. 1. **PrincipalCompanyName**: Looking for the main company name - I can see \"AEROSUPPORT S.A.S.\" mentioned multiple times - In the header it says \"AEROSUPPORT S.A.S.\" - The document states \"En mi calidad de Representante legal de la sociedad Aerosupport SAS identificada con NIT 800.216.686-2\" - So the principal company name is \"AEROSUPPORT S.A.S.\" 2. **DocumentCategory**: Should always be \"Equity Composition\" 3. **TaxId**: Looking for the tax ID - I can see \"NIT. 800.216.686-2\" - Also \"NIT 800.216.686-2\" mentioned in the text - So TaxId: \"800.216.686-2\" 4. **IdentificationType**: - It's \"NIT\" as mentioned multiple times 5. **Country**: - I can see \"BOGOTA, COLOMBIA\" mentioned - The document is clearly from Colombia - So Country: \"Colombia\" 6. **IdentificationDetails**: - Source should be \"TextReference\" since I found explicit country/city references - Indicators: [\"Bogota\", \"Colombia\"] - Need to check for conflicts - let me analyze the shareholding percentages: - GERMAN SALGADO VERGARA: 49.50% - GLOBAL AVIATION SUPPORT CORP: 49.00% - ADRIANA ARANGO JARAMILLO: 1.00% - NICOLAS SALGADO ARANGO: 0.50% - Total: 100% - The percentages add up correctly to 100% - ConflictingSources: [] (no conflicts found) - RequiresReview: \"false\" (no issues found) I'll now examine the related parties, focusing on the first shareholder's details. The document reveals a Colombian individual with specific identification characteristics. I'll carefully extract the precise information about GERMAN SALGADO VERGARA, noting his personal details and shareholding status. The second entity introduces a corporate shareholder with a potentially non-standard identification number. I'll flag this for potential verification, as the ID format seems unusual for Colombian corporate registration. The third entity appears to be another individual shareholder, though the name seems truncated and requires further investigation to complete the full identification details. The fourth entity represents another individual shareholder, with a 10-digit identification number typical of Colombian personal identification. The participation percentage is minimal at 0.50%, suggesting a minor ownership stake in the organization. I notice an unusual identification format for another entity that requires careful verification, potentially indicating a foreign corporate registration. This anomaly necessitates marking the record for further review and flagging potential conflicts in the source documentation.",
+          "signature": "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"
+        },
+        {
+          "type": "text",
+          "text": "{ \"result\": { \"PrincipalCompanyName\": \"AEROSUPPORT S.A.S.\", \"DocumentCategory\": \"Equity Composition\", \"TaxId\": \"800.216.686-2\", \"IdentificationType\": \"NIT\", \"Country\": \"Colombia\", \"IdentificationDetails\": { \"Source\": \"TextReference\", \"Indicators\": [ \"Bogota\", \"Colombia\" ], \"ConflictingSources\": [\"Non-standard identification format for entity: GLOBAL AVIATION SUPPORT CORP (1045179-1-546162)\"], \"RequiresReview\": \"true\" }, \"RelatedParties\": [ { \"Type\": \"person\", \"FirstName\": \"GERMAN\", \"LastName\": \"SALGADO VERGARA\", \"IdType\": \"CC\", \"IdNumber\": \"19306991\", \"RelationshipType\": \"Shareholder\", \"ParticipationPercentage\": \"49.50\", \"TimeFound\": \"2\", \"Job\": \"Representante Legal\" }, { \"Type\": \"company\", \"CompanyName\": \"GLOBAL AVIATION SUPPORT CORP\", \"IdType\": \"ForReview\", \"IdNumber\": \"1045179-1-546162\", \"RelationshipType\": \"Shareholder\", \"ParticipationPercentage\": \"49.00\", \"TimeFound\": \"2\", \"Job\": \"\" }, { \"Type\": \"person\", \"FirstName\": \"ADRIANA\", \"LastName\": \"ARANGO JARAMILLO\", \"IdType\": \"CC\", \"IdNumber\": \"35469632\", \"RelationshipType\": \"Shareholder\", \"ParticipationPercentage\": \"1.00\", \"TimeFound\": \"2\", \"Job\": \"\" }, { \"Type\": \"person\", \"FirstName\": \"NICOLAS\", \"LastName\": \"SALGADO ARANGO\", \"IdType\": \"CC\", \"IdNumber\": \"1020763136\", \"RelationshipType\": \"Shareholder\", \"ParticipationPercentage\": \"0.50\", \"TimeFound\": \"2\", \"Job\": \"\" } ] }, \"DocumentType\": \"company\", \"Category\": \"ACC\" }"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 2120,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 4822,
+        "output_tokens": 1751
+      }
+    },
+    "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 8000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+  "api_used": "invoke_model"
+}

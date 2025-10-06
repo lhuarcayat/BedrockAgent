@@ -1,0 +1,79 @@
+{
+  "extraction_data": {
+    "path": "ACC/900365151/58_CA_2020-02-29.pdf",
+    "result": {
+      "companyName": "ECOSIMPLE SAS",
+      "documentCategory": "Equity Composition",
+      "taxId": "900365151-5",
+      "country": "POR REVISAR",
+      "identificationDetails": {
+        "source": "text_reference",
+        "indicators": [
+          "NIT"
+        ],
+        "conflictingSources": [
+          "Missing country reference, defaulting to POR REVISAR"
+        ],
+        "requiresReview": "true"
+      },
+      "relatedParties": [
+        {
+          "type": "person",
+          "firstName": "HENRY",
+          "lastName": "ANTONIO ALTERIO GONZALEZ",
+          "identificationType": "CC",
+          "identificationNumber": "79694634",
+          "relationshipType": "Shareholder",
+          "participationPercentage": "100",
+          "timeFound": "1",
+          "job": "Representante legal"
+        }
+      ]
+    },
+    "documentType": "company",
+    "documentNumber": "900365151",
+    "category": "ACC"
+  },
+  "raw_response": {
+    "ResponseMetadata": {
+      "RequestId": "a963d814-d4e7-4784-b9f7-0ffe582187cf",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Thu, 28 Aug 2025 07:37:40 GMT",
+        "content-type": "application/json",
+        "content-length": "1154",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "a963d814-d4e7-4784-b9f7-0ffe582187cf"
+      },
+      "RetryAttempts": 0
+    },
+    "output": {
+      "message": {
+        "role": "assistant",
+        "content": [
+          {
+            "text": "```json { \"result\": { \"companyName\": \"ECOSIMPLE SAS\", \"documentCategory\": \"Equity Composition\", \"taxId\": \"900365151-5\", \"country\": \"POR REVISAR\", \"identificationDetails\": { \"source\": \"text_reference\", \"indicators\": [ \"NIT\" ], \"conflictingSources\": [ \"Missing country reference, defaulting to POR REVISAR\" ], \"requiresReview\": \"true\" }, \"relatedParties\": [ { \"type\": \"person\", \"firstName\": \"HENRY\", \"lastName\": \"ANTONIO ALTERIO GONZALEZ\", \"identificationType\": \"CC\", \"identificationNumber\": \"79694634\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"100\", \"timeFound\": \"1\", \"job\": \"Representante legal\" } ] }, \"documentType\": \"company\", \"category\": \"ACC\" } ```"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "inputTokens": 5407,
+      "outputTokens": 240,
+      "totalTokens": 5647
+    },
+    "metrics": {
+      "latencyMs": 4603
+    },
+    "model_id": "us.amazon.nova-pro-v1:0",
+    "api_used": "converse",
+    "model_params": {
+      "maxTokens": 8000,
+      "topP": 1,
+      "temperature": 0
+    }
+  },
+  "model_used": "us.amazon.nova-pro-v1:0",
+  "api_used": "converse"
+}

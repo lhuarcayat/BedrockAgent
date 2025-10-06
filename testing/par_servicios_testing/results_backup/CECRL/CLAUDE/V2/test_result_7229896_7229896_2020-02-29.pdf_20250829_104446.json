@@ -1,0 +1,183 @@
+{
+  "document_name": "7229896_2020-02-29.pdf",
+  "category": "CECRL",
+  "classification_success": true,
+  "extraction_success": true,
+  "overall_success": true,
+  "timestamp": "2025-08-29T10:43:49.839582",
+  "classification_result": {
+    "classification_data": {
+      "category": "CECRL",
+      "text": "REPUBLICA DE COLOMBIA IDENTIFICACION PERSONAL CEDULA DE CIUDADANIA NUMERO 7.229.896 JEREZ BERRIO APELLIDOS CESAR AUGUSTO NOMBRES FIRMA FECHA DE NACIMIENTO 30-MAY-1974 DUITAMA (BOYACA) LUGAR DE NACIMIENTO 1.67 O+ M ESTATURA G.S RH SEXO 21-SEP-1992 DUITAMA FECHA Y LUGAR DE EXPEDICION INDICE DERECHO REGISTRADOR NACIONAL CARLOS ABRIL SANCHEZ TORRES A-4604000-002174396-M 000722896-201 00023 002121717A 1 816000416",
+      "document_number": "7229896",
+      "path": "CECRL/7229896/7229896_2020-02-29.pdf"
+    },
+    "raw_response": {
+      "output": {
+        "message": {
+          "content": [
+            {
+              "text": "```json { \"category\": \"CECRL\", \"text\": \"REPUBLICA DE COLOMBIA\\nIDENTIFICACION PERSONAL\\nCEDULA DE CIUDADANIA\\n\\nNUMERO 7.229.896\\nJEREZ BERRIO\\nAPELLIDOS\\nCESAR AUGUSTO\\nNOMBRES\\n\\nFIRMA\\n\\nFECHA DE NACIMIENTO 30-MAY-1974\\nDUITAMA\\n(BOYACA)\\nLUGAR DE NACIMIENTO\\n1.67\\nO+\\nM\\nESTATURA\\nG.S RH\\nSEXO\\n21-SEP-1992 DUITAMA\\nFECHA Y LUGAR DE EXPEDICION\\nINDICE DERECHO\\nREGISTRADOR NACIONAL\\nCARLOS ABRIL SANCHEZ TORRES\\nA-4604000-002174396-M 000722896-201 00023 002121717A 1 816000416\" } ```"
+            }
+          ]
+        }
+      },
+      "stopReason": "end_turn",
+      "usage": {
+        "input_tokens": 9,
+        "cache_creation_input_tokens": 4549,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 988
+      },
+      "ResponseMetadata": {
+        "RequestId": "91f20bf8-2ead-4674-871c-bb331b558eb3",
+        "HTTPStatusCode": 200,
+        "HTTPHeaders": {
+          "date": "Fri, 29 Aug 2025 15:44:07 GMT",
+          "content-type": "application/json",
+          "content-length": "5847",
+          "connection": "keep-alive",
+          "x-amzn-requestid": "91f20bf8-2ead-4674-871c-bb331b558eb3",
+          "x-amzn-bedrock-invocation-latency": "17470",
+          "x-amzn-bedrock-cache-write-input-token-count": "4549",
+          "x-amzn-bedrock-cache-read-input-token-count": "0",
+          "x-amzn-bedrock-output-token-count": "988",
+          "x-amzn-bedrock-input-token-count": "9"
+        },
+        "RetryAttempts": 0
+      },
+      "raw_anthropic_response": {
+        "id": "msg_bdrk_01SMReMCwHk9ua5bYwaTmAun",
+        "type": "message",
+        "role": "assistant",
+        "model": "claude-sonnet-4-20250514",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "Let me analyze this document step by step following the classification workflow: 1. **TEXT EXTRACTION** Looking at the document, I can see: - \"REPUBLICA DE COLOMBIA\" - \"IDENTIFICACION PERSONAL\" - \"CEDULA DE CIUDADANIA\" - \"NUMERO 7.229.896\" - \"JEREZ BERRIO\" - \"APELLIDOS\" - \"CESAR AUGUSTO\" - \"NOMBRES\" - A signature area labeled \"FIRMA\" - A photo of a person - \"FECHA DE NACIMIENTO 30-MAY-1974\" - \"DUITAMA (BOYACA)\" - \"LUGAR DE NACIMIENTO\" - \"1.67\" (height) - \"O+\" (blood type) - \"M\" (sex) - \"ESTATURA\" - \"G.S RH\" - \"SEXO\" - \"21-SEP-1992 DUITAMA\" - \"FECHA Y LUGAR DE EXPEDICION\" - A fingerprint - \"INDICE DERECHO\" - \"REGISTRADOR NACIONAL\" - \"CARLOS ARRIIP, SANCHEZ TORRES\" - A barcode at the bottom 2. **PRIORITY CHECKS** - This is not BLANK - there's substantial meaningful content - This is not LINK_ONLY - no hyperlinks or URLs 3. **ISSUER IDENTIFICATION** This appears to be issued by government identification authorities (\"REPUBLICA DE COLOMBIA\", \"REGISTRADOR NACIONAL\") - not DIAN or Chamber of Commerce. 4. **DOCUMENT FUNCTION ANALYSIS** This is clearly personal identification documentation for an individual person, not corporate documentation or tax compliance. 5. **CATEGORY CLASSIFICATION** Looking at CECRL definition: - ✓ Individual identification terminology: \"IDENTIFICACION PERSONAL\", \"CEDULA DE CIUDADANIA\" - ✓ Comprehensive personal details confirm official identification document with robust verification elements - Validates individual identity through multiple security features and comprehensive personal information - Government-issued document provides authoritative personal identification for Cesar Augusto Jerez Berrio",
+            "signature": "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"
+          },
+          {
+            "type": "text",
+            "text": "```json { \"category\": \"CECRL\", \"text\": \"REPUBLICA DE COLOMBIA\\nIDENTIFICACION PERSONAL\\nCEDULA DE CIUDADANIA\\n\\nNUMERO 7.229.896\\nJEREZ BERRIO\\nAPELLIDOS\\nCESAR AUGUSTO\\nNOMBRES\\n\\nFIRMA\\n\\nFECHA DE NACIMIENTO 30-MAY-1974\\nDUITAMA\\n(BOYACA)\\nLUGAR DE NACIMIENTO\\n1.67\\nO+\\nM\\nESTATURA\\nG.S RH\\nSEXO\\n21-SEP-1992 DUITAMA\\nFECHA Y LUGAR DE EXPEDICION\\nINDICE DERECHO\\nREGISTRADOR NACIONAL\\nCARLOS ABRIL SANCHEZ TORRES\\nA-4604000-002174396-M 000722896-201 00023 002121717A 1 816000416\" } ```"
+          }
+        ],
+        "stop_reason": "end_turn",
+        "stop_sequence": null,
+        "usage": {
+          "input_tokens": 9,
+          "cache_creation_input_tokens": 4549,
+          "cache_read_input_tokens": 0,
+          "output_tokens": 988
+        }
+      },
+      "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+      "api_used": "invoke_model",
+      "model_params": {
+        "max_tokens": 8000,
+        "top_p": 1,
+        "temperature": 1,
+        "thinking": {
+          "type": "enabled",
+          "budget_tokens": 4096
+        }
+      }
+    },
+    "expected_category": "CECRL",
+    "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model",
+    "pdf_info": {
+      "original_size": 168479,
+      "first_page_size": 163978,
+      "is_scanned": true
+    }
+  },
+  "extraction_result": {
+    "extraction_data": {
+      "result": {
+        "firstName": "CESAR AUGUSTO",
+        "lastName": "JEREZ BERRIO",
+        "country_issuer": "Colombia",
+        "nationality": "Colombia",
+        "identificationType": "Cédula de Ciudadanía",
+        "identificationNumber": "7.229.896",
+        "message": ""
+      },
+      "document_type": "person",
+      "category": "CECRL"
+    },
+    "raw_response": {
+      "output": {
+        "message": {
+          "content": [
+            {
+              "text": "```json { \"result\": { \"firstName\": \"CESAR AUGUSTO\", \"lastName\": \"JEREZ BERRIO\", \"country_issuer\": \"Colombia\", \"nationality\": \"Colombia\", \"identificationType\": \"Cédula de Ciudadanía\", \"identificationNumber\": \"7.229.896\", \"message\": \"\" }, \"document_type\": \"person\", \"category\": \"CECRL\" } ```"
+            }
+          ]
+        }
+      },
+      "stopReason": "end_turn",
+      "usage": {
+        "input_tokens": 10,
+        "cache_creation_input_tokens": 5982,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 2091
+      },
+      "ResponseMetadata": {
+        "RequestId": "ed5d4a91-77d7-4b3c-8842-882829dc02dc",
+        "HTTPStatusCode": 200,
+        "HTTPHeaders": {
+          "date": "Fri, 29 Aug 2025 15:44:46 GMT",
+          "content-type": "application/json",
+          "content-length": "13759",
+          "connection": "keep-alive",
+          "x-amzn-requestid": "ed5d4a91-77d7-4b3c-8842-882829dc02dc",
+          "x-amzn-bedrock-invocation-latency": "38491",
+          "x-amzn-bedrock-cache-write-input-token-count": "5982",
+          "x-amzn-bedrock-cache-read-input-token-count": "0",
+          "x-amzn-bedrock-output-token-count": "2091",
+          "x-amzn-bedrock-input-token-count": "10"
+        },
+        "RetryAttempts": 0
+      },
+      "raw_anthropic_response": {
+        "id": "msg_bdrk_01Hqi5yNA2qWJ5wSTghJYS9J",
+        "type": "message",
+        "role": "assistant",
+        "model": "claude-sonnet-4-20250514",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "Let me analyze this Colombian identification document step by step. **Step 1: Document Structure Analysis** - This is a Colombian \"CEDULA DE CIUDADANIA\" (Citizenship Card) - The header clearly states \"REPUBLICA DE COLOMBIA\" and \"IDENTIFICACION PERSONAL\" - Has official elements: photograph, fingerprint, barcode - This is definitely an official government ID document **Step 2: Field Detection** Looking for field labels in the document: - I can see \"APELLIDOS\" followed by \"CESAR AUGUSTO\" - I can see \"NOMBRES\" with a signature below it - There's a number \"7.229.896\" which appears to be the ID number - Birth information shows \"FECHA DE NACIMIENTO 30-MAY-1974\" - Shows \"DUITAMA (BOYACA)\" as place of birth - Shows various other details Let me extract: **APELLIDOS**: CESAR AUGUSTO - Wait, this looks wrong. Let me re-examine. Looking more carefully: - \"NUMERO: 7.229.896\" - \"JEREZ BERRIO\" appears after the number - \"APELLIDOS\" field shows \"CESAR AUGUSTO\" - \"NOMBRES\" field has a signature below it Actually, let me read this more carefully: - The number is 7.229.896 - Under that is \"JEREZ BERRIO\" - Then \"APELLIDOS\" followed by \"CESAR AUGUSTO\" - Then \"NOMBRES\" with what appears to be a signature This is confusing. Let me look at the layout more systematically: At the top: - REPUBLICA DE COLOMBIA - IDENTIFICACION PERSONAL - CEDULA DE CIUDADANIA - NUMERO: 7.229.896 - JEREZ BERRIO (this appears to be the surname/apellidos) - APELLIDOS: [blank or signature area] - CESAR AUGUSTO (this appears to be under apellidos) - NOMBRES: [signature area] I'm detecting a potential naming pattern. The surname \"JEREZ BERRIO\" seems primary, with \"CESAR AUGUSTO\" possibly being a first name or secondary identifier. The document's layout suggests a structured approach to personal identification, with multiple fields capturing different aspects of an individual's identity. The inconsistent placement of names requires careful cross-referencing to ensure accurate interpretation of the document's personal information fields. I'm examining the Colombian ID document's name structure carefully. The layout suggests \"JEREZ BERRIO\" might be the surnames, with \"CESAR AUGUSTO\" potentially representing first names. The signature's placement under the \"NOMBRES\" section adds complexity to interpreting the document's details. I'm systematically analyzing the text positioning and labels to determine the correct name interpretation. The document's layout indicates potential variations in how names are typically recorded, requiring careful cross-referencing with standard Colombian identification formats. The signature's presence introduces an additional layer of uncertainty in definitively mapping the name components. The layout suggests \"JEREZ BERRIO\" represents the surnames, with \"CESAR AUGUSTO\" likely indicating the given names. The document appears to be a Colombian identification card, revealing key personal details through its structured format. I'll confirm the individual's birth information: born on May 30, 1974, in Duitama, a municipality located in the Boyacá department of Colombia. The identification number 7.229.896 corresponds to a Cédula de Ciudadanía, the standard national identification document in Colombia. The name presentation seems complex. Prominently displayed is \"JEREZ BERRIO\", which likely represents the primary surname. The section labeled \"APELLIDOS\" shows \"CESAR AUGUSTO\", which appears unusual since these sound more like first names. This suggests potential formatting or documentation complexity typical in Colombian identification records. The document's layout indicates some ambiguity about name placement, requiring careful interpretation of the standard naming conventions.",
+            "signature": "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"
+          },
+          {
+            "type": "text",
+            "text": "```json { \"result\": { \"firstName\": \"CESAR AUGUSTO\", \"lastName\": \"JEREZ BERRIO\", \"country_issuer\": \"Colombia\", \"nationality\": \"Colombia\", \"identificationType\": \"Cédula de Ciudadanía\", \"identificationNumber\": \"7.229.896\", \"message\": \"\" }, \"document_type\": \"person\", \"category\": \"CECRL\" } ```"
+          }
+        ],
+        "stop_reason": "end_turn",
+        "stop_sequence": null,
+        "usage": {
+          "input_tokens": 10,
+          "cache_creation_input_tokens": 5982,
+          "cache_read_input_tokens": 0,
+          "output_tokens": 2091
+        }
+      },
+      "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+      "api_used": "invoke_model",
+      "model_params": {
+        "max_tokens": 8000,
+        "top_p": 1,
+        "temperature": 1,
+        "thinking": {
+          "type": "enabled",
+          "budget_tokens": 4096
+        }
+      }
+    },
+    "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model"
+  }
+}

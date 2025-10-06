@@ -1,0 +1,87 @@
+{
+  "classification_data": {
+    "category": "ACC",
+    "text": "SYS TECHNOLOGIES LTDA. Ciencia agrícola cultivando soluciones Bogotá D.C., Noviembre 27 de 2019 REF. CERTIFICACION ACIONARIA El suscrito contador de la compañía SYS TECHNOLOGIES LTDA. Nit. 830.110.750-9, se permite certificar que el capital social de esta compañía está constituido de la siguiente forma: SOCIO PARTICIPACION DOC. IDENTIDAD APORTES ALVARO A. MORENO FLOREZ 79.506.344 $935.000.000 55% ANA MANUELA MORENO ARIZA 1.034.776.525 $255.000.000 15% ALVARO MIGUEL MORENO ARIZA 1.034.784.418 $255.000.000 15% SAMUEL JOSE MORENO PEÑARANDA 1.034.779.893 $85.000.000 5% GABRIELA SOFIA MORENO P. 1.034.782.594 $85.000.000 5% DANIEL SANTIAGO MORENO P. 1.034.784.628 $85.000.000 5% TOTALES $1.700.000.000 100% Cordialmente, GERARDO ANTONIO ROMERO GARZON C.C. 79.482.936 de Bogotá TP 51557-T www.gruposys.com.co gerencia@gruposys.com.co Calle 23D No.80 B - 34 Modelia PBX:755 73 29 - 805 09 21 Bogotá D.C. Colombia",
+    "document_number": "830110750",
+    "path": "ACC/830110750/322_CA_2020-02-29.pdf"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "```json { \"category\": \"ACC\", \"text\": \"SYS TECHNOLOGIES LTDA.\\nCiencia agrícola cultivando soluciones\\n\\nBogotá D.C., Noviembre 27 de 2019\\n\\nREF. CERTIFICACION ACIONARIA\\n\\nEl suscrito contador de la compañía SYS TECHNOLOGIES LTDA. Nit. 830.110.750-9, se permite certificar que el capital social de esta compañía está constituido de la siguiente forma:\\n\\nSOCIO PARTICIPACION DOC. IDENTIDAD APORTES\\n\\nALVARO A. MORENO FLOREZ 79.506.344 $935.000.000 55%\\n\\nANA MANUELA MORENO ARIZA 1.034.776.525 $255.000.000 15%\\n\\nALVARO MIGUEL MORENO ARIZA 1.034.784.418 $255.000.000 15%\\n\\nSAMUEL JOSE MORENO PEÑARANDA 1.034.779.893 $85.000.000 5%\\n\\nGABRIELA SOFIA MORENO P. 1.034.782.594 $85.000.000 5%\\n\\nDANIEL SANTIAGO MORENO P. 1.034.784.628 $85.000.000 5%\\n\\nTOTALES $1.700.000.000 100%\\n\\nCordialmente,\\n\\nGERARDO ANTONIO ROMERO GARZON\\nC.C. 79.482.936 de Bogotá\\nTP 51557-T\\n\\nwww.gruposys.com.co\\ngerencia@gruposys.com.co\\nCalle 23D No.80 B - 34 Modelia\\nPBX:755 73 29 - 805 09 21\\nBogotá D.C. Colombia\" } ```"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 1584,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 3150,
+      "output_tokens": 1128
+    },
+    "ResponseMetadata": {
+      "RequestId": "9ba6e33c-2853-4281-ac26-ccc257b7553d",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Mon, 01 Sep 2025 02:01:03 GMT",
+        "content-type": "application/json",
+        "content-length": "7040",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "9ba6e33c-2853-4281-ac26-ccc257b7553d",
+        "x-amzn-bedrock-invocation-latency": "20881",
+        "x-amzn-bedrock-cache-write-input-token-count": "0",
+        "x-amzn-bedrock-cache-read-input-token-count": "3150",
+        "x-amzn-bedrock-output-token-count": "1128",
+        "x-amzn-bedrock-input-token-count": "1584"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_01LqfnsUAVyEPjG7sBgmeCUs",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-sonnet-4-20250514",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Let me analyze this document step by step following the classification workflow: 1. **TEXT EXTRACTION** The document contains significant content that I can extract. 2. **PRIORITY CHECKS** - BLANK: No, there is substantial content - LINK_ONLY: No, the main content is not hyperlinks/URLs 3. **DOCUMENT FUNCTION ANALYSIS** Looking at the content, I can see: - This document has \"REF. CERTIFICACION ACIONARIA\" (Reference: Shareholder Certification) - It states that the undersigned accountant of SYS TECHNOLOGIES LTDA company (Nit. 830.110.750-9) certifies that the social capital of this company is constituted as follows - It shows a table with shareholders (SOCIO), their participation (PARTICIPACION), document identity (DOC. IDENTIDAD), and contributions (APORTES) - It lists percentages of ownership: 55%, 15%, 15%, 5%, 5%, 5%, totaling 100% - It shows capital contributions for each shareholder - This appears to be a document showing the shareholding composition of a company This is clearly showing the shareholding composition of a company with specific percentages and capital contributions. 4. **ISSUER IDENTIFICATION** - The document appears to be issued by the company itself (SYS TECHNOLOGIES LTDA) through its accountant (contador) - It's signed by GERARDO ANTONIO ROMERO GARZON who appears to be the accountant - This is NOT issued by a tax authority like DIAN - This is NOT issued by a commercial registry authority like Chamber of Commerce - This IS issued by a corporate entity (the company itself) 5. **CATEGORY CLASSIFICATION** Following the order: CECRL → CERL → ACC → RUT → RUB → BY_REVIEW - CECRL: No, this is not a personal identification document - CERL: No, this is not issued by a commercial registration authority, it's issued by the company itself - ACC: Confirmed as an accounting document - Validates shareholding details with precise percentages - Demonstrates capital structure through specific contributions - Issued directly by company's accountant The document definitively represents an ACC (Accounting) classification, providing a comprehensive breakdown of the company's ownership structure.",
+          "signature": "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"
+        },
+        {
+          "type": "text",
+          "text": "```json { \"category\": \"ACC\", \"text\": \"SYS TECHNOLOGIES LTDA.\\nCiencia agrícola cultivando soluciones\\n\\nBogotá D.C., Noviembre 27 de 2019\\n\\nREF. CERTIFICACION ACIONARIA\\n\\nEl suscrito contador de la compañía SYS TECHNOLOGIES LTDA. Nit. 830.110.750-9, se permite certificar que el capital social de esta compañía está constituido de la siguiente forma:\\n\\nSOCIO PARTICIPACION DOC. IDENTIDAD APORTES\\n\\nALVARO A. MORENO FLOREZ 79.506.344 $935.000.000 55%\\n\\nANA MANUELA MORENO ARIZA 1.034.776.525 $255.000.000 15%\\n\\nALVARO MIGUEL MORENO ARIZA 1.034.784.418 $255.000.000 15%\\n\\nSAMUEL JOSE MORENO PEÑARANDA 1.034.779.893 $85.000.000 5%\\n\\nGABRIELA SOFIA MORENO P. 1.034.782.594 $85.000.000 5%\\n\\nDANIEL SANTIAGO MORENO P. 1.034.784.628 $85.000.000 5%\\n\\nTOTALES $1.700.000.000 100%\\n\\nCordialmente,\\n\\nGERARDO ANTONIO ROMERO GARZON\\nC.C. 79.482.936 de Bogotá\\nTP 51557-T\\n\\nwww.gruposys.com.co\\ngerencia@gruposys.com.co\\nCalle 23D No.80 B - 34 Modelia\\nPBX:755 73 29 - 805 09 21\\nBogotá D.C. Colombia\" } ```"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 1584,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 3150,
+        "output_tokens": 1128
+      }
+    },
+    "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 8000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "expected_category": "ACC",
+  "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+  "api_used": "invoke_model",
+  "pdf_info": {
+    "original_size": 1231057,
+    "first_page_size": 1229432,
+    "is_scanned": true
+  }
+}

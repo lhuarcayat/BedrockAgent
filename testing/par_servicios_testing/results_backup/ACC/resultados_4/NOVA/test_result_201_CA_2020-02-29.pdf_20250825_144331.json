@@ -1,0 +1,149 @@
+{
+  "document_name": "201_CA_2020-02-29.pdf",
+  "category": "ACC",
+  "classification_success": true,
+  "extraction_success": true,
+  "overall_success": true,
+  "timestamp": "2025-08-25T14:43:17.338239",
+  "classification_result": {
+    "classification_data": {
+      "category": "ACC",
+      "text": "Bogota D.C. El suscrito Contador Público de PUBLICART COLORS SAS identificada con Nit No. 900.523.022-1, hace constar que, de acuerdo con el libro oficial de registro de accionistas, inscrito en el registro mercantil de conformidad con las normas de auditoría generalmente aceptadas en Colombia. CERTIFICA QUE: La composición accionaria es la siguiente: NOMBRE NÚMERO DE CARGO % PARTICIPACIÓN TIPO DE DOCUMENTO DOCUMENTO NACIONALIDAD JOHN FABIO 1.010.168.875 GERENTE 100% C.C. COLOMBIANO MARTINEZ LIEVANO La presente certificación se expide al 18 día del mes de noviembre de 2019 con destino a registro de proveedores. [SIGNATURE] kt OSCAR ALBERTO LLANOS GONZALEZ CC 72.257.114 TP 144030-T",
+      "document_number": "900523022",
+      "path": "ACC/900523022/201_CA_2020-02-29.pdf"
+    },
+    "raw_response": {
+      "ResponseMetadata": {
+        "RequestId": "0d3c31de-8a3f-40e8-81d4-8e8c6d1d475d",
+        "HTTPStatusCode": 200,
+        "HTTPHeaders": {
+          "date": "Mon, 25 Aug 2025 19:43:24 GMT",
+          "content-type": "application/json",
+          "content-length": "1176",
+          "connection": "keep-alive",
+          "x-amzn-requestid": "0d3c31de-8a3f-40e8-81d4-8e8c6d1d475d"
+        },
+        "RetryAttempts": 0
+      },
+      "output": {
+        "message": {
+          "role": "assistant",
+          "content": [
+            {
+              "text": "```json { \"category\": \"ACC\", \"text\": \"Bogota D.C.\\n\\nEl suscrito Contador P\\u00fablico de PUBLICART COLORS SAS\\nidentificada con Nit No. 900.523.022-1, hace constar que, de acuerdo\\ncon el libro oficial de registro de accionistas, inscrito en el registro\\nmercantil de conformidad con las normas de auditor\\u00eda generalmente\\naceptadas en Colombia.\\n\\n\\nCERTIFICA QUE:\\nLa composici\\u00f3n accionaria es la siguiente:\\n\\nNOMBRE\\nN\\u00daMERO DE\\nCARGO\\n% PARTICIPACI\\u00d3N\\nTIPO DE DOCUMENTO\\nDOCUMENTO\\nNACIONALIDAD\\nJOHN FABIO\\n1.010.168.875\\nGERENTE\\n100%\\nC.C.\\nCOLOMBIANO\\nMARTINEZ LIEVANO\\n\\n\\nLa presente certificaci\\u00f3n se expide al 18 d\\u00eda del mes de noviembre de 2019\\ncon destino a registro de proveedores.\\n\\n[SIGNATURE]\\nkt\\n\\nOSCAR ALBERTO LLANOS GONZALEZ\\nCC 72.257.114\\nTP 144030-T\" } ```"
+            }
+          ]
+        }
+      },
+      "stopReason": "end_turn",
+      "usage": {
+        "inputTokens": 1790,
+        "outputTokens": 357,
+        "totalTokens": 4291,
+        "cacheReadInputTokens": 2144,
+        "cacheWriteInputTokens": 0
+      },
+      "metrics": {
+        "latencyMs": 7166
+      },
+      "model_id": "us.amazon.nova-pro-v1:0",
+      "api_used": "converse",
+      "model_params": {
+        "maxTokens": 8000,
+        "topP": 1,
+        "temperature": 0
+      }
+    },
+    "expected_category": "ACC",
+    "model_used": "us.amazon.nova-pro-v1:0",
+    "api_used": "converse",
+    "pdf_info": {
+      "original_size": 17294,
+      "first_page_size": 17107,
+      "is_scanned": true
+    }
+  },
+  "extraction_result": {
+    "extraction_data": {
+      "path": "ACC/900523022/201_CA_2020-02-29.pdf",
+      "result": {
+        "companyName": "PUBLIART COLORS SAS",
+        "documentType": "Equity Composition",
+        "taxId": "900.523.022-1",
+        "country": "Colombia",
+        "identificationDetails": {
+          "source": "text_reference",
+          "indicators": [
+            "Bogota D.C.",
+            "Colombia"
+          ],
+          "conflictingSources": [],
+          "requiresReview": false
+        },
+        "relatedParties": [
+          {
+            "firstName": "John Fabio",
+            "lastName": "Martinez Lievano",
+            "identificationType": "CC",
+            "identificationNumber": "1.010.168.875",
+            "relationshipType": "Shareholder",
+            "participationPercentage": "100%",
+            "timeFound": 1,
+            "job": ""
+          }
+        ]
+      },
+      "document_type": "company",
+      "document_number": "900523022",
+      "category": "ACC",
+      "confidenceScores": {
+        "companyName": 95,
+        "taxId": 95,
+        "country": 95,
+        "relatedParties": 90
+      }
+    },
+    "raw_response": {
+      "ResponseMetadata": {
+        "RequestId": "8254e619-1d43-450c-adf2-f8ee3a54dba7",
+        "HTTPStatusCode": 200,
+        "HTTPHeaders": {
+          "date": "Mon, 25 Aug 2025 19:43:31 GMT",
+          "content-type": "application/json",
+          "content-length": "1281",
+          "connection": "keep-alive",
+          "x-amzn-requestid": "8254e619-1d43-450c-adf2-f8ee3a54dba7"
+        },
+        "RetryAttempts": 0
+      },
+      "output": {
+        "message": {
+          "role": "assistant",
+          "content": [
+            {
+              "text": "```json { \"path\": \"ACC/900523022/201_CA_2020-02-29.pdf\", \"result\": { \"companyName\": \"PUBLIART COLORS SAS\", \"documentType\": \"Equity Composition\", \"taxId\": \"900.523.022-1\", \"country\": \"Colombia\", \"identificationDetails\": { \"source\": \"text_reference\", \"indicators\": [ \"Bogota D.C.\", \"Colombia\" ], \"conflictingSources\": [], \"requiresReview\": false }, \"relatedParties\": [ { \"firstName\": \"John Fabio\", \"lastName\": \"Martinez Lievano\", \"identificationType\": \"CC\", \"identificationNumber\": \"1.010.168.875\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"100%\", \"timeFound\": 1, \"job\": \"\" } ] }, \"document_type\": \"company\", \"document_number\": \"900523022\", \"category\": \"ACC\", \"confidenceScores\": { \"companyName\": 95, \"taxId\": 95, \"country\": 95, \"relatedParties\": 90 } } ```"
+            }
+          ]
+        }
+      },
+      "stopReason": "end_turn",
+      "usage": {
+        "inputTokens": 8569,
+        "outputTokens": 321,
+        "totalTokens": 8890
+      },
+      "metrics": {
+        "latencyMs": 6955
+      },
+      "model_id": "us.amazon.nova-pro-v1:0",
+      "api_used": "converse",
+      "model_params": {
+        "maxTokens": 8000,
+        "topP": 1,
+        "temperature": 0
+      }
+    },
+    "model_used": "us.amazon.nova-pro-v1:0",
+    "api_used": "converse"
+  }
+}

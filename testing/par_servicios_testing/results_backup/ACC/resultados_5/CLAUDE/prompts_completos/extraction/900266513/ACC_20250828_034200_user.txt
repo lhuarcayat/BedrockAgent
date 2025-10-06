@@ -1,0 +1,54 @@
+Extract company equity composition data from the provided PDF document.
+
+# Key Instructions
+1. Follow ALL extraction rules from system instructions
+2. Identify the main reporting company (root level) first  
+3. Extract all shareholders/related parties with their participation percentages
+4. Apply country detection rules (explicit → ID-based → domain → "POR REVISAR")
+5. Use "POR REVISAR" for any unclear/missing values
+6. Set requiresReview="true" if any field="POR REVISAR" or any conflicts exist
+
+# Required Output Structure
+```json
+{
+  "result": {
+    "companyName": "",
+    "documentCategory": "Equity Composition",
+    "taxId": "",
+    "country": "",
+    "identificationDetails": {
+      "source": "",
+      "indicators": [],
+      "conflictingSources": [],
+      "requiresReview": ""
+    },
+    "relatedParties": [
+      {
+        "type": "person",
+        "firstName": "",
+        "lastName": "",
+        "identificationType": "",
+        "identificationNumber": "",
+        "relationshipType": "Shareholder", 
+        "participationPercentage": "",
+        "timeFound": "",
+        "job": ""
+      },
+      {
+        "type": "company",
+        "companyName": "",
+        "identificationType": "",
+        "identificationNumber": "",
+        "relationshipType": "Shareholder",
+        "participationPercentage": "",
+        "timeFound": "",
+        "job": ""
+      }
+    ]
+  },
+  "documentType": "company",
+  "category": "ACC"
+}
+```
+
+Think step-by-step. Extract data carefully. Return only valid JSON without comments or markdown.

@@ -1,0 +1,130 @@
+{
+  "extraction_data": {
+    "result": {
+      "CompanyName": "SOLOSOFT S A S",
+      "CompanyType": "S A S",
+      "Country": "Colombia",
+      "DocumentPages": "10",
+      "DocumentType": "Certificado de Existencia y Representación Legal",
+      "TaxId": "800.211.407-1",
+      "MainAddress": "CARRERA 7 NO 156-68 OF 801, BOGOTÁ D.C.",
+      "IncorporationDate": "1993-10-28",
+      "CompanyDuration": "2043-10-20",
+      "RegistrationNumber": "00571554",
+      "Size": "Microempresa",
+      "RelatedParties": [
+        {
+          "FirstName": "JACOBO ABRAHAM",
+          "LastName": "SENIOR MOSQUERA",
+          "IdType": "C.C.",
+          "IdNumber": "000000008692953",
+          "RelationshipType": "Gerente"
+        },
+        {
+          "FirstName": "CLAUDIA",
+          "LastName": "DURAN LIZARAZO",
+          "IdType": "C.C.",
+          "IdNumber": "000000051618230",
+          "RelationshipType": "Suplente del Gerente"
+        },
+        {
+          "FirstName": "LINA PAOLA",
+          "LastName": "ALVAREZ SUAREZ",
+          "IdType": "C.C.",
+          "IdNumber": "000001019070460",
+          "RelationshipType": "Revisor Fiscal Principal"
+        },
+        {
+          "FirstName": "ANGELA PATRICIA",
+          "LastName": "RODRIGUEZ VARGAS",
+          "IdType": "C.C.",
+          "IdNumber": "000000052840966",
+          "RelationshipType": "Revisor Fiscal Suplente"
+        },
+        {
+          "CompanyName": "SYNERGY CONSULTORES AUDITORES S.A.S.",
+          "IdType": "N.I.T.",
+          "IdNumber": "000009001164481",
+          "RelationshipType": "Revisor Fiscal Persona Juridica"
+        }
+      ],
+      "Embargoes": "",
+      "Liquidations": "",
+      "DocumentIssueDate": "2022-01-27",
+      "LastRegistrationRenewalDate": "2021-03-31"
+    }
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "Looking at this Colombian business registration certificate from the Cámara de Comercio de Bogotá, I'll extract the required information systematically. ```json { \"result\": { \"CompanyName\": \"SOLOSOFT S A S\", \"CompanyType\": \"S A S\", \"Country\": \"Colombia\", \"DocumentPages\": \"10\", \"DocumentType\": \"Certificado de Existencia y Representación Legal\", \"TaxId\": \"800.211.407-1\", \"MainAddress\": \"CARRERA 7 NO 156-68 OF 801, BOGOTÁ D.C.\", \"IncorporationDate\": \"1993-10-28\", \"CompanyDuration\": \"2043-10-20\", \"RegistrationNumber\": \"00571554\", \"Size\": \"Microempresa\", \"RelatedParties\": [ { \"FirstName\": \"JACOBO ABRAHAM\", \"LastName\": \"SENIOR MOSQUERA\", \"IdType\": \"C.C.\", \"IdNumber\": \"000000008692953\", \"RelationshipType\": \"Gerente\" }, { \"FirstName\": \"CLAUDIA\", \"LastName\": \"DURAN LIZARAZO\", \"IdType\": \"C.C.\", \"IdNumber\": \"000000051618230\", \"RelationshipType\": \"Suplente del Gerente\" }, { \"FirstName\": \"LINA PAOLA\", \"LastName\": \"ALVAREZ SUAREZ\", \"IdType\": \"C.C.\", \"IdNumber\": \"000001019070460\", \"RelationshipType\": \"Revisor Fiscal Principal\" }, { \"FirstName\": \"ANGELA PATRICIA\", \"LastName\": \"RODRIGUEZ VARGAS\", \"IdType\": \"C.C.\", \"IdNumber\": \"000000052840966\", \"RelationshipType\": \"Revisor Fiscal Suplente\" }, { \"CompanyName\": \"SYNERGY CONSULTORES AUDITORES S.A.S.\", \"IdType\": \"N.I.T.\", \"IdNumber\": \"000009001164481\", \"RelationshipType\": \"Revisor Fiscal Persona Juridica\" } ], \"Embargoes\": \"\", \"Liquidations\": \"\", \"DocumentIssueDate\": \"2022-01-27\", \"LastRegistrationRenewalDate\": \"2021-03-31\" } } ```"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 23614,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 2304,
+      "output_tokens": 1554
+    },
+    "ResponseMetadata": {
+      "RequestId": "9bb1719a-3cbd-4503-9471-4d211ebbee3e",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Mon, 01 Sep 2025 06:22:45 GMT",
+        "content-type": "application/json",
+        "content-length": "8172",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "9bb1719a-3cbd-4503-9471-4d211ebbee3e",
+        "x-amzn-bedrock-invocation-latency": "22623",
+        "x-amzn-bedrock-cache-write-input-token-count": "0",
+        "x-amzn-bedrock-cache-read-input-token-count": "2304",
+        "x-amzn-bedrock-output-token-count": "1554",
+        "x-amzn-bedrock-input-token-count": "23614"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_01ApN1tK9WVXTxAzzqH5e6nr",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-sonnet-4-20250514",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Let me analyze this Colombian business registration certificate document systematically following the extraction requirements. First, I need to count the pages by analyzing the document structure. Looking at the bookmarks at the bottom of each page, I can see \"PAGINA: 1\", \"PAGINA: 2\", up to \"PAGINA: 10\". So this document has 10 pages. Now let me extract the company information: From the document, I can see: - Company Name: \"SOLOSOFT S A S\" (from span 1-3) - Company Type: \"S A S\" (Sociedad por Acciones Simplificada) - Country: Colombia (indicated by \"CAMARA DE COMERCIO DE BOGOTA\") - Tax ID: \"800.211.407-1\" (from span 1-4) - Identification Type: \"N.I.T.\" (from span 1-4) For the main address, I see: - \"DOMICILIO : BOGOTÁ D.C.\" (from span 1-4) - From span 1-5, I see \"DIRECCION COMERCIAL : CARRERA 7 NO 156-68 OF 801\" and \"MUNICIPIO : BOGOTÁ D.C.\" So the main address would be \"CARRERA 7 NO 156-68 OF 801, BOGOTÁ D.C.\" For dates: - Document Issue Date: \"2022/01/27\" (from header, span 1-1) - Incorporation Date: From span 1-7, \"SE CONSTITUYO LA SOCIEDAD COMERCIAL DENOMINADA SOLOSOFT LIMITADA\" with date \"20 DE OCTUBRE DE 1.993, INSCRITA EL 28 DE OCTUBRE DE 1.993\" - Registration Number: \"MATRICULA NO: 00571554 DEL 28 DE OCTUBRE DE 1993\" (from span 1-5) - Last Registration Renewal Date: Occurred on March 31, 2021, as noted in the document - Company Duration: The organization is set to operate until October 20, 2043 I've standardized the key dates in a consistent YYYY-MM-DD format for easier reference and analysis. The registration details confirm the company's long-standing presence in the Colombian business landscape. The registration number is 00571554, and the enterprise is classified as a Microempresa, indicating its small-scale operational status. Key representatives include: - Primary Manager: Abraham Mosquera Jacobo (ID: 8692953) - Alternate Manager: Claudia Duran Lizarazo (ID: 51618230) Fiscal oversight is provided by: - Principal Fiscal Reviewer: Lina Paola Alvarez Suarez (ID: 1019070460) - Alternate Fiscal Reviewer: Rodriguez (partial information available) - Juridical Fiscal Reviewer: Synergy Consultores Auditores S.A.S. (Tax ID: 9001164481) No liquidation or embargo details were found in the document.",
+          "signature": "EpcUCkgIBxABGAIqQDQS7vblWT7SBufKQGy0++CvGLyiYjw1jCAuaEHyG3PSTCxvK/ukClH2faD0R3rJkVYF1StlUY/OEo9uPl72vHISDFSveMsZ/Z3ztpFQBBoMVDsZoku1igtoYbeHIjBDA6kobv76DM7D+jUC5vitAvgAxCYfoiYIgdvKI4i5QhS6I43adsr2AUpCZskXheQq/BLBE7Gl/wKLkq73QVQSTjPGqZ80NKTwirqnrqd5GHPPxb1hsOXflj7glf1HPDg7IID1bu0Zdbqr/kLkCDfjLTXi/Vc8QbfOLnreZYXAUAAD6zgi2yFxXhsJNTezPmdoiiHR2JP25at77TO6UyJe/SuV8hX4Yae4cIh0A4DlUjhUqSsqnMn/TbALJD8rLFk8xCuC5PL+83o8Y5jvA3GNXjRPP2EDu4N4JpT0KwR+e/9vbJ6TONKtjw0S6CVhyWCxnPKqZG1OzAbM6IzHn+OSFO/64YfOZ3FIVts/rA6FmsaqVtLm5BEzwj714P6lQZZ8KRU0dwjHFgt4/JJrooekrqwTg/c36asDwbV2Zx/Yf4xZWth0Wf4o+kQ2LoVsD59fSOxo0lymvne6oNvTzrceXjsJoo69XIRk/VtevNalh8YtXEpm8PS/UI67m0aQB/VvSld8YGHx3dmcqM7hSEsTxSDbxdTBzJCpKjNygSI4qeUlO04kUy47+RyEsoTPuCW2AG6lGQdbFO+l3wvudtYX5CIRSPdOC55zxaHpaUAdoHPD3uIV0tpvmHL5VYn5psozPPmefyzzHZ9RPN3eeVjDjlRcIIZxBIJNJgClBPK3rPApP9uckrSeHabPPPMR4pF1a7961U5wtcU/XuCk4RfSAs3MxCodDyIc1B/eMTn/pEL4l67jP9VsuUswtzhbPZFa3bt/E5OdB8VIwkRW5nsAsLArMz3W/qxy8zby6Bf2+rhnGMcCFs6wANZSpQDzXLPMKNZOJYvu4ZZBEffXM6aPZEBDUU6wHaOOZpSn2YV5fik0/6OMoVepsfSYYN2etMn2ndRHqhAy1U/uOxfBGJ+JQnM/wntEW1RNBOrcAESoRSgvIkf6o47Kdj4D8MPe/920Vgsh/P6lend4AtvQXN2iVgh2Zr/9v77PoPjj2OJc8LutrqkGIgJV0HUlmiBjcQK7mCX4S+vrs/9Kv3k9Qe83dyr0JAMlIyOSSmAQqWkHFoXqDK7Z5rgZePpjWCqORaI4EsiNY9xeIPrn8e3TBcU30aUFf11Bu/TT2z1f+vQxdbVHEa3A5MLl2aOQdz5GgfyLPaqCnT2qeFJoJYKxbexM36SPQX46gvp8BvZRrSbjyedvloeqvEb2isZPPOpcYpwfFH+p5qO5tJdxayiDmZQSrJdgWivZqDDQoCNuSKAZMYuLlJXFSwE4Oly+EEkIWvALRyALgZ/P06YkhKIfMCgtsP+zcD9OE15MnSU395gh5wHCHGbmuhzYyA5cHTtUr9Ft8FEXWhKvLnSQsf26x3VN6FfUoRTHCxVbNfWLwPE5vjSrZqgAdvKYSi9hpw1UbS0aKxlZ796aEVWr6jex1i1FvXuZvK9j6KARQH3z3eEIEIoZHOPrcn5yeWCwddFFvebJg/tmoQ6WzgRna75/zYa61AyA2fUhuQfydg7qw27Rnptu1I5WehfJOyehmqj/CmQCw6jT5qzXRB6cxOYWcZ8l3/cfduTN3yOxykcCimY42STttrG9LeNPCTtGaTZIv0j+so9wmI0o0r3jqMqMfRJogfKJOFfXXm/tt+P8xKRgGg7OQsLeY/LPDiV7EI4Nwfbh7TTReJpJ5k9eHdpEdG2v9YjSEqzUSsMYe0p9vTLpJGLUF4UYYFLt1KADIf2Eu7aIsHOBYvUUqvSDXh/nCv5nBonOmlwY3i+7Jc4FEYheTrZ3u6iX6VTFb+qiwUa2Z1Dn4gAidoilqilvSF9IxPhe1GFufK9kqM9fsM10ikhG1RAgkD48G3Jkfz2nzUnXlZcNuUZhlua1whL6sqSeHEL1qcFnNB3oNnWyDmidtHIX6Fechh2HyXJ0uv2q9tT5ll6r6fbDpt6J88rRZY/XWCW9xmKf0ZDd9lcu9vkqJnWj7+pekJN3a8Db0JgrPMdqs2y9jAFYS2TPBdCO3IH4Qf0IXZh4GFvrbGASMV6jUtfTaeEAjqmw8SZoYW264qylLTNknjM68f6Q2ZCUmVZDCFaXe+RSZ2TFcfTCg6fZ5BQbxjVK9veIw/81uqyjitEI5BcfIb+sWelWXqUc53cAvHqf5cfkiO3wV9aZn2PEGiTUtrzwpO0WzuqdJw4aMFqYtw5QeJZkNGJ4B3SrLwKd6w75tvk+L4ErjNYGr/uP1P+GTFeLovA6y8Ml4DoAjkrqeAQPBt7ekwSp6uQC7hE9jqSGkFpx7bxdaHnC/tTOrMZlp0Mdc5qXmDx8heYBTmcIt3RxgPWhlLE8DRxxRvdL2+l5MBhzGyhd7TFa3BR0GWjUJf4kj9s24Ks/a3tEfXNYrTQTyeGDq+t+Lxp6XipmBFHWgyxRa0r3u488q0qCOm9XOzR4Gkrw18bhMsz5/YRJ5CD015lSoAfuDJUHJISQIRItldz0sQfOPpmSrrPOsX63lkHXYS40qlBf02yoojhoSTonW8qx1AowqVQ80UxOSzsD8NhBWRBGxcr7pdK/550gN3BxlA2ZHl6L90PJfigMOoFvH85KZYZKREv0aR2uuQ5sQAf6u6+wGVVnDZPBZHbKwDxOMkfyrF9LTNe7Sff6ZubGtImYz7StZetGyGrNi16ft1Cq9WAz0KQaEj4n8B8khbxA1P5bw6bOFBtDnUw/0UFb/Wl5QhnyMeAX9rrBCcvHibhWgG4/NuW/2+voqMQVvwgiU7Loiv5jhcKRYh7GpDcve92TUfaunH5JNdddN8Nz/guEeZrQky/8TGYb6Sb9wWUMZ5aHmqO1EHjFZK7QwdRei0LfzTzVVRIt0Z69YJ/3gU0let813jucmdaEXARBU827qqyTpy55Aeycf5MsSzAKPwNGUAjQ3kpYjyD/SRz2F4DiQomxCdTnm1IIXDoz6phUmNEwDnNL8hQKVMh0kJt5URGfOdj37xYw9KOkzgfBZh9gRiI+25igH3krjjoGek/T6Atyo8qxBW9o1VjMu8BqMeVO9+VTmgOo4NkC1lex72cllLSI4uHzXunlnVQd62ZdsuS3EfIq+r3p0qe/huoSyJS1o1F2AQLSlb4ZUAr1zeHnhI7QPiaI/33ferrsKzTjJDFgQIiOUdqQn60T644jx5w6CXRpPKbgCitH4S6kzhKYcn74tNac/gSSsIPHx09xGHhRUM760cta/6J7kcg/YRVjaVCq+hD0s0uhLw6Xaas2VF5LMgXgSMD3FBidPs0XlYvj2fGvlLdozS+PaBoiT1E+KNu+e8owy6OEOnGLOMhyU9CNpffcJiX914NAGAE="
+        },
+        {
+          "type": "text",
+          "text": "Looking at this Colombian business registration certificate from the Cámara de Comercio de Bogotá, I'll extract the required information systematically. ```json { \"result\": { \"CompanyName\": \"SOLOSOFT S A S\", \"CompanyType\": \"S A S\", \"Country\": \"Colombia\", \"DocumentPages\": \"10\", \"DocumentType\": \"Certificado de Existencia y Representación Legal\", \"TaxId\": \"800.211.407-1\", \"MainAddress\": \"CARRERA 7 NO 156-68 OF 801, BOGOTÁ D.C.\", \"IncorporationDate\": \"1993-10-28\", \"CompanyDuration\": \"2043-10-20\", \"RegistrationNumber\": \"00571554\", \"Size\": \"Microempresa\", \"RelatedParties\": [ { \"FirstName\": \"JACOBO ABRAHAM\", \"LastName\": \"SENIOR MOSQUERA\", \"IdType\": \"C.C.\", \"IdNumber\": \"000000008692953\", \"RelationshipType\": \"Gerente\" }, { \"FirstName\": \"CLAUDIA\", \"LastName\": \"DURAN LIZARAZO\", \"IdType\": \"C.C.\", \"IdNumber\": \"000000051618230\", \"RelationshipType\": \"Suplente del Gerente\" }, { \"FirstName\": \"LINA PAOLA\", \"LastName\": \"ALVAREZ SUAREZ\", \"IdType\": \"C.C.\", \"IdNumber\": \"000001019070460\", \"RelationshipType\": \"Revisor Fiscal Principal\" }, { \"FirstName\": \"ANGELA PATRICIA\", \"LastName\": \"RODRIGUEZ VARGAS\", \"IdType\": \"C.C.\", \"IdNumber\": \"000000052840966\", \"RelationshipType\": \"Revisor Fiscal Suplente\" }, { \"CompanyName\": \"SYNERGY CONSULTORES AUDITORES S.A.S.\", \"IdType\": \"N.I.T.\", \"IdNumber\": \"000009001164481\", \"RelationshipType\": \"Revisor Fiscal Persona Juridica\" } ], \"Embargoes\": \"\", \"Liquidations\": \"\", \"DocumentIssueDate\": \"2022-01-27\", \"LastRegistrationRenewalDate\": \"2021-03-31\" } } ```"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 23614,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 2304,
+        "output_tokens": 1554
+      }
+    },
+    "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 8000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+  "api_used": "invoke_model"
+}

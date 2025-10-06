@@ -1,0 +1,97 @@
+{
+  "extraction_data": {
+    "result": {
+      "CompanyName": "G4S SECURE SOLUTIONS COLOMBIA S A.",
+      "TaxId": "860013951",
+      "IdentificationType": "NIT",
+      "Country": "Colombia",
+      "ConflictingSources": [],
+      "RequiresReview": "false"
+    },
+    "RelatedParties": [
+      {
+        "FirstName": "DAVID ISAAC",
+        "LastName": "BUCKMAN",
+        "IdType": "NIT",
+        "IdNumber": "19740758",
+        "NoveltyType": "ForReview",
+        "ParticipationPercentage": "ForReview"
+      }
+    ],
+    "DocumentType": "company",
+    "Category": "RUB"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "{ \"result\": { \"CompanyName\": \"G4S SECURE SOLUTIONS COLOMBIA S A.\", \"TaxId\": \"860013951\", \"IdentificationType\": \"NIT\", \"Country\": \"Colombia\", \"ConflictingSources\": [], \"RequiresReview\": \"false\" }, \"RelatedParties\": [ { \"FirstName\": \"DAVID ISAAC\", \"LastName\": \"BUCKMAN\", \"IdType\": \"NIT\", \"IdNumber\": \"19740758\", \"NoveltyType\": \"ForReview\", \"ParticipationPercentage\": \"ForReview\" } ], \"DocumentType\": \"company\", \"Category\": \"RUB\" }"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 24163,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 2039,
+      "output_tokens": 826
+    },
+    "ResponseMetadata": {
+      "RequestId": "9448e9ca-3f76-4fd1-8808-0b5d81ba6b9a",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Tue, 02 Sep 2025 16:43:03 GMT",
+        "content-type": "application/json",
+        "content-length": "6374",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "9448e9ca-3f76-4fd1-8808-0b5d81ba6b9a",
+        "x-amzn-bedrock-invocation-latency": "28982",
+        "x-amzn-bedrock-cache-write-input-token-count": "0",
+        "x-amzn-bedrock-cache-read-input-token-count": "2039",
+        "x-amzn-bedrock-output-token-count": "826",
+        "x-amzn-bedrock-input-token-count": "24163"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_01A6HVyK3WrQqMP6icus4zyD",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-sonnet-4-20250514",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "The user has provided a document that appears to be about the \"Registro Único de Beneficiarios Finales - RUB\" (Final Beneficiaries Report) from Colombia's DIAN (tax authority). Let me analyze this document to extract the required information according to the provided schema. Looking at the document, this appears to be a DIAN (Colombian tax authority) document about the RUB (Final Beneficiaries Report) system. This is educational/informational material explaining what the RUB is, not an actual filed RUB report. However, I can see some form data on pages 10-13 that might contain actual company information: From page 10, I can see: - Company Name: \"G4S SECURE SOLUTIONS COLOMBIA S A.\" - Tax ID: \"860013951\" (from field 18. Número de identificación) - The form appears to be form 2687 (Reporte de Beneficiarios Finales) From page 12-13, I can see there's a beneficiary listed: - Name: DAVID ISAAC BUCKMAN - Document type: Cédula de Extranjería - ID Number: 19740758 But wait, let me look more carefully at the document structure. Most of this document (pages 1-9) appears to be informational material about the RUB system - it's an \"ABECÉ\" (FAQ) document explaining the system. The actual form data appears on pages 10-13. Let me extract the information from those pages: Page 10 shows a filled form with: - CompanyName: G4S SECURE SOLUTIONS COLOMBIA S A. - TaxId: 860013951 (from field 18. Número de identificación) - DV: 6 - The document is clearly issued by DIAN (Colombian tax authority) - There's a signature by GUTIERREZ ARCHILA MAURICIO I've identified a specific beneficiary for the G4S Secure Solutions Colombia company. The beneficiary is a foreign national with a foreign identification document, suggesting international involvement in the company's ownership structure. The document provides key details about the final beneficiary reporting requirements in Colombia's tax system. The information appears to be preliminary, with potential limitations in the complete data set. I'm preparing to consolidate the available information into a structured JSON format that captures the essential details from the DIAN document.",
+          "signature": "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"
+        },
+        {
+          "type": "text",
+          "text": "{ \"result\": { \"CompanyName\": \"G4S SECURE SOLUTIONS COLOMBIA S A.\", \"TaxId\": \"860013951\", \"IdentificationType\": \"NIT\", \"Country\": \"Colombia\", \"ConflictingSources\": [], \"RequiresReview\": \"false\" }, \"RelatedParties\": [ { \"FirstName\": \"DAVID ISAAC\", \"LastName\": \"BUCKMAN\", \"IdType\": \"NIT\", \"IdNumber\": \"19740758\", \"NoveltyType\": \"ForReview\", \"ParticipationPercentage\": \"ForReview\" } ], \"DocumentType\": \"company\", \"Category\": \"RUB\" }"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 24163,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 2039,
+        "output_tokens": 826
+      }
+    },
+    "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 9000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+  "api_used": "invoke_model"
+}

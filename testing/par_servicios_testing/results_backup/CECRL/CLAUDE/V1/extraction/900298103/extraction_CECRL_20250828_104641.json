@@ -1,0 +1,90 @@
+{
+  "extraction_data": {
+    "path": "CECRL/900298103/35511617_2020-02-29.pdf",
+    "result": {
+      "firstName": "LUISA FERNANDA",
+      "lastName": "CHAFIRY RAMIREZ",
+      "country_issuer": "Colombia",
+      "nationality": "Colombia",
+      "identificationType": "Cédula de Ciudadanía",
+      "identificationNumber": "35511517",
+      "message": ""
+    },
+    "document_type": "person",
+    "documentNumber": "900298103",
+    "category": "CECRL"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "```json { \"result\": { \"firstName\": \"LUISA FERNANDA\", \"lastName\": \"CHAFIRY RAMIREZ\", \"country_issuer\": \"Colombia\", \"nationality\": \"Colombia\", \"identificationType\": \"Cédula de Ciudadanía\", \"identificationNumber\": \"35511517\", \"message\": \"\" }, \"document_type\": \"person\", \"category\": \"CECRL\" } ```"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 10,
+      "cache_creation_input_tokens": 6482,
+      "cache_read_input_tokens": 0,
+      "output_tokens": 561
+    },
+    "ResponseMetadata": {
+      "RequestId": "0bcc3ffb-d21d-4735-9c85-c1282f5d37d0",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Thu, 28 Aug 2025 15:46:41 GMT",
+        "content-type": "application/json",
+        "content-length": "2582",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "0bcc3ffb-d21d-4735-9c85-c1282f5d37d0",
+        "x-amzn-bedrock-invocation-latency": "14139",
+        "x-amzn-bedrock-cache-write-input-token-count": "6482",
+        "x-amzn-bedrock-cache-read-input-token-count": "0",
+        "x-amzn-bedrock-output-token-count": "561",
+        "x-amzn-bedrock-input-token-count": "10"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_01UrYsPxhMU6LPXcLBpXVTqi",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-3-7-sonnet-20250219",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Let me analyze the document provided, which appears to be a Colombian national identification card (Cédula de Ciudadanía). First, I'll identify what information I can extract from the document: 1. Document Type: From the text \"CEDULA DE CIUDADANIA\" visible in the document, this is a Colombian Cédula de Ciudadanía (national ID card). 2. Country Issuer: The document header shows \"REPÚBLICA DE COLOMBIA\" indicating it was issued by Colombia. 3. Identification Number: I can see the number \"35511517\" in the document. 4. Name: The document appears to show \"CHAFIRY RAMIREZ\" with a first name of \"LUISA FERNANDA\". 5. Date of Birth: \"10-NOV-1968\" 6. Place of Birth: \"BOGOTÁ D.C. (CUNDINAMARCA)\" 7. Height: \"1.65\" 8. Blood Type: \"B+\" 9. Sex: \"F\" (Female) 10. Date of Issue/Expedition: \"15-DIC-1986 SUBA\" Now I'll extract this information according to the required schema: - firstName: \"LUISA FERNANDA\" - lastName: \"CHAFIRY RAMIREZ\" - country_issuer: \"Colombia\" - nationality: \"Colombia\" (assumed based on document type) - identificationType: \"Cédula de Ciudadanía\" - identificationNumber: \"35511517\" - message: \"\" (no issues with the document extraction) Let me verify this information is correct: - This is clearly an official Colombian ID document - The fields are visible and extractable - The document contains all necessary information to complete the schema - There are no contradictions or issues that need flagging Now I'll format this information according to the required JSON schema:",
+          "signature": "ErcBCkgIBxABGAIiQAk1iRyMc7RDebKbR8hK9/pOlx/SzzNnGjxroyj14DnhhScTsHD6J1RiYJyqsmIiGfH0HARUhzrU4aSagXXhQq4SDGNPA3DziHd7q1PpqhoMn9AtHg69oQMU3yqGIjBufeggoKCnByu4z2uHhx2BT+10QdPkQyn1+u5LAXG+hORk0hWFqyNn5QCD42Hd0qEqHRReYQdEI7fZ+BL5ZP2hYsy4SXHsUOtVJtRZYa7OGAI="
+        },
+        {
+          "type": "text",
+          "text": "```json { \"result\": { \"firstName\": \"LUISA FERNANDA\", \"lastName\": \"CHAFIRY RAMIREZ\", \"country_issuer\": \"Colombia\", \"nationality\": \"Colombia\", \"identificationType\": \"Cédula de Ciudadanía\", \"identificationNumber\": \"35511517\", \"message\": \"\" }, \"document_type\": \"person\", \"category\": \"CECRL\" } ```"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 10,
+        "cache_creation_input_tokens": 6482,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 561
+      }
+    },
+    "model_id": "us.anthropic.claude-3-7-sonnet-20250219-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 8000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "model_used": "us.anthropic.claude-3-7-sonnet-20250219-v1:0",
+  "api_used": "invoke_model"
+}

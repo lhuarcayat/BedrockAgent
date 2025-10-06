@@ -1,0 +1,92 @@
+{
+  "extraction_data": {
+    "result": {
+      "CompanyName": "MOLIAGRO NEIVA S.A.S.",
+      "Country": "COLOMBIA",
+      "TaxId": "900686567",
+      "VerificationDigit": "2",
+      "IdentificationType": "NIT",
+      "PersonType": "Persona jurídica",
+      "ConflictingSources": [],
+      "RequiresReview": "false"
+    },
+    "RelatedParties": [],
+    "Address": "CR 2 11 68, Neiva, Huila",
+    "DocumentGenerationDate": "29-01-2014 02:16:20PM",
+    "DocumentType": "company",
+    "Category": "RUT"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "{ \"result\": { \"CompanyName\": \"MOLIAGRO NEIVA S.A.S.\", \"Country\": \"COLOMBIA\", \"TaxId\": \"900686567\", \"VerificationDigit\": \"2\", \"IdentificationType\": \"NIT\", \"PersonType\": \"Persona jurídica\", \"ConflictingSources\": [], \"RequiresReview\": \"false\" }, \"RelatedParties\": [], \"Address\": \"CR 2 11 68, Neiva, Huila\", \"DocumentGenerationDate\": \"29-01-2014 02:16:20PM\", \"DocumentType\": \"company\", \"Category\": \"RUT\" }"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 1605,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 2990,
+      "output_tokens": 867
+    },
+    "ResponseMetadata": {
+      "RequestId": "4375c6b5-b3e3-4a1a-8493-ece80d87ea2d",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Tue, 02 Sep 2025 22:03:30 GMT",
+        "content-type": "application/json",
+        "content-length": "6228",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "4375c6b5-b3e3-4a1a-8493-ece80d87ea2d",
+        "x-amzn-bedrock-invocation-latency": "14597",
+        "x-amzn-bedrock-cache-write-input-token-count": "0",
+        "x-amzn-bedrock-cache-read-input-token-count": "2990",
+        "x-amzn-bedrock-output-token-count": "867",
+        "x-amzn-bedrock-input-token-count": "1605"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_01Bx83uS5Z5DXy9AHhtwRP13",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-sonnet-4-20250514",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "I need to extract information from a Colombian RUT (Registro Único Tributario) document issued by DIAN. Let me analyze the document systematically according to the field rules provided. Looking at the document: 1. **CompanyName**: I need to find cell \"35. Razón social\" - I can see \"35. Razón social:\" and the value appears to be \"MOLIAGRO NEIVA S.A.S.\" 2. **Country**: For RUT documents from DIAN, this should be in cell \"38. País\" - I can see \"38. País:\" with the value \"COLOMBIA\" 3. **TaxId**: Should be in cell \"5. Número de Identificación Tributaria (NIT)\" - I can see the NIT field with the number \"900686567\" 4. **VerificationDigit**: Should be in cell \"6. DV\" - I can see \"6. DV\" with the value \"2\" 5. **IdentificationType**: For RUT documents from DIAN, this should be \"NIT\" 6. **PersonType**: Should be in cell \"24. Tipo de contribuyente\" - I can see \"24. Tipo de contribuyente:\" with \"Persona jurídica\" 7. **RelatedParties**: I need to look for sections about \"Socios y/o miembros de Juntas Directivas, Consorcios, Uniones Temporales\" and \"Revisor Fiscal y contador\" - Looking at the document, I don't see clear sections with these titles or the specific cell numbers mentioned in the rules (like 117. Primer nombre, 118. Otros nombres, etc.). This might be a single-page document that doesn't include these sections. 8. **Address**: Should combine cells \"41. Dirección principal\", \"40. Ciudad/Municipio\", \"39. Departamento\" - I can see the full address details: CR 2 11 68 in Neiva, Huila 9. **DocumentGenerationDate**: Should be at bottom near \"Fecha generación documento PDF:\" - I can see at the bottom \"Fecha generación documento PDF: 29-01-2014 02:16:20PM\" 10. **DocumentType**: Should always be \"company\" 11. **Category**: Should always be \"RUT\" I'll continue checking for any additional relevant information. The document appears straightforward with clear extractable fields. Since no RelatedParties are visible, I'll maintain an empty array for that section.",
+          "signature": "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"
+        },
+        {
+          "type": "text",
+          "text": "{ \"result\": { \"CompanyName\": \"MOLIAGRO NEIVA S.A.S.\", \"Country\": \"COLOMBIA\", \"TaxId\": \"900686567\", \"VerificationDigit\": \"2\", \"IdentificationType\": \"NIT\", \"PersonType\": \"Persona jurídica\", \"ConflictingSources\": [], \"RequiresReview\": \"false\" }, \"RelatedParties\": [], \"Address\": \"CR 2 11 68, Neiva, Huila\", \"DocumentGenerationDate\": \"29-01-2014 02:16:20PM\", \"DocumentType\": \"company\", \"Category\": \"RUT\" }"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 1605,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 2990,
+        "output_tokens": 867
+      }
+    },
+    "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 9000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+  "api_used": "invoke_model"
+}

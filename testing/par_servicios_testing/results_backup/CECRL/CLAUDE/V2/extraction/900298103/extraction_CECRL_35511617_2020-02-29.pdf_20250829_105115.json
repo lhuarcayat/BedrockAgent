@@ -1,0 +1,88 @@
+{
+  "extraction_data": {
+    "result": {
+      "firstName": "LUISA FERNANDA",
+      "lastName": "CHAIRY RAMIREZ",
+      "country_issuer": "Colombia",
+      "nationality": "Colombia",
+      "identificationType": "Cédula de Ciudadanía",
+      "identificationNumber": "35911817",
+      "message": ""
+    },
+    "document_type": "person",
+    "category": "CECRL"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "```json { \"result\": { \"firstName\": \"LUISA FERNANDA\", \"lastName\": \"CHAIRY RAMIREZ\", \"country_issuer\": \"Colombia\", \"nationality\": \"Colombia\", \"identificationType\": \"Cédula de Ciudadanía\", \"identificationNumber\": \"35911817\", \"message\": \"\" }, \"document_type\": \"person\", \"category\": \"CECRL\" } ```"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 10,
+      "cache_creation_input_tokens": 6482,
+      "cache_read_input_tokens": 0,
+      "output_tokens": 523
+    },
+    "ResponseMetadata": {
+      "RequestId": "81e9fe5e-dfa0-494b-b02b-6fe7d8c04d82",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Fri, 29 Aug 2025 15:51:16 GMT",
+        "content-type": "application/json",
+        "content-length": "4155",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "81e9fe5e-dfa0-494b-b02b-6fe7d8c04d82",
+        "x-amzn-bedrock-invocation-latency": "13300",
+        "x-amzn-bedrock-cache-write-input-token-count": "6482",
+        "x-amzn-bedrock-cache-read-input-token-count": "0",
+        "x-amzn-bedrock-output-token-count": "523",
+        "x-amzn-bedrock-input-token-count": "10"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_01UKPF3ytaCRVaxBNrRVak1M",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-sonnet-4-20250514",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Looking at this document, I can see it's a Colombian identification document (cédula). Let me analyze it carefully: 1. At the top I can see \"REPUBLICA DE COLOMBIA\" and \"IDENTIFICACION PERSONAL CEDULA DE CIUDADANIA\" 2. I can see what appears to be an ID number: \"35911817\" 3. I can see what looks like a name section with \"CHAIRY RAMIREZ\" as apellidos (surnames) 4. I can see \"LUISA FERNANDA\" which appears to be nombres (given names) 5. There's a place of birth section showing \"BOGOTA D.C. (CUNDINAMARCA)\" and a date \"10-NOV-1968\" 6. I can see some additional information like status \"1.65\" and \"B+\" and \"F\" (likely height, blood type, and sex) 7. There's a date \"15-DIC-1995 SUBA\" which might be an issuance or expiration date Let me extract the information following the schema: - firstName: \"LUISA FERNANDA\" (this appears to be the nombres/given names) - lastName: \"CHAIRY RAMIREZ\" (this appears to be the apellidos/surnames) - country_issuer: \"Colombia\" (clearly stated as República de Colombia) - nationality: \"Colombia\" (birth place is Bogotá D.C., Colombia, so Colombian nationality) - identificationType: \"Cédula de Ciudadanía\" (clearly stated in the document) - identificationNumber: \"35911817\" (the prominent number at the top) - message: \"\" (document appears to be official Colombian ID, extraction successful)",
+          "signature": "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"
+        },
+        {
+          "type": "text",
+          "text": "```json { \"result\": { \"firstName\": \"LUISA FERNANDA\", \"lastName\": \"CHAIRY RAMIREZ\", \"country_issuer\": \"Colombia\", \"nationality\": \"Colombia\", \"identificationType\": \"Cédula de Ciudadanía\", \"identificationNumber\": \"35911817\", \"message\": \"\" }, \"document_type\": \"person\", \"category\": \"CECRL\" } ```"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 10,
+        "cache_creation_input_tokens": 6482,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 523
+      }
+    },
+    "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 8000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+  "api_used": "invoke_model"
+}

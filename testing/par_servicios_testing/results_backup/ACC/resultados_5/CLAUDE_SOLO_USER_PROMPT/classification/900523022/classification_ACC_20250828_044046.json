@@ -1,0 +1,87 @@
+{
+  "classification_data": {
+    "category": "ACC",
+    "text": "Bogota D.C. El suscrito Contador Público de PUBLIART COLORS SAS identificada con Nit No. 900.523.022-1, hace constar que, de acuerdo con el libro oficial de registro de accionistas, inscrito en el registro mercantil de conformidad con las normas de auditoría generalmente aceptadas en Colombia. CERTIFICA QUE: La composición accionara es la siguiente: NOMBRE | NUMERO DE DOCUMENTO | CARGO | % PARTICIPACION | TIPO DE DOCUMENTO | NACIONALIDAD JOHN FABIO MARTINEZ LIEVANO | 1.010.168.875 | GERENTE | 100% | C.C | COLOMBIANO La presente certificación se expide al 18 día del mes de noviembre de 2019 con destino a registro de proveedores. OSCAR ALBERTO LLANOS GONZALEZ CC 72.257.114 TP 144030-T",
+    "document_number": "900523022",
+    "path": "ACC/900523022/201_CA_2020-02-29.pdf"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "```json { \"category\": \"ACC\", \"text\": \"Bogota D.C.\\n\\nEl suscrito Contador Público de PUBLIART COLORS SAS identificada con Nit No. 900.523.022-1, hace constar que, de acuerdo con el libro oficial de registro de accionistas, inscrito en el registro mercantil de conformidad con las normas de auditoría generalmente aceptadas en Colombia.\\n\\nCERTIFICA QUE:\\n\\nLa composición accionara es la siguiente:\\n\\nNOMBRE | NUMERO DE DOCUMENTO | CARGO | % PARTICIPACION | TIPO DE DOCUMENTO | NACIONALIDAD\\nJOHN FABIO MARTINEZ LIEVANO | 1.010.168.875 | GERENTE | 100% | C.C | COLOMBIANO\\n\\nLa presente certificación se expide al 18 día del mes de noviembre de 2019 con destino a registro de proveedores.\\n\\nOSCAR ALBERTO LLANOS GONZALEZ\\nCC 72.257.114\\nTP 144030-T\" } ```"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 9,
+      "cache_creation_input_tokens": 4475,
+      "cache_read_input_tokens": 0,
+      "output_tokens": 1029
+    },
+    "ResponseMetadata": {
+      "RequestId": "332502b8-bd93-49db-9519-f7c84fb5b144",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Thu, 28 Aug 2025 09:40:29 GMT",
+        "content-type": "application/json",
+        "content-length": "4354",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "332502b8-bd93-49db-9519-f7c84fb5b144",
+        "x-amzn-bedrock-invocation-latency": "27467",
+        "x-amzn-bedrock-cache-write-input-token-count": "4475",
+        "x-amzn-bedrock-cache-read-input-token-count": "0",
+        "x-amzn-bedrock-output-token-count": "1029",
+        "x-amzn-bedrock-input-token-count": "9"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_018nEXADhbQEAgmBYXj6yDSm",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-3-7-sonnet-20250219",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Let me analyze this document systematically following the classification workflow: 1. **TEXT EXTRACTION** The document appears to be a certificate in Spanish from Bogota D.C. It contains: - Header location: \"Bogota D.C.\" - Introduction stating the public accountant (Contador Público) of PUBLIART COLORS SAS with tax ID number 900.523.022-1 certifies information according to the official shareholder registry book - The certificate states \"CERTIFICA QUE:\" (Certifies that:) - Information about shareholder composition (\"La composición accionara es la siguiente:\") - A table with one shareholder: - Name: JOHN FABIO MARTINEZ LIEVANO - Document Number: 1.010.168.875 - Position: GERENTE (Manager) - Participation: 100% - Document Type: C.C - Nationality: COLOMBIANO - Date of certificate: November 18, 2019 (\"La presente certificación se expide al 18 día del mes de noviembre de 2019 con destino a registro de proveedores\") - Signed by: OSCAR ALBERTO LLANOS GONZALEZ - CC number: 72.257.114 - TP: 144030-T 2. **PRIORITY CHECKS** The document is not blank and does not contain only links. 3. **ISSUER IDENTIFICATION** The document does not appear to be issued by DIAN or Chamber of Commerce, but rather by a corporate entity's public accountant (Contador Público). 4. **DOCUMENT FUNCTION ANALYSIS** This document's function is to certify the ownership structure of a company called PUBLIART COLORS SAS. It specifically lists the shareholder composition, showing that one person (John Fabio Martinez Lievano) owns 100% of the company and serves as its manager. 5. **CATEGORY CLASSIFICATION** Following the evaluation order: - Not CECRL (not a personal identification document) - Not RUT (not a DIAN tax registration) - Not CERL (not a Chamber of Commerce certificate of existence) - ACC - This appears to be a shareholder composition certificate showing ownership structure - Not RUB (not a beneficial ownership report for DIAN) 6. **CONFIDENCE VALIDATION** Strong evidence for ACC classification: - Contains \"La composición accionara es la siguiente:\" (The shareholder composition is the following:) - Shows participation percentage (100%) - Lists owner identification with name and ID - Shows relationship type (manager) - Is a formal certification issued by the company's contador público (public accountant) Based on this analysis, this document appears to be an \"ACC\" - a document certifying the ownership structure and shareholding composition of a company. The document meets the must-have indicators for ACC: - Shareholder terminology: \"composición accionara\" (shareholding composition) - Ownership data: \"100%\" participation clearly shown - Owner identification: full name and ID number - Relationship type: \"GERENTE\" (Manager) indicating position in addition to ownership - Certified by a public accountant Therefore, I classify this as ACC.",
+          "signature": "ErcBCkgIBxABGAIiQMuOAGQjICi5ziY94+WtYxAIX0WhdEzxoQ6EtK0d2TjxzvXpNr5kBD5GZR4VrCruqJL1gCXTNRjiG+Ta46vJH4sSDDWt1qC63uY34LvaPRoMo2FBZ3MOTVObOmNvIjBmt2WmnI6bu77A1GKgf+BxWF8PKlnF05Qw+a5ltq/51vtOVtd6+qK6WA3pLACnfTgqHaAqsbaeAkDfdlnREW6zehJ04bRu8gVzEwe2dWQUGAI="
+        },
+        {
+          "type": "text",
+          "text": "```json { \"category\": \"ACC\", \"text\": \"Bogota D.C.\\n\\nEl suscrito Contador Público de PUBLIART COLORS SAS identificada con Nit No. 900.523.022-1, hace constar que, de acuerdo con el libro oficial de registro de accionistas, inscrito en el registro mercantil de conformidad con las normas de auditoría generalmente aceptadas en Colombia.\\n\\nCERTIFICA QUE:\\n\\nLa composición accionara es la siguiente:\\n\\nNOMBRE | NUMERO DE DOCUMENTO | CARGO | % PARTICIPACION | TIPO DE DOCUMENTO | NACIONALIDAD\\nJOHN FABIO MARTINEZ LIEVANO | 1.010.168.875 | GERENTE | 100% | C.C | COLOMBIANO\\n\\nLa presente certificación se expide al 18 día del mes de noviembre de 2019 con destino a registro de proveedores.\\n\\nOSCAR ALBERTO LLANOS GONZALEZ\\nCC 72.257.114\\nTP 144030-T\" } ```"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 9,
+        "cache_creation_input_tokens": 4475,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 1029
+      }
+    },
+    "model_id": "us.anthropic.claude-3-7-sonnet-20250219-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 8000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "expected_category": "ACC",
+  "model_used": "us.anthropic.claude-3-7-sonnet-20250219-v1:0",
+  "api_used": "invoke_model",
+  "pdf_info": {
+    "original_size": 17294,
+    "first_page_size": 17107,
+    "is_scanned": true
+  }
+}

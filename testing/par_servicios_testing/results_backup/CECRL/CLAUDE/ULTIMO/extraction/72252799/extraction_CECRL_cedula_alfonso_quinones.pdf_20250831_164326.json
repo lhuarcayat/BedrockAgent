@@ -1,0 +1,88 @@
+{
+  "extraction_data": {
+    "result": {
+      "FirstName": "ALFONSO ANGEL",
+      "LastName": "QUIÑONES MORALES",
+      "CountryIssuer": "Colombia",
+      "Nationality": "colombiano",
+      "IdentificationType": "Cédula de Ciudadanía",
+      "IdentificationNumber": "72.252.799",
+      "Message": ""
+    },
+    "document_type": "person",
+    "category": "CECRL"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "```json { \"result\": { \"FirstName\": \"ALFONSO ANGEL\", \"LastName\": \"QUIÑONES MORALES\", \"CountryIssuer\": \"Colombia\", \"Nationality\": \"colombiano\", \"IdentificationType\": \"Cédula de Ciudadanía\", \"IdentificationNumber\": \"72.252.799\", \"Message\": \"\" }, \"document_type\": \"person\", \"category\": \"CECRL\" } ```"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 1583,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 4300,
+      "output_tokens": 809
+    },
+    "ResponseMetadata": {
+      "RequestId": "a61a1717-4ae5-4e03-836f-2e7ce9652c4d",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Sun, 31 Aug 2025 21:43:25 GMT",
+        "content-type": "application/json",
+        "content-length": "6055",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "a61a1717-4ae5-4e03-836f-2e7ce9652c4d",
+        "x-amzn-bedrock-invocation-latency": "18506",
+        "x-amzn-bedrock-cache-write-input-token-count": "0",
+        "x-amzn-bedrock-cache-read-input-token-count": "4300",
+        "x-amzn-bedrock-output-token-count": "809",
+        "x-amzn-bedrock-input-token-count": "1583"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_011giqFc3YQFAdty12qeBeoX",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-sonnet-4-20250514",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Looking at this Colombian document, I can see it's a \"Cédula de Ciudadanía\" (Citizenship Card) from \"REPÚBLICA DE COLOMBIA\". Let me analyze the information carefully: Front side shows: - Document type: \"CÉDULA DE CIUDADANÍA\" - Number: \"72.252.799\" - It shows: \"QUIÑONES MORALES\" after a field that appears to be labels - Then: \"APELLIDOS\" - Then: \"ALFONSO ANGEL\" - Then: \"NOMBRES\" This appears to be one of those Colombian documents with \"bad layout\" mentioned in the extraction methodology. Let me analyze this carefully: Looking at the structure, I see: \"NUMERO 72.252.799 QUIÑONES MORALES APELLIDOS ALFONSO ANGEL NOMBRES\" This fits the pattern described in the methodology where Colombian documents are misaligned. The methodology specifically mentions: - The surnames appear first - Then the label \"APELLIDOS\" - Then the first name(s) - Finally the label \"NOMBRES\" appears (but may appear empty) So analyzing this: - The number is clearly \"72.252.799\" - \"QUIÑONES MORALES\" appears before the \"APELLIDOS\" label, so these are the surnames - \"ALFONSO ANGEL\" appears after \"APELLIDOS\" but before \"NOMBRES\", so these are actually the first names - The \"NOMBRES\" label appears at the end but seems to have no text after it, confirming this is a misaligned document Back side shows: - Birth date: \"16-JUN-1979\" - Birth place: \"SANTO TOMAS (ATLANTICO)\" - Height: \"1.83\" - Blood type: \"A+\" - Sex: \"M\" - Issue date: \"23-NOV-1998 BARRANQUILLA\" For the fields: I've extracted key personal details from the misaligned Colombian identification document. The first name is \"ALFONSO ANGEL\", surnames are \"QUIÑONES MORALES\". The document confirms Colombian nationality, issued by the Republic of Colombia for a male citizen born in Santo Tomas, Atlantico. The identification type is a national citizen ID card (Cédula de Ciudadanía), with number 72.252.799. All critical information has been successfully processed.",
+          "signature": "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"
+        },
+        {
+          "type": "text",
+          "text": "```json { \"result\": { \"FirstName\": \"ALFONSO ANGEL\", \"LastName\": \"QUIÑONES MORALES\", \"CountryIssuer\": \"Colombia\", \"Nationality\": \"colombiano\", \"IdentificationType\": \"Cédula de Ciudadanía\", \"IdentificationNumber\": \"72.252.799\", \"Message\": \"\" }, \"document_type\": \"person\", \"category\": \"CECRL\" } ```"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 1583,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 4300,
+        "output_tokens": 809
+      }
+    },
+    "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 8000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+  "api_used": "invoke_model"
+}

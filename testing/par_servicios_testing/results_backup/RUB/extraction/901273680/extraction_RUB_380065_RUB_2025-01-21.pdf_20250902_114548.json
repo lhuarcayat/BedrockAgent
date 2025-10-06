@@ -1,0 +1,97 @@
+{
+  "extraction_data": {
+    "result": {
+      "CompanyName": "CEMUEBLES TAPISERIA SAS",
+      "TaxId": "9012736801",
+      "IdentificationType": "NIT",
+      "Country": "Colombia",
+      "ConflictingSources": [],
+      "RequiresReview": "false"
+    },
+    "RelatedParties": [
+      {
+        "FirstName": "carlos eduardo",
+        "LastName": "mejia lasso",
+        "IdType": "NIT",
+        "IdNumber": "71724861",
+        "NoveltyType": "Registro",
+        "ParticipationPercentage": "100"
+      }
+    ],
+    "DocumentType": "company",
+    "Category": "RUB"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "{ \"result\": { \"CompanyName\": \"CEMUEBLES TAPISERIA SAS\", \"TaxId\": \"9012736801\", \"IdentificationType\": \"NIT\", \"Country\": \"Colombia\", \"ConflictingSources\": [], \"RequiresReview\": \"false\" }, \"RelatedParties\": [ { \"FirstName\": \"carlos eduardo\", \"LastName\": \"mejia lasso\", \"IdType\": \"NIT\", \"IdNumber\": \"71724861\", \"NoveltyType\": \"Registro\", \"ParticipationPercentage\": \"100\" } ], \"DocumentType\": \"company\", \"Category\": \"RUB\" }"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 4795,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 2039,
+      "output_tokens": 842
+    },
+    "ResponseMetadata": {
+      "RequestId": "0a84813d-8ded-4d2d-a778-4b2b4bb34fcc",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Tue, 02 Sep 2025 16:45:48 GMT",
+        "content-type": "application/json",
+        "content-length": "5786",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "0a84813d-8ded-4d2d-a778-4b2b4bb34fcc",
+        "x-amzn-bedrock-invocation-latency": "18064",
+        "x-amzn-bedrock-cache-write-input-token-count": "0",
+        "x-amzn-bedrock-cache-read-input-token-count": "2039",
+        "x-amzn-bedrock-output-token-count": "842",
+        "x-amzn-bedrock-input-token-count": "4795"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_01KNTbAvZrdVkZqTms38HXM2",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-sonnet-4-20250514",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Looking at this Colombian DIAN \"Final Beneficiaries Report\" document, I need to extract the required information following the specified rules. First, let me identify the document type - this is clearly a \"Reporte de Beneficiarios Finales\" (Final Beneficiaries Report) issued by DIAN as indicated by the DIAN logo and form number 2687. Now let me extract the required fields: 1. CompanyName: Looking for cell \"11. Denominación o razón social\" - I can see \"CEMUEBLES TAPISERIA SAS\" 2. Country: Since this is a DIAN Final Beneficiaries Report, the country is Colombia. 3. TaxId: Looking for cell \"18. Número de identificación\" - I can see \"9012736801\" but need to check if this matches the format. Actually, I see \"901273680\" on page 1 in the tax ID field. 4. IdentificationType: For DIAN Final Beneficiaries Report, this should be \"NIT\" 5. RelatedParties: Looking at page 2, I can see the beneficiary data: - Cell 30. Número de identificación: 71724861 - Cell 32. Número de Identificación Tributaria - NIT: 71724861 (they match) - Cell 34. Primer apellido: mejia - Cell 35. Segundo apellido: lasso - Cell 36. Primer nombre: carlos - Cell 37. Otros nombres: eduardo - Cell 57. Porcentaje de participación: 100 - Cell 61. Tipo de novedad: Registro Wait, let me look more carefully at the document to make sure I'm reading the right information. From page 1: - Cell \"11. Denominación o razón social\": CEMUEBLES TAPISERIA SAS - Cell \"18. I notice the tax ID is actually \"901273680\" with a verification digit \"1\". The beneficiary details confirm a 100% ownership, with carlos eduardo mejia lasso as the sole registered owner. Verifying the tax identification number from the reporting section, I confirm the original document number matches my initial observation.",
+          "signature": "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"
+        },
+        {
+          "type": "text",
+          "text": "{ \"result\": { \"CompanyName\": \"CEMUEBLES TAPISERIA SAS\", \"TaxId\": \"9012736801\", \"IdentificationType\": \"NIT\", \"Country\": \"Colombia\", \"ConflictingSources\": [], \"RequiresReview\": \"false\" }, \"RelatedParties\": [ { \"FirstName\": \"carlos eduardo\", \"LastName\": \"mejia lasso\", \"IdType\": \"NIT\", \"IdNumber\": \"71724861\", \"NoveltyType\": \"Registro\", \"ParticipationPercentage\": \"100\" } ], \"DocumentType\": \"company\", \"Category\": \"RUB\" }"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 4795,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 2039,
+        "output_tokens": 842
+      }
+    },
+    "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 9000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+  "api_used": "invoke_model"
+}

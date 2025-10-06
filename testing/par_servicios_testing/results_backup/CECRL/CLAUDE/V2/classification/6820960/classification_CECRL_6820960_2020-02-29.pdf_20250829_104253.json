@@ -1,0 +1,87 @@
+{
+  "classification_data": {
+    "category": "CECRL",
+    "text": "REPÚBLICA DE COLOMBIA IDENTIFICACIÓN PERSONAL CÉDULA DE CIUDADANÍA NÚMERO 5.820.956 MONTES MONTES APELLIDOS JORGE EMILIO NOMBRES SINCELEJO (SUCRE) 05-SEP-1955 1.73 M 04-JUN-1977 SINCELEJO FECHA Y LUGAR DE EXPEDICIÓN A-24001004-52-178852540-400952096-L-20420402 00018-20494H 01 +2435 1913",
+    "document_number": "6820960",
+    "path": "CECRL/6820960/6820960_2020-02-29.pdf"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "```json { \"category\": \"CECRL\", \"text\": \"REPÚBLICA DE COLOMBIA\\nIDENTIFICACIÓN PERSONAL\\nCÉDULA DE CIUDADANÍA\\nNÚMERO 5.820.956\\nMONTES MONTES\\nAPELLIDOS\\nJORGE EMILIO\\nNOMBRES\\nSINCELEJO\\n(SUCRE)\\n05-SEP-1955\\n1.73\\nM\\n04-JUN-1977 SINCELEJO\\nFECHA Y LUGAR DE EXPEDICIÓN\\nA-24001004-52-178852540-400952096-L-20420402\\n00018-20494H 01 +2435 1913\" } ```"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 9,
+      "cache_creation_input_tokens": 4549,
+      "cache_read_input_tokens": 0,
+      "output_tokens": 591
+    },
+    "ResponseMetadata": {
+      "RequestId": "b7290292-aa73-4d61-a596-50367dea1cbf",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Fri, 29 Aug 2025 15:42:45 GMT",
+        "content-type": "application/json",
+        "content-length": "4030",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "b7290292-aa73-4d61-a596-50367dea1cbf",
+        "x-amzn-bedrock-invocation-latency": "13026",
+        "x-amzn-bedrock-cache-write-input-token-count": "4549",
+        "x-amzn-bedrock-cache-read-input-token-count": "0",
+        "x-amzn-bedrock-output-token-count": "591",
+        "x-amzn-bedrock-input-token-count": "9"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_01Wbb7eFYCjqESPsRQEZx2ck",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-sonnet-4-20250514",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Looking at this document, I need to extract all the visible text and then classify it. From the document, I can see two identity-style documents: Top document: - \"REPÚBLICA DE COLOMBIA\" - \"IDENTIFICACIÓN PERSONAL\" - \"CÉDULA DE CIUDADANÍA\" - \"NÚMERO 5.820.956\" - \"MONTES MONTES\" - \"APELLIDOS\" - \"JORGE EMILIO\" - \"NOMBRES\" - There's a signature and what appears to be a photo Bottom document: - \"SINCELEJO\" - \"(SUCRE)\" - \"05-SEP-1955\" (appears to be a date) - \"1.73\" (appears to be height) - \"M\" (likely gender) - \"04-JUN-1977 SINCELEJO\" - There's a fingerprint and barcode - Various other fragmentary text This appears to be a Colombian identity card (Cédula de Ciudadanía). The key indicators are: - \"REPÚBLICA DE COLOMBIA\" - \"IDENTIFICACIÓN PERSONAL\" - \"CÉDULA DE CIUDADANÍA\" - Personal information (name, number) - Photo and signature - Fingerprint - Biographical data (birth date, place) This clearly fits the CECRL category as it's an official personal identification document with all the typical characteristics: - Individual identification terminology - Personal biographical data - Individual photo, signature, fingerprint - Government-issued personal ID number with individual name - Security elements Let me extract all the visible text carefully:",
+          "signature": "EqULCkgIBxABGAIqQKhk2UZNSyUL55/20+nll/hKGm4+Dto2iHwGFow/WWuqmUtpmHsl1p1qodhXTloD/Nu4HejUxvbEQtAvtnOnDWASDPwUrND1nj/yvdS66hoMShPNNJYdIluskRhLIjBZy2M8RyF7wnnfWHny2xb0HOLZw9R5l2ofyxgJkIYNRLT1EEOxy+kwrSNyOiE03Vkqigrsr/+gWInVL2+MgDraOyZUZNZNptOLPQgwA2WgvbnIouBSfPbik1MMo1KFuyPh3ZNqBg4UtkyXSqiyc62DKRa7pyOWqvoWOyQ7f9JnSN0Nn6yXaho+awltH7zJ+pBZTb3gDrUUYO7hc9A6wz8qTFfWf/ax4sSWUSso027lsvchJS17ASps5iSmlZVvBKl90feLLYulnD/rBV+hcJcD9NMFqGvvDg9IbfE5UUCXqQCOppqsXp7TCbilp9KvrhnrbnYv4fTN6ygbpmVVB26J7MBzGoHMhwJjfD5Bg5zNtHZFvy3ZDw632PBj0SMtUbVE2y9pX7vtS26NNbBXhYt0BW7PRi5qSolubpWfIXCGNKsTAhm11PvRWVTkOv+bMBAVlGMVP9ULfgzqpmwI8VWCcFe9SBF5yJUnDYX/IuGUypGB2enwPSrBTRfnX7hMTtXLKLwA1ZOU5cHsCj4decRDCf5fnVAeTYikqq1r42gQAIjmaBPYbLIE6w5v8p3IJsXkCEKEzgzl/iHxboCVsYRJBafkNJMwHw6GOxfoUCccV02gIq5S/4NWaQ17eBDGNQSIV24yzRl1hQKXq1YgfvkF5XY8/w4Y8miwkk4y6uQgF/AFa/ao0pL6Qsv7UkJC/2ev+o7emIqAkR2FaciC3E4pPDbnza9/GgwoNjKyCTEatjQ5COgVNWmIMLt63MiyzjmSICYwvemXJw5l6jeg6BqHj+4ZxeoGlmk6pvgOmoHs0f2IoxdWoHJphtGo7rKFUC2d6DrbDAjMnZpWhQkH/PiHfL4AyFZ95od/VXqZ9C0EH/nCfu3EZYxkMmSTeOQ8CG1rYtNuIECJu8EG08BXfaXGFuieen8qdQQNDQ0y/M4+F4u9Kf8ElZo0FdgyerHupPH3nhhKq0KT9EgyFqS0zVTAagtwumM7pgtTrq+D5qz+NpZaS0MNz90G2c7W1Bt3WBbJCOrTJh/w9vMb0NBWN3pVpLq85YUrO8k6lIixumcWMbQtD3cmgLFeK+Uxm63ettLNkSVqruuPe9qBKDXtbqMb7y80Fh1UIoRUltLzkL2sYAL1/mgX+b0KUP9mLaLemA5IH5Cl4OkcTtKh1V5dDBcexw/7m6bIs96y1c3u2629pd4k2UpcHAuQO4l0lRkSHsdRRKCnEnha4bPJbKvgdb7pVh2XqnSrL45c/YZKxhu5I6KfcfWe1ECjtAjaZYbvWD8T3h6u2Wl836phlVD/Hb+4Nl4X2greLJqe1N+Zg/vGYuNurhiWnw49fv/CeT6bsDfIiNgQyz6+hgKzWWGzSeQX3+7GGdSiZkYArJx28/VR/nPGWnWHCzj4lL/kUq4EAO8P/xZeE5OcKZ3IO2MGMHBWj3r4uYsDJDPefMp942lUZxabcOzEeZFWT4+QX85TWk+C3h1YL5bZ1l1JfqyGdF+ZfLV5IsyApTVR+AL+bZlqhq1FwVNlOygxUMPhdI8Sm7/kR3BN6VGDJ9TwtqIVnrC02xDQgjgF2H2PwUEpph3tI5VSn9gUCK5NmT9Irb/1vsBicsQAJeRZNE8RcQeSq6alGeW6QtVr0enEN7OLLD9WYCM23xjvDAIlBx8uEmctHmtyhDL2XDCVEC7mypTHXJWG61AIOMSY0NpaYprh/jcMf/vnC4p62BP9CsahnjFCwrvGGJPxNDN+0vF6yvOxgk6hdb4kewTZ30GTP9ybXSd5taWaTRaIShVCYXb8sVQYAQ=="
+        },
+        {
+          "type": "text",
+          "text": "```json { \"category\": \"CECRL\", \"text\": \"REPÚBLICA DE COLOMBIA\\nIDENTIFICACIÓN PERSONAL\\nCÉDULA DE CIUDADANÍA\\nNÚMERO 5.820.956\\nMONTES MONTES\\nAPELLIDOS\\nJORGE EMILIO\\nNOMBRES\\nSINCELEJO\\n(SUCRE)\\n05-SEP-1955\\n1.73\\nM\\n04-JUN-1977 SINCELEJO\\nFECHA Y LUGAR DE EXPEDICIÓN\\nA-24001004-52-178852540-400952096-L-20420402\\n00018-20494H 01 +2435 1913\" } ```"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 9,
+        "cache_creation_input_tokens": 4549,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 591
+      }
+    },
+    "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 8000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "expected_category": "CECRL",
+  "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+  "api_used": "invoke_model",
+  "pdf_info": {
+    "original_size": 315707,
+    "first_page_size": 311205,
+    "is_scanned": true
+  }
+}

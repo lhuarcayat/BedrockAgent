@@ -1,0 +1,33 @@
+{
+  "ResponseMetadata": {
+    "RequestId": "67115450-bcfc-4b47-bb68-c474c821d9dd",
+    "HTTPStatusCode": 200,
+    "HTTPHeaders": {
+      "date": "Tue, 17 Jun 2025 14:30:28 GMT",
+      "content-type": "application/json",
+      "content-length": "2379",
+      "connection": "keep-alive",
+      "x-amzn-requestid": "67115450-bcfc-4b47-bb68-c474c821d9dd"
+    },
+    "RetryAttempts": 0
+  },
+  "output": {
+    "message": {
+      "role": "assistant",
+      "content": [
+        {
+          "text": "```json\n{\n  \"path\": \"s3://par-servicios-poc-dev-filling-desk/par-servicios-poc/RUT/800006911/947_2020-02-29.pdf\",\n  \"result\": {\n    \"companyName\": \"WALTER BRIDGE Y CIA S.A.\",\n    \"country\": \"Colombia\",\n    \"documentType\": \"NIT\",\n    \"taxId\": \"800006911\",\n    \"verificationDigit\": \"4\",\n    \"personType\": \"Persona Jurídica\",\n    \"relatedParties\": [\n      {\n        \"firstName\": \"BRIDGE\",\n        \"lastName\": \"GUTIERREZ\",\n        \"identificationType\": \"Cédula de Ciudadanía\",\n        \"identificationNumber\": \"20000723\",\n        \"relationshipType\": \"Representante Legal Principal\"\n      },\n      {\n        \"firstName\": \"ECHAVARRIA\",\n        \"lastName\": \"GREIFFENSTEIN\",\n        \"identificationType\": \"Cédula de Ciudadanía\",\n        \"identificationNumber\": \"20000723\",\n        \"relationshipType\": \"Representante Legal Suplente\"\n      },\n      {\n        \"firstName\": \"ARBELAEZ\",\n        \"lastName\": \"SIERRA\",\n        \"identificationType\": \"Cédula de Ciudadanía\",\n        \"identificationNumber\": \"20000723\",\n        \"relationshipType\": \"Representante Legal Suplente\"\n      },\n      {\n        \"firstName\": \"RODRIGUEZ\",\n        \"lastName\": \"MARCELA\",\n        \"identificationType\": \"Cédula de Ciudadanía\",\n        \"identificationNumber\": \"1305376994\",\n        \"relationshipType\": \"Revisor Fiscal y Contador\"\n      },\n      {\n        \"firstName\": \"RUIZ\",\n        \"lastName\": \"ARTEAGA\",\n        \"identificationType\": \"Cédula de Ciudadanía\",\n        \"identificationNumber\": \"1441219\",\n        \"relationshipType\": \"Revisor Fiscal y Contador\"\n      }\n    ],\n    \"address\": \"CR 43 A 25 A 25, ANTIOQUIA, MEDELLIN\",\n    \"documentGenerationDate\": \"2021-02-11\"\n  },\n  \"confidenceScores\": {\n    \"companyName\": 95,\n    \"documentType\": 90,\n    \"country\": 100,\n    \"taxId\": 100,\n    \"verificationDigit\": 95,\n    \"personType\": 90,\n    \"address\": 85,\n    \"relatedParties\": 85\n  },\n  \"document_type\": \"company\",\n  \"document_number\": \"800006911\",\n  \"category\": \"RUT\"\n}\n```"
+        }
+      ]
+    }
+  },
+  "stopReason": "end_turn",
+  "usage": {
+    "inputTokens": 15139,
+    "outputTokens": 623,
+    "totalTokens": 15762
+  },
+  "metrics": {
+    "latencyMs": 15541
+  }
+}

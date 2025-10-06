@@ -1,0 +1,87 @@
+{
+  "classification_data": {
+    "category": "CECRL",
+    "text": "REPUBLICA DE COLOMBIA IDENTIFICACION PERSONAL CEDULA DE CIUDADANIA NUMERO 76319806 MARTINEZ FERNANDEZ APELLIDOS JUAN MANUEL NOMBRES FIRMA",
+    "document_number": "76319806",
+    "path": "CECRL/76319806/CC_JUAN_MANUEL_MARTINEZ__10_.pdf"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "```json { \"category\": \"CECRL\", \"text\": \"REPUBLICA DE COLOMBIA\\nIDENTIFICACION PERSONAL\\nCEDULA DE CIUDADANIA\\nNUMERO 76319806\\nMARTINEZ FERNANDEZ\\nAPELLIDOS\\nJUAN MANUEL\\nNOMBRES\\nFIRMA\" } ```"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 9,
+      "cache_creation_input_tokens": 4475,
+      "cache_read_input_tokens": 0,
+      "output_tokens": 901
+    },
+    "ResponseMetadata": {
+      "RequestId": "66b84149-9ea5-404f-893a-a070c593e8d5",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Thu, 28 Aug 2025 15:42:18 GMT",
+        "content-type": "application/json",
+        "content-length": "4258",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "66b84149-9ea5-404f-893a-a070c593e8d5",
+        "x-amzn-bedrock-invocation-latency": "25820",
+        "x-amzn-bedrock-cache-write-input-token-count": "4475",
+        "x-amzn-bedrock-cache-read-input-token-count": "0",
+        "x-amzn-bedrock-output-token-count": "901",
+        "x-amzn-bedrock-input-token-count": "9"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_01WrL6KqDZyE5ge2Vr56yYds",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-3-7-sonnet-20250219",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Let me analyze this document following the classification workflow: 1. **TEXT EXTRACTION** The document appears to be a Colombian identity card (\"Cédula de Ciudadanía\"). The extracted text is: - REPUBLICA DE COLOMBIA - IDENTIFICACION PERSONAL - CEDULA DE CIUDADANIA - NUMERO 76319806 - MARTINEZ FERNANDEZ (Apellidos/Last name) - JUAN MANUEL (Nombres/First name) - There appears to be a signature - The document contains a photo of an individual 2. **PRIORITY CHECKS** The document is not blank and doesn't contain just links. 3. **ISSUER IDENTIFICATION** This is an official identification document issued by the Colombian government. It's a personal identification document (cédula de ciudadanía). 4. **DOCUMENT FUNCTION ANALYSIS** This is clearly a personal identification document for an individual. It contains the typical elements of a government-issued ID: the person's name, ID number, photo, and signature. 5. **CATEGORY CLASSIFICATION** Following the ordered evaluation: - CECRL: This appears to be a personal identification document (cédula), which is one of the \"must-have indicators\" for the CECRL category. However, to be a CECRL, it needs to be for a legal representative of a company. - From what I can see, there is no indication in this document that this person is a legal representative of any company. This appears to be just a standard \"cédula de ciudadanía\" (national ID card) for a Colombian citizen. However, according to the classification workflow, I should evaluate CECRL first, and the document does meet the core must-have indicators for this category: - It's an individual identification document: \"Cédula de Ciudadanía\" - It has personal biographical data - It has an individual photo and signature - It has a government-issued personal ID number with the individual's name The document lacks any corporate context, but the CECRL category definition focuses on the identification document itself, not the corporate context in which it might be used. Since this is a Colombian citizen ID card with all the security elements typical of such documents, it fits the CECRL category best among the available options. 6. **CONFIDENCE VALIDATION** While the document is clearly a personal identification document (cédula de ciudadanía), there's no explicit indication that this person is a legal representative of a company, which would be expected for a CECRL document. However, the CECRL category specifically refers to \"Official personal identification documents (cédulas, passports, etc.) of legal representatives of companies\" and this document is definitely a cédula. I need to make a decision: Option 1: Classify as CECRL because it's a personal identification document (cédula) that *could be* of a legal representative of a company, even though there's no explicit indication of that in the document itself. Option 2: Classify as POR_REVISAR since we can't confirm if this person is a legal representative of a company. Based on the classification workflow and category definitions, I believe CECRL is the correct classification here because: 1. It meets all the must-have indicators for CECRL 2. The document is very clearly a Colombian cédula de ciudadanía 3. The \"legal representative\" aspect may be established in a broader context beyond this single document Therefore, I'm classifying this as CECRL.",
+          "signature": "ErcBCkgIBxABGAIiQHdFcmToSXFT/HjDjdtPJTww//h83Bi2l0c1OZyLeydiVWy9ovBNOsa7msXXWh3lmm08iL1eP1MvoB3PcBWoGWQSDNt9LMnPHTvj3ObPMhoMrQB0Y9/tBMs3BfrNIjBZKaqnteOMN9MyTrjYpip9sGT1RD4U5aMIm0pLvfAw6fsKwpBiaKjxWLxGOyLkp5kqHd82FD2fDFmci0dy2X5sAZFV8WCCxL2WHR3Ns/iBGAI="
+        },
+        {
+          "type": "text",
+          "text": "```json { \"category\": \"CECRL\", \"text\": \"REPUBLICA DE COLOMBIA\\nIDENTIFICACION PERSONAL\\nCEDULA DE CIUDADANIA\\nNUMERO 76319806\\nMARTINEZ FERNANDEZ\\nAPELLIDOS\\nJUAN MANUEL\\nNOMBRES\\nFIRMA\" } ```"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 9,
+        "cache_creation_input_tokens": 4475,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 901
+      }
+    },
+    "model_id": "us.anthropic.claude-3-7-sonnet-20250219-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 8000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "expected_category": "CECRL",
+  "model_used": "us.anthropic.claude-3-7-sonnet-20250219-v1:0",
+  "api_used": "invoke_model",
+  "pdf_info": {
+    "original_size": 625017,
+    "first_page_size": 205446,
+    "is_scanned": true
+  }
+}

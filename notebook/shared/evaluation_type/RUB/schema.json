@@ -1,0 +1,78 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "RUB_DIAN",
+  "type": "object",
+  "properties": {
+    "companyName": {
+      "type": "string",
+      "description": "Razón Social de la persona o entidad beneficiaria"
+    },
+    "documentType": {
+      "type": "string",
+      "description": "Document name for identify the company (NIT, RUC) or identication number type (ej. 1)"
+    },
+    "country": {
+      "type": "string",
+      "description": "País de la empresa"
+    },
+    "taxId": {
+      "type": "string",
+      "pattern": "^[0-9.\\-]+$",
+      "description": "Número de Identificación Tributaria (NIT)"
+    },
+    "relatedParties": {
+      "type": "array",
+      "description": "Listado de personas relacionadas con el beneficiario",
+      "items": {
+        "type": "object",
+        "properties": {
+          "firstName": {
+            "type": "string",
+            "description": "Nombre de la persona relacionada"
+          },
+          "lastName": {
+            "type": "string",
+            "description": "Apellido de la persona relacionada"
+          },
+          "identificationType": {
+            "type": "string",
+            "description": "Tipo de identificación de la persona (ej. Cédula de Ciudadanía)"
+          },
+          "identificationNumber": {
+            "type": "string",
+            "description": "Número de identificación de la persona relacionada"
+          },
+          "noveltyType": {
+            "type": "string",
+            "description": "Tipo de novedad reportada en el RUB (ej. Registro, Alta, Modificación, Baja)"
+          },
+          "participationPercentage": {
+            "type": "string",
+            "pattern": "^[0-9]+(\\.[0-9]+)?$",
+            "description": "Porcentaje de participación (número, sin símbolo “%”)"
+          },
+          "message": {
+            "type": "string",
+            "description": "Mensaje de evaluacion si documento evaluado no corresponde a documento oficial"
+          }
+        }
+      },
+      "required": [
+        "firstName",
+        "lastName",
+        "identificationType",
+        "identificationNumber",
+        "noveltyType",
+        "participationPercentage"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "required": [
+    "companyName",
+    "documentType",
+    "taxId",
+    "relatedParties"
+  ],
+  "additionalProperties": false
+}

@@ -1,0 +1,33 @@
+{
+  "ResponseMetadata": {
+    "RequestId": "a765c30d-019e-4649-9e68-cad103c9086d",
+    "HTTPStatusCode": 200,
+    "HTTPHeaders": {
+      "date": "Tue, 17 Jun 2025 14:30:15 GMT",
+      "content-type": "application/json",
+      "content-length": "1020",
+      "connection": "keep-alive",
+      "x-amzn-requestid": "a765c30d-019e-4649-9e68-cad103c9086d"
+    },
+    "RetryAttempts": 0
+  },
+  "output": {
+    "message": {
+      "role": "assistant",
+      "content": [
+        {
+          "text": "```json\n{\n  \"path\": \"s3://par-servicios-poc-dev-filling-desk/par-servicios-poc/RUT/900265697/391_2020-02-29.pdf\",\n  \"result\": {\n    \"companyName\": \"DECORAMUS ESPACIOS KAREN EU\",\n    \"country\": \"COLOMBIA\",\n    \"documentType\": \"NIT\",\n    \"taxId\": \"900265697\",\n    \"verificationDigit\": \"5\",\n    \"personType\": \"Persona Jurídica\",\n    \"address\": \"CR 23 187 52 BWR MARANTA, Bogotá D.C.\",\n    \"documentGenerationDate\": \"2020-02-29\"\n  },\n  \"confidenceScores\": {\n    \"companyName\": 95,\n    \"documentType\": 90,\n    \"country\": 100,\n    \"taxId\": 100,\n    \"verificationDigit\": 95,\n    \"personType\": 90,\n    \"address\": 90,\n    \"documentGenerationDate\": 90\n  },\n  \"document_type\": \"company\",\n  \"document_number\": \"900265697\",\n  \"category\": \"RUT\"\n}\n```"
+        }
+      ]
+    }
+  },
+  "stopReason": "end_turn",
+  "usage": {
+    "inputTokens": 7089,
+    "outputTokens": 299,
+    "totalTokens": 7388
+  },
+  "metrics": {
+    "latencyMs": 7011
+  }
+}

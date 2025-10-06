@@ -1,0 +1,88 @@
+{
+  "extraction_data": {
+    "result": {
+      "FirstName": "DARIO",
+      "LastName": "SANCHEZ DUARTE",
+      "CountryIssuer": "Colombia",
+      "Nationality": "colombiano",
+      "IdentificationType": "Cédula de Ciudadanía",
+      "IdentificationNumber": "3.357.420",
+      "Message": ""
+    },
+    "document_type": "person",
+    "category": "CECRL"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "```json { \"result\": { \"FirstName\": \"DARIO\", \"LastName\": \"SANCHEZ DUARTE\", \"CountryIssuer\": \"Colombia\", \"Nationality\": \"colombiano\", \"IdentificationType\": \"Cédula de Ciudadanía\", \"IdentificationNumber\": \"3.357.420\", \"Message\": \"\" }, \"document_type\": \"person\", \"category\": \"CECRL\" } ```"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 1583,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 4300,
+      "output_tokens": 746
+    },
+    "ResponseMetadata": {
+      "RequestId": "1edb6c7d-c7c2-4023-a5a1-d6d2a31daaf6",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Sun, 31 Aug 2025 21:41:11 GMT",
+        "content-type": "application/json",
+        "content-length": "5369",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "1edb6c7d-c7c2-4023-a5a1-d6d2a31daaf6",
+        "x-amzn-bedrock-invocation-latency": "11959",
+        "x-amzn-bedrock-cache-write-input-token-count": "0",
+        "x-amzn-bedrock-cache-read-input-token-count": "4300",
+        "x-amzn-bedrock-output-token-count": "746",
+        "x-amzn-bedrock-input-token-count": "1583"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_01Hgi5qyjcrU76ZgFFZ1NFsA",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-sonnet-4-20250514",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Looking at this document, I can see it's a Colombian identity card (Cédula de Ciudadanía). Let me analyze the structure and extract the information according to the methodology. Document Analysis: - Header: \"REPÚBLICA DE COLOMBIA\" - Document type: \"IDENTIFICACIÓN PERSONAL\" and \"CÉDULA DE CIUDADANÍA\" - I can see the number: 3.357.420 - I can see \"SANCHEZ DUARTE\" which appears after what looks like the number - I can see \"DARIO\" below that - There's additional information about birth date (01-AGO-1962), place of birth (YONDO - CASABE, YONDO (ANTIOQUIA)) Now I need to apply the extraction methodology. This looks like a Colombian document that might have layout issues. Let me analyze: Looking at the structure: - \"NUMERO: 3.357.420\" - \"SANCHEZ DUARTE\" (this appears to be after the number) - \"APELLIDOS:\" - \"DARIO\" - \"NOMBRES:\" This appears to be a case of misaligned layout as described in the methodology. The Colombian documents often have this issue where: - The surnames appear first - Then the \"APELLIDOS\" label - Then the first names - Then the \"NOMBRES\" label So analyzing this: - Number: 3.357.420 - The text \"SANCHEZ DUARTE\" appears to be the surname - The text \"DARIO\" appears to be the first name - The labels \"APELLIDOS\" and \"NOMBRES\" seem to be misaligned Based on contextual analysis: - FirstName: \"DARIO\" - LastName: \"SANCHEZ DUARTE\" - CountryIssuer: Colombia (from \"REPÚBLICA DE COLOMBIA\") - Nationality: Colombian (same as issuer country) - IdentificationType: \"Cédula de Ciudadanía\" (clearly stated) - Birth location confirms local origin in Yondo, Antioquia region.",
+          "signature": "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"
+        },
+        {
+          "type": "text",
+          "text": "```json { \"result\": { \"FirstName\": \"DARIO\", \"LastName\": \"SANCHEZ DUARTE\", \"CountryIssuer\": \"Colombia\", \"Nationality\": \"colombiano\", \"IdentificationType\": \"Cédula de Ciudadanía\", \"IdentificationNumber\": \"3.357.420\", \"Message\": \"\" }, \"document_type\": \"person\", \"category\": \"CECRL\" } ```"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 1583,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 4300,
+        "output_tokens": 746
+      }
+    },
+    "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 8000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+  "api_used": "invoke_model"
+}

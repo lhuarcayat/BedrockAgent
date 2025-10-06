@@ -1,0 +1,109 @@
+{
+  "extraction_data": {
+    "path": "ACC/860031028/Compisicion_accionaria_S_A__Mayo_2023.pdf",
+    "result": {
+      "companyName": "Siemens Sociedad por Acciones Simplificada",
+      "documentCategory": "Equity Composition",
+      "taxId": "860.031.028-9",
+      "country": "Colombia",
+      "identificationDetails": {
+        "source": "text_reference",
+        "indicators": [
+          "Bogotá, D.C.",
+          "Colombia",
+          "pesos colombianos"
+        ],
+        "conflictingSources": [],
+        "requiresReview": "false"
+      },
+      "relatedParties": [
+        {
+          "type": "company",
+          "companyName": "Siemens International Holding B.V.",
+          "identificationType": "NIT",
+          "identificationNumber": "NL001781029B01",
+          "relationshipType": "Shareholder",
+          "participationPercentage": "100",
+          "timeFound": "1",
+          "job": ""
+        }
+      ]
+    },
+    "documentType": "company",
+    "documentNumber": "860031028",
+    "category": "ACC"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "```json { \"result\": { \"companyName\": \"Siemens Sociedad por Acciones Simplificada\", \"documentCategory\": \"Equity Composition\", \"taxId\": \"860.031.028-9\", \"country\": \"Colombia\", \"identificationDetails\": { \"source\": \"text_reference\", \"indicators\": [ \"Bogotá, D.C.\", \"Colombia\", \"pesos colombianos\" ], \"conflictingSources\": [], \"requiresReview\": \"false\" }, \"relatedParties\": [ { \"type\": \"company\", \"companyName\": \"Siemens International Holding B.V.\", \"identificationType\": \"NIT\", \"identificationNumber\": \"NL001781029B01\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"100\", \"timeFound\": \"1\", \"job\": \"\" } ] }, \"documentType\": \"company\", \"category\": \"ACC\" } ```"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 425,
+      "cache_creation_input_tokens": 7123,
+      "cache_read_input_tokens": 0,
+      "output_tokens": 992
+    },
+    "ResponseMetadata": {
+      "RequestId": "d8cf8c6a-c9c3-4888-9b3b-b96619fa5133",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Thu, 28 Aug 2025 08:38:50 GMT",
+        "content-type": "application/json",
+        "content-length": "4064",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "d8cf8c6a-c9c3-4888-9b3b-b96619fa5133",
+        "x-amzn-bedrock-invocation-latency": "21921",
+        "x-amzn-bedrock-cache-write-input-token-count": "7123",
+        "x-amzn-bedrock-cache-read-input-token-count": "0",
+        "x-amzn-bedrock-output-token-count": "992",
+        "x-amzn-bedrock-input-token-count": "425"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_01JfVhLt2Bse1yDHbg6WJyck",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-3-7-sonnet-20250219",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Let's analyze the document systematically following the extraction rules: ## Step 1: Document Analysis - This appears to be an equity composition certificate for \"Siemens Sociedad por Acciones Simplificada\" (Siemens S.A.S) - The document is issued by Ernst & Young Audit S.A.S. (an auditing firm) - The document is in Spanish - The document explicitly mentions \"Bogotá, D.C.\" and Colombia multiple times - There's a clear equity composition section showing shareholders ## Step 2: Root Level Extraction ### Company Name: From the document, we see the company referred to as: - \"Siemens Sociedad por Acciones Simplificada\" (in the address section) - \"Siemens S.A.S.\" (in the body text) I should use the most complete name with suffix, which is \"Siemens Sociedad por Acciones Simplificada\". ### Tax ID: The document clearly states: \"Siemens S.A.S., identificada con NIT. 860.031.028-9\" ### Country: Multiple indicators for Colombia: - \"Bogotá, D.C.\" mentioned multiple times - Document refers to \"pesos colombianos\" (Colombian pesos) - NIT format matches Colombian tax ID format - Colombian addresses mentioned (Bogotá, Medellín, Cali, Barranquilla) ### Identification Details: - source: \"text_reference\" (explicit country references) - indicators: [\"Bogotá, D.C.\", \"Colombia\", \"pesos colombianos\"] - conflictingSources: [] (no conflicts observed) - requiresReview: \"false\" (all required fields can be extracted clearly) ## Step 3: Related Parties Processing The document contains a table with shareholder composition: NIT | Accionistas | N° Acciones | Valor en pesos colombianos | Participación % NL001781029B01 | Siemens International Holding B.V. | 5,468,220 | $95,693,850,000 | 100% We have one shareholder: - It's a company (has B.V. suffix - Dutch private limited company) - Name: \"Siemens International Holding B.V.\" - ID Type: \"NIT\" (though this appears to be a foreign entity with a Dutch ID) - ID Number: \"NL001781029B01\" - Participation: \"100%\" - Relationship Type: \"Shareholder\" - No job title mentioned ## Step 4: Validation & Cross-checking - The tax ID format (NIT + numbers with periods and dash) is consistent with Colombia - The document is clearly about equity composition - The participation percentages add up to 100% - The entity is properly classified as a company - All required fields are present and don't need \"POR REVISAR\" Now let's prepare the JSON output:",
+          "signature": "ErcBCkgIBxABGAIiQG9HU5pvz7OsHF0ospHWp6w+NsX5AxlVDXdQfPGYSArbxck+IECtgk+yp9RDXS+1dRw8ORy25mKiPSo/oe3dTcASDBvbAz9fk7G3r+xfxhoMnUlSIegWsUPUwc0LIjAgR1ztkjsBs0s8CzRYrw24SbErmEkTIDrP4rJvP9/A+1e1gzG2MCWIBrtpgLG7+OoqHRGENmGlEwvlWv88GLJpwgf6dbVWbXrxqMiRrzRsGAI="
+        },
+        {
+          "type": "text",
+          "text": "```json { \"result\": { \"companyName\": \"Siemens Sociedad por Acciones Simplificada\", \"documentCategory\": \"Equity Composition\", \"taxId\": \"860.031.028-9\", \"country\": \"Colombia\", \"identificationDetails\": { \"source\": \"text_reference\", \"indicators\": [ \"Bogotá, D.C.\", \"Colombia\", \"pesos colombianos\" ], \"conflictingSources\": [], \"requiresReview\": \"false\" }, \"relatedParties\": [ { \"type\": \"company\", \"companyName\": \"Siemens International Holding B.V.\", \"identificationType\": \"NIT\", \"identificationNumber\": \"NL001781029B01\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"100\", \"timeFound\": \"1\", \"job\": \"\" } ] }, \"documentType\": \"company\", \"category\": \"ACC\" } ```"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 425,
+        "cache_creation_input_tokens": 7123,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 992
+      }
+    },
+    "model_id": "us.anthropic.claude-3-7-sonnet-20250219-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 8000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "model_used": "us.anthropic.claude-3-7-sonnet-20250219-v1:0",
+  "api_used": "invoke_model"
+}

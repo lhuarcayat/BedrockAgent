@@ -1,0 +1,109 @@
+{
+  "extraction_data": {
+    "path": "ACC/900127447/217_CA_2020-02-29.pdf",
+    "result": {
+      "companyName": "ROMEGAS SAS",
+      "documentCategory": "Equity Composition",
+      "taxId": "900.127.447 - 1",
+      "country": "Colombia",
+      "identificationDetails": {
+        "source": "id_analysis",
+        "indicators": [
+          "NIT format",
+          "CC format"
+        ],
+        "conflictingSources": [],
+        "requiresReview": "false"
+      },
+      "relatedParties": [
+        {
+          "type": "person",
+          "firstName": "JULIO CESAR",
+          "lastName": "ROMERO MUÑOZ",
+          "identificationType": "C.C.",
+          "identificationNumber": "79.735.871",
+          "relationshipType": "Shareholder",
+          "participationPercentage": "100%",
+          "timeFound": "1",
+          "job": ""
+        }
+      ]
+    },
+    "documentType": "company",
+    "documentNumber": "900127447",
+    "category": "ACC"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "```json { \"result\": { \"companyName\": \"ROMEGAS SAS\", \"documentCategory\": \"Equity Composition\", \"taxId\": \"900.127.447 - 1\", \"country\": \"Colombia\", \"identificationDetails\": { \"source\": \"id_analysis\", \"indicators\": [\"NIT format\", \"CC format\"], \"conflictingSources\": [], \"requiresReview\": \"false\" }, \"relatedParties\": [ { \"type\": \"person\", \"firstName\": \"JULIO CESAR\", \"lastName\": \"ROMERO MUÑOZ\", \"identificationType\": \"C.C.\", \"identificationNumber\": \"79.735.871\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"100%\", \"timeFound\": \"1\", \"job\": \"\" } ] }, \"documentType\": \"company\", \"category\": \"ACC\" } ```"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 425,
+      "cache_creation_input_tokens": 6346,
+      "cache_read_input_tokens": 0,
+      "output_tokens": 912
+    },
+    "ResponseMetadata": {
+      "RequestId": "403954ae-3941-4986-976f-556189388380",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Thu, 28 Aug 2025 08:41:14 GMT",
+        "content-type": "application/json",
+        "content-length": "3828",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "403954ae-3941-4986-976f-556189388380",
+        "x-amzn-bedrock-invocation-latency": "19642",
+        "x-amzn-bedrock-cache-write-input-token-count": "6346",
+        "x-amzn-bedrock-cache-read-input-token-count": "0",
+        "x-amzn-bedrock-output-token-count": "912",
+        "x-amzn-bedrock-input-token-count": "425"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_01BRKSt7aWkTkvegbhRCVAVH",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-3-7-sonnet-20250219",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Let me start by analyzing the document step by step according to the specified workflow: ## Step 1: Document Analysis - This is a \"COMPOSICION ACCIONARIA\" (Equity Composition) document in Spanish - It's a certification from a public accountant (\"CERTIFICACIÓN DEL CONTADOR PÚBLICO\") - The main reporting company appears to be \"ROMEGAS SAS\" - The document shows the shareholder composition of this company - There is one shareholder listed: JULIO CESAR ROMERO MUÑOZ with 100% participation - The document is dated May 31, 2023 ## Step 2: Root Level Extraction - **companyName**: \"ROMEGAS SAS\" - This is the issuing entity as stated in \"LA EMPRESA ROMEGAS SAS\" - **taxId**: \"900.127.447 - 1\" - The NIT (Número de Identificación Tributaria) is clearly stated - **country**: Since the document uses \"NIT\" as the tax ID type, and based on the ID hash tables provided, this indicates Colombia. There's no explicit country mention though. - **documentCategory**: Fixed as \"Equity Composition\" For identificationDetails: - **source**: \"id_analysis\" (since country is determined from the tax ID type) - **indicators**: [\"NIT format\", \"CC format\"] (both are Colombian ID formats) - **conflictingSources**: [] (no conflicts identified) - **requiresReview**: \"false\" (all necessary information is clearly stated) ## Step 3: Related Parties Processing There is one related party: - **type**: \"person\" (it's a natural person) - **firstName**: \"JULIO CESAR\" - **lastName**: \"ROMERO MUÑOZ\" - **identificationType**: \"C.C.\" (Cédula de Ciudadanía, Colombian personal ID) - **identificationNumber**: \"79.735.871\" - **relationshipType**: \"Shareholder\" (fixed value) - **participationPercentage**: \"100%\" (clearly stated in document) - **timeFound**: \"1\" (appears once in the document) - **job**: \"\" (no job role specified in the document) ## Step 4: Validation & Cross-checking - **taxId type**: NIT aligns with Colombia ✓ - **identificationType**: C.C. exists in PERSON_ID[\"Colombia\"] ✓ - **Pattern validation**: The patterns for Colombian NIT (900.127.447 - 1) and CC (79.735.871) look correct ✓ - All required fields are present ✓ - No conflicts identified ✓ - Participation percentage sums to 100% ✓ Let me now construct the JSON output:",
+          "signature": "ErcBCkgIBxABGAIiQBmERVt723rDWEZ7ux8z/Tdk5eUYsaEwxCs8fiv3c0iUXhhd+7B6xh6kl9M95lxw8Jn5caTHdkAc/RfaHXz4zy4SDHbZNCIWWCcEYKNE+hoMEKCwYHBMlbjtHdbBIjChKuQR8IUezuKzsy4MdZHzYZ7XKnG5ae60Kvw0r1VLUI91EPRoLL+dUjqf14sB9e4qHfXAkM+4WE73gsYNrKonXR6MqP6vT+skAF+dqwQ8GAI="
+        },
+        {
+          "type": "text",
+          "text": "```json { \"result\": { \"companyName\": \"ROMEGAS SAS\", \"documentCategory\": \"Equity Composition\", \"taxId\": \"900.127.447 - 1\", \"country\": \"Colombia\", \"identificationDetails\": { \"source\": \"id_analysis\", \"indicators\": [\"NIT format\", \"CC format\"], \"conflictingSources\": [], \"requiresReview\": \"false\" }, \"relatedParties\": [ { \"type\": \"person\", \"firstName\": \"JULIO CESAR\", \"lastName\": \"ROMERO MUÑOZ\", \"identificationType\": \"C.C.\", \"identificationNumber\": \"79.735.871\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"100%\", \"timeFound\": \"1\", \"job\": \"\" } ] }, \"documentType\": \"company\", \"category\": \"ACC\" } ```"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 425,
+        "cache_creation_input_tokens": 6346,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 912
+      }
+    },
+    "model_id": "us.anthropic.claude-3-7-sonnet-20250219-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 8000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "model_used": "us.anthropic.claude-3-7-sonnet-20250219-v1:0",
+  "api_used": "invoke_model"
+}

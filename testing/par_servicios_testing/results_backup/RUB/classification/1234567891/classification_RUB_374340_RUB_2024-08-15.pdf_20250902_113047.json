@@ -1,0 +1,87 @@
+{
+  "classification_data": {
+    "category": "BLANK",
+    "text": "",
+    "document_number": "1234567891",
+    "path": "RUB/1234567891/374340_RUB_2024-08-15.pdf"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "```json { \"category\": \"BLANK\", \"text\": \"\" } ```"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 1584,
+      "cache_creation_input_tokens": 2707,
+      "cache_read_input_tokens": 0,
+      "output_tokens": 258
+    },
+    "ResponseMetadata": {
+      "RequestId": "5ff345d9-f8dc-488a-868b-d1aaf0f91c7a",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Tue, 02 Sep 2025 16:30:47 GMT",
+        "content-type": "application/json",
+        "content-length": "3105",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "5ff345d9-f8dc-488a-868b-d1aaf0f91c7a",
+        "x-amzn-bedrock-invocation-latency": "5592",
+        "x-amzn-bedrock-cache-write-input-token-count": "2707",
+        "x-amzn-bedrock-cache-read-input-token-count": "0",
+        "x-amzn-bedrock-output-token-count": "258",
+        "x-amzn-bedrock-input-token-count": "1584"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_019aZnQoisUNS27gcrPEA5jf",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-sonnet-4-20250514",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Let me analyze this document following the classification workflow: 1. **TEXT EXTRACTION** Looking at the document, I can see it appears to be completely blank or white with no visible text content. 2. **PRIORITY CHECKS** This appears to be a BLANK document - there is no significant content, no text visible, just empty white space. According to the category definitions for BLANK: \"**Definition**: documents that are empty, contain only white space or a minimum of meaningless text\" This document fits exactly this definition - it contains only white space with no meaningful content. 3. Since this is a BLANK document, I don't need to proceed with further analysis steps as BLANK is a priority check that cancels all other categories. The output requirements state: - Include ALL the extracted text, if no extracted text was obtained then the category must be BLANK and must return \"text\": \"\" Since there is no text extracted from this blank document, I should return an empty string for the text field and classify it as BLANK.",
+          "signature": "ErkJCkgIBxABGAIqQL9KphoCvVWgc6j+G0hnzKwOgw+tENDAMwS8u1bRobJ0N8NSv9VouvtVT4i2EAuCVBrEYLW1eMgZMXOhjQ8f59ESDBP7F0sLV12h3/X/RhoMoGmeVQJys5Jex8gIIjDXANiZEr4tW43BXOFPL7Bo9n4+shPhIiwBVQkTOqG0FH2utpB1+HZRqjr5mnGdDaIqngiI94jYAzfuJ2HwT5uhm/gPEfL3kkgleLb1SlKk95CZ7194clJDtHjlAfL/0bmEemymySSInYrZ1RlkUtXjSk6yFR9L8igVMYMjBhurUgrJiJVxg7gYDtfdhhTRBCnIdPgWB1Qp9rg7vDW+Hq4vbmBIH1v0Dh5T+tOMt9KcJaV6GoRNlEDaNfPJ+Ljq+rLwy3R5dmJBi+Hv11XguyJt0969iragifC75sWQCQzUGlTrJvDWO7DGwAdHyGn+j26AknKZj5rdAUxkeBU7+zCw2uPPh7InWBGg4EyFz4bB1QTxUCMj12Gqs9yZVq35nR7Q2Xljnxb3zgYE8IyiGBAnsOHr+/4FxcawUchgJsFj8BA23fUBRcY9q2z7+kk9On9ivUDXUUeULVLD5TXAJye0ZDhGcjtu4VjPENzjkmISlUifa2pPAQ4Cg+hZlJtk2tV332t8GQPsDYDYgihdGe6tuSRJfKrriOW2hp32i3wL8AWQ0p0tw8oDlAoMBIsHKiYqwhIbJ+LnD7jTFVUyXWRlzKjkZ97/CZyx8poq4z9dJzKH5cCZktRIaCBG7J8ONmcIseSWzqrTKVdQp1/5+F40685itfOaONbwigTUUDJmvGRWrRwL8aG54v+5j5h03WWU6yXFSFZXOR81XFf+jthi5hY1GrpUEpn8Q+yBahbaDQ2SXx98ombafkbEmgFyR7HUEVR59RBNGf9/ztwcnT2qkqDOq+LBN8qVXaC+P2jMk/VOzWIJ+kse8d02yy4jBJOuj4OxDJ0GjRnalfaO6Zc3yYOt3I+hvZxbnCrFs6TI8SmuY9lyQBm4vPNe2PeE6IcNAcQfreA+POGVnKALLOXiQ90ny1YzXmblz9hj8L0dsPRaHaAanSBpePpS/jfDks60cfFz4pmqqpS9m6bbBa/vjD2hUshOPfGhpw6ESs9w+WDs0J5y/m6pbdC3w+D0h4SWbviOwrdMx765Rp3yME3ObXVjjyfaFrSha2VtIMr+TAMIzsghBHjwPM0dPSmD6si+APEL9le4KhC2qdt4dfpq9/1OlxkYkPqzw/m1MnfAcJOA3zCx65DhAflDPzCZBeuuZdIjOE2puQYMQXrMHsW1ZymBB42ZcKzGGQwumv2rfWkVbWJVlVlTFefLK8PNqFxumcHQuwDQBMl3+wRQZILqd5fRED35VWjpzjnfkRQ30hUEliD10HptKlMvC3bSsFpNhBTaShUoCRCWDsipR5tZOm/TZqFIb17jT5w7H5dJB0LOPfquNa20p0Rh1uWVhlhEeU63erWSyUAGhTvEUfOqP/hjQBe/hkEx+Ic3bnAJzBnqUTJknX0Y3g0pv+dZu90wzpnWNohp5XfFRBV+WIsGNa1iDrM0+TO8+/qg4AliA1RNyOmtgl1JOcEVXsY/GrYDGAE="
+        },
+        {
+          "type": "text",
+          "text": "```json { \"category\": \"BLANK\", \"text\": \"\" } ```"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 1584,
+        "cache_creation_input_tokens": 2707,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 258
+      }
+    },
+    "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 8000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "expected_category": "RUB",
+  "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+  "api_used": "invoke_model",
+  "pdf_info": {
+    "original_size": 13206,
+    "first_page_size": 8491,
+    "is_scanned": true
+  }
+}

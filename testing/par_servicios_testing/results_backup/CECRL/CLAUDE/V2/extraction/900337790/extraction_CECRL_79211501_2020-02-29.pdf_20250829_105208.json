@@ -1,0 +1,88 @@
+{
+  "extraction_data": {
+    "result": {
+      "firstName": "POR REVISAR",
+      "lastName": "JOHN WILTER",
+      "country_issuer": "Colombia",
+      "nationality": "Colombia",
+      "identificationType": "Cédula de Ciudadanía",
+      "identificationNumber": "79.211.501",
+      "message": "No se pudo leer correctamente el campo NOMBRES - texto manuscrito no legible"
+    },
+    "document_type": "person",
+    "category": "CECRL"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "```json { \"result\": { \"firstName\": \"POR REVISAR\", \"lastName\": \"JOHN WILTER\", \"country_issuer\": \"Colombia\", \"nationality\": \"Colombia\", \"identificationType\": \"Cédula de Ciudadanía\", \"identificationNumber\": \"79.211.501\", \"message\": \"No se pudo leer correctamente el campo NOMBRES - texto manuscrito no legible\" }, \"document_type\": \"person\", \"category\": \"CECRL\" } ```"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 10,
+      "cache_creation_input_tokens": 7741,
+      "cache_read_input_tokens": 0,
+      "output_tokens": 1613
+    },
+    "ResponseMetadata": {
+      "RequestId": "164b054f-908c-4b44-af2a-79e182b6c32e",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Fri, 29 Aug 2025 15:52:09 GMT",
+        "content-type": "application/json",
+        "content-length": "11685",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "164b054f-908c-4b44-af2a-79e182b6c32e",
+        "x-amzn-bedrock-invocation-latency": "33659",
+        "x-amzn-bedrock-cache-write-input-token-count": "7741",
+        "x-amzn-bedrock-cache-read-input-token-count": "0",
+        "x-amzn-bedrock-output-token-count": "1613",
+        "x-amzn-bedrock-input-token-count": "10"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_01WLQAaxVM4X5iUBTeFRkSzd",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-sonnet-4-20250514",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Let me analyze this Colombian ID document step by step. **Document Structure Analysis:** - This is a Colombian \"Cédula de Ciudadanía\" (citizenship card) - Contains official headers \"REPUBLICA DE COLOMBIA\", \"IDENTIFICACION PERSONAL\", \"CEDULA DE CIUDADANIA\" - Has official government formatting and structure - This is definitely an official government identification document **Field Detection:** Looking at the document: 1. **Names**: - I can see \"STERLING NEIRA\" prominently displayed - I also see \"JOHN WILTER\" in the apellidos section - There's also a signature that appears to say something Let me look more carefully at the structure: - \"APELLIDOS\" (surnames): \"JOHN WILTER\" - The name \"STERLING NEIRA\" appears to be the main name displayed Wait, let me re-examine this. Looking at the layout: - \"NUMERO: 79.211.501\" - \"STERLING NEIRA\" appears to be the main name - \"APELLIDOS JOHN WILTER\" - \"NOMBRES\" section has a signature Actually, looking more carefully: - The document shows \"APELLIDOS\" followed by \"JOHN WILTER\" - The document shows \"STERLING NEIRA\" prominently - Looking at the \"NOMBRES\" section, there appears to be handwritten text/signature This is confusing. Let me look at the structure again: - The prominent text \"STERLING NEIRA\" appears to be the main identifier - Under \"APELLIDOS\" it shows \"JOHN WILTER\" - Under \"NOMBRES\" there's what appears to be a signature I think there might be some confusion in how this is laid out. Let me try to interpret this logically: If \"APELLIDOS\" = \"JOHN WILTER\", then the surnames should be \"JOHN WILTER\" The \"NOMBRES\" section should contain the given names. I'm now considering the name structure more carefully. In Colombian ID formats, \"STERLING NEIRA\" could represent a complex name arrangement. The \"APELLIDOS\" section showing \"JOHN WILTER\" suggests multiple surname possibilities. The prominent display of \"STERLING NEIRA\" might indicate a specific naming convention unique to this document. The signature in the \"NOMBRES\" section adds another layer of complexity to understanding the true name structure. I'll need to examine the document's details more meticulously to resolve these apparent inconsistencies. Key observations include the identification number \"79.211.501\", confirming this is a Colombian citizenship document with clear national markers like \"REPUBLICA DE COLOMBIA\" and \"CEDULA DE CIUDADANIA\". Personal details reveal a male individual born in 1975 in Neiva, Huila, with specific physical characteristics like 1.65m height and O+ blood type. The firstName remains challenging to definitively extract due to handwritten text. The document's critical details - lastName \"JOHN WILTER\", nationality and country \"Colombia\", and identification number are now precisely captured, with a note about the unclear firstName section requiring further verification. I'm examining a document with a potentially complex name structure. The prominent \"STERLING NEIRA\" and labeled fields like \"APELLIDOS\" and \"NOMBRES\" suggest a Colombian ID format. The handwritten section under \"NOMBRES\" remains unclear, requiring careful verification. I'll need to confirm whether \"JOHN WILTER\" in the \"APELLIDOS\" field truly represents the last name, and decipher the handwritten text for the first name. The positioning and layout seem ambiguous, so I'll proceed cautiously to ensure accurate interpretation of the name fields. The handwritten section needs closer scrutiny to definitively determine the first name.",
+          "signature": "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"
+        },
+        {
+          "type": "text",
+          "text": "```json { \"result\": { \"firstName\": \"POR REVISAR\", \"lastName\": \"JOHN WILTER\", \"country_issuer\": \"Colombia\", \"nationality\": \"Colombia\", \"identificationType\": \"Cédula de Ciudadanía\", \"identificationNumber\": \"79.211.501\", \"message\": \"No se pudo leer correctamente el campo NOMBRES - texto manuscrito no legible\" }, \"document_type\": \"person\", \"category\": \"CECRL\" } ```"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 10,
+        "cache_creation_input_tokens": 7741,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 1613
+      }
+    },
+    "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 8000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+  "api_used": "invoke_model"
+}

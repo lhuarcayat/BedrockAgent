@@ -1,0 +1,92 @@
+{
+  "extraction_data": {
+    "result": {
+      "CompanyName": "SILENCOL",
+      "Country": "COLOMBIA",
+      "TaxId": "117404137",
+      "VerificationDigit": "7",
+      "IdentificationType": "NIT",
+      "PersonType": "Persona natural o sucesión líquida",
+      "ConflictingSources": [],
+      "RequiresReview": "false"
+    },
+    "RelatedParties": [],
+    "Address": "CL 132 S2 14, Bogotá D.C, Bogotá D.C",
+    "DocumentGenerationDate": "06-03-2013 03:08:48PM",
+    "DocumentType": "company",
+    "Category": "RUT"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "{ \"result\": { \"CompanyName\": \"SILENCOL\", \"Country\": \"COLOMBIA\", \"TaxId\": \"117404137\", \"VerificationDigit\": \"7\", \"IdentificationType\": \"NIT\", \"PersonType\": \"Persona natural o sucesión líquida\", \"ConflictingSources\": [], \"RequiresReview\": \"false\" }, \"RelatedParties\": [], \"Address\": \"CL 132 S2 14, Bogotá D.C, Bogotá D.C\", \"DocumentGenerationDate\": \"06-03-2013 03:08:48PM\", \"DocumentType\": \"company\", \"Category\": \"RUT\" }"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 1584,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 2990,
+      "output_tokens": 1096
+    },
+    "ResponseMetadata": {
+      "RequestId": "5145e80a-a646-413c-ae42-f6cd123ec96b",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Tue, 02 Sep 2025 22:03:48 GMT",
+        "content-type": "application/json",
+        "content-length": "7678",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "5145e80a-a646-413c-ae42-f6cd123ec96b",
+        "x-amzn-bedrock-invocation-latency": "18278",
+        "x-amzn-bedrock-cache-write-input-token-count": "0",
+        "x-amzn-bedrock-cache-read-input-token-count": "2990",
+        "x-amzn-bedrock-output-token-count": "1096",
+        "x-amzn-bedrock-input-token-count": "1584"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_01JPgCfB5xnjxUZj1vTiCxDa",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-sonnet-4-20250514",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Let me analyze this Colombian RUT document carefully to extract the required information. Looking at the document, I can see this is a \"Formulario del Registro Único Tributario\" from DIAN. Let me extract information according to the field rules: 1. **CompanyName** (cell 35 - Razón social): I can see \"SILENCOL\" in cell 35. 2. **Country** (cell 38 - País): I can see \"COLOMBIA\" in cell 38. 3. **TaxId** (cell 5 - NIT): I can see \"117404137\" in cell 5. 4. **VerificationDigit** (cell 6 - DV): I can see \"7\" in cell 6. 5. **IdentificationType**: For RUT documents, this should be \"NIT\". 6. **PersonType** (cell 24 - Tipo de contribuyente): I can see \"Persona natural o sucesión líquida\" in cell 24. 7. **Address**: This should combine cells 41 (Dirección principal), 40 (Ciudad/Municipio), and 39 (Departamento): - Cell 41: \"CL 132 S2 14\" - Cell 40: \"Bogotá D.C\" - Cell 39: \"Bogotá D.C\" 8. **DocumentGenerationDate**: At the bottom I can see \"Fecha generación documento PDF: 06-03-2013 03:08:48PM\" 9. **RelatedParties**: I need to look for information in the \"Socios y/o miembros de Juntas Directivas\" and \"Revisor Fiscal y contador\" sections. However, I don't see clearly filled information for these sections in this document. The document appears to be mostly empty in those areas or the information is not clearly visible. Let me check again for any related parties information... I don't see clearly filled cells for the related parties sections (cells 111-118 for partners, 124-131 for principal fiscal reviewer, 136-143 for substitute fiscal reviewer, 148-155 for accountant). The document appears to not have this information filled or it's not clearly visible. I notice the document is a company RUT with potential personal details. The classification suggests it's a company document, specifically a RUT category. While most sections are clear, some areas require careful review due to partially visible or incomplete information. The document indicates a natural person registration with a commercial name \"SILENCOL\", which complicates the standard extraction process. I'll need to carefully extract details while maintaining accuracy to the original document's specifications. Since no clear related parties information exists, I'll proceed with an empty array for that field, ensuring precise data representation.",
+          "signature": "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"
+        },
+        {
+          "type": "text",
+          "text": "{ \"result\": { \"CompanyName\": \"SILENCOL\", \"Country\": \"COLOMBIA\", \"TaxId\": \"117404137\", \"VerificationDigit\": \"7\", \"IdentificationType\": \"NIT\", \"PersonType\": \"Persona natural o sucesión líquida\", \"ConflictingSources\": [], \"RequiresReview\": \"false\" }, \"RelatedParties\": [], \"Address\": \"CL 132 S2 14, Bogotá D.C, Bogotá D.C\", \"DocumentGenerationDate\": \"06-03-2013 03:08:48PM\", \"DocumentType\": \"company\", \"Category\": \"RUT\" }"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 1584,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 2990,
+        "output_tokens": 1096
+      }
+    },
+    "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 9000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+  "api_used": "invoke_model"
+}

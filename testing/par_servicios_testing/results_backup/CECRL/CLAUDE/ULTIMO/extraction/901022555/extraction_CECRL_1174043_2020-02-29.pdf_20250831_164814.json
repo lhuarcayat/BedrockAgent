@@ -1,0 +1,88 @@
+{
+  "extraction_data": {
+    "result": {
+      "FirstName": "PUBLIO ROBERTO",
+      "LastName": "SIERRA",
+      "CountryIssuer": "Colombia",
+      "Nationality": "colombiano",
+      "IdentificationType": "Cédula de Ciudadanía",
+      "IdentificationNumber": "1.174.043",
+      "Message": ""
+    },
+    "document_type": "person",
+    "category": "CECRL"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "```json { \"result\": { \"FirstName\": \"PUBLIO ROBERTO\", \"LastName\": \"SIERRA\", \"CountryIssuer\": \"Colombia\", \"Nationality\": \"colombiano\", \"IdentificationType\": \"Cédula de Ciudadanía\", \"IdentificationNumber\": \"1.174.043\", \"Message\": \"\" }, \"document_type\": \"person\", \"category\": \"CECRL\" } ```"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 1583,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 4300,
+      "output_tokens": 1063
+    },
+    "ResponseMetadata": {
+      "RequestId": "0873496c-7d73-4cff-9ce6-40afd9e903df",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Sun, 31 Aug 2025 21:48:13 GMT",
+        "content-type": "application/json",
+        "content-length": "7697",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "0873496c-7d73-4cff-9ce6-40afd9e903df",
+        "x-amzn-bedrock-invocation-latency": "17085",
+        "x-amzn-bedrock-cache-write-input-token-count": "0",
+        "x-amzn-bedrock-cache-read-input-token-count": "4300",
+        "x-amzn-bedrock-output-token-count": "1063",
+        "x-amzn-bedrock-input-token-count": "1583"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_018sq1V8NGU5mvECEGSxcmWM",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-sonnet-4-20250514",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Let me analyze this Colombian identification document step by step according to the extraction methodology. First, I'll identify what type of document this is: - The header shows \"REPÚBLICA DE COLOMBIA\" - The document type shows \"IDENTIFICACIÓN PERSONAL\" and \"CÉDULA DE CIUDADANÍA\" - This is clearly a Colombian citizenship card (Cédula de Ciudadanía) Now I'll apply the extraction methodology: 1. **Structured label detection**: Looking at the document, I can see: - NUMERO: 1.174.043 - There's text that says \"SIERRA\" - APELLIDOS: appears to be followed by \"PUBLIO ROBERTO\" - NOMBRES: appears to be present but I need to look carefully at what follows it Wait, let me look more carefully at the layout. I can see: - NUMERO 1.174.043 - SIERRA (this appears to be separate) - APELLIDOS - \"PUBLIO ROBERTO\" appears after APELLIDOS - NOMBRES appears below - There's a signature area marked as \"FIRMA\" This looks like it might be one of those \"misaligned\" Colombian documents mentioned in the methodology. Let me analyze this more carefully. Looking at the structure: - The number is clearly 1.174.043 - I see \"SIERRA\" which appears to be a surname - \"PUBLIO ROBERTO\" appears after the APELLIDOS label - There's a NOMBRES label but I need to see what follows it Actually, let me re-examine this. The document shows: - At the top: NUMERO 1.174.043 - Below that: SIERRA - Then: APELLIDOS - Then: PUBLIO ROBERTO - Then: NOMBRES - And there appears to be a signature area This could be a case where: - The person's last name is \"SIERRA\" - The first names are \"PUBLIO ROBERTO\" - But the layout is confusing because \"SIERRA\" appears before the APELLIDOS label - The placement suggests a potential misalignment in the document's standard format I notice the unusual positioning of names might indicate a non-standard document layout that requires careful interpretation of the identification details. The document reveals key personal information: a Colombian citizen born in Chiquinquira, Boyacá, with the surname Sierra and first names Publio Roberto, issued a national citizenship card. The document number 1.174.043 and birth date of 11-OCT-1965 provide additional identification specifics. I'll confirm the details match the standard Colombian identification format, noting the clear connection between birthplace and nationality.",
+          "signature": "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"
+        },
+        {
+          "type": "text",
+          "text": "```json { \"result\": { \"FirstName\": \"PUBLIO ROBERTO\", \"LastName\": \"SIERRA\", \"CountryIssuer\": \"Colombia\", \"Nationality\": \"colombiano\", \"IdentificationType\": \"Cédula de Ciudadanía\", \"IdentificationNumber\": \"1.174.043\", \"Message\": \"\" }, \"document_type\": \"person\", \"category\": \"CECRL\" } ```"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 1583,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 4300,
+        "output_tokens": 1063
+      }
+    },
+    "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 8000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+  "api_used": "invoke_model"
+}

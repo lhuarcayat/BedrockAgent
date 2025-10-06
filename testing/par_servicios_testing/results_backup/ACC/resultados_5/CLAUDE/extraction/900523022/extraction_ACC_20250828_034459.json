@@ -1,0 +1,110 @@
+{
+  "extraction_data": {
+    "path": "ACC/900523022/201_CA_2020-02-29.pdf",
+    "result": {
+      "companyName": "PUBLIART COLORS SAS",
+      "documentCategory": "Equity Composition",
+      "taxId": "900.523.022-1",
+      "country": "Colombia",
+      "identificationDetails": {
+        "source": "text_reference",
+        "indicators": [
+          "Bogota D.C.",
+          "Colombia",
+          "NIT format"
+        ],
+        "conflictingSources": [],
+        "requiresReview": "false"
+      },
+      "relatedParties": [
+        {
+          "type": "person",
+          "firstName": "JOHN FABIO",
+          "lastName": "MARTINEZ LIEVANO",
+          "identificationType": "C.C.",
+          "identificationNumber": "1.010.168.875",
+          "relationshipType": "Shareholder",
+          "participationPercentage": "100",
+          "timeFound": "1",
+          "job": "GERENTE"
+        }
+      ]
+    },
+    "documentType": "company",
+    "documentNumber": "900523022",
+    "category": "ACC"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "{ \"result\": { \"companyName\": \"PUBLIART COLORS SAS\", \"documentCategory\": \"Equity Composition\", \"taxId\": \"900.523.022-1\", \"country\": \"Colombia\", \"identificationDetails\": { \"source\": \"text_reference\", \"indicators\": [ \"Bogota D.C.\", \"Colombia\", \"NIT format\" ], \"conflictingSources\": [], \"requiresReview\": \"false\" }, \"relatedParties\": [ { \"type\": \"person\", \"firstName\": \"JOHN FABIO\", \"lastName\": \"MARTINEZ LIEVANO\", \"identificationType\": \"C.C.\", \"identificationNumber\": \"1.010.168.875\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"100\", \"timeFound\": \"1\", \"job\": \"GERENTE\" } ] }, \"documentType\": \"company\", \"category\": \"ACC\" }"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 425,
+      "cache_creation_input_tokens": 6074,
+      "cache_read_input_tokens": 0,
+      "output_tokens": 1262
+    },
+    "ResponseMetadata": {
+      "RequestId": "cf2a602c-7ffd-47dc-87c8-db56b23a4d07",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Thu, 28 Aug 2025 08:44:58 GMT",
+        "content-type": "application/json",
+        "content-length": "5101",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "cf2a602c-7ffd-47dc-87c8-db56b23a4d07",
+        "x-amzn-bedrock-invocation-latency": "24559",
+        "x-amzn-bedrock-cache-write-input-token-count": "6074",
+        "x-amzn-bedrock-cache-read-input-token-count": "0",
+        "x-amzn-bedrock-output-token-count": "1262",
+        "x-amzn-bedrock-input-token-count": "425"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_01NdexhoJB7LPmjQAxfrceH2",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-3-7-sonnet-20250219",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Let me analyze this document step by step to extract the equity composition data according to the rules: ## Step 1: Document Analysis - This appears to be an equity composition document in Spanish. - It's issued in Bogotá D.C., Colombia. - The document is a certification of shareholder composition (\"composición accionara\"). - It's signed by a \"Contador Público\" (Public Accountant) named Oscar Alberto Llanos Gonzalez. - The document is dated November 18, 2019. ## Step 2: Root Level Extraction ### Company Name: - The main reporting company is \"PUBLIART COLORS SAS\" - This appears to be the issuing company mentioned in the text. ### Tax ID: - The company's NIT is stated as \"900.523.022-1\" - This follows Colombian NIT formatting. ### Country: - Several indicators point to Colombia: - \"Bogotá D.C.\" is mentioned at the top (capital city of Colombia) - The document explicitly mentions \"Colombia\" - The tax ID type is \"NIT\" which matches Colombian company ID formats - The ID document type \"C.C.\" (Cédula de Ciudadanía) is Colombian ## Step 3: Related Parties Processing I see a table with shareholder information for one person: - Name: JOHN FABIO MARTINEZ LIEVANO - Document Number: 1.010.168.875 - Position: GERENTE - Participation: 100% - Document Type: C.C. - Nationality: COLOMBIANO For this related party: - It's a person, not a company (individual name without company suffixes) - First Name: JOHN FABIO - Last Name: MARTINEZ LIEVANO - Identification Type: C.C. (Cédula de Ciudadanía, which matches Colombia's PERSON_ID) - Identification Number: 1.010.168.875 - Participation Percentage: 100% - Job: GERENTE - timeFound: 1 (appears once in the document) ## Step 4: Validation & Cross-checking - The tax ID (NIT) aligns with Colombia. - The identification type (C.C.) is in the PERSON_ID hash table for Colombia. - The participation percentage is complete (100%). - No apparent conflicts or missing required fields. - The format of the C.C. number (1.010.168.875) matches Colombian ID patterns. - No missing/unclear fields requiring \"POR REVISAR\". ## Final JSON Structure: ```json { \"result\": { \"companyName\": \"PUBLIART COLORS SAS\", \"documentCategory\": \"Equity Composition\", \"taxId\": \"900.523.022-1\", \"country\": \"Colombia\", \"identificationDetails\": { \"source\": \"text_reference\", \"indicators\": [ \"Bogotá D.C.\", \"Colombia\", \"NIT format\" ], \"conflictingSources\": [], \"requiresReview\": \"false\" }, \"relatedParties\": [ { \"type\": \"person\", \"firstName\": \"JOHN FABIO\", \"lastName\": \"MARTINEZ LIEVANO\", \"identificationType\": \"C.C.\", \"identificationNumber\": \"1.010.168.875\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"100\", \"timeFound\": \"1\", \"job\": \"GERENTE\" } ] }, \"documentType\": \"company\", \"category\": \"ACC\" } ``` Let me double-check against the requirements: - All mandatory fields are present - Country and tax ID type are aligned (Colombia & NIT) - Identification type exists in the Colombia PERSON_ID hash table - No fields need to be set to \"POR REVISAR\" - No conflicts detected - The schema follows the required structure The JSON looks complete and correct based on the extracted information from the document.",
+          "signature": "ErcBCkgIBxABGAIiQMPmXeBwAe5K9NI+kX53PZR6jlG00RrMgCB1dkImOMFOQuVczhd7SWKTr6W8i79EgKIhttaOnLKidSCrKojGV/ASDEgTzOIKkNv7T0wIIRoMSsoYVdjyVPuqaI0uIjCiofA1F+rbTcMJoV0aWeKqoDI/9aE3EJ7SfXSIYwl2BdX26FTl/aa1IBluOqIkLt4qHV9MD6vmQ8rZJOuSY042/sNuNBQHoObn39Dv2Sh1GAI="
+        },
+        {
+          "type": "text",
+          "text": "{ \"result\": { \"companyName\": \"PUBLIART COLORS SAS\", \"documentCategory\": \"Equity Composition\", \"taxId\": \"900.523.022-1\", \"country\": \"Colombia\", \"identificationDetails\": { \"source\": \"text_reference\", \"indicators\": [ \"Bogota D.C.\", \"Colombia\", \"NIT format\" ], \"conflictingSources\": [], \"requiresReview\": \"false\" }, \"relatedParties\": [ { \"type\": \"person\", \"firstName\": \"JOHN FABIO\", \"lastName\": \"MARTINEZ LIEVANO\", \"identificationType\": \"C.C.\", \"identificationNumber\": \"1.010.168.875\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"100\", \"timeFound\": \"1\", \"job\": \"GERENTE\" } ] }, \"documentType\": \"company\", \"category\": \"ACC\" }"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 425,
+        "cache_creation_input_tokens": 6074,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 1262
+      }
+    },
+    "model_id": "us.anthropic.claude-3-7-sonnet-20250219-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 8000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "model_used": "us.anthropic.claude-3-7-sonnet-20250219-v1:0",
+  "api_used": "invoke_model"
+}

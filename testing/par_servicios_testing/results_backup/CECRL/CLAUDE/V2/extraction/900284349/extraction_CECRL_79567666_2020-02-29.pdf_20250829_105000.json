@@ -1,0 +1,88 @@
+{
+  "extraction_data": {
+    "result": {
+      "firstName": "LEONARDO",
+      "lastName": "LAYTON AREVALO",
+      "country_issuer": "Colombia",
+      "nationality": "Colombia",
+      "identificationType": "Cédula de Ciudadanía",
+      "identificationNumber": "79.567.666",
+      "message": ""
+    },
+    "document_type": "person",
+    "category": "CECRL"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "```json { \"result\": { \"firstName\": \"LEONARDO\", \"lastName\": \"LAYTON AREVALO\", \"country_issuer\": \"Colombia\", \"nationality\": \"Colombia\", \"identificationType\": \"Cédula de Ciudadanía\", \"identificationNumber\": \"79.567.666\", \"message\": \"\" }, \"document_type\": \"person\", \"category\": \"CECRL\" } ```"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 10,
+      "cache_creation_input_tokens": 5982,
+      "cache_read_input_tokens": 0,
+      "output_tokens": 503
+    },
+    "ResponseMetadata": {
+      "RequestId": "332d72c9-937d-432f-807a-a2aa3da34888",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Fri, 29 Aug 2025 15:50:01 GMT",
+        "content-type": "application/json",
+        "content-length": "4296",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "332d72c9-937d-432f-807a-a2aa3da34888",
+        "x-amzn-bedrock-invocation-latency": "11738",
+        "x-amzn-bedrock-cache-write-input-token-count": "5982",
+        "x-amzn-bedrock-cache-read-input-token-count": "0",
+        "x-amzn-bedrock-output-token-count": "503",
+        "x-amzn-bedrock-input-token-count": "10"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_016fkY4Myxj2wxXZu64S69ht",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-sonnet-4-20250514",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Looking at this Colombian identification document (Cédula de Ciudadanía), I need to extract the required information following the rules: From what I can see in the document: 1. This is a Colombian identification document - \"REPUBLICA DE COLOMBIA\" and \"CEDULA DE CIUDADANIA\" are visible at the top 2. Looking at the names section: - I can see \"LAYTON AREVALO\" which appears to be in the APELLIDOS (surnames) section - I can see \"LEONARDO\" which appears to be in the NOMBRES (given names) section 3. The identification number appears to be \"79.567.666\" based on what I can see 4. This is clearly a Colombian Cédula de Ciudadanía 5. For country and nationality, since this is a Colombian document, both would be Colombia 6. There are some additional details on the second part like birth date (28-OCT-1972), birth place (BOGOTA D.C.), but the main extraction focuses on the required fields. Let me structure this according to the schema: - firstName: \"LEONARDO\" (from the NOMBRES field) - lastName: \"LAYTON AREVALO\" (from the APELLIDOS field) - country_issuer: \"Colombia\" (this is a Colombian document) - nationality: \"Colombia\" (default assumption for Colombian ID unless specified otherwise) - identificationType: \"Cédula de Ciudadanía\" (clearly stated at the top) - identificationNumber: \"79.567.666\" (the number I can see) - message: \"\" (document appears to be properly extracted)",
+          "signature": "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"
+        },
+        {
+          "type": "text",
+          "text": "```json { \"result\": { \"firstName\": \"LEONARDO\", \"lastName\": \"LAYTON AREVALO\", \"country_issuer\": \"Colombia\", \"nationality\": \"Colombia\", \"identificationType\": \"Cédula de Ciudadanía\", \"identificationNumber\": \"79.567.666\", \"message\": \"\" }, \"document_type\": \"person\", \"category\": \"CECRL\" } ```"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 10,
+        "cache_creation_input_tokens": 5982,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 503
+      }
+    },
+    "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 8000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+  "api_used": "invoke_model"
+}

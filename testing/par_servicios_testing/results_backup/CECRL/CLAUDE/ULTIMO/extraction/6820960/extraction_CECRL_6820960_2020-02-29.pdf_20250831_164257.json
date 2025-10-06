@@ -1,0 +1,88 @@
+{
+  "extraction_data": {
+    "result": {
+      "FirstName": "JORGE EMILIO",
+      "LastName": "MONTES MONTES",
+      "CountryIssuer": "Colombia",
+      "Nationality": "colombiana",
+      "IdentificationType": "Cédula de Ciudadanía",
+      "IdentificationNumber": "6.820.986",
+      "Message": ""
+    },
+    "document_type": "person",
+    "category": "CECRL"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "```json { \"result\": { \"FirstName\": \"JORGE EMILIO\", \"LastName\": \"MONTES MONTES\", \"CountryIssuer\": \"Colombia\", \"Nationality\": \"colombiana\", \"IdentificationType\": \"Cédula de Ciudadanía\", \"IdentificationNumber\": \"6.820.986\", \"Message\": \"\" }, \"document_type\": \"person\", \"category\": \"CECRL\" } ```"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 1583,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 4300,
+      "output_tokens": 610
+    },
+    "ResponseMetadata": {
+      "RequestId": "1be200b7-1588-4b2d-8bcc-0990c6d436c8",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Sun, 31 Aug 2025 21:42:56 GMT",
+        "content-type": "application/json",
+        "content-length": "4900",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "1be200b7-1588-4b2d-8bcc-0990c6d436c8",
+        "x-amzn-bedrock-invocation-latency": "10132",
+        "x-amzn-bedrock-cache-write-input-token-count": "0",
+        "x-amzn-bedrock-cache-read-input-token-count": "4300",
+        "x-amzn-bedrock-output-token-count": "610",
+        "x-amzn-bedrock-input-token-count": "1583"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_0197uziYtx65qwnTgAuMs46u",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-sonnet-4-20250514",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "This appears to be a Colombian ID document (Cédula de Ciudadanía). Let me analyze what I can see: 1. Header: \"REPÚBLICA DE COLOMBIA\" - clearly indicates this is issued by Colombia 2. Document type: \"IDENTIFICACIÓN PERSONAL\" and \"CÉDULA DE CIUDADANÍA\" - this is a Colombian citizenship card 3. Number: I can see \"6.820.986\" at the bottom part 4. There are labels for \"APELLIDOS\" and \"NOMBRES\" 5. I can see some names: \"MONTES MONTES\" appears to be under APELLIDOS 6. Under NOMBRES I can see \"JORGE EMILIO\" However, looking more carefully at the layout and following the methodology for Colombian documents that may have \"misalignment\": Looking at the document: - There's \"NUMERO 6.820.986\" - Below that I see \"MONTES MONTES\" - There's \"APELLIDOS\" label - Then \"JORGE EMILIO\" - Then \"NOMBRES\" label This seems to follow the typical Colombian \"misaligned\" pattern mentioned in the instructions where: - The surnames appear first, then the \"APELLIDOS\" label - Then the first names appear, followed by the \"NOMBRES\" label So the correct extraction should be: - FirstName: \"JORGE EMILIO\" - LastName: \"MONTES MONTES\" - IdentificationNumber: \"6.820.986\" - CountryIssuer: \"Colombia\" (translated to Spanish) - Nationality: \"colombiana\" (since it's a Colombian citizenship card, the nationality should be Colombian) - IdentificationType: \"Cédula de Ciudadanía\" (already in Spanish) Let me also check the back of the document for additional information: I can see birth information - there's a date \"05-SEP-1955\" and location \"SINCELEJO\" which appears to be in Colombia (Sincelejo is a Colombian city), further confirming Colombian nationality.",
+          "signature": "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"
+        },
+        {
+          "type": "text",
+          "text": "```json { \"result\": { \"FirstName\": \"JORGE EMILIO\", \"LastName\": \"MONTES MONTES\", \"CountryIssuer\": \"Colombia\", \"Nationality\": \"colombiana\", \"IdentificationType\": \"Cédula de Ciudadanía\", \"IdentificationNumber\": \"6.820.986\", \"Message\": \"\" }, \"document_type\": \"person\", \"category\": \"CECRL\" } ```"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 1583,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 4300,
+        "output_tokens": 610
+      }
+    },
+    "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 8000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+  "api_used": "invoke_model"
+}

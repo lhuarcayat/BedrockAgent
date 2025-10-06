@@ -1,0 +1,87 @@
+{
+  "classification_data": {
+    "category": "CECRL",
+    "text": "Scanned by CamScanner 12 REPUBLICA DE COLOMBIA IDENTIFICACION PERSONAL CEDULA DE CIUDADANIA NUMERO 5.982.300 NAVARRO MORALES APELLIDOS EDGAR NOMBRES FIRMA FECHA DE NACIMIENTO 06-MAY-1947 PURIFICACION (TOLIMA) LUGAR DE NACIMIENTO 1.77 ESTATURA O GR.S M SEXO 05-SEP-1989 PURIFICACION FECHA Y LUGAR DE EXPEDICION INDICE DERECHO REGISTRADOR NACIONAL CARLOS ARIEL SANCHEZ TORRES A-2909400 00107510-M-0005082300-20090907 001463655A 3 6350103293 Scanned by CamScanner",
+    "document_number": "5982300",
+    "path": "CECRL/5982300/5982300_2020-02-29.pdf"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "```json { \"category\": \"CECRL\", \"text\": \"Scanned by CamScanner\\n\\n12\\n\\nREPUBLICA DE COLOMBIA\\nIDENTIFICACION PERSONAL\\nCEDULA DE CIUDADANIA\\n\\nNUMERO 5.982.300\\nNAVARRO MORALES\\nAPELLIDOS\\nEDGAR\\nNOMBRES\\n\\nFIRMA\\n\\nFECHA DE NACIMIENTO 06-MAY-1947\\nPURIFICACION\\n(TOLIMA)\\nLUGAR DE NACIMIENTO\\n\\n1.77\\nESTATURA\\n\\nO\\nGR.S\\nM\\nSEXO\\n\\n05-SEP-1989 PURIFICACION\\nFECHA Y LUGAR DE EXPEDICION\\n\\nINDICE DERECHO\\nREGISTRADOR NACIONAL\\nCARLOS ARIEL SANCHEZ TORRES\\n\\nA-2909400 00107510-M-0005082300-20090907\\n001463655A 3\\n6350103293\\n\\nScanned by CamScanner\" } ```"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 1629,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 3150,
+      "output_tokens": 1034
+    },
+    "ResponseMetadata": {
+      "RequestId": "550bbd01-2acd-4d4a-9241-052b10370036",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Sun, 31 Aug 2025 21:33:37 GMT",
+        "content-type": "application/json",
+        "content-length": "6190",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "550bbd01-2acd-4d4a-9241-052b10370036",
+        "x-amzn-bedrock-invocation-latency": "16946",
+        "x-amzn-bedrock-cache-write-input-token-count": "0",
+        "x-amzn-bedrock-cache-read-input-token-count": "3150",
+        "x-amzn-bedrock-output-token-count": "1034",
+        "x-amzn-bedrock-input-token-count": "1629"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_01CHt8LHsRCGhtEVLmLptihM",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-sonnet-4-20250514",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Let me analyze this document according to the classification workflow: 1. **TEXT EXTRACTION** Looking at the document, I can extract the following text: - \"Scanned by CamScanner\" (appears twice) - \"REPUBLICA DE COLOMBIA\" - \"IDENTIFICACION PERSONAL\" - \"CEDULA DE CIUDADANIA\" - \"NUMERO 5.982.300\" - \"NAVARRO MORALES\" - \"APELLIDOS\" - \"EDGAR\" - \"NOMBRES\" - \"FIRMA\" (with a signature) - There's a photograph of a person - \"FECHA DE NACIMIENTO 06-MAY-1947\" - \"PURIFICACION (TOLIMA)\" - \"LUGAR DE NACIMIENTO\" - \"1.77 ESTATURA\" - \"O GR.S SEXO M\" - \"05-SEP-1989 PURIFICACION\" - \"FECHA Y LUGAR DE EXPEDICION\" - \"INDICE DERECHO\" (with a fingerprint) - \"REGISTRADOR NACIONAL CARLOS ARIEL SANCHEZ TORRES\" - Barcode at the bottom - \"A-2909400 00107510-M-0005082300-20090907\" - \"001463655A 3 6350103293\" 2. **PRIORITY CHECKS** - BLANK: No, there's significant content - LINK_ONLY: No, there are no hyperlinks or URLs 3. **DOCUMENT FUNCTION ANALYSIS** The main purpose of this document is personal identification. It contains: - Personal identification data (name, ID number, photograph) - Biographical information (birth date, place of birth, height, sex) - Official government seal and structure - Fingerprint - Signature area - This is clearly a personal identification document 4. **ISSUER IDENTIFICATION** The document is issued by \"REPUBLICA DE COLOMBIA\" - this is a government identification authority, not a tax authority or commercial registry. I'm identifying this as a core personal identification document with multiple verification elements. The classification follows a specific government pattern, highlighting its official status as a comprehensive personal identification credential. The document precisely matches Colombian national identification standards, containing critical personal verification markers.",
+          "signature": "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"
+        },
+        {
+          "type": "text",
+          "text": "```json { \"category\": \"CECRL\", \"text\": \"Scanned by CamScanner\\n\\n12\\n\\nREPUBLICA DE COLOMBIA\\nIDENTIFICACION PERSONAL\\nCEDULA DE CIUDADANIA\\n\\nNUMERO 5.982.300\\nNAVARRO MORALES\\nAPELLIDOS\\nEDGAR\\nNOMBRES\\n\\nFIRMA\\n\\nFECHA DE NACIMIENTO 06-MAY-1947\\nPURIFICACION\\n(TOLIMA)\\nLUGAR DE NACIMIENTO\\n\\n1.77\\nESTATURA\\n\\nO\\nGR.S\\nM\\nSEXO\\n\\n05-SEP-1989 PURIFICACION\\nFECHA Y LUGAR DE EXPEDICION\\n\\nINDICE DERECHO\\nREGISTRADOR NACIONAL\\nCARLOS ARIEL SANCHEZ TORRES\\n\\nA-2909400 00107510-M-0005082300-20090907\\n001463655A 3\\n6350103293\\n\\nScanned by CamScanner\" } ```"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 1629,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 3150,
+        "output_tokens": 1034
+      }
+    },
+    "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 8000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "expected_category": "CECRL",
+  "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+  "api_used": "invoke_model",
+  "pdf_info": {
+    "original_size": 245556,
+    "first_page_size": 245001,
+    "is_scanned": false
+  }
+}

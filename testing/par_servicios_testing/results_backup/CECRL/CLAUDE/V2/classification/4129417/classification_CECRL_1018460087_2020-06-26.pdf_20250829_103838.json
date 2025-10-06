@@ -1,0 +1,87 @@
+{
+  "classification_data": {
+    "category": "CECRL",
+    "text": "REPUBLICA DE COLOMBIA IDENTIFICACION PERSONAL CEDULA DE CIUDADANIA NUMERO 1.018.460.087 OVALLE BAYER APELLIDOS DIEGO FERNANDO NOMBRES Diego F. Ovalle B. FIRMA FECHA DE NACIMIENTO 16-JUN-1993 MANI (CASANARE) LUGAR DE NACIMIENTO 1.73 O+ M ESTATURA G.S. RH SEXO 20-JUN-2011 BOGOTA D.C FECHA Y LUGAR DE EXPEDICION REGISTRADOR NACIONAL CARLOS ABRIL SANCHEZ TORRES INDICE DERECHO P-1500150-003136B1-M-1018460087-20110713 0027f98479A 1 36822300",
+    "document_number": "UNKNOWN",
+    "path": "CECRL/4129417_1018460087_2020-06-26/1018460087_2020-06-26.pdf"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "```json { \"category\": \"CECRL\", \"text\": \"REPUBLICA DE COLOMBIA\\nIDENTIFICACION PERSONAL\\nCEDULA DE CIUDADANIA\\nNUMERO 1.018.460.087\\nOVALLE BAYER\\nAPELLIDOS\\nDIEGO FERNANDO\\nNOMBRES\\nDiego F. Ovalle B.\\nFIRMA\\nFECHA DE NACIMIENTO 16-JUN-1993\\nMANI\\n(CASANARE)\\nLUGAR DE NACIMIENTO\\n1.73 O+ M\\nESTATURA G.S. RH SEXO\\n20-JUN-2011 BOGOTA D.C\\nFECHA Y LUGAR DE EXPEDICION\\nREGISTRADOR NACIONAL\\nCARLOS ABRIL SANCHEZ TORRES\\nINDICE DERECHO\\nP-1500150-003136B1-M-1018460087-20110713 0027f98479A 1 36822300\" } ```"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 9,
+      "cache_creation_input_tokens": 4549,
+      "cache_read_input_tokens": 0,
+      "output_tokens": 847
+    },
+    "ResponseMetadata": {
+      "RequestId": "993eeb33-6d85-4d1c-9ed2-69d3d2469d84",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Fri, 29 Aug 2025 15:38:04 GMT",
+        "content-type": "application/json",
+        "content-length": "5405",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "993eeb33-6d85-4d1c-9ed2-69d3d2469d84",
+        "x-amzn-bedrock-invocation-latency": "14326",
+        "x-amzn-bedrock-cache-write-input-token-count": "4549",
+        "x-amzn-bedrock-cache-read-input-token-count": "0",
+        "x-amzn-bedrock-output-token-count": "847",
+        "x-amzn-bedrock-input-token-count": "9"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_01B5DwbNAU6ZNCfHtt9ZresC",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-sonnet-4-20250514",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Looking at this document, I need to extract all text and then classify it properly. From the document, I can see: Front side (top): - REPUBLICA DE COLOMBIA - IDENTIFICACION PERSONAL - CEDULA DE CIUDADANIA - NUMERO: 1.018.460.087 - OVALLE BAYER - APELLIDOS - DIEGO FERNANDO - NOMBRES - Diego F. Ovalle B. (signature) - FIRMA Back side (bottom): - FECHA DE NACIMIENTO: 16-JUN-1993 - MANI - (CASANARE) - LUGAR DE NACIMIENTO - 1.73 O+ M - ESTATURA G.S. RH SEXO - 20-JUN-2011 BOGOTA D.C - FECHA Y LUGAR DE EXPEDICION - REGISTRADOR NACIONAL - CARLOS ABRIL SANCHEZ TORRES - There's a fingerprint image - A barcode - INDICE DERECHO - P-1500150-003136B1-M-1018460087-20110713 Now for classification: This is clearly a Cédula de Ciudadanía (Colombian national ID card) which is a personal identification document issued by the government of Colombia. Key indicators for CECRL: - \"REPUBLICA DE COLOMBIA IDENTIFICACION PERSONAL\" - \"CEDULA DE CIUDADANIA\" - Individual identification number with personal name - Personal biographical data: birth date (16-JUN-1993), birth place (MANI, CASANARE), blood type (O+), gender (M), height (1.73) - Individual photo (visible) - Signature reference (FIRMA) - Fingerprint (INDICE DERECHO) - Government-issued personal ID number - Security elements: official seals, barcode I confirm this is an official government-issued identification document with comprehensive personal details. The document contains multiple authentication elements like a signature, fingerprint, and official registration number, definitively proving its status as a national identification card. The document unequivocally belongs to the CECRL category, with no potential for misclassification given its clear governmental origin and personal identification purpose.",
+          "signature": "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"
+        },
+        {
+          "type": "text",
+          "text": "```json { \"category\": \"CECRL\", \"text\": \"REPUBLICA DE COLOMBIA\\nIDENTIFICACION PERSONAL\\nCEDULA DE CIUDADANIA\\nNUMERO 1.018.460.087\\nOVALLE BAYER\\nAPELLIDOS\\nDIEGO FERNANDO\\nNOMBRES\\nDiego F. Ovalle B.\\nFIRMA\\nFECHA DE NACIMIENTO 16-JUN-1993\\nMANI\\n(CASANARE)\\nLUGAR DE NACIMIENTO\\n1.73 O+ M\\nESTATURA G.S. RH SEXO\\n20-JUN-2011 BOGOTA D.C\\nFECHA Y LUGAR DE EXPEDICION\\nREGISTRADOR NACIONAL\\nCARLOS ABRIL SANCHEZ TORRES\\nINDICE DERECHO\\nP-1500150-003136B1-M-1018460087-20110713 0027f98479A 1 36822300\" } ```"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 9,
+        "cache_creation_input_tokens": 4549,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 847
+      }
+    },
+    "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 8000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "expected_category": "CECRL",
+  "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+  "api_used": "invoke_model",
+  "pdf_info": {
+    "original_size": 478149,
+    "first_page_size": 478039,
+    "is_scanned": true
+  }
+}

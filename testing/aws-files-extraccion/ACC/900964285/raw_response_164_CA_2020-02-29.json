@@ -1,0 +1,33 @@
+{
+  "ResponseMetadata": {
+    "RequestId": "cd73534e-f419-495b-9a7e-98fe5dfd9007",
+    "HTTPStatusCode": 200,
+    "HTTPHeaders": {
+      "date": "Mon, 16 Jun 2025 20:49:23 GMT",
+      "content-type": "application/json",
+      "content-length": "1875",
+      "connection": "keep-alive",
+      "x-amzn-requestid": "cd73534e-f419-495b-9a7e-98fe5dfd9007"
+    },
+    "RetryAttempts": 0
+  },
+  "output": {
+    "message": {
+      "role": "assistant",
+      "content": [
+        {
+          "text": "```json\n{\n  \"path\": \"s3://par-servicios-poc-dev-filling-desk/par-servicios-poc/ACC/900964285/164_CA_2020-02-29.pdf\",\n  \"result\": {\n    \"companyName\": \"Asesorías y Gestiones Ambientales SAS\",\n    \"documentType\": \"Equity Composition\",\n    \"taxId\": \"900.964.285-3\",\n    \"country\": \"Colombia\",\n    \"identificationDetails\": {\n      \"source\": \"id_analysis\",\n      \"indicators\": [\n        \"NIT\"\n      ],\n      \"requiresReview\": false\n    },\n    \"relatedParties\": [\n      {\n        \"firstName\": \"Jaime\",\n        \"lastName\": \"Alexander Franco Pedraza\",\n        \"identificationType\": \"CC\",\n        \"identificationNumber\": \"79.770.147\",\n        \"relationshipType\": \"Shareholder\",\n        \"participationPercentage\": \"33.33\",\n        \"timeFound\": 1,\n        \"job\": \"Representante Legal\"\n      },\n      {\n        \"firstName\": \"Martha\",\n        \"lastName\": \"Lilia Celis Gordo\",\n        \"identificationType\": \"NIT\",\n        \"identificationNumber\": \"518.803.85\",\n        \"relationshipType\": \"Shareholder\",\n        \"participationPercentage\": \"33.33\",\n        \"timeFound\": 1\n      },\n      {\n        \"firstName\": \"Giovanni\",\n        \"lastName\": \"Andres Vega Forero\",\n        \"identificationType\": \"NIT\",\n        \"identificationNumber\": \"799.583.47\",\n        \"relationshipType\": \"Shareholder\",\n        \"participationPercentage\": \"33.33\",\n        \"timeFound\": 1\n      }\n    ]\n  },\n  \"confidenceScores\": {\n    \"companyName\": 95,\n    \"documentType\": 100,\n    \"taxId\": 100,\n    \"country\": 95,\n    \"relatedParties\": 90\n  }\n}\n```"
+        }
+      ]
+    }
+  },
+  "stopReason": "end_turn",
+  "usage": {
+    "inputTokens": 5435,
+    "outputTokens": 465,
+    "totalTokens": 5900
+  },
+  "metrics": {
+    "latencyMs": 9461
+  }
+}

@@ -1,0 +1,147 @@
+{
+  "document_name": "204_CA_2020-02-29.pdf",
+  "category": "ACC",
+  "classification_success": true,
+  "extraction_success": true,
+  "overall_success": true,
+  "timestamp": "2025-08-25T01:05:03.472283",
+  "classification_result": {
+    "classification_data": {
+      "category": "ACC",
+      "text": "LA SUSCRIPTA CONTRADOR PBLICO DE QUIMEL INGENIERA S.A.S. CERTIFICA QUE: A la fecha de expedicin de la presente certificacin, QUIMEL INGENIERA S.A.S., identificada con el NIT No. 901.108.357-8, tiene un capital autorizado, suscrito y pagado de CIENTOS VEINTE MILLONES DE PESOS ($520.000.000,00), dividido en 5.200 acciones de valor nominal de $100.000 cada una con la siguiente participacin: IDENTIFICACION NOMBRE ACCIONISTAS NO. DE ACCIONES % PARTICIPACIN VALOR NOMINAL POR ACCIN $100.000 NACIONALIDAD DE LOS SOCIOS C.E 737708 MENDOZA CARRANZA JOSE CARLOS 5.200 TOTAT 520.000.000 100% SALVADORENO El presente certificado se expide a los 30 das del mes de Diciembre de 2022. SANDRA MILENA BOLÄNOS BRAVO T.P 158280-T C.C 27.191.211 CONTADORA EXPERTA CONTROL DE MOVIMIENTO T. T.P 158280-T. MOVIMIENTO INGENIERO JOSE CARLOS MENDOZA CARRANZA C.E 737708 REPRESENTANTE LEGAL Quimel. Ingenieria SAS Expertos en control de movimiento Soluciones en automatizacin industrial Venta y soporte de equipos Emerson, Control Technique Venta de motores US Motors y Siemems, Localizacion de repuestos para automatizacion industrial de todas las marcas Contáctenos: 57 (1) 9262230 9262231, ventas@quineling.co, Calle 61 B13 23 N°201",
+      "document_number": "901108357",
+      "path": "ACC/901108357/204_CA_2020-02-29.pdf"
+    },
+    "raw_response": {
+      "ResponseMetadata": {
+        "RequestId": "5349c363-e992-40df-b2f8-e7e8ed11cf65",
+        "HTTPStatusCode": 200,
+        "HTTPHeaders": {
+          "date": "Mon, 25 Aug 2025 06:05:13 GMT",
+          "content-type": "application/json",
+          "content-length": "1716",
+          "connection": "keep-alive",
+          "x-amzn-requestid": "5349c363-e992-40df-b2f8-e7e8ed11cf65"
+        },
+        "RetryAttempts": 0
+      },
+      "output": {
+        "message": {
+          "role": "assistant",
+          "content": [
+            {
+              "text": "```json { \"category\": \"ACC\", \"text\": \"LA SUSCRIPTA CONTRADOR PBLICO DE QUIMEL INGENIERA S.A.S. CERTIFICA QUE: \\n\\nA la fecha de expedicin de la presente certificacin, QUIMEL INGENIERA S.A.S., identificada con el NIT No. 901.108.357-8, tiene un capital autorizado, suscrito y pagado de CIENTOS VEINTE MILLONES DE PESOS ($520.000.000,00), dividido en 5.200 acciones de valor nominal de $100.000 cada una con la siguiente participacin: \\n\\n\\n\\n\\n\\nIDENTIFICACION \\n\\n\\n\\nNOMBRE \\nACCIONISTAS \\n\\n\\n\\nNO. DE \\nACCIONES \\n\\n\\n\\n% \\nPARTICIPACIN \\n\\n\\n\\nVALOR \\nNOMINAL \\nPOR ACCIN \\n\\n\\n$100.000 \\n\\n\\n\\nNACIONALIDAD \\nDE LOS \\nSOCIOS \\n\\n\\nC.E 737708 \\n\\n\\nMENDOZA \\nCARRANZA \\nJOSE CARLOS \\n\\n\\n\\n5.200 \\n\\n\\n\\nTOTAT \\n\\n\\n\\n\\n\\n520.000.000 \\n\\n100% \\nSALVADORENO \\nEl presente certificado se expide a los 30 das del mes de Diciembre de 2022. \\n\\nSANDRA MILENA BOLÄNOS BRAVO \\nT.P 158280-T \\nC.C 27.191.211 \\nCONTADORA \\n\\nEXPERTA CONTROL DE MOVIMIENTO \\nT. T.P 158280-T. MOVIMIENTO INGENIERO JOSE CARLOS MENDOZA CARRANZA \\nC.E 737708 \\nREPRESENTANTE LEGAL \\nQuimel. Ingenieria SAS \\nExpertos en control de movimiento \\nSoluciones en automatizacin industrial \\nVenta y soporte de equipos Emerson, \\nControl Technique \\nVenta de motores US Motors y Siemems, \\nLocalizacion de repuestos para \\nautomatizacion industrial de todas las \\nmarcas Contáctenos: 57 (1) 9262230 9262231, \\nventas@quineling.co, Calle 61 B13 23 N°201\" } ```"
+            }
+          ]
+        }
+      },
+      "stopReason": "end_turn",
+      "usage": {
+        "inputTokens": 3128,
+        "outputTokens": 645,
+        "totalTokens": 3773
+      },
+      "metrics": {
+        "latencyMs": 9632
+      },
+      "model_id": "us.amazon.nova-pro-v1:0",
+      "api_used": "converse",
+      "model_params": {
+        "maxTokens": 8200,
+        "topP": 1,
+        "temperature": 0
+      }
+    },
+    "expected_category": "ACC",
+    "model_used": "us.amazon.nova-pro-v1:0",
+    "api_used": "converse",
+    "pdf_info": {
+      "original_size": 213427,
+      "first_page_size": 202310,
+      "is_scanned": false
+    }
+  },
+  "extraction_result": {
+    "extraction_data": {
+      "path": "ACC/901108357/204_CA_2020-02-29.pdf",
+      "result": {
+        "companyName": "QUIMEL INGENIERIA S.A.S.",
+        "documentType": "Equity Composition",
+        "taxId": "901.108.357-8",
+        "country": "Colombia",
+        "identificationDetails": {
+          "source": "text_reference",
+          "indicators": [
+            "NIT",
+            "Colombia"
+          ],
+          "conflictingSources": [],
+          "requiresReview": false
+        },
+        "relatedParties": [
+          {
+            "firstName": "Mendoza",
+            "lastName": "Carranza Jose Carlos",
+            "identificationType": "C.E.",
+            "identificationNumber": "737708",
+            "relationshipType": "Shareholder",
+            "participationPercentage": "100%",
+            "timeFound": 1,
+            "job": ""
+          }
+        ]
+      },
+      "document_type": "company",
+      "document_number": "901108357",
+      "category": "ACC",
+      "confidenceScores": {
+        "companyName": 95,
+        "taxId": 95,
+        "country": 95,
+        "relatedParties": 90
+      }
+    },
+    "raw_response": {
+      "ResponseMetadata": {
+        "RequestId": "63f4cb0d-0e01-4b15-818d-83c91a01dfcd",
+        "HTTPStatusCode": 200,
+        "HTTPHeaders": {
+          "date": "Mon, 25 Aug 2025 06:05:19 GMT",
+          "content-type": "application/json",
+          "content-length": "1274",
+          "connection": "keep-alive",
+          "x-amzn-requestid": "63f4cb0d-0e01-4b15-818d-83c91a01dfcd"
+        },
+        "RetryAttempts": 0
+      },
+      "output": {
+        "message": {
+          "role": "assistant",
+          "content": [
+            {
+              "text": "```json { \"path\": \"ACC/901108357/204_CA_2020-02-29.pdf\", \"result\": { \"companyName\": \"QUIMEL INGENIERIA S.A.S.\", \"documentType\": \"Equity Composition\", \"taxId\": \"901.108.357-8\", \"country\": \"Colombia\", \"identificationDetails\": { \"source\": \"text_reference\", \"indicators\": [ \"NIT\", \"Colombia\" ], \"conflictingSources\": [], \"requiresReview\": false }, \"relatedParties\": [ { \"firstName\": \"Mendoza\", \"lastName\": \"Carranza Jose Carlos\", \"identificationType\": \"C.E.\", \"identificationNumber\": \"737708\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"100%\", \"timeFound\": 1, \"job\": \"\" } ] }, \"document_type\": \"company\", \"document_number\": \"901108357\", \"category\": \"ACC\", \"confidenceScores\": { \"companyName\": 95, \"taxId\": 95, \"country\": 95, \"relatedParties\": 90 } } ```"
+            }
+          ]
+        }
+      },
+      "stopReason": "end_turn",
+      "usage": {
+        "inputTokens": 8569,
+        "outputTokens": 316,
+        "totalTokens": 8885
+      },
+      "metrics": {
+        "latencyMs": 6595
+      },
+      "model_id": "us.amazon.nova-pro-v1:0",
+      "api_used": "converse",
+      "model_params": {
+        "maxTokens": 8200,
+        "topP": 1,
+        "temperature": 0.1
+      }
+    },
+    "model_used": "us.amazon.nova-pro-v1:0",
+    "api_used": "converse"
+  }
+}

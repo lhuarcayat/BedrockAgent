@@ -1,0 +1,33 @@
+{
+  "ResponseMetadata": {
+    "RequestId": "c3cd1179-9d5b-44a6-8f2d-f168b1f49f91",
+    "HTTPStatusCode": 200,
+    "HTTPHeaders": {
+      "date": "Mon, 16 Jun 2025 20:49:31 GMT",
+      "content-type": "application/json",
+      "content-length": "1275",
+      "connection": "keep-alive",
+      "x-amzn-requestid": "c3cd1179-9d5b-44a6-8f2d-f168b1f49f91"
+    },
+    "RetryAttempts": 0
+  },
+  "output": {
+    "message": {
+      "role": "assistant",
+      "content": [
+        {
+          "text": "```json\n{\n  \"path\": \"s3://par-servicios-poc-dev-filling-desk/par-servicios-poc/ACC/901108357/204_CA_2020-02-29.pdf\",\n  \"result\": {\n    \"companyName\": \"QUIMEL INGENIERIA S.A.S.\",\n    \"documentType\": \"Equity Composition\",\n    \"taxId\": \"901.108.357-8\",\n    \"country\": \"Colombia\",\n    \"identificationDetails\": {\n      \"source\": \"id_analysis\",\n      \"indicators\": [\n        \"NIT\"\n      ],\n      \"requiresReview\": false\n    },\n    \"relatedParties\": [\n      {\n        \"firstName\": \"MENDOZA\",\n        \"lastName\": \"CARRANZA JOSE CARLOS\",\n        \"identificationType\": \"C.E.\",\n        \"identificationNumber\": \"737708\",\n        \"relationshipType\": \"Shareholder\",\n        \"participationPercentage\": \"100\",\n        \"timeFound\": 1\n      }\n    ]\n  },\n  \"document_type\": \"company\",\n  \"document_number\": \"901108357\",\n  \"category\": \"ACC\",\n  \"confidenceScores\": {\n    \"companyName\": 90,\n    \"documentType\": 100,\n    \"taxId\": 100,\n    \"country\": 90,\n    \"relatedParties\": 90\n  }\n}\n```"
+        }
+      ]
+    }
+  },
+  "stopReason": "end_turn",
+  "usage": {
+    "inputTokens": 5435,
+    "outputTokens": 335,
+    "totalTokens": 5770
+  },
+  "metrics": {
+    "latencyMs": 7190
+  }
+}

@@ -1,0 +1,76 @@
+{
+  "extraction_data": {
+    "path": "ACC/900127447/217_CA_2020-02-29.pdf",
+    "result": {
+      "companyName": "LA EMPRESA ROMEGAS SAS",
+      "documentType": "Equity Composition",
+      "taxId": "900.127.447-1",
+      "country": "Colombia",
+      "identificationDetails": {
+        "source": "id_analysis",
+        "indicators": [
+          "NIT identification type",
+          "CC identification type for person"
+        ],
+        "conflictingSources": [],
+        "requiresReview": false
+      },
+      "relatedParties": [
+        {
+          "firstName": "Julio Cesar",
+          "lastName": "Romero Muñoz",
+          "identificationType": "CC",
+          "identificationNumber": "79.735.871",
+          "relationshipType": "Shareholder",
+          "participationPercentage": "100%",
+          "timeFound": 1,
+          "job": ""
+        }
+      ]
+    },
+    "document_type": "company",
+    "document_number": "900127447",
+    "category": "ACC",
+    "confidenceScores": {
+      "companyName": 95,
+      "taxId": 95,
+      "country": 90,
+      "relatedParties": 95
+    }
+  },
+  "raw_response": {
+    "ResponseMetadata": {
+      "RequestId": "f9f89539-402f-4d98-a35e-ea2d3cbabcb5",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Fri, 22 Aug 2025 19:42:08 GMT",
+        "content-type": "application/json",
+        "content-length": "1423",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "f9f89539-402f-4d98-a35e-ea2d3cbabcb5"
+      },
+      "RetryAttempts": 0
+    },
+    "output": {
+      "message": {
+        "role": "assistant",
+        "content": [
+          {
+            "text": "```json\n{\n  \"path\": \"ACC/900127447/217_CA_2020-02-29.pdf\",\n  \"result\": {\n    \"companyName\": \"LA EMPRESA ROMEGAS SAS\",\n    \"documentType\": \"Equity Composition\",\n    \"taxId\": \"900.127.447-1\",\n    \"country\": \"Colombia\",\n    \"identificationDetails\": {\n      \"source\": \"id_analysis\",\n      \"indicators\": [\n        \"NIT identification type\",\n        \"CC identification type for person\"\n      ],\n      \"conflictingSources\": [],\n      \"requiresReview\": false\n    },\n    \"relatedParties\": [\n      {\n        \"firstName\": \"Julio Cesar\",\n        \"lastName\": \"Romero Muñoz\",\n        \"identificationType\": \"CC\",\n        \"identificationNumber\": \"79.735.871\",\n        \"relationshipType\": \"Shareholder\",\n        \"participationPercentage\": \"100%\",\n        \"timeFound\": 1,\n        \"job\": \"\"\n      }\n    ]\n  },\n  \"document_type\": \"company\",\n  \"document_number\": \"900127447\",\n  \"category\": \"ACC\",\n  \"confidenceScores\": {\n    \"companyName\": 95,\n    \"taxId\": 95,\n    \"country\": 90,\n    \"relatedParties\": 95\n  }\n}\n```"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "inputTokens": 8187,
+      "outputTokens": 348,
+      "totalTokens": 8535,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 7108
+    }
+  }
+}

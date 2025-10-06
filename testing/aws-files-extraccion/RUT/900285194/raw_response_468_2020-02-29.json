@@ -1,0 +1,33 @@
+{
+  "ResponseMetadata": {
+    "RequestId": "908ff06d-ee86-4c85-a303-d7ae7680c6ff",
+    "HTTPStatusCode": 200,
+    "HTTPHeaders": {
+      "date": "Tue, 17 Jun 2025 14:30:26 GMT",
+      "content-type": "application/json",
+      "content-length": "2100",
+      "connection": "keep-alive",
+      "x-amzn-requestid": "908ff06d-ee86-4c85-a303-d7ae7680c6ff"
+    },
+    "RetryAttempts": 0
+  },
+  "output": {
+    "message": {
+      "role": "assistant",
+      "content": [
+        {
+          "text": "```json\n{\n  \"path\": \"s3://par-servicios-poc-dev-filling-desk/par-servicios-poc/RUT/900285194/468_2020-02-29.pdf\",\n  \"result\": {\n    \"companyName\": \"FARMACIA INSTITUCIONAL S A S\",\n    \"country\": \"COLOMBIA\",\n    \"documentType\": \"NIT\",\n    \"taxId\": \"900285194\",\n    \"verificationDigit\": \"8\",\n    \"personType\": \"Persona Jurídica\",\n    \"relatedParties\": [\n      {\n        \"firstName\": \"TOVAR OSORIO\",\n        \"lastName\": \"ALEXANDER\",\n        \"identificationType\": \"Cédula de Ciudadanía\",\n        \"identificationNumber\": \"20090506\",\n        \"relationshipType\": \"Representante legal Certificado\"\n      },\n      {\n        \"firstName\": \"RUGE\",\n        \"lastName\": \"LEON\",\n        \"identificationType\": \"Cédula de Ciudadanía\",\n        \"identificationNumber\": \"20090610\",\n        \"relationshipType\": \"Representante legal\"\n      },\n      {\n        \"firstName\": \"VALDERRAMA\",\n        \"lastName\": \"ESQUEVIL\",\n        \"identificationType\": \"Cédula de Ciudadanía\",\n        \"identificationNumber\": \"1380230151\",\n        \"relationshipType\": \"Revisor Fiscal y Contador\"\n      },\n      {\n        \"firstName\": \"TAPIA\",\n        \"lastName\": \"MENDIVETA\",\n        \"identificationType\": \"Cédula de Ciudadanía\",\n        \"identificationNumber\": \"137963905\",\n        \"relationshipType\": \"Revisor Fiscal y Contador\"\n      }\n    ],\n    \"address\": \"TV 93 32 IN 9, Bogotá, D.C.\",\n    \"documentGenerationDate\": \"2020-07-20\"\n  },\n  \"confidenceScores\": {\n    \"companyName\": 95,\n    \"documentType\": 90,\n    \"country\": 100,\n    \"taxId\": 100,\n    \"verificationDigit\": 95,\n    \"personType\": 90,\n    \"address\": 85,\n    \"relatedParties\": 85\n  },\n  \"document_type\": \"company\",\n  \"document_number\": \"900285194\",\n  \"category\": \"RUT\"\n}\n```"
+        }
+      ]
+    }
+  },
+  "stopReason": "end_turn",
+  "usage": {
+    "inputTokens": 18359,
+    "outputTokens": 559,
+    "totalTokens": 18918
+  },
+  "metrics": {
+    "latencyMs": 16441
+  }
+}

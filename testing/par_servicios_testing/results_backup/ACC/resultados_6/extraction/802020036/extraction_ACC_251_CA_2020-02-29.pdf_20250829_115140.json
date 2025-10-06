@@ -1,0 +1,148 @@
+{
+  "extraction_data": {
+    "result": {
+      "companyName": "V.P. GLOBAL LTDA",
+      "documentCategory": "Equity Composition",
+      "taxId": "POR REVISAR",
+      "country": "Colombia",
+      "identificationDetails": {
+        "source": "text_reference",
+        "indicators": [
+          "Barranquilla",
+          "Bogotá",
+          "Cartagena",
+          "Cúcuta",
+          "Montería",
+          "Riohacha",
+          "Santa Marta",
+          "Sincelejo",
+          "Valledupar",
+          "COLOMBIANA nationality for all shareholders"
+        ],
+        "conflictingSources": [],
+        "requiresReview": "true"
+      },
+      "relatedParties": [
+        {
+          "type": "person",
+          "firstName": "Jose Miguel",
+          "lastName": "Villafañez Planells",
+          "identificationType": "C.C.",
+          "identificationNumber": "7474165",
+          "relationshipType": "Shareholder",
+          "participationPercentage": "49,00%",
+          "timeFound": "1",
+          "job": ""
+        },
+        {
+          "type": "person",
+          "firstName": "Vilma Leonor",
+          "lastName": "Jabba Galindo",
+          "identificationType": "C.C.",
+          "identificationNumber": "22430683",
+          "relationshipType": "Shareholder",
+          "participationPercentage": "49,00%",
+          "timeFound": "1",
+          "job": ""
+        },
+        {
+          "type": "person",
+          "firstName": "Jose Elias",
+          "lastName": "Villafañez Jabba",
+          "identificationType": "C.C.",
+          "identificationNumber": "72302912",
+          "relationshipType": "Shareholder",
+          "participationPercentage": "1,00%",
+          "timeFound": "1",
+          "job": ""
+        },
+        {
+          "type": "person",
+          "firstName": "Andres Felipe",
+          "lastName": "Villafañez Jabba",
+          "identificationType": "C.C.",
+          "identificationNumber": "1129577148",
+          "relationshipType": "Shareholder",
+          "participationPercentage": "1,00%",
+          "timeFound": "1",
+          "job": ""
+        }
+      ]
+    },
+    "documentType": "company",
+    "category": "ACC"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "{ \"result\": { \"companyName\": \"V.P. GLOBAL LTDA\", \"documentCategory\": \"Equity Composition\", \"taxId\": \"POR REVISAR\", \"country\": \"Colombia\", \"identificationDetails\": { \"source\": \"text_reference\", \"indicators\": [ \"Barranquilla\", \"Bogotá\", \"Cartagena\", \"Cúcuta\", \"Montería\", \"Riohacha\", \"Santa Marta\", \"Sincelejo\", \"Valledupar\", \"COLOMBIANA nationality for all shareholders\" ], \"conflictingSources\": [], \"requiresReview\": \"true\" }, \"relatedParties\": [ { \"type\": \"person\", \"firstName\": \"Jose Miguel\", \"lastName\": \"Villafañez Planells\", \"identificationType\": \"C.C.\", \"identificationNumber\": \"7474165\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"49,00%\", \"timeFound\": \"1\", \"job\": \"\" }, { \"type\": \"person\", \"firstName\": \"Vilma Leonor\", \"lastName\": \"Jabba Galindo\", \"identificationType\": \"C.C.\", \"identificationNumber\": \"22430683\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"49,00%\", \"timeFound\": \"1\", \"job\": \"\" }, { \"type\": \"person\", \"firstName\": \"Jose Elias\", \"lastName\": \"Villafañez Jabba\", \"identificationType\": \"C.C.\", \"identificationNumber\": \"72302912\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"1,00%\", \"timeFound\": \"1\", \"job\": \"\" }, { \"type\": \"person\", \"firstName\": \"Andres Felipe\", \"lastName\": \"Villafañez Jabba\", \"identificationType\": \"C.C.\", \"identificationNumber\": \"1129577148\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"1,00%\", \"timeFound\": \"1\", \"job\": \"\" } ] }, \"documentType\": \"company\", \"category\": \"ACC\" }"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 9,
+      "cache_creation_input_tokens": 6073,
+      "cache_read_input_tokens": 0,
+      "output_tokens": 1282
+    },
+    "ResponseMetadata": {
+      "RequestId": "c255fe1f-a3ed-4962-b18f-8b87b46db71b",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Fri, 29 Aug 2025 16:51:40 GMT",
+        "content-type": "application/json",
+        "content-length": "7232",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "c255fe1f-a3ed-4962-b18f-8b87b46db71b",
+        "x-amzn-bedrock-invocation-latency": "31669",
+        "x-amzn-bedrock-cache-write-input-token-count": "6073",
+        "x-amzn-bedrock-cache-read-input-token-count": "0",
+        "x-amzn-bedrock-output-token-count": "1282",
+        "x-amzn-bedrock-input-token-count": "9"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_01CNmPahVvRfTXCMGFaeEA2S",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-sonnet-4-20250514",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Let me analyze this PDF document step by step. 1. Document Analysis: - This is a \"CERTIFICACIÓN DE PARTICIPACIÓN ACCIONARIA\" from V.P. GLOBAL LTDA - It shows shareholding composition with a table of shareholders - The company appears to be Colombian based on the document structure and addresses listed 2. Root Level Extraction: - Company Name: V.P. GLOBAL LTDA (this is the issuing company) - Tax ID: Not explicitly shown in the header, but this is the company issuing the certificate - Country: Colombia (based on addresses shown at bottom: Barranquilla, Bogotá, Cartagena, etc. and the .com domain) 3. Related Parties (Shareholders): Looking at the table, I see shareholders with their details: - VILLAFAÑEZ PLANELLS JOSE MIGUEL: CC 7474165, 189.140 shares, 1.891.400.000 value, 49.00%, COLOMBIANA - JABBA GALINDO VILMA LEONOR: CC 22430683, 189.140 shares, 1.891.400.000 value, 49.00%, COLOMBIANA - VILLAFAÑEZ JABBA JOSE ELIAS: CC 72302912, 3.860 shares, 38.600.000 value, 1.00%, COLOMBIANA - VILLAFAÑEZ JABBA ANDRES FELIPE: CC 1129577148, 3.860 shares, 38.600.000 value, 1.00%, COLOMBIANA Total: 386.000 shares, 3.860.000.000 value, 100.00% 4. Looking more carefully for the tax ID of V.P. GLOBAL LTDA: I don't see the NIT explicitly stated in this document for the issuing company. This would need to be marked as \"POR REVISAR\". I've confirmed the Colombian origin through multiple indicators. The document lists numerous Colombian cities and the shareholders' identification documents are consistent with Colombian citizenship. The website and shareholder nationalities further reinforce the company's Colombian roots. Mathematically, the shareholding percentages align perfectly, totaling 100% across the four shareholders. No discrepancies or contradictory information emerged during the validation process.",
+          "signature": "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"
+        },
+        {
+          "type": "text",
+          "text": "{ \"result\": { \"companyName\": \"V.P. GLOBAL LTDA\", \"documentCategory\": \"Equity Composition\", \"taxId\": \"POR REVISAR\", \"country\": \"Colombia\", \"identificationDetails\": { \"source\": \"text_reference\", \"indicators\": [ \"Barranquilla\", \"Bogotá\", \"Cartagena\", \"Cúcuta\", \"Montería\", \"Riohacha\", \"Santa Marta\", \"Sincelejo\", \"Valledupar\", \"COLOMBIANA nationality for all shareholders\" ], \"conflictingSources\": [], \"requiresReview\": \"true\" }, \"relatedParties\": [ { \"type\": \"person\", \"firstName\": \"Jose Miguel\", \"lastName\": \"Villafañez Planells\", \"identificationType\": \"C.C.\", \"identificationNumber\": \"7474165\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"49,00%\", \"timeFound\": \"1\", \"job\": \"\" }, { \"type\": \"person\", \"firstName\": \"Vilma Leonor\", \"lastName\": \"Jabba Galindo\", \"identificationType\": \"C.C.\", \"identificationNumber\": \"22430683\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"49,00%\", \"timeFound\": \"1\", \"job\": \"\" }, { \"type\": \"person\", \"firstName\": \"Jose Elias\", \"lastName\": \"Villafañez Jabba\", \"identificationType\": \"C.C.\", \"identificationNumber\": \"72302912\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"1,00%\", \"timeFound\": \"1\", \"job\": \"\" }, { \"type\": \"person\", \"firstName\": \"Andres Felipe\", \"lastName\": \"Villafañez Jabba\", \"identificationType\": \"C.C.\", \"identificationNumber\": \"1129577148\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"1,00%\", \"timeFound\": \"1\", \"job\": \"\" } ] }, \"documentType\": \"company\", \"category\": \"ACC\" }"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 9,
+        "cache_creation_input_tokens": 6073,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 1282
+      }
+    },
+    "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 8000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+  "api_used": "invoke_model"
+}

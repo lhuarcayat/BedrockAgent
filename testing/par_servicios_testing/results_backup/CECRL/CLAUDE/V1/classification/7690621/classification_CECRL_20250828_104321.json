@@ -1,0 +1,87 @@
+{
+  "classification_data": {
+    "category": "CECRL",
+    "text": "REPUBLICA DE COLOMBIA IDENTIFICACION PERSONAL CEDULA DE CIUDADANIA 7.690.621 NUMERO BERMUDEZ FILBERT APELLIDOS LUIS KENNETH NOMBRES FIRMA FECHA DE NACIMIENTO 13-AGO-1972 NEIVA (HUILA) LUGAR DE NACIMIENTO 1.82 A+ M ESTATURA G.S. RH SEXO 13-SEP-1990 NEIVA FECHA Y LUGAR DE EXPEDICION INDICE DERECHO A-1900100-50131731-M-0007690621-20060327 01569 0608GN 02 14319476",
+    "document_number": "7690621",
+    "path": "CECRL/7690621/7690621_2020-02-29.pdf"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "```json { \"category\": \"CECRL\", \"text\": \"REPUBLICA DE COLOMBIA\\nIDENTIFICACION PERSONAL\\nCEDULA DE CIUDADANIA\\n7.690.621\\nNUMERO\\n\\nBERMUDEZ FILBERT\\nAPELLIDOS\\n\\nLUIS KENNETH\\nNOMBRES\\n\\nFIRMA\\n\\nFECHA DE NACIMIENTO 13-AGO-1972\\nNEIVA\\n(HUILA)\\nLUGAR DE NACIMIENTO\\n\\n1.82 A+ M\\nESTATURA G.S. RH SEXO\\n\\n13-SEP-1990 NEIVA\\nFECHA Y LUGAR DE EXPEDICION\\n\\nINDICE DERECHO\\n\\nA-1900100-50131731-M-0007690621-20060327 01569 0608GN 02 14319476\" } ```"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 9,
+      "cache_creation_input_tokens": 4475,
+      "cache_read_input_tokens": 0,
+      "output_tokens": 1052
+    },
+    "ResponseMetadata": {
+      "RequestId": "d36d0f2b-341a-46a8-9a25-38bfa68b4057",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Thu, 28 Aug 2025 15:43:07 GMT",
+        "content-type": "application/json",
+        "content-length": "4180",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "d36d0f2b-341a-46a8-9a25-38bfa68b4057",
+        "x-amzn-bedrock-invocation-latency": "26922",
+        "x-amzn-bedrock-cache-write-input-token-count": "4475",
+        "x-amzn-bedrock-cache-read-input-token-count": "0",
+        "x-amzn-bedrock-output-token-count": "1052",
+        "x-amzn-bedrock-input-token-count": "9"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_01PhGPWKaHbVGWkLx9qxVQds",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-3-7-sonnet-20250219",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Let me analyze this document by following the classification workflow: ### 1. TEXT EXTRACTION The document appears to be a Colombian national ID card (\"Cédula de Ciudadanía\"). I can extract the following text: ``` REPUBLICA DE COLOMBIA IDENTIFICACION PERSONAL CEDULA DE CIUDADANIA 7.690.621 NUMERO BERMUDEZ FILBERT APELLIDOS LUIS KENNETH NOMBRES [Signature] FIRMA FECHA DE NACIMIENTO 13-AGO-1972 NEIVA (HUILA) LUGAR DE NACIMIENTO 1.82 A+ M ESTATURA G.S. RH SEXO 13-SEP-1990 NEIVA FECHA Y LUGAR DE EXPEDICION [Barcode and registration number at bottom] A-1900100-50131731-M-0007690621-20060327 01569 0608GN 02 14319476 ``` ### 2. PRIORITY CHECKS - Not BLANK (contains meaningful content) - Not LINK_ONLY (no hyperlinks/URLs) ### 3. ISSUER IDENTIFICATION This is issued by the Colombian government as a personal identification document (Cédula de Ciudadanía). ### 4. DOCUMENT FUNCTION ANALYSIS This is a personal identification document. Its function is to identify an individual person. ### 5. CATEGORY CLASSIFICATION Let me evaluate for CECRL first (as per the workflow order): For CECRL, the document shows: - Individual identification terminology: \"IDENTIFICACION PERSONAL\", \"CEDULA DE CIUDADANIA\" - Personal biographical data: birth date (13-AGO-1972), birth place (NEIVA, HUILA), blood type (A+), gender (M), height (1.82) - Individual photo (visible in the document) - Signature - Fingerprint image - Government-issued personal ID number (7.690.621) - Security elements: appears to have a barcode This document clearly contains all the must-have indicators for a CECRL. However, I need to carefully check if this is a personal ID document of a legal representative of a company, which would qualify it as CECRL, or if it's just a standard personal ID without corporate representation context. From the visible content, there is no explicit indication that this person is a legal representative of a company. The document is simply a standard Colombian national ID card (Cédula de Ciudadanía). However, the specific category definitions state that CECRL refers to \"Official personal identification documents (cédulas, passports, etc.) of legal representatives of companies\" - so these are personal IDs of individuals who happen to be legal representatives. Since this is a personal ID document (cédula), and the classification system specifically puts these types of documents under CECRL (assuming they're for legal representatives), the most appropriate category would be CECRL. ### 6. CONFIDENCE VALIDATION There is strong evidence that this is a personal identification document (cédula). All the must-have indicators for a personal ID are present. The document does not explicitly state that this person is a legal representative, but according to the classification system, personal IDs should be classified as CECRL. Based on the provided classification workflow and definitions, I will classify this as CECRL.",
+          "signature": "ErcBCkgIBxABGAIiQATkJmyvNqA5v0mf7gfSkWbwezwbyxlich2cgu7g9/m+jnvqaOh/NI3TNo9IW+uN3iCF++LF6QmiOZvb4DP82o4SDInc0xp3YvYleoHVMxoM+ioQ/BGV2aPhbQUGIjAJu8fhTWa8YWEvQ8gZJqVfafaXq+Cg6vaEg+YSUSLaWTUGcGnq4ekS+UCXNJdLhM0qHdMxrP9tad8cc8PA5PyInJodSF5aRNavr0AKXjfmGAI="
+        },
+        {
+          "type": "text",
+          "text": "```json { \"category\": \"CECRL\", \"text\": \"REPUBLICA DE COLOMBIA\\nIDENTIFICACION PERSONAL\\nCEDULA DE CIUDADANIA\\n7.690.621\\nNUMERO\\n\\nBERMUDEZ FILBERT\\nAPELLIDOS\\n\\nLUIS KENNETH\\nNOMBRES\\n\\nFIRMA\\n\\nFECHA DE NACIMIENTO 13-AGO-1972\\nNEIVA\\n(HUILA)\\nLUGAR DE NACIMIENTO\\n\\n1.82 A+ M\\nESTATURA G.S. RH SEXO\\n\\n13-SEP-1990 NEIVA\\nFECHA Y LUGAR DE EXPEDICION\\n\\nINDICE DERECHO\\n\\nA-1900100-50131731-M-0007690621-20060327 01569 0608GN 02 14319476\" } ```"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 9,
+        "cache_creation_input_tokens": 4475,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 1052
+      }
+    },
+    "model_id": "us.anthropic.claude-3-7-sonnet-20250219-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 8000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "expected_category": "CECRL",
+  "model_used": "us.anthropic.claude-3-7-sonnet-20250219-v1:0",
+  "api_used": "invoke_model",
+  "pdf_info": {
+    "original_size": 359687,
+    "first_page_size": 355186,
+    "is_scanned": true
+  }
+}

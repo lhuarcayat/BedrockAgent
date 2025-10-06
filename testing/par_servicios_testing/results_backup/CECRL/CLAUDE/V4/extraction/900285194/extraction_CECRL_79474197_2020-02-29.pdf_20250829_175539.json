@@ -1,0 +1,88 @@
+{
+  "extraction_data": {
+    "result": {
+      "firstName": "ALEXANDER",
+      "lastName": "TOVAR OSORIO",
+      "country_issuer": "Colombia",
+      "nationality": "Colombia",
+      "identificationType": "Cédula de Ciudadanía",
+      "identificationNumber": "79.474.197",
+      "message": ""
+    },
+    "document_type": "person",
+    "category": "CECRL"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "```json { \"result\": { \"firstName\": \"ALEXANDER\", \"lastName\": \"TOVAR OSORIO\", \"country_issuer\": \"Colombia\", \"nationality\": \"Colombia\", \"identificationType\": \"Cédula de Ciudadanía\", \"identificationNumber\": \"79.474.197\", \"message\": \"\" }, \"document_type\": \"person\", \"category\": \"CECRL\" } ```"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 10,
+      "cache_creation_input_tokens": 6419,
+      "cache_read_input_tokens": 0,
+      "output_tokens": 635
+    },
+    "ResponseMetadata": {
+      "RequestId": "31de6aaf-aa65-4a51-a471-1b21d927d02e",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Fri, 29 Aug 2025 22:55:39 GMT",
+        "content-type": "application/json",
+        "content-length": "5316",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "31de6aaf-aa65-4a51-a471-1b21d927d02e",
+        "x-amzn-bedrock-invocation-latency": "11462",
+        "x-amzn-bedrock-cache-write-input-token-count": "6419",
+        "x-amzn-bedrock-cache-read-input-token-count": "0",
+        "x-amzn-bedrock-output-token-count": "635",
+        "x-amzn-bedrock-input-token-count": "10"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_01Fe7JEPW6VTUTqZKMRMYZ85",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-sonnet-4-20250514",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Let me analyze this Colombian ID document step by step following the extraction methodology. **Step 1: Document Structure Analysis** - This is a Colombian Cédula de Ciudadanía (Citizenship Card) - I can see \"REPÚBLICA DE COLOMBIA\" and \"CÉDULA DE CIUDADANÍA\" in the header - The document shows both front and back - This is clearly an official government identification document **Step 2: Field Detection** Looking at the document, I can see: Front side: - \"REPÚBLICA DE COLOMBIA\" (country issuer) - \"CÉDULA DE CIUDADANÍA\" (document type) - Number: \"79.474.197\" - \"TOVAR OSORIO\" (appears to be surname/apellidos) - \"ALEXANDER\" (appears to be given name/nombres) Back side: - \"FECHA DE NACIMIENTO: 13-ENE-1969\" - \"BOGOTÁ D.C.\" (place of birth) - Various other details including fingerprint and barcode **Step 3: Field Extraction** firstName: Looking at the document structure, \"ALEXANDER\" appears to be positioned as the given name. This follows the typical Colombian ID format where surnames appear first followed by given names. lastName: \"TOVAR OSORIO\" appears to be the surnames. In Colombian documents, this would typically be the apellidos. country_issuer: Clear from \"REPÚBLICA DE COLOMBIA\" - this should be \"Colombia\" in Spanish. nationality: Since this is a Colombian citizenship card and I don't see an explicit nationality field different from the issuing country, this should be \"Colombia\". identificationType: \"CÉDULA DE CIUDADANÍA\" translates to \"Cédula de Ciudadanía\" in Spanish. identificationNumber: \"79.474.197\" - preserving the original formatting with dots. message: The document appears to be an official Colombian ID, all fields are readable, so this can be empty.",
+          "signature": "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"
+        },
+        {
+          "type": "text",
+          "text": "```json { \"result\": { \"firstName\": \"ALEXANDER\", \"lastName\": \"TOVAR OSORIO\", \"country_issuer\": \"Colombia\", \"nationality\": \"Colombia\", \"identificationType\": \"Cédula de Ciudadanía\", \"identificationNumber\": \"79.474.197\", \"message\": \"\" }, \"document_type\": \"person\", \"category\": \"CECRL\" } ```"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 10,
+        "cache_creation_input_tokens": 6419,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 635
+      }
+    },
+    "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 8000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+  "api_used": "invoke_model"
+}

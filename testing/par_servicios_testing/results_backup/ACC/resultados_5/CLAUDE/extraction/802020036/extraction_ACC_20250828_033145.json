@@ -1,0 +1,146 @@
+{
+  "extraction_data": {
+    "path": "ACC/802020036/251_CA_2020-02-29.pdf",
+    "result": {
+      "companyName": "VP GLOBAL LTDA",
+      "documentCategory": "Equity Composition",
+      "taxId": "POR REVISAR",
+      "country": "Colombia",
+      "identificationDetails": {
+        "source": "text_reference",
+        "indicators": [
+          "Barranquilla",
+          "Bogotá",
+          "Cartagena",
+          "COLOMBIANA"
+        ],
+        "conflictingSources": [
+          "Missing company tax ID"
+        ],
+        "requiresReview": "true"
+      },
+      "relatedParties": [
+        {
+          "type": "person",
+          "firstName": "JOSE MIGUEL",
+          "lastName": "VILLAFAÑEZ PLANELLS",
+          "identificationType": "C.C.",
+          "identificationNumber": "7474165",
+          "relationshipType": "Shareholder",
+          "participationPercentage": "49,00",
+          "timeFound": "1",
+          "job": ""
+        },
+        {
+          "type": "person",
+          "firstName": "VILMA LEONOR",
+          "lastName": "JABBA GALINDO",
+          "identificationType": "C.C.",
+          "identificationNumber": "22430683",
+          "relationshipType": "Shareholder",
+          "participationPercentage": "49,00",
+          "timeFound": "1",
+          "job": ""
+        },
+        {
+          "type": "person",
+          "firstName": "JOSE ELIAS",
+          "lastName": "VILLAFAÑEZ JABBA",
+          "identificationType": "C.C.",
+          "identificationNumber": "72302912",
+          "relationshipType": "Shareholder",
+          "participationPercentage": "1,00",
+          "timeFound": "1",
+          "job": ""
+        },
+        {
+          "type": "person",
+          "firstName": "ANDRES FELIPE",
+          "lastName": "VILLAFAÑEZ JABBA",
+          "identificationType": "C.C.",
+          "identificationNumber": "1129577148",
+          "relationshipType": "Shareholder",
+          "participationPercentage": "1,00",
+          "timeFound": "1",
+          "job": ""
+        }
+      ]
+    },
+    "documentType": "company",
+    "documentNumber": "802020036",
+    "category": "ACC"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "```json { \"result\": { \"companyName\": \"VP GLOBAL LTDA\", \"documentCategory\": \"Equity Composition\", \"taxId\": \"POR REVISAR\", \"country\": \"Colombia\", \"identificationDetails\": { \"source\": \"text_reference\", \"indicators\": [ \"Barranquilla\", \"Bogotá\", \"Cartagena\", \"COLOMBIANA\" ], \"conflictingSources\": [ \"Missing company tax ID\" ], \"requiresReview\": \"true\" }, \"relatedParties\": [ { \"type\": \"person\", \"firstName\": \"JOSE MIGUEL\", \"lastName\": \"VILLAFAÑEZ PLANELLS\", \"identificationType\": \"C.C.\", \"identificationNumber\": \"7474165\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"49,00\", \"timeFound\": \"1\", \"job\": \"\" }, { \"type\": \"person\", \"firstName\": \"VILMA LEONOR\", \"lastName\": \"JABBA GALINDO\", \"identificationType\": \"C.C.\", \"identificationNumber\": \"22430683\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"49,00\", \"timeFound\": \"1\", \"job\": \"\" }, { \"type\": \"person\", \"firstName\": \"JOSE ELIAS\", \"lastName\": \"VILLAFAÑEZ JABBA\", \"identificationType\": \"C.C.\", \"identificationNumber\": \"72302912\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"1,00\", \"timeFound\": \"1\", \"job\": \"\" }, { \"type\": \"person\", \"firstName\": \"ANDRES FELIPE\", \"lastName\": \"VILLAFAÑEZ JABBA\", \"identificationType\": \"C.C.\", \"identificationNumber\": \"1129577148\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"1,00\", \"timeFound\": \"1\", \"job\": \"\" } ] }, \"documentType\": \"company\", \"category\": \"ACC\" } ```"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 425,
+      "cache_creation_input_tokens": 6074,
+      "cache_read_input_tokens": 0,
+      "output_tokens": 2033
+    },
+    "ResponseMetadata": {
+      "RequestId": "b3fb782c-c899-4e05-aa7e-e2148b795b1b",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Thu, 28 Aug 2025 08:31:44 GMT",
+        "content-type": "application/json",
+        "content-length": "7754",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "b3fb782c-c899-4e05-aa7e-e2148b795b1b",
+        "x-amzn-bedrock-invocation-latency": "40337",
+        "x-amzn-bedrock-cache-write-input-token-count": "6074",
+        "x-amzn-bedrock-cache-read-input-token-count": "0",
+        "x-amzn-bedrock-output-token-count": "2033",
+        "x-amzn-bedrock-input-token-count": "425"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_011Ut2qCpETRFBkYUnHxZvya",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-3-7-sonnet-20250219",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Let me analyze this document step-by-step to extract all the required information for the equity composition. ## Step 1: Document Analysis First, let me identify key information in the document: - This is clearly an equity composition document titled \"CERTIFICACION DE PARTICIPACION ACCIONARIA\" - The main reporting company is \"VP GLOBAL LTDA\" as mentioned in the document header and confirmed in the certification statement - The document lists shareholders in a table format - The document is issued in Colombia (multiple indicators: \"COLOMBIANA\" nationality, cities mentioned like \"Barranquilla\", \"Bogotá\", \"Cartagena\", etc.) - The document is signed by \"KATHERINE CHARRIS ROBLES\" as \"CONTADOR PUBLICO\" (Public Accountant) - The document is dated April 23, 2021 ## Step 2: Root Level Extraction - **companyName**: \"VP GLOBAL LTDA\" - This is clearly mentioned in the document header and in the certification statement. - **taxId**: Unfortunately, the document doesn't explicitly mention a tax ID (NIT) for the company. Will set to \"POR REVISAR\". - **country**: \"Colombia\" - This is clearly a Colombian document based on multiple city references (Barranquilla, Bogotá, etc.), the \"COLOMBIANA\" nationality of shareholders, and the use of Colombian identification types (CC). - **documentCategory**: \"Equity Composition\" (fixed value) - **documentType**: \"company\" (fixed value) - **category**: \"ACC\" (fixed value) ## Step 3: Related Parties Processing Looking at the table, I see four shareholders listed: 1. VILLAFAÑEZ PLANELLS JOSE MIGUEL - Type: person - ID Type: CC (Colombian citizen ID) - ID Number: 7474165 - Participation: 49.00% - Nationality: COLOMBIANA 2. JABBA GALINDO VILMA LEONOR - Type: person - ID Type: CC - ID Number: 22430683 - Participation: 49.00% - Nationality: COLOMBIANA 3. VILLAFAÑEZ JABBA JOSE ELIAS - Type: person - ID Type: CC - ID Number: 72302912 - Participation: 1.00% - Nationality: COLOMBIANA 4. VILLAFAÑEZ JABBA ANDRES FELIPE - Type: person - ID Type: CC - ID Number: 1129577148 - Participation: 1.00% - Nationality: COLOMBIANA For each person, I need to split their names into firstName and lastName following the rules. In Spanish naming conventions, people typically use two surnames (paternal followed by maternal). Let's analyze each: 1. VILLAFAÑEZ PLANELLS JOSE MIGUEL - lastName: \"VILLAFAÑEZ PLANELLS\" - firstName: \"JOSE MIGUEL\" 2. JABBA GALINDO VILMA LEONOR - lastName: \"JABBA GALINDO\" - firstName: \"VILMA LEONOR\" 3. VILLAFAÑEZ JABBA JOSE ELIAS - lastName: \"VILLAFAÑEZ JABBA\" - firstName: \"JOSE ELIAS\" 4. VILLAFAÑEZ JABBA ANDRES FELIPE - lastName: \"VILLAFAÑEZ JABBA\" - firstName: \"ANDRES FELIPE\" Wait, I'm confused about the name order here. Let me look more carefully at the document. Looking at the table structure, I see the column is labeled \"APELLIDOS Y NOMBRES RAZON SOCIAL (ACCIONISTAS)\" which means \"SURNAMES AND NAMES/BUSINESS NAME (SHAREHOLDERS)\". In Spanish documents, they typically list surnames first, so the first part would be surnames and second part would be given names. Let me correct my analysis: 1. VILLAFAÑEZ PLANELLS JOSE MIGUEL - lastName: \"VILLAFAÑEZ PLANELLS\" (surnames) - firstName: \"JOSE MIGUEL\" (given names) 2. JABBA GALINDO VILMA LEONOR - lastName: \"JABBA GALINDO\" (surnames) - firstName: \"VILMA LEONOR\" (given names) 3. VILLAFAÑEZ JABBA JOSE ELIAS - lastName: \"VILLAFAÑEZ JABBA\" (surnames) - firstName: \"JOSE ELIAS\" (given names) 4. VILLAFAÑEZ JABBA ANDRES FELIPE - lastName: \"VILLAFAÑEZ JABBA\" (surnames) - firstName: \"ANDRES FELIPE\" (given names) Now I need to verify the identification type. In Colombia, CC stands for \"Cédula de Ciudadanía\" which is the standard identification for Colombian citizens. This matches our hash table for Colombia where PERSON_ID includes \"CC\". ## Step 4: Validation & Cross-checking - The company is Colombian and all shareholders have Colombian nationality and CC identification, so this is consistent. - All participation percentages add up to 100.00%, which is correct. - No conflicting information is found. - Missing information: Company tax ID (NIT) is not explicitly provided. Let me prepare the final JSON output. For identificationDetails: - source: \"text_reference\" (based on explicit city mentions) - indicators: [\"Barranquilla\", \"Bogotá\", \"Cartagena\", \"Colombia\"] (locations mentioned in document) - conflictingSources: [\"Missing company tax ID (NIT)\"] - requiresReview: \"true\" (because taxId is missing) For each relatedParty: - type: \"person\" (all are individuals) - relationshipType: \"Shareholder\" (all are shareholders) - timeFound: \"1\" (each appears once) - job: \"\" (no specific roles mentioned for shareholders)",
+          "signature": "ErcBCkgIBxABGAIiQBmYXajqoGGFeg6/CErxEVcB0FvrpwXMvMi3tjP4qEZBs4+8XIZZeCGK/IkiAAmGg+Mtbi+tNpjrwEQ5HkSX3TkSDNP2xhu566BFWHkRbRoMVBEF9dUjJ6s6uK3nIjCaXJ1LTY01HCSJ9gbitt6m3MrEIrcOh+Pm+iZbMgBg18vCejmTlN67l9YwToGKrRQqHQ8xchNj6WRQzK8xp98+dZUBQ6srhYs7Fta2HnoEGAI="
+        },
+        {
+          "type": "text",
+          "text": "```json { \"result\": { \"companyName\": \"VP GLOBAL LTDA\", \"documentCategory\": \"Equity Composition\", \"taxId\": \"POR REVISAR\", \"country\": \"Colombia\", \"identificationDetails\": { \"source\": \"text_reference\", \"indicators\": [ \"Barranquilla\", \"Bogotá\", \"Cartagena\", \"COLOMBIANA\" ], \"conflictingSources\": [ \"Missing company tax ID\" ], \"requiresReview\": \"true\" }, \"relatedParties\": [ { \"type\": \"person\", \"firstName\": \"JOSE MIGUEL\", \"lastName\": \"VILLAFAÑEZ PLANELLS\", \"identificationType\": \"C.C.\", \"identificationNumber\": \"7474165\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"49,00\", \"timeFound\": \"1\", \"job\": \"\" }, { \"type\": \"person\", \"firstName\": \"VILMA LEONOR\", \"lastName\": \"JABBA GALINDO\", \"identificationType\": \"C.C.\", \"identificationNumber\": \"22430683\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"49,00\", \"timeFound\": \"1\", \"job\": \"\" }, { \"type\": \"person\", \"firstName\": \"JOSE ELIAS\", \"lastName\": \"VILLAFAÑEZ JABBA\", \"identificationType\": \"C.C.\", \"identificationNumber\": \"72302912\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"1,00\", \"timeFound\": \"1\", \"job\": \"\" }, { \"type\": \"person\", \"firstName\": \"ANDRES FELIPE\", \"lastName\": \"VILLAFAÑEZ JABBA\", \"identificationType\": \"C.C.\", \"identificationNumber\": \"1129577148\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"1,00\", \"timeFound\": \"1\", \"job\": \"\" } ] }, \"documentType\": \"company\", \"category\": \"ACC\" } ```"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 425,
+        "cache_creation_input_tokens": 6074,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 2033
+      }
+    },
+    "model_id": "us.anthropic.claude-3-7-sonnet-20250219-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 8000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "model_used": "us.anthropic.claude-3-7-sonnet-20250219-v1:0",
+  "api_used": "invoke_model"
+}

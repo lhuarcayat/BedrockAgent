@@ -1,0 +1,117 @@
+{
+  "extraction_data": {
+    "result": {
+      "companyName": "S & T INGENIERIA Y CONSULTORIA SAS",
+      "documentCategory": "Equity Composition",
+      "taxId": "802,013,773-0",
+      "country": "Colombia",
+      "identificationDetails": {
+        "source": "id_analysis",
+        "indicators": [
+          "NIT format matches Colombia"
+        ],
+        "conflictingSources": [],
+        "requiresReview": "false"
+      },
+      "relatedParties": [
+        {
+          "type": "person",
+          "firstName": "TANIA ELENA",
+          "lastName": "CHEMAS AVENDAÑO",
+          "identificationType": "C.C.",
+          "identificationNumber": "32.728.993",
+          "relationshipType": "Shareholder",
+          "participationPercentage": "50.00%",
+          "timeFound": "1",
+          "job": ""
+        },
+        {
+          "type": "person",
+          "firstName": "FARID EDUARDO",
+          "lastName": "RADI SAGBINI",
+          "identificationType": "C.C.",
+          "identificationNumber": "77.025.796",
+          "relationshipType": "Shareholder",
+          "participationPercentage": "50.00%",
+          "timeFound": "1",
+          "job": "REPRESENTANTE LEGAL"
+        }
+      ]
+    },
+    "documentType": "company",
+    "category": "ACC"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "{ \"result\": { \"companyName\": \"S & T INGENIERIA Y CONSULTORIA SAS\", \"documentCategory\": \"Equity Composition\", \"taxId\": \"802,013,773-0\", \"country\": \"Colombia\", \"identificationDetails\": { \"source\": \"id_analysis\", \"indicators\": [ \"NIT format matches Colombia\" ], \"conflictingSources\": [], \"requiresReview\": \"false\" }, \"relatedParties\": [ { \"type\": \"person\", \"firstName\": \"TANIA ELENA\", \"lastName\": \"CHEMAS AVENDAÑO\", \"identificationType\": \"C.C.\", \"identificationNumber\": \"32.728.993\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"50.00%\", \"timeFound\": \"1\", \"job\": \"\" }, { \"type\": \"person\", \"firstName\": \"FARID EDUARDO\", \"lastName\": \"RADI SAGBINI\", \"identificationType\": \"C.C.\", \"identificationNumber\": \"77.025.796\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"50.00%\", \"timeFound\": \"1\", \"job\": \"REPRESENTANTE LEGAL\" } ] }, \"documentType\": \"company\", \"category\": \"ACC\" }"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 9,
+      "cache_creation_input_tokens": 6073,
+      "cache_read_input_tokens": 0,
+      "output_tokens": 1182
+    },
+    "ResponseMetadata": {
+      "RequestId": "970de156-07a2-4bc8-9d3d-0aba11b1e839",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Fri, 29 Aug 2025 19:41:48 GMT",
+        "content-type": "application/json",
+        "content-length": "7232",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "970de156-07a2-4bc8-9d3d-0aba11b1e839",
+        "x-amzn-bedrock-invocation-latency": "20861",
+        "x-amzn-bedrock-cache-write-input-token-count": "6073",
+        "x-amzn-bedrock-cache-read-input-token-count": "0",
+        "x-amzn-bedrock-output-token-count": "1182",
+        "x-amzn-bedrock-input-token-count": "9"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_013EG91bqGPTzBhpyKtn6e1H",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-sonnet-4-20250514",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Let me analyze this document step by step according to the field rules. **Document Analysis:** This appears to be a \"COMPOSICIÓN ACCIONARIA\" (Equity Composition) document for a Colombian company. The header shows \"S & T INGENIERIA Y CONSULTORIA SAS\" with NIT 802,013,773-0, dated May 19, 2020. **Step 1: Document Analysis** - Main company: S & T INGENIERIA Y CONSULTORIA SAS - Country indicators: NIT (Colombian tax ID format) - Document type: Equity composition showing shareholders **Step 2: Root Level Extraction** **companyName**: \"S & T INGENIERIA Y CONSULTORIA SAS\" (from the header) **taxId**: \"802,013,773-0\" (from NIT field, preserving original format) **country**: Based on NIT nomenclature and format, this is Colombia **identificationDetails**: - source: \"id_analysis\" (identified through NIT tax ID) - indicators: [\"NIT format matches Colombia\"] - conflictingSources: [] (no conflicts detected) - requiresReview: Need to check if any fields are \"POR REVISAR\" **Step 3: Related Parties Processing** Looking at the shareholder table: 1. **TANIA ELENA CHEMAS AVENDAÑO** - Type: person (clear personal name, no company markers) - Name splitting: firstName = \"TANIA ELENA\", lastName = \"CHEMAS AVENDAÑO\" - C.C.: 32.728.993 (appears to be Colombian ID) - Natural person - 280 shares - $1.000.000 value - 50.00% participation - Job: Not explicitly mentioned, so \"\" 2. **FARID EDUARDO RADI SAGBINI** I'm verifying the identification details for the second shareholder. The document confirms his identification number as 77.025.796, and he holds the position of Legal Representative. Both shareholders have equal share distribution, each owning 280 shares with a value of $1.000.000, representing 50.00% of the company's equity. The identification numbers pass the Colombian validation rules, matching the required pattern of 4-10 digits without letters. Cross-checking confirms no conflicts, and all essential fields are complete.",
+          "signature": "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"
+        },
+        {
+          "type": "text",
+          "text": "{ \"result\": { \"companyName\": \"S & T INGENIERIA Y CONSULTORIA SAS\", \"documentCategory\": \"Equity Composition\", \"taxId\": \"802,013,773-0\", \"country\": \"Colombia\", \"identificationDetails\": { \"source\": \"id_analysis\", \"indicators\": [ \"NIT format matches Colombia\" ], \"conflictingSources\": [], \"requiresReview\": \"false\" }, \"relatedParties\": [ { \"type\": \"person\", \"firstName\": \"TANIA ELENA\", \"lastName\": \"CHEMAS AVENDAÑO\", \"identificationType\": \"C.C.\", \"identificationNumber\": \"32.728.993\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"50.00%\", \"timeFound\": \"1\", \"job\": \"\" }, { \"type\": \"person\", \"firstName\": \"FARID EDUARDO\", \"lastName\": \"RADI SAGBINI\", \"identificationType\": \"C.C.\", \"identificationNumber\": \"77.025.796\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"50.00%\", \"timeFound\": \"1\", \"job\": \"REPRESENTANTE LEGAL\" } ] }, \"documentType\": \"company\", \"category\": \"ACC\" }"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 9,
+        "cache_creation_input_tokens": 6073,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 1182
+      }
+    },
+    "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 8000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+  "api_used": "invoke_model"
+}

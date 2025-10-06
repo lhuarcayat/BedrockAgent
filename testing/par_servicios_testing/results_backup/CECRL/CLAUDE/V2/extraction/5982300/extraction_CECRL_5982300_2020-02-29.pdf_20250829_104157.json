@@ -1,0 +1,88 @@
+{
+  "extraction_data": {
+    "result": {
+      "firstName": "EDGAR",
+      "lastName": "NAVARRO MORALES",
+      "country_issuer": "Colombia",
+      "nationality": "Colombia",
+      "identificationType": "Cédula de Ciudadanía",
+      "identificationNumber": "5.982.300",
+      "message": ""
+    },
+    "document_type": "person",
+    "category": "CECRL"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "```json { \"result\": { \"firstName\": \"EDGAR\", \"lastName\": \"NAVARRO MORALES\", \"country_issuer\": \"Colombia\", \"nationality\": \"Colombia\", \"identificationType\": \"Cédula de Ciudadanía\", \"identificationNumber\": \"5.982.300\", \"message\": \"\" }, \"document_type\": \"person\", \"category\": \"CECRL\" } ```"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 10,
+      "cache_creation_input_tokens": 6027,
+      "cache_read_input_tokens": 0,
+      "output_tokens": 582
+    },
+    "ResponseMetadata": {
+      "RequestId": "ea8fc631-06a3-44cc-90a4-54493ab1dc14",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Fri, 29 Aug 2025 15:41:58 GMT",
+        "content-type": "application/json",
+        "content-length": "4769",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "ea8fc631-06a3-44cc-90a4-54493ab1dc14",
+        "x-amzn-bedrock-invocation-latency": "13604",
+        "x-amzn-bedrock-cache-write-input-token-count": "6027",
+        "x-amzn-bedrock-cache-read-input-token-count": "0",
+        "x-amzn-bedrock-output-token-count": "582",
+        "x-amzn-bedrock-input-token-count": "10"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_01Gdaf6sqib1163yHTRKp7U9",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-sonnet-4-20250514",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Looking at this Colombian national identity document (Cédula de Ciudadanía), let me extract the required information: The document shows: - REPUBLICA DE COLOMBIA - IDENTIFICACION PERSONAL - CEDULA DE CIUDADANIA - NUMERO: 5.982.300 - NAVARRO MORALES (this appears to be the surname/last name) - EDGAR (this appears to be the given name/first name) - There's a signature that says \"FIRMA\" - FECHA DE NACIMIENTO: 06-MAY-1947 (birth date) - Place appears to be PURIFICACION (TOLIMA) - this suggests birth place in Colombia - Physical characteristics like height (1.77), etc. - An additional date: 05-SEP-1989 PURIFICACION - Fingerprint section - Barcode at bottom Let me extract according to the rules: 1. firstName: The document shows \"EDGAR\" under what appears to be the given name section 2. lastName: The document shows \"NAVARRO MORALES\" which appears to be the surname 3. country_issuer: This is clearly \"REPUBLICA DE COLOMBIA\" so \"Colombia\" 4. nationality: Since this is a Colombian document and birth place appears to be in Colombia (PURIFICACION, TOLIMA), nationality would be \"Colombia\" 5. identificationType: This is clearly \"CEDULA DE CIUDADANIA\" which translates to \"Cédula de Ciudadanía\" 6. identificationNumber: The number shown is \"5.982.300\" 7. message: The document appears to be a legitimate Colombian ID document, so this can be empty Let me double-check the name fields: - Looking at the layout, \"NAVARRO MORALES\" appears after \"APELLIDOS\" (surnames) - \"EDGAR\" appears after \"NOMBRES\" (given names) This matches the Colombian ID format where surnames come first, then given names.",
+          "signature": "EvANCkgIBxABGAIqQK6WoMtYrWd9uyBzXH941DpTxCWf/qLaVChHKum7O3mRo/z3cSY9Pt1RD1wj9wBN2J3ki4r8/LH7eWEa6O4Ua48SDB53ghyKapPUAa8L1hoMPe2pPUj5/efjnpX0IjCaV8ydjZuGMFb/aNxDCWgGjm4zp8KHQS5XkXi/z4W5hUS9G9vvBtJ7YsWVjmmfwrwq1Qz/3LsSU2/jz/rzIE0Ai2FbI/fHHCuMTgUP0sAsEpYsbATyUQ9Eyvi7IviMPWvBOsJeaQ5mwIL/x+t1D7ydeaV2y19acS9riB7pzGQX710g7rjVoi9ye5ZXuawyBRoYE6Il5CGkiZqOiicvOvq9rex3Lc5KwUIb/J7Wf1O5HKihqia+buZ2JiEQlwUaJuqmumAhjOU6h+txtyophP8p1eMSHfaJb/kGbhuDp8Iem2q0abjEBnUci0OrqyJU95NmihfQ4DwSeO8fjDAlxuWcomoN2NdVvYI/FP0cX4iP4asy6hFlSrMd+tCkJtdsD9i+5C3DlHoshua+Q2KPXJ5GOReJ2NTS4bRofz+MNsreYwAtb2vHvBnLaWWdmeQifdL/pGYomEMiu2ua3Hx3XA34ieRcBmX3hRC3Gc/sKsjj6C6e5LLqO85ogIDhK+8c1NVwM7vM5REDNcu7J/PVEp9zR+I5+oCXCUgE86ogB0IADiisERfIV+6qkez7h7lAk69dGNe1ZQE0hCI/ib03qNLLxiZdUn/jU5bpEKla0NsBafLnd12XrGITTDZ1xw5yqTRufwffML0NzSuSSHDCI+DhLbShaBl+mjHKsStzEK3WiADLG+VVcpEtvuhFCvTaSERx2OFcOFJvMdWdqJ6N1fbMUtheMZZa1/ojVLN3YFAilFvsGS8wOXSZRH2eSl60u31dvuzI7oPV+ebYOgQWNTZo2geZTYSuZyu1wNN5fI66uLQvCZZ54ikUU0G8lihawNkfFEmpND2ffAaSacxzahZlskk1HnQRCqT1R6hJz2EyDHgnIi8+J86jNz/ooI3MMDGrMAjss49qEfiPm29LOnmcWf3IPWFLWJ7NO4GDzvz+Xuhq9PT0vonY34v3b2Kl6vNQ8hm4etGHPDsXJJ19LU5iZkUVrYtc4O1Yc7Kmvkp0NQNVx4obUs3d8LfWR3VkkwQKT7mhDcUR1JUcBmnw1O3RiHjl55Pix9j+jzD2xjqQZ1qZbbAiuF/Elw2zWeNLMmKTwMR80b5BHQh9GhRWeKigOPuSmXaiw5CYEbk5mqoIs5CnnC/5CiPg4WZE5sZuSVLKsgMY1X/18p/GhXmjR0x7xEqF1ItYhG6/g9jDh5iocuO5AaZsscNqb3ELn9SyErUziyae0Rta3EC9i381SYsTYHf4y7az1ymVyGSVUCLuQPIY37HAZsHMyZewY/HZrI2M4nfrLOMUombLlj6dE1in5u92r+nmxIUpYiqKn8wEihtYVKeVQWyooAy6GwJOgeYoIZKtXVmUfRrkgCo1C3LSaT3ZDJ8YHBFF86iZAYYGpAKQgFSv3GMiFOYTAHmFS/RJU9LSkiYO4lO7FWpDEZy7SNmXL6VIBj1JSLzuZxiUw3v9sREhh4YePlxwK5bRMhH6G/fcTaSI+RATZSDHIgQ1fPnMfecnDsKyp7VxCEvGDQl0yvlxIzlxpECyamxBHpj2yV8J0/9UlKRFyTiFUrxS4Cg7l0x4SbU/Tho8zfg+0inHyJCvtdkjlZiWPzi2q+NZK2kXiNF1epyxTaQjHaXkUsUCqAvbNGgB3xxO5RWpQKpoUBmo3rflqrXaiCm+l0+XQF01DZYEsq9iP87d6xMldQvV20FCe4GuBa+KkqAME23KxwYjXLhuxG9eLp7Bp16Tr9oINuESNIx7Y62Q5sCawFO949GGYrijLxdScJj8vy/1K7PsbbRe5mhfOQ1sJeartQAksALkf8zoaEgxKPlhUvkmcxYeAiQhAdRGiyMTQjkhAjnCH3CBEYMTrf2o28R4DOWJ3bUzABfaLrfbYa+mqFb3TiKK19JI/yXinwd8zygConkCFbex/GA8UN2YFloCecIKeaKjdXXeyKY9lPlKXlJ4oC/5ZEMg7CS+zV0kvx2E1xQTXzPVqfucgdieLyU/dZXvJ20HJ29cZsJTPs4szqBnduhKJfqhRyJODyN7apjUa7nUkVmujiSBYXDz5765iwm6m5pcvZPrvgTlrYWLDV3VoKMt6U9A5gokySn5uynMnT6KrNDBSwHhtVo1rNknQEjF4cboHKQOFdBYqpKQi+OzEP33cNwXDMB/NNU5k3f5AcakR8hTMkAh+M637YmB8EBTs5qrQNUCZqFaYtTAbwUeFOWd+xOHtABOoFpM9LlTlqT4TFeqGAE="
+        },
+        {
+          "type": "text",
+          "text": "```json { \"result\": { \"firstName\": \"EDGAR\", \"lastName\": \"NAVARRO MORALES\", \"country_issuer\": \"Colombia\", \"nationality\": \"Colombia\", \"identificationType\": \"Cédula de Ciudadanía\", \"identificationNumber\": \"5.982.300\", \"message\": \"\" }, \"document_type\": \"person\", \"category\": \"CECRL\" } ```"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 10,
+        "cache_creation_input_tokens": 6027,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 582
+      }
+    },
+    "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 8000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+  "api_used": "invoke_model"
+}

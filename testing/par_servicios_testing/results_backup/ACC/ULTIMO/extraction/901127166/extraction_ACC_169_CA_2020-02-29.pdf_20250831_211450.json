@@ -1,0 +1,107 @@
+{
+  "extraction_data": {
+    "result": {
+      "PrincipalCompanyName": "TRITON LOGISTICA Y CONSTRUCCIONES SAS",
+      "DocumentCategory": "Equity Composition",
+      "TaxId": "901.127.166-9",
+      "IdentificationType": "NIT",
+      "Country": "Colombia",
+      "IdentificationDetails": {
+        "Source": "IdAnalysis",
+        "Indicators": [
+          "NIT identification type indicates Colombia"
+        ],
+        "ConflictingSources": [],
+        "RequiresReview": "false"
+      },
+      "RelatedParties": [
+        {
+          "Type": "person",
+          "FirstName": "ERNESTO JOSE",
+          "LastName": "CHALELA MARTINEZ",
+          "IdType": "CC",
+          "IdNumber": "9,287,800",
+          "RelationshipType": "Shareholder",
+          "ParticipationPercentage": "100",
+          "TimesFound": "1",
+          "Job": "REPRESENTANTE LEGAL"
+        }
+      ]
+    },
+    "DocumentType": "company",
+    "Category": "ACC"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "{ \"result\": { \"PrincipalCompanyName\": \"TRITON LOGISTICA Y CONSTRUCCIONES SAS\", \"DocumentCategory\": \"Equity Composition\", \"TaxId\": \"901.127.166-9\", \"IdentificationType\": \"NIT\", \"Country\": \"Colombia\", \"IdentificationDetails\": { \"Source\": \"IdAnalysis\", \"Indicators\": [ \"NIT identification type indicates Colombia\" ], \"ConflictingSources\": [], \"RequiresReview\": \"false\" }, \"RelatedParties\": [ { \"Type\": \"person\", \"FirstName\": \"ERNESTO JOSE\", \"LastName\": \"CHALELA MARTINEZ\", \"IdType\": \"CC\", \"IdNumber\": \"9,287,800\", \"RelationshipType\": \"Shareholder\", \"ParticipationPercentage\": \"100\", \"TimesFound\": \"1\", \"Job\": \"REPRESENTANTE LEGAL\" } ] }, \"DocumentType\": \"company\", \"Category\": \"ACC\" }"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 1802,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 4822,
+      "output_tokens": 906
+    },
+    "ResponseMetadata": {
+      "RequestId": "ab3f042b-7be8-4578-b571-21df3cddbcf6",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Mon, 01 Sep 2025 02:14:49 GMT",
+        "content-type": "application/json",
+        "content-length": "6173",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "ab3f042b-7be8-4578-b571-21df3cddbcf6",
+        "x-amzn-bedrock-invocation-latency": "16936",
+        "x-amzn-bedrock-cache-write-input-token-count": "0",
+        "x-amzn-bedrock-cache-read-input-token-count": "4822",
+        "x-amzn-bedrock-output-token-count": "906",
+        "x-amzn-bedrock-input-token-count": "1802"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_01UpZTXUAqeuWGAzgkkk5ncE",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-sonnet-4-20250514",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Looking at this document, I need to extract information about a company's shareholder composition. Let me analyze the document: 1. Principal Company Name: The document title and header clearly shows \"TRITON LOGISTICA Y CONSTRUCCIONES SAS\" which appears with \"NIT. 901.127.166-9\" 2. TaxId: \"901.127.166-9\" (appears as \"901.127.166 - 9\") 3. IdentificationType: \"NIT\" is explicitly mentioned 4. Country: The document doesn't explicitly mention a country, but the use of \"NIT\" as the identification type strongly suggests this is Colombia, as NIT is primarily used in Colombia for companies based on my hash tables. 5. RelatedParties: From the table, I can see: - ERNESTO JOSE CHALELA MARTINEZ - CC (Cedula): 9,287,800 - He owns 5,000 shares (100% participation) - He is also listed as \"REPRESENTANTE LEGAL\" (Legal Representative) Let me structure this according to the schema: - PrincipalCompanyName: \"TRITON LOGISTICA Y CONSTRUCCIONES SAS\" - DocumentCategory: \"Equity Composition\" - TaxId: \"901.127.166-9\" - IdentificationType: \"NIT\" - Country: Based on NIT usage, this should be \"Colombia\" - IdentificationDetails: - Source: \"IdAnalysis\" (since I'm inferring country from the NIT identification type) - Indicators: [\"NIT usage suggests Colombia\"] - ConflictingSources: [] - RequiresReview: \"false\" - RelatedParties: - One person: Ernesto Jose Chalela Martinez - Type: \"person\" - FirstName: \"ERNESTO JOSE\" - LastName: \"CHALELA MARTINEZ\" - IdType: \"CC\" (Colombian citizen card) - IdNumber: \"9,287,800\" - RelationshipType: \"Shareholder\" - ParticipationPercentage: \"100\" - TimesFound: \"1\" - Job: \"REPRESENTANTE LEGAL\" I confirm the details match the document, with the ID number maintaining its original comma-separated format. The shareholder information appears complete and consistent with Colombian business documentation standards.",
+          "signature": "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"
+        },
+        {
+          "type": "text",
+          "text": "{ \"result\": { \"PrincipalCompanyName\": \"TRITON LOGISTICA Y CONSTRUCCIONES SAS\", \"DocumentCategory\": \"Equity Composition\", \"TaxId\": \"901.127.166-9\", \"IdentificationType\": \"NIT\", \"Country\": \"Colombia\", \"IdentificationDetails\": { \"Source\": \"IdAnalysis\", \"Indicators\": [ \"NIT identification type indicates Colombia\" ], \"ConflictingSources\": [], \"RequiresReview\": \"false\" }, \"RelatedParties\": [ { \"Type\": \"person\", \"FirstName\": \"ERNESTO JOSE\", \"LastName\": \"CHALELA MARTINEZ\", \"IdType\": \"CC\", \"IdNumber\": \"9,287,800\", \"RelationshipType\": \"Shareholder\", \"ParticipationPercentage\": \"100\", \"TimesFound\": \"1\", \"Job\": \"REPRESENTANTE LEGAL\" } ] }, \"DocumentType\": \"company\", \"Category\": \"ACC\" }"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 1802,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 4822,
+        "output_tokens": 906
+      }
+    },
+    "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 8000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+  "api_used": "invoke_model"
+}

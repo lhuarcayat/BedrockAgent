@@ -1,0 +1,87 @@
+{
+  "classification_data": {
+    "category": "ACC",
+    "text": "CERTIFICACIÓN COMPOSICIÓN ACCIONARIA PROCESS POINT COLOMBIA S.A.S. Nit. 901.304.620-0 Yo, JAVIER HERNÁN BECERRA RODRIGUEZ, identificado con cédula de ciudadanía No. 79.717.267, actuando en calidad de Contador de la sociedad PROCESS POINT COLOMBIA S.A.S., con Nit. 901.304.620-0, por medio de la presente, certifico que a la fecha la composición accionaria de la sociedad es la siguiente: ACCIONISTA ÚNICO ACCIONES PORCENTAJE TODD RUDERFORTH 696 100% TOTAL 696 100% JAMIE TODD RUTHERFORD con domicilio en Texas, Estados Unidos de América; al ser el único accionista cuenta con el porcentaje de participación del 100% en la sociedad PROCESS POINT COLOMBIA S.A.S. La presente certificación se expide en Bogotá D.C., a los siete (7) días del mes de enero de 2020. JAVIER HERNÁN BECERRA RODRIGUEZ Contador C.C. 79.717.267 de Bogotá D.C. T.P. 109.035-T",
+    "document_number": "901304620",
+    "path": "ACC/901304620/237_CA_2020-02-29.pdf"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "```json { \"category\": \"ACC\", \"text\": \"CERTIFICACIÓN\\nCOMPOSICIÓN ACCIONARIA PROCESS POINT COLOMBIA S.A.S.\\nNit. 901.304.620-0\\n\\nYo, JAVIER HERNÁN BECERRA RODRIGUEZ, identificado con cédula de ciudadanía No. 79.717.267, actuando en calidad de Contador de la sociedad PROCESS POINT COLOMBIA S.A.S., con Nit. 901.304.620-0, por medio de la presente, certifico que a la fecha la composición accionaria de la sociedad es la siguiente:\\n\\nACCIONISTA ÚNICO\\tACCIONES\\tPORCENTAJE\\nTODD RUDERFORTH\\t696\\t100%\\nTOTAL\\t696\\t100%\\n\\nJAMIE TODD RUTHERFORD con domicilio en Texas, Estados Unidos de América; al ser el único accionista cuenta con el porcentaje de participación del 100% en la sociedad PROCESS POINT COLOMBIA S.A.S.\\n\\nLa presente certificación se expide en Bogotá D.C., a los siete (7) días del mes de enero de 2020.\\n\\nJAVIER HERNÁN BECERRA RODRIGUEZ\\nContador\\nC.C. 79.717.267 de Bogotá D.C.\\nT.P. 109.035-T\" } ```"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 9,
+      "cache_creation_input_tokens": 4745,
+      "cache_read_input_tokens": 0,
+      "output_tokens": 1218
+    },
+    "ResponseMetadata": {
+      "RequestId": "80279af6-bd7a-49fa-a78f-e69f95964ec9",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Sun, 31 Aug 2025 05:54:52 GMT",
+        "content-type": "application/json",
+        "content-length": "7425",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "80279af6-bd7a-49fa-a78f-e69f95964ec9",
+        "x-amzn-bedrock-invocation-latency": "20384",
+        "x-amzn-bedrock-cache-write-input-token-count": "4745",
+        "x-amzn-bedrock-cache-read-input-token-count": "0",
+        "x-amzn-bedrock-output-token-count": "1218",
+        "x-amzn-bedrock-input-token-count": "9"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_01J9iRwyRcKWs2a8o2x4W5Ck",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-sonnet-4-20250514",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Let me analyze this document step by step following the classification workflow: 1. **TEXT EXTRACTION** Looking at the document, I can extract the following text: CERTIFICACIÓN COMPOSICIÓN ACCIONARIA PROCESS POINT COLOMBIA S.A.S. Nit. 901.304.620-0 Yo, JAVIER HERNÁN BECERRA RODRIGUEZ, identificado con cédula de ciudadanía No. 79.717.267, actuando en calidad de Contador de la sociedad PROCESS POINT COLOMBIA S.A.S., con Nit. 901.304.620-0, por medio de la presente, certifico que a la fecha la composición accionaria de la sociedad es la siguiente: [Table showing:] ACCIONISTA ÚNICO: TODD RUDERFORTH ACCIONES: 696 PORCENTAJE: 100% TOTAL: 696, 100% JAMIE TODD RUTHERFORD con domicilio en Texas, Estados Unidos de América; al ser el único accionista cuenta con el porcentaje de participación del 100% en la sociedad PROCESS POINT COLOMBIA S.A.S. La presente certificación se expide en Bogotá D.C., a los siete (7) días del mes de enero de 2020. [Signature] JAVIER HERNÁN BECERRA RODRIGUEZ Contador C.C. 79.717.267 de Bogotá D.C. T.P. 109.035-T 2. **PRIORITY CHECKS** - BLANK: No, there is significant content - LINK_ONLY: No, there are no hyperlinks or URLs 3. **DOCUMENT FUNCTION ANALYSIS** The main purpose of this document is to certify the shareholding composition of PROCESS POINT COLOMBIA S.A.S. Key indicators: - Title: \"COMPOSICIÓN ACCIONARIA\" (Shareholding Composition) - Confirms a single shareholder with complete ownership - Provides precise details about share distribution and ownership percentage 4. **ISSUER IDENTIFICATION** The document originates from the company's internal accounting documentation, specifically certified by the company's accountant. It provides an official internal verification of the company's shareholding structure, focusing on the complete ownership by a single shareholder from the United States. 5. **CATEGORY CLASSIFICATION** Definitively categorized as an Accionarial Composition Certificate (ACC), with clear indicators of shareholding details. The document validates the company's ownership structure through professional accounting certification.",
+          "signature": "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"
+        },
+        {
+          "type": "text",
+          "text": "```json { \"category\": \"ACC\", \"text\": \"CERTIFICACIÓN\\nCOMPOSICIÓN ACCIONARIA PROCESS POINT COLOMBIA S.A.S.\\nNit. 901.304.620-0\\n\\nYo, JAVIER HERNÁN BECERRA RODRIGUEZ, identificado con cédula de ciudadanía No. 79.717.267, actuando en calidad de Contador de la sociedad PROCESS POINT COLOMBIA S.A.S., con Nit. 901.304.620-0, por medio de la presente, certifico que a la fecha la composición accionaria de la sociedad es la siguiente:\\n\\nACCIONISTA ÚNICO\\tACCIONES\\tPORCENTAJE\\nTODD RUDERFORTH\\t696\\t100%\\nTOTAL\\t696\\t100%\\n\\nJAMIE TODD RUTHERFORD con domicilio en Texas, Estados Unidos de América; al ser el único accionista cuenta con el porcentaje de participación del 100% en la sociedad PROCESS POINT COLOMBIA S.A.S.\\n\\nLa presente certificación se expide en Bogotá D.C., a los siete (7) días del mes de enero de 2020.\\n\\nJAVIER HERNÁN BECERRA RODRIGUEZ\\nContador\\nC.C. 79.717.267 de Bogotá D.C.\\nT.P. 109.035-T\" } ```"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 9,
+        "cache_creation_input_tokens": 4745,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 1218
+      }
+    },
+    "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 8000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "expected_category": "ACC",
+  "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+  "api_used": "invoke_model",
+  "pdf_info": {
+    "original_size": 839432,
+    "first_page_size": 839369,
+    "is_scanned": true
+  }
+}

@@ -1,0 +1,92 @@
+{
+  "extraction_data": {
+    "result": {
+      "CompanyName": "SOLTEC SERVICES S.A.S",
+      "Country": "COLOMBIA",
+      "TaxId": "900428314",
+      "VerificationDigit": "0",
+      "IdentificationType": "NIT",
+      "PersonType": "Persona jurídica",
+      "ConflictingSources": [],
+      "RequiresReview": "false"
+    },
+    "RelatedParties": [],
+    "Address": "CL 13 36 A 95, Arauca, Arauca",
+    "DocumentGenerationDate": "28-10-2017 11:14:03AM",
+    "DocumentType": "company",
+    "Category": "RUT"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "```json { \"result\": { \"CompanyName\": \"SOLTEC SERVICES S.A.S\", \"Country\": \"COLOMBIA\", \"TaxId\": \"900428314\", \"VerificationDigit\": \"0\", \"IdentificationType\": \"NIT\", \"PersonType\": \"Persona jurídica\", \"ConflictingSources\": [], \"RequiresReview\": \"false\" }, \"RelatedParties\": [], \"Address\": \"CL 13 36 A 95, Arauca, Arauca\", \"DocumentGenerationDate\": \"28-10-2017 11:14:03AM\", \"DocumentType\": \"company\", \"Category\": \"RUT\" } ```"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 11331,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 2990,
+      "output_tokens": 887
+    },
+    "ResponseMetadata": {
+      "RequestId": "985364bc-b94e-4bbf-ab86-68c6a754d9ca",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Tue, 02 Sep 2025 22:02:55 GMT",
+        "content-type": "application/json",
+        "content-length": "5853",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "985364bc-b94e-4bbf-ab86-68c6a754d9ca",
+        "x-amzn-bedrock-invocation-latency": "16128",
+        "x-amzn-bedrock-cache-write-input-token-count": "0",
+        "x-amzn-bedrock-cache-read-input-token-count": "2990",
+        "x-amzn-bedrock-output-token-count": "887",
+        "x-amzn-bedrock-input-token-count": "11331"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_01AAQUsVvYZLgLUirNhF5f7C",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-sonnet-4-20250514",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Looking at this Colombian RUT (Registro Único Tributario) document, I need to extract information according to the specified rules. Let me go through the document and identify the key information: 1. **CompanyName** (cell 35. Razón social): \"SOLTEC SERVICES S.A.S\" 2. **Country** (cell 38. País): \"COLOMBIA\" 3. **TaxId** (cell 5. Número de Identificación Tributaria (NIT)): \"9 0 0 4 2 8 3 1 4\" 4. **VerificationDigit** (cell 6. DV): \"0\" 5. **IdentificationType**: For RUT documents, this is always \"NIT\" 6. **PersonType** (cell 24. Tipo de contribuyente): \"Persona jurídica\" 7. **Address**: Need to combine cells 41, 40, and 39: - Cell 41. Dirección principal: \"CL 13 36 A 95\" - Cell 40. Ciudad/Municipio: \"Arauca\" - Cell 39. Departamento: \"Arauca\" 8. **DocumentGenerationDate**: \"28-10-2017 11:14:03AM\" (from bottom of pages) 9. **RelatedParties**: I need to look for information in the sections about \"Socios y/o miembros de Juntas Directivas\" and \"Revisor Fiscal y contador\". Looking at page 3, I can see there's information about representation: - There's information about \"REPRS LEGAL PRIN\" (Representante Legal Principal) - Cell information shows: - Cédula de ciudadanía: \"1 3 8 8 1 9 9 1 7 0\" - Name: \"FUENTES LEON NORBERTO\" I'm encountering challenges locating the specific sections for RelatedParties. The representation section doesn't match the exact requirements for extracting related parties. I'll need to carefully review the document to ensure I'm following the precise extraction rules. The specific cell ranges for related parties are not immediately visible, which complicates the extraction process. I'll continue searching through the document methodically to find the correct sections. If no matching sections exist, I'll leave the RelatedParties field empty as instructed, without adding any conflicting source observations.",
+          "signature": "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"
+        },
+        {
+          "type": "text",
+          "text": "```json { \"result\": { \"CompanyName\": \"SOLTEC SERVICES S.A.S\", \"Country\": \"COLOMBIA\", \"TaxId\": \"900428314\", \"VerificationDigit\": \"0\", \"IdentificationType\": \"NIT\", \"PersonType\": \"Persona jurídica\", \"ConflictingSources\": [], \"RequiresReview\": \"false\" }, \"RelatedParties\": [], \"Address\": \"CL 13 36 A 95, Arauca, Arauca\", \"DocumentGenerationDate\": \"28-10-2017 11:14:03AM\", \"DocumentType\": \"company\", \"Category\": \"RUT\" } ```"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 11331,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 2990,
+        "output_tokens": 887
+      }
+    },
+    "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 9000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+  "api_used": "invoke_model"
+}

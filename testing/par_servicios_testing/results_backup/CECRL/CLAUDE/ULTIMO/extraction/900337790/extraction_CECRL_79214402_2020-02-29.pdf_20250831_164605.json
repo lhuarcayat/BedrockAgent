@@ -1,0 +1,88 @@
+{
+  "extraction_data": {
+    "result": {
+      "FirstName": "RENE",
+      "LastName": "STERLING NEIRA",
+      "CountryIssuer": "Colombia",
+      "Nationality": "colombiano",
+      "IdentificationType": "Cédula de Ciudadanía",
+      "IdentificationNumber": "79.214.402",
+      "Message": ""
+    },
+    "document_type": "person",
+    "category": "CECRL"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "```json { \"result\": { \"FirstName\": \"RENE\", \"LastName\": \"STERLING NEIRA\", \"CountryIssuer\": \"Colombia\", \"Nationality\": \"colombiano\", \"IdentificationType\": \"Cédula de Ciudadanía\", \"IdentificationNumber\": \"79.214.402\", \"Message\": \"\" }, \"document_type\": \"person\", \"category\": \"CECRL\" } ```"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 3376,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 4300,
+      "output_tokens": 729
+    },
+    "ResponseMetadata": {
+      "RequestId": "24473e17-be5b-48e3-a879-4ee469a13ff5",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Sun, 31 Aug 2025 21:46:04 GMT",
+        "content-type": "application/json",
+        "content-length": "5729",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "24473e17-be5b-48e3-a879-4ee469a13ff5",
+        "x-amzn-bedrock-invocation-latency": "12841",
+        "x-amzn-bedrock-cache-write-input-token-count": "0",
+        "x-amzn-bedrock-cache-read-input-token-count": "4300",
+        "x-amzn-bedrock-output-token-count": "729",
+        "x-amzn-bedrock-input-token-count": "3376"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_01JQDgt4Rp21rEW4fcp6xJfr",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-sonnet-4-20250514",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Analyzing the Colombian Cédula de Ciudadanía document. Let me go through the extraction process: 1. First, I need to identify the document structure. I can see: - Header: \"REPUBLICA DE COLOMBIA IDENTIFICACION PERSONAL CEDULA DE CIUDADANIA\" - Number: \"79.214.402\" - There's text about \"STERLING NEIRA\" - Label \"APELLIDOS\" followed by \"RENE\" - Label \"NOMBRES\" (appearing at the bottom left, seems empty area) 2. Let me analyze the layout carefully: - \"NUMERO 79.214.402\" - \"STERLING NEIRA\" appears prominently - \"APELLIDOS RENE\" - \"NOMBRES\" appears with no visible text after it 3. This looks like a classic case of Colombian document misalignment as described in the methodology. The extraction methodology specifically mentions Colombian documents where: - Surnames appear first, then the \"APELLIDOS\" label along with the first name(s) - The \"NOMBRES\" label appears but seems empty - This indicates the text near \"APELLIDOS\" is actually the name Looking more carefully: - The prominent text \"STERLING NEIRA\" appears to be the last names - Under \"APELLIDOS\" I see \"RENE\" which according to the methodology would actually be the first name - The \"NOMBRES\" label appears empty, which confirms the misalignment So the correct interpretation should be: - FirstName: \"RENE\" (the text that appears after \"APELLIDOS\" but is actually the name) - LastName: \"STERLING NEIRA\" (the prominent text that appears before the labels) - IdentificationNumber: \"79.214.402\" - CountryIssuer: \"Colombia\" (from \"REPUBLICA DE COLOMBIA\") - IdentificationType: \"Cédula de Ciudadanía\" (from the header) - Nationality: Confirmed as Colombian, based on the birth location of Bogotá D.C. in Cundinamarca, with the nationality specified in Spanish as \"colombiano\". The birth details reveal a birthdate of 17 November 1978, further confirming the Colombian origin of the document holder.",
+          "signature": "EsoRCkgIBxABGAIqQIHB90pnmGCj5jR46ZkSfwQBn9HwMl2NYIspq4m8FPHBt+FOfhqaZawcb0bmwraRtOte4Fp2dmyiQ85E5tkumrQSDKRnXjRb3uaLNpuygBoMY52quPAAV7ljJ1EaIjAAAwyamaVkLw/Y9obzF8sfZvFoRADwcgOuRiizOhRyPGqF+bm1QP1lHzaoNN/dwLwqrxBUrRzsYAJd8xM8g6aaPxVAO+JwMaCwyQgtxacv5PX2HIf1MD3Q6fquzuJGj4pFcj71ZIz9rX0uApuaAnFHFJTtW+IpIgmypX07lH+yjaX9IcyS4eUjQHSe+eBF3Y1GBWkCP0adR3AI5v88+DFTqYL6cn3qqAwfL81qeiMjJ622kuhkHKevpTASEUEPDOAL/4mPiHuT/Gw96dPdfSG5NROcEVa4gd2xKJgwjb5h8ke84MhgAsIUE5XhTtzhJYlm+pWWtLaSwpHcoAkTte/sE3w2SImTRlLadoX7Wei1BninJweoqZ6AGmzHn0Npk9Vb1FUZ2DANLO1X20u032QlpQ7tbjCRMiqHL1UNsEcQLZg35a5VVyxfOjWKrfrDTcaJ41bkCcHDQ9Y7cWIqt4ccy1MVbn6ThE4TY+W6FoQFga+N5Ao+hZ4BXJuxcXkHVm1aV7lk6vNmF6gSPRI2zI7efDXFrhO6/8pKuYWepFV3x3rTmc1tHegFqg8OpBkynad5PM9aKZsOqfRtbbb0ZHET6Ffd1rN00WGTJxhv8R3YTWtv4+MFE67dgZ5/iB0MfQ2lXiVrt1ZP64E4lZur3ikxadurs2LL57EpEVKOurwJgZnnsO5BmkhBuFRwRU0urpmj1hEoTxXWcMF15eil5VzjDDWUrrDEJqxABjoCi4MjfZY++A6GyDhLaQxNbTTlVejHiTpYxJjZyOBKEgdNhh1/qkMYa1wfLEpePmtvTH/Cj4Ddo82C9Q+Hqq79BxlWRzP7eUbZrbQDkUFYF9huRzFTNBa56+Rt1d/n4B2g/lcte4tU/7ODBrdMXMDeo4g1af0dbY0JQKafX6KnRy86hg9oxk3aGTSyQWmI+Itq6zpMZUxRiAZmzG8vOUENO/D+0UFaN8uHJutgd8KhfonGOGv3bSXjZmIpH/zAY+J23s93FXqnMY9AKrmvhZdsPCMwVZ1KV/S0JqkPHaIMXS1Y/U1IIJ0AgVoKFqyUaDlySKWPo1j/yAMUZoz5zEA3aPXO0vjoMe4YoEm39dYAm1vvdFlsA/jI5ros5hHcJ/qJEmQxYRnMZW5d2haHJV/ZlN6K6OzZdyM98IzSgkRxYWOscQ1Ff2qta/g6GDjAr9o4z2QmlJHoAPoGVISC5+EVdnbt9Tz8wSbSiX9ujNyxtCtOoulKUySWp5FSl+agUL751h8IKDwND+MOsvmwosx0BqL9fPIPDuuFHM+vbkVgHaRAEu25DsUUxWESulJ6gbYwSBo6b3YeCc1mMZvm3zI+WIkj71ARSlQcGYMbIVp/H8M6fRUUGfqU6nZjnZau8DXwzJx0jEonJnb/Y/b82qjm3HvDsOqYcRyiRd2JJKt5Fnk5zPsUu5Rvtqj8JoTVKWxTv3+BEasu0sabQDy3xjHiRmPxSQtvDsMYX40o4UoDDGONAeEFtlFuq8BMKmJiDsbKZqijG7zRVJHdStxAiyObJwE8GaWwk24ZxWlaq0y28mUM7wOuUg+fjumBiEyiZ/xGeIYYzz4THtMGL52aVRAgDrfJPJBMs3OLJYmXLrldJgu3Of3zgSlhtrHZZBR3RnVhzcLtjicHd8ZAYrXMCUK+8zFfIlZH2FDcRA25dDlo8ucfFfSA/VXm5YvgPbrtThdja6kiUk83GbCOZxpnTXbUbZq7rnGI847pfNrzUrdhxag62+Fo3Jj6Yc30j010p+HDFbeEFHiLrSaL83V/wucX9OAOgsSo7uNsB4Zj7s1Ua1pHCGVtiVkS7OE+mZRdNWfONwam32nHp+1nh8SlSDnRG34DMFzsnlSwTYDTZtvf0bzfLOTb5DJ1TVjtvoiceA/JgPMXrOrRiAbngNi0oOvG2sKIBMULl8TmisNcnaqEg81vSU36R1omPzn9LZqUUj3op9itA8Yi+YPbRjl1kqxTFi8wgd4kwvA61xsRtVGUAIQ8dnn86cieiXSrRPCbkeN+M36sJhLa8zsg9DqQ18dm9DMPLfX5yFInRuGewkeEIYbZJen/qzFmfgKAOo+9ZW5MX7v/e+XBCUW7a6sm5Gu5S4RRFdSCItIUnQDQhbShcCr8rt0xhOf4iBNmmQMT8IgmZyRcA0kp2G8QLQ/gq228m+Z51QrH46pDyXsskdXndab9lEjDyy0fcPq4Aq68B5DvGlWHs/AhCDFzwSR6wwhU/WXBcs1kpEv2oXF36mEFkrnOeIC1hlS1XZtZF3T29F9bwV80fEGBQQgugzJ+N1JFcQbgDGVH3kfwsDWf3EvrRXBLIXJHcmlRHmRgCkkmXbcYbPTPf/0yVVTfRVgPCNTHfTUPpc3LU39mD1YCNBzmEKIyWFvNIE20zptcuKfedfvAyl70rP4yieg863qrMerQlCsPu9/3r3/zQAS+7yoZ/JKRrVXdv1nGAhpcopHs5jHd7cQ+3bzUt66233bU3M3yHLVsc1xc9Jfv70eSqpG9xCtiO3RIbtvvVbJl8B/dSrYnQlHr5GBb+WcYQp6AU213ttjIXN1bUxvPjub+QczilGneHq0ddeGO39x0KUyRYwXmxcXriOeobzNK8r9q9glYSNrUCaFLn5duL5NeGSIm9Qa5Fxt5xvubSn1+HDtdA9kXcMPgA2ExV5wbakfOgbstKcc78OJ5io8ysk3sM0vFb82go9G3i47JUU7hLA6v9d9UKwHBLSWKMD7J9bdACutNecPFx6VO7hIyenSkCaFKndws1RLqk/Hl6/JYjjs0EpArBRJoa6sFFP7g22w5tVyQKJDorXuAjhe2h7J4PeAN3GEvC7cKK0EEwJ4TTesd6tDx1pLvetj8GAE="
+        },
+        {
+          "type": "text",
+          "text": "```json { \"result\": { \"FirstName\": \"RENE\", \"LastName\": \"STERLING NEIRA\", \"CountryIssuer\": \"Colombia\", \"Nationality\": \"colombiano\", \"IdentificationType\": \"Cédula de Ciudadanía\", \"IdentificationNumber\": \"79.214.402\", \"Message\": \"\" }, \"document_type\": \"person\", \"category\": \"CECRL\" } ```"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 3376,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 4300,
+        "output_tokens": 729
+      }
+    },
+    "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 8000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+  "api_used": "invoke_model"
+}

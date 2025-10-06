@@ -1,0 +1,143 @@
+{
+  "extraction_data": {
+    "path": "ACC/800216686/231_CA_2020-02-29.pdf",
+    "result": {
+      "companyName": "AEROSUPPORT S.A.S.",
+      "documentCategory": "Equity Composition",
+      "taxId": "800.216.686-2",
+      "country": "Colombia",
+      "identificationDetails": {
+        "source": "text_reference",
+        "indicators": [
+          "BOGOTA, COLOMBIA",
+          "Bogotá, Colombia"
+        ],
+        "conflictingSources": [
+          "Unusual identification format for GLOBAL AVIATION SUPPORT CORP: 1045179-1-546162"
+        ],
+        "requiresReview": "true"
+      },
+      "relatedParties": [
+        {
+          "type": "person",
+          "firstName": "GERMAN",
+          "lastName": "SALGADO VERGARA",
+          "identificationType": "C.C.",
+          "identificationNumber": "19306991",
+          "relationshipType": "Shareholder",
+          "participationPercentage": "49.50",
+          "timeFound": "1",
+          "job": "Representante Legal"
+        },
+        {
+          "type": "company",
+          "companyName": "GLOBAL AVIATION SUPPORT CORP",
+          "identificationType": "POR REVISAR",
+          "identificationNumber": "1045179-1-546162",
+          "relationshipType": "Shareholder",
+          "participationPercentage": "49.00",
+          "timeFound": "1",
+          "job": ""
+        },
+        {
+          "type": "person",
+          "firstName": "ADRIANA",
+          "lastName": "ARANGO JARAMILLO",
+          "identificationType": "C.C.",
+          "identificationNumber": "35469632",
+          "relationshipType": "Shareholder",
+          "participationPercentage": "1.00",
+          "timeFound": "1",
+          "job": ""
+        },
+        {
+          "type": "person",
+          "firstName": "NICOLAS",
+          "lastName": "SALGADO ARANGO",
+          "identificationType": "C.C.",
+          "identificationNumber": "1020763136",
+          "relationshipType": "Shareholder",
+          "participationPercentage": "0.50",
+          "timeFound": "1",
+          "job": ""
+        }
+      ]
+    },
+    "documentType": "company",
+    "documentNumber": "800216686",
+    "category": "ACC"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "{ \"result\": { \"companyName\": \"AEROSUPPORT S.A.S.\", \"documentCategory\": \"Equity Composition\", \"taxId\": \"800.216.686-2\", \"country\": \"Colombia\", \"identificationDetails\": { \"source\": \"text_reference\", \"indicators\": [ \"BOGOTA, COLOMBIA\", \"Bogotá, Colombia\" ], \"conflictingSources\": [ \"Unusual identification format for GLOBAL AVIATION SUPPORT CORP: 1045179-1-546162\" ], \"requiresReview\": \"true\" }, \"relatedParties\": [ { \"type\": \"person\", \"firstName\": \"GERMAN\", \"lastName\": \"SALGADO VERGARA\", \"identificationType\": \"C.C.\", \"identificationNumber\": \"19306991\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"49.50\", \"timeFound\": \"1\", \"job\": \"Representante Legal\" }, { \"type\": \"company\", \"companyName\": \"GLOBAL AVIATION SUPPORT CORP\", \"identificationType\": \"POR REVISAR\", \"identificationNumber\": \"1045179-1-546162\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"49.00\", \"timeFound\": \"1\", \"job\": \"\" }, { \"type\": \"person\", \"firstName\": \"ADRIANA\", \"lastName\": \"ARANGO JARAMILLO\", \"identificationType\": \"C.C.\", \"identificationNumber\": \"35469632\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"1.00\", \"timeFound\": \"1\", \"job\": \"\" }, { \"type\": \"person\", \"firstName\": \"NICOLAS\", \"lastName\": \"SALGADO ARANGO\", \"identificationType\": \"C.C.\", \"identificationNumber\": \"1020763136\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"0.50\", \"timeFound\": \"1\", \"job\": \"\" } ] }, \"documentType\": \"company\", \"category\": \"ACC\" }"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 425,
+      "cache_creation_input_tokens": 6610,
+      "cache_read_input_tokens": 0,
+      "output_tokens": 1782
+    },
+    "ResponseMetadata": {
+      "RequestId": "2e3ce632-8a69-4133-ad28-70a5f6b4dd71",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Thu, 28 Aug 2025 08:29:19 GMT",
+        "content-type": "application/json",
+        "content-length": "6727",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "2e3ce632-8a69-4133-ad28-70a5f6b4dd71",
+        "x-amzn-bedrock-invocation-latency": "35669",
+        "x-amzn-bedrock-cache-write-input-token-count": "6610",
+        "x-amzn-bedrock-cache-read-input-token-count": "0",
+        "x-amzn-bedrock-output-token-count": "1782",
+        "x-amzn-bedrock-input-token-count": "425"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_01EypGyeW1CEvepUATgTannf",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-3-7-sonnet-20250219",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Let me analyze this document step by step to extract the equity composition data according to the rules: ## Step 1: Document Analysis - This is a document showing the equity composition (COMPOSICION ACCIONARIA) of AEROSUPPORT S.A.S. - The document is in Spanish and is dated June 24, 2021 - It contains a clear table with shareholders, their identification numbers, share counts, and participation percentages - The document is signed by GERMAN SALGADO VERGARA as the Representante Legal (Legal Representative) - There are explicit country references: BOGOTA, COLOMBIA ## Step 2: Root Level Extraction - **companyName**: \"AEROSUPPORT S.A.S.\" (clearly stated in the document header and table title) - **taxId**: \"800.216.686-2\" (explicitly mentioned in the NIT format) - **country**: \"Colombia\" (explicitly mentioned multiple times) - **documentCategory**: \"Equity Composition\" (as required) For **identificationDetails**: - **source**: \"text_reference\" (because country is explicitly mentioned) - **indicators**: [\"BOGOTA, COLOMBIA\", \"COLOMBIA\"] - **conflictingSources**: [] (no conflicts found) ## Step 3: Related Parties Processing The document contains a table with 4 shareholders: 1. GERMAN SALGADO VERGARA - **type**: \"person\" (no company markers) - **firstName**: \"GERMAN\" - **lastName**: \"SALGADO VERGARA\" - **identificationType**: \"C.C.\" (Colombia Cédula de Ciudadanía based on format) - **identificationNumber**: \"19306991\" - **relationshipType**: \"Shareholder\" - **participationPercentage**: \"49,50%\" (will normalize to \"49.50\") - **timeFound**: \"1\" - **job**: \"Representante Legal\" (explicitly mentioned) 2. GLOBAL AVIATION SUPPORT CORP - **type**: \"company\" (has \"CORP\" marker) - **companyName**: \"GLOBAL AVIATION SUPPORT CORP\" - **identificationType**: \"POR REVISAR\" (the ID \"1045179-1-546162\" doesn't match the standard Colombian NIT format) - **identificationNumber**: \"1045179-1-546162\" - **relationshipType**: \"Shareholder\" - **participationPercentage**: \"49,00%\" (will normalize to \"49.00\") - **timeFound**: \"1\" - **job**: \"\" 3. ADRIANA ARANGO JARAMILLO - **type**: \"person\" (no company markers) - **firstName**: \"ADRIANA\" - **lastName**: \"ARANGO JARAMILLO\" - **identificationType**: \"C.C.\" (Colombia Cédula de Ciudadanía based on format) - **identificationNumber**: \"35469632\" - **relationshipType**: \"Shareholder\" - **participationPercentage**: \"1,00%\" (will normalize to \"1.00\") - **timeFound**: \"1\" - **job**: \"\" 4. NICOLAS SALGADO ARANGO - **type**: \"person\" (no company markers) - **firstName**: \"NICOLAS\" - **lastName**: \"SALGADO ARANGO\" - **identificationType**: \"C.C.\" (Colombia Cédula de Ciudadanía based on format) - **identificationNumber**: \"1020763136\" - **relationshipType**: \"Shareholder\" - **participationPercentage**: \"0,50%\" (will normalize to \"0.50\") - **timeFound**: \"1\" - **job**: \"\" ## Step 4: Validation & Cross-checking - **taxId** type (NIT) aligns with country (Colombia) ✓ - **identificationType** for persons is \"C.C.\" which matches Colombia's PERSON_ID hash table ✓ - **participationPercentages** sum to 100% ✓ - The only potential issue is the format of the ID for GLOBAL AVIATION SUPPORT CORP which doesn't match typical Colombian NIT format. I'll mark this with \"POR REVISAR\" for identificationType. Since we have one \"POR REVISAR\" field, I'll set **requiresReview** to \"true\" and add this to **conflictingSources**. Let me normalize the participation percentages from Spanish format (comma as decimal separator) to the standard format (period as decimal separator): - 49,50% → 49.50 - 49,00% → 49.00 - 1,00% → 1.00 - 0,50% → 0.50 Now I'll compile all this information into the required JSON format:",
+          "signature": "ErcBCkgIBxABGAIiQMUvp01mbyB81I68F6M7JSRYCkqGki4qqo8g+Rz4p0pQRSbjIjmIqSMPUgFRy8CFog4/v8Rc9tSh6uzshPngRqkSDPxvpH0JjSzDHNQ3hRoMPwTGG00ZQ35bCfhZIjA94csWK03Mly7S3X66A+1V1BhkBLA1jSIlQTQtwV2jZ2rJYJt3fZLDyLDrzJkdwukqHWaqzMMrNMjxIajKDOD+0VR9ReRUNJUUpYDZblKWGAI="
+        },
+        {
+          "type": "text",
+          "text": "{ \"result\": { \"companyName\": \"AEROSUPPORT S.A.S.\", \"documentCategory\": \"Equity Composition\", \"taxId\": \"800.216.686-2\", \"country\": \"Colombia\", \"identificationDetails\": { \"source\": \"text_reference\", \"indicators\": [ \"BOGOTA, COLOMBIA\", \"Bogotá, Colombia\" ], \"conflictingSources\": [ \"Unusual identification format for GLOBAL AVIATION SUPPORT CORP: 1045179-1-546162\" ], \"requiresReview\": \"true\" }, \"relatedParties\": [ { \"type\": \"person\", \"firstName\": \"GERMAN\", \"lastName\": \"SALGADO VERGARA\", \"identificationType\": \"C.C.\", \"identificationNumber\": \"19306991\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"49.50\", \"timeFound\": \"1\", \"job\": \"Representante Legal\" }, { \"type\": \"company\", \"companyName\": \"GLOBAL AVIATION SUPPORT CORP\", \"identificationType\": \"POR REVISAR\", \"identificationNumber\": \"1045179-1-546162\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"49.00\", \"timeFound\": \"1\", \"job\": \"\" }, { \"type\": \"person\", \"firstName\": \"ADRIANA\", \"lastName\": \"ARANGO JARAMILLO\", \"identificationType\": \"C.C.\", \"identificationNumber\": \"35469632\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"1.00\", \"timeFound\": \"1\", \"job\": \"\" }, { \"type\": \"person\", \"firstName\": \"NICOLAS\", \"lastName\": \"SALGADO ARANGO\", \"identificationType\": \"C.C.\", \"identificationNumber\": \"1020763136\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"0.50\", \"timeFound\": \"1\", \"job\": \"\" } ] }, \"documentType\": \"company\", \"category\": \"ACC\" }"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 425,
+        "cache_creation_input_tokens": 6610,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 1782
+      }
+    },
+    "model_id": "us.anthropic.claude-3-7-sonnet-20250219-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 8000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "model_used": "us.anthropic.claude-3-7-sonnet-20250219-v1:0",
+  "api_used": "invoke_model"
+}

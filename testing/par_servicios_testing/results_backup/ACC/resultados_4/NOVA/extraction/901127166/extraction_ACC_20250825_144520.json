@@ -1,0 +1,83 @@
+{
+  "extraction_data": {
+    "path": "ACC/901127166/169_CA_2020-02-29.pdf",
+    "result": {
+      "companyName": "TRITONLOGISTICA Y CONSTRUCCIONES SAS",
+      "documentType": "Equity Composition",
+      "taxId": "901.127.166-9",
+      "country": "Colombia",
+      "identificationDetails": {
+        "source": "text_reference",
+        "indicators": [
+          "NIT",
+          "Colombia"
+        ],
+        "conflictingSources": [],
+        "requiresReview": false
+      },
+      "relatedParties": [
+        {
+          "firstName": "Ernesto José",
+          "lastName": "Chalela Martinez",
+          "identificationType": "CC",
+          "identificationNumber": "9.287.800",
+          "relationshipType": "Shareholder",
+          "participationPercentage": "100%",
+          "timeFound": 1,
+          "job": "Representante Legal"
+        }
+      ]
+    },
+    "document_type": "company",
+    "document_number": "901127166",
+    "category": "ACC",
+    "confidenceScores": {
+      "companyName": 95,
+      "taxId": 95,
+      "country": 97,
+      "relatedParties": 90
+    }
+  },
+  "raw_response": {
+    "ResponseMetadata": {
+      "RequestId": "88cd9584-c32d-4ee9-80c7-c1efd10b0544",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Mon, 25 Aug 2025 19:45:19 GMT",
+        "content-type": "application/json",
+        "content-length": "1308",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "88cd9584-c32d-4ee9-80c7-c1efd10b0544"
+      },
+      "RetryAttempts": 0
+    },
+    "output": {
+      "message": {
+        "role": "assistant",
+        "content": [
+          {
+            "text": "```json { \"path\": \"ACC/901127166/169_CA_2020-02-29.pdf\", \"result\": { \"companyName\": \"TRITONLOGISTICA Y CONSTRUCCIONES SAS\", \"documentType\": \"Equity Composition\", \"taxId\": \"901.127.166-9\", \"country\": \"Colombia\", \"identificationDetails\": { \"source\": \"text_reference\", \"indicators\": [ \"NIT\", \"Colombia\" ], \"conflictingSources\": [], \"requiresReview\": false }, \"relatedParties\": [ { \"firstName\": \"Ernesto José\", \"lastName\": \"Chalela Martinez\", \"identificationType\": \"CC\", \"identificationNumber\": \"9.287.800\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"100%\", \"timeFound\": 1, \"job\": \"Representante Legal\" } ] }, \"document_type\": \"company\", \"document_number\": \"901127166\", \"category\": \"ACC\", \"confidenceScores\": { \"companyName\": 95, \"taxId\": 95, \"country\": 97, \"relatedParties\": 90 } } ```"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "inputTokens": 8560,
+      "outputTokens": 322,
+      "totalTokens": 8882
+    },
+    "metrics": {
+      "latencyMs": 7228
+    },
+    "model_id": "us.amazon.nova-pro-v1:0",
+    "api_used": "converse",
+    "model_params": {
+      "maxTokens": 8000,
+      "topP": 1,
+      "temperature": 0
+    }
+  },
+  "model_used": "us.amazon.nova-pro-v1:0",
+  "api_used": "converse"
+}

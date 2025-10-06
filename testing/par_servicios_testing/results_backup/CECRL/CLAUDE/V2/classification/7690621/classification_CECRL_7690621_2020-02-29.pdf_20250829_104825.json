@@ -1,0 +1,87 @@
+{
+  "classification_data": {
+    "category": "CECRL",
+    "text": "REPUBLICA DE COLOMBIA IDENTIFICACION PERSONAL CEDULA DE CIUDADANIA NUMERO 7.690.621 BERMUDEZ FILBERT APELLIDOS LUIS KENNETH NOMBRES FIRMA FECHA DE NACIMIENTO 13-AGO-1972 NEIVA (HUILA) LUGAR DE NACIMIENTO 1.82 ESTATURA A+ G.S. RH M SEXO 13-SEP-1990 NEIVA FECHA Y LUGAR DE EXPEDICION REGISTRADOR NACIONAL INDICE DERECHO A-1900100-50131731-M-000769062-1-20060327 01569060BON 02 143194796",
+    "document_number": "7690621",
+    "path": "CECRL/7690621/7690621_2020-02-29.pdf"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "```json { \"category\": \"CECRL\", \"text\": \"REPUBLICA DE COLOMBIA\\nIDENTIFICACION PERSONAL\\nCEDULA DE CIUDADANIA\\nNUMERO 7.690.621\\nBERMUDEZ FILBERT\\nAPELLIDOS\\nLUIS KENNETH\\nNOMBRES\\nFIRMA\\n\\nFECHA DE NACIMIENTO 13-AGO-1972\\nNEIVA\\n(HUILA)\\nLUGAR DE NACIMIENTO\\n1.82\\nESTATURA\\nA+\\nG.S. RH\\nM\\nSEXO\\n13-SEP-1990 NEIVA\\nFECHA Y LUGAR DE EXPEDICION\\nREGISTRADOR NACIONAL\\nINDICE DERECHO\\nA-1900100-50131731-M-000769062-1-20060327\\n01569060BON 02 143194796\" } ```"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 9,
+      "cache_creation_input_tokens": 4549,
+      "cache_read_input_tokens": 0,
+      "output_tokens": 930
+    },
+    "ResponseMetadata": {
+      "RequestId": "c600b87d-0df1-4687-bb15-25b1acbeb5be",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Fri, 29 Aug 2025 15:48:13 GMT",
+        "content-type": "application/json",
+        "content-length": "6033",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "c600b87d-0df1-4687-bb15-25b1acbeb5be",
+        "x-amzn-bedrock-invocation-latency": "18170",
+        "x-amzn-bedrock-cache-write-input-token-count": "4549",
+        "x-amzn-bedrock-cache-read-input-token-count": "0",
+        "x-amzn-bedrock-output-token-count": "930",
+        "x-amzn-bedrock-input-token-count": "9"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_01UW2kTHWc1CxJg3dWADgJRd",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-sonnet-4-20250514",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Let me analyze this document step by step. 1. **TEXT EXTRACTION** Looking at the document, I can extract the following text: From the top part: - REPUBLICA DE COLOMBIA - IDENTIFICACION PERSONAL - CEDULA DE CIUDADANIA - NUMERO: 7.690.621 - BERMUDEZ FILBERT - APELLIDOS - LUIS KENNETH - NOMBRES - There's a signature and photo - \"FIRMA\" From the bottom part: - FECHA DE NACIMIENTO: 13-AGO-1972 - NEIVA - (HUILA) - LUGAR DE NACIMIENTO - 1.82 (ESTATURA) - A+ (G.S. RH) - blood type - M (SEXO) - gender - 13-SEP-1990 NEIVA - FECHA Y LUGAR DE EXPEDICION - REGISTRADOR NACIONAL - There's a fingerprint image - A barcode at the bottom - Some numbers: A-1900100-50131731-M-000769062-1-20060327 01569060BON 02 143194796 2. **PRIORITY CHECKS** - This is not BLANK - has meaningful content - This is not LINK_ONLY - no URLs or links 3. **ISSUER IDENTIFICATION** This appears to be issued by Colombian government identification authorities (República de Colombia), not DIAN or Chamber of Commerce. 4. **DOCUMENT FUNCTION ANALYSIS** This is clearly a personal identification document - a Colombian cedula (citizenship ID card). It contains: - Individual biographical data (birth date, place of birth) - Physical characteristics (height, blood type, gender) - Individual photo and signature - Personal ID number with individual name - Security elements (barcode, photo, official format) - Issued by government identification authority (República de Colombia) 5. **CATEGORY CLASSIFICATION** The document aligns perfectly with official identification standards. It comprehensively captures an individual's core personal details through a standardized government-issued format. The Colombian cedula provides a comprehensive personal profile with critical identifying information and security features. Verification confirms high authenticity with unequivocal documentary evidence matching national identification protocols.",
+          "signature": "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"
+        },
+        {
+          "type": "text",
+          "text": "```json { \"category\": \"CECRL\", \"text\": \"REPUBLICA DE COLOMBIA\\nIDENTIFICACION PERSONAL\\nCEDULA DE CIUDADANIA\\nNUMERO 7.690.621\\nBERMUDEZ FILBERT\\nAPELLIDOS\\nLUIS KENNETH\\nNOMBRES\\nFIRMA\\n\\nFECHA DE NACIMIENTO 13-AGO-1972\\nNEIVA\\n(HUILA)\\nLUGAR DE NACIMIENTO\\n1.82\\nESTATURA\\nA+\\nG.S. RH\\nM\\nSEXO\\n13-SEP-1990 NEIVA\\nFECHA Y LUGAR DE EXPEDICION\\nREGISTRADOR NACIONAL\\nINDICE DERECHO\\nA-1900100-50131731-M-000769062-1-20060327\\n01569060BON 02 143194796\" } ```"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 9,
+        "cache_creation_input_tokens": 4549,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 930
+      }
+    },
+    "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 8000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "expected_category": "CECRL",
+  "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+  "api_used": "invoke_model",
+  "pdf_info": {
+    "original_size": 359687,
+    "first_page_size": 355186,
+    "is_scanned": true
+  }
+}

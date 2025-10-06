@@ -1,0 +1,134 @@
+{
+  "extraction_data": {
+    "path": "",
+    "result": {
+      "companyName": "PRONTE INGENIEROS S.A.C.",
+      "documentType": "Equity Composition",
+      "taxId": "POR REVISAR",
+      "country": "Perú",
+      "identificationDetails": {
+        "source": "text_reference",
+        "indicators": [
+          "Piura",
+          "Notaria de Piura"
+        ],
+        "conflictingSources": [],
+        "requiresReview": true
+      },
+      "relatedParties": [
+        {
+          "firstName": "César Enrique",
+          "lastName": "Baffi Arburúa",
+          "identificationType": "DNI",
+          "identificationNumber": "POR REVISAR",
+          "relationshipType": "Shareholder",
+          "participationPercentage": "96.10%",
+          "timeFound": 1,
+          "job": ""
+        },
+        {
+          "firstName": "Enrique",
+          "lastName": "Baffi Arroyo",
+          "identificationType": "DNI",
+          "identificationNumber": "40407950",
+          "relationshipType": "Shareholder",
+          "participationPercentage": "3.76%",
+          "timeFound": 1,
+          "job": ""
+        },
+        {
+          "firstName": "Mario",
+          "lastName": "Lazo Ruiz",
+          "identificationType": "DNI",
+          "identificationNumber": "POR REVISAR",
+          "relationshipType": "Shareholder",
+          "participationPercentage": "0.14%",
+          "timeFound": 1,
+          "job": ""
+        }
+      ]
+    },
+    "document_type": "company",
+    "document_number": "",
+    "category": "ACC",
+    "confidenceScores": {
+      "companyName": 85,
+      "taxId": 30,
+      "country": 95,
+      "relatedParties": 65
+    }
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "```json { \"path\": \"\", \"result\": { \"companyName\": \"PRONTE INGENIEROS S.A.C.\", \"documentType\": \"Equity Composition\", \"taxId\": \"POR REVISAR\", \"country\": \"Perú\", \"identificationDetails\": { \"source\": \"text_reference\", \"indicators\": [\"Piura\", \"Notaria de Piura\"], \"conflictingSources\": [], \"requiresReview\": true }, \"relatedParties\": [ { \"firstName\": \"César Enrique\", \"lastName\": \"Baffi Arburúa\", \"identificationType\": \"DNI\", \"identificationNumber\": \"POR REVISAR\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"96.10%\", \"timeFound\": 1, \"job\": \"\" }, { \"firstName\": \"Enrique\", \"lastName\": \"Baffi Arroyo\", \"identificationType\": \"DNI\", \"identificationNumber\": \"40407950\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"3.76%\", \"timeFound\": 1, \"job\": \"\" }, { \"firstName\": \"Mario\", \"lastName\": \"Lazo Ruiz\", \"identificationType\": \"DNI\", \"identificationNumber\": \"POR REVISAR\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"0.14%\", \"timeFound\": 1, \"job\": \"\" } ] }, \"document_type\": \"company\", \"document_number\": \"\", \"category\": \"ACC\", \"confidenceScores\": { \"companyName\": 85, \"taxId\": 30, \"country\": 95, \"relatedParties\": 65 } } ```"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 498,
+      "cache_creation_input_tokens": 9473,
+      "cache_read_input_tokens": 0,
+      "output_tokens": 1299
+    },
+    "ResponseMetadata": {
+      "RequestId": "5957897b-46fb-46cb-b20d-fed7f13555e1",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Mon, 25 Aug 2025 20:27:00 GMT",
+        "content-type": "application/json",
+        "content-length": "7597",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "5957897b-46fb-46cb-b20d-fed7f13555e1",
+        "x-amzn-bedrock-invocation-latency": "19291",
+        "x-amzn-bedrock-cache-write-input-token-count": "9473",
+        "x-amzn-bedrock-cache-read-input-token-count": "0",
+        "x-amzn-bedrock-output-token-count": "1299",
+        "x-amzn-bedrock-input-token-count": "498"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_01VA7qKAQqLX32Jpeq8tgpoR",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-sonnet-4-20250514",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Let me analyze this PDF document step by step to extract the equity composition data. Looking at the document, I can see this is a notarial document from Peru (NOTARIA DE PIURA). Let me extract the key information: 1. **Country Identification**: - The document shows \"PIURA\" which is a city in Peru - The notary is \"CAROLINA M. NÚÑEZ RICALDE - NOTARIA DE PIURA\" - This clearly indicates Peru as the country - Source: \"text_reference\" with indicators [\"Piura\", \"Peru\"] 2. **Main Company Information**: - Company Name: Looking at the document, I can see \"PRONTE INGENIEROS S.A.C.\" mentioned as the main company - Tax ID: The document mentions \"PARTIDA ELECTRÓNICA N° 00111305\" but this seems to be a registry number, not a tax ID. I need to look for RUC (Peru's tax ID format) - I don't see a clear RUC mentioned for the main company, so I'll set it as \"POR REVISAR\" 3. **Related Parties**: Looking at the document, I can see several shareholders mentioned with their participation: - CÉSAR ENRIQUE BAFFI ARBURÚA: 77'847,828 shares = 96.10% - ENRIQUE BAFFI ARROYO: 3'052,172 shares = 3.76% - MARIO LAZO RUIZ: 100,000 shares = 0.14% - TOTAL: 81'000,000 shares = 100.00% These appear to be individuals based on their names (no company suffixes like S.A.C, S.A.S, etc.) For Peru, the PERSON_ID types are [\"DNI\"] according to the hash table. Let me extract the identification numbers and other details: I notice additional individuals involved in the document, specifically SERGIO FRANCISCO VIDAL CASTILLO and ENRIQUE BAFFI ARROYO, who seem to be connected to a potential share transfer. The shareholding structure reveals complex family or business relationships among the shareholders. The primary entity is PRONTE INGENIEROS S.A.C., a currently active company registered under electronic entry number 00111305. While key details like tax identification and individual document numbers remain unclear, the ownership breakdown shows significant concentration among a few shareholders.",
+          "signature": "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"
+        },
+        {
+          "type": "text",
+          "text": "```json { \"path\": \"\", \"result\": { \"companyName\": \"PRONTE INGENIEROS S.A.C.\", \"documentType\": \"Equity Composition\", \"taxId\": \"POR REVISAR\", \"country\": \"Perú\", \"identificationDetails\": { \"source\": \"text_reference\", \"indicators\": [\"Piura\", \"Notaria de Piura\"], \"conflictingSources\": [], \"requiresReview\": true }, \"relatedParties\": [ { \"firstName\": \"César Enrique\", \"lastName\": \"Baffi Arburúa\", \"identificationType\": \"DNI\", \"identificationNumber\": \"POR REVISAR\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"96.10%\", \"timeFound\": 1, \"job\": \"\" }, { \"firstName\": \"Enrique\", \"lastName\": \"Baffi Arroyo\", \"identificationType\": \"DNI\", \"identificationNumber\": \"40407950\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"3.76%\", \"timeFound\": 1, \"job\": \"\" }, { \"firstName\": \"Mario\", \"lastName\": \"Lazo Ruiz\", \"identificationType\": \"DNI\", \"identificationNumber\": \"POR REVISAR\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"0.14%\", \"timeFound\": 1, \"job\": \"\" } ] }, \"document_type\": \"company\", \"document_number\": \"\", \"category\": \"ACC\", \"confidenceScores\": { \"companyName\": 85, \"taxId\": 30, \"country\": 95, \"relatedParties\": 65 } } ```"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 498,
+        "cache_creation_input_tokens": 9473,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 1299
+      }
+    },
+    "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 8000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+  "api_used": "invoke_model"
+}

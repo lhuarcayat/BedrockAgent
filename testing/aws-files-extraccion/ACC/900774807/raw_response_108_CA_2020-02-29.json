@@ -1,0 +1,33 @@
+{
+  "ResponseMetadata": {
+    "RequestId": "59284207-5fda-4393-ba09-1c1c410ab047",
+    "HTTPStatusCode": 200,
+    "HTTPHeaders": {
+      "date": "Mon, 16 Jun 2025 20:49:23 GMT",
+      "content-type": "application/json",
+      "content-length": "1442",
+      "connection": "keep-alive",
+      "x-amzn-requestid": "59284207-5fda-4393-ba09-1c1c410ab047"
+    },
+    "RetryAttempts": 0
+  },
+  "output": {
+    "message": {
+      "role": "assistant",
+      "content": [
+        {
+          "text": "```json\n{\n  \"path\": \"s3://par-servicios-poc-dev-filling-desk/par-servicios-poc/ACC/900774807/108_CA_2020-02-29.pdf\",\n  \"result\": {\n    \"companyName\": \"WELLINGTON TEIXEIRA DA SILVA EQUIPAMENTOS ELETRICOS\",\n    \"documentType\": \"Equity Composition\",\n    \"taxId\": \"15.232.821/0001-20\",\n    \"country\": \"Brasil\",\n    \"identificationDetails\": {\n      \"source\": \"text_reference\",\n      \"indicators\": [\n        \"Brasil\",\n        \"Receita Federal do Brasil\",\n        \"Secretaria da Receita Federal do Brasil\",\n        \"Procuradoria-Geral da Fazenda Nacional\"\n      ],\n      \"requiresReview\": false\n    },\n    \"relatedParties\": [\n      {\n        \"companyName\": \"WELLINGTON TEIXEIRA DA SILVA EQUIPAMENTOS ELETRICOS\",\n        \"identificationType\": \"CNPJ\",\n        \"identificationNumber\": \"15.232.821/0001-20\",\n        \"relationshipType\": \"Shareholder\",\n        \"participationPercentage\": \"100.00\"\n      }\n    ]\n  },\n  \"document_type\": \"company\",\n  \"document_number\": \"900774807\",\n  \"category\": \"ACC\",\n  \"confidenceScores\": {\n    \"companyName\": 95,\n    \"documentType\": 100,\n    \"taxId\": 95,\n    \"country\": 95,\n    \"relatedParties\": 90\n  }\n}\n```"
+        }
+      ]
+    }
+  },
+  "stopReason": "end_turn",
+  "usage": {
+    "inputTokens": 5567,
+    "outputTokens": 387,
+    "totalTokens": 5954
+  },
+  "metrics": {
+    "latencyMs": 7717
+  }
+}

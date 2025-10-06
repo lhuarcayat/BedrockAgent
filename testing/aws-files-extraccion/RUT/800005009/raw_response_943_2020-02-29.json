@@ -1,0 +1,33 @@
+{
+  "ResponseMetadata": {
+    "RequestId": "4043e87a-a8f8-4482-9510-86c11ad9c427",
+    "HTTPStatusCode": 200,
+    "HTTPHeaders": {
+      "date": "Tue, 17 Jun 2025 14:30:26 GMT",
+      "content-type": "application/json",
+      "content-length": "1292",
+      "connection": "keep-alive",
+      "x-amzn-requestid": "4043e87a-a8f8-4482-9510-86c11ad9c427"
+    },
+    "RetryAttempts": 0
+  },
+  "output": {
+    "message": {
+      "role": "assistant",
+      "content": [
+        {
+          "text": "```json\n{\n  \"path\": \"s3://par-servicios-poc-dev-filling-desk/par-servicios-poc/RUT/800005009/943_2020-02-29.pdf\",\n  \"result\": {\n    \"companyName\": \"SFM COMPRESORES SAS\",\n    \"country\": \"Colombia\",\n    \"documentType\": \"NIT\",\n    \"taxId\": \"800005009\",\n    \"verificationDigit\": \"0\",\n    \"personType\": \"Persona Jurídica\",\n    \"relatedParties\": [\n      {\n        \"firstName\": \"MARTINEZ HENRIQU\",\n        \"lastName\": \"FREDDY HERNAN\",\n        \"identificationType\": \"C.C.\",\n        \"identificationNumber\": \"984\",\n        \"relationshipType\": \"Representante legal Certificado\"\n      }\n    ],\n    \"address\": \"Calle 28 # 65 77, Bogotá, D.C.\",\n    \"documentGenerationDate\": \"2018-01-19\"\n  },\n  \"confidenceScores\": {\n    \"companyName\": 95,\n    \"documentType\": 90,\n    \"country\": 100,\n    \"taxId\": 100,\n    \"verificationDigit\": 95,\n    \"personType\": 90,\n    \"address\": 85,\n    \"relatedParties\": 85\n  },\n  \"document_type\": \"company\",\n  \"document_number\": \"800005009\",\n  \"category\": \"RUT\"\n}\n```"
+        }
+      ]
+    }
+  },
+  "stopReason": "end_turn",
+  "usage": {
+    "inputTokens": 7221,
+    "outputTokens": 361,
+    "totalTokens": 7582
+  },
+  "metrics": {
+    "latencyMs": 8291
+  }
+}

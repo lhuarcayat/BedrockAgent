@@ -1,0 +1,88 @@
+{
+  "extraction_data": {
+    "result": {
+      "FirstName": "DIRK ELRIC",
+      "LastName": "ADAMS",
+      "CountryIssuer": "Estados Unidos",
+      "Nationality": "estadounidense",
+      "IdentificationType": "Pasaporte",
+      "IdentificationNumber": "566784278",
+      "Message": ""
+    },
+    "document_type": "person",
+    "category": "CECRL"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "```json { \"result\": { \"FirstName\": \"DIRK ELRIC\", \"LastName\": \"ADAMS\", \"CountryIssuer\": \"Estados Unidos\", \"Nationality\": \"estadounidense\", \"IdentificationType\": \"Pasaporte\", \"IdentificationNumber\": \"566784278\", \"Message\": \"\" }, \"document_type\": \"person\", \"category\": \"CECRL\" } ```"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 1604,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 4300,
+      "output_tokens": 538
+    },
+    "ResponseMetadata": {
+      "RequestId": "fa77595e-1071-4164-a0ff-536ceed38340",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Sun, 31 Aug 2025 21:48:23 GMT",
+        "content-type": "application/json",
+        "content-length": "4404",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "fa77595e-1071-4164-a0ff-536ceed38340",
+        "x-amzn-bedrock-invocation-latency": "8957",
+        "x-amzn-bedrock-cache-write-input-token-count": "0",
+        "x-amzn-bedrock-cache-read-input-token-count": "4300",
+        "x-amzn-bedrock-output-token-count": "538",
+        "x-amzn-bedrock-input-token-count": "1604"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_01SpBsLTbNd9PzyhRyDwiFCh",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-sonnet-4-20250514",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Let me analyze this document image step by step. 1. First, I need to identify what type of document this is: - It's clearly a US passport with the text \"UNITED STATES OF AMERICA\" and \"PASSPORT\" at the top - It has the classic US passport design with \"We the People\" header 2. Now I need to extract the required fields: FirstName: Looking at the \"Given Names/Prénoms/Nombres\" field, I see \"DIRK ELRIC\" LastName: Looking at \"Surname/Nom/Apellidos\" field, I see \"ADAMS\" CountryIssuer: This is clearly a United States passport, so \"Estados Unidos\" (translated to Spanish) Nationality: Looking at \"Nationality/Nationalité/Nacionalidad\" field, I see \"UNITED STATES OF AMERICA\", so \"estadounidense\" (translated to Spanish) IdentificationType: This is a passport, so \"Pasaporte\" (translated to Spanish) IdentificationNumber: Looking at \"Passport No./No. du Passeport/No. de Pasaporte\" field, I see \"566784278\" Message: Everything appears clear and readable, so empty string \"\" Let me double-check all fields: - FirstName: \"DIRK ELRIC\" - extracted from Given Names field - LastName: \"ADAMS\" - extracted from Surname field - CountryIssuer: \"Estados Unidos\" - this is a US passport - Nationality: \"estadounidense\" - from the nationality field showing \"UNITED STATES OF AMERICA\" - IdentificationType: \"Pasaporte\" - this is clearly a passport - IdentificationNumber: \"566784278\" - from passport number field - Message: \"\" - no issues detected",
+          "signature": "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"
+        },
+        {
+          "type": "text",
+          "text": "```json { \"result\": { \"FirstName\": \"DIRK ELRIC\", \"LastName\": \"ADAMS\", \"CountryIssuer\": \"Estados Unidos\", \"Nationality\": \"estadounidense\", \"IdentificationType\": \"Pasaporte\", \"IdentificationNumber\": \"566784278\", \"Message\": \"\" }, \"document_type\": \"person\", \"category\": \"CECRL\" } ```"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 1604,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 4300,
+        "output_tokens": 538
+      }
+    },
+    "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 8000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+  "api_used": "invoke_model"
+}

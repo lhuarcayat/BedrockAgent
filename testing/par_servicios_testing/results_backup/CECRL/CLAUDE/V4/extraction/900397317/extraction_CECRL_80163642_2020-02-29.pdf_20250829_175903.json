@@ -1,0 +1,88 @@
+{
+  "extraction_data": {
+    "result": {
+      "firstName": "LUIS DARIO",
+      "lastName": "HERNANDEZ RAMIREZ",
+      "country_issuer": "Colombia",
+      "nationality": "Colombia",
+      "identificationType": "Cédula de Ciudadanía",
+      "identificationNumber": "80.163.642",
+      "message": ""
+    },
+    "document_type": "person",
+    "category": "CECRL"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "```json { \"result\": { \"firstName\": \"LUIS DARIO\", \"lastName\": \"HERNANDEZ RAMIREZ\", \"country_issuer\": \"Colombia\", \"nationality\": \"Colombia\", \"identificationType\": \"Cédula de Ciudadanía\", \"identificationNumber\": \"80.163.642\", \"message\": \"\" }, \"document_type\": \"person\", \"category\": \"CECRL\" } ```"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 10,
+      "cache_creation_input_tokens": 6440,
+      "cache_read_input_tokens": 0,
+      "output_tokens": 568
+    },
+    "ResponseMetadata": {
+      "RequestId": "e51ebe89-85ee-4d67-bc75-4e5cb5e55932",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Fri, 29 Aug 2025 22:59:03 GMT",
+        "content-type": "application/json",
+        "content-length": "4543",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "e51ebe89-85ee-4d67-bc75-4e5cb5e55932",
+        "x-amzn-bedrock-invocation-latency": "9120",
+        "x-amzn-bedrock-cache-write-input-token-count": "6440",
+        "x-amzn-bedrock-cache-read-input-token-count": "0",
+        "x-amzn-bedrock-output-token-count": "568",
+        "x-amzn-bedrock-input-token-count": "10"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_01U42HS8zjwxyVX38pGzMYAF",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-sonnet-4-20250514",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Let me analyze this Colombian identification document carefully: Looking at the document, I can see: 1. Document Header: \"REPUBLICA DE COLOMBIA\" - This indicates this is a Colombian document 2. Document Type: \"IDENTIFICACION PERSONAL CEDULA DE CIUDADANIA\" - This is a Colombian identity card (Cédula de Ciudadanía) 3. Number: \"80.163.642\" - This appears to be the identification number 4. Names section: I can see \"HERNANDEZ RAMIREZ\" and \"LUIS DARIO\" Let me analyze the name structure carefully: - I see \"HERNANDEZ RAMIREZ\" prominently displayed - I see \"LUIS DARIO\" below it - Looking at the layout, \"HERNANDEZ RAMIREZ\" appears to be the surnames (apellidos) - \"LUIS DARIO\" appears to be the given names (nombres) Additional information I can extract: - Birth date: \"10-NOV-1983\" - Birth place: \"BOGOTA D.C (CUNDINAMARCA)\" - Height: \"1.70\" - Blood type: \"AB+\" - Sex: \"M\" (Male) For the extraction: - firstName: \"LUIS DARIO\" - lastName: \"HERNANDEZ RAMIREZ\" - country_issuer: \"Colombia\" (from \"REPUBLICA DE COLOMBIA\") - nationality: \"Colombia\" (since this is a Colombian citizenship document and birth place is Bogotá, Colombia) - identificationType: \"Cédula de Ciudadanía\" (from the document header) - identificationNumber: \"80.163.642\" (preserving the formatting with dots) - message: \"\" (no issues detected) The document appears to be an official Colombian government identification document based on the official header, structure, fingerprint, barcode, and other security features.",
+          "signature": "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"
+        },
+        {
+          "type": "text",
+          "text": "```json { \"result\": { \"firstName\": \"LUIS DARIO\", \"lastName\": \"HERNANDEZ RAMIREZ\", \"country_issuer\": \"Colombia\", \"nationality\": \"Colombia\", \"identificationType\": \"Cédula de Ciudadanía\", \"identificationNumber\": \"80.163.642\", \"message\": \"\" }, \"document_type\": \"person\", \"category\": \"CECRL\" } ```"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 10,
+        "cache_creation_input_tokens": 6440,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 568
+      }
+    },
+    "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 8000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+  "api_used": "invoke_model"
+}

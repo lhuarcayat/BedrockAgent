@@ -1,0 +1,88 @@
+{
+  "extraction_data": {
+    "result": {
+      "firstName": "GIOVANNY HUMBERTO",
+      "lastName": "VELASQUEZ RUIZ",
+      "country_issuer": "Colombia",
+      "nationality": "Colombia",
+      "identificationType": "Cédula de Ciudadanía",
+      "identificationNumber": "70.568.729",
+      "message": ""
+    },
+    "document_type": "person",
+    "category": "CECRL"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "```json { \"result\": { \"firstName\": \"GIOVANNY HUMBERTO\", \"lastName\": \"VELASQUEZ RUIZ\", \"country_issuer\": \"Colombia\", \"nationality\": \"Colombia\", \"identificationType\": \"Cédula de Ciudadanía\", \"identificationNumber\": \"70.568.729\", \"message\": \"\" }, \"document_type\": \"person\", \"category\": \"CECRL\" } ```"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 10,
+      "cache_creation_input_tokens": 7971,
+      "cache_read_input_tokens": 0,
+      "output_tokens": 560
+    },
+    "ResponseMetadata": {
+      "RequestId": "6d874f4d-d903-429f-b52a-9b48d20bf835",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Fri, 29 Aug 2025 22:49:34 GMT",
+        "content-type": "application/json",
+        "content-length": "4316",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "6d874f4d-d903-429f-b52a-9b48d20bf835",
+        "x-amzn-bedrock-invocation-latency": "11738",
+        "x-amzn-bedrock-cache-write-input-token-count": "7971",
+        "x-amzn-bedrock-cache-read-input-token-count": "0",
+        "x-amzn-bedrock-output-token-count": "560",
+        "x-amzn-bedrock-input-token-count": "10"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_01E9YwqzcMnfuy1T2SjTmfgg",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-sonnet-4-20250514",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Let me analyze this document carefully. I can see two pages: Page 1: Shows a Colombian identification card (Cédula de Ciudadanía) with: - REPÚBLICA DE COLOMBIA header - IDENTIFICACIÓN PERSONAL - CÉDULA DE CIUDADANÍA - Number: 70.568.729 - Name appears to be: VELASQUEZ RUIZ (appears to be surname) - GIOVANNY HUMBERTO (appears to be first name) - There's a photo and signature Page 2: Shows the back of the ID card with: - Birth date: 17-OCT-1966 - Place: ENVIGADO (ANTIOQUIA) - Height: 1.83 - Blood type: A+ - Sex: M (Male) - Issue date: 30-NOV-1994 ENVIGADO - Fingerprint - Barcode Let me extract the information following the methodology: 1. Document Structure Analysis: This is an official Colombian government identification document - Cédula de Ciudadanía 2. Field Detection: - First name: GIOVANNY HUMBERTO (clear from document) - Last name: VELASQUEZ RUIZ (clear from document) - Country issuer: Colombia (REPÚBLICA DE COLOMBIA header) - Nationality: Colombia (Colombian citizenship document) - Document type: Cédula de Ciudadanía - ID Number: 70.568.729 - Birth place: ENVIGADO (ANTIOQUIA) - this is in Colombia 3. Pattern-Based Text Extraction: The names are clearly visible on the document. VELASQUEZ RUIZ appears to be the surname, and GIOVANNY HUMBERTO the given names. 4. Validation: This is clearly an official Colombian identification document with all required elements present.",
+          "signature": "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"
+        },
+        {
+          "type": "text",
+          "text": "```json { \"result\": { \"firstName\": \"GIOVANNY HUMBERTO\", \"lastName\": \"VELASQUEZ RUIZ\", \"country_issuer\": \"Colombia\", \"nationality\": \"Colombia\", \"identificationType\": \"Cédula de Ciudadanía\", \"identificationNumber\": \"70.568.729\", \"message\": \"\" }, \"document_type\": \"person\", \"category\": \"CECRL\" } ```"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 10,
+        "cache_creation_input_tokens": 7971,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 560
+      }
+    },
+    "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 8000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+  "api_used": "invoke_model"
+}

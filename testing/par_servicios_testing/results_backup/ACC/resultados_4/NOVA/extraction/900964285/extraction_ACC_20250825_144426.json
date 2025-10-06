@@ -1,0 +1,103 @@
+{
+  "extraction_data": {
+    "path": "ACC/900964285/164_CA_2020-02-29.pdf",
+    "result": {
+      "companyName": "Asesorías y gestiones ambientales SAS",
+      "documentType": "Equity Composition",
+      "taxId": "900.964.285-3",
+      "country": "Colombia",
+      "identificationDetails": {
+        "source": "text_reference",
+        "indicators": [
+          "NIT",
+          "Colombia"
+        ],
+        "conflictingSources": [],
+        "requiresReview": false
+      },
+      "relatedParties": [
+        {
+          "firstName": "Jaime Alexander Franco",
+          "lastName": "Pedraza",
+          "identificationType": "CC",
+          "identificationNumber": "79.770.147",
+          "relationshipType": "Shareholder",
+          "participationPercentage": "33.33%",
+          "timeFound": 1,
+          "job": "Representante Legal"
+        },
+        {
+          "firstName": "Martha Lilia",
+          "lastName": "Celic Gorio",
+          "identificationType": "CC",
+          "identificationNumber": "51.880.385",
+          "relationshipType": "Shareholder",
+          "participationPercentage": "33.33%",
+          "timeFound": 1,
+          "job": ""
+        },
+        {
+          "firstName": "Gioannny Andres",
+          "lastName": "Vega Forero",
+          "identificationType": "CC",
+          "identificationNumber": "79.958.347",
+          "relationshipType": "Shareholder",
+          "participationPercentage": "33.33%",
+          "timeFound": 1,
+          "job": ""
+        }
+      ]
+    },
+    "document_type": "company",
+    "document_number": "900964285",
+    "category": "ACC",
+    "confidenceScores": {
+      "companyName": 95,
+      "taxId": 95,
+      "country": 98,
+      "relatedParties": 90
+    }
+  },
+  "raw_response": {
+    "ResponseMetadata": {
+      "RequestId": "1fed5ffc-f739-451d-af72-290fddef1c54",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Mon, 25 Aug 2025 19:44:25 GMT",
+        "content-type": "application/json",
+        "content-length": "2003",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "1fed5ffc-f739-451d-af72-290fddef1c54"
+      },
+      "RetryAttempts": 0
+    },
+    "output": {
+      "message": {
+        "role": "assistant",
+        "content": [
+          {
+            "text": "```json { \"path\": \"ACC/900964285/164_CA_2020-02-29.pdf\", \"result\": { \"companyName\": \"Asesor\\u00edas y gestiones ambientales SAS\", \"documentType\": \"Equity Composition\", \"taxId\": \"900.964.285-3\", \"country\": \"Colombia\", \"identificationDetails\": { \"source\": \"text_reference\", \"indicators\": [ \"NIT\", \"Colombia\" ], \"conflictingSources\": [], \"requiresReview\": false }, \"relatedParties\": [ { \"firstName\": \"Jaime Alexander Franco\", \"lastName\": \"Pedraza\", \"identificationType\": \"CC\", \"identificationNumber\": \"79.770.147\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"33.33%\", \"timeFound\": 1, \"job\": \"Representante Legal\" }, { \"firstName\": \"Martha Lilia\", \"lastName\": \"Celic Gorio\", \"identificationType\": \"CC\", \"identificationNumber\": \"51.880.385\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"33.33%\", \"timeFound\": 1, \"job\": \"\" }, { \"firstName\": \"Gioannny Andres\", \"lastName\": \"Vega Forero\", \"identificationType\": \"CC\", \"identificationNumber\": \"79.958.347\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"33.33%\", \"timeFound\": 1, \"job\": \"\" } ] }, \"document_type\": \"company\", \"document_number\": \"900964285\", \"category\": \"ACC\", \"confidenceScores\": { \"companyName\": 95, \"taxId\": 95, \"country\": 98, \"relatedParties\": 90 } } ```"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "inputTokens": 8569,
+      "outputTokens": 495,
+      "totalTokens": 9064
+    },
+    "metrics": {
+      "latencyMs": 8870
+    },
+    "model_id": "us.amazon.nova-pro-v1:0",
+    "api_used": "converse",
+    "model_params": {
+      "maxTokens": 8000,
+      "topP": 1,
+      "temperature": 0
+    }
+  },
+  "model_used": "us.amazon.nova-pro-v1:0",
+  "api_used": "converse"
+}

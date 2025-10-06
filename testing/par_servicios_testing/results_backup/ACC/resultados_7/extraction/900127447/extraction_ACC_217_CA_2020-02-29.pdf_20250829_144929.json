@@ -1,0 +1,107 @@
+{
+  "extraction_data": {
+    "result": {
+      "companyName": "ROMEGAS SAS",
+      "documentCategory": "Equity Composition",
+      "taxId": "900.127.447-1",
+      "country": "Colombia",
+      "identificationDetails": {
+        "source": "id_analysis",
+        "indicators": [
+          "NIT format matches Colombian pattern",
+          "CC identification type used for shareholder"
+        ],
+        "conflictingSources": [],
+        "requiresReview": "false"
+      },
+      "relatedParties": [
+        {
+          "type": "person",
+          "firstName": "JULIO CESAR",
+          "lastName": "ROMERO MUÑOZ",
+          "identificationType": "C.C.",
+          "identificationNumber": "79.735.871",
+          "relationshipType": "Shareholder",
+          "participationPercentage": "100%",
+          "timeFound": "1",
+          "job": ""
+        }
+      ]
+    },
+    "documentType": "company",
+    "category": "ACC"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "{ \"result\": { \"companyName\": \"ROMEGAS SAS\", \"documentCategory\": \"Equity Composition\", \"taxId\": \"900.127.447-1\", \"country\": \"Colombia\", \"identificationDetails\": { \"source\": \"id_analysis\", \"indicators\": [ \"NIT format matches Colombian pattern\", \"CC identification type used for shareholder\" ], \"conflictingSources\": [], \"requiresReview\": \"false\" }, \"relatedParties\": [ { \"type\": \"person\", \"firstName\": \"JULIO CESAR\", \"lastName\": \"ROMERO MUÑOZ\", \"identificationType\": \"C.C.\", \"identificationNumber\": \"79.735.871\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"100%\", \"timeFound\": \"1\", \"job\": \"\" } ] }, \"documentType\": \"company\", \"category\": \"ACC\" }"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 9,
+      "cache_creation_input_tokens": 6345,
+      "cache_read_input_tokens": 0,
+      "output_tokens": 773
+    },
+    "ResponseMetadata": {
+      "RequestId": "bcae7e03-a3cd-44a8-a37a-f3da5c5fbc75",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Fri, 29 Aug 2025 19:49:29 GMT",
+        "content-type": "application/json",
+        "content-length": "5211",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "bcae7e03-a3cd-44a8-a37a-f3da5c5fbc75",
+        "x-amzn-bedrock-invocation-latency": "14989",
+        "x-amzn-bedrock-cache-write-input-token-count": "6345",
+        "x-amzn-bedrock-cache-read-input-token-count": "0",
+        "x-amzn-bedrock-output-token-count": "773",
+        "x-amzn-bedrock-input-token-count": "9"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_01S5FnqdgWq4YikwDFoqHWbx",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-sonnet-4-20250514",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Let me analyze this equity composition document step by step: 1. **Document Analysis:** - This is a \"COMPOSICION ACCIONARIA\" (Equity Composition) document - It's a \"CERTIFICACIÓN DEL CONTADOR PÚBLICO\" (Public Accountant Certification) - The issuing company is \"LA EMPRESA ROMEGAS SAS\" - It has NIT 900.127.447 - 1 - Document issued on May 31, 2023 - Certified by LAURA I. OVIEDO GOMEZ, Public Accountant 2. **Root Level Extraction:** - companyName: \"LA EMPRESA ROMEGAS SAS\" (removing \"LA EMPRESA\" would make it \"ROMEGAS SAS\") - taxId: \"900.127.447-1\" (Colombian NIT format) - country: Colombia (NIT is Colombian tax ID format) - documentCategory: \"Equity Composition\" 3. **Related Parties:** Looking at the shareholder information: - JULIO CESAR ROMERO MUÑOZ - Document: CC. 79.735.871 - 100% participation - 2,000 shares subscribed - Nominal value $10,000 This is clearly a person (not a company) with: - First name: \"JULIO CESAR\" - Last name: \"ROMERO MUÑOZ\" - ID type: \"CC\" (Cédula de Ciudadanía - Colombian ID) - ID number: \"79.735.871\" - Participation: 100% 4. **Country Identification:** - The NIT format (900.127.447-1) is clearly Colombian - This aligns with the CC identification type for the shareholder - Source: \"id_analysis\" since we're inferring from the NIT format 5. **Validation:** - Tax ID aligns with country (NIT + Colombia ✓) - Identification confirms single shareholder structure - Document validates complete ownership by one individual - No discrepancies found in shareholder documentation",
+          "signature": "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"
+        },
+        {
+          "type": "text",
+          "text": "{ \"result\": { \"companyName\": \"ROMEGAS SAS\", \"documentCategory\": \"Equity Composition\", \"taxId\": \"900.127.447-1\", \"country\": \"Colombia\", \"identificationDetails\": { \"source\": \"id_analysis\", \"indicators\": [ \"NIT format matches Colombian pattern\", \"CC identification type used for shareholder\" ], \"conflictingSources\": [], \"requiresReview\": \"false\" }, \"relatedParties\": [ { \"type\": \"person\", \"firstName\": \"JULIO CESAR\", \"lastName\": \"ROMERO MUÑOZ\", \"identificationType\": \"C.C.\", \"identificationNumber\": \"79.735.871\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"100%\", \"timeFound\": \"1\", \"job\": \"\" } ] }, \"documentType\": \"company\", \"category\": \"ACC\" }"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 9,
+        "cache_creation_input_tokens": 6345,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 773
+      }
+    },
+    "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 8000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+  "api_used": "invoke_model"
+}

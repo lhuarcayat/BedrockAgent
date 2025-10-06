@@ -1,0 +1,86 @@
+{
+  "extraction_data": {
+    "path": "ACC/901108357/204_CA_2020-02-29.pdf",
+    "result": {
+      "companyName": "QUIMEL INGENIERIA S.A.S.",
+      "documentType": "Equity Composition",
+      "taxId": "901.108.357-8",
+      "country": "Colombia",
+      "identificationDetails": {
+        "source": "id_analysis",
+        "indicators": [
+          "NIT identification type indicates Colombia",
+          "C.C identification type indicates Colombia"
+        ],
+        "conflictingSources": [],
+        "requiresReview": true
+      },
+      "relatedParties": [
+        {
+          "firstName": "Jose Carlos",
+          "lastName": "Mendoza Carranza",
+          "identificationType": "CE",
+          "identificationNumber": "737708",
+          "relationshipType": "Shareholder",
+          "participationPercentage": "100%",
+          "timeFound": 1,
+          "job": ""
+        },
+        {
+          "firstName": "Jose Carlos",
+          "lastName": "Mendoza Carranza",
+          "identificationType": "CE",
+          "identificationNumber": "737708",
+          "relationshipType": "Shareholder",
+          "participationPercentage": "",
+          "timeFound": 2,
+          "job": "Representante Legal"
+        }
+      ]
+    },
+    "document_type": "company",
+    "document_number": "901108357",
+    "category": "ACC",
+    "confidenceScores": {
+      "companyName": 95,
+      "taxId": 95,
+      "country": 85,
+      "relatedParties": 65
+    }
+  },
+  "raw_response": {
+    "ResponseMetadata": {
+      "RequestId": "e7bcb98e-f544-49d8-9d75-a8631f3af615",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Fri, 22 Aug 2025 19:43:31 GMT",
+        "content-type": "application/json",
+        "content-length": "1805",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "e7bcb98e-f544-49d8-9d75-a8631f3af615"
+      },
+      "RetryAttempts": 0
+    },
+    "output": {
+      "message": {
+        "role": "assistant",
+        "content": [
+          {
+            "text": "```json\n{\n  \"path\": \"ACC/901108357/204_CA_2020-02-29.pdf\",\n  \"result\": {\n    \"companyName\": \"QUIMEL INGENIERIA S.A.S.\",\n    \"documentType\": \"Equity Composition\",\n    \"taxId\": \"901.108.357-8\",\n    \"country\": \"Colombia\",\n    \"identificationDetails\": {\n      \"source\": \"id_analysis\",\n      \"indicators\": [\n        \"NIT identification type indicates Colombia\",\n        \"C.C identification type indicates Colombia\"\n      ],\n      \"conflictingSources\": [],\n      \"requiresReview\": true\n    },\n    \"relatedParties\": [\n      {\n        \"firstName\": \"Jose Carlos\",\n        \"lastName\": \"Mendoza Carranza\",\n        \"identificationType\": \"CE\",\n        \"identificationNumber\": \"737708\",\n        \"relationshipType\": \"Shareholder\",\n        \"participationPercentage\": \"100%\",\n        \"timeFound\": 1,\n        \"job\": \"\"\n      },\n      {\n        \"firstName\": \"Jose Carlos\",\n        \"lastName\": \"Mendoza Carranza\",\n        \"identificationType\": \"CE\",\n        \"identificationNumber\": \"737708\",\n        \"relationshipType\": \"Shareholder\",\n        \"participationPercentage\": \"\",\n        \"timeFound\": 2,\n        \"job\": \"Representante Legal\"\n      }\n    ]\n  },\n  \"document_type\": \"company\",\n  \"document_number\": \"901108357\",\n  \"category\": \"ACC\",\n  \"confidenceScores\": {\n    \"companyName\": 95,\n    \"taxId\": 95,\n    \"country\": 85,\n    \"relatedParties\": 65\n  }\n}\n```"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "inputTokens": 8309,
+      "outputTokens": 440,
+      "totalTokens": 8749,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 5337
+    }
+  }
+}

@@ -1,0 +1,132 @@
+{
+  "extraction_data": {
+    "result": {
+      "PrincipalCompanyName": "MONTE INGENIEROS S.A.C.",
+      "DocumentCategory": "Equity Composition",
+      "TaxId": "ForReview",
+      "IdentificationType": "ForReview",
+      "Country": "Peru",
+      "IdentificationDetails": {
+        "Source": "TextReference",
+        "Indicators": [
+          "Piura"
+        ],
+        "ConflictingSources": [
+          "Missing tax identification number for principal company",
+          "Missing identification details for shareholders"
+        ],
+        "RequiresReview": "true"
+      },
+      "RelatedParties": [
+        {
+          "Type": "person",
+          "FirstName": "César Enrique",
+          "LastName": "Baffi Arburua",
+          "IdType": "ForReview",
+          "IdNumber": "ForReview",
+          "RelationshipType": "Shareholder",
+          "ParticipationPercentage": "96.10",
+          "TimeFound": "1",
+          "Job": ""
+        },
+        {
+          "Type": "person",
+          "FirstName": "Enrique",
+          "LastName": "Baffi Arroyo",
+          "IdType": "ForReview",
+          "IdNumber": "ForReview",
+          "RelationshipType": "Shareholder",
+          "ParticipationPercentage": "3.76",
+          "TimeFound": "2",
+          "Job": ""
+        },
+        {
+          "Type": "person",
+          "FirstName": "Mario",
+          "LastName": "Lazo Ruiz",
+          "IdType": "ForReview",
+          "IdNumber": "ForReview",
+          "RelationshipType": "Shareholder",
+          "ParticipationPercentage": "0.14",
+          "TimeFound": "1",
+          "Job": ""
+        }
+      ]
+    },
+    "DocumentType": "company",
+    "Category": "ACC"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "{ \"result\": { \"PrincipalCompanyName\": \"MONTE INGENIEROS S.A.C.\", \"DocumentCategory\": \"Equity Composition\", \"TaxId\": \"ForReview\", \"IdentificationType\": \"ForReview\", \"Country\": \"Peru\", \"IdentificationDetails\": { \"Source\": \"TextReference\", \"Indicators\": [ \"Piura\" ], \"ConflictingSources\": [\"Missing tax identification number for principal company\", \"Missing identification details for shareholders\"], \"RequiresReview\": \"true\" }, \"RelatedParties\": [ { \"Type\": \"person\", \"FirstName\": \"César Enrique\", \"LastName\": \"Baffi Arburua\", \"IdType\": \"ForReview\", \"IdNumber\": \"ForReview\", \"RelationshipType\": \"Shareholder\", \"ParticipationPercentage\": \"96.10\", \"TimeFound\": \"1\", \"Job\": \"\" }, { \"Type\": \"person\", \"FirstName\": \"Enrique\", \"LastName\": \"Baffi Arroyo\", \"IdType\": \"ForReview\", \"IdNumber\": \"ForReview\", \"RelationshipType\": \"Shareholder\", \"ParticipationPercentage\": \"3.76\", \"TimeFound\": \"2\", \"Job\": \"\" }, { \"Type\": \"person\", \"FirstName\": \"Mario\", \"LastName\": \"Lazo Ruiz\", \"IdType\": \"ForReview\", \"IdNumber\": \"ForReview\", \"RelationshipType\": \"Shareholder\", \"ParticipationPercentage\": \"0.14\", \"TimeFound\": \"1\", \"Job\": \"\" } ] }, \"DocumentType\": \"company\", \"Category\": \"ACC\" }"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 1605,
+      "cache_creation_input_tokens": 4822,
+      "cache_read_input_tokens": 0,
+      "output_tokens": 1336
+    },
+    "ResponseMetadata": {
+      "RequestId": "8c09554b-2259-405b-aeaf-3925621561d9",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Mon, 01 Sep 2025 02:06:52 GMT",
+        "content-type": "application/json",
+        "content-length": "8121",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "8c09554b-2259-405b-aeaf-3925621561d9",
+        "x-amzn-bedrock-invocation-latency": "23762",
+        "x-amzn-bedrock-cache-write-input-token-count": "4822",
+        "x-amzn-bedrock-cache-read-input-token-count": "0",
+        "x-amzn-bedrock-output-token-count": "1336",
+        "x-amzn-bedrock-input-token-count": "1605"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_01F1SmzQV6p8Z4EHiSmAPJVv",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-sonnet-4-20250514",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Let me analyze this document page by page to extract the required information according to the rules. From what I can see on page 1, this is a legal document in Spanish from a notary office in Peru. Let me extract the key information: 1. **PrincipalCompanyName**: I need to find the main company. Looking at the document, I see \"MONTE INGENIERO5 S.A.C.\" mentioned in the text as the company whose shareholder composition is being reported on. 2. **Country**: This appears to be Peru based on several indicators: - The notary office is in \"PIURA\" which is a city in Peru - References to \"PERSONAS JURÍDICAS\" and the document structure are typical of Peruvian documents - The postal address format and phone number format (073) 331306 is consistent with Peru 3. **TaxId and IdentificationType**: I need to find the tax ID for the main company. Looking for RUC numbers or similar identifiers. I see \"PARTIDA ELECTRÓNICA NÚMERO 00111305\" but this seems to be a registry number, not a tax ID. 4. **RelatedParties**: I can see several individuals mentioned: - ENRIQUE BAFFI ARROYO (mentioned multiple times) - SERGIO FRANCISCO VIDAL CASTILLO - CÉSAR ENRIQUE BAFFI ARBURUA - ENRIQUE BAFFI ARROYO - MARIO LAZO RUIZ Looking at the shareholding information, I can see a table at the bottom with percentages: - CÉSAR ENRIQUE BAFFI ARBURUA: 77'847,828== | 96.10% - ENRIQUE BAFFI ARROYO: 3'052,172=== | 3.76% - MARIO LAZO RUIZ: 100,000=== | 0.14% - TOTAL: 81'000,000== | 100.00% I confirm the total shareholding matches the individual shareholder percentages. The document details a share transfer for MONTE INGENIEROS S.A.C., with a clear breakdown of ownership percentages. The key focus is on the equity composition, showing a majority ownership by César Enrique Baffi Arburua. The shareholding structure reveals concentrated ownership, with three key individuals holding the entire company equity. Piura's location suggests a Peruvian business context, though specific tax identification remains pending verification. I'll need to carefully review the document for potential DNI or RUC number details to confirm individual and corporate identities.",
+          "signature": "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"
+        },
+        {
+          "type": "text",
+          "text": "{ \"result\": { \"PrincipalCompanyName\": \"MONTE INGENIEROS S.A.C.\", \"DocumentCategory\": \"Equity Composition\", \"TaxId\": \"ForReview\", \"IdentificationType\": \"ForReview\", \"Country\": \"Peru\", \"IdentificationDetails\": { \"Source\": \"TextReference\", \"Indicators\": [ \"Piura\" ], \"ConflictingSources\": [\"Missing tax identification number for principal company\", \"Missing identification details for shareholders\"], \"RequiresReview\": \"true\" }, \"RelatedParties\": [ { \"Type\": \"person\", \"FirstName\": \"César Enrique\", \"LastName\": \"Baffi Arburua\", \"IdType\": \"ForReview\", \"IdNumber\": \"ForReview\", \"RelationshipType\": \"Shareholder\", \"ParticipationPercentage\": \"96.10\", \"TimeFound\": \"1\", \"Job\": \"\" }, { \"Type\": \"person\", \"FirstName\": \"Enrique\", \"LastName\": \"Baffi Arroyo\", \"IdType\": \"ForReview\", \"IdNumber\": \"ForReview\", \"RelationshipType\": \"Shareholder\", \"ParticipationPercentage\": \"3.76\", \"TimeFound\": \"2\", \"Job\": \"\" }, { \"Type\": \"person\", \"FirstName\": \"Mario\", \"LastName\": \"Lazo Ruiz\", \"IdType\": \"ForReview\", \"IdNumber\": \"ForReview\", \"RelationshipType\": \"Shareholder\", \"ParticipationPercentage\": \"0.14\", \"TimeFound\": \"1\", \"Job\": \"\" } ] }, \"DocumentType\": \"company\", \"Category\": \"ACC\" }"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 1605,
+        "cache_creation_input_tokens": 4822,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 1336
+      }
+    },
+    "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 8000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+  "api_used": "invoke_model"
+}

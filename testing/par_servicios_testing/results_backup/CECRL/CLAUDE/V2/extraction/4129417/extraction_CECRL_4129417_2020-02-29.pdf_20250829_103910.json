@@ -1,0 +1,88 @@
+{
+  "extraction_data": {
+    "result": {
+      "firstName": "PABLO EMILIO",
+      "lastName": "OVALLE GUTIERREZ",
+      "country_issuer": "Colombia",
+      "nationality": "Colombia",
+      "identificationType": "Cédula de Ciudadanía",
+      "identificationNumber": "4129417",
+      "message": ""
+    },
+    "document_type": "person",
+    "category": "CECRL"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "```json { \"result\": { \"firstName\": \"PABLO EMILIO\", \"lastName\": \"OVALLE GUTIERREZ\", \"country_issuer\": \"Colombia\", \"nationality\": \"Colombia\", \"identificationType\": \"Cédula de Ciudadanía\", \"identificationNumber\": \"4129417\", \"message\": \"\" }, \"document_type\": \"person\", \"category\": \"CECRL\" } ```"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 10,
+      "cache_creation_input_tokens": 6058,
+      "cache_read_input_tokens": 0,
+      "output_tokens": 542
+    },
+    "ResponseMetadata": {
+      "RequestId": "a29152b7-f9bd-44f7-ae6b-38023cc5f9bc",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Fri, 29 Aug 2025 15:39:10 GMT",
+        "content-type": "application/json",
+        "content-length": "4346",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "a29152b7-f9bd-44f7-ae6b-38023cc5f9bc",
+        "x-amzn-bedrock-invocation-latency": "9340",
+        "x-amzn-bedrock-cache-write-input-token-count": "6058",
+        "x-amzn-bedrock-cache-read-input-token-count": "0",
+        "x-amzn-bedrock-output-token-count": "542",
+        "x-amzn-bedrock-input-token-count": "10"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_01A63R8y7yDyVHKqKahwRQHv",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-sonnet-4-20250514",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Let me analyze this Colombian identification document using the extraction methodology provided. Looking at the document: 1. Header shows \"REPUBLICA DE COLOMBIA\" and \"IDENTIFICACION PERSONAL\" 2. Document type shows \"CEDULA DE CIUDADANÍA\" 3. The ID number appears to be 4129417 The person's name appears as: - \"OVALLE GUTIERREZ\" - \"PABLO EMILIO\" Based on Colombian naming conventions and the layout, it appears: - \"OVALLE GUTIERREZ\" are the surnames/apellidos - \"PABLO EMILIO\" are the given names/nombres The back of the document shows: - Birth date: 10-OCT-1951 - Birth place: GARAGOA (BOYACÁ) - Height: 1.65 - Blood type: O+ - Sex: M - Issue date: 23-ABR-1973 GUATEQUE Since this is a Colombian document issued by Colombia, and there's no explicit nationality field but the birth place is in Colombia (Garagoa, Boyacá), the nationality would be Colombia. The identification number appears to be 4129417 based on the front of the document. Let me extract according to the rules: - firstName: \"PABLO EMILIO\" (the nombres/given names) - lastName: \"OVALLE GUTIERREZ\" (the apellidos/surnames) - country_issuer: \"Colombia\" (República de Colombia header) - nationality: \"Colombia\" (birth in Colombian city + Colombian document) - identificationType: \"Cédula de Ciudadanía\" (explicitly stated) - identificationNumber: \"4129417\" (the number shown on the front) - message: \"\" (all fields extracted successfully)",
+          "signature": "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"
+        },
+        {
+          "type": "text",
+          "text": "```json { \"result\": { \"firstName\": \"PABLO EMILIO\", \"lastName\": \"OVALLE GUTIERREZ\", \"country_issuer\": \"Colombia\", \"nationality\": \"Colombia\", \"identificationType\": \"Cédula de Ciudadanía\", \"identificationNumber\": \"4129417\", \"message\": \"\" }, \"document_type\": \"person\", \"category\": \"CECRL\" } ```"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 10,
+        "cache_creation_input_tokens": 6058,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 542
+      }
+    },
+    "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 8000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+  "api_used": "invoke_model"
+}

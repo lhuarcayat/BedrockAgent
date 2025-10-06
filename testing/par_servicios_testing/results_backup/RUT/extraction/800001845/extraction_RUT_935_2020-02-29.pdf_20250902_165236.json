@@ -1,0 +1,121 @@
+{
+  "extraction_data": {
+    "result": {
+      "CompanyName": "SERPET JR Y CIA S.A.S.",
+      "Country": "COLOMBIA",
+      "TaxId": "800001845",
+      "VerificationDigit": "3",
+      "IdentificationType": "NIT",
+      "PersonType": "Persona jurídica",
+      "ConflictingSources": [],
+      "RequiresReview": "false"
+    },
+    "RelatedParties": [
+      {
+        "FirstName": "JULIAN RENATO",
+        "LastName": "PARRA GOMEZ",
+        "IdType": "Cédula de Ciudadanía",
+        "IdNumber": "1032393980",
+        "RelationshipType": "socio"
+      },
+      {
+        "FirstName": "JULIANA JOSE",
+        "LastName": "PARRA GOMEZ",
+        "IdType": "Cédula de Ciudadanía",
+        "IdNumber": "1032479890",
+        "RelationshipType": "socio"
+      },
+      {
+        "FirstName": "CESAR AUGUSTO",
+        "LastName": "ARANGUREN ILLESCAS",
+        "IdType": "Cédula de Ciudadanía",
+        "IdNumber": "93958686",
+        "RelationshipType": "Revisor fiscal principal"
+      },
+      {
+        "FirstName": "OSCAR JAVIER",
+        "LastName": "MONGUI ROJAS",
+        "IdType": "Cédula de Ciudadanía",
+        "IdNumber": "74084021",
+        "RelationshipType": "Revisor fiscal suplente"
+      }
+    ],
+    "Address": "CR 30 46 140 CR 5 34 34 VDA LA NIATA CR 5 29 28 VIA YOPAL MORICHAL LAS AMERICAS 1 2 19 VDA YOPITOS VDA PIÑALITO TAURAMEN, Yopal, Casanare",
+    "DocumentGenerationDate": "10-01-2024 10:17:10AM",
+    "DocumentType": "company",
+    "Category": "RUT"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "{ \"result\": { \"CompanyName\": \"SERPET JR Y CIA S.A.S.\", \"Country\": \"COLOMBIA\", \"TaxId\": \"800001845\", \"VerificationDigit\": \"3\", \"IdentificationType\": \"NIT\", \"PersonType\": \"Persona jurídica\", \"ConflictingSources\": [], \"RequiresReview\": \"false\" }, \"RelatedParties\": [ { \"FirstName\": \"JULIAN RENATO\", \"LastName\": \"PARRA GOMEZ\", \"IdType\": \"Cédula de Ciudadanía\", \"IdNumber\": \"1032393980\", \"RelationshipType\": \"socio\" }, { \"FirstName\": \"JULIANA JOSE\", \"LastName\": \"PARRA GOMEZ\", \"IdType\": \"Cédula de Ciudadanía\", \"IdNumber\": \"1032479890\", \"RelationshipType\": \"socio\" }, { \"FirstName\": \"CESAR AUGUSTO\", \"LastName\": \"ARANGUREN ILLESCAS\", \"IdType\": \"Cédula de Ciudadanía\", \"IdNumber\": \"93958686\", \"RelationshipType\": \"Revisor fiscal principal\" }, { \"FirstName\": \"OSCAR JAVIER\", \"LastName\": \"MONGUI ROJAS\", \"IdType\": \"Cédula de Ciudadanía\", \"IdNumber\": \"74084021\", \"RelationshipType\": \"Revisor fiscal suplente\" } ], \"Address\": \"CR 30 46 140 CR 5 34 34 VDA LA NIATA CR 5 29 28 VIA YOPAL MORICHAL LAS AMERICAS 1 2 19 VDA YOPITOS VDA PIÑALITO TAURAMEN, Yopal, Casanare\", \"DocumentGenerationDate\": \"10-01-2024 10:17:10AM\", \"DocumentType\": \"company\", \"Category\": \"RUT\" }"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 14496,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 2990,
+      "output_tokens": 1213
+    },
+    "ResponseMetadata": {
+      "RequestId": "7edeec15-18f2-4144-a6f7-8c5499170756",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Tue, 02 Sep 2025 21:52:36 GMT",
+        "content-type": "application/json",
+        "content-length": "6262",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "7edeec15-18f2-4144-a6f7-8c5499170756",
+        "x-amzn-bedrock-invocation-latency": "21418",
+        "x-amzn-bedrock-cache-write-input-token-count": "0",
+        "x-amzn-bedrock-cache-read-input-token-count": "2990",
+        "x-amzn-bedrock-output-token-count": "1213",
+        "x-amzn-bedrock-input-token-count": "14496"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_01R6GtoN48ewoQVeWYgDeVCP",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-sonnet-4-20250514",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Let me carefully extract the information from this Colombian RUT document following the specific field rules. I'll go through each field systematically: 1. CompanyName (cell \"35. Razón social\"): Looking at the document, I can see \"SERPET JR Y CIA S.A.S.\" 2. Country (cell \"38. País\"): I can see \"COLOMBIA\" 3. TaxId (cell \"5. Número de Identificación Tributaria (NIT)\"): I can see \"8 0 0 0 0 1 8 4 5\" 4. VerificationDigit (cell \"6. DV\"): I can see \"3\" 5. IdentificationType: For RUT documents, this should be \"NIT\" 6. PersonType (cell \"24. Tipo de contribuyente\"): I can see \"Persona jurídica\" 7. Address: This combines cells \"41. Dirección principal\", \"40. Ciudad/Municipio\", \"39. Departamento\": - \"41. Dirección principal\": \"CR 30 46 140 CR 5 34 34 VDA LA NIATA CR 5 29 28 VIA YOPAL MORICHAL LAS AMERICAS 1 2 19 VDA YOPITOS VDA PIÑALITO TAURAMEN\" - \"40. Ciudad/Municipio\": \"Yopal\" - \"39. Departamento\": \"Casanare\" 8. DocumentGenerationDate: At the bottom I can see \"Fecha generación documento PDF: 10-01-2024 10:17:10AM\" 9. RelatedParties: I need to look for information in the \"Socios y/o miembros de Juntas Directivas, Consorcios, Uniones Temporales\" and \"Revisor Fiscal y contador\" sections. I've identified two key shareholders and fiscal reviewers. The shareholders are Julian Renato Parra Gomez (ID 103239398) and Juliana Jose Parra Gomez (ID 103247989). The fiscal reviewers include Cesar Augusto Aranguren Illescas as the primary fiscal reviewer (ID 939586867), with an incomplete entry for the substitute fiscal reviewer. The contador (accountant) section remains unspecified, with an incomplete identification for Oscar Javier Mongui Rojas.",
+          "signature": "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"
+        },
+        {
+          "type": "text",
+          "text": "{ \"result\": { \"CompanyName\": \"SERPET JR Y CIA S.A.S.\", \"Country\": \"COLOMBIA\", \"TaxId\": \"800001845\", \"VerificationDigit\": \"3\", \"IdentificationType\": \"NIT\", \"PersonType\": \"Persona jurídica\", \"ConflictingSources\": [], \"RequiresReview\": \"false\" }, \"RelatedParties\": [ { \"FirstName\": \"JULIAN RENATO\", \"LastName\": \"PARRA GOMEZ\", \"IdType\": \"Cédula de Ciudadanía\", \"IdNumber\": \"1032393980\", \"RelationshipType\": \"socio\" }, { \"FirstName\": \"JULIANA JOSE\", \"LastName\": \"PARRA GOMEZ\", \"IdType\": \"Cédula de Ciudadanía\", \"IdNumber\": \"1032479890\", \"RelationshipType\": \"socio\" }, { \"FirstName\": \"CESAR AUGUSTO\", \"LastName\": \"ARANGUREN ILLESCAS\", \"IdType\": \"Cédula de Ciudadanía\", \"IdNumber\": \"93958686\", \"RelationshipType\": \"Revisor fiscal principal\" }, { \"FirstName\": \"OSCAR JAVIER\", \"LastName\": \"MONGUI ROJAS\", \"IdType\": \"Cédula de Ciudadanía\", \"IdNumber\": \"74084021\", \"RelationshipType\": \"Revisor fiscal suplente\" } ], \"Address\": \"CR 30 46 140 CR 5 34 34 VDA LA NIATA CR 5 29 28 VIA YOPAL MORICHAL LAS AMERICAS 1 2 19 VDA YOPITOS VDA PIÑALITO TAURAMEN, Yopal, Casanare\", \"DocumentGenerationDate\": \"10-01-2024 10:17:10AM\", \"DocumentType\": \"company\", \"Category\": \"RUT\" }"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 14496,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 2990,
+        "output_tokens": 1213
+      }
+    },
+    "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 9000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+  "api_used": "invoke_model"
+}

@@ -1,0 +1,90 @@
+{
+  "extraction_data": {
+    "path": "CECRL/5120000874/C7VRF059K_2020-04-13.pdf",
+    "result": {
+      "firstName": "MICHAEL",
+      "lastName": "KOSFELD",
+      "country_issuer": "Alemania",
+      "nationality": "Alemania",
+      "identificationType": "Pasaporte",
+      "identificationNumber": "C7VRF059K",
+      "message": ""
+    },
+    "document_type": "person",
+    "documentNumber": "5120000874",
+    "category": "CECRL"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "```json { \"result\": { \"firstName\": \"MICHAEL\", \"lastName\": \"KOSFELD\", \"country_issuer\": \"Alemania\", \"nationality\": \"Alemania\", \"identificationType\": \"Pasaporte\", \"identificationNumber\": \"C7VRF059K\", \"message\": \"\" }, \"document_type\": \"person\", \"category\": \"CECRL\" } ```"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 10,
+      "cache_creation_input_tokens": 6003,
+      "cache_read_input_tokens": 0,
+      "output_tokens": 484
+    },
+    "ResponseMetadata": {
+      "RequestId": "2d14faf3-f6fe-4f03-a2e5-665b8c8d2740",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Thu, 28 Aug 2025 15:34:31 GMT",
+        "content-type": "application/json",
+        "content-length": "2145",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "2d14faf3-f6fe-4f03-a2e5-665b8c8d2740",
+        "x-amzn-bedrock-invocation-latency": "12648",
+        "x-amzn-bedrock-cache-write-input-token-count": "6003",
+        "x-amzn-bedrock-cache-read-input-token-count": "0",
+        "x-amzn-bedrock-output-token-count": "484",
+        "x-amzn-bedrock-input-token-count": "10"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_01ExE8ZUxWVVRfFeo5coA6un",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-3-7-sonnet-20250219",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Let me analyze the document provided: This is a German passport (\"REISEPASS\" / \"BUNDESREPUBLIK DEUTSCHLAND\" clearly visible at the bottom of the image). I can see several fields with information: 1. Personal Information: - Name: KOSFELD MICHAEL - Type: \"P\" (Passport) - Code: \"D\" (Germany) - Passport No: C7VRF059K - Date of birth: 20.01.1964 - Sex: M (Male) - Nationality: DEUTSCH (German) - Place of birth: MÖNCHENGLADBACH - Date of issue: 14.02.2019 - Date of expiry: 13.02.2029 - Issuing Authority: STADT SIEGEN 2. Following the field extraction rules: - firstName: \"MICHAEL\" (from the Vornamen/Given names field) - lastName: \"KOSFELD\" (from the Name/Surname field) - country_issuer: \"Alemania\" (translating from \"BUNDESREPUBLIK DEUTSCHLAND\") - nationality: \"Alemania\" (translating from \"DEUTSCH\") - identificationType: \"Pasaporte\" (translating from \"REISEPASS\") - identificationNumber: \"C7VRF059K\" (from the Passport No. field) - message: \"\" (empty as this is a valid official identification document) Now I'll format this according to the required JSON schema.",
+          "signature": "ErcBCkgIBxABGAIiQMDQVmokoOKoXINTeq59C7VeGttXJZtFNXjmKJ9XJCtOvFWW7Xpzd4K96Urt12SOZTc5eIGSK9DQyv3DPZDDkaUSDEMkFwxKv4hVJMknHRoM47rAfzZ7mBJaLW0ZIjCw+kG1KOCPIUn7WC6jY/vkP/2YDTfi/ZI0aBIaMThcogOzMKNuO9r4VgpTzDo8h0cqHUa5XUQxSKoe/9Q808+dRlxZgt17bSUQXAaESDA5GAI="
+        },
+        {
+          "type": "text",
+          "text": "```json { \"result\": { \"firstName\": \"MICHAEL\", \"lastName\": \"KOSFELD\", \"country_issuer\": \"Alemania\", \"nationality\": \"Alemania\", \"identificationType\": \"Pasaporte\", \"identificationNumber\": \"C7VRF059K\", \"message\": \"\" }, \"document_type\": \"person\", \"category\": \"CECRL\" } ```"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 10,
+        "cache_creation_input_tokens": 6003,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 484
+      }
+    },
+    "model_id": "us.anthropic.claude-3-7-sonnet-20250219-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 8000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "model_used": "us.anthropic.claude-3-7-sonnet-20250219-v1:0",
+  "api_used": "invoke_model"
+}

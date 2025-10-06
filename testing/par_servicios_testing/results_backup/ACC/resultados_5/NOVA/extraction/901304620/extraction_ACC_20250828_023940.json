@@ -1,0 +1,88 @@
+{
+  "extraction_data": {
+    "path": "ACC/901304620/237_CA_2020-02-29.pdf",
+    "result": {
+      "companyName": "PROCESS POINT COLOMBIA S.A.S.",
+      "documentCategory": "Equity Composition",
+      "taxId": "901.304.620-0",
+      "country": "Colombia",
+      "identificationDetails": {
+        "source": "text_reference",
+        "indicators": [
+          "Colombia"
+        ],
+        "conflictingSources": [],
+        "requiresReview": "false"
+      },
+      "relatedParties": [
+        {
+          "type": "person",
+          "firstName": "Javier Hernán",
+          "lastName": "Becerra Rodríguez",
+          "identificationType": "CC",
+          "identificationNumber": "79.717.267",
+          "relationshipType": "Shareholder",
+          "participationPercentage": "0%",
+          "timeFound": "1",
+          "job": "Contador"
+        },
+        {
+          "type": "person",
+          "firstName": "Jamie Todd",
+          "lastName": "Rutherford",
+          "identificationType": "POR REVISAR",
+          "identificationNumber": "POR REVISAR",
+          "relationshipType": "Shareholder",
+          "participationPercentage": "100%",
+          "timeFound": "1",
+          "job": ""
+        }
+      ]
+    },
+    "documentType": "company",
+    "documentNumber": "901304620",
+    "category": "ACC"
+  },
+  "raw_response": {
+    "ResponseMetadata": {
+      "RequestId": "fdb4cab7-a910-475e-aa0b-6ecbcdd3f1f7",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Thu, 28 Aug 2025 07:39:39 GMT",
+        "content-type": "application/json",
+        "content-length": "1475",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "fdb4cab7-a910-475e-aa0b-6ecbcdd3f1f7"
+      },
+      "RetryAttempts": 0
+    },
+    "output": {
+      "message": {
+        "role": "assistant",
+        "content": [
+          {
+            "text": "```json { \"result\": { \"companyName\": \"PROCESS POINT COLOMBIA S.A.S.\", \"documentCategory\": \"Equity Composition\", \"taxId\": \"901.304.620-0\", \"country\": \"Colombia\", \"identificationDetails\": { \"source\": \"text_reference\", \"indicators\": [ \"Colombia\" ], \"conflictingSources\": [], \"requiresReview\": \"false\" }, \"relatedParties\": [ { \"type\": \"person\", \"firstName\": \"Javier Hernán\", \"lastName\": \"Becerra Rodríguez\", \"identificationType\": \"CC\", \"identificationNumber\": \"79.717.267\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"0%\", \"timeFound\": \"1\", \"job\": \"Contador\" }, { \"type\": \"person\", \"firstName\": \"Jamie Todd\", \"lastName\": \"Rutherford\", \"identificationType\": \"POR REVISAR\", \"identificationNumber\": \"POR REVISAR\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"100%\", \"timeFound\": \"1\", \"job\": \"\" } ] }, \"documentType\": \"company\", \"category\": \"ACC\" } ```"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "inputTokens": 5539,
+      "outputTokens": 306,
+      "totalTokens": 5845
+    },
+    "metrics": {
+      "latencyMs": 6064
+    },
+    "model_id": "us.amazon.nova-pro-v1:0",
+    "api_used": "converse",
+    "model_params": {
+      "maxTokens": 8000,
+      "topP": 1,
+      "temperature": 0
+    }
+  },
+  "model_used": "us.amazon.nova-pro-v1:0",
+  "api_used": "converse"
+}

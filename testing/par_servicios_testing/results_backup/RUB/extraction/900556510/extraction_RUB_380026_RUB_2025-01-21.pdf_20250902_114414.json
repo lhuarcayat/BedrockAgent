@@ -1,0 +1,105 @@
+{
+  "extraction_data": {
+    "result": {
+      "CompanyName": "M&M ENERGY SOLUTIONS SAS",
+      "TaxId": "900556510",
+      "IdentificationType": "NIT",
+      "Country": "Colombia",
+      "ConflictingSources": [],
+      "RequiresReview": "false"
+    },
+    "RelatedParties": [
+      {
+        "FirstName": "LETTY YOHANA",
+        "LastName": "LOPEZ VANEGAS",
+        "IdType": "NIT",
+        "IdNumber": "1120355643",
+        "NoveltyType": "Registro",
+        "ParticipationPercentage": "10"
+      },
+      {
+        "FirstName": "MILTON JESUS",
+        "LastName": "MOSQUERA GUTIERREZ",
+        "IdType": "NIT",
+        "IdNumber": "86012141",
+        "NoveltyType": "Registro",
+        "ParticipationPercentage": "90"
+      }
+    ],
+    "DocumentType": "company",
+    "Category": "RUB"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "{ \"result\": { \"CompanyName\": \"M&M ENERGY SOLUTIONS SAS\", \"TaxId\": \"900556510\", \"IdentificationType\": \"NIT\", \"Country\": \"Colombia\", \"ConflictingSources\": [], \"RequiresReview\": \"false\" }, \"RelatedParties\": [ { \"FirstName\": \"LETTY YOHANA\", \"LastName\": \"LOPEZ VANEGAS\", \"IdType\": \"NIT\", \"IdNumber\": \"1120355643\", \"NoveltyType\": \"Registro\", \"ParticipationPercentage\": \"10\" }, { \"FirstName\": \"MILTON JESUS\", \"LastName\": \"MOSQUERA GUTIERREZ\", \"IdType\": \"NIT\", \"IdNumber\": \"86012141\", \"NoveltyType\": \"Registro\", \"ParticipationPercentage\": \"90\" } ], \"DocumentType\": \"company\", \"Category\": \"RUB\" }"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 5021,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 2039,
+      "output_tokens": 918
+    },
+    "ResponseMetadata": {
+      "RequestId": "5c3fa019-d841-4fc2-9dff-45ca7988a623",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Tue, 02 Sep 2025 16:44:14 GMT",
+        "content-type": "application/json",
+        "content-length": "5512",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "5c3fa019-d841-4fc2-9dff-45ca7988a623",
+        "x-amzn-bedrock-invocation-latency": "15152",
+        "x-amzn-bedrock-cache-write-input-token-count": "0",
+        "x-amzn-bedrock-cache-read-input-token-count": "2039",
+        "x-amzn-bedrock-output-token-count": "918",
+        "x-amzn-bedrock-input-token-count": "5021"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_01FGbzd3EmYmGckoQrb1ZGKK",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-sonnet-4-20250514",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Let me carefully analyze this Colombian RUB (Final Beneficiaries Report) document issued by DIAN. From page 1, I can identify: - This is a \"Reporte de Beneficiarios Finales\" (Final Beneficiaries Report) - Company name: \"M&M ENERGY SOLUTIONS SAS\" (from cell 11. Denominación o razón social) - Tax ID: \"900556510\" (from cell 18. Número de identificación) - DV: \"6\" (from cell 6. DV) - Country: Colombia (since this is a DIAN document) - Identification Type: This is a DIAN Final Beneficiaries Report, so it should be \"NIT\" From page 2, I can see the beneficiary information in the \"Datos beneficiarios finales\" section. There are 2 beneficiaries: Beneficiary 1: - 30. Número de identificación: 1120355643 - 32. Número de Identificación Tributaria - NIT: 1120355643 (matches) - 34. Primer apellido: LOPEZ - 35. Segundo apellido: VANEGAS - 36. Primer nombre: LETTY - 37. Otros nombres: YOHANA - 57. Porcentaje de participación: 10 - 61. Tipo de novedad: Registro (Cód. 1) Beneficiary 2: - 30. Número de identificación: 86012141 - 32. Número de Identificación Tributaria - NIT: 86012141 (matches) - 34. Primer apellido: MOSQUERA - 35. Segundo apellido: GUTIERREZ - 36. Primer nombre: MILTON - 37. Otros nombres: JESUS - 57. Porcentaje de participación: 90 - 61. Tipo de novedad: Registro (Cód. 1) I notice the registration type for both beneficiaries is consistent, indicating a standard initial filing. The document shows a complete ownership structure with two individuals fully accounting for the company's ownership. I'll map the remaining participant details, ensuring each field aligns with the required schema format.",
+          "signature": "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"
+        },
+        {
+          "type": "text",
+          "text": "{ \"result\": { \"CompanyName\": \"M&M ENERGY SOLUTIONS SAS\", \"TaxId\": \"900556510\", \"IdentificationType\": \"NIT\", \"Country\": \"Colombia\", \"ConflictingSources\": [], \"RequiresReview\": \"false\" }, \"RelatedParties\": [ { \"FirstName\": \"LETTY YOHANA\", \"LastName\": \"LOPEZ VANEGAS\", \"IdType\": \"NIT\", \"IdNumber\": \"1120355643\", \"NoveltyType\": \"Registro\", \"ParticipationPercentage\": \"10\" }, { \"FirstName\": \"MILTON JESUS\", \"LastName\": \"MOSQUERA GUTIERREZ\", \"IdType\": \"NIT\", \"IdNumber\": \"86012141\", \"NoveltyType\": \"Registro\", \"ParticipationPercentage\": \"90\" } ], \"DocumentType\": \"company\", \"Category\": \"RUB\" }"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 5021,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 2039,
+        "output_tokens": 918
+      }
+    },
+    "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 9000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+  "api_used": "invoke_model"
+}

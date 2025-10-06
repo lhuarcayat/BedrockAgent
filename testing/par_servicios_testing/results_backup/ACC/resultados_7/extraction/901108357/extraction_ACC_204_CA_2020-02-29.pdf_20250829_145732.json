@@ -1,0 +1,107 @@
+{
+  "extraction_data": {
+    "result": {
+      "companyName": "QUIMEL INGENIERIA S.A.S.",
+      "documentCategory": "Equity Composition",
+      "taxId": "901.108.357-8",
+      "country": "Colombia",
+      "identificationDetails": {
+        "source": "id_analysis",
+        "indicators": [
+          "NIT format 901.108.357-8 matches Colombian pattern",
+          "C.E. identification type indicates Colombian Cédula de Extranjería"
+        ],
+        "conflictingSources": [],
+        "requiresReview": "false"
+      },
+      "relatedParties": [
+        {
+          "type": "person",
+          "firstName": "Jose Carlos",
+          "lastName": "Mendoza Carranza",
+          "identificationType": "C.E.",
+          "identificationNumber": "737708",
+          "relationshipType": "Shareholder",
+          "participationPercentage": "100%",
+          "timeFound": "1",
+          "job": "Representante Legal"
+        }
+      ]
+    },
+    "documentType": "company",
+    "category": "ACC"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "{ \"result\": { \"companyName\": \"QUIMEL INGENIERIA S.A.S.\", \"documentCategory\": \"Equity Composition\", \"taxId\": \"901.108.357-8\", \"country\": \"Colombia\", \"identificationDetails\": { \"source\": \"id_analysis\", \"indicators\": [ \"NIT format 901.108.357-8 matches Colombian pattern\", \"C.E. identification type indicates Colombian Cédula de Extranjería\" ], \"conflictingSources\": [], \"requiresReview\": \"false\" }, \"relatedParties\": [ { \"type\": \"person\", \"firstName\": \"Jose Carlos\", \"lastName\": \"Mendoza Carranza\", \"identificationType\": \"C.E.\", \"identificationNumber\": \"737708\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"100%\", \"timeFound\": \"1\", \"job\": \"Representante Legal\" } ] }, \"documentType\": \"company\", \"category\": \"ACC\" }"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 9,
+      "cache_creation_input_tokens": 6486,
+      "cache_read_input_tokens": 0,
+      "output_tokens": 1116
+    },
+    "ResponseMetadata": {
+      "RequestId": "682c8790-120f-401d-a5fe-fa5009015bf9",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Fri, 29 Aug 2025 19:57:32 GMT",
+        "content-type": "application/json",
+        "content-length": "7804",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "682c8790-120f-401d-a5fe-fa5009015bf9",
+        "x-amzn-bedrock-invocation-latency": "33973",
+        "x-amzn-bedrock-cache-write-input-token-count": "6486",
+        "x-amzn-bedrock-cache-read-input-token-count": "0",
+        "x-amzn-bedrock-output-token-count": "1116",
+        "x-amzn-bedrock-input-token-count": "9"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_018jdkL3Bw1YGdCDqERozdQc",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-sonnet-4-20250514",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Let me analyze this document step by step according to the rules provided. **Step 1: Document Analysis** This appears to be an equity composition certificate from a Colombian company QUIMEL INGENIERIA S.A.S. **Step 2: Root Level Extraction** 1. **companyName**: From the document header \"LA SUSCRITA CONTADORA PÚBLICA DE QUIMEL INGENIERIA S.A.S.\" and throughout the document, the company name is \"QUIMEL INGENIERIA S.A.S.\" 2. **taxId**: The document states \"identificada con el NIT No. 901.108.357-8\", so the taxId is \"901.108.357-8\" 3. **country**: Looking for country indicators: - The document mentions \"SALVADOREÑO\" as nationality for the shareholder - However, the document uses \"NIT\" which according to the hash tables is used in Colombia, Bolivia, Guatemala, and El Salvador - The format \"901.108.357-8\" follows Colombian NIT format patterns - The document structure and language suggest Colombian legal framework - There's no explicit mention of Colombia in the text, but the NIT format and legal structure suggest Colombia 4. **identificationDetails**: - Source: \"id_analysis\" (based on NIT format analysis) - Indicators: [\"NIT format 901.108.357-8 matches Colombian pattern\"] - No conflicts found - RequiresReview: false **Step 3: Related Parties Processing** Looking at the shareholder information: - JOSE CARLOS MENDOZA CARRANZA - Identification: C.E 737708 - 5,200 shares (100% participation) - Value: 520.000.000 - Nationality: SALVADOREÑO - Role: REPRESENTANTE LEGAL This is clearly a person (personal name, not a company). For identificationType: The identification type C.E. is a standard Colombian document for foreign residents. It confirms the document's Colombian context, despite the shareholder's Salvadoran nationality. The C.E. (Cédula de Extranjería) validates the individual's legal status to operate within Colombia. **Step 4: Validation & Cross-checking** - taxId type NIT aligns with Colombia ✓ - identificationType C.E. is valid for Colombia ✓ - All required fields present ✓ - No percentage conflicts (only one shareholder with 100%) ✓ The document reveals a Salvadoran national legally operating a Colombian company through a recognized foreign resident identification.",
+          "signature": "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"
+        },
+        {
+          "type": "text",
+          "text": "{ \"result\": { \"companyName\": \"QUIMEL INGENIERIA S.A.S.\", \"documentCategory\": \"Equity Composition\", \"taxId\": \"901.108.357-8\", \"country\": \"Colombia\", \"identificationDetails\": { \"source\": \"id_analysis\", \"indicators\": [ \"NIT format 901.108.357-8 matches Colombian pattern\", \"C.E. identification type indicates Colombian Cédula de Extranjería\" ], \"conflictingSources\": [], \"requiresReview\": \"false\" }, \"relatedParties\": [ { \"type\": \"person\", \"firstName\": \"Jose Carlos\", \"lastName\": \"Mendoza Carranza\", \"identificationType\": \"C.E.\", \"identificationNumber\": \"737708\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"100%\", \"timeFound\": \"1\", \"job\": \"Representante Legal\" } ] }, \"documentType\": \"company\", \"category\": \"ACC\" }"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 9,
+        "cache_creation_input_tokens": 6486,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 1116
+      }
+    },
+    "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 8000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+  "api_used": "invoke_model"
+}

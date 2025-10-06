@@ -1,0 +1,183 @@
+{
+  "document_name": "1018460087_2020-06-26.pdf",
+  "category": "CECRL",
+  "classification_success": true,
+  "extraction_success": true,
+  "overall_success": true,
+  "timestamp": "2025-08-29T10:37:49.903313",
+  "classification_result": {
+    "classification_data": {
+      "category": "CECRL",
+      "text": "REPUBLICA DE COLOMBIA IDENTIFICACION PERSONAL CEDULA DE CIUDADANIA NUMERO 1.018.460.087 OVALLE BAYER APELLIDOS DIEGO FERNANDO NOMBRES Diego F. Ovalle B. FIRMA FECHA DE NACIMIENTO 16-JUN-1993 MANI (CASANARE) LUGAR DE NACIMIENTO 1.73 O+ M ESTATURA G.S. RH SEXO 20-JUN-2011 BOGOTA D.C FECHA Y LUGAR DE EXPEDICION REGISTRADOR NACIONAL CARLOS ABRIL SANCHEZ TORRES INDICE DERECHO P-1500150-003136B1-M-1018460087-20110713 0027f98479A 1 36822300",
+      "document_number": "UNKNOWN",
+      "path": "CECRL/4129417_1018460087_2020-06-26/1018460087_2020-06-26.pdf"
+    },
+    "raw_response": {
+      "output": {
+        "message": {
+          "content": [
+            {
+              "text": "```json { \"category\": \"CECRL\", \"text\": \"REPUBLICA DE COLOMBIA\\nIDENTIFICACION PERSONAL\\nCEDULA DE CIUDADANIA\\nNUMERO 1.018.460.087\\nOVALLE BAYER\\nAPELLIDOS\\nDIEGO FERNANDO\\nNOMBRES\\nDiego F. Ovalle B.\\nFIRMA\\nFECHA DE NACIMIENTO 16-JUN-1993\\nMANI\\n(CASANARE)\\nLUGAR DE NACIMIENTO\\n1.73 O+ M\\nESTATURA G.S. RH SEXO\\n20-JUN-2011 BOGOTA D.C\\nFECHA Y LUGAR DE EXPEDICION\\nREGISTRADOR NACIONAL\\nCARLOS ABRIL SANCHEZ TORRES\\nINDICE DERECHO\\nP-1500150-003136B1-M-1018460087-20110713 0027f98479A 1 36822300\" } ```"
+            }
+          ]
+        }
+      },
+      "stopReason": "end_turn",
+      "usage": {
+        "input_tokens": 9,
+        "cache_creation_input_tokens": 4549,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 847
+      },
+      "ResponseMetadata": {
+        "RequestId": "993eeb33-6d85-4d1c-9ed2-69d3d2469d84",
+        "HTTPStatusCode": 200,
+        "HTTPHeaders": {
+          "date": "Fri, 29 Aug 2025 15:38:04 GMT",
+          "content-type": "application/json",
+          "content-length": "5405",
+          "connection": "keep-alive",
+          "x-amzn-requestid": "993eeb33-6d85-4d1c-9ed2-69d3d2469d84",
+          "x-amzn-bedrock-invocation-latency": "14326",
+          "x-amzn-bedrock-cache-write-input-token-count": "4549",
+          "x-amzn-bedrock-cache-read-input-token-count": "0",
+          "x-amzn-bedrock-output-token-count": "847",
+          "x-amzn-bedrock-input-token-count": "9"
+        },
+        "RetryAttempts": 0
+      },
+      "raw_anthropic_response": {
+        "id": "msg_bdrk_01B5DwbNAU6ZNCfHtt9ZresC",
+        "type": "message",
+        "role": "assistant",
+        "model": "claude-sonnet-4-20250514",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "Looking at this document, I need to extract all text and then classify it properly. From the document, I can see: Front side (top): - REPUBLICA DE COLOMBIA - IDENTIFICACION PERSONAL - CEDULA DE CIUDADANIA - NUMERO: 1.018.460.087 - OVALLE BAYER - APELLIDOS - DIEGO FERNANDO - NOMBRES - Diego F. Ovalle B. (signature) - FIRMA Back side (bottom): - FECHA DE NACIMIENTO: 16-JUN-1993 - MANI - (CASANARE) - LUGAR DE NACIMIENTO - 1.73 O+ M - ESTATURA G.S. RH SEXO - 20-JUN-2011 BOGOTA D.C - FECHA Y LUGAR DE EXPEDICION - REGISTRADOR NACIONAL - CARLOS ABRIL SANCHEZ TORRES - There's a fingerprint image - A barcode - INDICE DERECHO - P-1500150-003136B1-M-1018460087-20110713 Now for classification: This is clearly a Cédula de Ciudadanía (Colombian national ID card) which is a personal identification document issued by the government of Colombia. Key indicators for CECRL: - \"REPUBLICA DE COLOMBIA IDENTIFICACION PERSONAL\" - \"CEDULA DE CIUDADANIA\" - Individual identification number with personal name - Personal biographical data: birth date (16-JUN-1993), birth place (MANI, CASANARE), blood type (O+), gender (M), height (1.73) - Individual photo (visible) - Signature reference (FIRMA) - Fingerprint (INDICE DERECHO) - Government-issued personal ID number - Security elements: official seals, barcode I confirm this is an official government-issued identification document with comprehensive personal details. The document contains multiple authentication elements like a signature, fingerprint, and official registration number, definitively proving its status as a national identification card. The document unequivocally belongs to the CECRL category, with no potential for misclassification given its clear governmental origin and personal identification purpose.",
+            "signature": "Es4PCkgIBxABGAIqQGtcDFThcumVxGoOpzifqkSth6StEvT4GQ2a2aMQ/13PXgrCki9DXTzwot2xxpaXqhL6PvZ/fE4OleiRztOHvR0SDH8L7AE7TfeN6bUifxoMICgXQEpY95yBv+K8IjCxaJbTz+X+kl9o+r9cY8XpUCkcpaxgpeuude2H15IIRBFC/madXTb3iWwlZQPT7cIqsw6HN6PYihM2S18aBjoElTiZ+r8HPYqrqRXU9lyc1Viw3ksLpKK9z+izk6jZMrxWr6PksrqXMiAjrzmCRLt/TlKmdWhZHkBkItzd6XH/de8q9urRcAnTcVIBO7jy4kUkQS+MqbmYldN++qPzcXv0UWKdzEZEnf6lcxk1drr+PkA89irwD16JlM5FMWpIeYyQOcC0F1xKpTmPEMfZ4HsTl/PX4QF9EZMjoMuPxL7hC3aeBkW0Ru4TIS5cjl3CQjhrtfaq9m0puX8x4LL1DpD0MSr2i1CVDsk1xH5pr68SCLcuIBniMbgIOZ4pfa+mW9i79wSrPhXV9PcxSJLIjxl4RarAUnMwPbvTOytoYZP6VFF2C0GJ+/DjZBKLtbA+ulh67mBefp2gGWUG8ZO7fgEdPgYN8jJWHR5jj7JDqQbgnmFTE1gEGVOhh58MMGyI/1GqiHTNrmi2L/Gk0YfkYE9+EGTDwz+UKOzZuzE8FmypaBCHw7+QgrVVbG8HmIXrQ/ONWjvBZyFHAPMRZNT/CJi/kpjVX/VGJ9cev0e6+C2VeOIyloGkrsZDQQy4WXxENCCqZBY79WD+2skfuV/G7w07/Elmbi//yqdeedrnnEFOzWRBGPmCgd+BuqvL0y8fvgYdXszw1irwETzgRblHkCgqfDiZFvwTvfHlI74aEFLF6h27OrNNiLK1dDKJl1wWNCgW4HItO8KnqRmRInXuHZX5fzfvLzP8shnYlCuIQ5BKGJYrPXDFXezdy+jfqbQBmH9uCwMgWK9sTwq9nR/FkIaprZftaPXp0/g8clEHxS8+YAQ8UbneVwEb093a0r7Qtn5H+uyOXhxlGHfFkOBjLSaE/j1USWCitirFAuHeIQMcLJHFG18s2xPehOyiAV0MJwu9rDuld0ZxpxSdC64pqV97X2TfnWq4m1C16HnEKYG5/hkoVQLYK11sG3beZMbtagNvZpyKqtHt+hncuwCxKYD6IkJUmk4CzhI6dnah9WXx9zIZbxg4O0TLL1A83luWqfGU/3VwL9z95N1qxx1OHTse2GPrdQgEk/53wpktZW2PNyrFEjFirzxg9Mr7pe901ZEKxRVNNjLcTCGBMTz1BDtpZPmBbxfsZmFrGiE3pRnoX7/GL2lJ8jxyXQ0jbededxynhukvPbcB2RfcyNBF4rrQCZvQlbwn+pweqWe5jlSXeo92aRNYbHQ/IkyfHq+Kkgn/p/2CgOOycGVlF1EUII5PL7JMROHdU7Y+1eMJi+a8ySY4N1bJGUqq18JQEUvWLaOaokUjLGMPGPcGjC28TlyLeKktHpZkW5g3kJbOFrymOntaqng9Zz+I2i+lO+UqBp4mDnkpI41McsTqN65XkQBW86/aHzv3A/fggvjp4K4LYJiuXZJn0zA1GXECkQwenV17C6lISUlRoX4KJ4vmzNJAbItQaHvf91GpzvGsRz+6s5FtwEUDydjFnF+40t82B9HEec5SJc0SmTH8s5nTi/KT6hnEC+fYCl/G7ksr4CAwFjnprTbT6JUFSlMxTFKxn+2XKfJ5xISeGXDk1WFn07hfcKgosQH0z+GsPWz/4nnPw+ju5Izg9qcsyeJ/160oSD33CXu6FwXhnPFengCspGKFPM1XQVyVCX3EiucgDZwiJ0nkqrCs7RH84nq3tFjeXwwi9SKCk37q+VYugo7X0TdNhZNqF/5BgNsDEwUH3+zT201EUUIE2F01LNl5P6dWj47Yqctxj/F7Nmy8uwyXDp92J1ckaaBNiNonZfXZeiJ/OHPRSyrMLi+0gcKDajQQBG/BmtFrhtjev4+37y5S3KZ3RPsuaFTluxsUeIQIZN14iAEGnlH8Nlghm6mZNn/EICotys91uHD7AEy59Mp+IP5+T4qrZJXUqWL1xhQ/9w7aGEOFfr60dr1j7hbf8FJm6eITGDdLMWkWq6RRZaOBOuoHgEqPPekPb28lR7H2VsUMSHkcfsPEhwZVgF68a8+cGWgcjwRlsJkjXRAaTiwxnA9Rf0M+B8KXVCU7N9iGcbLAJ9OcGiHqBSwWI/TKrNt/LMVOu7fWfMFro0cWriEe3goxngDOPoQ7E/SR13vAA6MRB8dnwo2f5be/GTx8e/LnMB0gXGcUGqHncS7ESKDYlcxxx1ySU2Oh+41nIrRCVqhLKj6cCdkjj7SN9Aqb6hl4O55BvgaHDVxk7ZPQKYpJHG0SXlBOlD9Yl9cBk7r613/cjKCLTjVcku7S58Dp+u/RHCru2bcTd+azw/UM731bfbagMjEkWMTH39avbZEsRBS0eAi8bVmtLG2obJkLXPIZkRIhIs5BAydhI29ZDIkYISf/Ie97+rSdxLuwQ68rMh/1PQfU2SNNwkphAXeUUosLiLE/870fHqCVKCSrvHbw5vB7HL0PDURqC1RniHQLCOkTumMd6V9SAnubHZIu67uEE1UZUo/AHSERB6v5Y6p/jKZvtluL0zCjGAE="
+          },
+          {
+            "type": "text",
+            "text": "```json { \"category\": \"CECRL\", \"text\": \"REPUBLICA DE COLOMBIA\\nIDENTIFICACION PERSONAL\\nCEDULA DE CIUDADANIA\\nNUMERO 1.018.460.087\\nOVALLE BAYER\\nAPELLIDOS\\nDIEGO FERNANDO\\nNOMBRES\\nDiego F. Ovalle B.\\nFIRMA\\nFECHA DE NACIMIENTO 16-JUN-1993\\nMANI\\n(CASANARE)\\nLUGAR DE NACIMIENTO\\n1.73 O+ M\\nESTATURA G.S. RH SEXO\\n20-JUN-2011 BOGOTA D.C\\nFECHA Y LUGAR DE EXPEDICION\\nREGISTRADOR NACIONAL\\nCARLOS ABRIL SANCHEZ TORRES\\nINDICE DERECHO\\nP-1500150-003136B1-M-1018460087-20110713 0027f98479A 1 36822300\" } ```"
+          }
+        ],
+        "stop_reason": "end_turn",
+        "stop_sequence": null,
+        "usage": {
+          "input_tokens": 9,
+          "cache_creation_input_tokens": 4549,
+          "cache_read_input_tokens": 0,
+          "output_tokens": 847
+        }
+      },
+      "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+      "api_used": "invoke_model",
+      "model_params": {
+        "max_tokens": 8000,
+        "top_p": 1,
+        "temperature": 1,
+        "thinking": {
+          "type": "enabled",
+          "budget_tokens": 4096
+        }
+      }
+    },
+    "expected_category": "CECRL",
+    "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model",
+    "pdf_info": {
+      "original_size": 478149,
+      "first_page_size": 478039,
+      "is_scanned": true
+    }
+  },
+  "extraction_result": {
+    "extraction_data": {
+      "result": {
+        "firstName": "DIEGO FERNANDO",
+        "lastName": "OVALLE BAYER",
+        "country_issuer": "Colombia",
+        "nationality": "Colombia",
+        "identificationType": "Cédula de Ciudadanía",
+        "identificationNumber": "1.018.460.087",
+        "message": ""
+      },
+      "document_type": "person",
+      "category": "CECRL"
+    },
+    "raw_response": {
+      "output": {
+        "message": {
+          "content": [
+            {
+              "text": "```json { \"result\": { \"firstName\": \"DIEGO FERNANDO\", \"lastName\": \"OVALLE BAYER\", \"country_issuer\": \"Colombia\", \"nationality\": \"Colombia\", \"identificationType\": \"Cédula de Ciudadanía\", \"identificationNumber\": \"1.018.460.087\", \"message\": \"\" }, \"document_type\": \"person\", \"category\": \"CECRL\" } ```"
+            }
+          ]
+        }
+      },
+      "stopReason": "end_turn",
+      "usage": {
+        "input_tokens": 10,
+        "cache_creation_input_tokens": 5982,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 1108
+      },
+      "ResponseMetadata": {
+        "RequestId": "eced8c9b-fb68-4b81-936f-777a77442d22",
+        "HTTPStatusCode": 200,
+        "HTTPHeaders": {
+          "date": "Fri, 29 Aug 2025 15:38:38 GMT",
+          "content-type": "application/json",
+          "content-length": "7966",
+          "connection": "keep-alive",
+          "x-amzn-requestid": "eced8c9b-fb68-4b81-936f-777a77442d22",
+          "x-amzn-bedrock-invocation-latency": "33801",
+          "x-amzn-bedrock-cache-write-input-token-count": "5982",
+          "x-amzn-bedrock-cache-read-input-token-count": "0",
+          "x-amzn-bedrock-output-token-count": "1108",
+          "x-amzn-bedrock-input-token-count": "10"
+        },
+        "RetryAttempts": 0
+      },
+      "raw_anthropic_response": {
+        "id": "msg_bdrk_01PS3Qcouy2dD3rGzgzj64HH",
+        "type": "message",
+        "role": "assistant",
+        "model": "claude-sonnet-4-20250514",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "Let me analyze this Colombian ID document (Cédula de Ciudadanía) step by step. Looking at the document: 1. **Document Structure Analysis**: - This is clearly a Colombian \"Cédula de Ciudadanía\" (Colombian citizenship ID card) - Header shows \"REPUBLICA DE COLOMBIA\" and \"IDENTIFICACION PERSONAL\" and \"CEDULA DE CIUDADANIA\" - It has official government format with photo, fingerprint, and barcode - Document number visible: 1.018.460.087 2. **Field Detection**: - I can see \"APELLIDOS\" field with \"DIEGO FERNANDO\" - I can see \"NOMBRES\" field but the signature appears to cover part of it - The signature appears to read something like \"Diego F. Ovalle B\" - There's \"OVALLE BAYER\" visible in the document 3. **Name Analysis**: Looking carefully at the document: - \"APELLIDOS: DIEGO FERNANDO\" - this seems wrong, DIEGO FERNANDO are typically given names - \"OVALLE BAYER\" appears prominently - these look like surnames - The signature seems to show \"Diego F. Ovalle B\" which would make Diego the first name - There's some confusion in the document layout or my reading Wait, let me look again more carefully: - I see \"APELLIDOS\" and then \"DIEGO FERNANDO\" - But I also see \"OVALLE BAYER\" prominently displayed - Looking at the signature area, I can see what looks like first names Actually, looking more carefully: - The line after \"APELLIDOS\" shows \"DIEGO FERNANDO\" - But there's also \"OVALLE BAYER\" shown prominently - The \"NOMBRES\" section appears to have a signature over it Let me reconsider the layout. In Colombian IDs: I'm noticing a potential mix-up between surnames and given names. The document seems to have \"OVALLE BAYER\" as surnames, with \"DIEGO FERNANDO\" possibly misplaced in the wrong field. The signature complicates reading the exact name structure, creating uncertainty about the precise name arrangement. The ID number 1.018.460.087 appears clearly, suggesting this is an official identification document. My current interpretation suggests \"OVALLE BAYER\" represents the family names, while \"DIEGO FERNANDO\" indicates the individual's first and middle names. The document reveals additional personal details from Colombia, including a birth date of 16-JUN-1993 in MANI, CASANARE. The individual is male, stands 1.73 meters tall, and received this citizenship document in Bogotá on 20-JUN-2011.",
+            "signature": "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"
+          },
+          {
+            "type": "text",
+            "text": "```json { \"result\": { \"firstName\": \"DIEGO FERNANDO\", \"lastName\": \"OVALLE BAYER\", \"country_issuer\": \"Colombia\", \"nationality\": \"Colombia\", \"identificationType\": \"Cédula de Ciudadanía\", \"identificationNumber\": \"1.018.460.087\", \"message\": \"\" }, \"document_type\": \"person\", \"category\": \"CECRL\" } ```"
+          }
+        ],
+        "stop_reason": "end_turn",
+        "stop_sequence": null,
+        "usage": {
+          "input_tokens": 10,
+          "cache_creation_input_tokens": 5982,
+          "cache_read_input_tokens": 0,
+          "output_tokens": 1108
+        }
+      },
+      "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+      "api_used": "invoke_model",
+      "model_params": {
+        "max_tokens": 8000,
+        "top_p": 1,
+        "temperature": 1,
+        "thinking": {
+          "type": "enabled",
+          "budget_tokens": 4096
+        }
+      }
+    },
+    "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model"
+  }
+}

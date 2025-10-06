@@ -1,0 +1,88 @@
+{
+  "extraction_data": {
+    "result": {
+      "FirstName": "MICHAEL",
+      "LastName": "KOSFELD",
+      "CountryIssuer": "Alemania",
+      "Nationality": "Alemán",
+      "IdentificationType": "Pasaporte",
+      "IdentificationNumber": "C7VRF059",
+      "Message": ""
+    },
+    "document_type": "person",
+    "category": "CECRL"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "```json { \"result\": { \"FirstName\": \"MICHAEL\", \"LastName\": \"KOSFELD\", \"CountryIssuer\": \"Alemania\", \"Nationality\": \"Alemán\", \"IdentificationType\": \"Pasaporte\", \"IdentificationNumber\": \"C7VRF059\", \"Message\": \"\" }, \"document_type\": \"person\", \"category\": \"CECRL\" } ```"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 1604,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 4300,
+      "output_tokens": 460
+    },
+    "ResponseMetadata": {
+      "RequestId": "ea294fc7-0bd8-406d-a6f9-43f5636bbd40",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Sun, 31 Aug 2025 21:42:09 GMT",
+        "content-type": "application/json",
+        "content-length": "3785",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "ea294fc7-0bd8-406d-a6f9-43f5636bbd40",
+        "x-amzn-bedrock-invocation-latency": "7527",
+        "x-amzn-bedrock-cache-write-input-token-count": "0",
+        "x-amzn-bedrock-cache-read-input-token-count": "4300",
+        "x-amzn-bedrock-output-token-count": "460",
+        "x-amzn-bedrock-input-token-count": "1604"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_019sCDfhVWajtT7kbdPXsNph",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-sonnet-4-20250514",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Looking at the document, I can see this is a German passport (Reisepass). Let me analyze what information I can extract: 1. Country: This is a German passport as indicated by \"BUNDESREPUBLIK DEUTSCHLAND\" at the top and \"REISEPASS\" header. The eagle symbol also indicates Germany. 2. Document Type: \"REISEPASS\" which translates to \"Pasaporte\" in Spanish 3. Name information: I can see: - \"KOSFELD\" appears to be the surname - \"MICHAEL\" appears to be the given name 4. Identification Number: I can see \"C7VRF059\" at the top right area 5. Nationality: Since this is a German passport, the nationality should be German (\"Alemán\") 6. There's also some text at the bottom that appears to be the machine-readable zone (MRZ) Let me structure this according to the schema requirements: - FirstName: \"MICHAEL\" - LastName: \"KOSFELD\" - CountryIssuer: \"Alemania\" (Germany translated to Spanish) - Nationality: \"Alemán\" (German nationality in Spanish) - IdentificationType: \"Pasaporte\" (Reisepass translated to Spanish) - IdentificationNumber: \"C7VRF059\" - Message: \"\" The extraction seems clear and straightforward - this is a standard German passport with clearly readable information.",
+          "signature": "EtIKCkgIBxABGAIqQPgyg5DKCbkc4vILfqrHOYUi+P3oesPDW+wNOb83U0jxjCu5k02kkhOWHu/+6kTyUFA6ACykB5qbF1wUXQrd6LcSDHNci87H/8miSZrLjhoMEWh69fIkzksTM6VQIjBQpp9WOmW8ujr49OECGgpD2gyNJf9oQmepf2Ti+zxPPLed/NhpbZBib9Ka8yONJn8qtwkdffRUbmAMygxgLDe2SblaH0ppj+1cHfVfcyHh8X8VS+wHbukiCi4wU8vpGt3BMQIvNtSL6SBSosjzlsJySwFKv9ayUffGBiXI9jUaSEjxZPwrIND6JfEIFPEPVtBRL4LeeO/EgNTXbt/ivmBV8WmA5JAQYndQYMe8vYLytfWE9RDTrT1cHAMEInu7VNS7Oe9r9DUjzmNVxZvKp2U6My3ik/d/CXFFt2kwxNmVpzdmwq+xHZ8tja08rrNeTnUHtnI5iXiDl4InGHKx5RS+K175XZy5tgVwNEMvyMBbvxDaS3FcgsQEQP24rpUUolH+uC4L6U2RlLRLB7zFNa67yJbL4czBA9pb1XoMSBkZ3ljB2Y2ASNtznUzQlZdnpUBAXSkFtTx3ExghB6nAIePZo6FtSqpbHgF2w5aZyVQJOrLEkIzwH9hLueg3tkQT3SW6xlFMDGAKaQDjUSUc+h2kPtxiBOSrFKpLxlD07ETw7Dwjp+MgETLe8kK9Hn55RW+s7pbq9s5Ibh+i8pvNnwH/BDG1l4F81lC+LestkJjyNqDSd8pugJGpO3dzkH0NMqrVSitn0IChMmu35LQU8ZKWHUtFWrkQhlTaBBXBxY5RgedcCvVwbEwjSBd+sfsa7W5XIKQB3tqAotAxGeHlT+jRrXOLmuo0UgkMEtDIFvrTJ4xazzJ4ucAPzTlioG0dgB6yFKjZt1HO5rowJsMRa5+VA56B2ZW95sXgU2cJ2DljL7QDXNpXYxztXuGRKpTbR4UGVnBXOOnFxSulxrofBPZo93OFAU+li0tPwpOP5EeAUC68hGfcLOdiDYTkYyC5263bOmkKV952A9L2daUIyXAfeEWqAz3sx5yUYMbqIKbDBJqYnVI4Q/vj5g0yjp/WxBtMF83GEzX2nKQXQGx8Ag9BrmlkaTldKXi12FRZPh9qXhO8WaQ333WaXz1Zo3rSfrcX/B4JF7e2D446fUv35650XqVsukAH/r0EdBYSCx1/EuDlQ0ICWSISYVMJ4T6/Yp1hO2Xj/6+/++FYWcUvHRpYxIGJth0el9yNdH5m2mXWmRkbCURmUWkPn+im2sWe8RRZTlo5d8+wOQZjwW1zbW4EeeABr+5bHvWKWzQ2qUdogRfy11VqNh5CvzTFIBrLd96XGPLbxBbwxzNDnK5hYzODi21YvV2C0748TJfvxcv02f2YO+yJFd2LmZKf9jHWtcsMvkCQz9NNHekkoNi1hNC157R3YjobOcVJh0Z3+I5sWLhTazFLNb7FJ4A97jTBjNoWPhGwySvAkKOjGqylOq9cJgmFNyJEYUy9hkZ2YGs6Hd9Pb8nZzK2mT4CNm/ipEwqjlIrcPUSv0AnJ0qs26CiVeVVw5dYPQhTOWyyEZW3gc9TWWv+bMWlUp4nb6WW9ip4FvZ47DmDuN2cSI9CX1UFCOVPpDdh9M9BlXOQpbQzKx68Ak1GHZaMNFufbS35a1bCaUula6wCsjKXW9yODkra8Zn4ZoSaq0fukBg4OnGtdGZljaB11yjgJQcX01JZP61f9vhtiIPGWdOKBXqB7TYwitWwelNcT+XndNJjEnS0jno1bZEhYyi1nNfCPFTotEzSDYrTpUZ29d/7wGAE="
+        },
+        {
+          "type": "text",
+          "text": "```json { \"result\": { \"FirstName\": \"MICHAEL\", \"LastName\": \"KOSFELD\", \"CountryIssuer\": \"Alemania\", \"Nationality\": \"Alemán\", \"IdentificationType\": \"Pasaporte\", \"IdentificationNumber\": \"C7VRF059\", \"Message\": \"\" }, \"document_type\": \"person\", \"category\": \"CECRL\" } ```"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 1604,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 4300,
+        "output_tokens": 460
+      }
+    },
+    "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 8000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+  "api_used": "invoke_model"
+}

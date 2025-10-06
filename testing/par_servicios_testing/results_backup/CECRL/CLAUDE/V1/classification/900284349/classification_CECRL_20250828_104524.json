@@ -1,0 +1,87 @@
+{
+  "classification_data": {
+    "category": "CECRL",
+    "text": "REPUBLICA DE COLOMBIA IDENTIFICACION PERSONAL CEDULA DE CIUDADANIA NUMERO 79.567.666 LAYTON AREVALO LEONARDO FECHA DE NACIMIENTO 28-OCT-1972 BOGOTA D.C. (CUNDINAMARCA) LUGAR DE NACIMIENTO 1.71 O+ M ESTATURA G.S. RH SEXO 17-ABR-1991 BOGOTA D.C. FECHA Y LUGAR DE EXPEDICION",
+    "document_number": "900284349",
+    "path": "CECRL/900284349/79567666_2020-02-29.pdf"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "```json { \"category\": \"CECRL\", \"text\": \"REPUBLICA DE COLOMBIA\\nIDENTIFICACION PERSONAL\\nCEDULA DE CIUDADANIA\\nNUMERO 79.567.666\\nLAYTON AREVALO\\nLEONARDO\\nFECHA DE NACIMIENTO 28-OCT-1972\\nBOGOTA D.C.\\n(CUNDINAMARCA)\\nLUGAR DE NACIMIENTO\\n1.71\\nO+\\nM\\nESTATURA\\nG.S. RH\\nSEXO\\n17-ABR-1991 BOGOTA D.C.\\nFECHA Y LUGAR DE EXPEDICION\" } ```"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 9,
+      "cache_creation_input_tokens": 4475,
+      "cache_read_input_tokens": 0,
+      "output_tokens": 839
+    },
+    "ResponseMetadata": {
+      "RequestId": "60291b11-f79c-4896-9de4-579efbe45f69",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Thu, 28 Aug 2025 15:45:10 GMT",
+        "content-type": "application/json",
+        "content-length": "3407",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "60291b11-f79c-4896-9de4-579efbe45f69",
+        "x-amzn-bedrock-invocation-latency": "23568",
+        "x-amzn-bedrock-cache-write-input-token-count": "4475",
+        "x-amzn-bedrock-cache-read-input-token-count": "0",
+        "x-amzn-bedrock-output-token-count": "839",
+        "x-amzn-bedrock-input-token-count": "9"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_01QaMQApuGCAv27tqLRS5MUt",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-3-7-sonnet-20250219",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Let's follow the classification workflow step by step: 1. **TEXT EXTRACTION**: From the document, I can extract the following text: - \"REPUBLICA DE COLOMBIA\" - \"IDENTIFICACION PERSONAL\" - \"CEDULA DE CIUDADANIA\" - \"NUMERO 79.567.666\" - \"LAYTON AREVALO\" (Apellidos/Surname) - \"LEONARDO\" (Nombres/First name) - \"FECHA DE NACIMIENTO: 28-OCT-1972\" - \"BOGOTA D.C. (CUNDINAMARCA)\" - \"LUGAR DE NACIMIENTO\" - \"1.71\" (Estatura/Height) - \"O+\" (G.S. RH - Blood type) - \"M\" (SEXO/Gender) - \"17-ABR-1991 BOGOTA D.C.\" - \"FECHA Y LUGAR DE EXPEDICION\" (Date and place of issuance) 2. **PRIORITY CHECKS**: - Not BLANK: The document contains meaningful content - Not LINK_ONLY: The document doesn't contain hyperlinks as its primary content 3. **ISSUER IDENTIFICATION**: The document is issued by a Colombian government identification authority as indicated by \"REPUBLICA DE COLOMBIA\" and \"CEDULA DE CIUDADANIA\" (Colombian national ID card). 4. **DOCUMENT FUNCTION ANALYSIS**: This is a personal identification document (Colombian national ID card) containing personal information including name, ID number, date of birth, place of birth, height, blood type, gender, and issuance information. 5. **CATEGORY CLASSIFICATION**: Going through the categories in order: - CECRL: This appears to be a personal identification document, which is a key characteristic of CECRL. The document contains: - Individual identification terminology: \"IDENTIFICACION PERSONAL\", \"CEDULA DE CIUDADANIA\" - Personal biographical data: birth date/place, blood type, gender - Photo of the individual - Government-issued personal ID number - Security elements: appears to have a signature, fingerprint, and likely other security features The document strongly aligns with CECRL (Official personal identification documents of legal representatives of companies). While we don't explicitly see information indicating this person is a legal representative, the document itself is the type that would be used for CECRL purposes. 6. **CONFIDENCE VALIDATION**: The evidence for this being a CECRL is strong based on the document type (Colombian national ID card), which contains all the required personal identification elements. There's no conflicting information suggesting it should be classified differently. Based on this analysis, the document should be classified as CECRL.",
+          "signature": "ErcBCkgIBxABGAIiQPrwWxMHalPiCcNQiM76P6EnzeZ++sZ2MX270VEzx0t3P2ckWwRPttIlHm+HVhfA5QOmHNCRKjskV8WMEETCBVsSDHlVwL6LtBZmcnUFkxoMN9FRm5BEp5VCcijqIjAz38GraIGLyQW+IDv5STtPA8/c1lC/U3TYrUrS9SLId5gMScQAAzCpsw7QiK78SBUqHd5NDxB+XyVWfWgeYYMyyGig0EgUj/CBNaF/g3/UGAI="
+        },
+        {
+          "type": "text",
+          "text": "```json { \"category\": \"CECRL\", \"text\": \"REPUBLICA DE COLOMBIA\\nIDENTIFICACION PERSONAL\\nCEDULA DE CIUDADANIA\\nNUMERO 79.567.666\\nLAYTON AREVALO\\nLEONARDO\\nFECHA DE NACIMIENTO 28-OCT-1972\\nBOGOTA D.C.\\n(CUNDINAMARCA)\\nLUGAR DE NACIMIENTO\\n1.71\\nO+\\nM\\nESTATURA\\nG.S. RH\\nSEXO\\n17-ABR-1991 BOGOTA D.C.\\nFECHA Y LUGAR DE EXPEDICION\" } ```"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 9,
+        "cache_creation_input_tokens": 4475,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 839
+      }
+    },
+    "model_id": "us.anthropic.claude-3-7-sonnet-20250219-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 8000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "expected_category": "CECRL",
+  "model_used": "us.anthropic.claude-3-7-sonnet-20250219-v1:0",
+  "api_used": "invoke_model",
+  "pdf_info": {
+    "original_size": 279924,
+    "first_page_size": 275599,
+    "is_scanned": true
+  }
+}

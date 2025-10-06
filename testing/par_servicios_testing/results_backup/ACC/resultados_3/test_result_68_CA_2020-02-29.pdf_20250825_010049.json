@@ -1,0 +1,157 @@
+{
+  "document_name": "68_CA_2020-02-29.pdf",
+  "category": "ACC",
+  "classification_success": true,
+  "extraction_success": true,
+  "overall_success": true,
+  "timestamp": "2025-08-25T01:00:30.887571",
+  "classification_result": {
+    "classification_data": {
+      "category": "ACC",
+      "text": "Julio César Suaza Contador Público EL SUSCRIPTO CONTADOR PÙBLICO JULIO CÉSAR SUAZA, IDENTIFICADO CON LA CÉDULA DE CIUDADANÍA No. 14.963.157 DE SANTIAGO DE CALI y TARJETA PROFESIONAL No. 9881-T CERTIFICA QUE: 1º.- A la fecha, la composición Accionaria de la sociedad MEGASERVICIOS DE INGENERIA S.A.S., con NIT: 805.031.602 – 7, es de 2.000 acciones con un valor nominal de $ 50.000 cada acción, para un: CAPITAL AUTURIZO $ 800.000.000 CAPITAL SUSCRITO $ 704.200.000 CAPITAL PAGADO $ 430.000.000 VR. ACCION PARTICIPACIÓN ACCIONARIA ACCIONISTA NÚMERO DE ACCIONES DORA MATILDE TREJOS 50.000 50% 7.042 PUERTA, C.C. 31.953.854 JUAN CARLOS ESCOBAR 50.000 50% 7.042 WELSCH, C.C. 16.733.280 TOTAL 14.084 2º.- Este certificado se expedi¿ por solicitud expresa del señor JUAN CARLOS ESCOBAR WELSCH, representante Legal de MEGASERVICIOS INGENERIA S.A.S., NIT: 805.031.602 - 7, para tramites legales, comerciales y/o bancarios. Para constancia de lo anterior, se firma en la ciudad de Cali, a los veintitres (23) déas del mes de septiembre de dos mil veinte (2020). Revisor Fiscal JULIO CESAR SUAZA T. P. No. 9881 - T E-Mail: julicesua@gmail.com Movil: 315 4962850 Cel. 315 496 2850 E-mail julicesu@hotmail.com Cali - Colombia",
+      "document_number": "805031602",
+      "path": "ACC/805031602/68_CA_2020-02-29.pdf"
+    },
+    "raw_response": {
+      "ResponseMetadata": {
+        "RequestId": "455149c6-a353-497b-b6bc-724ab5bf3f70",
+        "HTTPStatusCode": 200,
+        "HTTPHeaders": {
+          "date": "Mon, 25 Aug 2025 06:00:40 GMT",
+          "content-type": "application/json",
+          "content-length": "1558",
+          "connection": "keep-alive",
+          "x-amzn-requestid": "455149c6-a353-497b-b6bc-724ab5bf3f70"
+        },
+        "RetryAttempts": 0
+      },
+      "output": {
+        "message": {
+          "role": "assistant",
+          "content": [
+            {
+              "text": "```json { \"category\": \"ACC\", \"text\": \"Julio C\\u00e9sar Suaza Contador P\\u00fablico EL SUSCRIPTO CONTADOR P\\u00d9BLICO JULIO C\\u00c9SAR SUAZA, IDENTIFICADO CON LA C\\u00c9DULA DE CIUDADAN\\u00cdA No. 14.963.157 DE SANTIAGO DE CALI y TARJETA PROFESIONAL No. 9881-T CERTIFICA QUE: 1\\u00ba.- A la fecha, la composici\\u00f3n Accionaria de la sociedad MEGASERVICIOS DE INGENERIA S.A.S., con NIT: 805.031.602 \\u2013 7, es de 2.000 acciones con un valor nominal de $ 50.000 cada acci\\u00f3n, para un: CAPITAL AUTURIZO $ 800.000.000 CAPITAL SUSCRITO $ 704.200.000 CAPITAL PAGADO $ 430.000.000 VR. ACCION PARTICIPACI\\u00d3N ACCIONARIA ACCIONISTA N\\u00daMERO DE ACCIONES DORA MATILDE TREJOS 50.000 50% 7.042 PUERTA, C.C. 31.953.854 JUAN CARLOS ESCOBAR 50.000 50% 7.042 WELSCH, C.C. 16.733.280 TOTAL 14.084 2\\u00ba.- Este certificado se expedi\\u00bf por solicitud expresa del se\\u00f1or JUAN CARLOS ESCOBAR WELSCH, representante Legal de MEGASERVICIOS INGENERIA S.A.S., NIT: 805.031.602 - 7, para tramites legales, comerciales y/o bancarios. Para constancia de lo anterior, se firma en la ciudad de Cali, a los veintitres (23) d\\u00e9as del mes de septiembre de dos mil veinte (2020). Revisor Fiscal JULIO CESAR SUAZA T. P. No. 9881 - T E-Mail: julicesua@gmail.com Movil: 315 4962850 Cel. 315 496 2850 E-mail julicesu@hotmail.com Cali - Colombia\" } ```"
+            }
+          ]
+        }
+      },
+      "stopReason": "end_turn",
+      "usage": {
+        "inputTokens": 3227,
+        "outputTokens": 627,
+        "totalTokens": 3854
+      },
+      "metrics": {
+        "latencyMs": 9600
+      },
+      "model_id": "us.amazon.nova-pro-v1:0",
+      "api_used": "converse",
+      "model_params": {
+        "maxTokens": 8200,
+        "topP": 1,
+        "temperature": 0
+      }
+    },
+    "expected_category": "ACC",
+    "model_used": "us.amazon.nova-pro-v1:0",
+    "api_used": "converse",
+    "pdf_info": {
+      "original_size": 223694,
+      "first_page_size": 223173,
+      "is_scanned": true
+    }
+  },
+  "extraction_result": {
+    "extraction_data": {
+      "path": "ACC/805031602/68_CA_2020-02-29.pdf",
+      "result": {
+        "companyName": "MEGASERVICIOS DE INGENIERÍA S.A.S.",
+        "documentType": "Equity Composition",
+        "taxId": "805.031.602-7",
+        "country": "Colombia",
+        "identificationDetails": {
+          "source": "text_reference",
+          "indicators": [
+            "Cali",
+            "Colombia"
+          ],
+          "conflictingSources": [],
+          "requiresReview": false
+        },
+        "relatedParties": [
+          {
+            "firstName": "Dora Matilde",
+            "lastName": "Trejos Puerta",
+            "identificationType": "C.C.",
+            "identificationNumber": "31.953.854",
+            "relationshipType": "Shareholder",
+            "participationPercentage": "50%",
+            "timeFound": 1,
+            "job": ""
+          },
+          {
+            "firstName": "Juan Carlos",
+            "lastName": "Escobar Welsch",
+            "identificationType": "C.C.",
+            "identificationNumber": "16.733.280",
+            "relationshipType": "Shareholder",
+            "participationPercentage": "50%",
+            "timeFound": 1,
+            "job": "Representante Legal"
+          }
+        ]
+      },
+      "document_type": "company",
+      "document_number": "805031602",
+      "category": "ACC",
+      "confidenceScores": {
+        "companyName": 95,
+        "taxId": 95,
+        "country": 98,
+        "relatedParties": 90
+      }
+    },
+    "raw_response": {
+      "ResponseMetadata": {
+        "RequestId": "743ec3f2-c8fe-4186-9136-f6f893109f9e",
+        "HTTPStatusCode": 200,
+        "HTTPHeaders": {
+          "date": "Mon, 25 Aug 2025 06:00:49 GMT",
+          "content-type": "application/json",
+          "content-length": "1647",
+          "connection": "keep-alive",
+          "x-amzn-requestid": "743ec3f2-c8fe-4186-9136-f6f893109f9e"
+        },
+        "RetryAttempts": 0
+      },
+      "output": {
+        "message": {
+          "role": "assistant",
+          "content": [
+            {
+              "text": "```json { \"path\": \"ACC/805031602/68_CA_2020-02-29.pdf\", \"result\": { \"companyName\": \"MEGASERVICIOS DE INGENIERÍA S.A.S.\", \"documentType\": \"Equity Composition\", \"taxId\": \"805.031.602-7\", \"country\": \"Colombia\", \"identificationDetails\": { \"source\": \"text_reference\", \"indicators\": [ \"Cali\", \"Colombia\" ], \"conflictingSources\": [], \"requiresReview\": false }, \"relatedParties\": [ { \"firstName\": \"Dora Matilde\", \"lastName\": \"Trejos Puerta\", \"identificationType\": \"C.C.\", \"identificationNumber\": \"31.953.854\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"50%\", \"timeFound\": 1, \"job\": \"\" }, { \"firstName\": \"Juan Carlos\", \"lastName\": \"Escobar Welsch\", \"identificationType\": \"C.C.\", \"identificationNumber\": \"16.733.280\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"50%\", \"timeFound\": 1, \"job\": \"Representante Legal\" } ] }, \"document_type\": \"company\", \"document_number\": \"805031602\", \"category\": \"ACC\", \"confidenceScores\": { \"companyName\": 95, \"taxId\": 95, \"country\": 98, \"relatedParties\": 90 } } ```"
+            }
+          ]
+        }
+      },
+      "stopReason": "end_turn",
+      "usage": {
+        "inputTokens": 8667,
+        "outputTokens": 410,
+        "totalTokens": 9077
+      },
+      "metrics": {
+        "latencyMs": 8963
+      },
+      "model_id": "us.amazon.nova-pro-v1:0",
+      "api_used": "converse",
+      "model_params": {
+        "maxTokens": 8200,
+        "topP": 1,
+        "temperature": 0.1
+      }
+    },
+    "model_used": "us.amazon.nova-pro-v1:0",
+    "api_used": "converse"
+  }
+}

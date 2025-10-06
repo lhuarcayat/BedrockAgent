@@ -1,0 +1,134 @@
+# ACC Document Test Configuration
+# Colombian shareholder and corporate governance documents (Accionistas y Control Corporativo)
+
+documents:
+  acc_junta_directiva:
+    name: "ACC Board of Directors - Member Count"
+    s3_path: "s3://par-servicios-poc-qa-filling-desk/par-servicios-poc/ACC/700123456/acc_board_members_2023-03-20.pdf"
+    type: "ACC"
+    test_type: "count_validation"
+    enabled: true
+    
+    test_config:
+      prompts_to_test: ["v1.0.0", "v1.3.0"]
+      description: "Board of directors member identification and counting"
+      
+      expected_count: 7
+      actual_count: 5
+      count_field: "boardMembers"
+      tolerance: 1
+
+  acc_accionistas_mayoritarios:
+    name: "ACC Major Shareholders - Ownership Threshold"
+    s3_path: "s3://par-servicios-poc-qa-filling-desk/par-servicios-poc/ACC/700234567/acc_major_shareholders_2022-11-25.pdf"
+    type: "ACC"
+    test_type: "field_accuracy"
+    enabled: true
+    
+    test_config:
+      prompts_to_test: ["v1.2.0", "v1.3.0"]
+      description: "Major shareholders with >5% ownership stakes"
+      
+      expected_results:
+        majorShareholder1: "Inversiones Colombia S.A."
+        shareholderType1: "Persona Jurídica"
+        ownershipStake1: "25.8%"
+        votingRights1: "25.8%"
+        
+      issue_result:
+        ownershipStake1: "25.80%"  # Decimal precision differences
+        votingRights1: "Si"  # Boolean vs percentage
+
+  acc_cambios_control:
+    name: "ACC Control Changes - Transaction History"
+    s3_path: "s3://par-servicios-poc-qa-filling-desk/par-servicios-poc/ACC/700345678/acc_control_changes_2023-06-10.pdf"
+    type: "ACC"
+    test_type: "field_accuracy"
+    enabled: true
+    
+    test_config:
+      prompts_to_test: ["v1.3.0"]
+      description: "Corporate control changes and transaction dates"
+      
+      expected_results:
+        transactionDate: "2023-05-15"
+        previousController: "Grupo Empresarial ABC S.A."
+        newController: "Fondo de Inversión XYZ"
+        transactionType: "Adquisición"
+        regulatoryApproval: "Superintendencia Financiera"
+        
+      issue_result:
+        transactionDate: "15/05/2023"  # Date format confusion
+        transactionType: "Acquisition"  # Language mixing
+
+  acc_personas_relacionadas:
+    name: "ACC Related Parties - Family Connections"
+    s3_path: "s3://par-servicios-poc-qa-filling-desk/par-servicios-poc/ACC/700456789/acc_related_parties_2023-01-12.pdf"
+    type: "ACC"
+    test_type: "count_validation"
+    enabled: true
+    
+    test_config:
+      prompts_to_test: ["v1.1.0", "v1.3.0"]
+      description: "Related party identification through family/business connections"
+      
+      expected_count: 12
+      actual_count: 8
+      count_field: "relatedParties"
+      tolerance: 2
+
+  acc_administradores:
+    name: "ACC Corporate Officers - Position Mapping"
+    s3_path: "s3://par-servicios-poc-qa-filling-desk/par-servicios-poc/ACC/700567890/acc_officers_2022-08-30.pdf"
+    type: "ACC"
+    test_type: "field_accuracy"
+    enabled: true
+    
+    test_config:
+      prompts_to_test: ["v1.2.0", "v1.3.0"]
+      description: "Corporate officer position identification and role mapping"
+      
+      expected_results:
+        ceo: "Ana María Rodríguez Castillo"
+        cfo: "Roberto Carlos Jiménez"
+        chairman: "Dr. Luis Eduardo Vargas"
+        independentDirector: "María Elena Sánchez"
+        
+      issue_result:
+        ceo: "ANA MARIA RODRIGUEZ CASTILLO"  # Case sensitivity
+        chairman: "Luis Eduardo Vargas"  # Title prefix missing
+
+  acc_conflictos_interes:
+    name: "ACC Conflicts of Interest - Declaration Analysis"
+    s3_path: "s3://par-servicios-poc-qa-filling-desk/par-servicios-poc/ACC/700678901/acc_conflicts_2023-04-18.pdf"
+    type: "ACC"
+    test_type: "field_accuracy"
+    enabled: true
+    
+    test_config:
+      prompts_to_test: ["v1.3.0"]
+      description: "Conflict of interest declarations and related business analysis"
+      
+      expected_results:
+        hasConflicts: "Sí"
+        conflictType: "Negocio relacionado"
+        affectedParty: "Constructora Hermanos López S.A.S."
+        conflictDescription: "Contrato de construcción con empresa familiar"
+        
+      issue_result:
+        hasConflicts: "Si"  # Missing accent
+        conflictType: "Related business"  # Language mixing
+
+  acc_documento_vacio:
+    name: "ACC Empty Sections - Missing Governance Data"
+    s3_path: "s3://par-servicios-poc-qa-filling-desk/par-servicios-poc/ACC/700789012/acc_empty_sections_2022-10-05.pdf"
+    type: "ACC"
+    test_type: "blank_detection"
+    enabled: true
+    
+    test_config:
+      prompts_to_test: ["v1.0.0", "v1.3.0"]
+      description: "Document with governance structure but missing key details"
+      
+      expected_behavior: "extract_data"
+      actual_behavior: "blank"

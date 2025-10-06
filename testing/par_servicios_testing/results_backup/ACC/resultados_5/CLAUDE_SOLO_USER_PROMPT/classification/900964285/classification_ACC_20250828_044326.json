@@ -1,0 +1,87 @@
+{
+  "classification_data": {
+    "category": "ACC",
+    "text": "Asesorías y gestiones ambientales Obrando en calidad de Representante Legal el suscrito Jaime Alexander Franco Pedraza de la sociedad Asesorías y Gestiones Ambientales SAS con NIT 900.964.285-3 CERTIFICA Que la composición accionaria de la sociedad es como se detalla a continuación: ASESORÍAS Y GESTIONES AMBIENTALES SAS NIT 900,964.285-3 NIT | Nombre del accionista | No. De acciones | Capital Pagado | % 79770147 | JAIME ALEXANDER FRANCO PEDRAZA | 20.000 | 20.000.000 | 33,33% 51880385 | MARTHA LILIA CELIS GORDO | 20.000 | 20.000.000 | 33,33% 79958347 | GIOVANNY ANDRES VEGA FORERO | 20.000 | 20.000.000 | 33,33% La presente certificación se suscribe a los quince días de Enero de 2020. Atentamente Jaime Alexander Franco Pedraza CC 79.770.147 Representante Legal Asesorías y gestiones Ambientales CALLE 3 D SUR No. 71 D 19 3004616 / 3184688021 talentohumano@agambientales.com",
+    "document_number": "900964285",
+    "path": "ACC/900964285/164_CA_2020-02-29.pdf"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "```json { \"category\": \"ACC\", \"text\": \"Asesorías\\ny gestiones\\nambientales\\n\\nObrando en calidad de Representante Legal el suscrito Jaime Alexander Franco Pedraza de la\\nsociedad Asesorías y Gestiones Ambientales SAS con NIT 900.964.285-3\\n\\nCERTIFICA\\n\\nQue la composición accionaria de la sociedad es como se detalla a continuación:\\n\\nASESORÍAS Y GESTIONES AMBIENTALES SAS\\nNIT 900,964.285-3\\n\\nNIT | Nombre del accionista | No. De acciones | Capital Pagado | %\\n79770147 | JAIME ALEXANDER FRANCO PEDRAZA | 20.000 | 20.000.000 | 33,33%\\n51880385 | MARTHA LILIA CELIS GORDO | 20.000 | 20.000.000 | 33,33%\\n79958347 | GIOVANNY ANDRES VEGA FORERO | 20.000 | 20.000.000 | 33,33%\\n\\nLa presente certificación se suscribe a los quince días de Enero de 2020.\\n\\nAtentamente\\n\\nJaime Alexander Franco Pedraza\\nCC 79.770.147\\nRepresentante Legal\\nAsesorías y gestiones Ambientales\\n\\nCALLE 3 D SUR No. 71 D 19\\n3004616 / 3184688021\\ntalentohumano@agambientales.com\" } ```"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 9,
+      "cache_creation_input_tokens": 4475,
+      "cache_read_input_tokens": 0,
+      "output_tokens": 1354
+    },
+    "ResponseMetadata": {
+      "RequestId": "dbe63ff4-996f-4242-a814-59385a48b4ae",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Thu, 28 Aug 2025 09:43:02 GMT",
+        "content-type": "application/json",
+        "content-length": "4911",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "dbe63ff4-996f-4242-a814-59385a48b4ae",
+        "x-amzn-bedrock-invocation-latency": "35011",
+        "x-amzn-bedrock-cache-write-input-token-count": "4475",
+        "x-amzn-bedrock-cache-read-input-token-count": "0",
+        "x-amzn-bedrock-output-token-count": "1354",
+        "x-amzn-bedrock-input-token-count": "9"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_015uVBT9tnigkNEDfeE71ZhH",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-3-7-sonnet-20250219",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Let me analyze this document step by step according to the classification workflow: 1. **TEXT EXTRACTION**: The document appears to be in Spanish. Here's the text I can extract: ``` Asesorías y gestiones ambientales Obrando en calidad de Representante Legal el suscrito Jaime Alexander Franco Pedraza de la sociedad Asesorías y Gestiones Ambientales SAS con NIT 900.964.285-3 CERTIFICA Que la composición accionaria de la sociedad es como se detalla a continuación: ASESORÍAS Y GESTIONES AMBIENTALES SAS NIT 900.964.285-3 NIT | Nombre del accionista | No. De acciones | Capital Pagado | % --- | -------------------- | --------------- | -------------- | --- 79770147 | JAIME ALEXANDER FRANCO PEDRAZA | 20.000 | 20.000.000 | 33,33% 51880385 | MARTHA LILIA CELIS GORDO | 20.000 | 20.000.000 | 33,33% 79958347 | GIOVANNY ANDRES VEGA FORERO | 20.000 | 20.000.000 | 33,33% La presente certificación se suscribe a los quince días de Enero de 2020. Atentamente Jaime Alexander Franco Pedraza CC 79.770.147 Representante Legal Asesorías y gestiones Ambientales CALLE 3 D SUR No. 71 D 19 3004616 / 3184688021 talentohumano@agambientales.com ``` 2. **PRIORITY CHECKS**: - Not BLANK - document contains meaningful content - Not LINK_ONLY - document contains substantial content beyond a link (although there is an email address at bottom) 3. **ISSUER IDENTIFICATION**: - Not issued by DIAN - no DIAN logo or mention - Not issued by Chamber of Commerce - no mention of \"Cámara de Comercio\" - Issued by a corporate entity: \"Asesorías y Gestiones Ambientales SAS\" - Signed by Jaime Alexander Franco Pedraza as Legal Representative 4. **DOCUMENT FUNCTION ANALYSIS**: This document certifies the shareholding structure of the company \"Asesorías y Gestiones Ambientales SAS\". It details: - The company name and tax ID (NIT) - A list of shareholders with their: - Individual tax IDs (NIT) - Names - Number of shares owned - Capital contributed - Ownership percentages (each owns 33.33%) - The document is certified by the Legal Representative - The document functions as ownership structure certification 5. **CATEGORY CLASSIFICATION**: Looking at the characteristics: - Contains shareholder terminology: \"composición accionaria\" - Shows ownership data: specific number of shares (20,000 each), capital amounts (20,000,000 each), percentages (33.33% each) - Lists shareholders with their identification numbers - Is certified by the legal representative - Focuses exclusively on the ownership structure of the company This clearly matches the ACC (shareholder certification) category. The document's primary purpose is to certify the shareholding structure of Asesorías y Gestiones Ambientales SAS. 6. **CONFIDENCE VALIDATION**: Strong evidence for ACC classification: - Clear \"composición accionaria\" (shareholding composition) title - Detailed shareholder list with specific ownership percentages - Document explicitly certifies the ownership structure - Document is issued by the company's legal representative - Contains all required elements for ACC (shareholders, percentages, certification) Based on this analysis, I am confident the correct classification is ACC.",
+          "signature": "ErcBCkgIBxABGAIiQPojH/V8/myi4fBhj7E4zeUyXiYluTVi2Fr9mC7fJ7Saf4fI9gBdFS93LH2jZHH81v9pZbq3c9aUsCi3Yz+Wl4ESDGlQeZtUEKEny1BxphoMs6TB5bakXLfe9tQ9IjATIjjmW6UkBdJhLwl3Yqy1+li5pbAWC7pFcEC/qvplJYxxJvNcqdDeISZVwFoNHD8qHXAXgm5oZF3okzoPd5BiCxjIsFpt+d68pPQp3EgfGAI="
+        },
+        {
+          "type": "text",
+          "text": "```json { \"category\": \"ACC\", \"text\": \"Asesorías\\ny gestiones\\nambientales\\n\\nObrando en calidad de Representante Legal el suscrito Jaime Alexander Franco Pedraza de la\\nsociedad Asesorías y Gestiones Ambientales SAS con NIT 900.964.285-3\\n\\nCERTIFICA\\n\\nQue la composición accionaria de la sociedad es como se detalla a continuación:\\n\\nASESORÍAS Y GESTIONES AMBIENTALES SAS\\nNIT 900,964.285-3\\n\\nNIT | Nombre del accionista | No. De acciones | Capital Pagado | %\\n79770147 | JAIME ALEXANDER FRANCO PEDRAZA | 20.000 | 20.000.000 | 33,33%\\n51880385 | MARTHA LILIA CELIS GORDO | 20.000 | 20.000.000 | 33,33%\\n79958347 | GIOVANNY ANDRES VEGA FORERO | 20.000 | 20.000.000 | 33,33%\\n\\nLa presente certificación se suscribe a los quince días de Enero de 2020.\\n\\nAtentamente\\n\\nJaime Alexander Franco Pedraza\\nCC 79.770.147\\nRepresentante Legal\\nAsesorías y gestiones Ambientales\\n\\nCALLE 3 D SUR No. 71 D 19\\n3004616 / 3184688021\\ntalentohumano@agambientales.com\" } ```"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 9,
+        "cache_creation_input_tokens": 4475,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 1354
+      }
+    },
+    "model_id": "us.anthropic.claude-3-7-sonnet-20250219-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 8000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "expected_category": "ACC",
+  "model_used": "us.anthropic.claude-3-7-sonnet-20250219-v1:0",
+  "api_used": "invoke_model",
+  "pdf_info": {
+    "original_size": 196153,
+    "first_page_size": 196072,
+    "is_scanned": true
+  }
+}

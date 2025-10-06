@@ -1,0 +1,94 @@
+{
+  "extraction_data": {
+    "result": {
+      "CompanyName": "DECORAMOS SUS ESPACIOS KAREN EU",
+      "Country": "COLOMBIA",
+      "TaxId": "900265697",
+      "VerificationDigit": "5",
+      "IdentificationType": "NIT",
+      "PersonType": "Persona jurídica",
+      "ConflictingSources": [
+        "DocumentGenerationDate not clearly visible in the document"
+      ],
+      "RequiresReview": "true"
+    },
+    "RelatedParties": [],
+    "Address": "CR 23 137 52 BRR MARANTA, Bogotá, D.C., Bogotá D.C.",
+    "DocumentGenerationDate": "ForReview",
+    "DocumentType": "company",
+    "Category": "RUT"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "{ \"result\": { \"CompanyName\": \"DECORAMOS SUS ESPACIOS KAREN EU\", \"Country\": \"COLOMBIA\", \"TaxId\": \"900265697\", \"VerificationDigit\": \"5\", \"IdentificationType\": \"NIT\", \"PersonType\": \"Persona jurídica\", \"ConflictingSources\": [\"DocumentGenerationDate not clearly visible in the document\"], \"RequiresReview\": \"true\" }, \"RelatedParties\": [], \"Address\": \"CR 23 137 52 BRR MARANTA, Bogotá, D.C., Bogotá D.C.\", \"DocumentGenerationDate\": \"ForReview\", \"DocumentType\": \"company\", \"Category\": \"RUT\" }"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 1817,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 2990,
+      "output_tokens": 781
+    },
+    "ResponseMetadata": {
+      "RequestId": "2f7ab6cd-3c82-4911-b1a1-92fcf84786c3",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Tue, 02 Sep 2025 22:01:02 GMT",
+        "content-type": "application/json",
+        "content-length": "5453",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "2f7ab6cd-3c82-4911-b1a1-92fcf84786c3",
+        "x-amzn-bedrock-invocation-latency": "13403",
+        "x-amzn-bedrock-cache-write-input-token-count": "0",
+        "x-amzn-bedrock-cache-read-input-token-count": "2990",
+        "x-amzn-bedrock-output-token-count": "781",
+        "x-amzn-bedrock-input-token-count": "1817"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_014ZJDDEESF4q3gbBm71iX11",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-sonnet-4-20250514",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Let me extract information from this RUT document step by step. Looking at the document, I can see: 1. This is a \"Formulario del Registro Único Tributario\" issued by DIAN (Colombian tax authority) 2. Company Name - Cell \"35. Razón social\": I can see \"DECORAMOS SUS ESPACIOS KAREN EU\" 3. Tax ID - Cell \"5. Número de Identificación Tributaria (NIT)\": I can see \"900265697\" 4. Verification Digit - Cell \"6. DV\": I can see \"5\" next to the NIT 5. Country - Cell \"38. País\": I can see \"COLOMBIA\" 6. Person Type - Cell \"24. Tipo de contribuyente\": I can see \"Persona jurídica\" 7. Address components: - Cell \"41. Dirección principal\": \"CR 23 137 52 BRR MARANTA\" - Cell \"40. Ciudad/Municipio\": \"Bogotá, D.C.\" - Cell \"39. Departamento\": \"Bogotá D.C.\" 8. Document Generation Date: Looking at the bottom, I can see it mentions document generation but the exact date/time isn't clearly visible in this image. 9. IdentificationType: Since this is a RUT document from DIAN, this should be \"NIT\" 10. RelatedParties: I need to look for sections about \"Socios y/o miembros de Juntas Directivas, Consorcios, Uniones Temporales\" and \"Revisor Fiscal y contador\" - I don't see these sections clearly in this page, so this might be on another page or not present. Let me check what I can see clearly: - The NIT appears to be \"900265697\" with DV \"5\" - Company name is \"DECORAMOS SUS ESPACIOS KAREN EU\" - The document confirms Colombia as the country - The entity is a legal person (Persona jurídica) - Located in Bogotá with a specific address in the Maranta neighborhood I'll note the document generation details are unclear and need further review.",
+          "signature": "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"
+        },
+        {
+          "type": "text",
+          "text": "{ \"result\": { \"CompanyName\": \"DECORAMOS SUS ESPACIOS KAREN EU\", \"Country\": \"COLOMBIA\", \"TaxId\": \"900265697\", \"VerificationDigit\": \"5\", \"IdentificationType\": \"NIT\", \"PersonType\": \"Persona jurídica\", \"ConflictingSources\": [\"DocumentGenerationDate not clearly visible in the document\"], \"RequiresReview\": \"true\" }, \"RelatedParties\": [], \"Address\": \"CR 23 137 52 BRR MARANTA, Bogotá, D.C., Bogotá D.C.\", \"DocumentGenerationDate\": \"ForReview\", \"DocumentType\": \"company\", \"Category\": \"RUT\" }"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 1817,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 2990,
+        "output_tokens": 781
+      }
+    },
+    "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 9000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+  "api_used": "invoke_model"
+}

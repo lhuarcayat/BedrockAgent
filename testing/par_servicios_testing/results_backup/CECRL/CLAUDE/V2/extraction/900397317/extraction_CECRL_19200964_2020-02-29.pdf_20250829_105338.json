@@ -1,0 +1,88 @@
+{
+  "extraction_data": {
+    "result": {
+      "firstName": "LUIS IGNACIO",
+      "lastName": "HERNANDEZ DIAZ",
+      "country_issuer": "Colombia",
+      "nationality": "Colombia",
+      "identificationType": "Cédula de Ciudadanía",
+      "identificationNumber": "19.200.964",
+      "message": ""
+    },
+    "document_type": "person",
+    "category": "CECRL"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "```json { \"result\": { \"firstName\": \"LUIS IGNACIO\", \"lastName\": \"HERNANDEZ DIAZ\", \"country_issuer\": \"Colombia\", \"nationality\": \"Colombia\", \"identificationType\": \"Cédula de Ciudadanía\", \"identificationNumber\": \"19.200.964\", \"message\": \"\" }, \"document_type\": \"person\", \"category\": \"CECRL\" } ```"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 10,
+      "cache_creation_input_tokens": 6039,
+      "cache_read_input_tokens": 0,
+      "output_tokens": 575
+    },
+    "ResponseMetadata": {
+      "RequestId": "6b0812f4-e879-4d3d-a88b-306df3b50172",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Fri, 29 Aug 2025 15:53:39 GMT",
+        "content-type": "application/json",
+        "content-length": "4696",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "6b0812f4-e879-4d3d-a88b-306df3b50172",
+        "x-amzn-bedrock-invocation-latency": "10929",
+        "x-amzn-bedrock-cache-write-input-token-count": "6039",
+        "x-amzn-bedrock-cache-read-input-token-count": "0",
+        "x-amzn-bedrock-output-token-count": "575",
+        "x-amzn-bedrock-input-token-count": "10"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_01EDbF8gzz8wTjLbse7PHDNe",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-sonnet-4-20250514",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Let me carefully analyze this document to extract identification information. This appears to be a scanned document with two identification documents from Colombia. Looking at the document, I can see: 1. First document (top): - \"REPÚBLICA DE COLOMBIA\" - indicating country is Colombia - \"IDENTIFICACION PERSONAL\" - \"CEDULA DE CIUDADANIA\" - \"NUMERO: 19.200.964\" - Names appear to be \"HERNANDEZ DIAZ\" and \"LUIS IGNACIO\" - This looks like a Colombian ID card (Cédula de Ciudadanía) 2. Second document (bottom): - Shows what appears to be another Colombian document - \"BOGOTA D.C.\" is visible - Date appears to be \"09-MAY-1953\" - There's a fingerprint visible - Height appears to be \"1.66\" - Some other details but text is a bit unclear Let me apply the extraction methodology: For the first document (which appears clearer): - Country issuer: Colombia (from \"REPÚBLICA DE COLOMBIA\") - Document type: Cédula de Ciudadanía (from \"CEDULA DE CIUDADANIA\") - ID number: 19.200.964 (from \"NUMERO: 19.200.964\") - Names: I can see \"HERNANDEZ DIAZ\" which would be surnames, and \"LUIS IGNACIO\" which would be given names Based on Colombian naming conventions and the document layout: - firstName: \"LUIS IGNACIO\" - lastName: \"HERNANDEZ DIAZ\" - country_issuer: \"Colombia\" - nationality: \"Colombia\" (assuming same as issuer since no other nationality indicated) - identificationType: \"Cédula de Ciudadanía\" - identificationNumber: \"19.200.964\" The document appears to be an official Colombian identification document with government seals and proper formatting.",
+          "signature": "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"
+        },
+        {
+          "type": "text",
+          "text": "```json { \"result\": { \"firstName\": \"LUIS IGNACIO\", \"lastName\": \"HERNANDEZ DIAZ\", \"country_issuer\": \"Colombia\", \"nationality\": \"Colombia\", \"identificationType\": \"Cédula de Ciudadanía\", \"identificationNumber\": \"19.200.964\", \"message\": \"\" }, \"document_type\": \"person\", \"category\": \"CECRL\" } ```"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 10,
+        "cache_creation_input_tokens": 6039,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 575
+      }
+    },
+    "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 8000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+  "api_used": "invoke_model"
+}

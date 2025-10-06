@@ -1,0 +1,96 @@
+{
+  "document_name": "_2022-01-06.pdf",
+  "category": "CECRL",
+  "classification_success": false,
+  "extraction_success": false,
+  "overall_success": false,
+  "timestamp": "2025-08-28T10:52:04.146962",
+  "classification_result": {
+    "classification_data": {
+      "category": "POR_REVISAR",
+      "text": "We the People Of the United States, in Order to form a more perfect Union, establish Justice, insure domestic Tranquility, provide for the common defence, promote the general Welfare, and secure the Blessings of Liberty to ourselves and our Posterity, do ordain and establish this Constitution for the United States of America. SIGNATURE OF BEARER / SIGNATURE DU TITULAIRE / FIRMA DEL TITULAR PASSPORT PASSEPORT PASAPORTE UNITED STATES OF AMERICA Type / Type / Tipo Code / Code / Código Passport No. / No du Passeport / No de Pasaporte USA 566784278 Surname / Nom / Apellidos ADAMS Given Names / Prénoms / Nombres DIRK ELRIC Nationality / Nationalité / Nacionalidad UNITED STATES OF AMERICA Date of birth / Date de naissance / Fecha de nacimiento 16 May 1970 Place of birth / Lieu de naissance / Lugar de nacimiento VENEZUELA Sex / Sexe / Sexo M Date of issue / Date de délivrance / Fecha de expedición 28 Sep 2017 Date of expiration / Date d'expiration / Fecha de caducidad 27 Sep 2027 Authority / Autorité / Autoridad United States Department of State Endorsements / Mentions spéciales / Anotaciones SEE PAGE 51 P<USAADAMS<<DIRK<ELRIC<<<<<<<<<<<<<<<<<<<<<< 566784278USA7005163M2709271793328549<663632",
+      "document_number": "984174004",
+      "path": "CECRL/984174004/_2022-01-06.pdf"
+    },
+    "raw_response": {
+      "output": {
+        "message": {
+          "content": [
+            {
+              "text": "```json { \"category\": \"POR_REVISAR\", \"text\": \"We the People\\nOf the United States, in Order to form a more perfect Union, establish Justice, insure domestic Tranquility, provide for the common defence, promote the general Welfare, and secure the Blessings of Liberty to ourselves and our Posterity, do ordain and establish this Constitution for the United States of America.\\nSIGNATURE OF BEARER / SIGNATURE DU TITULAIRE / FIRMA DEL TITULAR\\nPASSPORT\\nPASSEPORT\\nPASAPORTE\\nUNITED STATES OF AMERICA\\nType / Type / Tipo Code / Code / Código Passport No. / No du Passeport / No de Pasaporte\\n USA 566784278\\nSurname / Nom / Apellidos\\nADAMS\\nGiven Names / Prénoms / Nombres\\nDIRK ELRIC\\nNationality / Nationalité / Nacionalidad\\nUNITED STATES OF AMERICA\\nDate of birth / Date de naissance / Fecha de nacimiento\\n16 May 1970\\nPlace of birth / Lieu de naissance / Lugar de nacimiento\\nVENEZUELA\\nSex / Sexe / Sexo\\nM\\nDate of issue / Date de délivrance / Fecha de expedición\\n28 Sep 2017\\nDate of expiration / Date d'expiration / Fecha de caducidad\\n27 Sep 2027\\nAuthority / Autorité / Autoridad\\nUnited States Department of State\\nEndorsements / Mentions spéciales / Anotaciones\\nSEE PAGE 51\\nP<USAADAMS<<DIRK<ELRIC<<<<<<<<<<<<<<<<<<<<<<\\n566784278USA7005163M2709271793328549<663632\" } ```"
+            }
+          ]
+        }
+      },
+      "stopReason": "end_turn",
+      "usage": {
+        "input_tokens": 9,
+        "cache_creation_input_tokens": 4496,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 1304
+      },
+      "ResponseMetadata": {
+        "RequestId": "2e6678dd-4a2e-49fe-ad1c-3c0515150101",
+        "HTTPStatusCode": 200,
+        "HTTPHeaders": {
+          "date": "Thu, 28 Aug 2025 15:52:33 GMT",
+          "content-type": "application/json",
+          "content-length": "5217",
+          "connection": "keep-alive",
+          "x-amzn-requestid": "2e6678dd-4a2e-49fe-ad1c-3c0515150101",
+          "x-amzn-bedrock-invocation-latency": "29913",
+          "x-amzn-bedrock-cache-write-input-token-count": "4496",
+          "x-amzn-bedrock-cache-read-input-token-count": "0",
+          "x-amzn-bedrock-output-token-count": "1304",
+          "x-amzn-bedrock-input-token-count": "9"
+        },
+        "RetryAttempts": 0
+      },
+      "raw_anthropic_response": {
+        "id": "msg_bdrk_011EqS7uxnMDZ7Xsy9v9CUQT",
+        "type": "message",
+        "role": "assistant",
+        "model": "claude-3-7-sonnet-20250219",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "I need to analyze this document following the classification workflow. Let's go through the steps: ## 1. TEXT EXTRACTION The document appears to be a US passport. I can extract the following text: - Header: \"We the People\" - Preamble text: \"Of the United States, in Order to form a more perfect Union, establish Justice, insure domestic Tranquility, provide for the common defence, promote the general Welfare, and secure the Blessings of Liberty to ourselves and our Posterity, do ordain and establish this Constitution for the United States of America.\" - Document type: \"PASSPORT\" / \"PASSEPORT\" / \"PASAPORTE\" - Country: \"UNITED STATES OF AMERICA\" - Type/Code: \"USA\" - Passport Number: \"566784278\" - Surname: \"ADAMS\" - Given Names: \"DIRK ELRIC\" - Nationality: \"UNITED STATES OF AMERICA\" - Date of birth: \"16 May 1970\" - Place of birth: \"VENEZUELA\" - Sex: \"M\" - Date of issue: \"28 Sep 2017\" - Date of expiration: \"27 Sep 2027\" - Authority: \"United States Department of State\" - Endorsements: \"SEE PAGE 51\" - Machine readable zone: \"P<USAADAMS<<DIRK<ELRIC<<<<<<<<<<<<<<<<<<<<<<566784278USA7005163M2709271793328549<663632\" ## 2. PRIORITY CHECKS - The document is not blank. - It does not contain primarily hyperlinks or URLs. ## 3. ISSUER IDENTIFICATION - This is issued by the United States Department of State. - It's a personal identification document (passport). - It's not issued by DIAN, a Chamber of Commerce, or a corporate entity. ## 4. DOCUMENT FUNCTION ANALYSIS - This is a personal identification document (US passport). - It serves for individual identification, not corporate documentation. - It does not relate to tax/regulatory compliance, legal certification, ownership structure, or entity relationships. ## 5. CATEGORY CLASSIFICATION Looking at the defined categories: 1. CECRL: This category is for \"Official personal identification documents (cédulas, passports, etc.) of legal representatives of companies\" 2. RUT: For tax registration documents issued by DIAN 3. CERL: For certificates issued by Chambers of Commerce 4. ACC: For documents certifying ownership structure 5. RUB: For DIAN reports about beneficial owners 6. BLANK: For empty documents 7. LINK_ONLY: For documents with primarily hyperlinks 8. POR_REVISAR: For documents that don't fit other categories This document is a US passport, which is a personal identification document. However, there's nothing in the document indicating that this person is a legal representative of a company. The CECRL category specifically requires personal identification documents of legal representatives of companies. Without that connection to corporate representation, this doesn't fit CECRL. It also doesn't fit any of the other specific categories (RUT, CERL, ACC, RUB). ## 6. CONFIDENCE VALIDATION - There's no strong evidence that this document fits into any of the defined categories. - It's clearly a passport, but without connection to corporate representation, it doesn't fit CECRL. - The document is complete and legible, but doesn't match the defined categories. Therefore, I should classify this as POR_REVISAR.",
+            "signature": "ErcBCkgIBxABGAIiQHki5FMLCa+PZzJXUYtadSzOggzpguFyAh3EHQSfOUmnLjEByK0b9XNDAG4Yh8hvfzhCIxZepdhVxUm8xa0gnz8SDAi5AIPAPMnbz6Wt8hoMS9vz5tJrTCTrewsvIjDEroLawHaNHEpytdL9PiO8bBBWXPc+qfE0YlGaOU6i+HPbD8JzL4NokN8812jtgBwqHaUqEa3POqRAPTNZDeYJKo1wbmxx+rtFEBu2GSWDGAI="
+          },
+          {
+            "type": "text",
+            "text": "```json { \"category\": \"POR_REVISAR\", \"text\": \"We the People\\nOf the United States, in Order to form a more perfect Union, establish Justice, insure domestic Tranquility, provide for the common defence, promote the general Welfare, and secure the Blessings of Liberty to ourselves and our Posterity, do ordain and establish this Constitution for the United States of America.\\nSIGNATURE OF BEARER / SIGNATURE DU TITULAIRE / FIRMA DEL TITULAR\\nPASSPORT\\nPASSEPORT\\nPASAPORTE\\nUNITED STATES OF AMERICA\\nType / Type / Tipo Code / Code / Código Passport No. / No du Passeport / No de Pasaporte\\n USA 566784278\\nSurname / Nom / Apellidos\\nADAMS\\nGiven Names / Prénoms / Nombres\\nDIRK ELRIC\\nNationality / Nationalité / Nacionalidad\\nUNITED STATES OF AMERICA\\nDate of birth / Date de naissance / Fecha de nacimiento\\n16 May 1970\\nPlace of birth / Lieu de naissance / Lugar de nacimiento\\nVENEZUELA\\nSex / Sexe / Sexo\\nM\\nDate of issue / Date de délivrance / Fecha de expedición\\n28 Sep 2017\\nDate of expiration / Date d'expiration / Fecha de caducidad\\n27 Sep 2027\\nAuthority / Autorité / Autoridad\\nUnited States Department of State\\nEndorsements / Mentions spéciales / Anotaciones\\nSEE PAGE 51\\nP<USAADAMS<<DIRK<ELRIC<<<<<<<<<<<<<<<<<<<<<<\\n566784278USA7005163M2709271793328549<663632\" } ```"
+          }
+        ],
+        "stop_reason": "end_turn",
+        "stop_sequence": null,
+        "usage": {
+          "input_tokens": 9,
+          "cache_creation_input_tokens": 4496,
+          "cache_read_input_tokens": 0,
+          "output_tokens": 1304
+        }
+      },
+      "model_id": "us.anthropic.claude-3-7-sonnet-20250219-v1:0",
+      "api_used": "invoke_model",
+      "model_params": {
+        "max_tokens": 8000,
+        "top_p": 1,
+        "temperature": 1,
+        "thinking": {
+          "type": "enabled",
+          "budget_tokens": 4096
+        }
+      }
+    },
+    "expected_category": "CECRL",
+    "model_used": "us.anthropic.claude-3-7-sonnet-20250219-v1:0",
+    "api_used": "invoke_model",
+    "pdf_info": {
+      "original_size": 814043,
+      "first_page_size": 813996,
+      "is_scanned": true
+    }
+  },
+  "error": "Classification failed"
+}

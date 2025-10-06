@@ -1,0 +1,87 @@
+{
+  "classification_data": {
+    "category": "CECRL",
+    "text": "REPÚBLICA DE COLOMBIA IDENTIFICACIÓN PERSONAL CÉDULA DE CIUDADANÍA NÚMERO: 19.067.068 VARGAS VELOZA APELLIDOS LUIS ALBERTO NOMBRES [signature] FIRMA FECHA DE NACIMIENTO: 22-ABR-1949 UBATE (CUNDINAMARCA) LUGAR DE NACIMIENTO 1.65 A+ M ESTATURA G.S. RH SEXO 26-MAY-1970 BOGOTA D.C. FECHA Y LUGAR DE EXPEDICIÓN REGISTRADOR NACIONAL CARLOS ARIEL SÁNCHEZ TORRES ÍNDICE DERECHO [barcode] A-1500150-00007281-M-0019067068-20080507 0000246624A 1 1150021138",
+    "document_number": "31158722566",
+    "path": "CECRL/31158722566/19067068_2021-03-02.pdf"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "```json { \"category\": \"CECRL\", \"text\": \"REPÚBLICA DE COLOMBIA\\nIDENTIFICACIÓN PERSONAL\\nCÉDULA DE CIUDADANÍA\\n\\nNÚMERO: 19.067.068\\nVARGAS VELOZA\\nAPELLIDOS\\nLUIS ALBERTO\\nNOMBRES\\n[signature]\\nFIRMA\\n\\nFECHA DE NACIMIENTO: 22-ABR-1949\\nUBATE\\n(CUNDINAMARCA)\\nLUGAR DE NACIMIENTO\\n1.65 A+ M\\nESTATURA G.S. RH SEXO\\n26-MAY-1970 BOGOTA D.C.\\nFECHA Y LUGAR DE EXPEDICIÓN\\nREGISTRADOR NACIONAL\\nCARLOS ARIEL SÁNCHEZ TORRES\\nÍNDICE DERECHO\\n\\n[barcode]\\nA-1500150-00007281-M-0019067068-20080507 0000246624A 1 1150021138\" } ```"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 9,
+      "cache_creation_input_tokens": 4475,
+      "cache_read_input_tokens": 0,
+      "output_tokens": 1132
+    },
+    "ResponseMetadata": {
+      "RequestId": "a814481c-b2e5-44c8-8797-8ab26be4c55b",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Thu, 28 Aug 2025 15:30:49 GMT",
+        "content-type": "application/json",
+        "content-length": "4395",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "a814481c-b2e5-44c8-8797-8ab26be4c55b",
+        "x-amzn-bedrock-invocation-latency": "29351",
+        "x-amzn-bedrock-cache-write-input-token-count": "4475",
+        "x-amzn-bedrock-cache-read-input-token-count": "0",
+        "x-amzn-bedrock-output-token-count": "1132",
+        "x-amzn-bedrock-input-token-count": "9"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_01FYzyzCNfTFDHR5yyuNvz6b",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-3-7-sonnet-20250219",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Let me analyze this document carefully following the classification workflow. ## TEXT EXTRACTION The document appears to be a Colombian identification card (\"Cédula de Ciudadanía\"). Let me extract all the visible text: ``` REPÚBLICA DE COLOMBIA IDENTIFICACIÓN PERSONAL CÉDULA DE CIUDADANÍA NÚMERO: 19.067.068 VARGAS VELOZA APELLIDOS LUIS ALBERTO NOMBRES [signature] FIRMA FECHA DE NACIMIENTO: 22-ABR-1949 UBATE (CUNDINAMARCA) LUGAR DE NACIMIENTO 1.65 A+ M ESTATURA G.S. RH SEXO 26-MAY-1970 BOGOTA D.C. FECHA Y LUGAR DE EXPEDICIÓN REGISTRADOR NACIONAL CARLOS ARIEL SÁNCHEZ TORRES ÍNDICE DERECHO [barcode] A-1500150-00007281-M-0019067068-20080507 0000246624A 1 1150021138 ``` ## PRIORITY CHECKS This is not BLANK or LINK_ONLY as it contains substantial readable text with a clear purpose. ## ISSUER IDENTIFICATION The issuer is clearly a government identification authority (Colombian government) as indicated by \"REPÚBLICA DE COLOMBIA\" and \"REGISTRADOR NACIONAL\". It's not DIAN, Chamber of Commerce, or a corporate entity. ## DOCUMENT FUNCTION ANALYSIS This document functions as personal identification. It contains: - Personal identification number (cédula number) - Full name (surname and given name) - Photo - Signature - Biometric data (fingerprint) - Physical characteristics (height, blood type, sex) - Birth information (date and place of birth) - Issue information (date and place of issue) ## CATEGORY CLASSIFICATION Following the evaluation order, let me check if this is a CECRL document: For CECRL (\"Official personal identification documents of legal representatives of companies\"), I need to check: Must-have indicators: - Individual identification terminology: ✓ (\"IDENTIFICACIÓN PERSONAL\", \"CÉDULA DE CIUDADANÍA\") - Personal biographical data: ✓ (birth date/place, blood type, gender) - Individual photo, signature, fingerprint references: ✓ (all present) - Government-issued personal ID numbers: ✓ (19.067.068) - Security elements: ✓ (photo, signature, fingerprint, barcode) However, I don't see any indication that this person is a legal representative of a company. The document is purely a personal identification document without any reference to corporate representation. The document contains all the elements of a standard Colombian national ID card (Cédula de Ciudadanía), but without any corporate context, I cannot classify it as CECRL. Since this document doesn't fit into any of the categories that specifically require a corporate context (CECRL, RUT, CERL, ACC, RUB), and it's a personal identification document without corporate representation indication, I'll classify it as POR_REVISAR. ## CONFIDENCE VALIDATION I have high confidence that this is a Colombian national ID card (Cédula de Ciudadanía), but since there's no indication of corporate representation, it doesn't meet the strict definition of CECRL. The document is complete and legible, but it simply doesn't fit the defined categories that all have a corporate/business context. Therefore, the appropriate classification is POR_REVISAR.",
+          "signature": "ErcBCkgIBxABGAIiQNtalmwasPDixqOFCAOlEvyFujuSwbSgGfGxRCtZPYuKrfz5fm4iHTJmi9+4bL9dWQurCReu8KF61BA2HlzM8/wSDOyWJDp4Gm/aut8jxxoMyevkEjmLX7nETHxyIjAvtPXnTEK5q+/rwacn4ynNBi0zEwgnklef59C8SMrvC7OJ+iI1wgzu6DLeNJh9tSUqHTj5Ut/vdlvUwLXC/4C3dIuJOvJwYvthDcnllrp0GAI="
+        },
+        {
+          "type": "text",
+          "text": "```json { \"category\": \"CECRL\", \"text\": \"REPÚBLICA DE COLOMBIA\\nIDENTIFICACIÓN PERSONAL\\nCÉDULA DE CIUDADANÍA\\n\\nNÚMERO: 19.067.068\\nVARGAS VELOZA\\nAPELLIDOS\\nLUIS ALBERTO\\nNOMBRES\\n[signature]\\nFIRMA\\n\\nFECHA DE NACIMIENTO: 22-ABR-1949\\nUBATE\\n(CUNDINAMARCA)\\nLUGAR DE NACIMIENTO\\n1.65 A+ M\\nESTATURA G.S. RH SEXO\\n26-MAY-1970 BOGOTA D.C.\\nFECHA Y LUGAR DE EXPEDICIÓN\\nREGISTRADOR NACIONAL\\nCARLOS ARIEL SÁNCHEZ TORRES\\nÍNDICE DERECHO\\n\\n[barcode]\\nA-1500150-00007281-M-0019067068-20080507 0000246624A 1 1150021138\" } ```"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 9,
+        "cache_creation_input_tokens": 4475,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 1132
+      }
+    },
+    "model_id": "us.anthropic.claude-3-7-sonnet-20250219-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 8000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "expected_category": "CECRL",
+  "model_used": "us.anthropic.claude-3-7-sonnet-20250219-v1:0",
+  "api_used": "invoke_model",
+  "pdf_info": {
+    "original_size": 123009,
+    "first_page_size": 119406,
+    "is_scanned": true
+  }
+}

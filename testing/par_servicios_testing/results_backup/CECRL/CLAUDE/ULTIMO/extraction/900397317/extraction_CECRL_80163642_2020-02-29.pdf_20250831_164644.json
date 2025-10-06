@@ -1,0 +1,88 @@
+{
+  "extraction_data": {
+    "result": {
+      "FirstName": "LUIS DARIO",
+      "LastName": "HERNANDEZ RAMIREZ",
+      "CountryIssuer": "Colombia",
+      "Nationality": "colombiano",
+      "IdentificationType": "Cédula de Ciudadanía",
+      "IdentificationNumber": "80.163.642",
+      "Message": ""
+    },
+    "document_type": "person",
+    "category": "CECRL"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "```json { \"result\": { \"FirstName\": \"LUIS DARIO\", \"LastName\": \"HERNANDEZ RAMIREZ\", \"CountryIssuer\": \"Colombia\", \"Nationality\": \"colombiano\", \"IdentificationType\": \"Cédula de Ciudadanía\", \"IdentificationNumber\": \"80.163.642\", \"Message\": \"\" }, \"document_type\": \"person\", \"category\": \"CECRL\" } ```"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 1604,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 4300,
+      "output_tokens": 685
+    },
+    "ResponseMetadata": {
+      "RequestId": "dc2a758a-cd1a-4aaa-9497-5fdb8fa9fcc4",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Sun, 31 Aug 2025 21:46:43 GMT",
+        "content-type": "application/json",
+        "content-length": "5901",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "dc2a758a-cd1a-4aaa-9497-5fdb8fa9fcc4",
+        "x-amzn-bedrock-invocation-latency": "11622",
+        "x-amzn-bedrock-cache-write-input-token-count": "0",
+        "x-amzn-bedrock-cache-read-input-token-count": "4300",
+        "x-amzn-bedrock-output-token-count": "685",
+        "x-amzn-bedrock-input-token-count": "1604"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_01G7Y6jDjNyzr83moHv4YpXF",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-sonnet-4-20250514",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Looking at this Colombian identification document, I need to extract the information according to the specified methodology. Let me analyze the document: 1. The document header shows \"REPÚBLICA DE COLOMBIA\" and \"IDENTIFICACIÓN PERSONAL\" and \"CÉDULA DE CIUDADANÍA\" - this indicates it's a Colombian citizenship card. 2. Looking at the structure, I can see: - NUMERO: 80.163.642 - HERNANDEZ RAMIREZ (appears after the number) - APELLIDOS (label) - LUIS DARIO (appears under the APELLIDOS label) - NOMBRES (label at the bottom) This appears to be one of those \"misaligned\" Colombian documents mentioned in the extraction methodology. Let me analyze this carefully: According to the methodology, in Colombian documents there's often misalignment where: - The surnames appear first - Then the \"APELLIDOS\" label appears along with the first name(s) - Finally the \"NOMBRES\" label appears Looking at the document: - \"HERNANDEZ RAMIREZ\" appears right after the number - these are likely the surnames - Under \"APELLIDOS\" we see \"LUIS DARIO\" - but according to the methodology, this text that appears under \"APELLIDOS\" is actually the names and belongs to the \"NOMBRES\" field - The \"NOMBRES\" label appears at the bottom but seems to have no visible text after it This matches exactly the pattern described in the methodology: \"The 'NOMBRES' label will never be empty, so if you detect that the label does not have a 'text' then it means that the 'previous' text in fact belongs to this label, and then the text in the 'APELLIDOS' field must also be the previous one.\" So the correct extraction should be: - FirstName: \"LUIS DARIO\" (the text that appears under APELLIDOS but actually belongs to NOMBRES) - LastName: \"HERNANDEZ RAMIREZ\" (the text that appears before APELLIDOS) - CountryIssuer: \"Colombia\" (from the document header) - Nationality: \"colombiano\" (based on the citizenship card) - IdentificationType: \"Cédula de Ciudadanía\" - IdentificationNumber: \"80.163.642\" I've confirmed the document details match the expected extraction methodology for Colombian identification documents.",
+          "signature": "ErkRCkgIBxABGAIqQHqRDnhDvzxxZBVWQMgZBG9iseXIXfvZeX7jzd755ygPeFu3tvik6t5Wd83w392qIKmMhjLybiuOWRZdA1yAIHcSDC4Vsub+cTBU+aTvZxoMiqneOw5Ti6VzLHspIjDPWQyuuRDLHbSJNQ3j7z9Djlu95rhF8Q7pBsh8DftMcL6s+ZLuxxZDQBt+/6tDTUQqnhDJ/69ekaFmYsNi0O+dUEHlW71VgZqIuhtN+HmjU55SJ0I5OvcOqVmaDNYY5M7Uo8tS8eMYuIAGyDsLxJLWCHOvqOL7FtbeLEpXezhNMmKuYMYeOsC69MpujXc6ieVISYk8Tsdj47AozsGnkpEHi/T6X+VvRv6lUNBTn+feoMpgSzmoh0yF4Mbw1io+wmg1+OsLIUIO62dKPApWZg9nLYDKC3eLFGEdUcu0TyDtBMd6tY63RYWJLaXFgM2tyF+897ZzrV9V0I05/O+tua83Bqurik5BUoapwjQs/8Rmi0ys2PC17hFAYK1x23/jKLZnyaOIn5CeaGBvkLzGupndrOwuJk4dIfc55lHEQjFQ235KgvU8WDrdsdBud8LF998aKLLiJDdiEJvOoTr/NlvVpMD+cOCPlXCM+PPDUJnI9x6QU9uSFTA0+emimAdu0WQF4hZw3jZL7fcId705z8mOogA2EdecMOevVMxghUllWIrR4gPbpHnsIBWsX8gizKrxDxEd7uoexpZ/h/Il3XnqmBir6DL3RRlXqMyBexWjOKqs+PkYfJ8FBCjAeSZsqrbw7DLi8vSHV76UxE9qMPuV/6qDIAd1daLk2tLDH0DgdVcHA+0hZlUxxk85+OcyXwkpjLAmjp2EF/FmZSxjwM0rJc8sV3otkhcmqeROE8qxi7uQXSCiRGMu/Lbrl/co/tL67J6fnET966yh4f4V9dG0dAOiJ2eeOhJAWjOC75L0j7M+sfJX8CWIowvcRcvcqK7WkT7HwJBLs1XFzdpX2VBAxOBJv+/he9Z+/uB5l0WUHeU1IRlAR2APG5wqX6IGHVgpc1j99JGsPk4c7rAvu4NMhdv1gvmJMjg/nxJ9vEAJvdw3LjKynibheD3Bc+2Oo9lKMfLZiZTfXNc6Ir7M2OmK8N/efBqxavRfUD2b/ptfujvLw4YC4DDgQFsIzzoMtMVXLkRQUd0fTShWaCQPnQ1r9OBBYecNlWnJ0ejHk9pT1BA3stpwK96yy5qGR7yUttePVRvoj4w9CR7HCfug35tlp89QgqT+1grjFKw9AwPAnJtakD3ZEj+eD6dKb2fK6T6v/dBrthvsZwKgMC2FRwKMF2+P9YIQjaNgrO3Vr4RcNgNhchkFWLP0WmdI+6xlpLcw/P1osvkoEZiGZYebqaheYzPHzPPx+v0l94XuL8drn6mimYMs3iWCF4nto0vxtLLQ0SvD6DjN6kr3H9igifwPNVg7d5ONlp3c+geBP6UpjsPHr6d65VdwS6xZbyiHZY06JnazCC3TFSEhjpe1uRL8Bw/Bj+rJTtof3FKiQzeVa/GnGXMD2RYwX5dGrW+O+dZt+y5L+AOPKA7kEp7jswal4f2hN9dtjYtxz0aIhjDp/KVLcJpWFNY3GkEHbdO5V2OM/fTb1HfXQOQjMeORCkuiVqCRJkqaJ6AxopaiO5IWJe8fmn8I9VA/KDOVzxgOeVeIBiqp96Igmm4E7Elv5iqtE8SPGB+jPwThaxIFpEsIVHUYiP3plFdJKQpUofXvaObvxqW6PoEzju9lJg8QXHDV5gPfjNOFxbBfmnu6x6rNAgN1tvpco5Oz2ZTCJjdE40CM7oJxw2OqCFqE+YDPdfZyBKx+89/Fup6O2oufbn0+oWAgZ2gPzixjTIFuGxPJIRw0RnF9NiYJFkjIKYoOT3FLPNFCGQSQOP/+Vaei0K5OIe8j6NS8ogTMi5uBmBadtJ/lDVNAkUhQ9P8uV2cI1s8l0gcWxdqpcM1c5J7rUjXuraCNr/SVYuICXvgMG9spAkuIxzmIH/p11uhzziSzzlDr07l2Tvpfwtd8gprNE/PZzgJUkQHYAHjpZHBCWtMnGBtHrhUOL2oJOYjtXw3/s8u2QYWBjUix0K+YEpjhE6IeNy1k8eckOD3Q01RMK4EOeaDRugn1k3WK0oIcw4vf28vZ6lU5em6Wfs5it3sB05+og6G2j7NZhSeNeiqUEkXbdy7hL9oEjqG/21czLKYAcr2rxsBPcIysos5n/YnxU1+sY+uIpj3jJU7xM+k3k8XXkGOcCdy8YQ+raaoXc+n1hDCjBAIPuUarIr2mrza8dr+rTjXDkRvnmbLMKbQmAbNEaOGY5fjhXF56KfQk4vwZ6trT+pd8tYkdmvElPlo+yHtD0oB5zkPSpg2Wjaqyn3xV907qJhJs9FuqijOjPjE9pKugdIeu1YwW6y7t9MtnvQ/ox37is6WOBkCiVgvqTz+c7h3oiyqLqoPz0GErUZS21P6kykZHEHVIeyaNRotgVKCbtaWJ4iywNns2YuIs/j6mERXoYz3CKow0TIQO+IQ72+2zvhVFpiPncKV/ajIPJlGcqH5Lt5kbZ6arNrwjSjK3NDZp8DBoyfE7VUK6uApgfpK+0N/9rlGP1c/EHWcDldxt6BUmDaEUO+bQx66ZAaJp/h2Kc8uHYPi0XnBXOkads8bazc7YctXUUY6dtE0ga/zYMDIGRJZ1PwWfilnG9PufMzPDFMQJE7aP2KNXXzoI5vVLl8jntV3F0weAdFUJ1GP42m9V3CjlAWH4jVzoEhdcK2uUWEUOgAnr5oGwU1m/vv+XpFmOw7reIF7rZWG7fBYbf3+nIehEPDbkwAdwLvBYCXqAb92TkvTcuBYPg4Upk381pTOmkxEl3PNz1LahANyB0ZDtCOGYFss3C/9/zBiLb+IizmKhCLVrk7ijb8dYxFVHBtBsEzqfGQgYTp05P8TQ7i75A/pqg/AZ95MowW5HMGx2dkMsWJ71IrY65QCpcU6nORgB"
+        },
+        {
+          "type": "text",
+          "text": "```json { \"result\": { \"FirstName\": \"LUIS DARIO\", \"LastName\": \"HERNANDEZ RAMIREZ\", \"CountryIssuer\": \"Colombia\", \"Nationality\": \"colombiano\", \"IdentificationType\": \"Cédula de Ciudadanía\", \"IdentificationNumber\": \"80.163.642\", \"Message\": \"\" }, \"document_type\": \"person\", \"category\": \"CECRL\" } ```"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 1604,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 4300,
+        "output_tokens": 685
+      }
+    },
+    "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 8000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+  "api_used": "invoke_model"
+}

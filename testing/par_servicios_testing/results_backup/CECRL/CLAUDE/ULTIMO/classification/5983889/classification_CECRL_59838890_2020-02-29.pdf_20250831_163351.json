@@ -1,0 +1,87 @@
+{
+  "classification_data": {
+    "category": "CECRL",
+    "text": "REPÚBLICA DE COLOMBIA IDENTIFICACIÓN PERSONAL CÉDULA DE CIUDADANÍA NÚMERO 59589885 CORTES ARIAS APELLIDOS LUIS HERNANDO NOMBRES FIRMA FECHA DE NACIMIENTO 18-MAY-1956 PURIFICACIÓN (TOLIMA) LUGAR DE NACIMIENTO 1.56 O+ M ESTATURA G.S. RH SEXO 17-ENE-1976 PURIFICACIÓN FECHA Y LUGAR DE EXPEDICIÓN REGISTRADOR NACIONAL DEL ESTADO CIVIL A-20030400-53023211-M-000568388-200229115 03974/020140 02 109450231",
+    "document_number": "5983889",
+    "path": "CECRL/5983889/59838890_2020-02-29.pdf"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "```json { \"category\": \"CECRL\", \"text\": \"REPÚBLICA DE COLOMBIA\\nIDENTIFICACIÓN PERSONAL\\nCÉDULA DE CIUDADANÍA\\nNÚMERO\\n59589885\\nCORTES ARIAS\\nAPELLIDOS\\nLUIS HERNANDO\\nNOMBRES\\nFIRMA\\nFECHA DE NACIMIENTO 18-MAY-1956\\nPURIFICACIÓN\\n(TOLIMA)\\nLUGAR DE NACIMIENTO\\n1.56 O+ M\\nESTATURA G.S. RH SEXO\\n17-ENE-1976 PURIFICACIÓN\\nFECHA Y LUGAR DE EXPEDICIÓN\\nREGISTRADOR NACIONAL\\nDEL ESTADO CIVIL\\nA-20030400-53023211-M-000568388-200229115 03974/020140 02 109450231\" } ```"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 1584,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 3150,
+      "output_tokens": 809
+    },
+    "ResponseMetadata": {
+      "RequestId": "58eb5a94-2b72-4128-94a0-8cfe30e8f95f",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Sun, 31 Aug 2025 21:33:50 GMT",
+        "content-type": "application/json",
+        "content-length": "5275",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "58eb5a94-2b72-4128-94a0-8cfe30e8f95f",
+        "x-amzn-bedrock-invocation-latency": "12791",
+        "x-amzn-bedrock-cache-write-input-token-count": "0",
+        "x-amzn-bedrock-cache-read-input-token-count": "3150",
+        "x-amzn-bedrock-output-token-count": "809",
+        "x-amzn-bedrock-input-token-count": "1584"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_012PZUeicQ3i3qun8N9P9iSn",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-sonnet-4-20250514",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Let me analyze this document following the classification workflow: **1. TEXT EXTRACTION** I can see the following text from the document: - \"REPÚBLICA DE COLOMBIA\" - \"IDENTIFICACIÓN PERSONAL\" - \"CÉDULA DE CIUDADANÍA\" - Number \"59589885\" (appears to be an ID number) - \"CORTES ARIAS\" - \"LUIS HERNANDO\" - \"FECHA DE NACIMIENTO\" 18-MAY-1956 - \"PURIFICACIÓN\" - \"(TOLIMA)\" - \"LUGAR DE NACIMIENTO\" - \"1.56\" and \"O+\" (height and blood type) - \"M\" (sex) - \"ESTATURA\" \"G.S. RH\" \"SEXO\" - \"17-ENE-1976 PURIFICACIÓN\" - \"FECHA Y LUGAR DE EXPEDICIÓN\" - There's a fingerprint visible - There's a photograph - There's a signature - There's a barcode at the bottom **2. PRIORITY CHECKS** - This is NOT BLANK - it has significant content - This is NOT LINK_ONLY - it doesn't contain hyperlinks/URLs **3. DOCUMENT FUNCTION ANALYSIS** The main purpose of this document is clearly personal identification. This is a Colombian citizenship card (\"Cédula de Ciudadanía\") which is an official personal identification document. **4. ISSUER IDENTIFICATION** This document is issued by the Republic of Colombia (\"REPÚBLICA DE COLOMBIA\") - a government identification authority. **5. CATEGORY CLASSIFICATION** This clearly fits the CECRL category as: - It's an official personal identification document (Cédula de Ciudadanía) - Contains personal biographical data: date of birth (18-MAY-1956), place of birth (Purificación, Tolima), blood type (O+), sex (M), height (1.56) - Includes unique biometric identifiers like photograph, signature, and fingerprint - Verified by official government-issued identification number - Demonstrates robust security features typical of national ID documents",
+          "signature": "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"
+        },
+        {
+          "type": "text",
+          "text": "```json { \"category\": \"CECRL\", \"text\": \"REPÚBLICA DE COLOMBIA\\nIDENTIFICACIÓN PERSONAL\\nCÉDULA DE CIUDADANÍA\\nNÚMERO\\n59589885\\nCORTES ARIAS\\nAPELLIDOS\\nLUIS HERNANDO\\nNOMBRES\\nFIRMA\\nFECHA DE NACIMIENTO 18-MAY-1956\\nPURIFICACIÓN\\n(TOLIMA)\\nLUGAR DE NACIMIENTO\\n1.56 O+ M\\nESTATURA G.S. RH SEXO\\n17-ENE-1976 PURIFICACIÓN\\nFECHA Y LUGAR DE EXPEDICIÓN\\nREGISTRADOR NACIONAL\\nDEL ESTADO CIVIL\\nA-20030400-53023211-M-000568388-200229115 03974/020140 02 109450231\" } ```"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 1584,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 3150,
+        "output_tokens": 809
+      }
+    },
+    "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 8000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "expected_category": "CECRL",
+  "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+  "api_used": "invoke_model",
+  "pdf_info": {
+    "original_size": 126810,
+    "first_page_size": 125227,
+    "is_scanned": true
+  }
+}

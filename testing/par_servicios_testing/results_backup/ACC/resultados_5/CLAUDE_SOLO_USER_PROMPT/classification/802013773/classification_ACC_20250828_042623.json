@@ -1,0 +1,87 @@
+{
+  "classification_data": {
+    "category": "ACC",
+    "text": "COMPOSICION ACCIONARIA NOMBRE DE LA ENTIDAD: S & T INGENIERIA Y CONSULTORIA SAS NIT 802,013,773-0 INFORMACION A: 19 DE MAYO DEL AÑO 2020 NOMBRE DEL ACCIONISTA C.C. NATURALEZA JURÍDICA DEL SOCIO Nº DE ACCIONES VALOR UNITARIO DE LAS ACCIONES % DE PARTICIPACIÓN SOBRE EL CAPITAL TANIA ELENA CHEMAS AVENDAÑO 32.728.993 PERSONAL NATURAL 280 $ 1.000.000 50,00% FARID EDUARDO RADI SAGBINI 77.025.796 PERSONAL NATURAL 280 $ 1.000.000 50,00% TOTAL ACCIONES 560 100% FARID EDUARDO RADI SAGBINI REPRESENTANTE LEGAL ZULMA OSPINO ALVAREZ CONTADOR TP-49271-T",
+    "document_number": "802013773",
+    "path": "ACC/802013773/186_CA_2020-02-29.pdf"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "```json { \"category\": \"ACC\", \"text\": \"COMPOSICION ACCIONARIA\\nNOMBRE DE LA ENTIDAD: S & T INGENIERIA Y CONSULTORIA SAS\\nNIT 802,013,773-0\\nINFORMACION A: 19 DE MAYO DEL AÑO 2020\\n\\nNOMBRE DEL ACCIONISTA\\tC.C.\\tNATURALEZA JURÍDICA DEL SOCIO\\tNº DE ACCIONES\\tVALOR UNITARIO DE LAS ACCIONES\\t% DE PARTICIPACIÓN SOBRE EL CAPITAL\\nTANIA ELENA CHEMAS AVENDAÑO\\t32.728.993\\tPERSONAL NATURAL\\t280\\t$ 1.000.000\\t50,00%\\nFARID EDUARDO RADI SAGBINI\\t77.025.796\\tPERSONAL NATURAL\\t280\\t$ 1.000.000\\t50,00%\\nTOTAL ACCIONES\\t\\t\\t560\\t\\t100%\\n\\nFARID EDUARDO RADI SAGBINI\\nREPRESENTANTE LEGAL\\n\\nZULMA OSPINO ALVAREZ\\nCONTADOR\\nTP-49271-T\" } ```"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 9,
+      "cache_creation_input_tokens": 4475,
+      "cache_read_input_tokens": 0,
+      "output_tokens": 1018
+    },
+    "ResponseMetadata": {
+      "RequestId": "9990b760-5686-4c06-8c90-36ca49e58635",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Thu, 28 Aug 2025 09:25:57 GMT",
+        "content-type": "application/json",
+        "content-length": "3878",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "9990b760-5686-4c06-8c90-36ca49e58635",
+        "x-amzn-bedrock-invocation-latency": "24180",
+        "x-amzn-bedrock-cache-write-input-token-count": "4475",
+        "x-amzn-bedrock-cache-read-input-token-count": "0",
+        "x-amzn-bedrock-output-token-count": "1018",
+        "x-amzn-bedrock-input-token-count": "9"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_014bgSf8RFsZJjKEmAXcc9ib",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-3-7-sonnet-20250219",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Let me analyze this document systematically following the workflow specified: 1. **TEXT EXTRACTION** The document appears to be in Spanish and contains a table showing shareholder composition (Composición Accionaria) for a company called \"S & T INGENIERIA Y CONSULTORIA SAS\" with tax ID (NIT) 802,013,773-0. The document is dated May 19, 2020. The table shows two shareholders: - TANIA ELENA CHEMAS AVENDAÑO, with ID 32,728,993, classified as \"PERSONAL NATURAL\", owning 280 shares at a value of $1,000,000 each, representing 50% of the capital. - FARID EDUARDO RADI SAGBINI, with ID 77,025,796, classified as \"PERSONAL NATURAL\", owning 280 shares at a value of $1,000,000 each, representing 50% of the capital. - The total number of shares is 560, representing 100% of the capital. The document is signed by FARID EDUARDO RADI SAGBINI as REPRESENTANTE LEGAL and ZULMA OSPINO ALVAREZ as CONTADOR with professional ID TP-49271-T. 2. **PRIORITY CHECKS** - This is not a BLANK document - This is not a LINK_ONLY document 3. **ISSUER IDENTIFICATION** - This does not appear to be a DIAN document - This is not issued by a Chamber of Commerce - This appears to be a corporate document issued by the company itself 4. **DOCUMENT FUNCTION ANALYSIS** - This document's function is to certify the ownership structure of the company - It shows the shareholder composition with exact percentages, number of shares, and values - It details the ownership structure of the entity 5. **CATEGORY CLASSIFICATION** Based on the content, this appears to be an \"ACC\" document (Shareholding Structure Document) because: - It has \"COMPOSICION ACCIONARIA\" as the title - It contains shareholder terminology - It shows ownership percentages (50% for each shareholder) - It lists the number of shares owned by each person (280 each) - It provides the value per share ($1,000,000) - It's certified by the legal representative's signature 6. **CONFIDENCE VALIDATION** Strong evidence for ACC classification: - Clear shareholder information with percentages - Share quantities and values listed - Formal structure with company identification - Signatures from legal representative and accountant - Document title explicitly states \"COMPOSICION ACCIONARIA\" (Shareholding Composition) This document clearly fits the ACC category as it documents the ownership structure of a company with specific percentages, number of shares, and values for each shareholder. Therefore, I will classify this document as ACC (Shareholding Structure Document).",
+          "signature": "ErcBCkgIBxABGAIiQONlQuoZgwLbfadcM4AMBklQ3MnVZ4Zao0FSETs3fc6KmiWaW2gh8Mhv81fzasjItWtaKD0AV7Z5KWwungZ/aD0SDIIHnGnTU5uUfUCcgRoMEFnMnhg4KkcBQjCNIjCyiaAxGvEwKgwn3m1ddQCOR5NL8wxt9CSmBOfb3BSo9pKxMmD7VhZjDSLqZIH2ZAoqHTesgF48MZtRPn55T9RMQHusGvlFHW7DFmI9xor2GAI="
+        },
+        {
+          "type": "text",
+          "text": "```json { \"category\": \"ACC\", \"text\": \"COMPOSICION ACCIONARIA\\nNOMBRE DE LA ENTIDAD: S & T INGENIERIA Y CONSULTORIA SAS\\nNIT 802,013,773-0\\nINFORMACION A: 19 DE MAYO DEL AÑO 2020\\n\\nNOMBRE DEL ACCIONISTA\\tC.C.\\tNATURALEZA JURÍDICA DEL SOCIO\\tNº DE ACCIONES\\tVALOR UNITARIO DE LAS ACCIONES\\t% DE PARTICIPACIÓN SOBRE EL CAPITAL\\nTANIA ELENA CHEMAS AVENDAÑO\\t32.728.993\\tPERSONAL NATURAL\\t280\\t$ 1.000.000\\t50,00%\\nFARID EDUARDO RADI SAGBINI\\t77.025.796\\tPERSONAL NATURAL\\t280\\t$ 1.000.000\\t50,00%\\nTOTAL ACCIONES\\t\\t\\t560\\t\\t100%\\n\\nFARID EDUARDO RADI SAGBINI\\nREPRESENTANTE LEGAL\\n\\nZULMA OSPINO ALVAREZ\\nCONTADOR\\nTP-49271-T\" } ```"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 9,
+        "cache_creation_input_tokens": 4475,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 1018
+      }
+    },
+    "model_id": "us.anthropic.claude-3-7-sonnet-20250219-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 8000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "expected_category": "ACC",
+  "model_used": "us.anthropic.claude-3-7-sonnet-20250219-v1:0",
+  "api_used": "invoke_model",
+  "pdf_info": {
+    "original_size": 53159,
+    "first_page_size": 51968,
+    "is_scanned": true
+  }
+}

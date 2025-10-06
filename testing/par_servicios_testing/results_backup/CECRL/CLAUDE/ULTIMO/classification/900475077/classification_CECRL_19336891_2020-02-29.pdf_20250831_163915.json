@@ -1,0 +1,87 @@
+{
+  "classification_data": {
+    "category": "CECRL",
+    "text": "REPÚBLICA DE COLOMBIA IDENTIFICACIÓN PERSONAL 19.335.891 GALEANO HERRERA LUIS FRANCISCO 05-MAY-1955 VELEZ SANTANDER 1.73 O+ M 23 MAY 1977 BOGOTA D.C.",
+    "document_number": "UNKNOWN",
+    "path": "CECRL/900475077_19336891_2020-02-29/19336891_2020-02-29.pdf"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "```json { \"category\": \"CECRL\", \"text\": \"REPÚBLICA DE COLOMBIA\\nIDENTIFICACIÓN PERSONAL\\n19.335.891\\nGALEANO HERRERA\\nLUIS FRANCISCO\\n05-MAY-1955\\nVELEZ\\nSANTANDER\\n1.73\\nO+\\nM\\n23 MAY 1977 BOGOTA D.C.\" } ```"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 1605,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 3150,
+      "output_tokens": 584
+    },
+    "ResponseMetadata": {
+      "RequestId": "7649bca3-d2cd-42e7-b8b3-cebb3eec1e0d",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Sun, 31 Aug 2025 21:39:14 GMT",
+        "content-type": "application/json",
+        "content-length": "4665",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "7649bca3-d2cd-42e7-b8b3-cebb3eec1e0d",
+        "x-amzn-bedrock-invocation-latency": "8984",
+        "x-amzn-bedrock-cache-write-input-token-count": "0",
+        "x-amzn-bedrock-cache-read-input-token-count": "3150",
+        "x-amzn-bedrock-output-token-count": "584",
+        "x-amzn-bedrock-input-token-count": "1605"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_01M1EcHi22hdSV6128oi1mpT",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-sonnet-4-20250514",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Let me analyze this document following the classification workflow: 1. **TEXT EXTRACTION**: The document contains the following text: - REPÚBLICA DE COLOMBIA - IDENTIFICACIÓN PERSONAL - 19.335.891 - GALEANO HERRERA - LUIS FRANCISCO - 05-MAY-1955 - VELEZ - SANTANDER - 1.73 - O+ - M - 23 MAY 1977 BOGOTA D.C. There's also a photograph of a person and what appears to be a fingerprint and a barcode at the bottom. 2. **PRIORITY CHECKS**: - Not BLANK - there is substantial content - Not LINK_ONLY - no hyperlinks or URLs 3. **DOCUMENT FUNCTION ANALYSIS**: - This appears to be a personal identification document - It contains biographical data such as date of birth (05-MAY-1955), place (VELEZ, SANTANDER), blood type (O+), sex (M), height (1.73) - Has a photograph of the individual - Contains an identification number (19.335.891) - The document is titled \"REPÚBLICA DE COLOMBIA IDENTIFICACIÓN PERSONAL\" 4. **ISSUER IDENTIFICATION**: - Issued by \"República de Colombia\" - this is a government identification authority 5. **CATEGORY CLASSIFICATION**: This clearly falls under CECRL category because: - It's an official personal identification document from Colombia - Contains the term \"IDENTIFICACIÓN PERSONAL\" which is equivalent to \"Cédula de ciudadanía\" - Has personal biographical data: date of birth, place of birth, blood type, sex, height - Contains individual reference with photograph - Government-issued personal identification number (19.335.891) - Contains security elements like barcode - Follows the pattern \"REPÚBLICA DE COLOMBIA IDENTIFICACIÓN PERSONAL\" This is clearly a CECRL document.",
+          "signature": "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"
+        },
+        {
+          "type": "text",
+          "text": "```json { \"category\": \"CECRL\", \"text\": \"REPÚBLICA DE COLOMBIA\\nIDENTIFICACIÓN PERSONAL\\n19.335.891\\nGALEANO HERRERA\\nLUIS FRANCISCO\\n05-MAY-1955\\nVELEZ\\nSANTANDER\\n1.73\\nO+\\nM\\n23 MAY 1977 BOGOTA D.C.\" } ```"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 1605,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 3150,
+        "output_tokens": 584
+      }
+    },
+    "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 8000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "expected_category": "CECRL",
+  "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+  "api_used": "invoke_model",
+  "pdf_info": {
+    "original_size": 55917,
+    "first_page_size": 54245,
+    "is_scanned": true
+  }
+}

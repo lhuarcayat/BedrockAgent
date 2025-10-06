@@ -1,0 +1,87 @@
+{
+  "classification_data": {
+    "category": "ACC",
+    "text": "SGC-DS-17 www.aerosupportfbo.com AEROSUPPORT S.A.S. NIT. 800.216.686-2 AVENIDA EL DORADO N. 103-08 ENTRADA No. 1 INT. 20 TELS: (57-1) 7422365 – FAX: (57-1) 413 88 42 BOGOTA, COLOMBIA Miembro afiliado de Bogotá, 24 de Junio 2021 En mi calidad de Representante legal de la sociedad Aerosupport SAS identificada con NIT 800.216.686-2, hago constar que la composición accionaria de la sociedad a la fecha es la siguiente: AEROSUPPORT S.A.S. COMPOSICION ACCIONARIA Identificación Socio Acciones Valor Nomi nal Capital Pagado Participación Capital % 19306991 GERMAN SALGADO VERGARA 78.166 1.000 78.165.945 49,50% 1045179-1- 546162 GLOBAL AVIATION SUPPORT CORP 77.376 1.000 77.376.390 49,00% 35469632 ADRIANA ARANGO JARAMILLO 1.579 1.000 1.579.110 1,00% 1020763136 NICOLAS SALGADO ARANGO 790 1.000 789.555 0,50% TOTAL 157.911 157.911.000 100% Cordialmente, GERMAN SALGADO VERGARA C.C. 19.306.991 Representante Legal",
+    "document_number": "800216686",
+    "path": "ACC/800216686/231_CA_2020-02-29.pdf"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "```json { \"category\": \"ACC\", \"text\": \"SGC-DS-17\\nwww.aerosupportfbo.com\\nAEROSUPPORT S.A.S.\\nNIT. 800.216.686-2\\nAVENIDA EL DORADO N. 103-08\\nENTRADA No. 1 INT. 20 \\nTELS: (57-1) 7422365 – FAX: (57-1) 413 88 42\\nBOGOTA, COLOMBIA\\nMiembro afiliado de\\nBogotá, 24 de Junio 2021\\nEn mi calidad de Representante legal de la sociedad Aerosupport SAS identificada con \\nNIT 800.216.686-2, hago constar que la composición accionaria de la sociedad a la fecha es la siguiente:\\nAEROSUPPORT S.A.S.\\nCOMPOSICION ACCIONARIA\\nIdentificación Socio Acciones Valor \\nNomi\\nnal\\nCapital \\nPagado\\nParticipación \\nCapital %\\n19306991 GERMAN SALGADO VERGARA 78.166 1.000 78.165.945 49,50%\\n1045179-1-\\n546162\\nGLOBAL AVIATION SUPPORT \\nCORP\\n77.376 1.000 77.376.390 49,00%\\n35469632 ADRIANA ARANGO JARAMILLO 1.579 1.000 1.579.110 1,00%\\n1020763136 NICOLAS SALGADO ARANGO 790 1.000 789.555 0,50%\\nTOTAL 157.911 157.911.000 100%\\nCordialmente,\\nGERMAN SALGADO VERGARA\\nC.C. 19.306.991\\nRepresentante Legal\" } ```"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 9,
+      "cache_creation_input_tokens": 5011,
+      "cache_read_input_tokens": 0,
+      "output_tokens": 1246
+    },
+    "ResponseMetadata": {
+      "RequestId": "027e2479-25ba-4f2e-8169-e53084ddb56a",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Thu, 28 Aug 2025 09:25:04 GMT",
+        "content-type": "application/json",
+        "content-length": "4508",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "027e2479-25ba-4f2e-8169-e53084ddb56a",
+        "x-amzn-bedrock-invocation-latency": "31047",
+        "x-amzn-bedrock-cache-write-input-token-count": "5011",
+        "x-amzn-bedrock-cache-read-input-token-count": "0",
+        "x-amzn-bedrock-output-token-count": "1246",
+        "x-amzn-bedrock-input-token-count": "9"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_011p8YWph6RH6j7YWtcZnwRw",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-3-7-sonnet-20250219",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Let me analyze this document step by step following the classification workflow. ## 1. TEXT EXTRACTION The document appears to be a letterhead with company information from Aerosupport S.A.S. It contains a shareholders composition certification (Composición Accionaria) dated June 24, 2021. The document shows: - Company name: Aerosupport S.A.S. - Tax ID (NIT): 800.216.686-2 - Address: Avenida El Dorado N. 103-08, Entrada No. 1 INT. 20, Bogota, Colombia - Contact info: Phone numbers and fax - Date: June 24, 2021 - A statement from the legal representative (German Salgado Vergara) certifying the shareholder composition - A table showing the shareholder structure with: - Identification numbers - Shareholder names - Number of shares - Nominal value - Paid capital - Ownership percentage - The shareholders listed are: - German Salgado Vergara (49.50%) - Global Aviation Support Corp (49.00%) - Adriana Arango Jaramillo (1.00%) - Nicolas Salgado Arango (0.50%) - The document is signed by German Salgado Vergara as the legal representative ## 2. PRIORITY CHECKS - Not BLANK: The document contains substantial text and meaningful content - Not LINK_ONLY: There are no hyperlinks as the primary content ## 3. ISSUER IDENTIFICATION - The document is issued by the company itself (Aerosupport S.A.S.) - It is not issued by DIAN or a Chamber of Commerce - It is signed by the legal representative of the company ## 4. DOCUMENT FUNCTION ANALYSIS - The primary function is to certify the ownership structure of the company - It lists shareholders with their respective ownership percentages - It provides exact share counts and percentage participation - It is certified by the legal representative ## 5. CATEGORY CLASSIFICATION Reviewing the categories in order: - Not CECRL: This is not a personal identification document - Not RUT: This is not a tax registration document issued by DIAN - Not CERL: This is not a certificate of existence issued by Chamber of Commerce - ACC: This document shows shareholder composition with percentages - this is the main purpose - Not RUB: This is not a DIAN report about beneficial owners - Not POR_REVISAR: The document has a clear purpose and fits ACC category ## 6. CONFIDENCE VALIDATION Strong evidence for ACC classification: - Clear shareholder terminology: \"Composición Accionaria\" - Ownership data in specific format (shares and percentages) - List of owners with their identification numbers - Percentages of ownership clearly stated - Certification by legal representative - Focus solely on share ownership structure This document is clearly a shareholder composition certification (ACC) as it details the ownership structure of Aerosupport S.A.S. with specific percentages, share counts, and shareholder details.",
+          "signature": "ErcBCkgIBxABGAIiQGnhWDkw08ynodDf3EbpdU4aLfr+3t1UffMkRJcHKNaZEH5FIvPmJBQ4FS6L26gzJiFfFj3ozWOx6EwQhpQjXyoSDD72hBHFV5caQrAZThoM3f5TcPCWef+3V2YOIjDcwkUkdOoI8B6ZlE7wHXBFSGYabD2Gt5Ghaj4tTAd/1MIssm99iHxYMxILQnYicZIqHekkHSF8+p0vRTN4g+f0+WPYHrYnxZ77p2oXjhNzGAI="
+        },
+        {
+          "type": "text",
+          "text": "```json { \"category\": \"ACC\", \"text\": \"SGC-DS-17\\nwww.aerosupportfbo.com\\nAEROSUPPORT S.A.S.\\nNIT. 800.216.686-2\\nAVENIDA EL DORADO N. 103-08\\nENTRADA No. 1 INT. 20 \\nTELS: (57-1) 7422365 – FAX: (57-1) 413 88 42\\nBOGOTA, COLOMBIA\\nMiembro afiliado de\\nBogotá, 24 de Junio 2021\\nEn mi calidad de Representante legal de la sociedad Aerosupport SAS identificada con \\nNIT 800.216.686-2, hago constar que la composición accionaria de la sociedad a la fecha es la siguiente:\\nAEROSUPPORT S.A.S.\\nCOMPOSICION ACCIONARIA\\nIdentificación Socio Acciones Valor \\nNomi\\nnal\\nCapital \\nPagado\\nParticipación \\nCapital %\\n19306991 GERMAN SALGADO VERGARA 78.166 1.000 78.165.945 49,50%\\n1045179-1-\\n546162\\nGLOBAL AVIATION SUPPORT \\nCORP\\n77.376 1.000 77.376.390 49,00%\\n35469632 ADRIANA ARANGO JARAMILLO 1.579 1.000 1.579.110 1,00%\\n1020763136 NICOLAS SALGADO ARANGO 790 1.000 789.555 0,50%\\nTOTAL 157.911 157.911.000 100%\\nCordialmente,\\nGERMAN SALGADO VERGARA\\nC.C. 19.306.991\\nRepresentante Legal\" } ```"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 9,
+        "cache_creation_input_tokens": 5011,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 1246
+      }
+    },
+    "model_id": "us.anthropic.claude-3-7-sonnet-20250219-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 8000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "expected_category": "ACC",
+  "model_used": "us.anthropic.claude-3-7-sonnet-20250219-v1:0",
+  "api_used": "invoke_model",
+  "pdf_info": {
+    "original_size": 294233,
+    "first_page_size": 239051,
+    "is_scanned": false
+  }
+}

@@ -1,0 +1,87 @@
+{
+  "classification_data": {
+    "category": "ACC",
+    "text": "EL SUSCRITO, SAMIR ENRIQUE MARTINEZ ESTRADA EN CALIDAD DE REVISOR FISCAL DE LA SOCIEDAD BUSNIESS PROCESS MANAGEMENT LATINOAMERICA SAS. CERTIFICO QUE LA SOCIEDAD BUSINESS PROCESS MANAGEMENT LATINOAMERICA SAS, DE NIT 900.266.513-3 DOMICILIARIA EN BOGOTA D.C., FUE CREADA POR DOCUMENTO PRIVADO EL 12 DE FEBRERO DE 2009 Y DE ACUERDO CON LAS NORMAS COLOMBIANAS. QUE SU CAPITAL SOCIAL AUTORIZADO, COMPUESTO POR 70.000 ACCIONES DE UN VALOR NOMINAL DE $1.000,00, PARA UN TOTAL DE $70.000.000, DEL CUAL SUSCRITO Y PAGADO ES EL SIGUIENTE: NOMBRE NUMERO DE DOCUMENTO CARGO % PARTICIPACION TIPO DE DOCUMENTO NACIONALIDAD Mauricio Obregón Gutiérrez 79.425.769 GERENTE 80% C.C COLOMBIANO Monica María Gutierrez Obregón 51.826.093 SUBGERENTE 20% C.C COLOMBIANA SE EXPIDE EN BOGOTA A LOS DIEZ Y SIETE DÍAS DEL MES DE SEPTIEMBRE DE 2020. SAMIR ENRIQUE MARTINEZ ESTRADA REVISOR FISCAL C.C. 79.862.372 EXPEDIDA EN BARRANQUILLA CPT 85.571-T",
+    "document_number": "900266513",
+    "path": "ACC/900266513/53_CA_2020-02-29.pdf"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "```json { \"category\": \"ACC\", \"text\": \"EL SUSCRITO, SAMIR ENRIQUE MARTINEZ ESTRADA EN CALIDAD DE REVISOR FISCAL DE \\nLA SOCIEDAD BUSNIESS PROCESS MANAGEMENT LATINOAMERICA SAS.\\n\\nCERTIFICO\\nQUE LA SOCIEDAD BUSINESS PROCESS MANAGEMENT LATINOAMERICA SAS, DE NIT \\n900.266.513-3 DOMICILIARIA EN BOGOTA D.C., FUE CREADA POR DOCUMENTO PRIVADO EL \\n12 DE FEBRERO DE 2009 Y DE ACUERDO CON LAS NORMAS COLOMBIANAS.\\n\\nQUE SU CAPITAL SOCIAL AUTORIZADO, COMPUESTO POR 70.000 ACCIONES DE UN VALOR \\nNOMINAL DE $1.000,00, PARA UN TOTAL DE $70.000.000, DEL CUAL SUSCRITO Y PAGADO \\nES EL SIGUIENTE:\\nNOMBRE NUMERO DE \\nDOCUMENTO CARGO % PARTICIPACION\\nTIPO DE \\nDOCUMENTO NACIONALIDAD\\nMauricio \\nObregón \\nGutiérrez\\n79.425.769 GERENTE 80% C.C COLOMBIANO\\nMonica \\nMaría \\nGutierrez \\nObregón\\n51.826.093 SUBGERENTE 20% C.C COLOMBIANA\\nSE EXPIDE EN BOGOTA A LOS DIEZ Y SIETE DÍAS DEL MES DE SEPTIEMBRE DE 2020.\\n\\nSAMIR ENRIQUE MARTINEZ ESTRADA\\nREVISOR FISCAL\\nC.C. 79.862.372 EXPEDIDA EN BARRANQUILLA\\nCPT 85.571-T\" } ```"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 9,
+      "cache_creation_input_tokens": 4961,
+      "cache_read_input_tokens": 0,
+      "output_tokens": 1624
+    },
+    "ResponseMetadata": {
+      "RequestId": "2b58f44a-b858-4bcb-b8e9-3165b7216886",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Thu, 28 Aug 2025 09:37:47 GMT",
+        "content-type": "application/json",
+        "content-length": "5483",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "2b58f44a-b858-4bcb-b8e9-3165b7216886",
+        "x-amzn-bedrock-invocation-latency": "40269",
+        "x-amzn-bedrock-cache-write-input-token-count": "4961",
+        "x-amzn-bedrock-cache-read-input-token-count": "0",
+        "x-amzn-bedrock-output-token-count": "1624",
+        "x-amzn-bedrock-input-token-count": "9"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_019fmCTsSRzncKY2KHuyC3w8",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-3-7-sonnet-20250219",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Let me follow the classification workflow to analyze this document: 1. **TEXT EXTRACTION** I can see this is a PDF document in Spanish that appears to be a certification of some kind. The document is issued by a \"REVISOR FISCAL\" (Fiscal Auditor) named SAMIR ENRIQUE MARTINEZ ESTRADA for a company called BUSINESS PROCESS MANAGEMENT LATINOAMERICA SAS. The document certifies: - The company's NIT (tax identification number): 900.266.513-3 - The company is domiciled in Bogota D.C. - It was created via private document on February 12, 2009 - Information about the company's authorized capital: 70,000 shares with a nominal value of $1,000.00 each, for a total of $70,000,000 - Shareholder composition with ownership percentages: - Mauricio Obregón Gutiérrez (ID: 79.425.769) - GERENTE - 80% - Colombian - Monica María Gutierrez Obregón (ID: 51.826.093) - SUBGERENTE - 20% - Colombian - The certification is dated September 17, 2020 - Signed by the Fiscal Auditor 2. **PRIORITY CHECKS** - This is not a BLANK document - it contains substantial content - This is not a LINK_ONLY document - no hyperlinks/URLs are present 3. **ISSUER IDENTIFICATION** - The document is issued by a \"REVISOR FISCAL\" (Fiscal Auditor), not DIAN or Chamber of Commerce - This appears to be a corporate certification document 4. **DOCUMENT FUNCTION ANALYSIS** - The document's primary function is to certify the ownership structure of the company - It provides detailed information about shareholders with their participation percentages - It does not appear to be a tax document or legal existence document 5. **CATEGORY CLASSIFICATION** Looking at the categories in order: - CECRL: No, this is not a personal identification document - RUT: No, this is not issued by DIAN and doesn't have tax registration information - CERL: No, this is not issued by Chamber of Commerce and doesn't focus on legal representation - ACC: Yes, this document specifically certifies the shareholder composition with ownership percentages (80% and 20%) - RUB: No, this is not a DIAN report about beneficial owners - POR_REVISAR: Not applicable since we have a clear match 6. **CONFIDENCE VALIDATION** - Strong evidence for ACC: - Contains explicit ownership percentages (80% and 20%) - Lists shareholders with their identification numbers - Shows relationship types (GERENTE, SUBGERENTE) - Is certified by a legal representative (REVISOR FISCAL) - Primary focus is on the ownership structure of the company Based on this analysis, the document is clearly an \"ACC\" - a document that certifies the ownership structure and shareholding composition of a company. The complete extracted text from the document is: \"EL SUSCRITO, SAMIR ENRIQUE MARTINEZ ESTRADA EN CALIDAD DE REVISOR FISCAL DE LA SOCIEDAD BUSNIESS PROCESS MANAGEMENT LATINOAMERICA SAS. CERTIFICO QUE LA SOCIEDAD BUSINESS PROCESS MANAGEMENT LATINOAMERICA SAS, DE NIT 900.266.513-3 DOMICILIARIA EN BOGOTA D.C., FUE CREADA POR DOCUMENTO PRIVADO EL 12 DE FEBRERO DE 2009 Y DE ACUERDO CON LAS NORMAS COLOMBIANAS. QUE SU CAPITAL SOCIAL AUTORIZADO, COMPUESTO POR 70.000 ACCIONES DE UN VALOR NOMINAL DE $1.000,00, PARA UN TOTAL DE $70.000.000, DEL CUAL SUSCRITO Y PAGADO ES EL SIGUIENTE: NOMBRE NUMERO DE DOCUMENTO CARGO % PARTICIPACION TIPO DE DOCUMENTO NACIONALIDAD Mauricio Obregón Gutiérrez 79.425.769 GERENTE 80% C.C COLOMBIANO Monica María Gutierrez Obregón 51.826.093 SUBGERENTE 20% C.C COLOMBIANA SE EXPIDE EN BOGOTA A LOS DIEZ Y SIETE DÍAS DEL MES DE SEPTIEMBRE DE 2020. SAMIR ENRIQUE MARTINEZ ESTRADA REVISOR FISCAL C.C. 79.862.372 EXPEDIDA EN BARRANQUILLA CPT 85.571-T\"",
+          "signature": "ErcBCkgIBxABGAIiQEKBusrToGinY70MLWIgm1kp7myA77RMPdyizapXrLGGx6OIiEs1CVNL8LBGirUp4h3UATfjN6Zpr54uWDm43R4SDDhGfQ45sW20ER+C+RoMj0UMrisA+rkl7I1bIjBHHCaht81nD+TIlrJhOgVg36qgncCy3HvmmvhAH+bT5w3oCnkRRepbCZgDVMkT8ugqHfRpCli2TbYJMsYtXx/dExjqYFvTQ3iZfwcRy8QxGAI="
+        },
+        {
+          "type": "text",
+          "text": "```json { \"category\": \"ACC\", \"text\": \"EL SUSCRITO, SAMIR ENRIQUE MARTINEZ ESTRADA EN CALIDAD DE REVISOR FISCAL DE \\nLA SOCIEDAD BUSNIESS PROCESS MANAGEMENT LATINOAMERICA SAS.\\n\\nCERTIFICO\\nQUE LA SOCIEDAD BUSINESS PROCESS MANAGEMENT LATINOAMERICA SAS, DE NIT \\n900.266.513-3 DOMICILIARIA EN BOGOTA D.C., FUE CREADA POR DOCUMENTO PRIVADO EL \\n12 DE FEBRERO DE 2009 Y DE ACUERDO CON LAS NORMAS COLOMBIANAS.\\n\\nQUE SU CAPITAL SOCIAL AUTORIZADO, COMPUESTO POR 70.000 ACCIONES DE UN VALOR \\nNOMINAL DE $1.000,00, PARA UN TOTAL DE $70.000.000, DEL CUAL SUSCRITO Y PAGADO \\nES EL SIGUIENTE:\\nNOMBRE NUMERO DE \\nDOCUMENTO CARGO % PARTICIPACION\\nTIPO DE \\nDOCUMENTO NACIONALIDAD\\nMauricio \\nObregón \\nGutiérrez\\n79.425.769 GERENTE 80% C.C COLOMBIANO\\nMonica \\nMaría \\nGutierrez \\nObregón\\n51.826.093 SUBGERENTE 20% C.C COLOMBIANA\\nSE EXPIDE EN BOGOTA A LOS DIEZ Y SIETE DÍAS DEL MES DE SEPTIEMBRE DE 2020.\\n\\nSAMIR ENRIQUE MARTINEZ ESTRADA\\nREVISOR FISCAL\\nC.C. 79.862.372 EXPEDIDA EN BARRANQUILLA\\nCPT 85.571-T\" } ```"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 9,
+        "cache_creation_input_tokens": 4961,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 1624
+      }
+    },
+    "model_id": "us.anthropic.claude-3-7-sonnet-20250219-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 8000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "expected_category": "ACC",
+  "model_used": "us.anthropic.claude-3-7-sonnet-20250219-v1:0",
+  "api_used": "invoke_model",
+  "pdf_info": {
+    "original_size": 19440,
+    "first_page_size": 12694,
+    "is_scanned": false
+  }
+}

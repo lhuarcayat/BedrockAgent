@@ -1,0 +1,87 @@
+{
+  "classification_data": {
+    "category": "CECRL",
+    "text": "REPUBLICA DE COLOMBIA IDENTIFICACION PERSONAL CEDULA DE CIUDADANIA NUMERO: 80.163.642 HERNANDEZ RAMIREZ APELLIDOS LUIS DARIO NOMBRES FIRMA FECHA DE NACIMIENTO: 10-NOV-1983 BOGOTA D.C (CUNDINAMARCA) LUGAR DE NACIMIENTO 1.70 AB+ M ESTATURA G.S. RH SEXO 19-NOV-2001 BOGOTA D.C. FECHA Y LUGAR DE EXPEDICION REGISTRADURIA NACIONAL CARLOS ARIEL SANCHEZ TORRES INDICE DERECHO A-1500150-00653692-M-29M-00801163642-20141229 0042119307H 1 1433211325",
+    "document_number": "UNKNOWN",
+    "path": "CECRL/900397317_80163642_2020-02-29/80163642_2020-02-29.pdf"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "```json { \"category\": \"CECRL\", \"text\": \"REPUBLICA DE COLOMBIA\\nIDENTIFICACION PERSONAL\\nCEDULA DE CIUDADANIA\\n\\nNUMERO: 80.163.642\\nHERNANDEZ RAMIREZ\\nAPELLIDOS\\nLUIS DARIO\\nNOMBRES\\n\\nFIRMA\\n\\nFECHA DE NACIMIENTO: 10-NOV-1983\\nBOGOTA D.C\\n(CUNDINAMARCA)\\nLUGAR DE NACIMIENTO\\n\\n1.70 AB+ M\\nESTATURA G.S. RH SEXO\\n\\n19-NOV-2001 BOGOTA D.C.\\nFECHA Y LUGAR DE EXPEDICION\\n\\nREGISTRADURIA NACIONAL\\nCARLOS ARIEL SANCHEZ TORRES\\n\\nINDICE DERECHO\\n\\nA-1500150-00653692-M-29M-00801163642-20141229 0042119307H 1 1433211325\" } ```"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 1605,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 3150,
+      "output_tokens": 993
+    },
+    "ResponseMetadata": {
+      "RequestId": "b827379b-47ee-4a9e-b453-b5e83de720e9",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Sun, 31 Aug 2025 21:38:36 GMT",
+        "content-type": "application/json",
+        "content-length": "6068",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "b827379b-47ee-4a9e-b453-b5e83de720e9",
+        "x-amzn-bedrock-invocation-latency": "15277",
+        "x-amzn-bedrock-cache-write-input-token-count": "0",
+        "x-amzn-bedrock-cache-read-input-token-count": "3150",
+        "x-amzn-bedrock-output-token-count": "993",
+        "x-amzn-bedrock-input-token-count": "1605"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_01VbqwkokbcFUKsqdxjWNK1K",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-sonnet-4-20250514",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Let me analyze this PDF document following the classification workflow: 1. **TEXT EXTRACTION** Looking at the document, I can see: - Top section: \"REPUBLICA DE COLOMBIA\", \"IDENTIFICACION PERSONAL\", \"CEDULA DE CIUDADANIA\" - Number: \"80.163.642\" - Name: \"HERNANDEZ RAMIREZ\" with \"LUIS DARIO\" below - There's a photograph on the right side - There's a signature area marked \"FIRMA\" - Bottom section shows: - \"FECHA DE NACIMIENTO\" with \"10-NOV-1983\" - \"BOGOTA D.C\" and \"(CUNDINAMARCA)\" - \"LUGAR DE NACIMIENTO\" - \"1.70\", \"AB+\", \"M\" (height, blood type, sex) - \"ESTATURA\", \"G.S. RH\", \"SEXO\" - \"19-NOV-2001 BOGOTA D.C.\" - \"FECHA Y LUGAR DE EXPEDICION\" - \"REGISTRADURIA NACIONAL\" - \"CARLOS ARIEL SANCHEZ TORRES\" - Fingerprint image - \"INDICE DERECHO\" - Barcode at the bottom - Some alphanumeric codes 2. **PRIORITY CHECKS** - This is not BLANK - there is substantial content - This is not LINK_ONLY - no hyperlinks or URLs 3. **DOCUMENT FUNCTION ANALYSIS** - What is the MAIN PURPOSE? This is clearly a personal identification document - It shows \"CEDULA DE CIUDADANIA\" (citizenship card) - It contains personal information: name, date of birth, place of birth, blood type, sex, photo, signature, fingerprint - This is CECRL indicative 4. **ISSUER IDENTIFICATION** - This is issued by \"REGISTRADURIA NACIONAL\" which is a government identification authority - This confirms CECRL 5. **CATEGORY CLASSIFICATION** I verify the document meets CECRL criteria precisely. The citizenship card contains comprehensive personal identification details, including unique biometric markers and official government validation. Its comprehensive nature and official status clearly place it in the CECRL document classification. The government-issued identification number and integrated security features further substantiate its classification, with distinctive Colombian governmental authentication elements confirming its official status.",
+          "signature": "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"
+        },
+        {
+          "type": "text",
+          "text": "```json { \"category\": \"CECRL\", \"text\": \"REPUBLICA DE COLOMBIA\\nIDENTIFICACION PERSONAL\\nCEDULA DE CIUDADANIA\\n\\nNUMERO: 80.163.642\\nHERNANDEZ RAMIREZ\\nAPELLIDOS\\nLUIS DARIO\\nNOMBRES\\n\\nFIRMA\\n\\nFECHA DE NACIMIENTO: 10-NOV-1983\\nBOGOTA D.C\\n(CUNDINAMARCA)\\nLUGAR DE NACIMIENTO\\n\\n1.70 AB+ M\\nESTATURA G.S. RH SEXO\\n\\n19-NOV-2001 BOGOTA D.C.\\nFECHA Y LUGAR DE EXPEDICION\\n\\nREGISTRADURIA NACIONAL\\nCARLOS ARIEL SANCHEZ TORRES\\n\\nINDICE DERECHO\\n\\nA-1500150-00653692-M-29M-00801163642-20141229 0042119307H 1 1433211325\" } ```"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 1605,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 3150,
+        "output_tokens": 993
+      }
+    },
+    "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 8000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "expected_category": "CECRL",
+  "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+  "api_used": "invoke_model",
+  "pdf_info": {
+    "original_size": 371255,
+    "first_page_size": 371208,
+    "is_scanned": true
+  }
+}

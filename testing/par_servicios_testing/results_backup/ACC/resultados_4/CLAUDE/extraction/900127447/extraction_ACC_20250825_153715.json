@@ -1,0 +1,114 @@
+{
+  "extraction_data": {
+    "path": "ACC/900127447/217_CA_2020-02-29.pdf",
+    "result": {
+      "companyName": "ROMEGAS SAS",
+      "documentType": "Equity Composition",
+      "taxId": "900.127.447 - 1",
+      "country": "Colombia",
+      "identificationDetails": {
+        "source": "id_analysis",
+        "indicators": [
+          "NIT identification type",
+          "CC personal identification type"
+        ],
+        "conflictingSources": [],
+        "requiresReview": false
+      },
+      "relatedParties": [
+        {
+          "firstName": "JULIO CESAR",
+          "lastName": "ROMERO MUÑOZ",
+          "identificationType": "CC",
+          "identificationNumber": "79.735.871",
+          "relationshipType": "Shareholder",
+          "participationPercentage": "100%",
+          "timeFound": 1,
+          "job": ""
+        }
+      ]
+    },
+    "document_type": "company",
+    "document_number": "900127447",
+    "category": "ACC",
+    "confidenceScores": {
+      "companyName": 95,
+      "taxId": 95,
+      "country": 95,
+      "relatedParties": 95
+    }
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "```json { \"path\": \"ACC/900127447/217_CA_2020-02-29.pdf\", \"result\": { \"companyName\": \"ROMEGAS SAS\", \"documentType\": \"Equity Composition\", \"taxId\": \"900.127.447 - 1\", \"country\": \"Colombia\", \"identificationDetails\": { \"source\": \"id_analysis\", \"indicators\": [ \"NIT identification type\", \"CC personal identification type\" ], \"conflictingSources\": [], \"requiresReview\": false }, \"relatedParties\": [ { \"firstName\": \"JULIO CESAR\", \"lastName\": \"ROMERO MUÑOZ\", \"identificationType\": \"CC\", \"identificationNumber\": \"79.735.871\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"100%\", \"timeFound\": 1, \"job\": \"\" } ] }, \"document_type\": \"company\", \"document_number\": \"900127447\", \"category\": \"ACC\", \"confidenceScores\": { \"companyName\": 95, \"taxId\": 95, \"country\": 95, \"relatedParties\": 95 } } ```"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 496,
+      "cache_creation_input_tokens": 9724,
+      "cache_read_input_tokens": 0,
+      "output_tokens": 898
+    },
+    "ResponseMetadata": {
+      "RequestId": "592490f7-6cd0-4131-a381-3cd1f6ebd16f",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Mon, 25 Aug 2025 20:37:14 GMT",
+        "content-type": "application/json",
+        "content-length": "5767",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "592490f7-6cd0-4131-a381-3cd1f6ebd16f",
+        "x-amzn-bedrock-invocation-latency": "13468",
+        "x-amzn-bedrock-cache-write-input-token-count": "9724",
+        "x-amzn-bedrock-cache-read-input-token-count": "0",
+        "x-amzn-bedrock-output-token-count": "898",
+        "x-amzn-bedrock-input-token-count": "496"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_01WJAFP6sKK8LyMcEuQdBgAi",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-sonnet-4-20250514",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Let me analyze this PDF document step by step. 1. **Document Analysis:** The document is titled \"COMPOSICION ACCIONARIA - CERTIFICACIÓN DEL CONTADOR PÚBLICO\" which indicates this is an equity composition certification. 2. **Main Reporting Company (Root Level) Identification:** From the text: <cite index=\"1-1\">\"El suscrito Contador Público de LA EMPRESA ROMEGAS SAS., identificada con NIT 900.127.447 - 1\"</cite> - companyName: \"ROMEGAS SAS\" (removing \"LA EMPRESA\" prefix) - taxId: \"900.127.447 - 1\" 3. **Country Detection:** The document uses \"NIT\" which according to the hash table COMPANY_ID indicates Colombia. Also, \"CC\" is used for personal identification which aligns with Colombia in PERSON_ID hash table. 4. **Related Parties Extraction:** From the table in the document: <cite index=\"1-2\">\"CC. 79.735.871 JULIO CESAR ROMERO MUÑOZ 100% 2.000 $10.000\"</cite> This shows: - Shareholder: JULIO CESAR ROMERO MUÑOZ - ID Type: CC (Cédula de Ciudadanía) - ID Number: 79.735.871 - Participation: 100% This is clearly a person (individual name) with CC identification which matches PERSON_ID[\"Colombia\"] = [\"CC\",\"TI\",\"CE\"]. 5. **Name Splitting:** \"JULIO CESAR ROMERO MUÑOZ\" follows the pattern: Given names + Surnames - firstName: \"JULIO CESAR\" - lastName: \"ROMERO MUÑOZ\" 6. **Validation:** - Country: Colombia (based on NIT and CC usage) - All required fields are present - Participation percentage is explicit (100%) - Single shareholder, so timeFound = 1 I've confirmed the document's key details with high precision. The ownership structure is straightforward, with a single shareholder holding complete company ownership. The documentation provides clear, unambiguous information about the company's equity composition.",
+          "signature": "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"
+        },
+        {
+          "type": "text",
+          "text": "```json { \"path\": \"ACC/900127447/217_CA_2020-02-29.pdf\", \"result\": { \"companyName\": \"ROMEGAS SAS\", \"documentType\": \"Equity Composition\", \"taxId\": \"900.127.447 - 1\", \"country\": \"Colombia\", \"identificationDetails\": { \"source\": \"id_analysis\", \"indicators\": [ \"NIT identification type\", \"CC personal identification type\" ], \"conflictingSources\": [], \"requiresReview\": false }, \"relatedParties\": [ { \"firstName\": \"JULIO CESAR\", \"lastName\": \"ROMERO MUÑOZ\", \"identificationType\": \"CC\", \"identificationNumber\": \"79.735.871\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"100%\", \"timeFound\": 1, \"job\": \"\" } ] }, \"document_type\": \"company\", \"document_number\": \"900127447\", \"category\": \"ACC\", \"confidenceScores\": { \"companyName\": 95, \"taxId\": 95, \"country\": 95, \"relatedParties\": 95 } } ```"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 496,
+        "cache_creation_input_tokens": 9724,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 898
+      }
+    },
+    "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 8000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+  "api_used": "invoke_model"
+}

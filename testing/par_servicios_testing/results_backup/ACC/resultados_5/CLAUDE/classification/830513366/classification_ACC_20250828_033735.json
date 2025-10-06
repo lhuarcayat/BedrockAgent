@@ -1,0 +1,87 @@
+{
+  "classification_data": {
+    "category": "ACC",
+    "text": "Obrando en mi calidad de Revisor Fiscal de NEWSAT S.A.S. NIT. 830.513.366-3 CERTIFICO QUE: He revisado los libros oficiales de contabilidad de la empresa NEWSAT S.A.S., los cuales se encuentran debidamente inscritos en la Cámara de Comercio de Bogotá. Para los efectos de esta certificación he revisado información que he considerado necesaria y he seguido los procedimientos establecidos por las Normas de Auditoria Generalmente Aceptadas en Colombia. La composición accionaria de la empresa al 29 de febrero del 2024 es la siguiente: CC/NIT NOMBRE DEL ACCIONISTA ACCIONISTAS NEWSAT S.A.S. SALDOS A FEB. 29 DE 2024 % No. DE ACCIONES VALOR NOMINAL 6386024 CARLOS ENRIQUE ROSERO CERON 148.000 $1.480.000.000,00 40% 301680 SHAI BERCOVICH 148.000 $1.480.000.000,00 40% 91499446 DIEGO ALEJANDRO SALAZAR VASQUEZ 74.000 $740.000.000,00 20% TOTALES 370.000 $3.700.000.000,00 100% La presente certificación se expide a solicitud de la empresa a los veinte (20) días del mes de marzo de 2024, con destino a entidades Gubernamentales y Financieras. Cordialmente, ROBERTO LONDOÑO OSORIO Revisor Fiscal T.P. 153999-T CALLE 98A N° 60 - 87 BARRIO ANDES - TELÉFONO +(571) 7456579 - BOGOTA D.C.",
+    "document_number": "830513366",
+    "path": "ACC/830513366/240_CA_2020-02-29.pdf"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "```json { \"category\": \"ACC\", \"text\": \"Obrando en mi calidad de Revisor Fiscal de\\nNEWSAT S.A.S.\\nNIT. 830.513.366-3\\nCERTIFICO QUE:\\nHe revisado los libros oficiales de contabilidad de la empresa NEWSAT S.A.S., los cuales \\nse encuentran debidamente inscritos en la Cámara de Comercio de Bogotá. \\nPara los efectos de esta certificación he revisado información que he considerado necesaria \\ny he seguido los procedimientos establecidos por las Normas de Auditoria Generalmente \\nAceptadas en Colombia. \\nLa composición accionaria de la empresa al 29 de febrero del 2024 es la siguiente:\\nCC/NIT NOMBRE DEL ACCIONISTA\\nACCIONISTAS NEWSAT S.A.S. \\nSALDOS A FEB. 29 DE 2024\\n% \\nNo. DE \\nACCIONES VALOR NOMINAL\\n6386024 CARLOS ENRIQUE ROSERO CERON 148.000 $1.480.000.000,00 40%\\n301680 SHAI BERCOVICH 148.000 $1.480.000.000,00 40%\\n91499446 DIEGO ALEJANDRO SALAZAR VASQUEZ 74.000 $740.000.000,00 20%\\nTOTALES 370.000 $3.700.000.000,00 100%\\nLa presente certificación se expide a solicitud de la empresa a los veinte (20) días del mes \\nde marzo de 2024, con destino a entidades Gubernamentales y Financieras.\\nCordialmente,\\nROBERTO LONDOÑO OSORIO\\nRevisor Fiscal\\nT.P. 153999-T\\nCALLE 98A N° 60 - 87 BARRIO ANDES - TELÉFONO +(571) 7456579 - BOGOTA D.C.\" } ```"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 207,
+      "cache_creation_input_tokens": 5097,
+      "cache_read_input_tokens": 0,
+      "output_tokens": 1829
+    },
+    "ResponseMetadata": {
+      "RequestId": "1d2a35cd-8050-44a1-b715-ac9cb841b4cf",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Thu, 28 Aug 2025 08:36:54 GMT",
+        "content-type": "application/json",
+        "content-length": "6212",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "1d2a35cd-8050-44a1-b715-ac9cb841b4cf",
+        "x-amzn-bedrock-invocation-latency": "38822",
+        "x-amzn-bedrock-cache-write-input-token-count": "5097",
+        "x-amzn-bedrock-cache-read-input-token-count": "0",
+        "x-amzn-bedrock-output-token-count": "1829",
+        "x-amzn-bedrock-input-token-count": "207"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_01WSuoHfc4QZTn6CpBUgkQpp",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-3-7-sonnet-20250219",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Let me analyze this document following the classification workflow: 1. **TEXT EXTRACTION** - The document is a certification from a \"Revisor Fiscal\" (Fiscal Auditor) of NEWSAT S.A.S. - It contains information about the shareholding composition of the company as of February 29, 2024 - The text is clear and complete, in Spanish 2. **PRIORITY CHECKS** - The document is not blank - It does not contain only links 3. **ISSUER IDENTIFICATION** - The document is issued by Roberto Londoño Osorio, who is the \"Revisor Fiscal\" (Fiscal Auditor) of NEWSAT S.A.S. - This is not issued by DIAN or a Chamber of Commerce, but references that the company's books are properly registered with the Chamber of Commerce of Bogotá 4. **DOCUMENT FUNCTION ANALYSIS** - The primary function is to certify the shareholding structure of NEWSAT S.A.S. - It provides detailed ownership percentages, number of shares, and nominal values for each shareholder - The document specifically states \"La composición accionaria de la empresa\" (The shareholding composition of the company) 5. **CATEGORY CLASSIFICATION** Let's check against each category: - **CECRL**: This is not a personal identification document - **RUT**: This is not a tax registration document issued by DIAN - **CERL**: This is not a certificate of existence issued by the Chamber of Commerce - **ACC**: This document DOES match the ACC category: - Contains shareholder terminology: \"composición accionaria\", \"ACCIONISTAS\" - Shows ownership data: - Ownership percentages: \"40%\", \"40%\", \"20%\" adding up to \"100%\" - Number of shares: \"148,000\", \"148,000\", \"74,000\" for a total of \"370,000\" - Nominal values: \"$1,480,000,000.00\", \"$1,480,000,000.00\", \"$740,000,000.00\" totaling \"$3,700,000,000.00\" - Clear owner identification with names and ID numbers - Certified by a legal representative (Fiscal Auditor) - **RUB**: This is not about beneficial ownership for regulatory compliance 6. **CONFIDENCE VALIDATION** - Strong evidence for ACC: The document is explicitly a certification of the shareholding composition, with clear percentages, number of shares, and nominal values - The document fits all the must-have indicators for the ACC category Based on this analysis, I'm confident this document should be classified as **ACC** (Shareholder Certification). Now I'll prepare the JSON response with the extracted text properly escaped: ```json { \"category\": \"ACC\", \"text\": \"Obrando en mi calidad de Revisor Fiscal de\\nNEWSAT S.A.S.\\nNIT. 830.513.366-3\\nCERTIFICO QUE:\\nHe revisado los libros oficiales de contabilidad de la empresa NEWSAT S.A.S., los cuales \\nse encuentran debidamente inscritos en la Cámara de Comercio de Bogotá. \\nPara los efectos de esta certificación he revisado información que he considerado necesaria \\ny he seguido los procedimientos establecidos por las Normas de Auditoria Generalmente \\nAceptadas en Colombia. \\nLa composición accionaria de la empresa al 29 de febrero del 2024 es la siguiente:\\nCC/NIT NOMBRE DEL ACCIONISTA\\nACCIONISTAS NEWSAT S.A.S. \\nSALDOS A FEB. 29 DE 2024\\n% \\nNo. DE \\nACCIONES VALOR NOMINAL\\n6386024 CARLOS ENRIQUE ROSERO CERON 148.000 $1.480.000.000,00 40%\\n301680 SHAI BERCOVICH 148.000 $1.480.000.000,00 40%\\n91499446 DIEGO ALEJANDRO SALAZAR VASQUEZ 74.000 $740.000.000,00 20%\\nTOTALES 370.000 $3.700.000.000,00 100%\\nLa presente certificación se expide a solicitud de la empresa a los veinte (20) días del mes \\nde marzo de 2024, con destino a entidades Gubernamentales y Financieras.\\nCordialmente,\\nROBERTO LONDOÑO OSORIO\\nRevisor Fiscal\\nT.P. 153999-T\\nCALLE 98A N° 60 - 87 BARRIO ANDES - TELÉFONO +(571) 7456579 - BOGOTA D.C.\" } ``` This classification is correct because: 1. The document's primary purpose is to certify the shareholding structure of NEWSAT S.A.S. 2. It contains explicit ownership percentages and share quantities 3. It lists all shareholders with their identification numbers 4. It is certified by the company's Fiscal Auditor 5. The structure matches what we'd expect for an ACC (shareholder certification) document",
+          "signature": "ErcBCkgIBxABGAIiQD5o+RPjGhx7DeBfw+g7kapPHLdEtPXH7Aos3JgLFenGtgmow9t8nCbLLTNT0lM1ZBW3Wzr+Fc2JPrwX/9C59RESDCzd0XgysRvgEAfoNxoMZAwuX7uenbRg1xaAIjBZslEMSBrJBBrdBrpFzQPpr3jHnvdq/qA9HYyIZ3sxoxcZQLQ6/ALSXk6tmuTVQpMqHdkxmidEFusgiNN0Osvzk4VlP8UOCauRbGR7tNSXGAI="
+        },
+        {
+          "type": "text",
+          "text": "```json { \"category\": \"ACC\", \"text\": \"Obrando en mi calidad de Revisor Fiscal de\\nNEWSAT S.A.S.\\nNIT. 830.513.366-3\\nCERTIFICO QUE:\\nHe revisado los libros oficiales de contabilidad de la empresa NEWSAT S.A.S., los cuales \\nse encuentran debidamente inscritos en la Cámara de Comercio de Bogotá. \\nPara los efectos de esta certificación he revisado información que he considerado necesaria \\ny he seguido los procedimientos establecidos por las Normas de Auditoria Generalmente \\nAceptadas en Colombia. \\nLa composición accionaria de la empresa al 29 de febrero del 2024 es la siguiente:\\nCC/NIT NOMBRE DEL ACCIONISTA\\nACCIONISTAS NEWSAT S.A.S. \\nSALDOS A FEB. 29 DE 2024\\n% \\nNo. DE \\nACCIONES VALOR NOMINAL\\n6386024 CARLOS ENRIQUE ROSERO CERON 148.000 $1.480.000.000,00 40%\\n301680 SHAI BERCOVICH 148.000 $1.480.000.000,00 40%\\n91499446 DIEGO ALEJANDRO SALAZAR VASQUEZ 74.000 $740.000.000,00 20%\\nTOTALES 370.000 $3.700.000.000,00 100%\\nLa presente certificación se expide a solicitud de la empresa a los veinte (20) días del mes \\nde marzo de 2024, con destino a entidades Gubernamentales y Financieras.\\nCordialmente,\\nROBERTO LONDOÑO OSORIO\\nRevisor Fiscal\\nT.P. 153999-T\\nCALLE 98A N° 60 - 87 BARRIO ANDES - TELÉFONO +(571) 7456579 - BOGOTA D.C.\" } ```"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 207,
+        "cache_creation_input_tokens": 5097,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 1829
+      }
+    },
+    "model_id": "us.anthropic.claude-3-7-sonnet-20250219-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 8000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "expected_category": "ACC",
+  "model_used": "us.anthropic.claude-3-7-sonnet-20250219-v1:0",
+  "api_used": "invoke_model",
+  "pdf_info": {
+    "original_size": 50688,
+    "first_page_size": 42138,
+    "is_scanned": false
+  }
+}

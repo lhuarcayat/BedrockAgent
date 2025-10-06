@@ -1,0 +1,185 @@
+{
+  "document_name": "59838890_2020-02-29.pdf",
+  "category": "CECRL",
+  "classification_success": true,
+  "extraction_success": true,
+  "overall_success": true,
+  "timestamp": "2025-08-28T10:35:16.978296",
+  "classification_result": {
+    "classification_data": {
+      "category": "CECRL",
+      "text": "REPUBLICA DE COLOMBIA IDENTIFICACION PERSONAL CEDULA DE CIUDADANIA NUMERO 5983889 CORTES ARIAS LUIS HERNANDO FECHA DE NACIMIENTO 18-MAY-1956 PURIFICACION (TOLIMA) LUGAR DE NACIMIENTO 1.56 O+ M ESTATURA G.S. RH SEXO 17-ENE-1978 PURIFICACION FECHA Y LUGAR DE EXPEDICION INDICE DERECHO REGISTRADOR NACIONAL IVAN DUQUE ESCOBAR",
+      "document_number": "5983889",
+      "path": "CECRL/5983889/59838890_2020-02-29.pdf"
+    },
+    "raw_response": {
+      "output": {
+        "message": {
+          "content": [
+            {
+              "text": "```json { \"category\": \"CECRL\", \"text\": \"REPUBLICA DE COLOMBIA IDENTIFICACION PERSONAL CEDULA DE CIUDADANIA NUMERO 5983889 CORTES ARIAS LUIS HERNANDO FECHA DE NACIMIENTO 18-MAY-1956 PURIFICACION (TOLIMA) LUGAR DE NACIMIENTO 1.56 O+ M ESTATURA G.S. RH SEXO 17-ENE-1978 PURIFICACION FECHA Y LUGAR DE EXPEDICION INDICE DERECHO REGISTRADOR NACIONAL IVAN DUQUE ESCOBAR\" } ```"
+            }
+          ]
+        }
+      },
+      "stopReason": "end_turn",
+      "usage": {
+        "input_tokens": 9,
+        "cache_creation_input_tokens": 4475,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 699
+      },
+      "ResponseMetadata": {
+        "RequestId": "d07f0597-804b-4f9d-a3ce-99d8b67798ef",
+        "HTTPStatusCode": 200,
+        "HTTPHeaders": {
+          "date": "Thu, 28 Aug 2025 15:35:35 GMT",
+          "content-type": "application/json",
+          "content-length": "3024",
+          "connection": "keep-alive",
+          "x-amzn-requestid": "d07f0597-804b-4f9d-a3ce-99d8b67798ef",
+          "x-amzn-bedrock-invocation-latency": "19046",
+          "x-amzn-bedrock-cache-write-input-token-count": "4475",
+          "x-amzn-bedrock-cache-read-input-token-count": "0",
+          "x-amzn-bedrock-output-token-count": "699",
+          "x-amzn-bedrock-input-token-count": "9"
+        },
+        "RetryAttempts": 0
+      },
+      "raw_anthropic_response": {
+        "id": "msg_bdrk_01RCBFsbGbjMY7Rzvt2rGK1V",
+        "type": "message",
+        "role": "assistant",
+        "model": "claude-3-7-sonnet-20250219",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "Let me analyze this document and extract the text I can see. From the document, I can identify: 1. Heading: \"REPUBLICA DE COLOMBIA\" 2. Sub-heading: \"IDENTIFICACION PERSONAL\" 3. Further description: \"CEDULA DE CIUDADANIA\" 4. Number: \"5983889\" 5. Name appears to be: \"CORTES ARIAS LUIS HERNANDO\" 6. The document has a signature 7. There's a silhouette/photo area (blacked out) 8. Additional information: - \"FECHA DE NACIMIENTO: 18-MAY-1956\" - \"PURIFICACION (TOLIMA)\" (appears to be place of birth) - \"LUGAR DE NACIMIENTO\" - Height: \"1.56\" - Blood type: \"O+\" - Gender: \"M\" (Male) - \"17-ENE-1978 PURIFICACION\" (likely issue date and place) - \"FECHA Y LUGAR DE EXPEDICION\" - There's a fingerprint - A barcode appears at the bottom This is clearly a Colombian national identification card (\"Cédula de Ciudadanía\"), which is a personal identification document. Now, using the classification workflow, let me determine the appropriate category: 1. **TEXT EXTRACTION**: I've extracted the visible text from the document 2. **PRIORITY CHECKS**: The document is not blank and doesn't just contain links 3. **ISSUER IDENTIFICATION**: This is issued by a government authority (Republic of Colombia), not DIAN or Chamber of Commerce 4. **DOCUMENT FUNCTION ANALYSIS**: This is a personal identification document 5. **CATEGORY CLASSIFICATION**: Looking at the defined categories, this best fits \"CECRL\" - Official personal identification documents The document shows: - Individual identification terminology: \"IDENTIFICACION PERSONAL\", \"CEDULA DE CIUDADANIA\" - Personal biographical data: birth date/place, blood type, gender - Individual photo area (blacked out), signature, fingerprint - Government-issued personal ID number - Security elements: barcode, fingerprint This is a classic example of a personal identification document (cédula) from Colombia. Based on this analysis, the document falls into the CECRL category.",
+            "signature": "ErcBCkgIBxABGAIiQNAfrLGveW5KeKC0glMrMi0e9d+q4LvMogqggqQqmSDn9q+sH5rDHoiodSvmnK1yJxGu2nptJnPcNKXbZF52Le8SDEu+t6VRPk4piwN2LhoMRAAvRpLXJC2Zz+KpIjBsSifJQd5s0WrSFWnGhnUb7MSK7UtKBMFLkbxPpOfSOnpuwoQgGyYka8SWihaXfDkqHTiEtXV238LXGSTqiks378gEHCpdeZFCJMvQotPkGAI="
+          },
+          {
+            "type": "text",
+            "text": "```json { \"category\": \"CECRL\", \"text\": \"REPUBLICA DE COLOMBIA IDENTIFICACION PERSONAL CEDULA DE CIUDADANIA NUMERO 5983889 CORTES ARIAS LUIS HERNANDO FECHA DE NACIMIENTO 18-MAY-1956 PURIFICACION (TOLIMA) LUGAR DE NACIMIENTO 1.56 O+ M ESTATURA G.S. RH SEXO 17-ENE-1978 PURIFICACION FECHA Y LUGAR DE EXPEDICION INDICE DERECHO REGISTRADOR NACIONAL IVAN DUQUE ESCOBAR\" } ```"
+          }
+        ],
+        "stop_reason": "end_turn",
+        "stop_sequence": null,
+        "usage": {
+          "input_tokens": 9,
+          "cache_creation_input_tokens": 4475,
+          "cache_read_input_tokens": 0,
+          "output_tokens": 699
+        }
+      },
+      "model_id": "us.anthropic.claude-3-7-sonnet-20250219-v1:0",
+      "api_used": "invoke_model",
+      "model_params": {
+        "max_tokens": 8000,
+        "top_p": 1,
+        "temperature": 1,
+        "thinking": {
+          "type": "enabled",
+          "budget_tokens": 4096
+        }
+      }
+    },
+    "expected_category": "CECRL",
+    "model_used": "us.anthropic.claude-3-7-sonnet-20250219-v1:0",
+    "api_used": "invoke_model",
+    "pdf_info": {
+      "original_size": 126810,
+      "first_page_size": 125227,
+      "is_scanned": true
+    }
+  },
+  "extraction_result": {
+    "extraction_data": {
+      "path": "CECRL/5983889/59838890_2020-02-29.pdf",
+      "result": {
+        "firstName": "LUIS HERNANDO",
+        "lastName": "CORTES ARIAS",
+        "country_issuer": "Colombia",
+        "nationality": "Colombia",
+        "identificationType": "Cédula de Ciudadanía",
+        "identificationNumber": "5983889",
+        "message": ""
+      },
+      "document_type": "person",
+      "documentNumber": "5983889",
+      "category": "CECRL"
+    },
+    "raw_response": {
+      "output": {
+        "message": {
+          "content": [
+            {
+              "text": "```json { \"result\": { \"firstName\": \"LUIS HERNANDO\", \"lastName\": \"CORTES ARIAS\", \"country_issuer\": \"Colombia\", \"nationality\": \"Colombia\", \"identificationType\": \"Cédula de Ciudadanía\", \"identificationNumber\": \"5983889\", \"message\": \"\" }, \"document_type\": \"person\", \"category\": \"CECRL\" } ```"
+            }
+          ]
+        }
+      },
+      "stopReason": "end_turn",
+      "usage": {
+        "input_tokens": 10,
+        "cache_creation_input_tokens": 5982,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 616
+      },
+      "ResponseMetadata": {
+        "RequestId": "fb9a1bd5-ba82-467c-a8a0-c0b70dd1260c",
+        "HTTPStatusCode": 200,
+        "HTTPHeaders": {
+          "date": "Thu, 28 Aug 2025 15:35:52 GMT",
+          "content-type": "application/json",
+          "content-length": "2821",
+          "connection": "keep-alive",
+          "x-amzn-requestid": "fb9a1bd5-ba82-467c-a8a0-c0b70dd1260c",
+          "x-amzn-bedrock-invocation-latency": "16806",
+          "x-amzn-bedrock-cache-write-input-token-count": "5982",
+          "x-amzn-bedrock-cache-read-input-token-count": "0",
+          "x-amzn-bedrock-output-token-count": "616",
+          "x-amzn-bedrock-input-token-count": "10"
+        },
+        "RetryAttempts": 0
+      },
+      "raw_anthropic_response": {
+        "id": "msg_bdrk_01QhJaW9HTQfMx37g472snoU",
+        "type": "message",
+        "role": "assistant",
+        "model": "claude-3-7-sonnet-20250219",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "Let me analyze this Colombian identification document and extract all the required information according to the provided schema: First, let's verify this is an official government ID document: - The document header shows \"REPÚBLICA DE COLOMBIA\" - It's titled \"IDENTIFICACIÓN PERSONAL\" - It indicates \"CÉDULA DE CIUDADANÍA\" which is the Colombian national ID card - It has official formatting, a photo, and a fingerprint - There appears to be a barcode and official seals This is definitely an official Colombian identification document (Cédula de Ciudadanía). Now, let's extract the required fields: 1. **firstName**: - I see \"LUIS HERNANDO\" which appears to be the given names - This is positioned after what appears to be the surname 2. **lastName**: - I can see \"CORTES ARIAS\" which appears to be the surnames - In Colombian naming convention, this would be the paternal surname (Cortes) followed by the maternal surname (Arias) 3. **country_issuer**: - The header clearly states \"REPÚBLICA DE COLOMBIA\" - The document is a Colombian Cédula de Ciudadanía 4. **nationality**: - Not explicitly stated, but for a Cédula de Ciudadanía, the nationality would be Colombian - This document type is only issued to Colombian citizens 5. **identificationType**: - The document is clearly labeled \"CÉDULA DE CIUDADANÍA\" - This is the standard national ID card in Colombia 6. **identificationNumber**: - The number appears to be \"5983889\" 7. Additional information: - Birth date: \"18-MAY-1956\" - Birth place: \"PURIFICACIÓN (TOLIMA)\" - Height: \"1.56\" - Blood type: \"O+\" - Sex: \"M\" (male) - Issue date/location: \"17-ENE-1976 PURIFICACION\" Let me prepare the JSON output according to the schema:",
+            "signature": "ErcBCkgIBxABGAIiQKDPAxch6zrlxTV0zAwU7oEF0nm0UaKhcnOjH6iwDz3fVPxkK6PE3Zbh3FXCk8SotK+ExjlTxgHuo9Kk6vjOhUISDKNAmC4+choX2dnSkhoMLjdjQpMET59Y89CWIjCdAlA6jrfAXIplEgRtR4WmCqpjkoZunl6YCtLEPrFSOv5+dm0ye15KxyRo7MO/P3YqHW/kKG+QDriGBm+cOzNiNd3UrGiaFclDP5h58Dn3GAI="
+          },
+          {
+            "type": "text",
+            "text": "```json { \"result\": { \"firstName\": \"LUIS HERNANDO\", \"lastName\": \"CORTES ARIAS\", \"country_issuer\": \"Colombia\", \"nationality\": \"Colombia\", \"identificationType\": \"Cédula de Ciudadanía\", \"identificationNumber\": \"5983889\", \"message\": \"\" }, \"document_type\": \"person\", \"category\": \"CECRL\" } ```"
+          }
+        ],
+        "stop_reason": "end_turn",
+        "stop_sequence": null,
+        "usage": {
+          "input_tokens": 10,
+          "cache_creation_input_tokens": 5982,
+          "cache_read_input_tokens": 0,
+          "output_tokens": 616
+        }
+      },
+      "model_id": "us.anthropic.claude-3-7-sonnet-20250219-v1:0",
+      "api_used": "invoke_model",
+      "model_params": {
+        "max_tokens": 8000,
+        "top_p": 1,
+        "temperature": 1,
+        "thinking": {
+          "type": "enabled",
+          "budget_tokens": 4096
+        }
+      }
+    },
+    "model_used": "us.anthropic.claude-3-7-sonnet-20250219-v1:0",
+    "api_used": "invoke_model"
+  }
+}

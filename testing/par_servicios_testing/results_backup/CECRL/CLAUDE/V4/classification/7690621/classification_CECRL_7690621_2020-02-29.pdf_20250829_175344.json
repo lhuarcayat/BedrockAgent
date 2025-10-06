@@ -1,0 +1,87 @@
+{
+  "classification_data": {
+    "category": "CECRL",
+    "text": "REPUBLICA DE COLOMBIA IDENTIFICACION PERSONAL CEDULA DE CIUDADANIA NUMERO 7.690.621 BERMUDEZ FILBERT APELLIDOS LUIS KENNETH NOMBRES FIRMA FECHA DE NACIMIENTO 13-AGO-1972 NEIVA (HUILA) LUGAR DE NACIMIENTO 1.62 A+ M ESTATURA G.S. R.H SEXO 13-SEP-1990 NEIVA FECHA Y LUGAR DE EXPEDICION REGISTRADORIA NACIONAL INDICE DERECHO A-1900100-50131731-M-000760621-20060327 015690608N 02 143194796",
+    "document_number": "7690621",
+    "path": "CECRL/7690621/7690621_2020-02-29.pdf"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "```json { \"category\": \"CECRL\", \"text\": \"REPUBLICA DE COLOMBIA\\nIDENTIFICACION PERSONAL\\nCEDULA DE CIUDADANIA\\n\\nNUMERO 7.690.621\\n\\nBERMUDEZ FILBERT\\nAPELLIDOS\\n\\nLUIS KENNETH\\nNOMBRES\\n\\nFIRMA\\n\\nFECHA DE NACIMIENTO 13-AGO-1972\\nNEIVA\\n(HUILA)\\nLUGAR DE NACIMIENTO\\n\\n1.62 A+ M\\nESTATURA G.S. R.H SEXO\\n\\n13-SEP-1990 NEIVA\\nFECHA Y LUGAR DE EXPEDICION\\n\\nREGISTRADORIA NACIONAL\\nINDICE DERECHO\\n\\nA-1900100-50131731-M-000760621-20060327 015690608N 02 143194796\" } ```"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 9,
+      "cache_creation_input_tokens": 4753,
+      "cache_read_input_tokens": 0,
+      "output_tokens": 1055
+    },
+    "ResponseMetadata": {
+      "RequestId": "df599818-cc8a-4476-8f21-e68ae9d96a58",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Fri, 29 Aug 2025 22:53:34 GMT",
+        "content-type": "application/json",
+        "content-length": "6747",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "df599818-cc8a-4476-8f21-e68ae9d96a58",
+        "x-amzn-bedrock-invocation-latency": "21155",
+        "x-amzn-bedrock-cache-write-input-token-count": "4753",
+        "x-amzn-bedrock-cache-read-input-token-count": "0",
+        "x-amzn-bedrock-output-token-count": "1055",
+        "x-amzn-bedrock-input-token-count": "9"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_01Gh7EZ7d4EKkfi7K1dVTUYp",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-sonnet-4-20250514",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Let me analyze this document step by step according to the classification workflow. 1. **TEXT EXTRACTION** Looking at the document, I can see: - \"REPUBLICA DE COLOMBIA\" - \"IDENTIFICACION PERSONAL\" - \"CEDULA DE CIUDADANIA\" - \"NUMERO 7.690.621\" - \"BERMUDEZ FILBERT\" (last name) - \"LUIS KENNETH\" (first name) - A signature area - \"FECHA DE NACIMIENTO 13-AGO-1972\" - \"NEIVA\" - \"(HUILA)\" - \"LUGAR DE NACIMIENTO\" - \"1.62\" (estatura/height) - \"A+\" (blood type) - \"M\" (sex) - \"ESTATURA G.S. R.H SEXO\" - \"13-SEP-1990 NEIVA\" - \"FECHA Y LUGAR DE EXPEDICION\" - \"REGISTRADORIA NACIONAL\" - A fingerprint image (left side) - \"INDICE DERECHO\" - A photo of a person in the upper right - Barcode at bottom - Various ID numbers at bottom 2. **PRIORITY CHECKS** - This is not BLANK - has meaningful content - This is not LINK_ONLY - no URLs or hyperlinks 3. **DOCUMENT FUNCTION ANALYSIS** - Primary purpose: This is clearly a personal identification document - It provides individual identification information - Contains personal biographical data (birth date, birth place, blood type, gender, height) - Has individual photo, signature area, fingerprint - Government-issued personal ID number with individual name - Contains security elements (barcodes, official format) 4. **ISSUER IDENTIFICATION** - This appears to be issued by government identification authorities (República de Colombia, Registraduría Nacional) - Not DIAN (no DIAN logo or tax-related content) - Not Chamber of Commerce document 5. **CATEGORY CLASSIFICATION** I confirm this is a Colombian citizen identification card (CECRL) matching all key criteria. The document contains comprehensive personal identification details from an official government source, with multiple verification elements like photo, signature, and fingerprint. The identification matches precise government-issued standards, including personal biographical data and security features typical of national identification documents. It definitively represents an individual's official personal identification, not a corporate or tax-related record.",
+          "signature": "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"
+        },
+        {
+          "type": "text",
+          "text": "```json { \"category\": \"CECRL\", \"text\": \"REPUBLICA DE COLOMBIA\\nIDENTIFICACION PERSONAL\\nCEDULA DE CIUDADANIA\\n\\nNUMERO 7.690.621\\n\\nBERMUDEZ FILBERT\\nAPELLIDOS\\n\\nLUIS KENNETH\\nNOMBRES\\n\\nFIRMA\\n\\nFECHA DE NACIMIENTO 13-AGO-1972\\nNEIVA\\n(HUILA)\\nLUGAR DE NACIMIENTO\\n\\n1.62 A+ M\\nESTATURA G.S. R.H SEXO\\n\\n13-SEP-1990 NEIVA\\nFECHA Y LUGAR DE EXPEDICION\\n\\nREGISTRADORIA NACIONAL\\nINDICE DERECHO\\n\\nA-1900100-50131731-M-000760621-20060327 015690608N 02 143194796\" } ```"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 9,
+        "cache_creation_input_tokens": 4753,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 1055
+      }
+    },
+    "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 8000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "expected_category": "CECRL",
+  "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+  "api_used": "invoke_model",
+  "pdf_info": {
+    "original_size": 359687,
+    "first_page_size": 355186,
+    "is_scanned": true
+  }
+}

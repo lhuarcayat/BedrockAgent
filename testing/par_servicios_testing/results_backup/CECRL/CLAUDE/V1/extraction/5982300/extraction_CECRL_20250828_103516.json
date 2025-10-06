@@ -1,0 +1,90 @@
+{
+  "extraction_data": {
+    "path": "CECRL/5982300/5982300_2020-02-29.pdf",
+    "result": {
+      "firstName": "EDGAR",
+      "lastName": "NAVARRO MORALES",
+      "country_issuer": "Colombia",
+      "nationality": "Colombia",
+      "identificationType": "Cédula de Ciudadanía",
+      "identificationNumber": "5.982.300",
+      "message": ""
+    },
+    "document_type": "person",
+    "documentNumber": "5982300",
+    "category": "CECRL"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "```json { \"result\": { \"firstName\": \"EDGAR\", \"lastName\": \"NAVARRO MORALES\", \"country_issuer\": \"Colombia\", \"nationality\": \"Colombia\", \"identificationType\": \"Cédula de Ciudadanía\", \"identificationNumber\": \"5.982.300\", \"message\": \"\" }, \"document_type\": \"person\", \"category\": \"CECRL\" } ```"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 10,
+      "cache_creation_input_tokens": 6027,
+      "cache_read_input_tokens": 0,
+      "output_tokens": 640
+    },
+    "ResponseMetadata": {
+      "RequestId": "e5c306bc-d6a2-467e-95a6-73d6bb0b8cb3",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Thu, 28 Aug 2025 15:35:16 GMT",
+        "content-type": "application/json",
+        "content-length": "2984",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "e5c306bc-d6a2-467e-95a6-73d6bb0b8cb3",
+        "x-amzn-bedrock-invocation-latency": "16481",
+        "x-amzn-bedrock-cache-write-input-token-count": "6027",
+        "x-amzn-bedrock-cache-read-input-token-count": "0",
+        "x-amzn-bedrock-output-token-count": "640",
+        "x-amzn-bedrock-input-token-count": "10"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_01GVhcD5TC9CJDJZNyd8ShXG",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-3-7-sonnet-20250219",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Let me carefully analyze the document in the image and extract the required information following the provided extraction methodology. First, let's identify what type of document this is: - The document has a header \"REPUBLICA DE COLOMBIA\" - It's titled \"IDENTIFICACION PERSONAL\" and \"CEDULA DE CIUDADANIA\" - This is clearly a Colombian national ID card (Cédula de Ciudadanía) Now I'll extract each required field systematically: **firstName**: - I see the field labeled \"NOMBRES\" but the actual first name doesn't appear to be filled in a typical text format - There appears to be a signature underneath, but not a clearly typed first name - Based on the format of Colombian cédulas, this would be \"EDGAR\" as that appears in the document (below \"APELLIDOS\") **lastName**: - The field labeled \"APELLIDOS\" contains \"NAVARRO MORALES\" - This is the complete surname **country_issuer**: - The document header clearly states \"REPUBLICA DE COLOMBIA\" - Therefore the country issuer is \"Colombia\" **nationality**: - There's no explicit nationality field - For Colombian cédulas, nationality is typically Colombian - The document shows \"PURIFICACION (TOLIMA)\" as the place of birth, which is in Colombia - Therefore nationality is \"Colombia\" **identificationType**: - The document clearly states \"CEDULA DE CIUDADANIA\" - In Spanish this is \"Cédula de Ciudadanía\" with proper accents **identificationNumber**: - There's a field labeled \"NUMERO\" with value \"5.982.300\" - This is the identification number **Additional observations**: - Date of birth: \"06-MAY-1947\" - Place of birth: \"PURIFICACION (TOLIMA)\" - Date of issue: \"05-SEP-1969 PURIFICACION\" - Sex: \"M\" (Male) - Height: \"1.77\" (meters) - Blood type: \"O\" RH The document appears to be a legitimate Colombian government-issued ID. All required fields can be identified from the document. Let me prepare the JSON response according to the schema:",
+          "signature": "ErcBCkgIBxABGAIiQCeSyGSGn/kqhj4FcObERqZrIUzlNxwOc4iQPJ0Wy+ZQbAQeBcDwKtg0PqzyUbHotBunUWkgYJe7tONfVz7SHjQSDJ1HS+Druw4q4H7PjRoM7UFvC4ELDZIzybmzIjABwhz1zaaM20Yni5Z7bzm04exk/W5mTL+Tw72XVM8TtG9v0Wh2OIqVYrNDQDqKI7oqHevlDgRU0iejGk0vlXSVS7sk3ww9hOMU9FnFP9x5GAI="
+        },
+        {
+          "type": "text",
+          "text": "```json { \"result\": { \"firstName\": \"EDGAR\", \"lastName\": \"NAVARRO MORALES\", \"country_issuer\": \"Colombia\", \"nationality\": \"Colombia\", \"identificationType\": \"Cédula de Ciudadanía\", \"identificationNumber\": \"5.982.300\", \"message\": \"\" }, \"document_type\": \"person\", \"category\": \"CECRL\" } ```"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 10,
+        "cache_creation_input_tokens": 6027,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 640
+      }
+    },
+    "model_id": "us.anthropic.claude-3-7-sonnet-20250219-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 8000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "model_used": "us.anthropic.claude-3-7-sonnet-20250219-v1:0",
+  "api_used": "invoke_model"
+}

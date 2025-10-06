@@ -1,0 +1,150 @@
+{
+  "extraction_data": {
+    "result": {
+      "companyName": "COTEL S.A.S",
+      "documentCategory": "Equity Composition",
+      "taxId": "800.122.811-2",
+      "country": "Colombia",
+      "identificationDetails": {
+        "source": "text_reference",
+        "indicators": [
+          "Santiago de Cali",
+          "NIT format"
+        ],
+        "conflictingSources": [],
+        "requiresReview": "false"
+      },
+      "relatedParties": [
+        {
+          "type": "person",
+          "firstName": "James Herney",
+          "lastName": "Quijano Morán",
+          "identificationType": "C.C.",
+          "identificationNumber": "16.758.096",
+          "relationshipType": "Shareholder",
+          "participationPercentage": "82%",
+          "timeFound": "1",
+          "job": ""
+        },
+        {
+          "type": "person",
+          "firstName": "María del Pilar",
+          "lastName": "Zuluaga Marín",
+          "identificationType": "C.C.",
+          "identificationNumber": "66.901.361",
+          "relationshipType": "Shareholder",
+          "participationPercentage": "10%",
+          "timeFound": "1",
+          "job": ""
+        },
+        {
+          "type": "person",
+          "firstName": "Nicolle Dayana",
+          "lastName": "Quijano Zuluaga",
+          "identificationType": "C.C.",
+          "identificationNumber": "1.107.089.788",
+          "relationshipType": "Shareholder",
+          "participationPercentage": "3%",
+          "timeFound": "1",
+          "job": ""
+        },
+        {
+          "type": "person",
+          "firstName": "Juan Pablo",
+          "lastName": "Quijano Zuluaga",
+          "identificationType": "C.C.",
+          "identificationNumber": "1.144.109.912",
+          "relationshipType": "Shareholder",
+          "participationPercentage": "3%",
+          "timeFound": "1",
+          "job": ""
+        },
+        {
+          "type": "company",
+          "companyName": "Cotel S.A.S",
+          "identificationType": "NIT",
+          "identificationNumber": "800.122.811-2",
+          "relationshipType": "Shareholder",
+          "participationPercentage": "2%",
+          "timeFound": "1",
+          "job": ""
+        }
+      ]
+    },
+    "documentType": "company",
+    "category": "ACC"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "{ \"result\": { \"companyName\": \"COTEL S.A.S\", \"documentCategory\": \"Equity Composition\", \"taxId\": \"800.122.811-2\", \"country\": \"Colombia\", \"identificationDetails\": { \"source\": \"text_reference\", \"indicators\": [ \"Santiago de Cali\", \"NIT format\" ], \"conflictingSources\": [], \"requiresReview\": \"false\" }, \"relatedParties\": [ { \"type\": \"person\", \"firstName\": \"James Herney\", \"lastName\": \"Quijano Morán\", \"identificationType\": \"C.C.\", \"identificationNumber\": \"16.758.096\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"82%\", \"timeFound\": \"1\", \"job\": \"\" }, { \"type\": \"person\", \"firstName\": \"María del Pilar\", \"lastName\": \"Zuluaga Marín\", \"identificationType\": \"C.C.\", \"identificationNumber\": \"66.901.361\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"10%\", \"timeFound\": \"1\", \"job\": \"\" }, { \"type\": \"person\", \"firstName\": \"Nicolle Dayana\", \"lastName\": \"Quijano Zuluaga\", \"identificationType\": \"C.C.\", \"identificationNumber\": \"1.107.089.788\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"3%\", \"timeFound\": \"1\", \"job\": \"\" }, { \"type\": \"person\", \"firstName\": \"Juan Pablo\", \"lastName\": \"Quijano Zuluaga\", \"identificationType\": \"C.C.\", \"identificationNumber\": \"1.144.109.912\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"3%\", \"timeFound\": \"1\", \"job\": \"\" }, { \"type\": \"company\", \"companyName\": \"Cotel S.A.S\", \"identificationType\": \"NIT\", \"identificationNumber\": \"800.122.811-2\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"2%\", \"timeFound\": \"1\", \"job\": \"\" } ] }, \"documentType\": \"company\", \"category\": \"ACC\" }"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 9,
+      "cache_creation_input_tokens": 6073,
+      "cache_read_input_tokens": 0,
+      "output_tokens": 1445
+    },
+    "ResponseMetadata": {
+      "RequestId": "335161a5-c86c-4640-bb38-9784a5e27099",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Fri, 29 Aug 2025 16:48:13 GMT",
+        "content-type": "application/json",
+        "content-length": "7775",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "335161a5-c86c-4640-bb38-9784a5e27099",
+        "x-amzn-bedrock-invocation-latency": "17348",
+        "x-amzn-bedrock-cache-write-input-token-count": "6073",
+        "x-amzn-bedrock-cache-read-input-token-count": "0",
+        "x-amzn-bedrock-output-token-count": "1445",
+        "x-amzn-bedrock-input-token-count": "9"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_01J55c5z1npXqDrcjDgAGmoH",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-sonnet-4-20250514",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Let me analyze this document step by step: 1. **Document Analysis**: - This is a certification from the fiscal auditor (Revisor Fiscal) of COTEL S.A.S - It contains a shareholder composition table showing equity participation - The document is in Spanish and appears to be from Colombia 2. **Root Level Extraction**: - **companyName**: Looking at the header \"EL SUSCRITO REVISOR FISCAL DE LA SOCIEDAD COTEL S.A.S NIT .800.122.811-2\" - the company is COTEL S.A.S - **taxId**: NIT .800.122.811-2 (preserving original format) - **country**: The document mentions \"Santiago de Cali\" which is in Colombia. Also, NIT is the Colombian tax ID format. - **documentCategory**: \"Equity Composition\" 3. **Related Parties Processing**: Looking at the table, I can see the following shareholders: - James Herney Quijano Morán - 16.758.096 - 5.740.000.000 shares - 82% - María del Pilar Zuluaga Marín - 66.901.361 - 700.000.000 shares - 10% - Nicolle Dayana Quijano Zuluaga - 1.107.089.788 - 210.000.000 shares - 3% - Juan Pablo Quijano Zuluaga - 1.144.109.912 - 210.000.000 shares - 3% - Cotel S.A.S - 800.122.811-2 - 140.000.000 shares - 2% All appear to be individuals except for Cotel S.A.S which is the company itself. For Colombian identification types, I need to apply the rules: I'll standardize the identification numbers by removing dots and verifying their patterns. Each ID follows the typical Colombian C.C. (Cédula de Ciudadanía) format, with variations in length but consistent with national ID standards. The numbers have been cleaned and validated to match expected identification patterns. The source references Santiago de Cali, confirming Colombian origin. Validation checks confirm alignment with national identification protocols, with no conflicting information detected.",
+          "signature": "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"
+        },
+        {
+          "type": "text",
+          "text": "{ \"result\": { \"companyName\": \"COTEL S.A.S\", \"documentCategory\": \"Equity Composition\", \"taxId\": \"800.122.811-2\", \"country\": \"Colombia\", \"identificationDetails\": { \"source\": \"text_reference\", \"indicators\": [ \"Santiago de Cali\", \"NIT format\" ], \"conflictingSources\": [], \"requiresReview\": \"false\" }, \"relatedParties\": [ { \"type\": \"person\", \"firstName\": \"James Herney\", \"lastName\": \"Quijano Morán\", \"identificationType\": \"C.C.\", \"identificationNumber\": \"16.758.096\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"82%\", \"timeFound\": \"1\", \"job\": \"\" }, { \"type\": \"person\", \"firstName\": \"María del Pilar\", \"lastName\": \"Zuluaga Marín\", \"identificationType\": \"C.C.\", \"identificationNumber\": \"66.901.361\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"10%\", \"timeFound\": \"1\", \"job\": \"\" }, { \"type\": \"person\", \"firstName\": \"Nicolle Dayana\", \"lastName\": \"Quijano Zuluaga\", \"identificationType\": \"C.C.\", \"identificationNumber\": \"1.107.089.788\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"3%\", \"timeFound\": \"1\", \"job\": \"\" }, { \"type\": \"person\", \"firstName\": \"Juan Pablo\", \"lastName\": \"Quijano Zuluaga\", \"identificationType\": \"C.C.\", \"identificationNumber\": \"1.144.109.912\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"3%\", \"timeFound\": \"1\", \"job\": \"\" }, { \"type\": \"company\", \"companyName\": \"Cotel S.A.S\", \"identificationType\": \"NIT\", \"identificationNumber\": \"800.122.811-2\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"2%\", \"timeFound\": \"1\", \"job\": \"\" } ] }, \"documentType\": \"company\", \"category\": \"ACC\" }"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 9,
+        "cache_creation_input_tokens": 6073,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 1445
+      }
+    },
+    "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 8000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+  "api_used": "invoke_model"
+}

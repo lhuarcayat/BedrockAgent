@@ -1,0 +1,183 @@
+{
+  "document_name": "7249040_2020-02-29.pdf",
+  "category": "CECRL",
+  "classification_success": true,
+  "extraction_success": true,
+  "overall_success": true,
+  "timestamp": "2025-08-29T10:44:46.265577",
+  "classification_result": {
+    "classification_data": {
+      "category": "CECRL",
+      "text": "REPUBLICA DE COLOMBIA IDENTIFICACION PERSONAL CEDULA DE CIUDADANIA NUMERO 7.249.040 MESA GOMEZ APELLIDOS JOSE DEL CARMEN NOMBRES FIRMA FECHA DE NACIMIENTO 27-JUN-1962 PUERTO NARE (ANTIOQUIA) LUGAR DE NACIMIENTO 1.70 B+ M ESTATURA G.S. RH SEXO 23-FEB-1981 PUERTO BOYACA FECHA Y LUGAR DE EXPEDICION INDICE DERECHO REGISTRADOR NACIONAL CARLOS ARIEL SANCHEZ TORRES A-1500150-0011282-M-0007249040-2C081027 0004907388A1 1410020296",
+      "document_number": "7249040",
+      "path": "CECRL/7249040/7249040_2020-02-29.pdf"
+    },
+    "raw_response": {
+      "output": {
+        "message": {
+          "content": [
+            {
+              "text": "```json { \"category\": \"CECRL\", \"text\": \"REPUBLICA DE COLOMBIA\\nIDENTIFICACION PERSONAL\\nCEDULA DE CIUDADANIA\\nNUMERO 7.249.040\\nMESA GOMEZ\\nAPELLIDOS\\nJOSE DEL CARMEN\\nNOMBRES\\nFIRMA\\nFECHA DE NACIMIENTO 27-JUN-1962\\nPUERTO NARE\\n(ANTIOQUIA)\\nLUGAR DE NACIMIENTO\\n1.70 B+ M\\nESTATURA G.S. RH SEXO\\n23-FEB-1981 PUERTO BOYACA\\nFECHA Y LUGAR DE EXPEDICION\\nINDICE DERECHO\\nREGISTRADOR NACIONAL\\nCARLOS ARIEL SANCHEZ TORRES\\nA-1500150-0011282-M-0007249040-2C081027 0004907388A1 1410020296\" } ```"
+            }
+          ]
+        }
+      },
+      "stopReason": "end_turn",
+      "usage": {
+        "input_tokens": 9,
+        "cache_creation_input_tokens": 4549,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 884
+      },
+      "ResponseMetadata": {
+        "RequestId": "e8b859d1-29d3-45cc-862e-3faf16db7b30",
+        "HTTPStatusCode": 200,
+        "HTTPHeaders": {
+          "date": "Fri, 29 Aug 2025 15:45:01 GMT",
+          "content-type": "application/json",
+          "content-length": "5922",
+          "connection": "keep-alive",
+          "x-amzn-requestid": "e8b859d1-29d3-45cc-862e-3faf16db7b30",
+          "x-amzn-bedrock-invocation-latency": "14164",
+          "x-amzn-bedrock-cache-write-input-token-count": "4549",
+          "x-amzn-bedrock-cache-read-input-token-count": "0",
+          "x-amzn-bedrock-output-token-count": "884",
+          "x-amzn-bedrock-input-token-count": "9"
+        },
+        "RetryAttempts": 0
+      },
+      "raw_anthropic_response": {
+        "id": "msg_bdrk_01WrU2NK4VBxTrTCRBWmXum5",
+        "type": "message",
+        "role": "assistant",
+        "model": "claude-sonnet-4-20250514",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "Let me analyze this document step by step following the workflow: 1. **TEXT EXTRACTION** Looking at the PDF image, I can see this appears to be a Colombian personal identification document. I can extract the following text: - REPUBLICA DE COLOMBIA - IDENTIFICACION PERSONAL - CEDULA DE CIUDADANIA - NUMERO: 7.249.040 - MESA GOMEZ - APELLIDOS: JOSE DEL CARMEN - NOMBRES: [appears to be a signature] On the lower portion: - FECHA DE NACIMIENTO: 27-JUN-1962 - PUERTO NARE - (ANTIOQUIA) - LUGAR DE NACIMIENTO - 1.70 B+ M - ESTATURA G.S. RH SEXO - 23-FEB-1981 PUERTO BOYACA - FECHA Y LUGAR DE EXPEDICION There's also a fingerprint image and a barcode at the bottom. 2. **PRIORITY CHECKS** - Not BLANK - has meaningful content - Not LINK_ONLY - no hyperlinks/URLs 3. **ISSUER IDENTIFICATION** This is issued by \"REPUBLICA DE COLOMBIA\" and is clearly a personal identification document (Cédula de Ciudadania). This is a government identification authority. 4. **DOCUMENT FUNCTION ANALYSIS** This is clearly for personal identification of an individual person. It contains: - Personal biographical data (birth date, birth place) - Physical characteristics (height, blood type, gender) - Individual photo - Individual fingerprint - Signature - Government-issued ID number with individual name 5. **CATEGORY CLASSIFICATION** This clearly fits CECRL based on: - Individual identification terminology: \"CEDULA DE CIUDADANIA\", \"IDENTIFICACION PERSONAL\" - Personal biographical data: birth date (27-JUN-1962), birth place (PUERTO NARE, ANTIOQUIA), blood type (B+), gender (M), height (1.70) I confirm this is a comprehensive Colombian national identification document with multiple verification elements. The card provides robust personal identification through visual and administrative features. Key identifiers include photographic evidence, unique government-issued number, and official governmental markings that validate the individual's identity comprehensively.",
+            "signature": "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"
+          },
+          {
+            "type": "text",
+            "text": "```json { \"category\": \"CECRL\", \"text\": \"REPUBLICA DE COLOMBIA\\nIDENTIFICACION PERSONAL\\nCEDULA DE CIUDADANIA\\nNUMERO 7.249.040\\nMESA GOMEZ\\nAPELLIDOS\\nJOSE DEL CARMEN\\nNOMBRES\\nFIRMA\\nFECHA DE NACIMIENTO 27-JUN-1962\\nPUERTO NARE\\n(ANTIOQUIA)\\nLUGAR DE NACIMIENTO\\n1.70 B+ M\\nESTATURA G.S. RH SEXO\\n23-FEB-1981 PUERTO BOYACA\\nFECHA Y LUGAR DE EXPEDICION\\nINDICE DERECHO\\nREGISTRADOR NACIONAL\\nCARLOS ARIEL SANCHEZ TORRES\\nA-1500150-0011282-M-0007249040-2C081027 0004907388A1 1410020296\" } ```"
+          }
+        ],
+        "stop_reason": "end_turn",
+        "stop_sequence": null,
+        "usage": {
+          "input_tokens": 9,
+          "cache_creation_input_tokens": 4549,
+          "cache_read_input_tokens": 0,
+          "output_tokens": 884
+        }
+      },
+      "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+      "api_used": "invoke_model",
+      "model_params": {
+        "max_tokens": 8000,
+        "top_p": 1,
+        "temperature": 1,
+        "thinking": {
+          "type": "enabled",
+          "budget_tokens": 4096
+        }
+      }
+    },
+    "expected_category": "CECRL",
+    "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model",
+    "pdf_info": {
+      "original_size": 189559,
+      "first_page_size": 185060,
+      "is_scanned": true
+    }
+  },
+  "extraction_result": {
+    "extraction_data": {
+      "result": {
+        "firstName": "POR REVISAR",
+        "lastName": "JOSE DEL CARMEN",
+        "country_issuer": "Colombia",
+        "nationality": "Colombia",
+        "identificationType": "Cédula de Ciudadanía",
+        "identificationNumber": "7.249.040",
+        "message": "No se pudieron leer correctamente valores para firstName - campo NOMBRES no es claramente legible"
+      },
+      "document_type": "person",
+      "category": "CECRL"
+    },
+    "raw_response": {
+      "output": {
+        "message": {
+          "content": [
+            {
+              "text": "```json { \"result\": { \"firstName\": \"POR REVISAR\", \"lastName\": \"JOSE DEL CARMEN\", \"country_issuer\": \"Colombia\", \"nationality\": \"Colombia\", \"identificationType\": \"Cédula de Ciudadanía\", \"identificationNumber\": \"7.249.040\", \"message\": \"No se pudieron leer correctamente valores para firstName - campo NOMBRES no es claramente legible\" }, \"document_type\": \"person\", \"category\": \"CECRL\" } ```"
+            }
+          ]
+        }
+      },
+      "stopReason": "end_turn",
+      "usage": {
+        "input_tokens": 10,
+        "cache_creation_input_tokens": 5982,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 1064
+      },
+      "ResponseMetadata": {
+        "RequestId": "b26d545c-531d-4c64-a60f-277a52e13185",
+        "HTTPStatusCode": 200,
+        "HTTPHeaders": {
+          "date": "Fri, 29 Aug 2025 15:45:21 GMT",
+          "content-type": "application/json",
+          "content-length": "7789",
+          "connection": "keep-alive",
+          "x-amzn-requestid": "b26d545c-531d-4c64-a60f-277a52e13185",
+          "x-amzn-bedrock-invocation-latency": "20342",
+          "x-amzn-bedrock-cache-write-input-token-count": "5982",
+          "x-amzn-bedrock-cache-read-input-token-count": "0",
+          "x-amzn-bedrock-output-token-count": "1064",
+          "x-amzn-bedrock-input-token-count": "10"
+        },
+        "RetryAttempts": 0
+      },
+      "raw_anthropic_response": {
+        "id": "msg_bdrk_01N4dyJS5KEWrgmw2uXtt3nB",
+        "type": "message",
+        "role": "assistant",
+        "model": "claude-sonnet-4-20250514",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "Looking at this Colombian identification document, I need to extract all the required information following the rules. Let me analyze the document: 1. **Document Analysis**: This is a Colombian \"CÉDULA DE CIUDADANÍA\" (citizenship card) from \"REPÚBLICA DE COLOMBIA\" - this is clearly an official government ID document. 2. **Field Detection**: - I can see \"APELLIDOS\" followed by \"JOSE DEL CARMEN\" - I can see \"NOMBRES\" but it's partially cut off or unclear - The document number appears to be \"7.249.040\" - Birth date shows \"27-JUN-1962\" - Birth place shows \"PUERTO NARE (ANTIOQUIA)\" 3. **Field Extraction**: - **lastName**: Under \"APELLIDOS:\" I can see \"JOSE DEL CARMEN\" - **firstName**: Under \"NOMBRES:\" the text is partially visible but unclear - I can see some text but it's not clearly readable - **country_issuer**: \"Colombia\" (from \"REPÚBLICA DE COLOMBIA\") - **nationality**: \"Colombia\" (default from issuer country) - **identificationType**: \"Cédula de Ciudadanía\" (from the document header) - **identificationNumber**: \"7.249.040\" (the prominent number) Wait, I need to be more careful about the names. Looking again: - \"APELLIDOS\" is the surname field and shows \"JOSE DEL CARMEN\" - \"NOMBRES\" is the given names field but it's not clearly visible in this image Actually, let me reconsider the names. Looking at the document more carefully: - There's \"MESA GOMEZ\" which appears to be a name - \"JOSE DEL CARMEN\" appears under what looks like \"APELLIDOS\" Let me re-examine this. The document structure shows: - Number: 7.249.040 - There's \"MESA GOMEZ\" - The name structure seems complex, with multiple potential name components I'll carefully parse the name fields, noting the potential complexity of Colombian naming conventions. The \"MESA GOMEZ\" likely relates to the surname, while \"JOSE DEL CARMEN\" might be a full name or partial name component. The unclear \"NOMBRES\" field requires careful verification. The systematic approach involves precisely tracking each visible name element, ensuring accurate extraction despite partial readability. I'll use the explicit \"APELLIDOS:\" field for lastName while marking the firstName as unverified due to unclear text. The presence of \"MESA GOMEZ\" requires careful verification against standard field labels.",
+            "signature": "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"
+          },
+          {
+            "type": "text",
+            "text": "```json { \"result\": { \"firstName\": \"POR REVISAR\", \"lastName\": \"JOSE DEL CARMEN\", \"country_issuer\": \"Colombia\", \"nationality\": \"Colombia\", \"identificationType\": \"Cédula de Ciudadanía\", \"identificationNumber\": \"7.249.040\", \"message\": \"No se pudieron leer correctamente valores para firstName - campo NOMBRES no es claramente legible\" }, \"document_type\": \"person\", \"category\": \"CECRL\" } ```"
+          }
+        ],
+        "stop_reason": "end_turn",
+        "stop_sequence": null,
+        "usage": {
+          "input_tokens": 10,
+          "cache_creation_input_tokens": 5982,
+          "cache_read_input_tokens": 0,
+          "output_tokens": 1064
+        }
+      },
+      "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+      "api_used": "invoke_model",
+      "model_params": {
+        "max_tokens": 8000,
+        "top_p": 1,
+        "temperature": 1,
+        "thinking": {
+          "type": "enabled",
+          "budget_tokens": 4096
+        }
+      }
+    },
+    "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model"
+  }
+}

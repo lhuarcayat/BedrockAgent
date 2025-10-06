@@ -1,0 +1,131 @@
+{
+  "extraction_data": {
+    "path": "ACC/860063875/CERTIFICACION_ACCIONARIA__Desglose_.pdf",
+    "result": {
+      "companyName": "ENEL COLOMBIA S.A. ESP",
+      "documentType": "Equity Composition",
+      "taxId": "860.063.875-8",
+      "country": "Colombia",
+      "identificationDetails": {
+        "source": "text_reference",
+        "indicators": [
+          "Bogotá",
+          "Colombia"
+        ],
+        "conflictingSources": [],
+        "requiresReview": true
+      },
+      "relatedParties": [
+        {
+          "companyName": "ENEL AMERICAS S.A.",
+          "identificationType": "NIT",
+          "identificationNumber": "900.283.352-6",
+          "relationshipType": "Shareholder",
+          "participationPercentage": "57,345%",
+          "timeFound": 1,
+          "job": ""
+        },
+        {
+          "companyName": "GRUPO ENERGÍA BOGOTÁ S.A. E.S.P.",
+          "identificationType": "NIT",
+          "identificationNumber": "899.999.082-3",
+          "relationshipType": "Shareholder",
+          "participationPercentage": "42,515%",
+          "timeFound": 1,
+          "job": ""
+        },
+        {
+          "companyName": "OTROS ACCIONISTAS MINORITARIOS",
+          "identificationType": "POR REVISAR",
+          "identificationNumber": "POR REVISAR",
+          "relationshipType": "Shareholder",
+          "participationPercentage": "0,140%",
+          "timeFound": 1,
+          "job": ""
+        }
+      ]
+    },
+    "document_type": "company",
+    "document_number": "860063875",
+    "category": "ACC",
+    "confidenceScores": {
+      "companyName": 95,
+      "taxId": 95,
+      "country": 98,
+      "relatedParties": 65
+    }
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "```json { \"path\": \"ACC/860063875/CERTIFICACION_ACCIONARIA__Desglose_.pdf\", \"result\": { \"companyName\": \"ENEL COLOMBIA S.A. ESP\", \"documentType\": \"Equity Composition\", \"taxId\": \"860.063.875-8\", \"country\": \"Colombia\", \"identificationDetails\": { \"source\": \"text_reference\", \"indicators\": [ \"Bogotá\", \"Colombia\" ], \"conflictingSources\": [], \"requiresReview\": true }, \"relatedParties\": [ { \"companyName\": \"ENEL AMERICAS S.A.\", \"identificationType\": \"NIT\", \"identificationNumber\": \"900.283.352-6\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"57,345%\", \"timeFound\": 1, \"job\": \"\" }, { \"companyName\": \"GRUPO ENERGÍA BOGOTÁ S.A. E.S.P.\", \"identificationType\": \"NIT\", \"identificationNumber\": \"899.999.082-3\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"42,515%\", \"timeFound\": 1, \"job\": \"\" }, { \"companyName\": \"OTROS ACCIONISTAS MINORITARIOS\", \"identificationType\": \"POR REVISAR\", \"identificationNumber\": \"POR REVISAR\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"0,140%\", \"timeFound\": 1, \"job\": \"\" } ] }, \"document_type\": \"company\", \"document_number\": \"860063875\", \"category\": \"ACC\", \"confidenceScores\": { \"companyName\": 95, \"taxId\": 95, \"country\": 98, \"relatedParties\": 65 } } ```"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 499,
+      "cache_creation_input_tokens": 11824,
+      "cache_read_input_tokens": 0,
+      "output_tokens": 1098
+    },
+    "ResponseMetadata": {
+      "RequestId": "468aa08f-7ab4-48d5-a84d-0c6243fe7f3c",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Mon, 25 Aug 2025 20:36:25 GMT",
+        "content-type": "application/json",
+        "content-length": "6509",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "468aa08f-7ab4-48d5-a84d-0c6243fe7f3c",
+        "x-amzn-bedrock-invocation-latency": "16198",
+        "x-amzn-bedrock-cache-write-input-token-count": "11824",
+        "x-amzn-bedrock-cache-read-input-token-count": "0",
+        "x-amzn-bedrock-output-token-count": "1098",
+        "x-amzn-bedrock-input-token-count": "499"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_01Tyvp2SzntyuoJGfbPCkVtz",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-sonnet-4-20250514",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Let me extract the data from this PDF following the instructions carefully. 1. First, I need to identify the main reporting company from the document: Looking at the document, I can see: - Header: \"ENEL COLOMBIA S.A. ESP. – NIT. 860.063.875-6\" - Document title: \"CERTIFICACIÓN DE COMPOSICIÓN ACCIONARIA\" - Main text: \"Mediante la presente certifico que la composición de ENEL COLOMBIA S.A. ESP identificada con NIT. 860.063.875-8\" So the main company is: - companyName: \"ENEL COLOMBIA S.A. ESP\" - taxId: \"860.063.875-8\" (I notice there's a discrepancy - header shows 860.063.875-6 but the main text shows 860.063.875-8, I'll go with the one in the certification text) 2. Country identification: I can see explicit references: - \"Bogotá, Colombia\" appears multiple times - The document mentions \"Colombia\" explicitly The taxId format \"NIT\" aligns with Colombia according to the COMPANY_ID hash table. So: - country: \"Colombia\" - identificationDetails.source: \"text_reference\" - identificationDetails.indicators: [\"Bogotá\", \"Colombia\"] 3. Related Parties extraction: From the equity composition table, I can identify: 1. \"ENEL AMERICAS S.A.\" - NIT. 900.283.352-6 - 57,345% 2. \"GRUPO ENERGÍA BOGOTÁ S.A. E.S.P.\" - NIT 899.999.082-3 - 42,515% 3. \"OTROS ACCIONISTAS MINORITARIOS\" - 0,140% For the third one, there's no identification number provided, so I'll need to use \"POR REVISAR\". I verify the corporate entities through their unique tax identifiers. The two primary shareholders represent substantial ownership stakes, with a small percentage held by minority shareholders. The identification process reveals a clear corporate structure with well-documented ownership details.",
+          "signature": "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"
+        },
+        {
+          "type": "text",
+          "text": "```json { \"path\": \"ACC/860063875/CERTIFICACION_ACCIONARIA__Desglose_.pdf\", \"result\": { \"companyName\": \"ENEL COLOMBIA S.A. ESP\", \"documentType\": \"Equity Composition\", \"taxId\": \"860.063.875-8\", \"country\": \"Colombia\", \"identificationDetails\": { \"source\": \"text_reference\", \"indicators\": [ \"Bogotá\", \"Colombia\" ], \"conflictingSources\": [], \"requiresReview\": true }, \"relatedParties\": [ { \"companyName\": \"ENEL AMERICAS S.A.\", \"identificationType\": \"NIT\", \"identificationNumber\": \"900.283.352-6\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"57,345%\", \"timeFound\": 1, \"job\": \"\" }, { \"companyName\": \"GRUPO ENERGÍA BOGOTÁ S.A. E.S.P.\", \"identificationType\": \"NIT\", \"identificationNumber\": \"899.999.082-3\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"42,515%\", \"timeFound\": 1, \"job\": \"\" }, { \"companyName\": \"OTROS ACCIONISTAS MINORITARIOS\", \"identificationType\": \"POR REVISAR\", \"identificationNumber\": \"POR REVISAR\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"0,140%\", \"timeFound\": 1, \"job\": \"\" } ] }, \"document_type\": \"company\", \"document_number\": \"860063875\", \"category\": \"ACC\", \"confidenceScores\": { \"companyName\": 95, \"taxId\": 95, \"country\": 98, \"relatedParties\": 65 } } ```"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 499,
+        "cache_creation_input_tokens": 11824,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 1098
+      }
+    },
+    "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 8000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+  "api_used": "invoke_model"
+}

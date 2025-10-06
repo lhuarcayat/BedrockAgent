@@ -1,0 +1,130 @@
+{
+  "extraction_data": {
+    "result": {
+      "companyName": "NEWSAT S.A.S.",
+      "documentCategory": "Equity Composition",
+      "taxId": "830.513.366-3",
+      "country": "Colombia",
+      "identificationDetails": {
+        "source": "text_reference",
+        "indicators": [
+          "Cámara de Comercio de Bogotá",
+          "Colombia",
+          "NIT tax ID format"
+        ],
+        "conflictingSources": [],
+        "requiresReview": "false"
+      },
+      "relatedParties": [
+        {
+          "type": "person",
+          "firstName": "Carlos Enrique",
+          "lastName": "Rosero Ceron",
+          "identificationType": "C.C.",
+          "identificationNumber": "6386024",
+          "relationshipType": "Shareholder",
+          "participationPercentage": "40%",
+          "timeFound": "1",
+          "job": ""
+        },
+        {
+          "type": "person",
+          "firstName": "Shai",
+          "lastName": "Bercovich",
+          "identificationType": "C.C.",
+          "identificationNumber": "301680",
+          "relationshipType": "Shareholder",
+          "participationPercentage": "40%",
+          "timeFound": "1",
+          "job": ""
+        },
+        {
+          "type": "person",
+          "firstName": "Diego Alejandro",
+          "lastName": "Salazar Vasquez",
+          "identificationType": "C.C.",
+          "identificationNumber": "91499446",
+          "relationshipType": "Shareholder",
+          "participationPercentage": "20%",
+          "timeFound": "1",
+          "job": ""
+        }
+      ]
+    },
+    "documentType": "company",
+    "category": "ACC"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "{ \"result\": { \"companyName\": \"NEWSAT S.A.S.\", \"documentCategory\": \"Equity Composition\", \"taxId\": \"830.513.366-3\", \"country\": \"Colombia\", \"identificationDetails\": { \"source\": \"text_reference\", \"indicators\": [ \"Cámara de Comercio de Bogotá\", \"Colombia\", \"NIT tax ID format\" ], \"conflictingSources\": [], \"requiresReview\": \"false\" }, \"relatedParties\": [ { \"type\": \"person\", \"firstName\": \"Carlos Enrique\", \"lastName\": \"Rosero Ceron\", \"identificationType\": \"C.C.\", \"identificationNumber\": \"6386024\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"40%\", \"timeFound\": \"1\", \"job\": \"\" }, { \"type\": \"person\", \"firstName\": \"Shai\", \"lastName\": \"Bercovich\", \"identificationType\": \"C.C.\", \"identificationNumber\": \"301680\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"40%\", \"timeFound\": \"1\", \"job\": \"\" }, { \"type\": \"person\", \"firstName\": \"Diego Alejandro\", \"lastName\": \"Salazar Vasquez\", \"identificationType\": \"C.C.\", \"identificationNumber\": \"91499446\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"20%\", \"timeFound\": \"1\", \"job\": \"\" } ] }, \"documentType\": \"company\", \"category\": \"ACC\" }"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 9,
+      "cache_creation_input_tokens": 6695,
+      "cache_read_input_tokens": 0,
+      "output_tokens": 987
+    },
+    "ResponseMetadata": {
+      "RequestId": "ae9c8a2e-532f-4872-8bc3-af7d92f5ace5",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Fri, 29 Aug 2025 16:55:43 GMT",
+        "content-type": "application/json",
+        "content-length": "5860",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "ae9c8a2e-532f-4872-8bc3-af7d92f5ace5",
+        "x-amzn-bedrock-invocation-latency": "13071",
+        "x-amzn-bedrock-cache-write-input-token-count": "6695",
+        "x-amzn-bedrock-cache-read-input-token-count": "0",
+        "x-amzn-bedrock-output-token-count": "987",
+        "x-amzn-bedrock-input-token-count": "9"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_01VDxtC3B9fYseTzb6gbEwab",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-sonnet-4-20250514",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Let me analyze this document step by step: 1. **Document Analysis**: This is an Equity Composition certificate (Certificación de Composición Accionaria) for NEWSAT S.A.S. issued by a Fiscal Auditor. 2. **Root Level Extraction**: - Company Name: \"NEWSAT S.A.S.\" (mentioned multiple times in the header) - Tax ID: \"830.513.366-3\" (clearly stated as NIT) - Country: Colombia (evident from \"Cámara de Comercio de Bogotá\" and \"Colombia\" references) 3. **Related Parties Processing**: Looking at the shareholder table, I can see three shareholders: - CARLOS ENRIQUE ROSERO CERON (CC/NIT: 6386024) - 148.000 shares, $1.480.000.000, 40% - SHAI BERCOVICH (CC/NIT: 301680) - 148.000 shares, $1.480.000.000, 40% - DIEGO ALEJANDRO SALAZAR VASQUEZ (CC/NIT: 91499446) - 74.000 shares, $740.000.000, 20% All appear to be persons based on their names. Let me check the identification numbers: - 6386024: This looks like a CC (Cédula de Ciudadanía) - 7 digits, fits the pattern - 301680: This is 6 digits, fits CC pattern - 91499446: This is 8 digits, fits CC pattern 4. **Validation**: - Tax ID format NIT aligns with Colombia ✓ - All identification types should be C.C. for Colombia persons ✓ - Percentages sum to 100% (40% + 40% + 20%) ✓ - No conflicts detected 5. **Country Identification**: Clear text references to \"Colombia\" and \"Bogotá\", plus NIT tax ID format confirms Colombia. I'll verify the document's key details and prepare a structured response capturing the essential shareholder information.",
+          "signature": "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"
+        },
+        {
+          "type": "text",
+          "text": "{ \"result\": { \"companyName\": \"NEWSAT S.A.S.\", \"documentCategory\": \"Equity Composition\", \"taxId\": \"830.513.366-3\", \"country\": \"Colombia\", \"identificationDetails\": { \"source\": \"text_reference\", \"indicators\": [ \"Cámara de Comercio de Bogotá\", \"Colombia\", \"NIT tax ID format\" ], \"conflictingSources\": [], \"requiresReview\": \"false\" }, \"relatedParties\": [ { \"type\": \"person\", \"firstName\": \"Carlos Enrique\", \"lastName\": \"Rosero Ceron\", \"identificationType\": \"C.C.\", \"identificationNumber\": \"6386024\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"40%\", \"timeFound\": \"1\", \"job\": \"\" }, { \"type\": \"person\", \"firstName\": \"Shai\", \"lastName\": \"Bercovich\", \"identificationType\": \"C.C.\", \"identificationNumber\": \"301680\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"40%\", \"timeFound\": \"1\", \"job\": \"\" }, { \"type\": \"person\", \"firstName\": \"Diego Alejandro\", \"lastName\": \"Salazar Vasquez\", \"identificationType\": \"C.C.\", \"identificationNumber\": \"91499446\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"20%\", \"timeFound\": \"1\", \"job\": \"\" } ] }, \"documentType\": \"company\", \"category\": \"ACC\" }"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 9,
+        "cache_creation_input_tokens": 6695,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 987
+      }
+    },
+    "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 8000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+  "api_used": "invoke_model"
+}

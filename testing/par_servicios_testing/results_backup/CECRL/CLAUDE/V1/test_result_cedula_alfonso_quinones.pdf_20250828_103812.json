@@ -1,0 +1,185 @@
+{
+  "document_name": "cedula_alfonso_quinones.pdf",
+  "category": "CECRL",
+  "classification_success": true,
+  "extraction_success": true,
+  "overall_success": true,
+  "timestamp": "2025-08-28T10:37:10.562401",
+  "classification_result": {
+    "classification_data": {
+      "category": "CECRL",
+      "text": "REPUBLICA DE COLOMBIA IDENTIFICACION PERSONAL CEDULA DE CIUDADANIA NUMERO 72.252.799 QUIÑONES MORALES APELLIDOS ALFONSO ANGEL NOMBRES FIRMA FECHA DE NACIMIENTO 16-JUN-1979 SANTO TOMAS (ATLANTICO) LUGAR DE NACIMIENTO 1.83 ESTATURA A+ G.S. RH M SEXO 23-NOV-1998 BARRANQUILLA FECHA Y LUGAR DE EXPEDICION REGISTRADOR NACIONAL CARLOS ABEL SANCHEZ TORRES INDICE DERECHO A-0300100-00126242-M-0072252799-20081109 0005637043A 3370018951",
+      "document_number": "72252799",
+      "path": "CECRL/72252799/cedula_alfonso_quinones.pdf"
+    },
+    "raw_response": {
+      "output": {
+        "message": {
+          "content": [
+            {
+              "text": "```json { \"category\": \"CECRL\", \"text\": \"REPUBLICA DE COLOMBIA\\nIDENTIFICACION PERSONAL\\nCEDULA DE CIUDADANIA\\nNUMERO 72.252.799\\nQUIÑONES MORALES\\nAPELLIDOS\\nALFONSO ANGEL\\nNOMBRES\\nFIRMA\\nFECHA DE NACIMIENTO 16-JUN-1979\\nSANTO TOMAS\\n(ATLANTICO)\\nLUGAR DE NACIMIENTO\\n1.83\\nESTATURA\\nA+\\nG.S. RH\\nM\\nSEXO\\n23-NOV-1998 BARRANQUILLA\\nFECHA Y LUGAR DE EXPEDICION\\nREGISTRADOR NACIONAL\\nCARLOS ABEL SANCHEZ TORRES\\nINDICE DERECHO\\nA-0300100-00126242-M-0072252799-20081109 0005637043A 3370018951\" } ```"
+            }
+          ]
+        }
+      },
+      "stopReason": "end_turn",
+      "usage": {
+        "input_tokens": 9,
+        "cache_creation_input_tokens": 4475,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 1825
+      },
+      "ResponseMetadata": {
+        "RequestId": "9685b8ba-cd22-41c9-a99d-f5492bf0648f",
+        "HTTPStatusCode": 200,
+        "HTTPHeaders": {
+          "date": "Thu, 28 Aug 2025 15:37:55 GMT",
+          "content-type": "application/json",
+          "content-length": "7979",
+          "connection": "keep-alive",
+          "x-amzn-requestid": "9685b8ba-cd22-41c9-a99d-f5492bf0648f",
+          "x-amzn-bedrock-invocation-latency": "45191",
+          "x-amzn-bedrock-cache-write-input-token-count": "4475",
+          "x-amzn-bedrock-cache-read-input-token-count": "0",
+          "x-amzn-bedrock-output-token-count": "1825",
+          "x-amzn-bedrock-input-token-count": "9"
+        },
+        "RetryAttempts": 0
+      },
+      "raw_anthropic_response": {
+        "id": "msg_bdrk_01AFMk6Rc8cyfDwsyuMRGjXY",
+        "type": "message",
+        "role": "assistant",
+        "model": "claude-3-7-sonnet-20250219",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "Let me analyze this document methodically following the classification workflow. ## 1. TEXT EXTRACTION The document appears to be a Colombian ID card (Cédula de Ciudadanía). Here's the text I can extract: Front side: - REPUBLICA DE COLOMBIA - IDENTIFICACION PERSONAL - CEDULA DE CIUDADANIA - NUMERO: 72.252.799 - QUIÑONES MORALES (Apellidos/Surname) - ALFONSO ANGEL (Nombres/Names) - [Signature visible] - [Photo visible] Back side: - FECHA DE NACIMIENTO: 16-JUN-1979 - LUGAR DE NACIMIENTO: SANTO TOMAS (ATLANTICO) - ESTATURA: 1.83 - G.S. RH: A+ - SEXO: M - FECHA Y LUGAR DE EXPEDICION: 23-NOV-1998 BARRANQUILLA - REGISTRADOR NACIONAL: [Name appears to be Carlos Abel Sanchez Torres] - [Fingerprint visible] - [Barcode visible] - Various ID numbers at bottom of the card ## 2. PRIORITY CHECKS - Not BLANK - contains substantial text content - Not LINK_ONLY - no URLs or links present ## 3. ISSUER IDENTIFICATION This is clearly issued by the Colombian government as an official identification document (Cédula de Ciudadanía). ## 4. DOCUMENT FUNCTION ANALYSIS This is a personal identification document for an individual. The primary function is to establish the identity of a person. There is no corporate information, tax information, or business-related content. ## 5. CATEGORY CLASSIFICATION Following the recommended order: - CECRL: This document is a personal identification document, but there's no information connecting this individual to being a legal representative of a company. The document only contains personal identification data. - RUT: This is not a tax registration document. No DIAN information. - CERL: Not a corporate certificate. No Chamber of Commerce information. - ACC: Not a shareholder document. No ownership structure information. - RUB: Not a beneficial owner document. No DIAN or beneficial owner information. - POR_REVISAR: This might be the appropriate classification if none of the above fit. The document clearly shows a Colombian ID card (Cédula de Ciudadanía). While personal identification documents for legal representatives are classified as CECRL, this document doesn't establish any connection to a corporate role or representation. However, according to the classification system provided, CECRL is defined as \"Official personal identification documents (cédulas, passports, etc.) of legal representatives of companies\". The document I'm analyzing is definitely a cédula, but there's no indication in the visible content that this person is a legal representative of a company. ## 6. CONFIDENCE VALIDATION The document is clearly a Colombian ID card (Cédula de Ciudadanía), which matches part of the CECRL category definition. However, there is no evidence in the document that this person is a legal representative of a company, which is a key part of the CECRL definition. Given this uncertainty, and since the document is a government-issued ID that doesn't clearly fit into any of the specific categories without additional context about whether this person is a legal representative, the most appropriate classification appears to be POR_REVISAR. Actually, let me double-check the CECRL definition more carefully: \"CECRL\" is defined as \"Official personal identification documents (cédulas, passports, etc.) of legal representatives of companies\". Must-have indicators include: - Individual identification terminology: \"Cédula\", \"Identificación personal\" ✓ - Personal biographical data: birth date/place, blood type, gender, nationality, physical characteristics ✓ - Individual photo, signature, fingerprint references ✓ - Government-issued personal ID numbers with individual names ✓ - Security elements: holograms, barcodes, official seals ✓ The key distinction is whether this is for a legal representative of a company. The document itself doesn't indicate this - it's just a personal ID. The document would qualify for CECRL if there was context indicating this person is a legal representative, but without that context, I can't confirm it meets the full CECRL definition. Since we don't have information confirming this person's role as a legal representative of a company, and the document is clearly a personal identification document but doesn't fit perfectly into any of the defined categories, I believe POR_REVISAR is the most appropriate classification. On second thought, let me re-read the category definition more carefully. The CECRL category is specifically for \"Official personal identification documents (cédulas, passports, etc.) of legal representatives of companies\". The document I'm analyzing is definitely a cédula, which matches the document type. But there's no indication in the document itself that this person is a legal representative of a company. Looking at the distinguishing characteristics of CECRL: - Focus on ONE individual person ✓ - Contains biographic data (birth, nationality) ✓ - Has security elements (photo, signature references) ✓ - Government-issued personal document ✓ The document does meet all these criteria. However, the definition specifies this is for legal representatives of companies, which we cannot confirm from the document alone. Given the uncertainty about the person's role and the instruction to use POR_REVISAR when there's low confidence in classification due to ambiguous content or purpose, I'll classify this as POR_REVISAR. Actually, let me review the instructions once more. The category definitions state that CECRL is for \"Official personal identification documents (cédulas, passports, etc.) of legal representatives of companies\". This is clearly a cédula and contains all the must-have indicators listed for CECRL. The document itself doesn't indicate whether the person is a legal representative - that would require additional context not present in the document itself. Since this is a Colombian ID card that matches all the format requirements for CECRL, but lacks explicit information about the person being a legal representative, I need to determine which classification is more appropriate. On reflection, I think CECRL is the correct classification. The document is clearly a Colombian cédula with all the characteristics of personal identification documents described for the CECRL category. The fact that we don't have explicit confirmation that this person is a legal representative is a limitation, but the document type itself (Colombian cédula) fits perfectly with what would be classified as CECRL if used for legal representation purposes. The document itself doesn't need to state the person is a legal representative - that would be determined by its use in a corporate context. Therefore, I'll classify this as CECRL.",
+            "signature": "ErcBCkgIBxABGAIiQNnWTkQ4FDEID3q1eUQ1TTFZtuLvHFggZk/MSQYQW4mamP+XdkH/dwJZtV/UllRAt5GBHX97MxT0xO/A2icB2m4SDKYDjADPBtK1Uo1/GxoMM9y3pCvtYCz/qQ5OIjCOoZjYPRIAfwddAMG5bHDthRHBXe7eKpWliV6QW8KM6uB9nLnvzK4IuaBVWyFz9+AqHcdEygjYMHhQYQJ8OjSa/si3ToKHyWUPNv9RVcxKGAI="
+          },
+          {
+            "type": "text",
+            "text": "```json { \"category\": \"CECRL\", \"text\": \"REPUBLICA DE COLOMBIA\\nIDENTIFICACION PERSONAL\\nCEDULA DE CIUDADANIA\\nNUMERO 72.252.799\\nQUIÑONES MORALES\\nAPELLIDOS\\nALFONSO ANGEL\\nNOMBRES\\nFIRMA\\nFECHA DE NACIMIENTO 16-JUN-1979\\nSANTO TOMAS\\n(ATLANTICO)\\nLUGAR DE NACIMIENTO\\n1.83\\nESTATURA\\nA+\\nG.S. RH\\nM\\nSEXO\\n23-NOV-1998 BARRANQUILLA\\nFECHA Y LUGAR DE EXPEDICION\\nREGISTRADOR NACIONAL\\nCARLOS ABEL SANCHEZ TORRES\\nINDICE DERECHO\\nA-0300100-00126242-M-0072252799-20081109 0005637043A 3370018951\" } ```"
+          }
+        ],
+        "stop_reason": "end_turn",
+        "stop_sequence": null,
+        "usage": {
+          "input_tokens": 9,
+          "cache_creation_input_tokens": 4475,
+          "cache_read_input_tokens": 0,
+          "output_tokens": 1825
+        }
+      },
+      "model_id": "us.anthropic.claude-3-7-sonnet-20250219-v1:0",
+      "api_used": "invoke_model",
+      "model_params": {
+        "max_tokens": 8000,
+        "top_p": 1,
+        "temperature": 1,
+        "thinking": {
+          "type": "enabled",
+          "budget_tokens": 4096
+        }
+      }
+    },
+    "expected_category": "CECRL",
+    "model_used": "us.anthropic.claude-3-7-sonnet-20250219-v1:0",
+    "api_used": "invoke_model",
+    "pdf_info": {
+      "original_size": 107312,
+      "first_page_size": 102352,
+      "is_scanned": true
+    }
+  },
+  "extraction_result": {
+    "extraction_data": {
+      "path": "CECRL/72252799/cedula_alfonso_quinones.pdf",
+      "result": {
+        "firstName": "ALFONSO ANGEL",
+        "lastName": "QUIÑONES MORALES",
+        "country_issuer": "Colombia",
+        "nationality": "Colombia",
+        "identificationType": "Cédula de Ciudadanía",
+        "identificationNumber": "72.252.799",
+        "message": ""
+      },
+      "document_type": "person",
+      "documentNumber": "72252799",
+      "category": "CECRL"
+    },
+    "raw_response": {
+      "output": {
+        "message": {
+          "content": [
+            {
+              "text": "```json { \"result\": { \"firstName\": \"ALFONSO ANGEL\", \"lastName\": \"QUIÑONES MORALES\", \"country_issuer\": \"Colombia\", \"nationality\": \"Colombia\", \"identificationType\": \"Cédula de Ciudadanía\", \"identificationNumber\": \"72.252.799\", \"message\": \"\" }, \"document_type\": \"person\", \"category\": \"CECRL\" } ```"
+            }
+          ]
+        }
+      },
+      "stopReason": "end_turn",
+      "usage": {
+        "input_tokens": 10,
+        "cache_creation_input_tokens": 5982,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 673
+      },
+      "ResponseMetadata": {
+        "RequestId": "303b1d34-7362-433b-a529-05d78d78d024",
+        "HTTPStatusCode": 200,
+        "HTTPHeaders": {
+          "date": "Thu, 28 Aug 2025 15:38:11 GMT",
+          "content-type": "application/json",
+          "content-length": "2924",
+          "connection": "keep-alive",
+          "x-amzn-requestid": "303b1d34-7362-433b-a529-05d78d78d024",
+          "x-amzn-bedrock-invocation-latency": "16065",
+          "x-amzn-bedrock-cache-write-input-token-count": "5982",
+          "x-amzn-bedrock-cache-read-input-token-count": "0",
+          "x-amzn-bedrock-output-token-count": "673",
+          "x-amzn-bedrock-input-token-count": "10"
+        },
+        "RetryAttempts": 0
+      },
+      "raw_anthropic_response": {
+        "id": "msg_bdrk_011ZXQcWsRM96tiy5UZsdCBY",
+        "type": "message",
+        "role": "assistant",
+        "model": "claude-3-7-sonnet-20250219",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "I need to extract information from the provided Colombian ID document (Cédula de Ciudadanía) following the specified schema and extraction methodology. Let me analyze the document carefully: ### Document Analysis - This is clearly a Colombian national ID card (\"Cédula de Ciudadanía\") - The document has text in Spanish - It appears to be an official government-issued document with proper headers and formatting ### Information Extraction from the Document First side of the ID card: - Header: \"REPUBLICA DE COLOMBIA\" - Document type: \"IDENTIFICACION PERSONAL\" / \"CEDULA DE CIUDADANIA\" - Number: \"72.252.799\" - Surnames (APELLIDOS): \"QUIÑONES MORALES\" - Names (NOMBRES): \"ALFONSO ANGEL\" - There's a signature and photo Second side of the ID card: - Birth date (FECHA DE NACIMIENTO): \"16-JUN-1979\" - Birth place (LUGAR DE NACIMIENTO): \"SANTO TOMAS (ATLANTICO)\" - Height (ESTATURA): \"1.83\" - Blood type (G.S. RH): \"A+\" - Sex (SEXO): \"M\" (Male) - Issue date and place (FECHA Y LUGAR DE EXPEDICION): \"23-NOV-1998 BARRANQUILLA\" - Fingerprint and barcode information ### Mapping to Required Schema 1. firstName: \"ALFONSO ANGEL\" - Extracted from \"NOMBRES\" field 2. lastName: \"QUIÑONES MORALES\" - Extracted from \"APELLIDOS\" field 3. country_issuer: \"Colombia\" - The document header clearly states \"REPUBLICA DE COLOMBIA\" 4. nationality: \"Colombia\" - Colombian national ID implies Colombian nationality - Birth place is in Colombia (Santo Tomas, Atlántico) 5. identificationType: \"Cédula de Ciudadanía\" - Document explicitly states \"CEDULA DE CIUDADANIA\" 6. identificationNumber: \"72.252.799\" - Clearly labeled as \"NUMERO\" on the document 7. message: \"\" - No issues with extraction, document is clearly a valid official ID Now let me prepare the JSON response following the required schema:",
+            "signature": "ErcBCkgIBxABGAIiQDkXnVjUsCsJTorPqEOt2Xijd++skQA0ODSOOj2q/A97hg+Wq1Y/pJcvHUwz2iah2jaM1cpnNJSEG8vrZ0uNVi4SDFDc6czh+82t6d6N7xoMobs+NKuXyHPIMA4BIjBxE4bSMkpcnuzgVyTNhmkG/asbAXjrzLsVaAtdMknmE1SKnr5Jz/U8thxH6jnqDPAqHSYWPn2kdE58ozS19cUiD9RqofD6R9OujKNYhcahGAI="
+          },
+          {
+            "type": "text",
+            "text": "```json { \"result\": { \"firstName\": \"ALFONSO ANGEL\", \"lastName\": \"QUIÑONES MORALES\", \"country_issuer\": \"Colombia\", \"nationality\": \"Colombia\", \"identificationType\": \"Cédula de Ciudadanía\", \"identificationNumber\": \"72.252.799\", \"message\": \"\" }, \"document_type\": \"person\", \"category\": \"CECRL\" } ```"
+          }
+        ],
+        "stop_reason": "end_turn",
+        "stop_sequence": null,
+        "usage": {
+          "input_tokens": 10,
+          "cache_creation_input_tokens": 5982,
+          "cache_read_input_tokens": 0,
+          "output_tokens": 673
+        }
+      },
+      "model_id": "us.anthropic.claude-3-7-sonnet-20250219-v1:0",
+      "api_used": "invoke_model",
+      "model_params": {
+        "max_tokens": 8000,
+        "top_p": 1,
+        "temperature": 1,
+        "thinking": {
+          "type": "enabled",
+          "budget_tokens": 4096
+        }
+      }
+    },
+    "model_used": "us.anthropic.claude-3-7-sonnet-20250219-v1:0",
+    "api_used": "invoke_model"
+  }
+}

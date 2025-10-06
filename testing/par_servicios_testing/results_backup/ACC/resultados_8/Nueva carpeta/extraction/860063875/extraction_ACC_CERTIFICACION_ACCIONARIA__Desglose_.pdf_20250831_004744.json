@@ -1,0 +1,128 @@
+{
+  "extraction_data": {
+    "result": {
+      "companyName": "ENEL COLOMBIA S.A. ESP",
+      "documentCategory": "Equity Composition",
+      "taxId": "860.063.875-8",
+      "country": "Colombia",
+      "identificationDetails": {
+        "source": "text_reference",
+        "indicators": [
+          "Bogotá",
+          "Colombia"
+        ],
+        "conflictingSources": [
+          "Missing identification details for entity: OTROS ACCIONISTAS MINORITARIOS"
+        ],
+        "requiresReview": "true"
+      },
+      "relatedParties": [
+        {
+          "type": "company",
+          "companyName": "ENEL AMERICAS S.A.",
+          "identificationType": "NIT",
+          "identificationNumber": "900.283.352-6",
+          "relationshipType": "Shareholder",
+          "participationPercentage": "57.345",
+          "timeFound": "1",
+          "job": ""
+        },
+        {
+          "type": "company",
+          "companyName": "GRUPO ENERGÍA BOGOTÁ S.A. E.S.P.",
+          "identificationType": "NIT",
+          "identificationNumber": "899.999.082-3",
+          "relationshipType": "Shareholder",
+          "participationPercentage": "42.515",
+          "timeFound": "1",
+          "job": ""
+        },
+        {
+          "type": "company",
+          "companyName": "OTROS ACCIONISTAS MINORITARIOS",
+          "identificationType": "POR REVISAR",
+          "identificationNumber": "POR REVISAR",
+          "relationshipType": "Shareholder",
+          "participationPercentage": "0.140",
+          "timeFound": "1",
+          "job": ""
+        }
+      ]
+    },
+    "documentType": "company",
+    "category": "ACC"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "{ \"result\": { \"companyName\": \"ENEL COLOMBIA S.A. ESP\", \"documentCategory\": \"Equity Composition\", \"taxId\": \"860.063.875-8\", \"country\": \"Colombia\", \"identificationDetails\": { \"source\": \"text_reference\", \"indicators\": [ \"Bogotá\", \"Colombia\" ], \"conflictingSources\": [\"Missing identification details for entity: OTROS ACCIONISTAS MINORITARIOS\"], \"requiresReview\": \"true\" }, \"relatedParties\": [ { \"type\": \"company\", \"companyName\": \"ENEL AMERICAS S.A.\", \"identificationType\": \"NIT\", \"identificationNumber\": \"900.283.352-6\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"57.345\", \"timeFound\": \"1\", \"job\": \"\" }, { \"type\": \"company\", \"companyName\": \"GRUPO ENERGÍA BOGOTÁ S.A. E.S.P.\", \"identificationType\": \"NIT\", \"identificationNumber\": \"899.999.082-3\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"42.515\", \"timeFound\": \"1\", \"job\": \"\" }, { \"type\": \"company\", \"companyName\": \"OTROS ACCIONISTAS MINORITARIOS\", \"identificationType\": \"POR REVISAR\", \"identificationNumber\": \"POR REVISAR\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"0.140\", \"timeFound\": \"1\", \"job\": \"\" } ] }, \"documentType\": \"company\", \"category\": \"ACC\" }"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 9,
+      "cache_creation_input_tokens": 8445,
+      "cache_read_input_tokens": 0,
+      "output_tokens": 1206
+    },
+    "ResponseMetadata": {
+      "RequestId": "1e238e30-dada-49d1-9b9f-dd688daaf730",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Sun, 31 Aug 2025 05:47:44 GMT",
+        "content-type": "application/json",
+        "content-length": "7728",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "1e238e30-dada-49d1-9b9f-dd688daaf730",
+        "x-amzn-bedrock-invocation-latency": "16940",
+        "x-amzn-bedrock-cache-write-input-token-count": "8445",
+        "x-amzn-bedrock-cache-read-input-token-count": "0",
+        "x-amzn-bedrock-output-token-count": "1206",
+        "x-amzn-bedrock-input-token-count": "9"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_01Evj584KDzTRGZhUdBC6E3s",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-sonnet-4-20250514",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Let me analyze this document step by step according to the rules provided. **Step 1: Document Analysis** - This is a \"CERTIFICACIÓN DE COMPOSICIÓN ACCIONARIA\" (Equity Composition Certificate) - The main reporting company is ENEL COLOMBIA S.A. ESP - The document contains shareholders/participants with equity participation details - The document is in Spanish and appears to be from Colombia **Step 2: Root Level Extraction** **companyName**: From the document header and content, I can see \"ENEL COLOMBIA S.A. ESP\" - this is the issuing company, not its shareholders. **taxId**: I can see \"NIT. 860.063.875-6\" in the header and \"NIT. 860.063.875-8\" in the content. There's a discrepancy here - the header shows -6 but the certification content shows -8. I'll use the one from the certification content as it's more official: \"860.063.875-8\" **country**: The document explicitly mentions \"Bogotá, Colombia\" multiple times, so this is clearly Colombia. **identificationDetails**: - source: \"text_reference\" (explicit country references) - indicators: [\"Bogotá\", \"Colombia\"] - conflictingSources: I see a potential issue with the NIT discrepancy between header (-6) and content (-8), but I'll focus on other conflicts - requiresReview: Need to check if there are any issues **Step 3: Related Parties Processing** Looking at the equity composition table, I can see: 1. **ENEL AMERICAS S.A.** - Type: company (has S.A. marker) - NIT: 900.283.352-6 - Shares: 85.394.808 - Participation: 57,345% 2. **GRUPO ENERGÍA BOGOTÁ S.A. E.S.P.** - Type: company (has S.A. E.S.P. markers) - NIT: 899.999.082-3 - Shares: 63.311.437 - Participation: 42,515% 3. **OTROS ACCIONISTAS MINORITARIOS** - Type: company (treating as collective entity) - No specific NIT provided - Shares: 207.917 - Participation: 0,140% I'll verify the total participation percentages. The main shareholders show 57.345% and 42.515%, with a minor shareholder at 0.140%. This totals 99.999%, which is extremely close to 100%, suggesting a comprehensive ownership breakdown. The document provides a clear snapshot of ENEL COLOMBIA's equity composition, highlighting two primary shareholders with significant stakes and a minimal presence of minority shareholders.",
+          "signature": "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"
+        },
+        {
+          "type": "text",
+          "text": "{ \"result\": { \"companyName\": \"ENEL COLOMBIA S.A. ESP\", \"documentCategory\": \"Equity Composition\", \"taxId\": \"860.063.875-8\", \"country\": \"Colombia\", \"identificationDetails\": { \"source\": \"text_reference\", \"indicators\": [ \"Bogotá\", \"Colombia\" ], \"conflictingSources\": [\"Missing identification details for entity: OTROS ACCIONISTAS MINORITARIOS\"], \"requiresReview\": \"true\" }, \"relatedParties\": [ { \"type\": \"company\", \"companyName\": \"ENEL AMERICAS S.A.\", \"identificationType\": \"NIT\", \"identificationNumber\": \"900.283.352-6\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"57.345\", \"timeFound\": \"1\", \"job\": \"\" }, { \"type\": \"company\", \"companyName\": \"GRUPO ENERGÍA BOGOTÁ S.A. E.S.P.\", \"identificationType\": \"NIT\", \"identificationNumber\": \"899.999.082-3\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"42.515\", \"timeFound\": \"1\", \"job\": \"\" }, { \"type\": \"company\", \"companyName\": \"OTROS ACCIONISTAS MINORITARIOS\", \"identificationType\": \"POR REVISAR\", \"identificationNumber\": \"POR REVISAR\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"0.140\", \"timeFound\": \"1\", \"job\": \"\" } ] }, \"documentType\": \"company\", \"category\": \"ACC\" }"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 9,
+        "cache_creation_input_tokens": 8445,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 1206
+      }
+    },
+    "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 8000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+  "api_used": "invoke_model"
+}

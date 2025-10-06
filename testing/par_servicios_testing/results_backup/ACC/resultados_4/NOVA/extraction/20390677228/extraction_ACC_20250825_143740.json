@@ -1,0 +1,93 @@
+{
+  "extraction_data": {
+    "path": "ACC/20390677228/228_CA_2020-02-29.pdf",
+    "result": {
+      "companyName": "APROGA S.A.C.",
+      "documentType": "Equity Composition",
+      "taxId": "20390677228",
+      "country": "Peru",
+      "identificationDetails": {
+        "source": "text_reference",
+        "indicators": [
+          "Lima",
+          "Peru"
+        ],
+        "conflictingSources": [],
+        "requiresReview": false
+      },
+      "relatedParties": [
+        {
+          "firstName": "Ticiano Muñoz",
+          "lastName": "Sanchez",
+          "identificationType": "DNI",
+          "identificationNumber": "09163077",
+          "relationshipType": "Shareholder",
+          "participationPercentage": "100%",
+          "timeFound": 1,
+          "job": "Presidente y Secretario"
+        },
+        {
+          "firstName": "Chano Muñoz",
+          "lastName": "Llontop",
+          "identificationType": "DNI",
+          "identificationNumber": "70008642",
+          "relationshipType": "Shareholder",
+          "participationPercentage": "POR REVISAR",
+          "timeFound": 1,
+          "job": ""
+        }
+      ]
+    },
+    "document_type": "company",
+    "document_number": "20390677228",
+    "category": "ACC",
+    "confidenceScores": {
+      "companyName": 70,
+      "taxId": 90,
+      "country": 95,
+      "relatedParties": 90
+    }
+  },
+  "raw_response": {
+    "ResponseMetadata": {
+      "RequestId": "208019f1-d553-4ede-8ecb-960afb8ef7ba",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Mon, 25 Aug 2025 19:37:40 GMT",
+        "content-type": "application/json",
+        "content-length": "1630",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "208019f1-d553-4ede-8ecb-960afb8ef7ba"
+      },
+      "RetryAttempts": 0
+    },
+    "output": {
+      "message": {
+        "role": "assistant",
+        "content": [
+          {
+            "text": "```json { \"path\": \"ACC/20390677228/228_CA_2020-02-29.pdf\", \"result\": { \"companyName\": \"APROGA S.A.C.\", \"documentType\": \"Equity Composition\", \"taxId\": \"20390677228\", \"country\": \"Peru\", \"identificationDetails\": { \"source\": \"text_reference\", \"indicators\": [ \"Lima\", \"Peru\" ], \"conflictingSources\": [], \"requiresReview\": false }, \"relatedParties\": [ { \"firstName\": \"Ticiano Mu\\u00f1oz\", \"lastName\": \"Sanchez\", \"identificationType\": \"DNI\", \"identificationNumber\": \"09163077\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"100%\", \"timeFound\": 1, \"job\": \"Presidente y Secretario\" }, { \"firstName\": \"Chano Mu\\u00f1oz\", \"lastName\": \"Llontop\", \"identificationType\": \"DNI\", \"identificationNumber\": \"70008642\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"POR REVISAR\", \"timeFound\": 1, \"job\": \"\" } ] }, \"document_type\": \"company\", \"document_number\": \"20390677228\", \"category\": \"ACC\", \"confidenceScores\": { \"companyName\": 70, \"taxId\": 90, \"country\": 95, \"relatedParties\": 90 } } ```"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "inputTokens": 24383,
+      "outputTokens": 411,
+      "totalTokens": 24794
+    },
+    "metrics": {
+      "latencyMs": 15841
+    },
+    "model_id": "us.amazon.nova-pro-v1:0",
+    "api_used": "converse",
+    "model_params": {
+      "maxTokens": 8000,
+      "topP": 1,
+      "temperature": 0
+    }
+  },
+  "model_used": "us.amazon.nova-pro-v1:0",
+  "api_used": "converse"
+}

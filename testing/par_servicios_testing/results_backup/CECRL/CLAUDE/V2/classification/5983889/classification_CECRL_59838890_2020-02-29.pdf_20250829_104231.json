@@ -1,0 +1,87 @@
+{
+  "classification_data": {
+    "category": "CECRL",
+    "text": "REPÚBLICA DE COLOMBIA IDENTIFICACIÓN PERSONAL CÉDULA DE CIUDADANÍA NÚMERO 59589391 CORTÉS ARIAS APELLIDOS LUIS HERNANDO NOMBRES FIRMA FECHA DE NACIMIENTO 18-MAY-1956 PURIFICACIÓN (TOLIMA) LUGAR DE NACIMIENTO 1.56 O+ M ESTATURA G.S RH SEXO 17-ENE-1976 PURIFICACIÓN FECHA Y LUGAR DE EXPEDICIÓN REGISTRADURÍA NACIONAL",
+    "document_number": "5983889",
+    "path": "CECRL/5983889/59838890_2020-02-29.pdf"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "```json { \"category\": \"CECRL\", \"text\": \"REPÚBLICA DE COLOMBIA IDENTIFICACIÓN PERSONAL CÉDULA DE CIUDADANÍA NÚMERO 59589391 CORTÉS ARIAS APELLIDOS LUIS HERNANDO NOMBRES FIRMA FECHA DE NACIMIENTO 18-MAY-1956 PURIFICACIÓN (TOLIMA) LUGAR DE NACIMIENTO 1.56 O+ M ESTATURA G.S RH SEXO 17-ENE-1976 PURIFICACIÓN FECHA Y LUGAR DE EXPEDICIÓN REGISTRADURÍA NACIONAL\" } ```"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 9,
+      "cache_creation_input_tokens": 4549,
+      "cache_read_input_tokens": 0,
+      "output_tokens": 947
+    },
+    "ResponseMetadata": {
+      "RequestId": "b8aa47e7-098c-4ac4-88ae-a3ea6b7fbde6",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Fri, 29 Aug 2025 15:42:16 GMT",
+        "content-type": "application/json",
+        "content-length": "6574",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "b8aa47e7-098c-4ac4-88ae-a3ea6b7fbde6",
+        "x-amzn-bedrock-invocation-latency": "17738",
+        "x-amzn-bedrock-cache-write-input-token-count": "4549",
+        "x-amzn-bedrock-cache-read-input-token-count": "0",
+        "x-amzn-bedrock-output-token-count": "947",
+        "x-amzn-bedrock-input-token-count": "9"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_01Q1MT3xSwHofVS973mE85yM",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-sonnet-4-20250514",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Let me analyze this document step by step: 1. **TEXT EXTRACTION** Looking at this Colombian identification document, I can see: - \"REPÚBLICA DE COLOMBIA\" at the top - \"IDENTIFICACIÓN PERSONAL\" - \"CÉDULA DE CIUDADANÍA\" - Number appears to be \"59589391\" - Names: \"CORTÉS ARIAS\" and \"LUIS HERNANDO\" - A signature and photograph section - Below that, there's information including: - \"FECHA DE NACIMIENTO: 18-MAY-1956\" - \"PURIFICACIÓN\" (appears to be place) - \"(TOLIMA)\" (department) - \"LUGAR DE NACIMIENTO\" - \"1.56\" (appears to be height) - \"O+\" (blood type) - \"M\" (gender - male) - \"ESTATURA\", \"G.S. RH\", \"SEXO\" - \"17-ENE-1976 PURIFICACIÓN\" - \"FECHA Y LUGAR DE EXPEDICIÓN\" - There's also a fingerprint image - A barcode at the bottom 2. **PRIORITY CHECKS** This is clearly not BLANK or LINK_ONLY - it has substantial meaningful content. 3. **ISSUER IDENTIFICATION** This appears to be issued by the Colombian government identification authority, not DIAN (no DIAN logo or structure) and not Chamber of Commerce. 4. **DOCUMENT FUNCTION ANALYSIS** This is clearly a personal identification document - a Colombian Cédula de Ciudadanía (national ID card). It contains: - Personal biographical data (birth date, birth place) - Physical characteristics (height, blood type, gender) - Individual photo and signature areas - Individual ID number with personal names - Security elements (fingerprint, barcode, official format) 5. **CATEGORY CLASSIFICATION** This matches CECRL perfectly: - Individual identification terminology: \"IDENTIFICACIÓN PERSONAL\", \"CÉDULA DE CIUDADANÍA\" - Comprehensive personal details confirm official identification document - Unique identifiers and physical characteristics validate its authenticity - Government-issued format with multiple security features - Precise biographical information from Colombian national registry The document provides definitive proof of individual identity through systematic verification elements.",
+          "signature": "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"
+        },
+        {
+          "type": "text",
+          "text": "```json { \"category\": \"CECRL\", \"text\": \"REPÚBLICA DE COLOMBIA IDENTIFICACIÓN PERSONAL CÉDULA DE CIUDADANÍA NÚMERO 59589391 CORTÉS ARIAS APELLIDOS LUIS HERNANDO NOMBRES FIRMA FECHA DE NACIMIENTO 18-MAY-1956 PURIFICACIÓN (TOLIMA) LUGAR DE NACIMIENTO 1.56 O+ M ESTATURA G.S RH SEXO 17-ENE-1976 PURIFICACIÓN FECHA Y LUGAR DE EXPEDICIÓN REGISTRADURÍA NACIONAL\" } ```"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 9,
+        "cache_creation_input_tokens": 4549,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 947
+      }
+    },
+    "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 8000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "expected_category": "CECRL",
+  "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+  "api_used": "invoke_model",
+  "pdf_info": {
+    "original_size": 126810,
+    "first_page_size": 125227,
+    "is_scanned": true
+  }
+}

@@ -1,0 +1,88 @@
+{
+  "extraction_data": {
+    "result": {
+      "firstName": "PUBLIO ROBERTO",
+      "lastName": "SIERRA",
+      "country_issuer": "Colombia",
+      "nationality": "Colombia",
+      "identificationType": "Cédula de Ciudadanía",
+      "identificationNumber": "1.174.043",
+      "message": ""
+    },
+    "document_type": "person",
+    "category": "CECRL"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "```json { \"result\": { \"firstName\": \"PUBLIO ROBERTO\", \"lastName\": \"SIERRA\", \"country_issuer\": \"Colombia\", \"nationality\": \"Colombia\", \"identificationType\": \"Cédula de Ciudadanía\", \"identificationNumber\": \"1.174.043\", \"message\": \"\" }, \"document_type\": \"person\", \"category\": \"CECRL\" } ```"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 10,
+      "cache_creation_input_tokens": 5982,
+      "cache_read_input_tokens": 0,
+      "output_tokens": 514
+    },
+    "ResponseMetadata": {
+      "RequestId": "751bf24d-f778-4940-a7f5-57680c97c212",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Fri, 29 Aug 2025 15:58:37 GMT",
+        "content-type": "application/json",
+        "content-length": "4322",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "751bf24d-f778-4940-a7f5-57680c97c212",
+        "x-amzn-bedrock-invocation-latency": "8702",
+        "x-amzn-bedrock-cache-write-input-token-count": "5982",
+        "x-amzn-bedrock-cache-read-input-token-count": "0",
+        "x-amzn-bedrock-output-token-count": "514",
+        "x-amzn-bedrock-input-token-count": "10"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_01JmkprM4PGJ3Cta1MaGqRaU",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-sonnet-4-20250514",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Let me analyze this Colombian identification document carefully. Looking at the document, I can see: 1. Header: \"REPUBLICA DE COLOMBIA\" - This indicates it's issued by Colombia 2. \"IDENTIFICACION PERSONAL\" and \"CEDULA DE CIUDADANIA\" - This indicates it's a Colombian citizenship card (Cédula de Ciudadanía) 3. Number: \"1.174.043\" appears to be the identification number 4. I can see \"SIERRA\" which appears to be a surname 5. \"PUBLIO ROBERTO\" appears to be the given names 6. Birth information shows \"11-OCT-1965\" and \"CHIQUINQUIRA (BOYACA)\" as place of birth 7. There are other details like height (1.71), blood type (O+), sex (M) Let me extract the information systematically: 1. firstName: \"PUBLIO ROBERTO\" - these appear to be the given names 2. lastName: \"SIERRA\" - this appears to be the surname 3. country_issuer: \"Colombia\" - clearly stated as \"REPUBLICA DE COLOMBIA\" 4. nationality: \"Colombia\" - since this is a Colombian citizenship card and place of birth is in Colombia (Chiquinquira, Boyacá), nationality would be Colombian 5. identificationType: \"Cédula de Ciudadanía\" - clearly stated on the document 6. identificationNumber: \"1.174.043\" - this appears to be the ID number with the formatting as shown 7. message: The document appears to be a legitimate official Colombian ID, so no issues to report The document appears to be official with proper seals, formatting, and government headers.",
+          "signature": "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"
+        },
+        {
+          "type": "text",
+          "text": "```json { \"result\": { \"firstName\": \"PUBLIO ROBERTO\", \"lastName\": \"SIERRA\", \"country_issuer\": \"Colombia\", \"nationality\": \"Colombia\", \"identificationType\": \"Cédula de Ciudadanía\", \"identificationNumber\": \"1.174.043\", \"message\": \"\" }, \"document_type\": \"person\", \"category\": \"CECRL\" } ```"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 10,
+        "cache_creation_input_tokens": 5982,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 514
+      }
+    },
+    "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 8000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+  "api_used": "invoke_model"
+}

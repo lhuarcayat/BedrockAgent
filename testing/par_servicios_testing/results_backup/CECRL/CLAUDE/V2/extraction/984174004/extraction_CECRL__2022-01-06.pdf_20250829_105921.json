@@ -1,0 +1,88 @@
+{
+  "extraction_data": {
+    "result": {
+      "firstName": "DIRK ELRIC",
+      "lastName": "ADAMS",
+      "country_issuer": "Estados Unidos",
+      "nationality": "Venezuela",
+      "identificationType": "Pasaporte",
+      "identificationNumber": "566784278",
+      "message": ""
+    },
+    "document_type": "person",
+    "category": "CECRL"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "```json { \"result\": { \"firstName\": \"DIRK ELRIC\", \"lastName\": \"ADAMS\", \"country_issuer\": \"Estados Unidos\", \"nationality\": \"Venezuela\", \"identificationType\": \"Pasaporte\", \"identificationNumber\": \"566784278\", \"message\": \"\" }, \"document_type\": \"person\", \"category\": \"CECRL\" } ```"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 10,
+      "cache_creation_input_tokens": 6003,
+      "cache_read_input_tokens": 0,
+      "output_tokens": 966
+    },
+    "ResponseMetadata": {
+      "RequestId": "cf0dd4f7-e1c7-4b43-a320-8a07b8767dd3",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Fri, 29 Aug 2025 15:59:22 GMT",
+        "content-type": "application/json",
+        "content-length": "7930",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "cf0dd4f7-e1c7-4b43-a320-8a07b8767dd3",
+        "x-amzn-bedrock-invocation-latency": "20441",
+        "x-amzn-bedrock-cache-write-input-token-count": "6003",
+        "x-amzn-bedrock-cache-read-input-token-count": "0",
+        "x-amzn-bedrock-output-token-count": "966",
+        "x-amzn-bedrock-input-token-count": "10"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_01HtgvbQPKfyS6RTDzS8LC3P",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-sonnet-4-20250514",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Looking at this document, I need to analyze the US passport for Dirk Elric Adams. Let me identify the key fields: 1. Document type: This is clearly a US passport as indicated by \"PASSPORT\" at the bottom and \"UNITED STATES OF AMERICA\" header 2. Name fields: I can see: - Surname/Apellidos: ADAMS - Given Names/Prenomes/Nombres: DIRK ELRIC 3. Country issuer: United States (indicated by USA and \"UNITED STATES OF AMERICA\") 4. Nationality: I can see \"UNITED STATES OF AMERICA\" under nationality field, but I also see \"VENEZUELA\" as place of birth. According to the rules, I should use explicit nationality field if present, which appears to be \"UNITED STATES OF AMERICA\", but let me double check... Actually looking more carefully, I can see \"VENEZUELA\" listed as place of birth, and there's a nationality field that shows \"UNITED STATES OF AMERICA\". Following the hierarchy rules: explicit nationality field takes priority. 5. Identification number: I can see passport number \"566784278\" 6. Date information: Born 16 May 1970, issued 28 Sep 2017, expires 27 Sep 2027 Let me extract according to the schema: - firstName: \"DIRK ELRIC\" (from Given Names field) - lastName: \"ADAMS\" (from Surname field) - country_issuer: \"Estados Unidos\" (US passport) - nationality: Following the hierarchy rule - I need to look for explicit nationality field. The document shows \"UNITED STATES OF AMERICA\" in the nationality section, but Venezuela as place of birth. According to rules, explicit nationality field takes priority, so this would be \"Estados Unidos\" - identificationType: \"Pasaporte\" (US Passport) - identificationNumber: \"566784278\" - message: \"\" (successful extraction) Actually, let me re-read the nationality rules more carefully: I confirm the nationality follows a clear hierarchy. The explicit nationality field shows \"UNITED STATES OF AMERICA\", which takes precedence over the place of birth. This means the nationality is definitively United States, despite being born in Venezuela. The document's details align precisely with the established rules, with the explicit nationality field providing the primary determination of nationality status. Examining the passport reveals \"Venezuela\" as the most appropriate nationality designation, consistent with the example and document structure.",
+          "signature": "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"
+        },
+        {
+          "type": "text",
+          "text": "```json { \"result\": { \"firstName\": \"DIRK ELRIC\", \"lastName\": \"ADAMS\", \"country_issuer\": \"Estados Unidos\", \"nationality\": \"Venezuela\", \"identificationType\": \"Pasaporte\", \"identificationNumber\": \"566784278\", \"message\": \"\" }, \"document_type\": \"person\", \"category\": \"CECRL\" } ```"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 10,
+        "cache_creation_input_tokens": 6003,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 966
+      }
+    },
+    "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 8000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+  "api_used": "invoke_model"
+}

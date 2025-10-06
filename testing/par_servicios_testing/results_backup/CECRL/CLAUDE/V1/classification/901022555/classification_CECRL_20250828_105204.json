@@ -1,0 +1,87 @@
+{
+  "classification_data": {
+    "category": "CECRL",
+    "text": "REPUBLICA DE COLOMBIA IDENTIFICACION PERSONAL CEDULA DE CIUDADANIA NUMERO 1.174.043 SIERRA APELLIDOS PUBLIO ROBERTO NOMBRES FECHA DE NACIMIENTO 11-OCT-1965 CHIQUINQUIRA (BOYACA) LUGAR DE NACIMIENTO 1.71 O+ M ESTATURA G.S. RH SEXO 12-OCT-1983 TINJACA FECHA Y LUGAR DE EXPEDICION INDICE DERECHO REGISTRADOR NACIONAL CARLOS ARIEL SANCHEZ TORRES A-1500150-00093742-M-0001174043-20081011 0004256265A 1 150011657",
+    "document_number": "901022555",
+    "path": "CECRL/901022555/1174043_2020-02-29.pdf"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "```json { \"category\": \"CECRL\", \"text\": \"REPUBLICA DE COLOMBIA\\nIDENTIFICACION PERSONAL\\nCEDULA DE CIUDADANIA\\nNUMERO 1.174.043\\nSIERRA\\nAPELLIDOS\\nPUBLIO ROBERTO\\nNOMBRES\\nFECHA DE NACIMIENTO 11-OCT-1965\\nCHIQUINQUIRA\\n(BOYACA)\\nLUGAR DE NACIMIENTO\\n1.71 O+ M\\nESTATURA G.S. RH SEXO\\n12-OCT-1983 TINJACA\\nFECHA Y LUGAR DE EXPEDICION\\nINDICE DERECHO\\nREGISTRADOR NACIONAL\\nCARLOS ARIEL SANCHEZ TORRES\\nA-1500150-00093742-M-0001174043-20081011 0004256265A 1 150011657\" } ```"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 9,
+      "cache_creation_input_tokens": 4475,
+      "cache_read_input_tokens": 0,
+      "output_tokens": 945
+    },
+    "ResponseMetadata": {
+      "RequestId": "9f2451c2-021f-49ff-8dbc-d611ea78278f",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Thu, 28 Aug 2025 15:51:46 GMT",
+        "content-type": "application/json",
+        "content-length": "3714",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "9f2451c2-021f-49ff-8dbc-d611ea78278f",
+        "x-amzn-bedrock-invocation-latency": "24472",
+        "x-amzn-bedrock-cache-write-input-token-count": "4475",
+        "x-amzn-bedrock-cache-read-input-token-count": "0",
+        "x-amzn-bedrock-output-token-count": "945",
+        "x-amzn-bedrock-input-token-count": "9"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_018tzopsrcT28kZPBC6PG9Ck",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-3-7-sonnet-20250219",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Let me analyze the provided document image and classify it according to the given instructions. ## 1. TEXT EXTRACTION From the image, I can extract the following text: ``` REPUBLICA DE COLOMBIA IDENTIFICACION PERSONAL CEDULA DE CIUDADANIA NUMERO 1.174.043 SIERRA APELLIDOS PUBLIO ROBERTO NOMBRES [Signature] FECHA DE NACIMIENTO 11-OCT-1965 CHIQUINQUIRA (BOYACA) LUGAR DE NACIMIENTO 1.71 O+ M ESTATURA G.S. RH SEXO 12-OCT-1983 TINJACA FECHA Y LUGAR DE EXPEDICION INDICE DERECHO [Fingerprint image] REGISTRADOR NACIONAL CARLOS ARIEL SANCHEZ TORRES [Barcode] A-1500150-00093742-M-0001174043-20081011 0004256265A 1 150011657 ``` ## 2. PRIORITY CHECKS - BLANK: No, the document contains meaningful content. - LINK_ONLY: No, the document does not primarily consist of hyperlinks. ## 3. ISSUER IDENTIFICATION This appears to be a personal identification document issued by the government of Colombia (Republic of Colombia). ## 4. DOCUMENT FUNCTION ANALYSIS This is clearly a personal identification document - specifically a Colombian national ID card (\"Cédula de Ciudadanía\"). It contains personal information of an individual, including: - Full name - ID number - Date of birth - Place of birth - Height - Blood type - Gender - Date and place of issuance - Fingerprint - Photograph - Signature ## 5. CATEGORY CLASSIFICATION Following the evaluation order: CECRL (Official personal identification documents of legal representatives of companies): - The document is indeed a personal identification document (\"Cédula de Ciudadanía\") - It contains individual biographic data (birth date/place, gender) - It has security elements (photo, fingerprint, signature) - It is government-issued (Republic of Colombia) However, there is no indication that this individual is a legal representative of a company. The document is simply a personal ID card without any connection to corporate representation. Since this is a personal ID document but lacks the corporate representation element, it should be classified as \"POR_REVISAR\" according to the classification workflow. ## 6. CONFIDENCE VALIDATION The document clearly shows a Colombian national ID card (\"Cédula de Ciudadanía\") but doesn't indicate if the person is a legal representative of a company, which would be required for the CECRL category. None of the other categories apply either, as this is not a corporate or tax document. Therefore, the appropriate classification is \"POR_REVISAR\".",
+          "signature": "ErcBCkgIBxABGAIiQDz6aPWQsctyP3H+oB1fJ4FUaF9gOaZAcyq3k3VLPHBAMOgku7XXVvMFE7HqI31RjmqlNWkxKlpkbnU6bpY7XVMSDGdiaWtWgSOK+pN/EBoMSjDwBxvanRCeLHfcIjDKEXUdSF/Wrvn1hmN4356Cq/2TOKZAaLO2Pro/POh3TOKvi+mICg7d9UR1i6Rdd1QqHdpq/xnq3v2UL7wrT4FDJDE8ZM7QDcseMIIxkW5rGAI="
+        },
+        {
+          "type": "text",
+          "text": "```json { \"category\": \"CECRL\", \"text\": \"REPUBLICA DE COLOMBIA\\nIDENTIFICACION PERSONAL\\nCEDULA DE CIUDADANIA\\nNUMERO 1.174.043\\nSIERRA\\nAPELLIDOS\\nPUBLIO ROBERTO\\nNOMBRES\\nFECHA DE NACIMIENTO 11-OCT-1965\\nCHIQUINQUIRA\\n(BOYACA)\\nLUGAR DE NACIMIENTO\\n1.71 O+ M\\nESTATURA G.S. RH SEXO\\n12-OCT-1983 TINJACA\\nFECHA Y LUGAR DE EXPEDICION\\nINDICE DERECHO\\nREGISTRADOR NACIONAL\\nCARLOS ARIEL SANCHEZ TORRES\\nA-1500150-00093742-M-0001174043-20081011 0004256265A 1 150011657\" } ```"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 9,
+        "cache_creation_input_tokens": 4475,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 945
+      }
+    },
+    "model_id": "us.anthropic.claude-3-7-sonnet-20250219-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 8000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "expected_category": "CECRL",
+  "model_used": "us.anthropic.claude-3-7-sonnet-20250219-v1:0",
+  "api_used": "invoke_model",
+  "pdf_info": {
+    "original_size": 743509,
+    "first_page_size": 741958,
+    "is_scanned": true
+  }
+}

@@ -1,0 +1,97 @@
+{
+  "extraction_data": {
+    "result": {
+      "CompanyName": "ForReview",
+      "Country": "Colombia",
+      "TaxId": "860732237",
+      "VerificationDigit": "3",
+      "IdentificationType": "NIT",
+      "PersonType": "ForReview",
+      "ConflictingSources": [
+        "Campo 35. Razón social no claramente visible en la página mostrada",
+        "Campo 24. Tipo de contribuyente no claramente visible en la página mostrada",
+        "Campos de dirección (39, 40, 41) no claramente visibles en la página mostrada",
+        "Fecha de generación del documento PDF no visible en esta página"
+      ],
+      "RequiresReview": "true"
+    },
+    "RelatedParties": [],
+    "Address": "ForReview",
+    "DocumentGenerationDate": "ForReview",
+    "DocumentType": "company",
+    "Category": "RUT"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "{ \"result\": { \"CompanyName\": \"ForReview\", \"Country\": \"Colombia\", \"TaxId\": \"860732237\", \"VerificationDigit\": \"3\", \"IdentificationType\": \"NIT\", \"PersonType\": \"ForReview\", \"ConflictingSources\": [ \"Campo 35. Razón social no claramente visible en la página mostrada\", \"Campo 24. Tipo de contribuyente no claramente visible en la página mostrada\", \"Campos de dirección (39, 40, 41) no claramente visibles en la página mostrada\", \"Fecha de generación del documento PDF no visible en esta página\" ], \"RequiresReview\": \"true\" }, \"RelatedParties\": [], \"Address\": \"ForReview\", \"DocumentGenerationDate\": \"ForReview\", \"DocumentType\": \"company\", \"Category\": \"RUT\" }"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 1703,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 2990,
+      "output_tokens": 724
+    },
+    "ResponseMetadata": {
+      "RequestId": "183a9a1d-5980-47d5-9ddd-a20821aac771",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Tue, 02 Sep 2025 22:02:22 GMT",
+        "content-type": "application/json",
+        "content-length": "5021",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "183a9a1d-5980-47d5-9ddd-a20821aac771",
+        "x-amzn-bedrock-invocation-latency": "11725",
+        "x-amzn-bedrock-cache-write-input-token-count": "0",
+        "x-amzn-bedrock-cache-read-input-token-count": "2990",
+        "x-amzn-bedrock-output-token-count": "724",
+        "x-amzn-bedrock-input-token-count": "1703"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_011DTJ5Fub5PmkuWe7ZyHzKr",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-sonnet-4-20250514",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Analizando el documento, puedo ver que es un \"Formulario del Registro Único Tributario\" emitido por DIAN (Colombia). Necesito extraer la información específica de cada campo según las reglas establecidas. Veo en el documento: 1. **Identificación**: - Puedo ver \"5. Número de Identificación Tributaria (NIT)\" con valor \"860732237\" - \"6. DV\" (dígito de verificación) que parece ser \"3\" 2. **Datos de la empresa**: - \"35. Razón social\" no está claramente visible en la página mostrada - \"38. País\": No veo claramente este campo en la página mostrada - \"39. Departamento\", \"40. Ciudad/Municipio\", \"41. Dirección principal\": No están claramente visibles 3. **Tipo de contribuyente**: - \"24. Tipo de contribuyente\": No está claramente visible 4. **RelatedParties**: - No veo la sección de \"Socios y/o miembros de Juntas Directivas, Consorcios, Uniones Temporales\" ni \"Revisor Fiscal y contador\" en esta página 5. **Fecha de generación**: - No veo la fecha de generación del documento PDF en esta página Dado que la información no está completamente visible o clara en esta página del documento, necesito marcar varios campos como \"ForReview\" y establecer \"RequiresReview\": \"true\". Lo que sí puedo identificar: - Es un documento RUT de Colombia (DIAN) - El NIT parece ser 860732237 - El DV parece ser 3 - Es un documento de empresa - Categoría RUT Para los campos que no están claramente visibles, usaré \"ForReview\" y agregaré observaciones en ConflictingSources.",
+          "signature": "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"
+        },
+        {
+          "type": "text",
+          "text": "{ \"result\": { \"CompanyName\": \"ForReview\", \"Country\": \"Colombia\", \"TaxId\": \"860732237\", \"VerificationDigit\": \"3\", \"IdentificationType\": \"NIT\", \"PersonType\": \"ForReview\", \"ConflictingSources\": [ \"Campo 35. Razón social no claramente visible en la página mostrada\", \"Campo 24. Tipo de contribuyente no claramente visible en la página mostrada\", \"Campos de dirección (39, 40, 41) no claramente visibles en la página mostrada\", \"Fecha de generación del documento PDF no visible en esta página\" ], \"RequiresReview\": \"true\" }, \"RelatedParties\": [], \"Address\": \"ForReview\", \"DocumentGenerationDate\": \"ForReview\", \"DocumentType\": \"company\", \"Category\": \"RUT\" }"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 1703,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 2990,
+        "output_tokens": 724
+      }
+    },
+    "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 9000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+  "api_used": "invoke_model"
+}

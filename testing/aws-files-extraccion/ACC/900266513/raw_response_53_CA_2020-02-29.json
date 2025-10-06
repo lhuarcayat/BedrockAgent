@@ -1,0 +1,33 @@
+{
+  "ResponseMetadata": {
+    "RequestId": "49175959-b49c-404c-afd8-bb7f1350ca84",
+    "HTTPStatusCode": 200,
+    "HTTPHeaders": {
+      "date": "Mon, 16 Jun 2025 20:49:20 GMT",
+      "content-type": "application/json",
+      "content-length": "1551",
+      "connection": "keep-alive",
+      "x-amzn-requestid": "49175959-b49c-404c-afd8-bb7f1350ca84"
+    },
+    "RetryAttempts": 0
+  },
+  "output": {
+    "message": {
+      "role": "assistant",
+      "content": [
+        {
+          "text": "```json\n{\n  \"path\": \"s3://par-servicios-poc-dev-filling-desk/par-servicios-poc/ACC/900266513/53_CA_2020-02-29.pdf\",\n  \"result\": {\n    \"companyName\": \"BUSINESS PROCESS MANAGEMENT LATINOAMERICA\",\n    \"documentType\": \"Equity Composition\",\n    \"taxId\": \"900.266.513-3\",\n    \"country\": \"Colombia\",\n    \"identificationDetails\": {\n      \"source\": \"text_reference\",\n      \"indicators\": [\n        \"Bogotá\",\n        \"Colombia\"\n      ],\n      \"requiresReview\": false\n    },\n    \"relatedParties\": [\n      {\n        \"firstName\": \"Mauricio\",\n        \"lastName\": \"Obregon Gutierrez\",\n        \"identificationType\": \"C.C.\",\n        \"identificationNumber\": \"79.425.769\",\n        \"relationshipType\": \"Shareholder\",\n        \"participationPercentage\": \"80.0\",\n        \"timeFound\": 1\n      },\n      {\n        \"firstName\": \"Monica María\",\n        \"lastName\": \"Gutierrez Obregon\",\n        \"identificationType\": \"C.C.\",\n        \"identificationNumber\": \"51.826.093\",\n        \"relationshipType\": \"Shareholder\",\n        \"participationPercentage\": \"20.0\",\n        \"timeFound\": 1\n      }\n    ]\n  },\n  \"confidenceScores\": {\n    \"companyName\": 100,\n    \"documentType\": 100,\n    \"taxId\": 100,\n    \"country\": 100,\n    \"relatedParties\": 100\n  }\n}\n```"
+        }
+      ]
+    }
+  },
+  "stopReason": "end_turn",
+  "usage": {
+    "inputTokens": 5434,
+    "outputTokens": 389,
+    "totalTokens": 5823
+  },
+  "metrics": {
+    "latencyMs": 7449
+  }
+}

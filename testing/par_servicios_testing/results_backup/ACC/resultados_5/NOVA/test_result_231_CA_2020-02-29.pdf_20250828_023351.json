@@ -1,0 +1,175 @@
+{
+  "document_name": "231_CA_2020-02-29.pdf",
+  "category": "ACC",
+  "classification_success": true,
+  "extraction_success": true,
+  "overall_success": true,
+  "timestamp": "2025-08-28T02:33:33.715370",
+  "classification_result": {
+    "classification_data": {
+      "category": "ACC",
+      "text": "SGC-DS-17 Bogotá, 24 de Junio 2021 AEROSUPPORT FBO En mi calidad de Representante legal de la sociedad Aerosupport SAS identificada con NIT 800.216.686-2, hago constar que la composición accionaria de la sociedad a la fecha es la siguiente: AEROSUPPORT S.A.S. COMPOSICION ACCIONARIA Identificación Socio Acciones Valor Nomi Capital Pagado Participación nal 19306991 GERMAN SALGADO VERGARA 78.166 1.000 78.165.945 49,50% 1045179-1- GLOBAL AVIATION SUPPORT 77.376 1.000 77.376.390 49,00% 546162 CORP 35469632 ADRIANA ARANGO JARAMILLO 1.579 1.000 1.579.110 1,00% 1020763136 NICOLAS SALGADO ARANGO 790 1.000 789.555 0,50% TOTAL 157.911 157.911.000 100% Cordialmente, GERMAN SALGADO VERGARA C.C. 19.306.991 Representante Legal AEROSUPPORT S.A.S. NIT. 800.216.686-2 AVENIDA EL DORADO N. 103-08 ENTRA No. 1 INT. 20 TELS: (57-1) 74223665 - FAX: (57-1) 413 88 42 Bogota, COLOMBIA Aerosupport FBO Best FBO in Latin America 2017 Pilot Prase Survey Professional Pilot www.aerosupportfbo.com Miembro afiliado de member of AMCHAM CÁMARA DE COMERCIO THE ANSWER IS CÓL COLOMBIA",
+      "document_number": "800216686",
+      "path": "ACC/800216686/231_CA_2020-02-29.pdf"
+    },
+    "raw_response": {
+      "ResponseMetadata": {
+        "RequestId": "9178f495-a835-4f18-a756-864688452ac3",
+        "HTTPStatusCode": 200,
+        "HTTPHeaders": {
+          "date": "Thu, 28 Aug 2025 07:33:41 GMT",
+          "content-type": "application/json",
+          "content-length": "1577",
+          "connection": "keep-alive",
+          "x-amzn-requestid": "9178f495-a835-4f18-a756-864688452ac3"
+        },
+        "RetryAttempts": 0
+      },
+      "output": {
+        "message": {
+          "role": "assistant",
+          "content": [
+            {
+              "text": "```json { \"category\": \"ACC\", \"text\": \"SGC-DS-17\\nBogot\\u00e1, 24 de Junio 2021\\nAEROSUPPORT FBO\\nEn mi calidad de Representante legal de la sociedad Aerosupport SAS identificada con NIT 800.216.686-2, hago constar que la composición accionaria de la sociedad a la fecha es la siguiente:\\nAEROSUPPORT S.A.S.\\nCOMPOSICION ACCIONARIA\\nIdentificación\\nSocio\\nAcciones\\nValor\\nNomi\\nCapital\\nPagado\\nParticipación\\nnal\\n19306991\\nGERMAN SALGADO VERGARA\\n78.166\\n1.000\\n78.165.945\\n49,50%\\n1045179-1-\\nGLOBAL AVIATION SUPPORT\\n77.376\\n1.000\\n77.376.390\\n49,00%\\n546162\\nCORP\\n35469632\\nADRIANA ARANGO JARAMILLO\\n1.579\\n1.000\\n1.579.110\\n1,00%\\n1020763136\\nNICOLAS SALGADO ARANGO\\n790\\n1.000\\n789.555\\n0,50%\\nTOTAL\\n157.911\\n157.911.000\\n100%\\nCordialmente,\\nGERMAN SALGADO VERGARA\\nC.C. 19.306.991\\nRepresentante Legal\\nAEROSUPPORT S.A.S.\\nNIT. 800.216.686-2\\nAVENIDA EL DORADO N. 103-08\\nENTRA No. 1 INT. 20\\nTELS: (57-1) 74223665 - FAX: (57-1) 413 88 42\\nBogota, COLOMBIA\\nAerosupport FBO\\nBest FBO in Latin America\\n2017 Pilot Prase Survey\\nProfessional Pilot\\nwww.aerosupportfbo.com\\nMiembro afiliado de\\nmember of\\nAMCHAM C\\u00c1MARA DE COMERCIO\\nTHE ANSWER IS\\nC\\u00d3L\\nCOLOMBIA\" } ```"
+            }
+          ]
+        }
+      },
+      "stopReason": "end_turn",
+      "usage": {
+        "inputTokens": 1790,
+        "outputTokens": 645,
+        "totalTokens": 4579,
+        "cacheReadInputTokens": 2144,
+        "cacheWriteInputTokens": 0
+      },
+      "metrics": {
+        "latencyMs": 8870
+      },
+      "model_id": "us.amazon.nova-pro-v1:0",
+      "api_used": "converse",
+      "model_params": {
+        "maxTokens": 8000,
+        "topP": 1,
+        "temperature": 0
+      }
+    },
+    "expected_category": "ACC",
+    "model_used": "us.amazon.nova-pro-v1:0",
+    "api_used": "converse",
+    "pdf_info": {
+      "original_size": 294233,
+      "first_page_size": 239051,
+      "is_scanned": false
+    }
+  },
+  "extraction_result": {
+    "extraction_data": {
+      "path": "ACC/800216686/231_CA_2020-02-29.pdf",
+      "result": {
+        "companyName": "AEROSUPPORT S.A.S.",
+        "documentCategory": "Equity Composition",
+        "taxId": "800.216.686-2",
+        "country": "Colombia",
+        "identificationDetails": {
+          "source": "id_analysis",
+          "indicators": [
+            "NIT",
+            "Colombia"
+          ],
+          "conflictingSources": [],
+          "requiresReview": "false"
+        },
+        "relatedParties": [
+          {
+            "type": "company",
+            "companyName": "GERMAN SALGADO VERGARA",
+            "identificationType": "C.C.",
+            "identificationNumber": "19.306.991",
+            "relationshipType": "Shareholder",
+            "participationPercentage": "49.50%",
+            "timeFound": "1",
+            "job": ""
+          },
+          {
+            "type": "company",
+            "companyName": "GLOBAL AVIATION SUPPORT CORP",
+            "identificationType": "NIT",
+            "identificationNumber": "1045179-1-546162",
+            "relationshipType": "Shareholder",
+            "participationPercentage": "49.00%",
+            "timeFound": "1",
+            "job": ""
+          },
+          {
+            "type": "person",
+            "firstName": "ADRIANA",
+            "lastName": "ARANGO JARAMILLO",
+            "identificationType": "C.C.",
+            "identificationNumber": "35469632",
+            "relationshipType": "Shareholder",
+            "participationPercentage": "1.00%",
+            "timeFound": "1",
+            "job": ""
+          },
+          {
+            "type": "person",
+            "firstName": "NICOLAS",
+            "lastName": "SALAGDADO ARANGO",
+            "identificationType": "C.C.",
+            "identificationNumber": "1020763136",
+            "relationshipType": "Shareholder",
+            "participationPercentage": "0.50%",
+            "timeFound": "1",
+            "job": ""
+          }
+        ]
+      },
+      "documentType": "company",
+      "documentNumber": "800216686",
+      "category": "ACC"
+    },
+    "raw_response": {
+      "ResponseMetadata": {
+        "RequestId": "f2327967-0321-49e0-99bb-09e71c96829b",
+        "HTTPStatusCode": 200,
+        "HTTPHeaders": {
+          "date": "Thu, 28 Aug 2025 07:33:50 GMT",
+          "content-type": "application/json",
+          "content-length": "2174",
+          "connection": "keep-alive",
+          "x-amzn-requestid": "f2327967-0321-49e0-99bb-09e71c96829b"
+        },
+        "RetryAttempts": 0
+      },
+      "output": {
+        "message": {
+          "role": "assistant",
+          "content": [
+            {
+              "text": "```json { \"result\": { \"companyName\": \"AEROSUPPORT S.A.S.\", \"documentCategory\": \"Equity Composition\", \"taxId\": \"800.216.686-2\", \"country\": \"Colombia\", \"identificationDetails\": { \"source\": \"id_analysis\", \"indicators\": [ \"NIT\", \"Colombia\" ], \"conflictingSources\": [], \"requiresReview\": \"false\" }, \"relatedParties\": [ { \"type\": \"company\", \"companyName\": \"GERMAN SALGADO VERGARA\", \"identificationType\": \"C.C.\", \"identificationNumber\": \"19.306.991\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"49.50%\", \"timeFound\": \"1\", \"job\": \"\" }, { \"type\": \"company\", \"companyName\": \"GLOBAL AVIATION SUPPORT CORP\", \"identificationType\": \"NIT\", \"identificationNumber\": \"1045179-1-546162\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"49.00%\", \"timeFound\": \"1\", \"job\": \"\" }, { \"type\": \"person\", \"firstName\": \"ADRIANA\", \"lastName\": \"ARANGO JARAMILLO\", \"identificationType\": \"C.C.\", \"identificationNumber\": \"35469632\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"1.00%\", \"timeFound\": \"1\", \"job\": \"\" }, { \"type\": \"person\", \"firstName\": \"NICOLAS\", \"lastName\": \"SALAGDADO ARANGO\", \"identificationType\": \"C.C.\", \"identificationNumber\": \"1020763136\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"0.50%\", \"timeFound\": \"1\", \"job\": \"\" } ] }, \"documentType\": \"company\", \"category\": \"ACC\" } ```"
+            }
+          ]
+        }
+      },
+      "stopReason": "end_turn",
+      "usage": {
+        "inputTokens": 5407,
+        "outputTokens": 495,
+        "totalTokens": 5902
+      },
+      "metrics": {
+        "latencyMs": 8701
+      },
+      "model_id": "us.amazon.nova-pro-v1:0",
+      "api_used": "converse",
+      "model_params": {
+        "maxTokens": 8000,
+        "topP": 1,
+        "temperature": 0
+      }
+    },
+    "model_used": "us.amazon.nova-pro-v1:0",
+    "api_used": "converse"
+  }
+}

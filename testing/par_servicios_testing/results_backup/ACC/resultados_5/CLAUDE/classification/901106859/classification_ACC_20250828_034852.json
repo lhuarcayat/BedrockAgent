@@ -1,0 +1,87 @@
+{
+  "classification_data": {
+    "category": "ACC",
+    "text": "ASTRID ROCIO LOZANO C.C. 65.800.711 de Purificación Contador Público T.P. 193485-T Universidad Antonio Nariño COMPOSICION ACCIONARIA EL SUSCRITO CONTADOR PÚBLICO DE LA SOCIEDAD CONSTRUCTORA E INMOBILIARIA RIVERA INCORA SAS. NIT 901.106.859-4 CERTIFICA QUE: El capital de la sociedad es de DOSCIENTOS MILLONES DE PESOS MONEDA LEGAL (200.000.000) íntegramente suscrito y pagado por los socios accionistas. Repartidos en la siguiente forma o proporción, entre los socios accionistas, en las siguientes proporciones: NOMBRE DE SOCIOS No. DE DOCUMENTO PORCENTAJE VALOR No. ACCIONES LEOWILSTON RIVERA MENDEZ 80.057.686 49% $98.000.000 196 MARCOS JAIR CUERVO MENDEZ 1.022.372.943 51% $102.000.000 204 TOTAL 100% $200.000.000 400 La presente se expide en la ciudad de Bogotá, a los seis (16) días del mes de Marzo de 2021. ASTRID ROCIO LOZANO CONTADOR PÚBLICO TP. 193485-T E-mail: aslozano-@hotmail.com",
+    "document_number": "901106859",
+    "path": "ACC/901106859/131_CA_2020-02-29.pdf"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "```json { \"category\": \"ACC\", \"text\": \"ASTRID ROCIO LOZANO\\nC.C. 65.800.711 de Purificación\\nContador Público T.P. 193485-T\\nUniversidad Antonio Nariño\\n\\nCOMPOSICION ACCIONARIA\\n\\nEL SUSCRITO CONTADOR PÚBLICO DE LA SOCIEDAD\\nCONSTRUCTORA E INMOBILIARIA RIVERA INCORA SAS.\\n\\nNIT 901.106.859-4\\n\\nCERTIFICA QUE:\\n\\nEl capital de la sociedad es de DOSCIENTOS MILLONES DE PESOS\\nMONEDA LEGAL (200.000.000) íntegramente suscrito y pagado por los socios\\naccionistas. Repartidos en la siguiente forma o proporción, entre los socios\\naccionistas, en las siguientes proporciones:\\n\\nNOMBRE DE SOCIOS No. DE DOCUMENTO PORCENTAJE VALOR No. ACCIONES\\nLEOWILSTON RIVERA MENDEZ 80.057.686 49% $98.000.000 196\\nMARCOS JAIR CUERVO MENDEZ 1.022.372.943 51% $102.000.000 204\\nTOTAL 100% $200.000.000 400\\n\\nLa presente se expide en la ciudad de Bogotá, a los seis (16) días del mes de Marzo de 2021.\\n\\nASTRID ROCIO LOZANO\\nCONTADOR PÚBLICO\\nTP. 193485-T\\nE-mail: aslozano-@hotmail.com\" } ```"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 207,
+      "cache_creation_input_tokens": 4475,
+      "cache_read_input_tokens": 0,
+      "output_tokens": 1589
+    },
+    "ResponseMetadata": {
+      "RequestId": "370cc657-8b0d-4a09-b993-e1be0a51bfbd",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Thu, 28 Aug 2025 08:48:27 GMT",
+        "content-type": "application/json",
+        "content-length": "5858",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "370cc657-8b0d-4a09-b993-e1be0a51bfbd",
+        "x-amzn-bedrock-invocation-latency": "35377",
+        "x-amzn-bedrock-cache-write-input-token-count": "4475",
+        "x-amzn-bedrock-cache-read-input-token-count": "0",
+        "x-amzn-bedrock-output-token-count": "1589",
+        "x-amzn-bedrock-input-token-count": "207"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_01AUvGydFXNjgZxbNyaCosgg",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-3-7-sonnet-20250219",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Let me analyze the document following the classification workflow: 1. TEXT EXTRACTION The document appears to be a certificate titled \"COMPOSICION ACCIONARIA\" (Shareholding Composition). It contains: - Header with name \"ASTRID ROCIO LOZANO\" who appears to be a public accountant (Contador Público) - Document title: \"COMPOSICION ACCIONARIA\" - Statement from the public accountant of \"CONSTRUCTORA E INMOBILIARIA RIVERA INCORA SAS\" - Company NIT: 901.106.859-4 - Certification declaring the capital structure of the company - Table showing shareholder information with columns for names, ID numbers, percentages, values, and number of shares - Two shareholders listed with their ownership percentages (49% and 51%) - Total capital of 200,000,000 pesos - Date of issuance: March 16, 2021 in Bogotá - Signature of the public accountant 2. PRIORITY CHECKS - Not BLANK: Document contains meaningful content - Not LINK_ONLY: No primary hyperlinks redirecting elsewhere 3. ISSUER IDENTIFICATION - The document is issued by a public accountant (Astrid Rocio Lozano) - It's a certification about a corporate entity (CONSTRUCTORA E INMOBILIARIA RIVERA INCORA SAS) - Not issued by DIAN or Chamber of Commerce 4. DOCUMENT FUNCTION ANALYSIS - The document's function is to certify the ownership structure of the company - It specifically details the shareholder composition with percentages - It shows capital contributions and number of shares - It identifies the owners by name and ID numbers 5. CATEGORY CLASSIFICATION This appears to be an \"ACC\" document (Shareholding Composition Certificate): - Title explicitly says \"COMPOSICION ACCIONARIA\" - Contains a list of shareholders with ownership percentages - Shows capital contributions and number of shares - Certified by a public accountant - Follows the corporate structure certification format Must-have indicators for ACC category that this document has: - Shareholder terminology: \"COMPOSICION ACCIONARIA\", \"socios accionistas\" - Ownership data: percentages (49%, 51%), capital values ($98,000,000, $102,000,000) - Number of shares (196, 204) - Owner identification with names and ID numbers - Relationship types: \"socios accionistas\" - Certification by authorized representative (public accountant) 6. CONFIDENCE VALIDATION - Strong evidence: The document clearly states its purpose as certifying shareholder composition - The structure and content match the ACC category definition - Clear title \"COMPOSICION ACCIONARIA\" and content focused exclusively on ownership structure - No conflicting indicators suggesting another category Based on this analysis, the document should be classified as \"ACC\" (Shareholding Composition Certificate). Now let me extract the full text for the JSON output (with proper escaping): ``` ASTRID ROCIO LOZANO C.C. 65.800.711 de Purificación Contador Público T.P. 193485-T Universidad Antonio Nariño COMPOSICION ACCIONARIA EL SUSCRITO CONTADOR PÚBLICO DE LA SOCIEDAD CONSTRUCTORA E INMOBILIARIA RIVERA INCORA SAS. NIT 901.106.859-4 CERTIFICA QUE: El capital de la sociedad es de DOSCIENTOS MILLONES DE PESOS MONEDA LEGAL (200.000.000) íntegramente suscrito y pagado por los socios accionistas. Repartidos en la siguiente forma o proporción, entre los socios accionistas, en las siguientes proporciones: NOMBRE DE SOCIOS No. DE DOCUMENTO PORCENTAJE VALOR No. ACCIONES LEOWILSTON RIVERA MENDEZ 80.057.686 49% $98.000.000 196 MARCOS JAIR CUERVO MENDEZ 1.022.372.943 51% $102.000.000 204 TOTAL 100% $200.000.000 400 La presente se expide en la ciudad de Bogotá, a los seis (16) días del mes de Marzo de 2021. ASTRID ROCIO LOZANO CONTADOR PÚBLICO TP. 193485-T E-mail: aslozano-@hotmail.com ``` Let me make sure I've properly formatted this for JSON (escaping special characters): - Replaced double quotes within the text with escaped quotes (\\\") - Preserved newlines as \\n - Escaped other special characters as needed Now I can create the final JSON output with the classified category and extracted text.",
+          "signature": "ErcBCkgIBxABGAIiQN1y+e8d8luTB5aewvZRTQNQSKt/74YYtr8rTR0xDIC7/57xskhY59R0hNvvrAbfPNSMC6LdrGiGl+MqIxw+XtsSDAYslO1tN5VCBXyu4xoMtGZUiXXyZj4M9G4yIjB8ctmZ+FiOnG1NhPx3egCg6tJzcbURFzvYFC+LHlz/+n0D69ZJLv0Kr6EvqRU7wa0qHaCOg6b3LCU7RTdJKxfUav/JJqQ3+JKfU1w3uaIGGAI="
+        },
+        {
+          "type": "text",
+          "text": "```json { \"category\": \"ACC\", \"text\": \"ASTRID ROCIO LOZANO\\nC.C. 65.800.711 de Purificación\\nContador Público T.P. 193485-T\\nUniversidad Antonio Nariño\\n\\nCOMPOSICION ACCIONARIA\\n\\nEL SUSCRITO CONTADOR PÚBLICO DE LA SOCIEDAD\\nCONSTRUCTORA E INMOBILIARIA RIVERA INCORA SAS.\\n\\nNIT 901.106.859-4\\n\\nCERTIFICA QUE:\\n\\nEl capital de la sociedad es de DOSCIENTOS MILLONES DE PESOS\\nMONEDA LEGAL (200.000.000) íntegramente suscrito y pagado por los socios\\naccionistas. Repartidos en la siguiente forma o proporción, entre los socios\\naccionistas, en las siguientes proporciones:\\n\\nNOMBRE DE SOCIOS No. DE DOCUMENTO PORCENTAJE VALOR No. ACCIONES\\nLEOWILSTON RIVERA MENDEZ 80.057.686 49% $98.000.000 196\\nMARCOS JAIR CUERVO MENDEZ 1.022.372.943 51% $102.000.000 204\\nTOTAL 100% $200.000.000 400\\n\\nLa presente se expide en la ciudad de Bogotá, a los seis (16) días del mes de Marzo de 2021.\\n\\nASTRID ROCIO LOZANO\\nCONTADOR PÚBLICO\\nTP. 193485-T\\nE-mail: aslozano-@hotmail.com\" } ```"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 207,
+        "cache_creation_input_tokens": 4475,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 1589
+      }
+    },
+    "model_id": "us.anthropic.claude-3-7-sonnet-20250219-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 8000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "expected_category": "ACC",
+  "model_used": "us.anthropic.claude-3-7-sonnet-20250219-v1:0",
+  "api_used": "invoke_model",
+  "pdf_info": {
+    "original_size": 349282,
+    "first_page_size": 349248,
+    "is_scanned": true
+  }
+}

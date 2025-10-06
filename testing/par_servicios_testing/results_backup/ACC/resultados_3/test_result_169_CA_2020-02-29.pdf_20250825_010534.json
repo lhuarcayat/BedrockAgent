@@ -1,0 +1,147 @@
+{
+  "document_name": "169_CA_2020-02-29.pdf",
+  "category": "ACC",
+  "classification_success": true,
+  "extraction_success": true,
+  "overall_success": true,
+  "timestamp": "2025-08-25T01:05:20.084947",
+  "classification_result": {
+    "classification_data": {
+      "category": "ACC",
+      "text": "TRITON POWERFUL INNOVATION TRITON LOGISTICA Y CONSTRUCCIONES SAS NIT. 901.127.166 - 9 COMPOSICION ACCIONARIA SOCIOS : SOCIOS CEDULA ACCIONES V/R NOMINAL V/R TOTAL % ERNESTO JOSE CHALELA MARTINEZ 9,287,800 5,000 10,000 S 50,000,000 100 TOTALES 5,000 50,000,000 100 TOMADO FIEMENTE DEL LIBRO DE ACCIONISTA QUE REPOSA EN LA EMPRESA ERNESTO JOSE CHALELA MARTINEZ REPRESENTANTE LEGAL CC. 9.287.800 FECHA: 23 ENERO DEL 2020 POWERFUL INNOVATION",
+      "document_number": "901127166",
+      "path": "ACC/901127166/169_CA_2020-02-29.pdf"
+    },
+    "raw_response": {
+      "ResponseMetadata": {
+        "RequestId": "98dbcf67-37f8-41c1-8583-25df0aac34dd",
+        "HTTPStatusCode": 200,
+        "HTTPHeaders": {
+          "date": "Mon, 25 Aug 2025 06:05:28 GMT",
+          "content-type": "application/json",
+          "content-length": "686",
+          "connection": "keep-alive",
+          "x-amzn-requestid": "98dbcf67-37f8-41c1-8583-25df0aac34dd"
+        },
+        "RetryAttempts": 0
+      },
+      "output": {
+        "message": {
+          "role": "assistant",
+          "content": [
+            {
+              "text": "```json { \"category\": \"ACC\", \"text\": \"TRITON POWERFUL INNOVATION TRITON LOGISTICA Y CONSTRUCCIONES SAS NIT. 901.127.166 - 9 COMPOSICION ACCIONARIA SOCIOS : SOCIOS CEDULA ACCIONES V/R NOMINAL V/R TOTAL % ERNESTO JOSE CHALELA MARTINEZ 9,287,800 5,000 10,000 S 50,000,000 100 TOTALES 5,000 50,000,000 100 TOMADO FIEMENTE DEL LIBRO DE ACCIONISTA QUE REPOSA EN LA EMPRESA ERNESTO JOSE CHALELA MARTINEZ REPRESENTANTE LEGAL CC. 9.287.800 FECHA: 23 ENERO DEL 2020 POWERFUL INNOVATION\" } ```"
+            }
+          ]
+        }
+      },
+      "stopReason": "end_turn",
+      "usage": {
+        "inputTokens": 3119,
+        "outputTokens": 222,
+        "totalTokens": 3341
+      },
+      "metrics": {
+        "latencyMs": 7759
+      },
+      "model_id": "us.amazon.nova-pro-v1:0",
+      "api_used": "converse",
+      "model_params": {
+        "maxTokens": 8200,
+        "topP": 1,
+        "temperature": 0
+      }
+    },
+    "expected_category": "ACC",
+    "model_used": "us.amazon.nova-pro-v1:0",
+    "api_used": "converse",
+    "pdf_info": {
+      "original_size": 47218,
+      "first_page_size": 42331,
+      "is_scanned": false
+    }
+  },
+  "extraction_result": {
+    "extraction_data": {
+      "path": "ACC/901127166/169_CA_2020-02-29.pdf",
+      "result": {
+        "companyName": "TRITON LOGISTICA Y CONSTRUCCIONES SAS",
+        "documentType": "Equity Composition",
+        "taxId": "901.127.166-9",
+        "country": "Colombia",
+        "identificationDetails": {
+          "source": "text_reference",
+          "indicators": [
+            "NIT",
+            "Colombia"
+          ],
+          "conflictingSources": [],
+          "requiresReview": false
+        },
+        "relatedParties": [
+          {
+            "firstName": "ERNESTO JOSE",
+            "lastName": "CHALELA MARTINEZ",
+            "identificationType": "CC",
+            "identificationNumber": "9.287.800",
+            "relationshipType": "Shareholder",
+            "participationPercentage": "100",
+            "timeFound": 1,
+            "job": "REPRESENTANTE LEGAL"
+          }
+        ]
+      },
+      "document_type": "company",
+      "document_number": "901127166",
+      "category": "ACC",
+      "confidenceScores": {
+        "companyName": 95,
+        "taxId": 95,
+        "country": 98,
+        "relatedParties": 90
+      }
+    },
+    "raw_response": {
+      "ResponseMetadata": {
+        "RequestId": "6e6a7e7d-7651-4280-9661-c92dce9e380b",
+        "HTTPStatusCode": 200,
+        "HTTPHeaders": {
+          "date": "Mon, 25 Aug 2025 06:05:34 GMT",
+          "content-type": "application/json",
+          "content-length": "1307",
+          "connection": "keep-alive",
+          "x-amzn-requestid": "6e6a7e7d-7651-4280-9661-c92dce9e380b"
+        },
+        "RetryAttempts": 0
+      },
+      "output": {
+        "message": {
+          "role": "assistant",
+          "content": [
+            {
+              "text": "```json { \"path\": \"ACC/901127166/169_CA_2020-02-29.pdf\", \"result\": { \"companyName\": \"TRITON LOGISTICA Y CONSTRUCCIONES SAS\", \"documentType\": \"Equity Composition\", \"taxId\": \"901.127.166-9\", \"country\": \"Colombia\", \"identificationDetails\": { \"source\": \"text_reference\", \"indicators\": [ \"NIT\", \"Colombia\" ], \"conflictingSources\": [], \"requiresReview\": false }, \"relatedParties\": [ { \"firstName\": \"ERNESTO JOSE\", \"lastName\": \"CHALELA MARTINEZ\", \"identificationType\": \"CC\", \"identificationNumber\": \"9.287.800\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"100\", \"timeFound\": 1, \"job\": \"REPRESENTANTE LEGAL\" } ] }, \"document_type\": \"company\", \"document_number\": \"901127166\", \"category\": \"ACC\", \"confidenceScores\": { \"companyName\": 95, \"taxId\": 95, \"country\": 98, \"relatedParties\": 90 } } ```"
+            }
+          ]
+        }
+      },
+      "stopReason": "end_turn",
+      "usage": {
+        "inputTokens": 8560,
+        "outputTokens": 323,
+        "totalTokens": 8883
+      },
+      "metrics": {
+        "latencyMs": 6102
+      },
+      "model_id": "us.amazon.nova-pro-v1:0",
+      "api_used": "converse",
+      "model_params": {
+        "maxTokens": 8200,
+        "topP": 1,
+        "temperature": 0.1
+      }
+    },
+    "model_used": "us.amazon.nova-pro-v1:0",
+    "api_used": "converse"
+  }
+}

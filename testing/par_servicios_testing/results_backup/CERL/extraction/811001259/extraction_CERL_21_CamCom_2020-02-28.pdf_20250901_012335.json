@@ -1,0 +1,130 @@
+{
+  "extraction_data": {
+    "result": {
+      "CompanyName": "AGENCIA DE ADUANAS ROLDAN S.A.S. NIVEL 1",
+      "CompanyType": "S.A.S.",
+      "Country": "Colombia",
+      "DocumentPages": "15",
+      "DocumentType": "CERTIFICADO DE EXISTENCIA Y REPRESENTACIÓN LEGAL",
+      "TaxId": "811001259-7",
+      "MainAddress": "CRA 43 A 1A Sur 69 IN 703 ED EDIFICIO TEMPO, MEDELLÍN",
+      "IncorporationDate": "1995-05-01",
+      "CompanyDuration": "indefinida",
+      "RegistrationNumber": "21-199991-12",
+      "Size": "Grande",
+      "RelatedParties": [
+        {
+          "FirstName": "BREINER MAURICIO",
+          "LastName": "GUERRERO PUENTES",
+          "IdType": "C.C.",
+          "IdNumber": "80.169.984",
+          "RelationshipType": "Gerente General"
+        },
+        {
+          "FirstName": "FRANCISCO JAVIER",
+          "LastName": "DIAZ BARRETO",
+          "IdType": "C.C.",
+          "IdNumber": "78.715.646",
+          "RelationshipType": "Suplente del Gerente"
+        },
+        {
+          "FirstName": "SANDRA YANIRA",
+          "LastName": "CARDENAS MARTINEZ",
+          "IdType": "C.C.",
+          "IdNumber": "52.327.521",
+          "RelationshipType": "Subgerente"
+        },
+        {
+          "CompanyName": "OGC CONTADORES ASOCIADOS SAS",
+          "IdType": "NIT",
+          "IdNumber": "800.230.187-7",
+          "RelationshipType": "Firma Revisora Fiscal"
+        },
+        {
+          "FirstName": "JOSE LUIS",
+          "LastName": "ALARCON LOPEZ",
+          "IdType": "C.C.",
+          "IdNumber": "1.014.242.268",
+          "RelationshipType": "Revisor Fiscal Principal"
+        }
+      ],
+      "Embargoes": "",
+      "Liquidations": "",
+      "DocumentIssueDate": "2024-12-16",
+      "LastRegistrationRenewalDate": "2024-03-27"
+    }
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "```json { \"result\": { \"CompanyName\": \"AGENCIA DE ADUANAS ROLDAN S.A.S. NIVEL 1\", \"CompanyType\": \"S.A.S.\", \"Country\": \"Colombia\", \"DocumentPages\": \"15\", \"DocumentType\": \"CERTIFICADO DE EXISTENCIA Y REPRESENTACIÓN LEGAL\", \"TaxId\": \"811001259-7\", \"MainAddress\": \"CRA 43 A 1A Sur 69 IN 703 ED EDIFICIO TEMPO, MEDELLÍN\", \"IncorporationDate\": \"1995-05-01\", \"CompanyDuration\": \"indefinida\", \"RegistrationNumber\": \"21-199991-12\", \"Size\": \"Grande\", \"RelatedParties\": [ { \"FirstName\": \"BREINER MAURICIO\", \"LastName\": \"GUERRERO PUENTES\", \"IdType\": \"C.C.\", \"IdNumber\": \"80.169.984\", \"RelationshipType\": \"Gerente General\" }, { \"FirstName\": \"FRANCISCO JAVIER\", \"LastName\": \"DIAZ BARRETO\", \"IdType\": \"C.C.\", \"IdNumber\": \"78.715.646\", \"RelationshipType\": \"Suplente del Gerente\" }, { \"FirstName\": \"SANDRA YANIRA\", \"LastName\": \"CARDENAS MARTINEZ\", \"IdType\": \"C.C.\", \"IdNumber\": \"52.327.521\", \"RelationshipType\": \"Subgerente\" }, { \"CompanyName\": \"OGC CONTADORES ASOCIADOS SAS\", \"IdType\": \"NIT\", \"IdNumber\": \"800.230.187-7\", \"RelationshipType\": \"Firma Revisora Fiscal\" }, { \"FirstName\": \"JOSE LUIS\", \"LastName\": \"ALARCON LOPEZ\", \"IdType\": \"C.C.\", \"IdNumber\": \"1.014.242.268\", \"RelationshipType\": \"Revisor Fiscal Principal\" } ], \"Embargoes\": \"\", \"Liquidations\": \"\", \"DocumentIssueDate\": \"2024-12-16\", \"LastRegistrationRenewalDate\": \"2024-03-27\" } } ```"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 39093,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 2304,
+      "output_tokens": 1545
+    },
+    "ResponseMetadata": {
+      "RequestId": "1941de63-5063-4b29-be52-69269b3e9b93",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Mon, 01 Sep 2025 06:23:35 GMT",
+        "content-type": "application/json",
+        "content-length": "8302",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "1941de63-5063-4b29-be52-69269b3e9b93",
+        "x-amzn-bedrock-invocation-latency": "23747",
+        "x-amzn-bedrock-cache-write-input-token-count": "0",
+        "x-amzn-bedrock-cache-read-input-token-count": "2304",
+        "x-amzn-bedrock-output-token-count": "1545",
+        "x-amzn-bedrock-input-token-count": "39093"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_01WbzgS9JQyYgVcD1dtr3uCk",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-sonnet-4-20250514",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "I need to analyze this Colombian \"Certificado de Existencia y Representación Legal\" document from the Cámara de Comercio de Medellín para Antioquia and extract the required information according to the provided schema. Let me go through the document systematically: 1. **DocumentPages**: The document states \"Página: X de 15\" at the bottom of each page, so this is a 15-page document. 2. **CompanyName**: Looking for the company name near \"La cámara de comercio certifica:\", \"Razón Social\", etc. I can see \"Razón social: AGENCIA DE ADUANAS ROLDAN S.A.S. NIVEL 1\" 3. **CompanyType**: From the name \"AGENCIA DE ADUANAS ROLDAN S.A.S. NIVEL 1\", the type is \"S.A.S.\" 4. **Country**: This is issued by \"Cámara de Comercio de Medellín para Antioquia\" which is Colombian, so \"Colombia\" 5. **TaxId**: I can see \"Nit: 811001259-7\" 6. **IdentificationType**: For Colombian documents, this is \"NIT\" 7. **MainAddress**: Looking for \"Dirección del domicilio principal\" - I see \"CRA 43 A 1A Sur 69 IN 703 ED EDIFICIO TEMPO\" and the municipality is \"MEDELLÍN, ANTIOQUIA, COLOMBIA\". So the MainAddress should be \"CRA 43 A 1A Sur 69 IN 703 ED EDIFICIO TEMPO, MEDELLÍN\" 8. **IncorporationDate**: Looking in the \"MATRÍCULA\" section - \"Fecha de matrícula: 01 de Mayo de 1995\" = 1995-05-01 9. **CompanyDuration**: In \"TERMINO DE DURACIÓN\" section - \"La persona jurídica no se encuentra disuelta y su duración es indefinida\" = \"indefinida\" I continue extracting key registration details. The registration number is 21-199991-12, indicating the company's official enrollment. The enterprise is classified as \"Grande\" in size, suggesting significant operational scale. The document was issued on 16 December 2024, with the most recent registration renewal occurring on 27 March 2024. I'll need to carefully review the sections detailing legal representatives to capture all related party information. The legal representatives include multiple key personnel: a General Manager, Substitute General Manager, Submanager, and a Substitute Submanager. The fiscal review firm OGC CONTADORES ASOCIADOS SAS is also noted as the official fiscal reviewer. JOSE LUIS ALARCON LOPEZ serves as the Principal Fiscal Reviewer, with identification number 1.014.242.268. No additional details about embargoes or liquidations are present in the available documentation.",
+          "signature": "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"
+        },
+        {
+          "type": "text",
+          "text": "```json { \"result\": { \"CompanyName\": \"AGENCIA DE ADUANAS ROLDAN S.A.S. NIVEL 1\", \"CompanyType\": \"S.A.S.\", \"Country\": \"Colombia\", \"DocumentPages\": \"15\", \"DocumentType\": \"CERTIFICADO DE EXISTENCIA Y REPRESENTACIÓN LEGAL\", \"TaxId\": \"811001259-7\", \"MainAddress\": \"CRA 43 A 1A Sur 69 IN 703 ED EDIFICIO TEMPO, MEDELLÍN\", \"IncorporationDate\": \"1995-05-01\", \"CompanyDuration\": \"indefinida\", \"RegistrationNumber\": \"21-199991-12\", \"Size\": \"Grande\", \"RelatedParties\": [ { \"FirstName\": \"BREINER MAURICIO\", \"LastName\": \"GUERRERO PUENTES\", \"IdType\": \"C.C.\", \"IdNumber\": \"80.169.984\", \"RelationshipType\": \"Gerente General\" }, { \"FirstName\": \"FRANCISCO JAVIER\", \"LastName\": \"DIAZ BARRETO\", \"IdType\": \"C.C.\", \"IdNumber\": \"78.715.646\", \"RelationshipType\": \"Suplente del Gerente\" }, { \"FirstName\": \"SANDRA YANIRA\", \"LastName\": \"CARDENAS MARTINEZ\", \"IdType\": \"C.C.\", \"IdNumber\": \"52.327.521\", \"RelationshipType\": \"Subgerente\" }, { \"CompanyName\": \"OGC CONTADORES ASOCIADOS SAS\", \"IdType\": \"NIT\", \"IdNumber\": \"800.230.187-7\", \"RelationshipType\": \"Firma Revisora Fiscal\" }, { \"FirstName\": \"JOSE LUIS\", \"LastName\": \"ALARCON LOPEZ\", \"IdType\": \"C.C.\", \"IdNumber\": \"1.014.242.268\", \"RelationshipType\": \"Revisor Fiscal Principal\" } ], \"Embargoes\": \"\", \"Liquidations\": \"\", \"DocumentIssueDate\": \"2024-12-16\", \"LastRegistrationRenewalDate\": \"2024-03-27\" } } ```"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 39093,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 2304,
+        "output_tokens": 1545
+      }
+    },
+    "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 8000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+  "api_used": "invoke_model"
+}

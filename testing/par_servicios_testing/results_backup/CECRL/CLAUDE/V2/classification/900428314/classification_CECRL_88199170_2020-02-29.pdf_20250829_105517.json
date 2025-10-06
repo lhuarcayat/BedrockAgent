@@ -1,0 +1,87 @@
+{
+  "classification_data": {
+    "category": "CECRL",
+    "text": "REPUBLICA DE COLOMBIA IDENTIFICACIÓN PERSONAL CEDULA DE CIUDADANIA NÚMERO 38.199.170 FUENTES LEON APELLIDOS NORBERTO NOMBRES FIRMA FECHA DE NACIMIENTO 27-NOV-1970 CHIMA (SANTANDER) LUGAR DE NACIMIENTO 1.61 B+ M ESTATURA G.S. RH SEXO 03-OCT-1990 CUCUTA FECHA Y LUGAR DE EXPEDICIÓN REGISTRADOR NACIONAL CARLOS ARIEL SÁNCHEZ TORRES INDICE DERECHO A 4000100 002006010 M 008819917 20 200912209 001942343GA 1 1730606305",
+    "document_number": "900428314",
+    "path": "CECRL/900428314/88199170_2020-02-29.pdf"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "```json { \"category\": \"CECRL\", \"text\": \"REPUBLICA DE COLOMBIA\\nIDENTIFICACIÓN PERSONAL\\nCEDULA DE CIUDADANIA\\nNÚMERO 38.199.170\\nFUENTES LEON\\nAPELLIDOS\\nNORBERTO\\nNOMBRES\\nFIRMA\\nFECHA DE NACIMIENTO 27-NOV-1970\\nCHIMA\\n(SANTANDER)\\nLUGAR DE NACIMIENTO\\n1.61 B+ M\\nESTATURA G.S. RH SEXO\\n03-OCT-1990 CUCUTA\\nFECHA Y LUGAR DE EXPEDICIÓN\\nREGISTRADOR NACIONAL\\nCARLOS ARIEL SÁNCHEZ TORRES\\nINDICE DERECHO\\nA 4000100 002006010 M 008819917 20 200912209\\n001942343GA 1\\n1730606305\" } ```"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 9,
+      "cache_creation_input_tokens": 4549,
+      "cache_read_input_tokens": 0,
+      "output_tokens": 827
+    },
+    "ResponseMetadata": {
+      "RequestId": "a47359f6-7966-4130-94a9-a85a9d7df768",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Fri, 29 Aug 2025 15:54:58 GMT",
+        "content-type": "application/json",
+        "content-length": "5486",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "a47359f6-7966-4130-94a9-a85a9d7df768",
+        "x-amzn-bedrock-invocation-latency": "20368",
+        "x-amzn-bedrock-cache-write-input-token-count": "4549",
+        "x-amzn-bedrock-cache-read-input-token-count": "0",
+        "x-amzn-bedrock-output-token-count": "827",
+        "x-amzn-bedrock-input-token-count": "9"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_013h8markgbCaep4WM8cAWUx",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-sonnet-4-20250514",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Let me analyze this document step by step: 1. **TEXT EXTRACTION** From the document, I can extract: - REPUBLICA DE COLOMBIA IDENTIFICACION PERSONAL CEDULA DE CIUDADANIA - NÚMERO: 38.199.170 - FUENTES LEON - APELLIDOS: NORBERTO - NOMBRES (with a signature) - FECHA DE NACIMIENTO: 27-NOV-1970 - CHIMA (SANTANDER) - LUGAR DE NACIMIENTO - 1.61 B+ M - ESTATURA G.S. RH SEXO - 03-OCT-1990 CUCUTA - FECHA Y LUGAR DE EXPEDICIÓN - Plus various barcodes and official elements 2. **PRIORITY CHECKS** - Not BLANK - there's meaningful content - Not LINK_ONLY - no URLs or hyperlinks 3. **ISSUER IDENTIFICATION** This is issued by \"REPUBLICA DE COLOMBIA\" - a government identification authority, not DIAN or Chamber of Commerce. 4. **DOCUMENT FUNCTION ANALYSIS** This is clearly a personal identification document - a Colombian national identity card (cédula de ciudadanía). It contains: - Individual's name: Norberto Fuentes Leon - Personal ID number: 38.199.170 - Biographic data: birth date (27-NOV-1970), birthplace (Chima, Santander) - Physical characteristics: height (1.61), blood type (B+), gender (M) - Photo, signature - Issue date and place (03-OCT-1990, Cucuta) - Security elements like fingerprint area and barcodes 5. **CATEGORY CLASSIFICATION** This clearly fits CECRL: - It's an official personal identification document (cédula de ciudadanía) - Contains individual identification terminology - Comprehensive personal details confirm its authenticity and purpose I validate the document's comprehensive personal identification characteristics. The Colombian government-issued card provides robust evidence of individual identity through multiple verification elements. Its detailed biographical information, official markings, and security features establish it as a definitive personal identification document.",
+          "signature": "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"
+        },
+        {
+          "type": "text",
+          "text": "```json { \"category\": \"CECRL\", \"text\": \"REPUBLICA DE COLOMBIA\\nIDENTIFICACIÓN PERSONAL\\nCEDULA DE CIUDADANIA\\nNÚMERO 38.199.170\\nFUENTES LEON\\nAPELLIDOS\\nNORBERTO\\nNOMBRES\\nFIRMA\\nFECHA DE NACIMIENTO 27-NOV-1970\\nCHIMA\\n(SANTANDER)\\nLUGAR DE NACIMIENTO\\n1.61 B+ M\\nESTATURA G.S. RH SEXO\\n03-OCT-1990 CUCUTA\\nFECHA Y LUGAR DE EXPEDICIÓN\\nREGISTRADOR NACIONAL\\nCARLOS ARIEL SÁNCHEZ TORRES\\nINDICE DERECHO\\nA 4000100 002006010 M 008819917 20 200912209\\n001942343GA 1\\n1730606305\" } ```"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 9,
+        "cache_creation_input_tokens": 4549,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 827
+      }
+    },
+    "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 8000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "expected_category": "CECRL",
+  "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+  "api_used": "invoke_model",
+  "pdf_info": {
+    "original_size": 177615,
+    "first_page_size": 173116,
+    "is_scanned": true
+  }
+}

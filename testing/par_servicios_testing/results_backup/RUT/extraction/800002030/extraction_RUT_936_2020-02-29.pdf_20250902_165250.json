@@ -1,0 +1,92 @@
+{
+  "extraction_data": {
+    "result": {
+      "CompanyName": "COLSEIN S A S",
+      "Country": "COLOMBIA",
+      "TaxId": "800002030",
+      "VerificationDigit": "2",
+      "IdentificationType": "NIT",
+      "PersonType": "Persona jurídica",
+      "ConflictingSources": [],
+      "RequiresReview": "false"
+    },
+    "RelatedParties": [],
+    "Address": "PAR INDUSTRIAL GRAN SABANA ED 32, Tocancipá, Cundinamarca",
+    "DocumentGenerationDate": "08-01-2025 02:30:56PM",
+    "DocumentType": "company",
+    "Category": "RUT"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "{ \"result\": { \"CompanyName\": \"COLSEIN S A S\", \"Country\": \"COLOMBIA\", \"TaxId\": \"800002030\", \"VerificationDigit\": \"2\", \"IdentificationType\": \"NIT\", \"PersonType\": \"Persona jurídica\", \"ConflictingSources\": [], \"RequiresReview\": \"false\" }, \"RelatedParties\": [], \"Address\": \"PAR INDUSTRIAL GRAN SABANA ED 32, Tocancipá, Cundinamarca\", \"DocumentGenerationDate\": \"08-01-2025 02:30:56PM\", \"DocumentType\": \"company\", \"Category\": \"RUT\" }"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 2649,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 2990,
+      "output_tokens": 771
+    },
+    "ResponseMetadata": {
+      "RequestId": "36a93319-36e6-4337-94d2-f9cbe99aa2bc",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Tue, 02 Sep 2025 21:52:50 GMT",
+        "content-type": "application/json",
+        "content-length": "5299",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "36a93319-36e6-4337-94d2-f9cbe99aa2bc",
+        "x-amzn-bedrock-invocation-latency": "14246",
+        "x-amzn-bedrock-cache-write-input-token-count": "0",
+        "x-amzn-bedrock-cache-read-input-token-count": "2990",
+        "x-amzn-bedrock-output-token-count": "771",
+        "x-amzn-bedrock-input-token-count": "2649"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_01RxNij5fVNLZXCCrELdjY29",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-sonnet-4-20250514",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Looking at this Colombian RUT document, I need to extract the information according to the specific cell mappings provided in the field rules. Let me go through each field systematically: 1. **CompanyName**: Cell \"35. Razón social\" - I can see \"COLSEIN S A S\" 2. **Country**: Cell \"38. País\" - I can see \"COLOMBIA\" 3. **TaxId**: Cell \"5. Número de Identificación Tributaria (NIT)\" - I can see \"8 0 0 0 0 2 0 3 0\" 4. **VerificationDigit**: Cell \"6. DV\" - I can see \"2\" 5. **IdentificationType**: For RUT documents, this should be \"NIT\" 6. **PersonType**: Cell \"24. Tipo de contribuyente\" - I can see \"Persona jurídica\" 7. **Address**: Cells \"41. Dirección principal\", \"40. Ciudad/Municipio\", \"39. Departamento\" - 41: \"PAR INDUSTRIAL GRAN SABANA ED 32\" - 40: \"Tocancipá\" - 39: \"Cundinamarca\" 8. **DocumentGenerationDate**: At bottom \"Fecha generación documento PDF: 08-01-2025 02:30:56PM\" 9. **DocumentType**: Always \"company\" 10. **Category**: Always \"RUT\" 11. **RelatedParties**: I need to look for sections \"Socios y/o miembros de Juntas Directivas, Consorcios, Uniones Temporales\" and \"Revisor Fiscal y contador\". Looking at the document, I can see at the bottom there's a signature section with: - \"ZUREK SALAS LUIS FERNANDO\" - \"Representante Legal Suplente Certificado\" I cannot locate the specific numbered cells for RelatedParties as specified in the extraction rules. The signature details don't match the precise cell requirements. Therefore, I'll set RelatedParties as an empty array, following the guidelines for incomplete party information.",
+          "signature": "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"
+        },
+        {
+          "type": "text",
+          "text": "{ \"result\": { \"CompanyName\": \"COLSEIN S A S\", \"Country\": \"COLOMBIA\", \"TaxId\": \"800002030\", \"VerificationDigit\": \"2\", \"IdentificationType\": \"NIT\", \"PersonType\": \"Persona jurídica\", \"ConflictingSources\": [], \"RequiresReview\": \"false\" }, \"RelatedParties\": [], \"Address\": \"PAR INDUSTRIAL GRAN SABANA ED 32, Tocancipá, Cundinamarca\", \"DocumentGenerationDate\": \"08-01-2025 02:30:56PM\", \"DocumentType\": \"company\", \"Category\": \"RUT\" }"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 2649,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 2990,
+        "output_tokens": 771
+      }
+    },
+    "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 9000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+  "api_used": "invoke_model"
+}

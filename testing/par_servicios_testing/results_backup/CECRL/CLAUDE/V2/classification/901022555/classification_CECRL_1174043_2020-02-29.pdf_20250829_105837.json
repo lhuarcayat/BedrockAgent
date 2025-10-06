@@ -1,0 +1,87 @@
+{
+  "classification_data": {
+    "category": "CECRL",
+    "text": "REPUBLICA DE COLOMBIA IDENTIFICACION PERSONAL CEDULA DE CIUDADANIA NUMERO 1.174.043 SIERRA APELLIDOS PUBLIO ROBERTO NOMBRES FIRMA FECHA DE NACIMIENTO 11-OCT-1965 CHIQUINQUIRA (BOYACA) LUGAR DE NACIMIENTO 1.71 O+ M ESTATURA G.S. RH SEXO 12-OCT-1983 TINUACA FECHA Y LUGAR DE EXPEDICION INDICE DERECHO REGISTRADOR NACIONAL CARLOS ARIEL SANCHEZ TORRES A-1500150-0009374Z-M-0001174043-20081011 0004256265A 1 1510011657",
+    "document_number": "901022555",
+    "path": "CECRL/901022555/1174043_2020-02-29.pdf"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "```json { \"category\": \"CECRL\", \"text\": \"REPUBLICA DE COLOMBIA\\nIDENTIFICACION PERSONAL\\nCEDULA DE CIUDADANIA\\nNUMERO 1.174.043\\nSIERRA\\nAPELLIDOS\\nPUBLIO ROBERTO\\nNOMBRES\\nFIRMA\\nFECHA DE NACIMIENTO 11-OCT-1965\\nCHIQUINQUIRA\\n(BOYACA)\\nLUGAR DE NACIMIENTO\\n1.71 O+ M\\nESTATURA G.S. RH SEXO\\n12-OCT-1983 TINUACA\\nFECHA Y LUGAR DE EXPEDICION\\nINDICE DERECHO\\nREGISTRADOR NACIONAL\\nCARLOS ARIEL SANCHEZ TORRES\\nA-1500150-0009374Z-M-0001174043-20081011\\n0004256265A 1 1510011657\" } ```"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 9,
+      "cache_creation_input_tokens": 4549,
+      "cache_read_input_tokens": 0,
+      "output_tokens": 836
+    },
+    "ResponseMetadata": {
+      "RequestId": "20c9011b-3429-4bd7-9deb-a7d8bb614837",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Fri, 29 Aug 2025 15:58:28 GMT",
+        "content-type": "application/json",
+        "content-length": "5549",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "20c9011b-3429-4bd7-9deb-a7d8bb614837",
+        "x-amzn-bedrock-invocation-latency": "19576",
+        "x-amzn-bedrock-cache-write-input-token-count": "4549",
+        "x-amzn-bedrock-cache-read-input-token-count": "0",
+        "x-amzn-bedrock-output-token-count": "836",
+        "x-amzn-bedrock-input-token-count": "9"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_0185QovfRcsPmcsytKntHrG8",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-sonnet-4-20250514",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Let me analyze this document step by step: 1. **TEXT EXTRACTION** Looking at the image, I can see a Colombian identification document. Let me extract the visible text: - \"REPUBLICA DE COLOMBIA\" - \"IDENTIFICACION PERSONAL\" - \"CEDULA DE CIUDADANIA\" - \"NUMERO 1.174.043\" - \"SIERRA\" - \"APELLIDOS\" - \"PUBLIO ROBERTO\" - \"NOMBRES\" - There's a signature and photograph - On the back: \"FECHA DE NACIMIENTO 11-OCT-1965\" - \"CHIQUINQUIRA\" - \"(BOYACA)\" - \"LUGAR DE NACIMIENTO\" - \"1.71 O+ M\" - \"ESTATURA G.S. RH SEXO\" - \"12-OCT-1983 TINUACA\" - \"FECHA Y LUGAR DE EXPEDICION\" - Various other administrative markings and barcodes 2. **PRIORITY CHECKS** - Not BLANK - has substantial meaningful content - Not LINK_ONLY - not primarily URLs/links 3. **ISSUER IDENTIFICATION** This is clearly issued by the Colombian government identification authority, not DIAN or Chamber of Commerce. 4. **DOCUMENT FUNCTION ANALYSIS** This is clearly a personal identification document - a Colombian \"Cédula de Ciudadanía\" (Citizenship Identity Card). It contains: - Personal biographical data (birth date, place of birth) - Physical characteristics (height, blood type, sex) - Individual photo and signature - Government-issued ID number - Official government seals and security features 5. **CATEGORY CLASSIFICATION** This clearly fits CECRL: - Contains \"IDENTIFICACION PERSONAL\" and \"CEDULA DE CIUDADANIA\" - Has personal biographical data: birth date (11-OCT-1965), birth place (Chiquinquira, Boyaca) - Contains physical characteristics: height (1.71), blood type (O+), sex (M) - Includes individual photo and signature - Government-issued with official seals and security elements - Focuses on ONE individual person (Publio Roberto Sierra) 6. **CONFIDENCE VALIDATION** The document is a verified CECRL with comprehensive identifying information and no apparent discrepancies.",
+          "signature": "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"
+        },
+        {
+          "type": "text",
+          "text": "```json { \"category\": \"CECRL\", \"text\": \"REPUBLICA DE COLOMBIA\\nIDENTIFICACION PERSONAL\\nCEDULA DE CIUDADANIA\\nNUMERO 1.174.043\\nSIERRA\\nAPELLIDOS\\nPUBLIO ROBERTO\\nNOMBRES\\nFIRMA\\nFECHA DE NACIMIENTO 11-OCT-1965\\nCHIQUINQUIRA\\n(BOYACA)\\nLUGAR DE NACIMIENTO\\n1.71 O+ M\\nESTATURA G.S. RH SEXO\\n12-OCT-1983 TINUACA\\nFECHA Y LUGAR DE EXPEDICION\\nINDICE DERECHO\\nREGISTRADOR NACIONAL\\nCARLOS ARIEL SANCHEZ TORRES\\nA-1500150-0009374Z-M-0001174043-20081011\\n0004256265A 1 1510011657\" } ```"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 9,
+        "cache_creation_input_tokens": 4549,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 836
+      }
+    },
+    "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 8000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "expected_category": "CECRL",
+  "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+  "api_used": "invoke_model",
+  "pdf_info": {
+    "original_size": 743509,
+    "first_page_size": 741958,
+    "is_scanned": true
+  }
+}

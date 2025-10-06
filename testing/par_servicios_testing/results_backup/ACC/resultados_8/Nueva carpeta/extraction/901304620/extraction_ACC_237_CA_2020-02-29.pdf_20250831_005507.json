@@ -1,0 +1,107 @@
+{
+  "extraction_data": {
+    "result": {
+      "companyName": "PROCESS POINT COLOMBIA S.A.S.",
+      "documentCategory": "Equity Composition",
+      "taxId": "901.304.620-0",
+      "country": "Colombia",
+      "identificationDetails": {
+        "source": "text_reference",
+        "indicators": [
+          "Bogotá D.C.",
+          "NIT format matches Colombia"
+        ],
+        "conflictingSources": [],
+        "requiresReview": "true"
+      },
+      "relatedParties": [
+        {
+          "type": "person",
+          "firstName": "Jamie Todd",
+          "lastName": "Rutherford",
+          "identificationType": "POR REVISAR",
+          "identificationNumber": "POR REVISAR",
+          "relationshipType": "Shareholder",
+          "participationPercentage": "100%",
+          "timeFound": "1",
+          "job": ""
+        }
+      ]
+    },
+    "documentType": "company",
+    "category": "ACC"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "{ \"result\": { \"companyName\": \"PROCESS POINT COLOMBIA S.A.S.\", \"documentCategory\": \"Equity Composition\", \"taxId\": \"901.304.620-0\", \"country\": \"Colombia\", \"identificationDetails\": { \"source\": \"text_reference\", \"indicators\": [ \"Bogotá D.C.\", \"NIT format matches Colombia\" ], \"conflictingSources\": [], \"requiresReview\": \"true\" }, \"relatedParties\": [ { \"type\": \"person\", \"firstName\": \"Jamie Todd\", \"lastName\": \"Rutherford\", \"identificationType\": \"POR REVISAR\", \"identificationNumber\": \"POR REVISAR\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"100%\", \"timeFound\": \"1\", \"job\": \"\" } ] }, \"documentType\": \"company\", \"category\": \"ACC\" }"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 9,
+      "cache_creation_input_tokens": 6094,
+      "cache_read_input_tokens": 0,
+      "output_tokens": 784
+    },
+    "ResponseMetadata": {
+      "RequestId": "bc6cc72d-a6f5-42c8-89f9-c7eadf850f78",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Sun, 31 Aug 2025 05:55:07 GMT",
+        "content-type": "application/json",
+        "content-length": "5637",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "bc6cc72d-a6f5-42c8-89f9-c7eadf850f78",
+        "x-amzn-bedrock-invocation-latency": "14912",
+        "x-amzn-bedrock-cache-write-input-token-count": "6094",
+        "x-amzn-bedrock-cache-read-input-token-count": "0",
+        "x-amzn-bedrock-output-token-count": "784",
+        "x-amzn-bedrock-input-token-count": "9"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_01CUjupSDbqqMGUZuh7MqJbm",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-sonnet-4-20250514",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Let me analyze this PDF document step by step: **Step 1: Document Analysis** This is a \"CERTIFICACIÓN COMPOSICIÓN ACCIONARIA PROCESS POINT COLOMBIA S.A.S.\" with NIT 901.304.620-0. The document is issued by a certified accountant in Bogotá D.C., indicating this is in Colombia. **Step 2: Root Level Extraction** - companyName: \"PROCESS POINT COLOMBIA S.A.S.\" (from the header) - taxId: \"901.304.620-0\" (from the NIT field) - country: Colombia (from \"Bogotá D.C.\" reference) - documentCategory: \"Equity Composition\" (fixed value) **Step 3: Related Parties Processing** Looking at the table: - ACCIONISTA ÚNICO: TODD RUDERFORTH - ACCIONES: 696 - PORCENTAJE: 100% Then it mentions \"JAMIE TODD RUTHERFORD con domicilio en Texas, Estados Unidos de América; al ser el único accionista cuenta con el porcentaje de participación del 100% en la sociedad PROCESS POINT COLOMBIA S.A.S.\" This appears to be referring to the same person with slight name variations. The table shows \"TODD RUDERFORTH\" but the text shows \"JAMIE TODD RUTHERFORD\". Since this appears to be the same person (the text explicitly says he's the only shareholder), I should use the more complete name from the text: \"JAMIE TODD RUTHERFORD\". **Step 4: Validation & Cross-checking** - taxId \"901.304.620-0\" is a Colombian NIT format ✓ - Country is Colombia based on Bogotá D.C. reference ✓ - Only one shareholder with 100% ✓ - Need to determine identificationType for this person Since this is Colombia and it's a person, I need to apply Colombia ID type rules. However, I don't see any identification number for JAMIE TODD RUTHERFORD in the document, so I'll need to set it to \"POR REVISAR\". I'll organize the key details into a structured format to ensure clear presentation of the shareholder information.",
+          "signature": "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"
+        },
+        {
+          "type": "text",
+          "text": "{ \"result\": { \"companyName\": \"PROCESS POINT COLOMBIA S.A.S.\", \"documentCategory\": \"Equity Composition\", \"taxId\": \"901.304.620-0\", \"country\": \"Colombia\", \"identificationDetails\": { \"source\": \"text_reference\", \"indicators\": [ \"Bogotá D.C.\", \"NIT format matches Colombia\" ], \"conflictingSources\": [], \"requiresReview\": \"true\" }, \"relatedParties\": [ { \"type\": \"person\", \"firstName\": \"Jamie Todd\", \"lastName\": \"Rutherford\", \"identificationType\": \"POR REVISAR\", \"identificationNumber\": \"POR REVISAR\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"100%\", \"timeFound\": \"1\", \"job\": \"\" } ] }, \"documentType\": \"company\", \"category\": \"ACC\" }"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 9,
+        "cache_creation_input_tokens": 6094,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 784
+      }
+    },
+    "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 8000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+  "api_used": "invoke_model"
+}

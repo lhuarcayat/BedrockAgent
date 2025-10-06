@@ -1,0 +1,86 @@
+{
+  "extraction_data": {
+    "path": "sample_pdf_path",
+    "result": {
+      "companyName": "Michael Page International do Brasil - Recrutamento Especializado Ltda.",
+      "documentType": "Equity Composition",
+      "taxId": "03.791.490/0001-80",
+      "country": "Brasil",
+      "identificationDetails": {
+        "source": "text_reference",
+        "indicators": [
+          "São Paulo",
+          "Estado de São Paulo",
+          "Brasil"
+        ],
+        "conflictingSources": [],
+        "requiresReview": false
+      },
+      "relatedParties": [
+        {
+          "firstName": "Patrick Pierre",
+          "lastName": "Holland",
+          "identificationType": "CPF",
+          "identificationNumber": "38.488.409-X",
+          "relationshipType": "Shareholder",
+          "participationPercentage": "POR REVISAR",
+          "timeFound": 1,
+          "job": "Diretor Geral"
+        },
+        {
+          "firstName": "Gijs Van",
+          "lastName": "Delft",
+          "identificationType": "CPF",
+          "identificationNumber": "230.579.388.09",
+          "relationshipType": "Shareholder",
+          "participationPercentage": "POR REVISAR",
+          "timeFound": 1,
+          "job": "Administrador"
+        }
+      ]
+    },
+    "document_type": "company",
+    "document_number": "03791490000180",
+    "category": "ACC",
+    "confidenceScores": {
+      "companyName": 95,
+      "taxId": 95,
+      "country": 95,
+      "relatedParties": 70
+    }
+  },
+  "raw_response": {
+    "ResponseMetadata": {
+      "RequestId": "538a312e-b341-4c38-9fa7-a857fd43a80d",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Sat, 23 Aug 2025 09:22:35 GMT",
+        "content-type": "application/json",
+        "content-length": "1722",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "538a312e-b341-4c38-9fa7-a857fd43a80d"
+      },
+      "RetryAttempts": 0
+    },
+    "output": {
+      "message": {
+        "role": "assistant",
+        "content": [
+          {
+            "text": "```json\n{\n  \"path\": \"sample_pdf_path\",\n  \"result\": {\n    \"companyName\": \"Michael Page International do Brasil - Recrutamento Especializado Ltda.\",\n    \"documentType\": \"Equity Composition\",\n    \"taxId\": \"03.791.490/0001-80\",\n    \"country\": \"Brasil\",\n    \"identificationDetails\": {\n      \"source\": \"text_reference\",\n      \"indicators\": [\n        \"São Paulo\",\n        \"Estado de São Paulo\",\n        \"Brasil\"\n      ],\n      \"conflictingSources\": [],\n      \"requiresReview\": false\n    },\n    \"relatedParties\": [\n      {\n        \"firstName\": \"Patrick Pierre\",\n        \"lastName\": \"Holland\",\n        \"identificationType\": \"CPF\",\n        \"identificationNumber\": \"38.488.409-X\",\n        \"relationshipType\": \"Shareholder\",\n        \"participationPercentage\": \"POR REVISAR\",\n        \"timeFound\": 1,\n        \"job\": \"Diretor Geral\"\n      },\n      {\n        \"firstName\": \"Gijs Van\",\n        \"lastName\": \"Delft\",\n        \"identificationType\": \"CPF\",\n        \"identificationNumber\": \"230.579.388.09\",\n        \"relationshipType\": \"Shareholder\",\n        \"participationPercentage\": \"POR REVISAR\",\n        \"timeFound\": 1,\n        \"job\": \"Administrador\"\n      }\n    ]\n  },\n  \"document_type\": \"company\",\n  \"document_number\": \"03791490000180\",\n  \"category\": \"ACC\",\n  \"confidenceScores\": {\n    \"companyName\": 95,\n    \"taxId\": 95,\n    \"country\": 95,\n    \"relatedParties\": 70\n  }\n}\n```"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "inputTokens": 8668,
+      "outputTokens": 407,
+      "totalTokens": 9075
+    },
+    "metrics": {
+      "latencyMs": 8406
+    }
+  },
+  "model_used": "us.amazon.nova-pro-v1:0"
+}

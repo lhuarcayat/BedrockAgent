@@ -1,0 +1,96 @@
+# RUT Document Test Configuration
+# Colombian tax registration documents (Registro Único Tributario)
+
+documents:
+  rut_empresa_basica:
+    name: "RUT Empresa - Basic Company Registration"
+    s3_path: "s3://par-servicios-poc-qa-filling-desk/par-servicios-poc/RUT/800123456/rut_empresa_800123456_2023-01-15.pdf"
+    type: "RUT"
+    test_type: "field_accuracy"
+    enabled: true
+    
+    test_config:
+      prompts_to_test: ["v1.0.0", "v1.1.0"]
+      description: "Basic company RUT with standard business information"
+      
+      expected_results:
+        businessName: "Distribuidora Nacional S.A.S."
+        nit: "800123456-1"
+        legalRepresentative: "Carlos Alberto Mendoza"
+        economicActivity: "Comercio al por mayor"
+        address: "Calle 100 # 15-20, Bogotá D.C."
+        
+      issue_result:
+        businessName: "DISTRIBUIDORA NACIONAL S.A.S."  # Case sensitivity
+        economicActivity: "4610 - Comercio al por mayor"  # Code included
+
+  rut_persona_natural:
+    name: "RUT Persona Natural - Individual Registration"
+    s3_path: "s3://par-servicios-poc-qa-filling-desk/par-servicios-poc/RUT/900234567/rut_persona_900234567_2022-11-08.pdf"
+    type: "RUT"
+    test_type: "field_accuracy"
+    enabled: true
+    
+    test_config:
+      prompts_to_test: ["v1.1.0"]
+      description: "Individual person RUT registration"
+      
+      expected_results:
+        businessName: "Luis Fernando Vargas Peña"
+        nit: "900234567-8"
+        personType: "Persona Natural"
+        economicActivity: "Servicios profesionales de consultoría"
+        address: "Carrera 25 # 45-12, Medellín"
+        
+      issue_result:
+        personType: "Natural"  # Incomplete field extraction
+
+  rut_multiple_activities:
+    name: "RUT Multiple Activities - Count Validation"
+    s3_path: "s3://par-servicios-poc-qa-filling-desk/par-servicios-poc/RUT/800345678/rut_multiple_activities_2023-05-22.pdf"
+    type: "RUT"
+    test_type: "count_validation"
+    enabled: true
+    
+    test_config:
+      prompts_to_test: ["v1.0.0", "v1.1.0"]
+      description: "Company with multiple economic activities listed"
+      
+      expected_count: 4
+      actual_count: 2
+      count_field: "economicActivities"
+      tolerance: 1
+
+  rut_address_parsing:
+    name: "RUT Address Parsing - Complex Address"
+    s3_path: "s3://par-servicios-poc-qa-filling-desk/par-servicios-poc/RUT/800456789/rut_complex_address_2023-03-14.pdf"
+    type: "RUT"
+    test_type: "field_accuracy"
+    enabled: true
+    
+    test_config:
+      prompts_to_test: ["v1.1.0"]
+      description: "Complex Colombian address format extraction"
+      
+      expected_results:
+        address: "Avenida El Dorado # 69D-75, Torre B, Oficina 802, Bogotá D.C."
+        city: "Bogotá D.C."
+        department: "Cundinamarca"
+        
+      issue_result:
+        address: "Avenida El Dorado # 69D-75"  # Incomplete address
+        city: "Bogotá"
+
+  rut_blank_sections:
+    name: "RUT Blank Sections - Partial Data"
+    s3_path: "s3://par-servicios-poc-qa-filling-desk/par-servicios-poc/RUT/800567890/rut_partial_data_2022-12-05.pdf"
+    type: "RUT"
+    test_type: "blank_detection"
+    enabled: true
+    
+    test_config:
+      prompts_to_test: ["v1.0.0", "v1.1.0"]
+      description: "RUT with some sections filled and others blank"
+      
+      expected_behavior: "extract_data"
+      actual_behavior: "blank"

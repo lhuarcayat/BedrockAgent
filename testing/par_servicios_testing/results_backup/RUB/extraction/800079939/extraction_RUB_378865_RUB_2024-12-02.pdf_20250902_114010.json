@@ -1,0 +1,121 @@
+{
+  "extraction_data": {
+    "result": {
+      "CompanyName": "SUCOMPUTO S.A.S SUCOMPUTO INFRAESTRUCTURA TECNOLOGICA S.A.S",
+      "TaxId": "800079939",
+      "IdentificationType": "NIT",
+      "Country": "Colombia",
+      "ConflictingSources": [],
+      "RequiresReview": "false"
+    },
+    "RelatedParties": [
+      {
+        "FirstName": "MELBA EUGENIA",
+        "LastName": "MORRIS",
+        "IdType": "NIT",
+        "IdNumber": "51575225",
+        "NoveltyType": "Actualización",
+        "ParticipationPercentage": "40"
+      },
+      {
+        "FirstName": "DIEGO ALEJANDRO",
+        "LastName": "ESPINOSA MORRIS",
+        "IdType": "NIT",
+        "IdNumber": "102073258",
+        "NoveltyType": "Actualización",
+        "ParticipationPercentage": "10"
+      },
+      {
+        "FirstName": "LINA MARIA",
+        "LastName": "ESPINOSA MORRIS",
+        "IdType": "NIT",
+        "IdNumber": "53001003",
+        "NoveltyType": "Actualización",
+        "ParticipationPercentage": "10"
+      },
+      {
+        "FirstName": "WILLIAM LIBARDO",
+        "LastName": "ESPINOSA BELTRAN",
+        "IdType": "NIT",
+        "IdNumber": "19433328",
+        "NoveltyType": "Actualización",
+        "ParticipationPercentage": "40"
+      }
+    ],
+    "DocumentType": "company",
+    "Category": "RUB"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "{ \"result\": { \"CompanyName\": \"SUCOMPUTO S.A.S SUCOMPUTO INFRAESTRUCTURA TECNOLOGICA S.A.S\", \"TaxId\": \"800079939\", \"IdentificationType\": \"NIT\", \"Country\": \"Colombia\", \"ConflictingSources\": [], \"RequiresReview\": \"false\" }, \"RelatedParties\": [ { \"FirstName\": \"MELBA EUGENIA\", \"LastName\": \"MORRIS\", \"IdType\": \"NIT\", \"IdNumber\": \"51575225\", \"NoveltyType\": \"Actualización\", \"ParticipationPercentage\": \"40\" }, { \"FirstName\": \"DIEGO ALEJANDRO\", \"LastName\": \"ESPINOSA MORRIS\", \"IdType\": \"NIT\", \"IdNumber\": \"102073258\", \"NoveltyType\": \"Actualización\", \"ParticipationPercentage\": \"10\" }, { \"FirstName\": \"LINA MARIA\", \"LastName\": \"ESPINOSA MORRIS\", \"IdType\": \"NIT\", \"IdNumber\": \"53001003\", \"NoveltyType\": \"Actualización\", \"ParticipationPercentage\": \"10\" }, { \"FirstName\": \"WILLIAM LIBARDO\", \"LastName\": \"ESPINOSA BELTRAN\", \"IdType\": \"NIT\", \"IdNumber\": \"19433328\", \"NoveltyType\": \"Actualización\", \"ParticipationPercentage\": \"40\" } ], \"DocumentType\": \"company\", \"Category\": \"RUB\" }"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 8084,
+      "cache_creation_input_tokens": 2039,
+      "cache_read_input_tokens": 0,
+      "output_tokens": 1332
+    },
+    "ResponseMetadata": {
+      "RequestId": "8adef6fb-1b38-40cb-8b84-84c75afd72bc",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Tue, 02 Sep 2025 16:40:09 GMT",
+        "content-type": "application/json",
+        "content-length": "7431",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "8adef6fb-1b38-40cb-8b84-84c75afd72bc",
+        "x-amzn-bedrock-invocation-latency": "20353",
+        "x-amzn-bedrock-cache-write-input-token-count": "2039",
+        "x-amzn-bedrock-cache-read-input-token-count": "0",
+        "x-amzn-bedrock-output-token-count": "1332",
+        "x-amzn-bedrock-input-token-count": "8084"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_01Pz8Dp5KoVRaK24Hmt2Y81q",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-sonnet-4-20250514",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Let me analyze this document step by step according to the field rules provided. This is a \"Final Beneficiaries Report\" (Reporte de Beneficiarios Finales) issued by DIAN, which is the Colombian tax authority. Let me extract the information according to the schema: **Company Information:** 1. CompanyName: Looking at cell \"11. Denominación o razón social\" - I can see \"SUCOMPUTO S.A.S SUCOMPUTO INFRAESTRUCTURA TECNOLOGICA S.A.S\" 2. Country: Since this is issued by DIAN, the country is Colombia 3. TaxId: Looking at cell \"18. Número de identificación\" - I can see \"8 0 0 0 7 9 9 3 9\" 4. IdentificationType: For DIAN reports, this is \"NIT\" **Related Parties:** Looking at the \"Datos beneficiarios finales\" section, I can see multiple beneficiaries across the pages: **Beneficiary 1 (Page 2):** - 30. Número de identificación: 51575225 - 32. Número de Identificación Tributaria - NIT: 51575225 (matches) - 34. Primer apellido: MORRIS - 35. Segundo apellido: [empty] - 36. Primer nombre: MELBA - 37. Otros nombres: EUGENIA - 57. Porcentaje de participación: 40 - 61. Tipo de novedad: Actualización (code 2) **Beneficiary 2 (Page 2 continued):** - 30. Número de identificación: 102073258 - 32. Número de Identificación Tributaria - NIT: 102073258 (matches) - 34. Primer apellido: ESPINOSA - 35. Segundo apellido: MORRIS - 36. Primer nombre: DIEGO - 37. Otros nombres: ALEJANDRO - 57. Porcentaje de participación: 10 - 61. Tipo de novedad: Actualización (code 2) **Beneficiary 3 (Page 3):** I continue identifying the third beneficiary with the identification number 53001003, who shares the ESPINOSA MORRIS surname. The first name is LINA, and I'm preparing to extract the remaining details from the document. The additional name is MARIA, maintaining a 10% participation stake. The update is marked with code 2, indicating a standard modification to the beneficiary's record. William Espinosa Beltran, with additional name Libardo, holds a 40% participation. His identification matches the NIT, and the record is also updated with code 2. I've confirmed the total participation percentage reaches 100%, with each beneficiary having a unique identification number and consistent NIT documentation.",
+          "signature": "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"
+        },
+        {
+          "type": "text",
+          "text": "{ \"result\": { \"CompanyName\": \"SUCOMPUTO S.A.S SUCOMPUTO INFRAESTRUCTURA TECNOLOGICA S.A.S\", \"TaxId\": \"800079939\", \"IdentificationType\": \"NIT\", \"Country\": \"Colombia\", \"ConflictingSources\": [], \"RequiresReview\": \"false\" }, \"RelatedParties\": [ { \"FirstName\": \"MELBA EUGENIA\", \"LastName\": \"MORRIS\", \"IdType\": \"NIT\", \"IdNumber\": \"51575225\", \"NoveltyType\": \"Actualización\", \"ParticipationPercentage\": \"40\" }, { \"FirstName\": \"DIEGO ALEJANDRO\", \"LastName\": \"ESPINOSA MORRIS\", \"IdType\": \"NIT\", \"IdNumber\": \"102073258\", \"NoveltyType\": \"Actualización\", \"ParticipationPercentage\": \"10\" }, { \"FirstName\": \"LINA MARIA\", \"LastName\": \"ESPINOSA MORRIS\", \"IdType\": \"NIT\", \"IdNumber\": \"53001003\", \"NoveltyType\": \"Actualización\", \"ParticipationPercentage\": \"10\" }, { \"FirstName\": \"WILLIAM LIBARDO\", \"LastName\": \"ESPINOSA BELTRAN\", \"IdType\": \"NIT\", \"IdNumber\": \"19433328\", \"NoveltyType\": \"Actualización\", \"ParticipationPercentage\": \"40\" } ], \"DocumentType\": \"company\", \"Category\": \"RUB\" }"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 8084,
+        "cache_creation_input_tokens": 2039,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 1332
+      }
+    },
+    "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 9000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+  "api_used": "invoke_model"
+}

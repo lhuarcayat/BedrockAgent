@@ -1,0 +1,87 @@
+{
+  "classification_data": {
+    "category": "CECRL",
+    "text": "REPUBLICA DE COLOMBIA IDENTIFICACION PERSONAL CEDULA DE CIUDADANIA 36.199.170 FUENTES LEON APELLIDOS NORBERTO NOMBRES FIRMA FECHA DE NACIMIENTO 27-NOV-1970 CHIMA (SANTANDER) LUGAR DE NACIMIENTO 1.61 B+ M ESTATURA G.S. RH SEXO 03-OCT-1990 CUCUTA FECHA Y LUGAR DE EXPEDICION INDICE DERECHO REGISTRADOR NACIONAL CARLOS ARIEL SANCHEZ TORRES A-4000100-002069T0-M-008919917O-20091229 001942343GA 1 1730606305",
+    "document_number": "900428314",
+    "path": "CECRL/900428314/88199170_2020-02-29.pdf"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "```json { \"category\": \"CECRL\", \"text\": \"REPUBLICA DE COLOMBIA\\nIDENTIFICACION PERSONAL\\nCEDULA DE CIUDADANIA\\n36.199.170\\nFUENTES LEON\\nAPELLIDOS\\nNORBERTO\\nNOMBRES\\nFIRMA\\nFECHA DE NACIMIENTO 27-NOV-1970\\nCHIMA\\n(SANTANDER)\\nLUGAR DE NACIMIENTO\\n1.61 B+ M\\nESTATURA G.S. RH SEXO\\n03-OCT-1990 CUCUTA\\nFECHA Y LUGAR DE EXPEDICION\\nINDICE DERECHO\\nREGISTRADOR NACIONAL\\nCARLOS ARIEL SANCHEZ TORRES\\nA-4000100-002069T0-M-008919917O-20091229 001942343GA 1 1730606305\" } ```"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 1584,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 3150,
+      "output_tokens": 1113
+    },
+    "ResponseMetadata": {
+      "RequestId": "5d5f96f6-4cd5-4457-91d9-b69a3199760e",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Sun, 31 Aug 2025 21:38:52 GMT",
+        "content-type": "application/json",
+        "content-length": "7079",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "5d5f96f6-4cd5-4457-91d9-b69a3199760e",
+        "x-amzn-bedrock-invocation-latency": "16204",
+        "x-amzn-bedrock-cache-write-input-token-count": "0",
+        "x-amzn-bedrock-cache-read-input-token-count": "3150",
+        "x-amzn-bedrock-output-token-count": "1113",
+        "x-amzn-bedrock-input-token-count": "1584"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_018Y6PJ2YhGaXhtR5ya7GCVX",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-sonnet-4-20250514",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Let me analyze this document step by step according to the classification workflow. 1. **TEXT EXTRACTION** Looking at the document, I can extract text that includes: - \"REPUBLICA DE COLOMBIA\" - \"IDENTIFICACION PERSONAL\" - \"CEDULA DE CIUDADANIA\" - A number: \"36.199.170\" - \"FUENTES LEON\" - \"APELLIDOS\" - \"NORBERTO\" - \"NOMBRES\" - A signature appears to be present - \"FIRMA\" - \"FECHA DE NACIMIENTO 27-NOV-1970\" - \"CHIMA (SANTANDER)\" - \"LUGAR DE NACIMIENTO\" - \"1.61 B+ M\" - \"ESTATURA G.S. RH SEXO\" - \"03-OCT-1990 CUCUTA\" - \"FECHA Y LUGAR DE EXPEDICION\" - There's a fingerprint image - There's a photo of a person - There's a barcode at the bottom - \"INDICE DERECHO\" - \"REGISTRADOR NACIONAL\" - Various other reference numbers and codes 2. **PRIORITY CHECKS** This is definitely not BLANK - there's substantial content. This is not LINK_ONLY - there are no URLs or redirections. 3. **DOCUMENT FUNCTION ANALYSIS (CRITICAL STEP)** This document is clearly a personal identification document. The main purpose is to identify an individual person named Norberto Fuentes Leon. It contains: - Personal biographical data (date of birth, place of birth, blood type, sex, height) - Individual references with photograph, signature and fingerprint - Government-issued personal identification number (36.199.170) - Security elements (barcode, official design) This fits perfectly with CECRL indicators. 4. **ISSUER IDENTIFICATION** This is issued by the Republic of Colombia (\"REPUBLICA DE COLOMBIA\") for personal identification purposes, which is a government identification authority. I verify the document meets comprehensive identification criteria through multiple authenticating elements. The Colombian national identification card provides robust personal verification with photographic, biometric, and official government validation markers. Key authentication indicators include precise personal details, official government registration, and multiple security features confirming individual identity within the República de Colombia's official documentation system. The national identification card contains comprehensive personal data including physical characteristics, birthplace, issuance details, and unique biometric markers like right index fingerprint.",
+          "signature": "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"
+        },
+        {
+          "type": "text",
+          "text": "```json { \"category\": \"CECRL\", \"text\": \"REPUBLICA DE COLOMBIA\\nIDENTIFICACION PERSONAL\\nCEDULA DE CIUDADANIA\\n36.199.170\\nFUENTES LEON\\nAPELLIDOS\\nNORBERTO\\nNOMBRES\\nFIRMA\\nFECHA DE NACIMIENTO 27-NOV-1970\\nCHIMA\\n(SANTANDER)\\nLUGAR DE NACIMIENTO\\n1.61 B+ M\\nESTATURA G.S. RH SEXO\\n03-OCT-1990 CUCUTA\\nFECHA Y LUGAR DE EXPEDICION\\nINDICE DERECHO\\nREGISTRADOR NACIONAL\\nCARLOS ARIEL SANCHEZ TORRES\\nA-4000100-002069T0-M-008919917O-20091229 001942343GA 1 1730606305\" } ```"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 1584,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 3150,
+        "output_tokens": 1113
+      }
+    },
+    "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 8000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "expected_category": "CECRL",
+  "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+  "api_used": "invoke_model",
+  "pdf_info": {
+    "original_size": 177615,
+    "first_page_size": 173116,
+    "is_scanned": true
+  }
+}

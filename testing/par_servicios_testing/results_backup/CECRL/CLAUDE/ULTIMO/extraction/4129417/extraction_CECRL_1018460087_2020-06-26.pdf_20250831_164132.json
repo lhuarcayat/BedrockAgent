@@ -1,0 +1,88 @@
+{
+  "extraction_data": {
+    "result": {
+      "FirstName": "DIEGO FERNANDO",
+      "LastName": "OVALLE BAYER",
+      "CountryIssuer": "Colombia",
+      "Nationality": "colombiana",
+      "IdentificationType": "Cédula de Ciudadanía",
+      "IdentificationNumber": "1.018.460.087",
+      "Message": ""
+    },
+    "document_type": "person",
+    "category": "CECRL"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "```json { \"result\": { \"FirstName\": \"DIEGO FERNANDO\", \"LastName\": \"OVALLE BAYER\", \"CountryIssuer\": \"Colombia\", \"Nationality\": \"colombiana\", \"IdentificationType\": \"Cédula de Ciudadanía\", \"IdentificationNumber\": \"1.018.460.087\", \"Message\": \"\" }, \"document_type\": \"person\", \"category\": \"CECRL\" } ```"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 1583,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 4300,
+      "output_tokens": 741
+    },
+    "ResponseMetadata": {
+      "RequestId": "d947d1da-5bdd-42cc-b188-33a7eed502bb",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Sun, 31 Aug 2025 21:41:31 GMT",
+        "content-type": "application/json",
+        "content-length": "6068",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "d947d1da-5bdd-42cc-b188-33a7eed502bb",
+        "x-amzn-bedrock-invocation-latency": "19775",
+        "x-amzn-bedrock-cache-write-input-token-count": "0",
+        "x-amzn-bedrock-cache-read-input-token-count": "4300",
+        "x-amzn-bedrock-output-token-count": "741",
+        "x-amzn-bedrock-input-token-count": "1583"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_01KF6XVsjFNQwxLqZLQuAXLx",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-sonnet-4-20250514",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Let me analyze this Colombian identification document carefully following the extraction methodology. First, let me identify the document type: - The header says \"REPUBLICA DE COLOMBIA\" and \"IDENTIFICACION PERSONAL\" and \"CEDULA DE CIUDADANIA\" - This is clearly a Colombian Citizenship Card (Cédula de Ciudadanía) Now let me extract the information using structured label detection: 1. **IdentificationNumber**: I can see \"NUMERO: 1.018.460.087\" - this appears to be properly aligned 2. **LastName**: I can see \"OVALLE BAYER\" after the number, and there's an \"APELLIDOS\" label with \"DIEGO FERNANDO\" underneath it 3. **FirstName**: I can see a \"NOMBRES\" label, but the text appears to be handwritten and looks like \"Diego F. Ovalle B\" or something similar Wait, let me re-examine this more carefully. This looks like it might be a case of Colombian document misalignment that's mentioned in the extraction methodology. Looking at the structure: - \"NUMERO: 1.018.460.087\" - \"OVALLE BAYER\" (this appears right after the number) - \"APELLIDOS\" label followed by \"DIEGO FERNANDO\" - \"NOMBRES\" label with what appears to be a signature area This seems to follow the pattern described in the methodology for Colombian documents where there's misalignment. The methodology specifically mentions: \"This misalignment occurs in Colombian documents, where the surnames appear first and then the label \"APELLIDOS\" along with the first name(s) and finally the label \"NAMES\" appears, In this case, the 'text' that appears in \"APELLIDOS\" is actually the name and belongs to the \"NAMES\" label.\" So analyzing this: - The \"OVALLE BAYER\" that appears after NUMERO is likely the last names - The \"DIEGO FERNANDO\" after APELLIDOS confirms the first names - The document provides a complete identification profile with standard Colombian citizenship card details I'll extract the key identification information systematically, noting the precise details from the document's structured layout.",
+          "signature": "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"
+        },
+        {
+          "type": "text",
+          "text": "```json { \"result\": { \"FirstName\": \"DIEGO FERNANDO\", \"LastName\": \"OVALLE BAYER\", \"CountryIssuer\": \"Colombia\", \"Nationality\": \"colombiana\", \"IdentificationType\": \"Cédula de Ciudadanía\", \"IdentificationNumber\": \"1.018.460.087\", \"Message\": \"\" }, \"document_type\": \"person\", \"category\": \"CECRL\" } ```"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 1583,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 4300,
+        "output_tokens": 741
+      }
+    },
+    "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 8000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+  "api_used": "invoke_model"
+}

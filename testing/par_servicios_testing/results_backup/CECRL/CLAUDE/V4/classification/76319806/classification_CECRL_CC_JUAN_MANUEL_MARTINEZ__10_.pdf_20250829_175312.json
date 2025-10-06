@@ -1,0 +1,87 @@
+{
+  "classification_data": {
+    "category": "CECRL",
+    "text": "REPUBLICA DE COLOMBIA IDENTIFICACION PERSONAL CEDULA DE CIUDADANIA NUMERO 76319806 MARTINEZ FERNANDEZ APELLIDOS JUAN MANUEL NOMBRES FIRMA",
+    "document_number": "76319806",
+    "path": "CECRL/76319806/CC_JUAN_MANUEL_MARTINEZ__10_.pdf"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "```json { \"category\": \"CECRL\", \"text\": \"REPUBLICA DE COLOMBIA\\nIDENTIFICACION PERSONAL\\nCEDULA DE CIUDADANIA\\nNUMERO 76319806\\nMARTINEZ FERNANDEZ\\nAPELLIDOS\\nJUAN MANUEL\\nNOMBRES\\nFIRMA\" } ```"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 9,
+      "cache_creation_input_tokens": 4753,
+      "cache_read_input_tokens": 0,
+      "output_tokens": 657
+    },
+    "ResponseMetadata": {
+      "RequestId": "1533399d-e513-40db-ab63-a68909db0711",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Fri, 29 Aug 2025 22:53:01 GMT",
+        "content-type": "application/json",
+        "content-length": "5552",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "1533399d-e513-40db-ab63-a68909db0711",
+        "x-amzn-bedrock-invocation-latency": "13015",
+        "x-amzn-bedrock-cache-write-input-token-count": "4753",
+        "x-amzn-bedrock-cache-read-input-token-count": "0",
+        "x-amzn-bedrock-output-token-count": "657",
+        "x-amzn-bedrock-input-token-count": "9"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_01E2QwRZH8bpVzVGgR7r2N9W",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-sonnet-4-20250514",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Let me analyze this document step by step following the classification workflow. 1. **TEXT EXTRACTION** Looking at the PDF image, I can see: - \"REPUBLICA DE COLOMBIA\" - \"IDENTIFICACION PERSONAL\" - \"CEDULA DE CIUDADANIA\" - \"NUMERO 76319806\" - \"MARTINEZ FERNANDEZ\" - \"APELLIDOS\" - \"JUAN MANUEL\" - \"NOMBRES\" - There's a signature area labeled \"FIRMA\" - There's a photograph of a person 2. **PRIORITY CHECKS** - Not BLANK - there's meaningful content - Not LINK_ONLY - no hyperlinks or URLs 3. **DOCUMENT FUNCTION ANALYSIS** This document's PRIMARY PURPOSE is personal identification. It's a Colombian national ID card (cedula de ciudadania) that serves to identify an individual person named Juan Manuel Martinez Fernandez. The main value is providing official identification for this specific person. 4. **ISSUER IDENTIFICATION** This appears to be issued by Colombian government identification authorities (not DIAN, not Chamber of Commerce). 5. **CATEGORY CLASSIFICATION** Let me evaluate in order: **CECRL**: This fits perfectly: - Individual identification terminology: \"IDENTIFICACION PERSONAL\", \"CEDULA DE CIUDADANIA\" - Personal biographical data: Individual name (Juan Manuel Martinez Fernandez) - Individual photo present - Government-issued personal ID number (76319806) with individual name - Security elements: Official format, photo - Issued by government identification authorities (Republic of Colombia) - Key patterns match: \"REPUBLICA DE COLOMBIA IDENTIFICACION PERSONAL\", \"CEDULA DE CIUDADANIA NUMERO\" - Focus on ONE individual person - Contains official government identification elements This clearly matches all the must-have indicators for CECRL and none of the red flags. **RUT**: No - this is not a DIAN tax document, no tax terminology present",
+          "signature": "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"
+        },
+        {
+          "type": "text",
+          "text": "```json { \"category\": \"CECRL\", \"text\": \"REPUBLICA DE COLOMBIA\\nIDENTIFICACION PERSONAL\\nCEDULA DE CIUDADANIA\\nNUMERO 76319806\\nMARTINEZ FERNANDEZ\\nAPELLIDOS\\nJUAN MANUEL\\nNOMBRES\\nFIRMA\" } ```"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 9,
+        "cache_creation_input_tokens": 4753,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 657
+      }
+    },
+    "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 8000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "expected_category": "CECRL",
+  "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+  "api_used": "invoke_model",
+  "pdf_info": {
+    "original_size": 625017,
+    "first_page_size": 205446,
+    "is_scanned": true
+  }
+}

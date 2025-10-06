@@ -1,0 +1,183 @@
+{
+  "document_name": "6820960_2020-02-29.pdf",
+  "category": "CECRL",
+  "classification_success": true,
+  "extraction_success": true,
+  "overall_success": true,
+  "timestamp": "2025-08-29T10:42:31.346316",
+  "classification_result": {
+    "classification_data": {
+      "category": "CECRL",
+      "text": "REPÚBLICA DE COLOMBIA IDENTIFICACIÓN PERSONAL CÉDULA DE CIUDADANÍA NÚMERO 5.820.956 MONTES MONTES APELLIDOS JORGE EMILIO NOMBRES SINCELEJO (SUCRE) 05-SEP-1955 1.73 M 04-JUN-1977 SINCELEJO FECHA Y LUGAR DE EXPEDICIÓN A-24001004-52-178852540-400952096-L-20420402 00018-20494H 01 +2435 1913",
+      "document_number": "6820960",
+      "path": "CECRL/6820960/6820960_2020-02-29.pdf"
+    },
+    "raw_response": {
+      "output": {
+        "message": {
+          "content": [
+            {
+              "text": "```json { \"category\": \"CECRL\", \"text\": \"REPÚBLICA DE COLOMBIA\\nIDENTIFICACIÓN PERSONAL\\nCÉDULA DE CIUDADANÍA\\nNÚMERO 5.820.956\\nMONTES MONTES\\nAPELLIDOS\\nJORGE EMILIO\\nNOMBRES\\nSINCELEJO\\n(SUCRE)\\n05-SEP-1955\\n1.73\\nM\\n04-JUN-1977 SINCELEJO\\nFECHA Y LUGAR DE EXPEDICIÓN\\nA-24001004-52-178852540-400952096-L-20420402\\n00018-20494H 01 +2435 1913\" } ```"
+            }
+          ]
+        }
+      },
+      "stopReason": "end_turn",
+      "usage": {
+        "input_tokens": 9,
+        "cache_creation_input_tokens": 4549,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 591
+      },
+      "ResponseMetadata": {
+        "RequestId": "b7290292-aa73-4d61-a596-50367dea1cbf",
+        "HTTPStatusCode": 200,
+        "HTTPHeaders": {
+          "date": "Fri, 29 Aug 2025 15:42:45 GMT",
+          "content-type": "application/json",
+          "content-length": "4030",
+          "connection": "keep-alive",
+          "x-amzn-requestid": "b7290292-aa73-4d61-a596-50367dea1cbf",
+          "x-amzn-bedrock-invocation-latency": "13026",
+          "x-amzn-bedrock-cache-write-input-token-count": "4549",
+          "x-amzn-bedrock-cache-read-input-token-count": "0",
+          "x-amzn-bedrock-output-token-count": "591",
+          "x-amzn-bedrock-input-token-count": "9"
+        },
+        "RetryAttempts": 0
+      },
+      "raw_anthropic_response": {
+        "id": "msg_bdrk_01Wbb7eFYCjqESPsRQEZx2ck",
+        "type": "message",
+        "role": "assistant",
+        "model": "claude-sonnet-4-20250514",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "Looking at this document, I need to extract all the visible text and then classify it. From the document, I can see two identity-style documents: Top document: - \"REPÚBLICA DE COLOMBIA\" - \"IDENTIFICACIÓN PERSONAL\" - \"CÉDULA DE CIUDADANÍA\" - \"NÚMERO 5.820.956\" - \"MONTES MONTES\" - \"APELLIDOS\" - \"JORGE EMILIO\" - \"NOMBRES\" - There's a signature and what appears to be a photo Bottom document: - \"SINCELEJO\" - \"(SUCRE)\" - \"05-SEP-1955\" (appears to be a date) - \"1.73\" (appears to be height) - \"M\" (likely gender) - \"04-JUN-1977 SINCELEJO\" - There's a fingerprint and barcode - Various other fragmentary text This appears to be a Colombian identity card (Cédula de Ciudadanía). The key indicators are: - \"REPÚBLICA DE COLOMBIA\" - \"IDENTIFICACIÓN PERSONAL\" - \"CÉDULA DE CIUDADANÍA\" - Personal information (name, number) - Photo and signature - Fingerprint - Biographical data (birth date, place) This clearly fits the CECRL category as it's an official personal identification document with all the typical characteristics: - Individual identification terminology - Personal biographical data - Individual photo, signature, fingerprint - Government-issued personal ID number with individual name - Security elements Let me extract all the visible text carefully:",
+            "signature": "EqULCkgIBxABGAIqQKhk2UZNSyUL55/20+nll/hKGm4+Dto2iHwGFow/WWuqmUtpmHsl1p1qodhXTloD/Nu4HejUxvbEQtAvtnOnDWASDPwUrND1nj/yvdS66hoMShPNNJYdIluskRhLIjBZy2M8RyF7wnnfWHny2xb0HOLZw9R5l2ofyxgJkIYNRLT1EEOxy+kwrSNyOiE03Vkqigrsr/+gWInVL2+MgDraOyZUZNZNptOLPQgwA2WgvbnIouBSfPbik1MMo1KFuyPh3ZNqBg4UtkyXSqiyc62DKRa7pyOWqvoWOyQ7f9JnSN0Nn6yXaho+awltH7zJ+pBZTb3gDrUUYO7hc9A6wz8qTFfWf/ax4sSWUSso027lsvchJS17ASps5iSmlZVvBKl90feLLYulnD/rBV+hcJcD9NMFqGvvDg9IbfE5UUCXqQCOppqsXp7TCbilp9KvrhnrbnYv4fTN6ygbpmVVB26J7MBzGoHMhwJjfD5Bg5zNtHZFvy3ZDw632PBj0SMtUbVE2y9pX7vtS26NNbBXhYt0BW7PRi5qSolubpWfIXCGNKsTAhm11PvRWVTkOv+bMBAVlGMVP9ULfgzqpmwI8VWCcFe9SBF5yJUnDYX/IuGUypGB2enwPSrBTRfnX7hMTtXLKLwA1ZOU5cHsCj4decRDCf5fnVAeTYikqq1r42gQAIjmaBPYbLIE6w5v8p3IJsXkCEKEzgzl/iHxboCVsYRJBafkNJMwHw6GOxfoUCccV02gIq5S/4NWaQ17eBDGNQSIV24yzRl1hQKXq1YgfvkF5XY8/w4Y8miwkk4y6uQgF/AFa/ao0pL6Qsv7UkJC/2ev+o7emIqAkR2FaciC3E4pPDbnza9/GgwoNjKyCTEatjQ5COgVNWmIMLt63MiyzjmSICYwvemXJw5l6jeg6BqHj+4ZxeoGlmk6pvgOmoHs0f2IoxdWoHJphtGo7rKFUC2d6DrbDAjMnZpWhQkH/PiHfL4AyFZ95od/VXqZ9C0EH/nCfu3EZYxkMmSTeOQ8CG1rYtNuIECJu8EG08BXfaXGFuieen8qdQQNDQ0y/M4+F4u9Kf8ElZo0FdgyerHupPH3nhhKq0KT9EgyFqS0zVTAagtwumM7pgtTrq+D5qz+NpZaS0MNz90G2c7W1Bt3WBbJCOrTJh/w9vMb0NBWN3pVpLq85YUrO8k6lIixumcWMbQtD3cmgLFeK+Uxm63ettLNkSVqruuPe9qBKDXtbqMb7y80Fh1UIoRUltLzkL2sYAL1/mgX+b0KUP9mLaLemA5IH5Cl4OkcTtKh1V5dDBcexw/7m6bIs96y1c3u2629pd4k2UpcHAuQO4l0lRkSHsdRRKCnEnha4bPJbKvgdb7pVh2XqnSrL45c/YZKxhu5I6KfcfWe1ECjtAjaZYbvWD8T3h6u2Wl836phlVD/Hb+4Nl4X2greLJqe1N+Zg/vGYuNurhiWnw49fv/CeT6bsDfIiNgQyz6+hgKzWWGzSeQX3+7GGdSiZkYArJx28/VR/nPGWnWHCzj4lL/kUq4EAO8P/xZeE5OcKZ3IO2MGMHBWj3r4uYsDJDPefMp942lUZxabcOzEeZFWT4+QX85TWk+C3h1YL5bZ1l1JfqyGdF+ZfLV5IsyApTVR+AL+bZlqhq1FwVNlOygxUMPhdI8Sm7/kR3BN6VGDJ9TwtqIVnrC02xDQgjgF2H2PwUEpph3tI5VSn9gUCK5NmT9Irb/1vsBicsQAJeRZNE8RcQeSq6alGeW6QtVr0enEN7OLLD9WYCM23xjvDAIlBx8uEmctHmtyhDL2XDCVEC7mypTHXJWG61AIOMSY0NpaYprh/jcMf/vnC4p62BP9CsahnjFCwrvGGJPxNDN+0vF6yvOxgk6hdb4kewTZ30GTP9ybXSd5taWaTRaIShVCYXb8sVQYAQ=="
+          },
+          {
+            "type": "text",
+            "text": "```json { \"category\": \"CECRL\", \"text\": \"REPÚBLICA DE COLOMBIA\\nIDENTIFICACIÓN PERSONAL\\nCÉDULA DE CIUDADANÍA\\nNÚMERO 5.820.956\\nMONTES MONTES\\nAPELLIDOS\\nJORGE EMILIO\\nNOMBRES\\nSINCELEJO\\n(SUCRE)\\n05-SEP-1955\\n1.73\\nM\\n04-JUN-1977 SINCELEJO\\nFECHA Y LUGAR DE EXPEDICIÓN\\nA-24001004-52-178852540-400952096-L-20420402\\n00018-20494H 01 +2435 1913\" } ```"
+          }
+        ],
+        "stop_reason": "end_turn",
+        "stop_sequence": null,
+        "usage": {
+          "input_tokens": 9,
+          "cache_creation_input_tokens": 4549,
+          "cache_read_input_tokens": 0,
+          "output_tokens": 591
+        }
+      },
+      "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+      "api_used": "invoke_model",
+      "model_params": {
+        "max_tokens": 8000,
+        "top_p": 1,
+        "temperature": 1,
+        "thinking": {
+          "type": "enabled",
+          "budget_tokens": 4096
+        }
+      }
+    },
+    "expected_category": "CECRL",
+    "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model",
+    "pdf_info": {
+      "original_size": 315707,
+      "first_page_size": 311205,
+      "is_scanned": true
+    }
+  },
+  "extraction_result": {
+    "extraction_data": {
+      "result": {
+        "firstName": "JORGE EMILIO",
+        "lastName": "MONTES MONTES",
+        "country_issuer": "Colombia",
+        "nationality": "Colombia",
+        "identificationType": "Cédula de Ciudadanía",
+        "identificationNumber": "5.820.866",
+        "message": ""
+      },
+      "document_type": "person",
+      "category": "CECRL"
+    },
+    "raw_response": {
+      "output": {
+        "message": {
+          "content": [
+            {
+              "text": "```json { \"result\": { \"firstName\": \"JORGE EMILIO\", \"lastName\": \"MONTES MONTES\", \"country_issuer\": \"Colombia\", \"nationality\": \"Colombia\", \"identificationType\": \"Cédula de Ciudadanía\", \"identificationNumber\": \"5.820.866\", \"message\": \"\" }, \"document_type\": \"person\", \"category\": \"CECRL\" } ```"
+            }
+          ]
+        }
+      },
+      "stopReason": "end_turn",
+      "usage": {
+        "input_tokens": 10,
+        "cache_creation_input_tokens": 5982,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 508
+      },
+      "ResponseMetadata": {
+        "RequestId": "03c55578-5a9e-44d0-b91e-2ff9f1d23e1d",
+        "HTTPStatusCode": 200,
+        "HTTPHeaders": {
+          "date": "Fri, 29 Aug 2025 15:42:54 GMT",
+          "content-type": "application/json",
+          "content-length": "3988",
+          "connection": "keep-alive",
+          "x-amzn-requestid": "03c55578-5a9e-44d0-b91e-2ff9f1d23e1d",
+          "x-amzn-bedrock-invocation-latency": "8785",
+          "x-amzn-bedrock-cache-write-input-token-count": "5982",
+          "x-amzn-bedrock-cache-read-input-token-count": "0",
+          "x-amzn-bedrock-output-token-count": "508",
+          "x-amzn-bedrock-input-token-count": "10"
+        },
+        "RetryAttempts": 0
+      },
+      "raw_anthropic_response": {
+        "id": "msg_bdrk_01PCVWzp5NHsZ3hMcu4R8Ahz",
+        "type": "message",
+        "role": "assistant",
+        "model": "claude-sonnet-4-20250514",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "Let me examine this Colombian identification document carefully. Looking at document 1, I can see: - This is a Colombian ID document - Header says \"REPÚBLICA DE COLOMBIA\" - It says \"IDENTIFICACIÓN PERSONAL\" - \"CÉDULA DE CIUDADANÍA\" - Number: 5.820.866 For names: - I can see \"MONTES MONTES\" under APELLIDOS - I can see \"JORGE EMILIO\" under what appears to be NOMBRES Looking more closely at the document structure: - The top shows \"REPÚBLICA DE COLOMBIA\" - \"IDENTIFICACIÓN PERSONAL\" - \"CÉDULA DE CIUDADANÍA\" - \"NÚMERO: 5.820.866\" - \"APELLIDOS: MONTES MONTES\" - \"NOMBRES: JORGE EMILIO\" There's also a second document below with fingerprint information, but it seems to be a separate supporting document. The main ID document is the top one. So extracting from the main document: - firstName: \"JORGE EMILIO\" (from NOMBRES field) - lastName: \"MONTES MONTES\" (from APELLIDOS field) - country_issuer: \"Colombia\" (from header \"REPÚBLICA DE COLOMBIA\") - nationality: \"Colombia\" (same as issuer, no explicit nationality field visible) - identificationType: \"Cédula de Ciudadanía\" (clearly stated) - identificationNumber: \"5.820.866\" (from NÚMERO field) - message: \"\" (document appears to be official Colombian ID, all fields extracted successfully)",
+            "signature": "EpoLCkgIBxABGAIqQAbidx3+9RM0QZoR2CmAUKUX4x3KC/N3zCLJFPtFFyl8XF5vEyDqiMfC2fRqcUHXBg6TVkxr+8T/pak5TDruYXgSDM3QQmBMVKcWZZT36BoMvYS6qOcXCoa5voA5IjDDLoxpa/rmOlWw/EWjUvqT+Qhk0IAF61HqoMpFWHfpvq3rJTrQxUeh8yiIlu5Xd8sq/wkgCX1VTF8u7aeNJTqWTVyb+weVp4uOvNHeCa53WFYZVQh7SK3Y+xmf9sJsunpw1HaUNTB3VWl4z+La5vEvFTLNpeJkWnWaL8eXkhDooJ6Ntbbjqepr4vVliIBEeIbXJUg5fB353IwL/qblHbiXDlJ3Zt9N7Cq1odLAaPRwdS8GtFzpZrn1PMPJQW3jveQHSpNs0iLuDmeiGEo2sREyUpVVVl0hKPk/M6kfZmVCGkjYCfbmxPIFgTy9MYS2rq1h5jg2ieFeTDe7EbQ5FNF5DUWmcyBq2S1pQlwpHonpVcsl29daWGJFiCspRz4zShOhFEdiqkWAt52eKZX7qbI7tSnk1qScrugqBKYkyv6UQ61Ql5zfBBks+CMI2pBjmeK47Sgi1oIoAVTBk5boTsE3UlA8/PGU/XnDjlHg4LvgvpyfhazwsIdvW0XQelxd91X+c9UBJq1t19/hiMtjGhbLeVyD8TQXCiUKTwcpyq5VvliCAXzfQi9FT1z1GH0GpJlsyLnMwGim080uqrqW7GfxFMzIXZ8G6Eeigvg5jU3XbV5arAC0QHjO28tP0/EdATY0XbCrsG/5WnfIUBM9T19w3hg4mnuPxauDP4xwDX1RTMRGZdHWDlVnQkgUS1FgSspYgad/vYZRsIasnEfV5mHuhDnWqjwVQD1Os5ShWJeqpWutbR/Z983cr7Z+3l4nYafzSLwD465KHQPslwm5cSkc2ZlCn8FJwUR+amJGVGEeLJdPWWOW3T+fZDHl6FVZ3oXCYz1g1Ab4mkaHewixxv9Q4YhhYsIIQ/GLTMTBlJI0s3dmF6q0vJjkcyP7Tzv2Jcn/6lYhKP/fKFKXdCUisWy8ThFRrsGllv7hWDacAgaSCipiGNduCc8hQHYTjJBNiIDc7kt5lLmr6eSEx++8oAlUi0yXhCMl6PI55DyPHJJNJrgD6BJPmxuSpxEnI2j2q4gDswPcxIvTE0q5tLX+kD0IsRZzYgFAGx6uvIsi/RGhIh3OK9FeucYQUXFbgNwWmmk1fqmpV/tqLhS59daud+rBPVjAft+movyrv1BGvHBV8v59cI2/saBGgh4Bp+89RhrnPnswvo9a1hBzg3k4b+lh1KRYgxVmxtA8v7YmOyMfeBF3sZKe+EEzUzxaoqALU2+yz6VSLTbc5BTZbOlJcCBXPReD/AyWoaBuNxXulnwMeQ1PzzedENMneJDdd/OyOl6RU5RmvVENj7Ukrd2TZLbzKo25lETETxCFIRWQmE9d4CrlTbZQ2KM3rcD2E9PN5tdIDb7uj3M90BJew8jUbbtKenDEJC74/19xLGIo4ComShE2aTucLcXXjAorZ3ls6akX95djmeEPnEpMUBwgJmiqSHnctCOus19PntBMkccVsAt1laOM74Yb7IH32cIBJ7/11WeSTvBuocPmBXNj2YYOwSMnOznieKEd8F7MrPkl1byV/x9a12DbR8MMm4pdRbFe4stvPl8HPYRPh7aICezFD0iepsjNnOn6jJDmgaMXsxioc8qnCRRdSLM4ho8xKQxaCfTvYzBMkrqU1DiJWhEHhULfqcaSa+a7lZGeB9l3eYKoXcK72zLAgreSpQjPTYJMiNkTNdOKcI1gqjM5scdk8Ucdmr2bsClHYlU0TPvkKCtSxTXEjhyw46N1kNzrS5HA3HOLM06AZABMLyIdYdIkrthEUIAmJMU5riarAybiCwZpGAE="
+          },
+          {
+            "type": "text",
+            "text": "```json { \"result\": { \"firstName\": \"JORGE EMILIO\", \"lastName\": \"MONTES MONTES\", \"country_issuer\": \"Colombia\", \"nationality\": \"Colombia\", \"identificationType\": \"Cédula de Ciudadanía\", \"identificationNumber\": \"5.820.866\", \"message\": \"\" }, \"document_type\": \"person\", \"category\": \"CECRL\" } ```"
+          }
+        ],
+        "stop_reason": "end_turn",
+        "stop_sequence": null,
+        "usage": {
+          "input_tokens": 10,
+          "cache_creation_input_tokens": 5982,
+          "cache_read_input_tokens": 0,
+          "output_tokens": 508
+        }
+      },
+      "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+      "api_used": "invoke_model",
+      "model_params": {
+        "max_tokens": 8000,
+        "top_p": 1,
+        "temperature": 1,
+        "thinking": {
+          "type": "enabled",
+          "budget_tokens": 4096
+        }
+      }
+    },
+    "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model"
+  }
+}

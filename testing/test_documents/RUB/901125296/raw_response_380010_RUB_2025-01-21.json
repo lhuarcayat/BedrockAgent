@@ -1,0 +1,33 @@
+{
+  "ResponseMetadata": {
+    "RequestId": "44f65876-a9ac-4244-a90c-ea2c05dee929",
+    "HTTPStatusCode": 200,
+    "HTTPHeaders": {
+      "date": "Tue, 17 Jun 2025 14:27:56 GMT",
+      "content-type": "application/json",
+      "content-length": "1390",
+      "connection": "keep-alive",
+      "x-amzn-requestid": "44f65876-a9ac-4244-a90c-ea2c05dee929"
+    },
+    "RetryAttempts": 0
+  },
+  "output": {
+    "message": {
+      "role": "assistant",
+      "content": [
+        {
+          "text": "```json\n{\n  \"path\": \"s3://par-servicios-poc-dev-filling-desk/par-servicios-poc/RUB/901125296/380010_RUB_2025-01-21.pdf\",\n  \"result\": {\n    \"companyName\": \"REPRESENTACIONES GRUPO ESCALANTE S.A.S.\",\n    \"country\": \"Colombia\",\n    \"documentType\": \"NIT\",\n    \"taxId\": \"901125296\",\n    \"relatedParties\": [\n      {\n        \"firstName\": \"ESCALANTE MONTOYA\",\n        \"lastName\": \"BERTA EUGENIA\",\n        \"identificationType\": \"Cédula de Ciudadanía\",\n        \"identificationNumber\": \"43722874\",\n        \"noveltyType\": \"Registro\",\n        \"participationPercentage\": \"80\"\n      },\n      {\n        \"firstName\": \"ESCALANTE\",\n        \"lastName\": \"MONTOYA\",\n        \"identificationType\": \"Cédula de Ciudadanía\",\n        \"identificationNumber\": \"1017213511\",\n        \"noveltyType\": \"Registro\",\n        \"participationPercentage\": \"20\"\n      }\n    ]\n  },\n  \"confidenceScores\": {\n    \"companyName\": 95,\n    \"documentType\": 90,\n    \"country\": 100,\n    \"taxId\": 100,\n    \"relatedParties\": 85\n  },\n  \"document_type\": \"company\",\n  \"document_number\": \"901125296\",\n  \"category\": \"RUB\"\n}\n```"
+        }
+      ]
+    }
+  },
+  "stopReason": "end_turn",
+  "usage": {
+    "inputTokens": 8126,
+    "outputTokens": 372,
+    "totalTokens": 8498
+  },
+  "metrics": {
+    "latencyMs": 8831
+  }
+}

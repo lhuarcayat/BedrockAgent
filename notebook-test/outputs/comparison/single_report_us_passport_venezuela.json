@@ -1,0 +1,70 @@
+{
+  "summary": {
+    "total_documents": 1,
+    "timestamp": "2025-08-15T15:38:12.068138",
+    "model_used": "us.amazon.nova-pro-v1:0"
+  },
+  "document_comparisons": {
+    "us_passport_venezuela": {
+      "document_name": "US Passport - Venezuela Birth",
+      "description": "Should fix nationality: Venezuela (not Estados Unidos)",
+      "expected_fixes": {
+        "nationality": "Venezuela"
+      },
+      "field_changes": {
+        "path": {
+          "changed": false,
+          "value": "s3://par-servicios-poc-qa-filling-desk/par-servicios-poc/CECRL/984174004/_2022-01-06.pdf"
+        },
+        "document_type": {
+          "changed": false,
+          "value": "person"
+        },
+        "confidenceScores": {
+          "changed": false,
+          "value": {
+            "firstName": 100,
+            "lastName": 100,
+            "country_issuer": 100,
+            "nationality": 100,
+            "identificationType": 100,
+            "identificationNumber": 100
+          }
+        },
+        "document_number": {
+          "changed": false,
+          "value": "test"
+        },
+        "category": {
+          "changed": false,
+          "value": "CECRL"
+        },
+        "result": {
+          "changed": true,
+          "old_value": {
+            "firstName": "Dirk Elric",
+            "lastName": "Adams",
+            "country_issuer": "Estados Unidos",
+            "nationality": "Estados Unidos",
+            "identificationType": "Pasaporte",
+            "identificationNumber": "566784278",
+            "message": ""
+          },
+          "new_value": {
+            "firstName": "Dirk Elric",
+            "lastName": "Adams",
+            "country_issuer": "Estados Unidos",
+            "nationality": "Venezuela",
+            "identificationType": "Pasaporte",
+            "identificationNumber": "566784278",
+            "message": ""
+          }
+        }
+      },
+      "success_status": {
+        "v2.0.0": true,
+        "v2.1.0": true
+      }
+    }
+  }
+}

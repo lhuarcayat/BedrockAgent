@@ -1,0 +1,87 @@
+{
+  "classification_data": {
+    "category": "ACC",
+    "text": "COMPOSICIÓN ACCIONARIA NOMBRE DE LA ENTIDAD: S & T INGENIERIA Y CONSULTORIA SAS NIT 802,013,773-0 INFORMACION A: 19 DE MAYO DEL AÑO 2020 % DE PARTICIPACIÓN SOBRE EL CAPITAL NOMBRE DEL ACCIONISTA | C.C. | NATURALEZA JURÍDICA DEL SOCIO | Nº DE ACCIONES | VALOR UNITARIO DE LAS ACCIONES TANIA ELENA CHEMAS AVENDAÑO | 32.728.993 | PERSONAL NATURAL | 280 | $ 1.000.000 | 50,00% FARID EDUARDO RADI SAGBINI | 77.025.796 | PERSONAL NATURAL | 280 | $ 1.000.000 | 50,00% TOTAL ACCIONES | 560 | 100% FARID EDUARDO RADI SAGBINI REPRESENTANTE LEGAL ZULMA OSPINO ALVAREZ CONTADOR TP-49271-T",
+    "document_number": "802013773",
+    "path": "ACC/802013773/186_CA_2020-02-29.pdf"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "```json { \"category\": \"ACC\", \"text\": \"COMPOSICIÓN ACCIONARIA\\nNOMBRE DE LA ENTIDAD: S & T INGENIERIA Y CONSULTORIA SAS\\nNIT 802,013,773-0\\nINFORMACION A: 19 DE MAYO DEL AÑO 2020\\n\\n% DE PARTICIPACIÓN SOBRE EL CAPITAL\\nNOMBRE DEL ACCIONISTA | C.C. | NATURALEZA JURÍDICA DEL SOCIO | Nº DE ACCIONES | VALOR UNITARIO DE LAS ACCIONES\\n\\nTANIA ELENA CHEMAS AVENDAÑO | 32.728.993 | PERSONAL NATURAL | 280 | $ 1.000.000 | 50,00%\\n\\nFARID EDUARDO RADI SAGBINI | 77.025.796 | PERSONAL NATURAL | 280 | $ 1.000.000 | 50,00%\\nTOTAL ACCIONES | 560 | 100%\\n\\nFARID EDUARDO RADI SAGBINI\\nREPRESENTANTE LEGAL\\n\\nZULMA OSPINO ALVAREZ\\nCONTADOR\\nTP-49271-T\" } ```"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 9,
+      "cache_creation_input_tokens": 4669,
+      "cache_read_input_tokens": 0,
+      "output_tokens": 1195
+    },
+    "ResponseMetadata": {
+      "RequestId": "f7321165-b37a-4814-9f8c-2b4e87f004b7",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Fri, 29 Aug 2025 19:41:27 GMT",
+        "content-type": "application/json",
+        "content-length": "7159",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "f7321165-b37a-4814-9f8c-2b4e87f004b7",
+        "x-amzn-bedrock-invocation-latency": "17199",
+        "x-amzn-bedrock-cache-write-input-token-count": "4669",
+        "x-amzn-bedrock-cache-read-input-token-count": "0",
+        "x-amzn-bedrock-output-token-count": "1195",
+        "x-amzn-bedrock-input-token-count": "9"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_01GUfwXqmUoWPxeFBhADHCQB",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-sonnet-4-20250514",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Let me carefully analyze this document step by step. 1. **TEXT EXTRACTION** Let me extract all visible text from the document: COMPOSICIÓN ACCIONARIA NOMBRE DE LA ENTIDAD: S & T INGENIERIA Y CONSULTORIA SAS INFORMACIÓN A: 19 DE MAYO DEL AÑO 2020 NIT 802,013,773-0 % DE PARTICIPACIÓN SOBRE EL CAPITAL NOMBRE DEL ACCIONISTA | C.C. | NATURALEZA JURÍDICA DEL SOCIO | Nº DE ACCIONES | VALOR UNITARIO DE LAS ACCIONES TANIA ELENA CHEMAS AVENDAÑO | 32.728.993 | PERSONAL NATURAL | 280 | $1.000.000 | 50,00% FARID EDUARDO RADI SAGBINI | 77.025.796 | PERSONAL NATURAL | 280 | $1.000.000 | 50,00% TOTAL ACCIONES | 560 | 100% Signed by: FARID EDUARDO RADI SAGBINI REPRESENTANTE LEGAL ZULMA OSPINO ALVAREZ CONTADOR TP-49271-T 2. **PRIORITY CHECKS** This is not BLANK (has meaningful content) and not LINK_ONLY (no hyperlinks). 3. **DOCUMENT FUNCTION ANALYSIS** What is the PRIMARY PURPOSE of this document's content? - The document is titled \"COMPOSICIÓN ACCIONARIA\" (Shareholding Composition) - It shows the ownership structure of a company called \"S & T INGENIERIA Y CONSULTORIA SAS\" - It lists shareholders with: - Names and ID numbers - Number of shares (280 each) - Unit value of shares ($1,000,000) - Ownership percentages (50% each) - Total shares (560) - The primary function is to document the shareholding structure/ownership composition I observe a corporate ownership document detailing two shareholders with equal 50% stakes. The company S & T INGENIERIA Y CONSULTORIA SAS has 560 total shares, each valued at $1,000,000. The document provides a clear breakdown of ownership, signed by the legal representative and company accountant. The document definitively falls under the ACC (Accionaria) category, demonstrating precise shareholding details with names, identification numbers, and share allocations. Its primary purpose is transparently documenting the company's ownership structure.",
+          "signature": "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"
+        },
+        {
+          "type": "text",
+          "text": "```json { \"category\": \"ACC\", \"text\": \"COMPOSICIÓN ACCIONARIA\\nNOMBRE DE LA ENTIDAD: S & T INGENIERIA Y CONSULTORIA SAS\\nNIT 802,013,773-0\\nINFORMACION A: 19 DE MAYO DEL AÑO 2020\\n\\n% DE PARTICIPACIÓN SOBRE EL CAPITAL\\nNOMBRE DEL ACCIONISTA | C.C. | NATURALEZA JURÍDICA DEL SOCIO | Nº DE ACCIONES | VALOR UNITARIO DE LAS ACCIONES\\n\\nTANIA ELENA CHEMAS AVENDAÑO | 32.728.993 | PERSONAL NATURAL | 280 | $ 1.000.000 | 50,00%\\n\\nFARID EDUARDO RADI SAGBINI | 77.025.796 | PERSONAL NATURAL | 280 | $ 1.000.000 | 50,00%\\nTOTAL ACCIONES | 560 | 100%\\n\\nFARID EDUARDO RADI SAGBINI\\nREPRESENTANTE LEGAL\\n\\nZULMA OSPINO ALVAREZ\\nCONTADOR\\nTP-49271-T\" } ```"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 9,
+        "cache_creation_input_tokens": 4669,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 1195
+      }
+    },
+    "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 8000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "expected_category": "ACC",
+  "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+  "api_used": "invoke_model",
+  "pdf_info": {
+    "original_size": 53159,
+    "first_page_size": 51968,
+    "is_scanned": true
+  }
+}

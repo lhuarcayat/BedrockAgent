@@ -1,0 +1,199 @@
+{
+  "document_name": "322_CA_2020-02-29.pdf",
+  "category": "ACC",
+  "classification_success": true,
+  "extraction_success": true,
+  "overall_success": true,
+  "timestamp": "2025-08-28T02:35:35.773435",
+  "classification_result": {
+    "classification_data": {
+      "category": "ACC",
+      "text": "SYS® TECHNOLOGIES LTDA. Ciencia agricola cultivando soluciones Bogotá D.C., Noviembre 27 de 2019 REF. CERTIFICACION ACIONARIA El suscrito contador de la compañía SYS TECHNOLOGIES LTDA. Nit. 830.110.750-9, se permite certificar que el capital social de esta compañía está constituido de la siguiente forma: SOCIO DOC. IDENTIDAD APAORTES PARTICIPACION ALVAROA. MORENO FLOREZ 79.506.344 $935,000.000 55% ANÁ MANUELA MORENO ARIZA 1,034.776.525 $255,000.000 15% ALVAROMIGUEL MORENO ARIZA 1.034.784.418 $255,000.000 15% SAMUEL JOSE MORENO PEÑARANDA 1.034.779.893 $85,000.000 5% GABRIELASOFIA MORENO P. 1.034.782.594 $85,000.000 5% DANIELSANTIAGO MORENO P. 1.034.784.628 $85,000.000 5% TOTALES $1.700.000.000 100% Cordialmente, GERARDO ANTONIO ROMERO GARZON C.C. 79.482.936 de Bogotá TP 51557-T www.gruposys.com.co gerencia@gruposys.com.co CALLE 23D No.80B - 34MODELIA PBX:755 73 29 - 805 09 21Bogotá D.C. Colombia",
+      "document_number": "830110750",
+      "path": "ACC/830110750/322_CA_2020-02-29.pdf"
+    },
+    "raw_response": {
+      "ResponseMetadata": {
+        "RequestId": "cdcc5a91-0c6a-42b9-b572-39d95f3402de",
+        "HTTPStatusCode": 200,
+        "HTTPHeaders": {
+          "date": "Thu, 28 Aug 2025 07:35:46 GMT",
+          "content-type": "application/json",
+          "content-length": "1289",
+          "connection": "keep-alive",
+          "x-amzn-requestid": "cdcc5a91-0c6a-42b9-b572-39d95f3402de"
+        },
+        "RetryAttempts": 0
+      },
+      "output": {
+        "message": {
+          "role": "assistant",
+          "content": [
+            {
+              "text": "```json { \"category\": \"ACC\", \"text\": \"SYS\\u00ae TECHNOLOGIES LTDA. Ciencia agricola cultivando soluciones Bogotá D.C., Noviembre 27 de 2019 REF. CERTIFICACION ACIONARIA El suscrito contador de la compañía SYS TECHNOLOGIES LTDA. Nit. 830.110.750-9, se permite certificar que el capital social de esta compañía está constituido de la siguiente forma: SOCIO DOC. IDENTIDAD APAORTES PARTICIPACION ALVAROA. MORENO FLOREZ 79.506.344 $935,000.000 55% ANÁ MANUELA MORENO ARIZA 1,034.776.525 $255,000.000 15% ALVAROMIGUEL MORENO ARIZA 1.034.784.418 $255,000.000 15% SAMUEL JOSE MORENO PEÑARANDA 1.034.779.893 $85,000.000 5% GABRIELASOFIA MORENO P. 1.034.782.594 $85,000.000 5% DANIELSANTIAGO MORENO P. 1.034.784.628 $85,000.000 5% TOTALES $1.700.000.000 100% Cordialmente, GERARDO ANTONIO ROMERO GARZON C.C. 79.482.936 de Bogotá TP 51557-T www.gruposys.com.co gerencia@gruposys.com.co CALLE 23D No.80B - 34MODELIA PBX:755 73 29 - 805 09 21Bogotá D.C. Colombia\" } ```"
+            }
+          ]
+        }
+      },
+      "stopReason": "end_turn",
+      "usage": {
+        "inputTokens": 1790,
+        "outputTokens": 474,
+        "totalTokens": 4408,
+        "cacheReadInputTokens": 2144,
+        "cacheWriteInputTokens": 0
+      },
+      "metrics": {
+        "latencyMs": 10992
+      },
+      "model_id": "us.amazon.nova-pro-v1:0",
+      "api_used": "converse",
+      "model_params": {
+        "maxTokens": 8000,
+        "topP": 1,
+        "temperature": 0
+      }
+    },
+    "expected_category": "ACC",
+    "model_used": "us.amazon.nova-pro-v1:0",
+    "api_used": "converse",
+    "pdf_info": {
+      "original_size": 1231057,
+      "first_page_size": 1229432,
+      "is_scanned": true
+    }
+  },
+  "extraction_result": {
+    "extraction_data": {
+      "path": "ACC/830110750/322_CA_2020-02-29.pdf",
+      "result": {
+        "companyName": "SYS TECHNOLOGIES LTDA.",
+        "documentCategory": "Equity Composition",
+        "taxId": "830.110.759",
+        "country": "Colombia",
+        "identificationDetails": {
+          "source": "text_reference",
+          "indicators": [
+            "Bogotá",
+            "Colombia"
+          ],
+          "conflictingSources": [],
+          "requiresReview": "false"
+        },
+        "relatedParties": [
+          {
+            "type": "person",
+            "firstName": "Álvaro A.",
+            "lastName": "Moreno Florez",
+            "identificationType": "CC",
+            "identificationNumber": "79.506.344",
+            "relationshipType": "Shareholder",
+            "participationPercentage": "55%",
+            "timeFound": "1",
+            "job": ""
+          },
+          {
+            "type": "person",
+            "firstName": "Ana Manuela",
+            "lastName": "Moreno Aríza",
+            "identificationType": "CC",
+            "identificationNumber": "1.034.766.525",
+            "relationshipType": "Shareholder",
+            "participationPercentage": "15%",
+            "timeFound": "1",
+            "job": ""
+          },
+          {
+            "type": "person",
+            "firstName": "Álvaro Miguel",
+            "lastName": "Moreno Aríza",
+            "identificationType": "CC",
+            "identificationNumber": "1.034.784.418",
+            "relationshipType": "Shareholder",
+            "participationPercentage": "15%",
+            "timeFound": "1",
+            "job": ""
+          },
+          {
+            "type": "person",
+            "firstName": "Samuel José",
+            "lastName": "Moreno Peñaranda",
+            "identificationType": "CC",
+            "identificationNumber": "1.034.779.893",
+            "relationshipType": "Shareholder",
+            "participationPercentage": "5%",
+            "timeFound": "1",
+            "job": ""
+          },
+          {
+            "type": "person",
+            "firstName": "Gabriela Sofía",
+            "lastName": "Moreno P.",
+            "identificationType": "CC",
+            "identificationNumber": "1.034.782.594",
+            "relationshipType": "Shareholder",
+            "participationPercentage": "5%",
+            "timeFound": "1",
+            "job": ""
+          },
+          {
+            "type": "person",
+            "firstName": "Daniel Santiago",
+            "lastName": "Moreno P.",
+            "identificationType": "CC",
+            "identificationNumber": "1.034.784.628",
+            "relationshipType": "Shareholder",
+            "participationPercentage": "5%",
+            "timeFound": "1",
+            "job": ""
+          }
+        ]
+      },
+      "documentType": "company",
+      "documentNumber": "830110750",
+      "category": "ACC"
+    },
+    "raw_response": {
+      "ResponseMetadata": {
+        "RequestId": "6e2d2dd8-743b-41a1-8f54-83b5ee68e13f",
+        "HTTPStatusCode": 200,
+        "HTTPHeaders": {
+          "date": "Thu, 28 Aug 2025 07:35:58 GMT",
+          "content-type": "application/json",
+          "content-length": "2982",
+          "connection": "keep-alive",
+          "x-amzn-requestid": "6e2d2dd8-743b-41a1-8f54-83b5ee68e13f"
+        },
+        "RetryAttempts": 0
+      },
+      "output": {
+        "message": {
+          "role": "assistant",
+          "content": [
+            {
+              "text": "```json { \"result\": { \"companyName\": \"SYS TECHNOLOGIES LTDA.\", \"documentCategory\": \"Equity Composition\", \"taxId\": \"830.110.759\", \"country\": \"Colombia\", \"identificationDetails\": { \"source\": \"text_reference\", \"indicators\": [ \"Bogotá\", \"Colombia\" ], \"conflictingSources\": [], \"requiresReview\": \"false\" }, \"relatedParties\": [ { \"type\": \"person\", \"firstName\": \"Álvaro A.\", \"lastName\": \"Moreno Florez\", \"identificationType\": \"CC\", \"identificationNumber\": \"79.506.344\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"55%\", \"timeFound\": \"1\", \"job\": \"\" }, { \"type\": \"person\", \"firstName\": \"Ana Manuela\", \"lastName\": \"Moreno Aríza\", \"identificationType\": \"CC\", \"identificationNumber\": \"1.034.766.525\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"15%\", \"timeFound\": \"1\", \"job\": \"\" }, { \"type\": \"person\", \"firstName\": \"Álvaro Miguel\", \"lastName\": \"Moreno Aríza\", \"identificationType\": \"CC\", \"identificationNumber\": \"1.034.784.418\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"15%\", \"timeFound\": \"1\", \"job\": \"\" }, { \"type\": \"person\", \"firstName\": \"Samuel José\", \"lastName\": \"Moreno Peñaranda\", \"identificationType\": \"CC\", \"identificationNumber\": \"1.034.779.893\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"5%\", \"timeFound\": \"1\", \"job\": \"\" }, { \"type\": \"person\", \"firstName\": \"Gabriela Sofía\", \"lastName\": \"Moreno P.\", \"identificationType\": \"CC\", \"identificationNumber\": \"1.034.782.594\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"5%\", \"timeFound\": \"1\", \"job\": \"\" }, { \"type\": \"person\", \"firstName\": \"Daniel Santiago\", \"lastName\": \"Moreno P.\", \"identificationType\": \"CC\", \"identificationNumber\": \"1.034.784.628\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"5%\", \"timeFound\": \"1\", \"job\": \"\" } ] }, \"documentType\": \"company\", \"category\": \"ACC\" } ```"
+            }
+          ]
+        }
+      },
+      "stopReason": "end_turn",
+      "usage": {
+        "inputTokens": 5407,
+        "outputTokens": 664,
+        "totalTokens": 6071
+      },
+      "metrics": {
+        "latencyMs": 11037
+      },
+      "model_id": "us.amazon.nova-pro-v1:0",
+      "api_used": "converse",
+      "model_params": {
+        "maxTokens": 8000,
+        "topP": 1,
+        "temperature": 0
+      }
+    },
+    "model_used": "us.amazon.nova-pro-v1:0",
+    "api_used": "converse"
+  }
+}

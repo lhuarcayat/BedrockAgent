@@ -1,0 +1,85 @@
+{
+  "extraction_data": {
+    "path": "$pdf_path",
+    "result": {
+      "companyName": "CONSTRUCTORA E INMOBILIARIA RIVERA INCORA SAS",
+      "documentType": "Equity Composition",
+      "taxId": "901.106.859-4",
+      "country": "Colombia",
+      "identificationDetails": {
+        "source": "text_reference",
+        "indicators": [
+          "Bogotá",
+          "Colombia"
+        ],
+        "conflictingSources": [],
+        "requiresReview": false
+      },
+      "relatedParties": [
+        {
+          "firstName": "LEOWILTON",
+          "lastName": "RIVERA MENDEZ",
+          "identificationType": "CC",
+          "identificationNumber": "80.057.686",
+          "relationshipType": "Shareholder",
+          "participationPercentage": "49%",
+          "timeFound": 1,
+          "job": ""
+        },
+        {
+          "firstName": "MARCOS JAIR",
+          "lastName": "CUEVO MENDEZ",
+          "identificationType": "CC",
+          "identificationNumber": "1.022.372.943",
+          "relationshipType": "Shareholder",
+          "participationPercentage": "51%",
+          "timeFound": 1,
+          "job": ""
+        }
+      ]
+    },
+    "document_type": "company",
+    "document_number": "9011068594",
+    "category": "ACC",
+    "confidenceScores": {
+      "companyName": 95,
+      "taxId": 95,
+      "country": 98,
+      "relatedParties": 90
+    }
+  },
+  "raw_response": {
+    "ResponseMetadata": {
+      "RequestId": "1708d940-792d-473b-b398-a9b932c8201f",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Sat, 23 Aug 2025 09:30:53 GMT",
+        "content-type": "application/json",
+        "content-length": "1611",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "1708d940-792d-473b-b398-a9b932c8201f"
+      },
+      "RetryAttempts": 0
+    },
+    "output": {
+      "message": {
+        "role": "assistant",
+        "content": [
+          {
+            "text": "```json\n{\n  \"path\": \"$pdf_path\",\n  \"result\": {\n    \"companyName\": \"CONSTRUCTORA E INMOBILIARIA RIVERA INCORA SAS\",\n    \"documentType\": \"Equity Composition\",\n    \"taxId\": \"901.106.859-4\",\n    \"country\": \"Colombia\",\n    \"identificationDetails\": {\n      \"source\": \"text_reference\",\n      \"indicators\": [\n        \"Bogotá\",\n        \"Colombia\"\n      ],\n      \"conflictingSources\": [],\n      \"requiresReview\": false\n    },\n    \"relatedParties\": [\n      {\n        \"firstName\": \"LEOWILTON\",\n        \"lastName\": \"RIVERA MENDEZ\",\n        \"identificationType\": \"CC\",\n        \"identificationNumber\": \"80.057.686\",\n        \"relationshipType\": \"Shareholder\",\n        \"participationPercentage\": \"49%\",\n        \"timeFound\": 1,\n        \"job\": \"\"\n      },\n      {\n        \"firstName\": \"MARCOS JAIR\",\n        \"lastName\": \"CUEVO MENDEZ\",\n        \"identificationType\": \"CC\",\n        \"identificationNumber\": \"1.022.372.943\",\n        \"relationshipType\": \"Shareholder\",\n        \"participationPercentage\": \"51%\",\n        \"timeFound\": 1,\n        \"job\": \"\"\n      }\n    ]\n  },\n  \"document_type\": \"company\",\n  \"document_number\": \"9011068594\",\n  \"category\": \"ACC\",\n  \"confidenceScores\": {\n    \"companyName\": 95,\n    \"taxId\": 95,\n    \"country\": 98,\n    \"relatedParties\": 90\n  }\n}\n```"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "inputTokens": 8569,
+      "outputTokens": 381,
+      "totalTokens": 8950
+    },
+    "metrics": {
+      "latencyMs": 7681
+    }
+  },
+  "model_used": "us.amazon.nova-pro-v1:0"
+}

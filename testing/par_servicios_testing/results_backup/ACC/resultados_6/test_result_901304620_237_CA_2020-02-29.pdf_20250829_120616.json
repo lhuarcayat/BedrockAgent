@@ -1,0 +1,204 @@
+{
+  "document_name": "237_CA_2020-02-29.pdf",
+  "category": "ACC",
+  "classification_success": true,
+  "extraction_success": true,
+  "overall_success": true,
+  "timestamp": "2025-08-29T12:05:31.308620",
+  "classification_result": {
+    "classification_data": {
+      "category": "ACC",
+      "text": "CERTIFICACIÓN COMPOSICIÓN ACCIONARIA PROCESS POINT COLOMBIA S.A.S. Nit. 901.304.620-0 Yo, JAVIER HERNÁN BECERRA RODRIGUEZ, identificado con cédula de ciudadanía No. 79.717.267, actuando en calidad de Contador de la sociedad PROCESS POINT COLOMBIA S.A.S., con Nit. 901.304.620-0, por medio de la presente, certifico que a la fecha la composición accionaria de la sociedad es la siguiente: ACCIONISTA ÚNICO | ACCIONES | PORCENTAJE TODD RUDERFORTH | 696 | 100% TOTAL | 696 | 100% JAMIE TODD RUTHERFORD con domicilio en Texas, Estados Unidos de América; al ser el único accionista cuenta con el porcentaje de participación del 100% en la sociedad PROCESS POINT COLOMBIA S.A.S. La presente certificación se expide en Bogotá D.C., a los siete (7) días del mes de enero de 2020. JAVIER HERNÁN BECERRA RODRIGUEZ Contador C.C. 79.717.267 de Bogotá D.C. T.P. 109.035-T",
+      "document_number": "901304620",
+      "path": "ACC/901304620/237_CA_2020-02-29.pdf"
+    },
+    "raw_response": {
+      "output": {
+        "message": {
+          "content": [
+            {
+              "text": "```json { \"category\": \"ACC\", \"text\": \"CERTIFICACIÓN\\nCOMPOSICIÓN ACCIONARIA PROCESS POINT COLOMBIA S.A.S.\\nNit. 901.304.620-0\\n\\nYo, JAVIER HERNÁN BECERRA RODRIGUEZ, identificado con cédula de ciudadanía No. 79.717.267, actuando en calidad de Contador de la sociedad PROCESS POINT COLOMBIA S.A.S., con Nit. 901.304.620-0, por medio de la presente, certifico que a la fecha la composición accionaria de la sociedad es la siguiente:\\n\\nACCIONISTA ÚNICO | ACCIONES | PORCENTAJE\\nTODD RUDERFORTH | 696 | 100%\\nTOTAL | 696 | 100%\\n\\nJAMIE TODD RUTHERFORD con domicilio en Texas, Estados Unidos de América; al ser el único accionista cuenta con el porcentaje de participación del 100% en la sociedad PROCESS POINT COLOMBIA S.A.S.\\n\\nLa presente certificación se expide en Bogotá D.C., a los siete (7) días del mes de enero de 2020.\\n\\nJAVIER HERNÁN BECERRA RODRIGUEZ\\nContador\\nC.C. 79.717.267 de Bogotá D.C.\\nT.P. 109.035-T\" } ```"
+            }
+          ]
+        }
+      },
+      "stopReason": "end_turn",
+      "usage": {
+        "input_tokens": 9,
+        "cache_creation_input_tokens": 4570,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 1128
+      },
+      "ResponseMetadata": {
+        "RequestId": "b2bee924-90fe-4b1b-a840-667cb4f45376",
+        "HTTPStatusCode": 200,
+        "HTTPHeaders": {
+          "date": "Fri, 29 Aug 2025 17:05:55 GMT",
+          "content-type": "application/json",
+          "content-length": "7356",
+          "connection": "keep-alive",
+          "x-amzn-requestid": "b2bee924-90fe-4b1b-a840-667cb4f45376",
+          "x-amzn-bedrock-invocation-latency": "23855",
+          "x-amzn-bedrock-cache-write-input-token-count": "4570",
+          "x-amzn-bedrock-cache-read-input-token-count": "0",
+          "x-amzn-bedrock-output-token-count": "1128",
+          "x-amzn-bedrock-input-token-count": "9"
+        },
+        "RetryAttempts": 0
+      },
+      "raw_anthropic_response": {
+        "id": "msg_bdrk_01JZ6aKzXjYhZBhQXRi8eiH2",
+        "type": "message",
+        "role": "assistant",
+        "model": "claude-sonnet-4-20250514",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "Let me analyze this document step by step according to the workflow: 1. **TEXT EXTRACTION** Looking at the document, I can see the following text: - Title: \"CERTIFICACIÓN COMPOSICIÓN ACCIONARIA PROCESS POINT COLOMBIA S.A.S.\" - \"Nit. 901.304.620-0\" - The document is signed by \"JAVIER HERNÁN BECERRA RODRIGUEZ\" with ID 79.717.267, acting as an accountant (\"Contador\") - There's a table showing shareholding composition: - \"ACCIONISTA ÚNICO\" (Sole Shareholder): \"TODD RUDERFORTH\" - \"ACCIONES\" (Shares): 696 - \"PORCENTAJE\" (Percentage): 100% - Total: 696 shares, 100% - It states that \"JAMIE TODD RUTHERFORD\" (note: slight name variation) with domicile in Texas, United States, is the sole shareholder with 100% participation in PROCESS POINT COLOMBIA S.A.S. - The certification was issued in Bogotá D.C. on January 7, 2020 - Signed by the accountant with professional license information 2. **PRIORITY CHECKS** - This is not BLANK - it has substantial meaningful content - This is not LINK_ONLY - it's a complete document with no redirecting URLs 3. **ISSUER IDENTIFICATION** - This is not issued by DIAN (no DIAN logo or header) - This is not issued by Chamber of Commerce (no \"Cámara de Comercio\" mentioned) - This appears to be issued by the company itself, certified by their accountant 4. **DOCUMENT FUNCTION ANALYSIS** - This is clearly corporate documentation, not personal identification - The primary function is to certify the shareholding composition/ownership structure of a company - It shows ownership percentages and share distribution - It's focused on who owns the company and in what proportions 5. **CATEGORY CLASSIFICATION** I've identified this as an ACC (Accionistas/Shareholders) document, confirming full ownership by a single shareholder from Texas, United States, with complete control through 696 shares representing 100% of the company's equity. 6. **CONFIDENCE VALIDATION** The document provides robust evidence of shareholding composition, with explicit certification by the company's legal representative detailing precise ownership details and shareholder identity.",
+            "signature": "Er8WCkgIBxABGAIqQP2tXwr3CioBFxHVayPQn41bo6qYzBvOVWHtzL4nkrqOIgb3kCBso7PLTFO8HeTa+5CAGdb2fuylVgsvwOyq6l0SDGD+WnizstxHCNr6zBoM1wEVYn+rj99Ki8fNIjB9QJqJOHoDnORrhylER37CRL1UbNzz3tdoFMaofkwgiLOGOw60x7gV0UEPfxliJBsqpBUrzPu8KYeNqUAspeIeVCcZVLcdh/voLbCLoja37hxVVpmz+Tq8VVCal4ZLOlD3WUlOZoq8dsLVgLs1U3Uvgm1PfrRLhb44WDqaK0SQLs/wVnm1qd+lkpnpD9SNUghWJKD+hJ2smB093aMKAGRdKFUDm7/3C/WVTQhEyoMQORaTsI4oySgieaFYiXW3l5tTNxZlrd9e2TS10zhFEZwW106vTGs8fIFltwiF+TMSBJtS2Gsh1l7ugXzzsMObfQduQsqUh/HD85V+K8ZF6tWJaIwJ/lHs3hQoYn6eT2ulQ5Iw6/RQSju3DfqJqPq25U+4xfGO9hNuD1gpuKsxMSMZsnjqIm9rZ8/zQzHSrWXxgRfr1+rc34ArSsDcQwsVXeSP+3iro1JSHvm0/pwXfnKyIneXTTLDtbnDiybYRFMH8oy5nvrRaq9WMZJjAcPupEkh2CKTdVksW64sNWj0xa9qKi0/2LwkhxsVC+Qg+MtExmCcDgvr99CZk1Ev0JdDcy0RKdjnsystQ8Fea5iJnws0THtQuiy6qmZ7F0qcPIZzMCe4ZJeVlS5X8xdb6ibpNCL709h7gzgzEz2qUX1moe8Mrwo+YYG7FE4BDPsOlx9GDxGK1BLMX4YeQErGXwJj3d99gbHZB3DYEPTuL31CQTl0UhC03FaTMKHDcgO+bqJLDsUERN9tjQ436ztN5Z7qoaEx1Zlo26ydI2ZnEIaJefEM5CnYbiMcz9DrTgNYd3zivYLmIzlBr5fVUK4krbukzMHlYqQx0qj+PPZUrKFkT8JbtCf+pQrfAflkHBYNv33L/l1wAnumknV5rxjRfaFDdzKagbG8ZlhCx9nNRI3s7kww/c3S/3iteEDRQ6GWrWi+z4fQE6c/JxJKpp+cTZvFO+/8+h+CaxyljjsU37oF4pU07FVO552XE1Osxx2cvhRi6oPluP5ELK2HP+tBmwnvioDj6SkQSSDTD4O4dTg+xkmIljsVkhwkDhSkF1WiKNrW67wqoLPUXN3wdYULTZcdZoHhEKpxR/Q28YZM8GGFSxkur19uKf7EBJwAxbSoBB9euflRqdIOL/45/mst/jvi1niqMV+hwtckYnMopzSUVsSUssn0RcpMRpImsi7DZMwbpWemJjK6kOGz2upPksLT7SKAt5xMasfkCfrsg5zFAVntfFGGSpEW7cgYEuSnip6Oe11wWeMaBYtXUhwO/xTCwDglts1/3ps+gzCNSt/50zhV8mu32GgS53yL9uHujOdyqt1wroXfwaIYsr933BTakhJxnqAL14L+0Lz+k/OUpCPBuWMHFoEH4CHRbIiYWpmbW4nMaGo8QYJ7JJZ+GAi2Pfab3fF9wjsjEq9R03tGkQsam5TPxS7Dp7i7gI4blxeS7t7gCVicU/aCJTp3VxF58GYdBHnv1n7VHVKzWumYs+pBS31z2zEdlJG8DUwDiBpM7TIwGVbul5Sfkeg9n/2JZ6/4vjCnYrpNsJL1L10B9zvp61haK7BhBYAYkT7oMLg+6dbgp0o7UCbjoQ0dt4lHbLqdreRY1da4L/CahlKSNVeonkv5ciaRvcI4uOxTTTkxiCkatLq/lZnYQPmfCeTAhmxcJtWRUQ0ix3h4Elrf6P/tpOPntN94m897CbXNaoWU5SMJmYh4dJTIAgx7kn9pq3b+97/238gvDoEmFuCOshsdsfuQWApBCC7ylHu8mjBY5ONKVbcvRZtVg03vxBkqAk+ck/23whR9O4/APKZDqfL761spQkj9nusc+TwEy9Lwd4pR2xHVCj27C2ZIyNnWalma/cKhILqUqg1ParIz7eCFPeN9W9s3G5ditKIDvPJJWKYXYttUUOWZknW+y5qSW8RwCZUayjX6aBv4H5MQ8oI4iQHYIwSgpmZ11cPOBuQRtoY0mRrBdCI+TFt9Xrbeejk77hq6rOJXVzDq0s6qRw2XfW7darbCHmHG0XtXUZAnoKtug+yI9Vx49Hrj3PbR6sONlmOAiLXtJzU6DHhWrcB42KdtJS4trk8jZJ3sXsvtT49WPVla7AZl4CE3P/ELcFZlzIhGSbNeZz4ETGma2FM7Wircp73xzyXsjcXMIvZqBcoMImp2XL0wL3KvpqpB/Syxurc4O87MvpqwgXt16nlPs+tmGULOo/z7J8hSypglZgWTXEEYhPbFdJVtrDUnz41tc1o8a2W/bkkquJJUdI6jLgzdIpa0Evtc6nQ49C1x3FjkHa8rpa+B/PABYh+V6+L17x6bxfeCkceE2F31HfeiP9s++Z4isNFDP5w6sdp5kc2YkSrPkMgBikHNOWnM3tqByOiwO8AV/ptH/PD4IFW7E1gxiLyLd3TRSB7CbqZXPH9ciesnZJk2VFilBOXK37SSNnocIRUOvxqCUnAUjoTvdVNGzIeyB+zos78HJGQEhf/flWwiPpkekVq8IRITIEq8jYFolRwKfym14x3Oel/i0mgXHln3WawjxVhqks6TZtb3ZYUtv+6GFtwM+QBVA5rRKZs9h62Q63P0TNZgMS/1bI5DAynI/8/R69TJPgV1wmjl4m89TXuSCOfn0CE53imhJb1EYupYTEPAGnQl3fsbcwhzibykyJ5c5VMwdgXtGUyJmi/KfMzT3SR8juU2vt2SQFFiiIRKAG3I25iPTvwpxH+37DRpSvqZyRxtmQ9Rczc4BNg9diDHDs0OqYnL2HmM6nQevBaEL6Mxc+q/X6lcmVDGimuYjEfQYVBLltjmLkx2yY7+i+onaJjQswvtx2wq1hjNaYQZYrmZdIJjjpyjb/B40HJG5c/HWxe+mbahaVyD7YApImzva7LeH0s5KFChak84t8VO2bSz2cseynfkr2xsyHjEFUt58HxfJ9tAP9mGEs5kzk2byQjADRDOBQ/xfyP+NU0kNHfxYh2S7tdMUejAEFkZ+4+C1Ghff2f0QgWnm3LKFZvoT0K7z+v/hhuoOB87cVfn6FA1gL3NL5JnnBVuOu3pwlQSCFruJoUKs1eThLQbUGT4o5YZwwCSQU7pNtPXw3hCN0F7Pe9wRVGe3yjkIH7mvPoVkxOvd/j7LKvVDirLiEsDLkEKjmErMBcP1Fu7+x5LaYAovnRT6qQduaUcKowIwcM5uKfjSZ3zmVbfp9HemJvDrEYJjIyUD83R3vkCKvgSsHEvXWNXGX5ip/KoNFKMfUhlDexJflWOuJwdpQESHnBxtvppY1m7qDndmLNkwlIxTl0TwgCz+XXxD+4pghaOyi0sPU5OOS+r4wigLqbxZUxKwqHrfrSFKgy72y6r5oQF2zsOoEg8pg2MNxFqs61g+xbaTVYn1kdbsTQWb+1o1GXHEHWFz4946yRxP3iM6K67LYgTW7T6mCGKgoUV5vnQjCsn5n22qLhWxVdOw0XdWVHsk53oVKc/MiOR6YUJjeUPkF3daQSBeRH3S05IAuy7WanPkU+zyeJ8LgPK1zijUUKXtElV58EuKhtM0xD5mdix/3QB428TPssbEiGYIm21dOL2/CqFiM7vCNm9sVV6qi+Sop3NKw3ndY7tycIxknjSEL2JQqrgylhOxjL9wwAoEixV6DDmZN9s/xd+jand1rT29d1yP3H4XEFefoSu2xPC2kNcncIG/jRoWo5jtNJoaSRn8ML+ljVgjgqKIlMeuPcYAQ=="
+          },
+          {
+            "type": "text",
+            "text": "```json { \"category\": \"ACC\", \"text\": \"CERTIFICACIÓN\\nCOMPOSICIÓN ACCIONARIA PROCESS POINT COLOMBIA S.A.S.\\nNit. 901.304.620-0\\n\\nYo, JAVIER HERNÁN BECERRA RODRIGUEZ, identificado con cédula de ciudadanía No. 79.717.267, actuando en calidad de Contador de la sociedad PROCESS POINT COLOMBIA S.A.S., con Nit. 901.304.620-0, por medio de la presente, certifico que a la fecha la composición accionaria de la sociedad es la siguiente:\\n\\nACCIONISTA ÚNICO | ACCIONES | PORCENTAJE\\nTODD RUDERFORTH | 696 | 100%\\nTOTAL | 696 | 100%\\n\\nJAMIE TODD RUTHERFORD con domicilio en Texas, Estados Unidos de América; al ser el único accionista cuenta con el porcentaje de participación del 100% en la sociedad PROCESS POINT COLOMBIA S.A.S.\\n\\nLa presente certificación se expide en Bogotá D.C., a los siete (7) días del mes de enero de 2020.\\n\\nJAVIER HERNÁN BECERRA RODRIGUEZ\\nContador\\nC.C. 79.717.267 de Bogotá D.C.\\nT.P. 109.035-T\" } ```"
+          }
+        ],
+        "stop_reason": "end_turn",
+        "stop_sequence": null,
+        "usage": {
+          "input_tokens": 9,
+          "cache_creation_input_tokens": 4570,
+          "cache_read_input_tokens": 0,
+          "output_tokens": 1128
+        }
+      },
+      "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+      "api_used": "invoke_model",
+      "model_params": {
+        "max_tokens": 8000,
+        "top_p": 1,
+        "temperature": 1,
+        "thinking": {
+          "type": "enabled",
+          "budget_tokens": 4096
+        }
+      }
+    },
+    "expected_category": "ACC",
+    "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model",
+    "pdf_info": {
+      "original_size": 839432,
+      "first_page_size": 839369,
+      "is_scanned": true
+    }
+  },
+  "extraction_result": {
+    "extraction_data": {
+      "result": {
+        "companyName": "PROCESS POINT COLOMBIA S.A.S.",
+        "documentCategory": "Equity Composition",
+        "taxId": "901.304.620-0",
+        "country": "Colombia",
+        "identificationDetails": {
+          "source": "text_reference",
+          "indicators": [
+            "Bogotá D.C.",
+            "Colombia"
+          ],
+          "conflictingSources": [
+            "Name inconsistency found: table shows 'TODD RUDERFORTH' but text shows 'JAMIE TODD RUTHERFORD'"
+          ],
+          "requiresReview": "true"
+        },
+        "relatedParties": [
+          {
+            "type": "person",
+            "firstName": "Jamie Todd",
+            "lastName": "Rutherford",
+            "identificationType": "POR REVISAR",
+            "identificationNumber": "POR REVISAR",
+            "relationshipType": "Shareholder",
+            "participationPercentage": "100%",
+            "timeFound": "1",
+            "job": ""
+          }
+        ]
+      },
+      "documentType": "company",
+      "category": "ACC"
+    },
+    "raw_response": {
+      "output": {
+        "message": {
+          "content": [
+            {
+              "text": "{ \"result\": { \"companyName\": \"PROCESS POINT COLOMBIA S.A.S.\", \"documentCategory\": \"Equity Composition\", \"taxId\": \"901.304.620-0\", \"country\": \"Colombia\", \"identificationDetails\": { \"source\": \"text_reference\", \"indicators\": [ \"Bogotá D.C.\", \"Colombia\" ], \"conflictingSources\": [ \"Name inconsistency found: table shows 'TODD RUDERFORTH' but text shows 'JAMIE TODD RUTHERFORD'\" ], \"requiresReview\": \"true\" }, \"relatedParties\": [ { \"type\": \"person\", \"firstName\": \"Jamie Todd\", \"lastName\": \"Rutherford\", \"identificationType\": \"POR REVISAR\", \"identificationNumber\": \"POR REVISAR\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"100%\", \"timeFound\": \"1\", \"job\": \"\" } ] }, \"documentType\": \"company\", \"category\": \"ACC\" }"
+            }
+          ]
+        }
+      },
+      "stopReason": "end_turn",
+      "usage": {
+        "input_tokens": 9,
+        "cache_creation_input_tokens": 6094,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 1008
+      },
+      "ResponseMetadata": {
+        "RequestId": "2323d0b8-38cc-4246-8160-3570234313b0",
+        "HTTPStatusCode": 200,
+        "HTTPHeaders": {
+          "date": "Fri, 29 Aug 2025 17:06:17 GMT",
+          "content-type": "application/json",
+          "content-length": "6766",
+          "connection": "keep-alive",
+          "x-amzn-requestid": "2323d0b8-38cc-4246-8160-3570234313b0",
+          "x-amzn-bedrock-invocation-latency": "20925",
+          "x-amzn-bedrock-cache-write-input-token-count": "6094",
+          "x-amzn-bedrock-cache-read-input-token-count": "0",
+          "x-amzn-bedrock-output-token-count": "1008",
+          "x-amzn-bedrock-input-token-count": "9"
+        },
+        "RetryAttempts": 0
+      },
+      "raw_anthropic_response": {
+        "id": "msg_bdrk_01ADhis58SoTaFHLgLgHwiLd",
+        "type": "message",
+        "role": "assistant",
+        "model": "claude-sonnet-4-20250514",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "Let me analyze this Spanish document step by step according to the field rules. **Document Analysis:** This is a \"CERTIFICACIÓN COMPOSICIÓN ACCIONARIA\" (Equity Composition Certification) document from Colombia. **Root Level Extraction:** 1. **companyName**: From the document header: \"COMPOSICIÓN ACCIONARIA PROCESS POINT COLOMBIA S.A.S.\" - so the company name is \"PROCESS POINT COLOMBIA S.A.S.\" 2. **taxId**: The document states \"con Nit. 901.304.620-0\" - so the tax ID is \"901.304.620-0\" 3. **country**: The document shows \"La presente certificación se expide en Bogotá D.C.\" (This certification is issued in Bogotá D.C.) which clearly identifies Colombia as the country. 4. **identificationDetails**: - source: \"text_reference\" (based on explicit mention of Bogotá D.C.) - indicators: [\"Bogotá D.C.\", \"Colombia\"] - conflictingSources: No conflicts apparent - requiresReview: Need to check if any fields require review **Related Parties Processing:** Looking at the table, I see: - ACCIONISTA ÚNICO (Single Shareholder): TODD RUDERFORTH - ACCIONES (Shares): 696 - PORCENTAJE (Percentage): 100% Then it mentions \"JAMIE TODD RUTHERFORD con domicilio en Texas, Estados Unidos de América; al ser el único accionista cuenta con el porcentaje de participación del 100% en la sociedad PROCESS POINT COLOMBIA S.A.S.\" So we have one shareholder: - Name: There's a discrepancy - the table shows \"TODD RUDERFORTH\" but the text shows \"JAMIE TODD RUTHERFORD\" - The names likely refer to the same person - Domicile is Texas, United States - 100% shareholder of the company - Individual shareholder with potential name variation - Identification type remains unspecified, marked as \"POR REVISAR\" Name discrepancy detected between document sources requires careful review. Tax identification appears valid, but name inconsistency triggers further validation needed.",
+            "signature": "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"
+          },
+          {
+            "type": "text",
+            "text": "{ \"result\": { \"companyName\": \"PROCESS POINT COLOMBIA S.A.S.\", \"documentCategory\": \"Equity Composition\", \"taxId\": \"901.304.620-0\", \"country\": \"Colombia\", \"identificationDetails\": { \"source\": \"text_reference\", \"indicators\": [ \"Bogotá D.C.\", \"Colombia\" ], \"conflictingSources\": [ \"Name inconsistency found: table shows 'TODD RUDERFORTH' but text shows 'JAMIE TODD RUTHERFORD'\" ], \"requiresReview\": \"true\" }, \"relatedParties\": [ { \"type\": \"person\", \"firstName\": \"Jamie Todd\", \"lastName\": \"Rutherford\", \"identificationType\": \"POR REVISAR\", \"identificationNumber\": \"POR REVISAR\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"100%\", \"timeFound\": \"1\", \"job\": \"\" } ] }, \"documentType\": \"company\", \"category\": \"ACC\" }"
+          }
+        ],
+        "stop_reason": "end_turn",
+        "stop_sequence": null,
+        "usage": {
+          "input_tokens": 9,
+          "cache_creation_input_tokens": 6094,
+          "cache_read_input_tokens": 0,
+          "output_tokens": 1008
+        }
+      },
+      "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+      "api_used": "invoke_model",
+      "model_params": {
+        "max_tokens": 8000,
+        "top_p": 1,
+        "temperature": 1,
+        "thinking": {
+          "type": "enabled",
+          "budget_tokens": 4096
+        }
+      }
+    },
+    "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model"
+  }
+}

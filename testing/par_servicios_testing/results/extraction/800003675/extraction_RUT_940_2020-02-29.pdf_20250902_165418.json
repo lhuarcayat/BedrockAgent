@@ -1,0 +1,92 @@
+{
+  "extraction_data": {
+    "result": {
+      "CompanyName": "DISEÑOS Y CONSTRUCCIONES S.A.S",
+      "Country": "COLOMBIA",
+      "TaxId": "800003675",
+      "VerificationDigit": "7",
+      "IdentificationType": "NIT",
+      "PersonType": "Persona jurídica",
+      "ConflictingSources": [],
+      "RequiresReview": "false"
+    },
+    "RelatedParties": [],
+    "Address": "CR 25 12 46, Bucaramanga, Santander",
+    "DocumentGenerationDate": "29-01-2024 09:31:32AM",
+    "DocumentType": "company",
+    "Category": "RUT"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "```json { \"result\": { \"CompanyName\": \"DISEÑOS Y CONSTRUCCIONES S.A.S\", \"Country\": \"COLOMBIA\", \"TaxId\": \"800003675\", \"VerificationDigit\": \"7\", \"IdentificationType\": \"NIT\", \"PersonType\": \"Persona jurídica\", \"ConflictingSources\": [], \"RequiresReview\": \"false\" }, \"RelatedParties\": [], \"Address\": \"CR 25 12 46, Bucaramanga, Santander\", \"DocumentGenerationDate\": \"29-01-2024 09:31:32AM\", \"DocumentType\": \"company\", \"Category\": \"RUT\" } ```"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 2656,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 2990,
+      "output_tokens": 758
+    },
+    "ResponseMetadata": {
+      "RequestId": "e47ff70a-8913-4207-900d-4a00d730efa6",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Tue, 02 Sep 2025 21:54:18 GMT",
+        "content-type": "application/json",
+        "content-length": "5366",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "e47ff70a-8913-4207-900d-4a00d730efa6",
+        "x-amzn-bedrock-invocation-latency": "13616",
+        "x-amzn-bedrock-cache-write-input-token-count": "0",
+        "x-amzn-bedrock-cache-read-input-token-count": "2990",
+        "x-amzn-bedrock-output-token-count": "758",
+        "x-amzn-bedrock-input-token-count": "2656"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_01HkAYE94LKVrqGEcV4p938f",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-sonnet-4-20250514",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Let me analyze this RUT (Registro Único Tributario) document from Colombia systematically based on the field rules provided. 1. CompanyName: Found in cell \"35. Razón social\" - I can see \"DISEÑOS Y CONSTRUCCIONES S.A.S\" 2. Country: This is a Colombian RUT document issued by DIAN, and I can see in cell \"38. País\" it shows \"COLOMBIA\" 3. TaxId: Found in cell \"5. Número de Identificación Tributaria (NIT)\" - I can see \"800003675\" 4. VerificationDigit: Found in cell \"6. DV\" - I can see \"7\" 5. IdentificationType: For RUT documents issued by DIAN, this is always \"NIT\" 6. PersonType: Found in cell \"24. Tipo de contribuyente\" - I can see \"Persona jurídica\" 7. Address: Composed of cells \"41. Dirección principal\", \"40. Ciudad/Municipio\", \"39. Departamento\" - 41. Dirección principal: \"CR 25 12 46\" - 40. Ciudad/Municipio: \"Bucaramanga\" - 39. Departamento: \"Santander\" So Address should be: \"CR 25 12 46, Bucaramanga, Santander\" 8. DocumentGenerationDate: Found at bottom - \"Fecha generación documento PDF: 29-01-2024 09:31:32AM\" 9. DocumentType: Always \"company\" 10. Category: Always \"RUT\" 11. RelatedParties: I need to look for sections \"Socios y/o miembros de Juntas Directivas, Consorcios, Uniones Temporales\" and \"Revisor Fiscal y contador\". Looking at the document, I don't see these sections with the specific cells mentioned (like 115, 116, 117, 118 for socios, or 124, 125, 128, 129, 130, 131 for revisor fiscal, etc.). I can confirm only the first page is available, which means the related parties information is not present in this document. 12. ConflictingSources: No conflicts observed 13. RequiresReview: Should be \"false\" since no fields are \"ForReview\" and no conflicts The analysis reveals a complete RUT document with key company information, but lacking detailed party details due to incomplete document pages.",
+          "signature": "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"
+        },
+        {
+          "type": "text",
+          "text": "```json { \"result\": { \"CompanyName\": \"DISEÑOS Y CONSTRUCCIONES S.A.S\", \"Country\": \"COLOMBIA\", \"TaxId\": \"800003675\", \"VerificationDigit\": \"7\", \"IdentificationType\": \"NIT\", \"PersonType\": \"Persona jurídica\", \"ConflictingSources\": [], \"RequiresReview\": \"false\" }, \"RelatedParties\": [], \"Address\": \"CR 25 12 46, Bucaramanga, Santander\", \"DocumentGenerationDate\": \"29-01-2024 09:31:32AM\", \"DocumentType\": \"company\", \"Category\": \"RUT\" } ```"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 2656,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 2990,
+        "output_tokens": 758
+      }
+    },
+    "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 9000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+  "api_used": "invoke_model"
+}

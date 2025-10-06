@@ -1,0 +1,88 @@
+{
+  "extraction_data": {
+    "result": {
+      "firstName": "POR REVISAR",
+      "lastName": "JOSE DEL CARMEN",
+      "country_issuer": "Colombia",
+      "nationality": "Colombia",
+      "identificationType": "Cédula de Ciudadanía",
+      "identificationNumber": "7.249.040",
+      "message": "No se pudieron leer correctamente valores para firstName - campo NOMBRES no es claramente legible"
+    },
+    "document_type": "person",
+    "category": "CECRL"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "```json { \"result\": { \"firstName\": \"POR REVISAR\", \"lastName\": \"JOSE DEL CARMEN\", \"country_issuer\": \"Colombia\", \"nationality\": \"Colombia\", \"identificationType\": \"Cédula de Ciudadanía\", \"identificationNumber\": \"7.249.040\", \"message\": \"No se pudieron leer correctamente valores para firstName - campo NOMBRES no es claramente legible\" }, \"document_type\": \"person\", \"category\": \"CECRL\" } ```"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 10,
+      "cache_creation_input_tokens": 5982,
+      "cache_read_input_tokens": 0,
+      "output_tokens": 1064
+    },
+    "ResponseMetadata": {
+      "RequestId": "b26d545c-531d-4c64-a60f-277a52e13185",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Fri, 29 Aug 2025 15:45:21 GMT",
+        "content-type": "application/json",
+        "content-length": "7789",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "b26d545c-531d-4c64-a60f-277a52e13185",
+        "x-amzn-bedrock-invocation-latency": "20342",
+        "x-amzn-bedrock-cache-write-input-token-count": "5982",
+        "x-amzn-bedrock-cache-read-input-token-count": "0",
+        "x-amzn-bedrock-output-token-count": "1064",
+        "x-amzn-bedrock-input-token-count": "10"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_01N4dyJS5KEWrgmw2uXtt3nB",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-sonnet-4-20250514",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Looking at this Colombian identification document, I need to extract all the required information following the rules. Let me analyze the document: 1. **Document Analysis**: This is a Colombian \"CÉDULA DE CIUDADANÍA\" (citizenship card) from \"REPÚBLICA DE COLOMBIA\" - this is clearly an official government ID document. 2. **Field Detection**: - I can see \"APELLIDOS\" followed by \"JOSE DEL CARMEN\" - I can see \"NOMBRES\" but it's partially cut off or unclear - The document number appears to be \"7.249.040\" - Birth date shows \"27-JUN-1962\" - Birth place shows \"PUERTO NARE (ANTIOQUIA)\" 3. **Field Extraction**: - **lastName**: Under \"APELLIDOS:\" I can see \"JOSE DEL CARMEN\" - **firstName**: Under \"NOMBRES:\" the text is partially visible but unclear - I can see some text but it's not clearly readable - **country_issuer**: \"Colombia\" (from \"REPÚBLICA DE COLOMBIA\") - **nationality**: \"Colombia\" (default from issuer country) - **identificationType**: \"Cédula de Ciudadanía\" (from the document header) - **identificationNumber**: \"7.249.040\" (the prominent number) Wait, I need to be more careful about the names. Looking again: - \"APELLIDOS\" is the surname field and shows \"JOSE DEL CARMEN\" - \"NOMBRES\" is the given names field but it's not clearly visible in this image Actually, let me reconsider the names. Looking at the document more carefully: - There's \"MESA GOMEZ\" which appears to be a name - \"JOSE DEL CARMEN\" appears under what looks like \"APELLIDOS\" Let me re-examine this. The document structure shows: - Number: 7.249.040 - There's \"MESA GOMEZ\" - The name structure seems complex, with multiple potential name components I'll carefully parse the name fields, noting the potential complexity of Colombian naming conventions. The \"MESA GOMEZ\" likely relates to the surname, while \"JOSE DEL CARMEN\" might be a full name or partial name component. The unclear \"NOMBRES\" field requires careful verification. The systematic approach involves precisely tracking each visible name element, ensuring accurate extraction despite partial readability. I'll use the explicit \"APELLIDOS:\" field for lastName while marking the firstName as unverified due to unclear text. The presence of \"MESA GOMEZ\" requires careful verification against standard field labels.",
+          "signature": "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"
+        },
+        {
+          "type": "text",
+          "text": "```json { \"result\": { \"firstName\": \"POR REVISAR\", \"lastName\": \"JOSE DEL CARMEN\", \"country_issuer\": \"Colombia\", \"nationality\": \"Colombia\", \"identificationType\": \"Cédula de Ciudadanía\", \"identificationNumber\": \"7.249.040\", \"message\": \"No se pudieron leer correctamente valores para firstName - campo NOMBRES no es claramente legible\" }, \"document_type\": \"person\", \"category\": \"CECRL\" } ```"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 10,
+        "cache_creation_input_tokens": 5982,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 1064
+      }
+    },
+    "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 8000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+  "api_used": "invoke_model"
+}

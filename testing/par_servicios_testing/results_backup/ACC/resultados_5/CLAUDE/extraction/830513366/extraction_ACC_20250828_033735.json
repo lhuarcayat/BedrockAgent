@@ -1,0 +1,134 @@
+{
+  "extraction_data": {
+    "path": "ACC/830513366/240_CA_2020-02-29.pdf",
+    "result": {
+      "companyName": "NEWSAT S.A.S.",
+      "documentCategory": "Equity Composition",
+      "taxId": "830.513.366-3",
+      "country": "Colombia",
+      "identificationDetails": {
+        "source": "text_reference",
+        "indicators": [
+          "Bogotá",
+          "Colombia",
+          "Cámara de Comercio de Bogotá"
+        ],
+        "conflictingSources": [
+          "Unclear identification type for shareholder: Shai Bercovich"
+        ],
+        "requiresReview": "true"
+      },
+      "relatedParties": [
+        {
+          "type": "person",
+          "firstName": "Carlos Enrique",
+          "lastName": "Rosero Ceron",
+          "identificationType": "C.C.",
+          "identificationNumber": "6386024",
+          "relationshipType": "Shareholder",
+          "participationPercentage": "40",
+          "timeFound": "1",
+          "job": ""
+        },
+        {
+          "type": "person",
+          "firstName": "Shai",
+          "lastName": "Bercovich",
+          "identificationType": "POR REVISAR",
+          "identificationNumber": "301680",
+          "relationshipType": "Shareholder",
+          "participationPercentage": "40",
+          "timeFound": "1",
+          "job": ""
+        },
+        {
+          "type": "person",
+          "firstName": "Diego Alejandro",
+          "lastName": "Salazar Vasquez",
+          "identificationType": "C.C.",
+          "identificationNumber": "91499446",
+          "relationshipType": "Shareholder",
+          "participationPercentage": "20",
+          "timeFound": "1",
+          "job": ""
+        }
+      ]
+    },
+    "documentType": "company",
+    "documentNumber": "830513366",
+    "category": "ACC"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "{ \"result\": { \"companyName\": \"NEWSAT S.A.S.\", \"documentCategory\": \"Equity Composition\", \"taxId\": \"830.513.366-3\", \"country\": \"Colombia\", \"identificationDetails\": { \"source\": \"text_reference\", \"indicators\": [ \"Bogotá\", \"Colombia\", \"Cámara de Comercio de Bogotá\" ], \"conflictingSources\": [\"Unclear identification type for shareholder: Shai Bercovich\"], \"requiresReview\": \"true\" }, \"relatedParties\": [ { \"type\": \"person\", \"firstName\": \"Carlos Enrique\", \"lastName\": \"Rosero Ceron\", \"identificationType\": \"C.C.\", \"identificationNumber\": \"6386024\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"40\", \"timeFound\": \"1\", \"job\": \"\" }, { \"type\": \"person\", \"firstName\": \"Shai\", \"lastName\": \"Bercovich\", \"identificationType\": \"POR REVISAR\", \"identificationNumber\": \"301680\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"40\", \"timeFound\": \"1\", \"job\": \"\" }, { \"type\": \"person\", \"firstName\": \"Diego Alejandro\", \"lastName\": \"Salazar Vasquez\", \"identificationType\": \"C.C.\", \"identificationNumber\": \"91499446\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"20\", \"timeFound\": \"1\", \"job\": \"\" } ] }, \"documentType\": \"company\", \"category\": \"ACC\" }"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 425,
+      "cache_creation_input_tokens": 6696,
+      "cache_read_input_tokens": 0,
+      "output_tokens": 2275
+    },
+    "ResponseMetadata": {
+      "RequestId": "779f46a1-481e-4bbe-80a8-53fcfd61e738",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Thu, 28 Aug 2025 08:37:34 GMT",
+        "content-type": "application/json",
+        "content-length": "8492",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "779f46a1-481e-4bbe-80a8-53fcfd61e738",
+        "x-amzn-bedrock-invocation-latency": "39975",
+        "x-amzn-bedrock-cache-write-input-token-count": "6696",
+        "x-amzn-bedrock-cache-read-input-token-count": "0",
+        "x-amzn-bedrock-output-token-count": "2275",
+        "x-amzn-bedrock-input-token-count": "425"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_016NWdM4BBKSmrCWxbEWpjRd",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-3-7-sonnet-20250219",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Let me analyze this document carefully and extract the equity composition data following the instructions. ## Step 1: Document Analysis This is a certification document (\"CERTIFICO QUE\") regarding the equity composition (\"composición accionaria\") of a company. The document appears to be in Spanish, issued by a Fiscal Auditor (Revisor Fiscal) of the company. ## Step 2: Root Level Extraction - **Company Name**: The main reporting company is clearly identified as \"NEWSAT S.A.S.\" - **Tax ID (NIT)**: The document shows \"830.513.366-3\" as the NIT (Número de Identificación Tributaria) - **Country**: There are several indicators of Colombia: 1. The document mentions \"Normas de Auditoria Generalmente Aceptadas en Colombia\" 2. Mentions \"Cámara de Comercio de Bogotá\" (Chamber of Commerce of Bogotá) 3. The address at the bottom shows \"BOGOTA D.C.\" 4. The NIT format is consistent with Colombian tax IDs 5. The ID type \"CC\" (Cédula de Ciudadanía) is a Colombian ID type So the country is clearly \"Colombia\" ## Step 3: Related Parties Processing The document lists three shareholders: 1. **CARLOS ENRIQUE ROSERO CERON** - Type: person (individual name) - ID Type: CC (Cédula de Ciudadanía) - ID Number: 6386024 - Participation: 40% - Shares: 148,000 - Value: $1,480,000,000.00 2. **SHAI BERCOVICH** - Type: person (individual name) - ID Type: The ID appears to be 301680 but without clear type identifier - ID Number: 301680 - Participation: 40% - Shares: 148,000 - Value: $1,480,000,000.00 3. **DIEGO ALEJANDRO SALAZAR VASQUEZ** - Type: person (individual name) - ID Type: CC (Cédula de Ciudadanía) is likely as it follows the same format - ID Number: 91499446 - Participation: 20% - Shares: 74,000 - Value: $740,000,000.00 ## Step 4: Validation & Cross-checking For Colombia, let me validate the ID types: - For Carlos Enrique Rosero Ceron: ID number 6386024 - this matches the Colombian CC format (4-10 digits, no letters) - For Shai Bercovich: ID number 301680 - this appears to be very short for a Colombian CC number, but it could be an older ID or a foreign ID. Given the uncertainty and without clear labeling, I'll mark the ID type as \"POR REVISAR\" - For Diego Alejandro Salazar Vasquez: ID number 91499446 - this matches the Colombian CC format Let's build the JSON data: ```json { \"result\": { \"companyName\": \"NEWSAT S.A.S.\", \"documentCategory\": \"Equity Composition\", \"taxId\": \"830.513.366-3\", \"country\": \"Colombia\", \"identificationDetails\": { \"source\": \"text_reference\", \"indicators\": [ \"Bogotá\", \"Colombia\", \"Cámara de Comercio de Bogotá\" ], \"conflictingSources\": [], \"requiresReview\": \"false\" }, \"relatedParties\": [ { \"type\": \"person\", \"firstName\": \"Carlos Enrique\", \"lastName\": \"Rosero Ceron\", \"identificationType\": \"C.C.\", \"identificationNumber\": \"6386024\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"40\", \"timeFound\": \"1\", \"job\": \"\" }, { \"type\": \"person\", \"firstName\": \"Shai\", \"lastName\": \"Bercovich\", \"identificationType\": \"POR REVISAR\", \"identificationNumber\": \"301680\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"40\", \"timeFound\": \"1\", \"job\": \"\" }, { \"type\": \"person\", \"firstName\": \"Diego Alejandro\", \"lastName\": \"Salazar Vasquez\", \"identificationType\": \"C.C.\", \"identificationNumber\": \"91499446\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"20\", \"timeFound\": \"1\", \"job\": \"\" } ] }, \"documentType\": \"company\", \"category\": \"ACC\" } ``` Now, I need to review this data once more for validation: - Since I have one \"POR REVISAR\" field (identificationType for Shai Bercovich), I should set requiresReview to \"true\" - I need to add the conflict to conflictingSources Final JSON: ```json { \"result\": { \"companyName\": \"NEWSAT S.A.S.\", \"documentCategory\": \"Equity Composition\", \"taxId\": \"830.513.366-3\", \"country\": \"Colombia\", \"identificationDetails\": { \"source\": \"text_reference\", \"indicators\": [ \"Bogotá\", \"Colombia\", \"Cámara de Comercio de Bogotá\" ], \"conflictingSources\": [\"Unclear identification type for shareholder: Shai Bercovich\"], \"requiresReview\": \"true\" }, \"relatedParties\": [ { \"type\": \"person\", \"firstName\": \"Carlos Enrique\", \"lastName\": \"Rosero Ceron\", \"identificationType\": \"C.C.\", \"identificationNumber\": \"6386024\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"40\", \"timeFound\": \"1\", \"job\": \"\" }, { \"type\": \"person\", \"firstName\": \"Shai\", \"lastName\": \"Bercovich\", \"identificationType\": \"POR REVISAR\", \"identificationNumber\": \"301680\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"40\", \"timeFound\": \"1\", \"job\": \"\" }, { \"type\": \"person\", \"firstName\": \"Diego Alejandro\", \"lastName\": \"Salazar Vasquez\", \"identificationType\": \"C.C.\", \"identificationNumber\": \"91499446\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"20\", \"timeFound\": \"1\", \"job\": \"\" } ] }, \"documentType\": \"company\", \"category\": \"ACC\" } ```",
+          "signature": "ErcBCkgIBxABGAIiQCTvzOl5fBQW04u2FKOUZ6nyqx0QsuqXUvnjGwp8Bfl3OeCk+BdRYGsd7W9vkVOAlY0oEBHqLB9m+NFXgMswhTgSDDV8ZlU3G2JSfkQzQhoMQGRlHyeJIAKRl8nSIjABi6YRTHCaz7vD1MJp0+APmTHxyO9ru3uPVRteL+YdW4KTXBtCW5ts3ZUYtGIkY/4qHT47EQOZ36S/2bRo2Sj7u1E39NK06Hey5e/nkfbMGAI="
+        },
+        {
+          "type": "text",
+          "text": "{ \"result\": { \"companyName\": \"NEWSAT S.A.S.\", \"documentCategory\": \"Equity Composition\", \"taxId\": \"830.513.366-3\", \"country\": \"Colombia\", \"identificationDetails\": { \"source\": \"text_reference\", \"indicators\": [ \"Bogotá\", \"Colombia\", \"Cámara de Comercio de Bogotá\" ], \"conflictingSources\": [\"Unclear identification type for shareholder: Shai Bercovich\"], \"requiresReview\": \"true\" }, \"relatedParties\": [ { \"type\": \"person\", \"firstName\": \"Carlos Enrique\", \"lastName\": \"Rosero Ceron\", \"identificationType\": \"C.C.\", \"identificationNumber\": \"6386024\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"40\", \"timeFound\": \"1\", \"job\": \"\" }, { \"type\": \"person\", \"firstName\": \"Shai\", \"lastName\": \"Bercovich\", \"identificationType\": \"POR REVISAR\", \"identificationNumber\": \"301680\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"40\", \"timeFound\": \"1\", \"job\": \"\" }, { \"type\": \"person\", \"firstName\": \"Diego Alejandro\", \"lastName\": \"Salazar Vasquez\", \"identificationType\": \"C.C.\", \"identificationNumber\": \"91499446\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"20\", \"timeFound\": \"1\", \"job\": \"\" } ] }, \"documentType\": \"company\", \"category\": \"ACC\" }"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 425,
+        "cache_creation_input_tokens": 6696,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 2275
+      }
+    },
+    "model_id": "us.anthropic.claude-3-7-sonnet-20250219-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 8000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "model_used": "us.anthropic.claude-3-7-sonnet-20250219-v1:0",
+  "api_used": "invoke_model"
+}

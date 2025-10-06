@@ -1,0 +1,88 @@
+{
+  "extraction_data": {
+    "result": {
+      "FirstName": "LUIS IGNACIO",
+      "LastName": "HERNÁNDEZ DÍAZ",
+      "CountryIssuer": "Colombia",
+      "Nationality": "colombiano",
+      "IdentificationType": "Cédula de Ciudadanía",
+      "IdentificationNumber": "19.200.964",
+      "Message": ""
+    },
+    "document_type": "person",
+    "category": "CECRL"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "```json { \"result\": { \"FirstName\": \"LUIS IGNACIO\", \"LastName\": \"HERNÁNDEZ DÍAZ\", \"CountryIssuer\": \"Colombia\", \"Nationality\": \"colombiano\", \"IdentificationType\": \"Cédula de Ciudadanía\", \"IdentificationNumber\": \"19.200.964\", \"Message\": \"\" }, \"document_type\": \"person\", \"category\": \"CECRL\" } ```"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 1640,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 4300,
+      "output_tokens": 640
+    },
+    "ResponseMetadata": {
+      "RequestId": "22b27e8f-1385-4e02-8148-69d7a04b71e7",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Sun, 31 Aug 2025 21:46:16 GMT",
+        "content-type": "application/json",
+        "content-length": "5230",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "22b27e8f-1385-4e02-8148-69d7a04b71e7",
+        "x-amzn-bedrock-invocation-latency": "11687",
+        "x-amzn-bedrock-cache-write-input-token-count": "0",
+        "x-amzn-bedrock-cache-read-input-token-count": "4300",
+        "x-amzn-bedrock-output-token-count": "640",
+        "x-amzn-bedrock-input-token-count": "1640"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_01RhHBva6JMQkQCL2feV3QKq",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-sonnet-4-20250514",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Looking at this document, I can see two sides of a Colombian \"Cédula de Ciudadanía\" (Citizenship Card). Let me analyze the structure to extract the required information. From the document, I can see: Front side (top): - \"REPÚBLICA DE COLOMBIA\" - \"IDENTIFICACIÓN PERSONAL\" - \"CÉDULA DE CIUDADANÍA\" - Number: \"19.200.964\" - I can see text that appears to say \"HERNÁNDEZ DÍAZ\" - Below that \"LUIS IGNACIO\" - There's also \"APELLIDOS\" and \"NOMBRES\" labels Back side (bottom): - Shows \"BOGOTÁ D.C.\" under what appears to be place of birth information - Other details including fingerprint Let me apply the extraction methodology. First, I'll try structured label detection: Looking at the text, I can see: - Number: 19.200.964 - The text appears to show \"HERNÁNDEZ DÍAZ\" followed by \"APELLIDOS\" - Then \"LUIS IGNACIO\" followed by \"NOMBRES\" This looks like a case of the \"misaligned\" Colombian document described in the methodology. The layout appears to be: - The surnames \"HERNÁNDEZ DÍAZ\" come first - Then the label \"APELLIDOS\" - Then the names \"LUIS IGNACIO\" - Then the label \"NOMBRES\" This is the typical misaligned Colombian document pattern where the actual data appears before its corresponding label, not after it. So applying contextual analysis: - FirstName: \"LUIS IGNACIO\" (the text that appears before the \"NOMBRES\" label) - LastName: \"HERNÁNDEZ DÍAZ\" (the text that appears before the \"APELLIDOS\" label) - CountryIssuer: \"Colombia\" (from \"REPÚBLICA DE COLOMBIA\") - Nationality: \"colombiano\" (inferred from Colombian citizenship card) - IdentificationType: \"Cédula de Ciudadanía\" (official document type) - IdentificationNumber: \"19.200.964\" (unique identifier) I've confirmed the document details match the standard Colombian identification format. The card provides comprehensive personal identification information.",
+          "signature": "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"
+        },
+        {
+          "type": "text",
+          "text": "```json { \"result\": { \"FirstName\": \"LUIS IGNACIO\", \"LastName\": \"HERNÁNDEZ DÍAZ\", \"CountryIssuer\": \"Colombia\", \"Nationality\": \"colombiano\", \"IdentificationType\": \"Cédula de Ciudadanía\", \"IdentificationNumber\": \"19.200.964\", \"Message\": \"\" }, \"document_type\": \"person\", \"category\": \"CECRL\" } ```"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 1640,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 4300,
+        "output_tokens": 640
+      }
+    },
+    "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 8000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+  "api_used": "invoke_model"
+}

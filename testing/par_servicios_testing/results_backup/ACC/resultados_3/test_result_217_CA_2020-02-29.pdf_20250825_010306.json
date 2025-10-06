@@ -1,0 +1,147 @@
+{
+  "document_name": "217_CA_2020-02-29.pdf",
+  "category": "ACC",
+  "classification_success": true,
+  "extraction_success": true,
+  "overall_success": true,
+  "timestamp": "2025-08-25T01:02:54.059424",
+  "classification_result": {
+    "classification_data": {
+      "category": "ACC",
+      "text": "COMPOSICION ACCIONARIA CERTIFICACION DEL CONTADOR PÚBLICO El suscrito Contador Público de LA EMPRESA ROMEGASAS,. identificado con NIT 900.127.447 - 1, hace constar que, de acuerdo con el libro oficial de registro de accionistas, inscrito en el registro mercantil, CERTIFICA QUE: La composición accionaria es la siguiente: DOCUMENTO ACCIONISTAS % ACCIONES VALOR PARTICIPACION SUSCRITAS NOMINAL CC. 79.735.871 JULIO CESAR ROMERO MUÑOZ 100% 2.000 $10.000 TOTAL 100% 2.000 $10.000 Se expide a los veinticinco (31) días del mes de mayo de 2023 Cordialmente, LAURA I. OVIEDO GOMEZ TP 304428 - T CONTADORA PÚBLICA",
+      "document_number": "900127447",
+      "path": "ACC/900127447/217_CA_2020-02-29.pdf"
+    },
+    "raw_response": {
+      "ResponseMetadata": {
+        "RequestId": "d76e472c-2596-4580-b9b4-d5d15c4d88cf",
+        "HTTPStatusCode": 200,
+        "HTTPHeaders": {
+          "date": "Mon, 25 Aug 2025 06:02:59 GMT",
+          "content-type": "application/json",
+          "content-length": "861",
+          "connection": "keep-alive",
+          "x-amzn-requestid": "d76e472c-2596-4580-b9b4-d5d15c4d88cf"
+        },
+        "RetryAttempts": 0
+      },
+      "output": {
+        "message": {
+          "role": "assistant",
+          "content": [
+            {
+              "text": "```json { \"category\": \"ACC\", \"text\": \"COMPOSICION ACCIONARIA CERTIFICACION DEL CONTADOR PÚBLICO El suscrito Contador Público de LA EMPRESA ROMEGASAS,. identificado con NIT 900.127.447 - 1, hace constar que, de acuerdo con el libro oficial de registro de accionistas, inscrito en el registro mercantil, CERTIFICA QUE: La composición accionaria es la siguiente: DOCUMENTO ACCIONISTAS % ACCIONES VALOR PARTICIPACION SUSCRITAS NOMINAL CC. 79.735.871 JULIO CESAR ROMERO MUÑOZ 100% 2.000 $10.000 TOTAL 100% 2.000 $10.000 Se expide a los veinticinco (31) días del mes de mayo de 2023 Cordialmente, LAURA I. OVIEDO GOMEZ TP 304428 - T CONTADORA PÚBLICA\" } ```"
+            }
+          ]
+        }
+      },
+      "stopReason": "end_turn",
+      "usage": {
+        "inputTokens": 3128,
+        "outputTokens": 249,
+        "totalTokens": 3377
+      },
+      "metrics": {
+        "latencyMs": 5177
+      },
+      "model_id": "us.amazon.nova-pro-v1:0",
+      "api_used": "converse",
+      "model_params": {
+        "maxTokens": 8200,
+        "topP": 1,
+        "temperature": 0
+      }
+    },
+    "expected_category": "ACC",
+    "model_used": "us.amazon.nova-pro-v1:0",
+    "api_used": "converse",
+    "pdf_info": {
+      "original_size": 353898,
+      "first_page_size": 352312,
+      "is_scanned": false
+    }
+  },
+  "extraction_result": {
+    "extraction_data": {
+      "path": "ACC/900127447/217_CA_2020-02-29.pdf",
+      "result": {
+        "companyName": "LA EMPRESA ROMEGA SAS",
+        "documentType": "Equity Composition",
+        "taxId": "900.127.447 - 1",
+        "country": "Colombia",
+        "identificationDetails": {
+          "source": "text_reference",
+          "indicators": [
+            "NIT",
+            "Colombia"
+          ],
+          "conflictingSources": [],
+          "requiresReview": false
+        },
+        "relatedParties": [
+          {
+            "firstName": "JULIO CESAR",
+            "lastName": "ROMERO MUÑOZ",
+            "identificationType": "CC",
+            "identificationNumber": "79.735.871",
+            "relationshipType": "Shareholder",
+            "participationPercentage": "100%",
+            "timeFound": 1,
+            "job": ""
+          }
+        ]
+      },
+      "document_type": "company",
+      "document_number": "900127447",
+      "category": "ACC",
+      "confidenceScores": {
+        "companyName": 95,
+        "taxId": 95,
+        "country": 98,
+        "relatedParties": 90
+      }
+    },
+    "raw_response": {
+      "ResponseMetadata": {
+        "RequestId": "ba149596-7ec2-49f3-a39e-dca24aa486a0",
+        "HTTPStatusCode": 200,
+        "HTTPHeaders": {
+          "date": "Mon, 25 Aug 2025 06:03:06 GMT",
+          "content-type": "application/json",
+          "content-length": "1272",
+          "connection": "keep-alive",
+          "x-amzn-requestid": "ba149596-7ec2-49f3-a39e-dca24aa486a0"
+        },
+        "RetryAttempts": 0
+      },
+      "output": {
+        "message": {
+          "role": "assistant",
+          "content": [
+            {
+              "text": "```json { \"path\": \"ACC/900127447/217_CA_2020-02-29.pdf\", \"result\": { \"companyName\": \"LA EMPRESA ROMEGA SAS\", \"documentType\": \"Equity Composition\", \"taxId\": \"900.127.447 - 1\", \"country\": \"Colombia\", \"identificationDetails\": { \"source\": \"text_reference\", \"indicators\": [ \"NIT\", \"Colombia\" ], \"conflictingSources\": [], \"requiresReview\": false }, \"relatedParties\": [ { \"firstName\": \"JULIO CESAR\", \"lastName\": \"ROMERO MUÑOZ\", \"identificationType\": \"CC\", \"identificationNumber\": \"79.735.871\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"100%\", \"timeFound\": 1, \"job\": \"\" } ] }, \"document_type\": \"company\", \"document_number\": \"900127447\", \"category\": \"ACC\", \"confidenceScores\": { \"companyName\": 95, \"taxId\": 95, \"country\": 98, \"relatedParties\": 90 } } ```"
+            }
+          ]
+        }
+      },
+      "stopReason": "end_turn",
+      "usage": {
+        "inputTokens": 8569,
+        "outputTokens": 317,
+        "totalTokens": 8886
+      },
+      "metrics": {
+        "latencyMs": 6470
+      },
+      "model_id": "us.amazon.nova-pro-v1:0",
+      "api_used": "converse",
+      "model_params": {
+        "maxTokens": 8200,
+        "topP": 1,
+        "temperature": 0.1
+      }
+    },
+    "model_used": "us.amazon.nova-pro-v1:0",
+    "api_used": "converse"
+  }
+}

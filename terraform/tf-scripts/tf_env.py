@@ -34,7 +34,7 @@ def sh(cmd: list[str], cwd: Path | None = None, capture: bool = False) -> str:
     """
     Run *cmd* in *cwd*.
     • When capture=False (default) the command inherits the parent console,
-      so you see Terraform’s coloured output live.
+      so you see Terraform's coloured output live.
     • When capture=True the output is captured and returned (used for
       `terraform output` that you want to save to .env).
     """
@@ -57,9 +57,35 @@ def sh(cmd: list[str], cwd: Path | None = None, capture: bool = False) -> str:
         LOG.error("Command failed (exit %s)", exc.returncode)
         sys.exit(exc.returncode)
 
+# ──────────────────────── Helper function ─────────────────────────────
+def get_base_env(env: str) -> str:
+    """Extract base environment from env name (e.g., 'dev-rolando' -> 'dev')"""
+    if env.startswith('dev'):
+        return 'dev'
+    elif env.startswith('qa'):
+        return 'qa'
+    elif env.startswith('prod'):
+        return 'prod'
+    else:
+        # Default to dev for unknown patterns
+        LOG.warning("Unknown environment pattern '%s', defaulting to 'dev'", env)
+        return 'dev'
+
+def validate_tfvars_file(env: str) -> str:
+    """Validate that the .tfvars file exists for the environment"""
+    base_env = get_base_env(env)
+    tfvars_file = ROOT / f"environments/{base_env}.tfvars"
+    
+    if not tfvars_file.exists():
+        LOG.error("Variables file %s not found", tfvars_file)
+        sys.exit(1)
+    
+    return base_env
+
 # ───────────────────────── Terraform wrappers ─────────────────────────
 def switch_env(env: str):
-    backend_file = ROOT / f"config/{env}.backend.hcl"
+    base_env = get_base_env(env)
+    backend_file = ROOT / f"config/{base_env}.backend.hcl"
     if not backend_file.exists():
         LOG.error("Backend config %s not found", backend_file)
         sys.exit(1)
@@ -67,27 +93,30 @@ def switch_env(env: str):
     LOG.info("Switched to environment %s successfully", env)
 
 def create_env(env: str):
-    switch_env("dev")
+    base_env = get_base_env(env)
+    switch_env(env)
     sh(["terraform", "workspace", "new", env], cwd=ROOT)
     LOG.info("Created workspace %s", env)
 
 def plan_env(env: str):
-    switch_env("dev")
+    base_env = validate_tfvars_file(env)
+    switch_env(env)
     sh(["terraform", "workspace", "select", env], cwd=ROOT)
     sh([
         "terraform", "plan",
-        "-var-file=environments/dev.tfvars",
+        f"-var-file=environments/{base_env}.tfvars",  # ✅ Usa el archivo correcto
         f"-var=stage_name={env}"
     ], cwd=ROOT)
     (ROOT / ".env").write_text(sh(["terraform", "output", "-json"], cwd=ROOT, capture=True))
     LOG.info("Plan complete for %s (outputs written to .env)", env)
 
 def deploy_env(env: str, auto_approve: bool = False):
-    switch_env("dev")
+    base_env = validate_tfvars_file(env)
+    switch_env(env)
     sh(["terraform", "workspace", "select", env], cwd=ROOT)
     cmd = ["terraform",
             "apply",
-            "-var-file=environments/dev.tfvars",
+            f"-var-file=environments/{base_env}.tfvars",  # ✅ Usa el archivo correcto
             f"-var=stage_name={env}"]
     if auto_approve:
         cmd.append("-auto-approve")
@@ -111,11 +140,12 @@ def deploy_env(env: str, auto_approve: bool = False):
     sh(["node", "seed-restaurants.mjs"], cwd=ROOT.parent)
 
 def destroy_env(env: str, auto_approve: bool = False):
-    switch_env("dev")
+    base_env = validate_tfvars_file(env)
+    switch_env(env)
     sh(["terraform", "workspace", "select", env], cwd=ROOT)
     cmd = ["terraform",
             "destroy",
-            "-var-file=environments/dev.tfvars",
+            f"-var-file=environments/{base_env}.tfvars",  # ✅ Usa el archivo correcto
             f"-var=stage_name={env}"]
     if auto_approve:
         # Running as a PyInstaller executable

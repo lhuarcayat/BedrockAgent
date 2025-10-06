@@ -1,0 +1,87 @@
+{
+  "classification_data": {
+    "category": "CECRL",
+    "text": "REPÚBLICA DE COLOMBIA IDENTIFICACIÓN PERSONAL CÉDULA DE CIUDADANÍA NÚMERO 5,820,856 MONTES MONTES APELLIDOS JORGE EMILIO NOMBRES FECHA DE NACIMIENTO: 05-SEP-1955 SINCELEJO (SUCRE) LUGAR DE NACIMIENTO 1.73 ESTATURA M 04-JUN-1975 SINCELEJO FECHA Y LUGAR DE EXPEDICIÓN ÍNDICE DERECHO A-2400100-521176520-M900982090-D-2094040? 00016-2094H-01 12435-1913",
+    "document_number": "6820960",
+    "path": "CECRL/6820960/6820960_2020-02-29.pdf"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "```json { \"category\": \"CECRL\", \"text\": \"REPÚBLICA DE COLOMBIA\\nIDENTIFICACIÓN PERSONAL\\nCÉDULA DE CIUDADANÍA\\nNÚMERO\\n5,820,856\\nMONTES MONTES\\nAPELLIDOS\\nJORGE EMILIO\\nNOMBRES\\nFECHA DE NACIMIENTO: 05-SEP-1955\\nSINCELEJO\\n(SUCRE)\\nLUGAR DE NACIMIENTO\\n1.73\\nESTATURA\\nM\\n04-JUN-1975 SINCELEJO\\nFECHA Y LUGAR DE EXPEDICIÓN\\nÍNDICE DERECHO\\nA-2400100-521176520-M900982090-D-2094040?\\n00016-2094H-01\\n12435-1913\" } ```"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 1584,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 3150,
+      "output_tokens": 848
+    },
+    "ResponseMetadata": {
+      "RequestId": "28732c27-9d52-4b04-adfb-6ef8ce3f303a",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Sun, 31 Aug 2025 21:34:04 GMT",
+        "content-type": "application/json",
+        "content-length": "5658",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "28732c27-9d52-4b04-adfb-6ef8ce3f303a",
+        "x-amzn-bedrock-invocation-latency": "12928",
+        "x-amzn-bedrock-cache-write-input-token-count": "0",
+        "x-amzn-bedrock-cache-read-input-token-count": "3150",
+        "x-amzn-bedrock-output-token-count": "848",
+        "x-amzn-bedrock-input-token-count": "1584"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_018rti6JfEBmDUJy3aGtPKB5",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-sonnet-4-20250514",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Let me analyze this PDF document step by step following the classification workflow. 1. **TEXT EXTRACTION** From the document, I can extract the following text: Front side: - REPÚBLICA DE COLOMBIA - IDENTIFICACIÓN PERSONAL - CÉDULA DE CIUDADANÍA - NÚMERO: 5,820,856 - MONTES MONTES - APELLIDOS - JORGE EMILIO - NOMBRES - [There's a signature] Back side: - FECHA DE NACIMIENTO: 05-SEP-1955 - SINCELEJO - (SUCRE) - LUGAR DE NACIMIENTO - 1.73 - ESTATURA - M - 04-JUN-1975 SINCELEJO - FECHA Y LUGAR DE EXPEDICIÓN - [Fingerprint image] - [Barcode at bottom] - Various reference numbers and codes 2. **PRIORITY CHECKS** - This is NOT BLANK - there is significant content - This is NOT LINK_ONLY - no hyperlinks or URLs present 3. **DOCUMENT FUNCTION ANALYSIS** What is the MAIN PURPOSE of this document? - This appears to be a personal identification document - specifically a Colombian national ID card (Cédula de Ciudadanía) - It contains personal biographical data: name, ID number, date of birth, place of birth, height, sex - It has a photograph, signature, and fingerprint - It's issued by the Republic of Colombia for personal identification This is clearly a CECRL indicative document. 4. **ISSUER IDENTIFICATION** - It's issued by the Republic of Colombia (REPÚBLICA DE COLOMBIA) - This is a government identification authority issuing a personal ID document 5. **CATEGORY CLASSIFICATION** Following the order: CECRL → CERL → ACC → RUT → RUB → BY_REVIEW This clearly fits CECRL: I confirm this is a comprehensive government-issued identification document with multiple security and personal verification features. The Colombian national ID card provides critical personal information and serves as an official means of individual identification, meeting all CECRL classification criteria.",
+          "signature": "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"
+        },
+        {
+          "type": "text",
+          "text": "```json { \"category\": \"CECRL\", \"text\": \"REPÚBLICA DE COLOMBIA\\nIDENTIFICACIÓN PERSONAL\\nCÉDULA DE CIUDADANÍA\\nNÚMERO\\n5,820,856\\nMONTES MONTES\\nAPELLIDOS\\nJORGE EMILIO\\nNOMBRES\\nFECHA DE NACIMIENTO: 05-SEP-1955\\nSINCELEJO\\n(SUCRE)\\nLUGAR DE NACIMIENTO\\n1.73\\nESTATURA\\nM\\n04-JUN-1975 SINCELEJO\\nFECHA Y LUGAR DE EXPEDICIÓN\\nÍNDICE DERECHO\\nA-2400100-521176520-M900982090-D-2094040?\\n00016-2094H-01\\n12435-1913\" } ```"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 1584,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 3150,
+        "output_tokens": 848
+      }
+    },
+    "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 8000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "expected_category": "CECRL",
+  "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+  "api_used": "invoke_model",
+  "pdf_info": {
+    "original_size": 315707,
+    "first_page_size": 311205,
+    "is_scanned": true
+  }
+}

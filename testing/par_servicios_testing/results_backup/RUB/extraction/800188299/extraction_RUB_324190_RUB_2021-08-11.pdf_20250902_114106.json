@@ -1,0 +1,107 @@
+{
+  "extraction_data": {
+    "result": {
+      "CompanyName": "LINALCA INFORMATICA S.A.S. - BIC",
+      "TaxId": "8001882949",
+      "IdentificationType": "NIT",
+      "Country": "Colombia",
+      "ConflictingSources": [
+        "Participation percentages total 89.82% instead of 100% (49.6% + 40.22%)"
+      ],
+      "RequiresReview": "true"
+    },
+    "RelatedParties": [
+      {
+        "FirstName": "JUAN CLAUDIO",
+        "LastName": "SANCHEZ FERRE",
+        "IdType": "NIT",
+        "IdNumber": "19255765",
+        "NoveltyType": "Actualización",
+        "ParticipationPercentage": "49.6"
+      },
+      {
+        "FirstName": "MARTHA PATRICIA",
+        "LastName": "SANCHEZ FERRE",
+        "IdType": "NIT",
+        "IdNumber": "41324009",
+        "NoveltyType": "Actualización",
+        "ParticipationPercentage": "40.22"
+      }
+    ],
+    "DocumentType": "company",
+    "Category": "RUB"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "{ \"result\": { \"CompanyName\": \"LINALCA INFORMATICA S.A.S. - BIC\", \"TaxId\": \"8001882949\", \"IdentificationType\": \"NIT\", \"Country\": \"Colombia\", \"ConflictingSources\": [\"Participation percentages total 89.82% instead of 100% (49.6% + 40.22%)\"], \"RequiresReview\": \"true\" }, \"RelatedParties\": [ { \"FirstName\": \"JUAN CLAUDIO\", \"LastName\": \"SANCHEZ FERRE\", \"IdType\": \"NIT\", \"IdNumber\": \"19255765\", \"NoveltyType\": \"Actualización\", \"ParticipationPercentage\": \"49.6\" }, { \"FirstName\": \"MARTHA PATRICIA\", \"LastName\": \"SANCHEZ FERRE\", \"IdType\": \"NIT\", \"IdNumber\": \"41324009\", \"NoveltyType\": \"Actualización\", \"ParticipationPercentage\": \"40.22\" } ], \"DocumentType\": \"company\", \"Category\": \"RUB\" }"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 5027,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 2039,
+      "output_tokens": 862
+    },
+    "ResponseMetadata": {
+      "RequestId": "6991d8ba-0958-412d-bb73-147532a81ea8",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Tue, 02 Sep 2025 16:41:06 GMT",
+        "content-type": "application/json",
+        "content-length": "5436",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "6991d8ba-0958-412d-bb73-147532a81ea8",
+        "x-amzn-bedrock-invocation-latency": "17487",
+        "x-amzn-bedrock-cache-write-input-token-count": "0",
+        "x-amzn-bedrock-cache-read-input-token-count": "2039",
+        "x-amzn-bedrock-output-token-count": "862",
+        "x-amzn-bedrock-input-token-count": "5027"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_01WTZuC2vMofFFJ13nQqAupV",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-sonnet-4-20250514",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Let me analyze this Colombian \"Final Beneficiaries Report\" (Reporte de Beneficiarios Finales) issued by DIAN to extract the required information. From page 1, I can extract: - CompanyName: From cell \"11. Denominación o razón social\": \"LINALCA INFORMATICA S.A.S. - BIC\" - Country: This is a DIAN document, so Colombia - TaxId: From cell \"18. Número de identificación\": \"8001882949\" - IdentificationType: For DIAN reports, this is \"NIT\" From page 2, I can see the beneficiaries data: First beneficiary: - Document type: \"1\" and \"3\" (this seems to match between cells 29 and the repeated section) - ID Number: \"19255765\" (from cell 30 \"Número de identificación\") - This should match cell 32 \"Número de Identificación Tributaria - NIT\": \"19255765\" ✓ - First name: From cells \"36. Primer nombre\" and \"37. Otros nombres\": \"JUAN\" and \"CLAUDIO\" - Last name: From cells \"34. Primer apellido\" and \"35. Segundo apellido\": \"SANCHEZ\" and \"FERRE\" - Participation percentage: From cell \"57. Porcentaje de participación\": \"49.6\" - Novelty type: From cell \"61. Tipo de novedad\": \"Actualización\" (code 2) Second beneficiary: - ID Number: \"41324009\" (from cell 30) - This should match cell 32: \"41324009\" ✓ - First name: \"MARTHA\" and \"PATRICIA\" - Last name: \"SANCHEZ\" and \"FERRE\" - Participation percentage: \"40.22\" - Novelty type: \"Actualización\" (code 2) I notice the total participation percentage is 89.82%, which falls short of 100%. This discrepancy requires careful examination, though the individual percentages are clearly documented. Both beneficiaries' identification type is confirmed as \"NIT\" based on the DIAN report's standard documentation.",
+          "signature": "EoUOCkgIBxABGAIqQBMoyg5qBBKfJweJBi9Uez0od31s4/A8PpbHgohHBrehMMhLV8r5t6LecoYkd3liRU1YCUmrzbPLDDSFYo1WDuYSDBqWlYfGgvYQFYwKuRoMrqG67sTN9U5GSYaKIjBqteu92yO5CRu7MwdadNv6LvfmrpUY9na3pW5ZjkkdY4QQJc0wZRJz9OzrqKPtNhQq6gwbez3HSOPUlVv17SMDxA0L+fg6lccaY9yzxWfPh7ZQ4A0xFEHPiJzOOnS9b2u+M3qWguBAGsFJ6DbxNSVHTx2L5MIYLI3AbUhGJFL6L0jOcAFUITwedJLKX9i6bm4vM3ORiX4eD2L5ZIkYdTTB258yL2a03qGD3Yeiqc1JUa1Zg9TqhqejrP34GFvq7I7k5D7WdNxTvQ0dGK1uvMaCC5f4fcjkmMOxHd1D4s3oJ2wGGTmDWB6zkz0HYc9Avk/hlAjs0YlEzeaH4flRC1f2DNW4JDif5TqfHg82d6uQkFlQ05bRrRN4Px6Qa81JsOR1kFIc+8ZdLrr+5rPst8DBw83lxjBxgKFIXL9D/jG3eRil66h+5/F6a8HjZIicgq27bT+zRMghLvmWjdghHJdZQ9fIAf5UZ3i42zbyhXxp/QXcp3PHy1KcnTTDBhi/xprHI/jTfxoWUQ4hKs7Le1h/av84FjrRoAqtSpKjBxfLc/nTINn6pIE77r6pH+Y9GgmBhl5FN+W7otcoOiBb98NP50FPreVvDbIxmTcgBm8ZI+akCt3q5HEMC0iyABgH3F5i6Q+zq3y5wRi3k4L9RFIXntmPKIhQ17hlfBxBbTU788dFOTWRL6h9g8SUpO0Lo8g41rG/cZjwSqMtTivQOdIeh+idbM44mCK5AjWUBgq/dr06bMFTicw51ee0EY36tx9lM855gZbC8Owa6xMEqL9/fni+mYZpu6aWFxH1RP30JiuYv8DVJ3vQmEJN0lj2EfLMyn8VwQYci/2JxodmTqkdsegcJxWnSqd7EJDTO+rLkbRa/sHwcBAE2U69ArRPQNpeE2PEBuiGuAG/kl3Dvp9mXWVnEqBHbATzoU0mx5GlBuUw44XEDI40MpRJw8dJjadkqSuhDAx+VkjY6ci3uxYrBQ7MXBj9fizlC/B3L9atYQmirqd5P/kvUGe0PepFgeoIimxSXniYDTuWFvYxdrHwb7vq0rag9NG6JcmqOMzc8VFwhY47n3v0J6g7yo7gwDcY5Z0DzOdIrPznnjXu3W2PDgJtxnC6IiDzdxy4Yt0BgjIerL4X0luNbK/yuQxykssSvbOK+QRtSbvNTuiCSEPIAxWncSUncRoD4xiwFWLgysFMiHypp42kZA18zG4/67I4Hd+HNqHIp9TsfJgNUI52VWQ900NVz3JHX/ThYOjc8gMUhSWv0GdSsO6nA/sV1cM/Bi5Or4idFAlHesnelzYHguC3OgJFC1gingFD8RYpmpnxZrEeMdYAjk5ZixZAyWhCExou9IuMfde1Zg80nDEbvcXWCiB04U6dRF9NMzugwcLtaVCTKsDYW2iN450fMdJez+MvYbUPxQ7oRpGFCdpabjWGnqzymjg/9tRWkz6PAIJp4J9yffvWZdU5s2FytyvQ9T+1vA7PThaOumQumgsxPP2OubQ+9/Z2PLC/yEjRpmZA6RSqm5Sml60arcuor1VyP5Rivt5GKIby3cVJnLr4NvWqi+6LW9AtIdBv+peDUN6AqCKSgmBFvpVzClJ/i39mQgFFwcZrVz6yrey5QSsPq0V+p0nmz8XH2Ev5t+rsiKOHNhXqGbdsc0zk8whI91czJy+an55EK80m2NL/4Y7bbGovD5fpvr54A/vwn3nOLXqbnvgP2jG5rrxvDECsDPGO/mjiiadFwOA5aZTTeeWCT5tD2CZfNMeV/xFZ4G2DqDxrf2er6dMRPJabLrwkABNlKcu9ANaHkUGVWAtYKSN/WBnVDuCPrUBhK2QWmftHrcYTc0/z59g4R0cdwwQo8DqW2DuewY+XVYyyWjiIkTjjAzSoR5cd84Cbo9DKBEbzWbJimGjDDlZQd0ujRP9xPJk/9WS6kDq3C+wKSos7BzqPDXT81mDwyZVfPqP008E+ikchh/Q/zkmi/qzZ5qYdogwipz4Qr1dpBxySwDaA1SyTFABMYW6XuvkvRnClFz+oycGTmI3v0lt4AiiWmT5IaDHcUfVjwn5rxSjSO7aoypKrqef++chFB8PYR48unBXuu4dbv8EmY4KeRR5+yROGGNQB4bOe0s7bNLovKh/s8KRFOZwiSvHcDOWca3esi0YhMr0uE4WS6TpNzGVJmScvrwa47Obecun9wnwUcw6EKiQ6JSBBGmGmL9rQtEG1d0PiVknzFZgpAjsbodvdnVGHPPAGhlP5fzsLxpMmbfasGAE="
+        },
+        {
+          "type": "text",
+          "text": "{ \"result\": { \"CompanyName\": \"LINALCA INFORMATICA S.A.S. - BIC\", \"TaxId\": \"8001882949\", \"IdentificationType\": \"NIT\", \"Country\": \"Colombia\", \"ConflictingSources\": [\"Participation percentages total 89.82% instead of 100% (49.6% + 40.22%)\"], \"RequiresReview\": \"true\" }, \"RelatedParties\": [ { \"FirstName\": \"JUAN CLAUDIO\", \"LastName\": \"SANCHEZ FERRE\", \"IdType\": \"NIT\", \"IdNumber\": \"19255765\", \"NoveltyType\": \"Actualización\", \"ParticipationPercentage\": \"49.6\" }, { \"FirstName\": \"MARTHA PATRICIA\", \"LastName\": \"SANCHEZ FERRE\", \"IdType\": \"NIT\", \"IdNumber\": \"41324009\", \"NoveltyType\": \"Actualización\", \"ParticipationPercentage\": \"40.22\" } ], \"DocumentType\": \"company\", \"Category\": \"RUB\" }"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 5027,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 2039,
+        "output_tokens": 862
+      }
+    },
+    "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 9000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+  "api_used": "invoke_model"
+}

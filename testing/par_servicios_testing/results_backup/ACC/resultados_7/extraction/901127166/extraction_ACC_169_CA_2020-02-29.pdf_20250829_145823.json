@@ -1,0 +1,107 @@
+{
+  "extraction_data": {
+    "result": {
+      "companyName": "TRITON LOGISTICA Y CONSTRUCCIONES SAS",
+      "documentCategory": "Equity Composition",
+      "taxId": "901.127.166-9",
+      "country": "Colombia",
+      "identificationDetails": {
+        "source": "id_analysis",
+        "indicators": [
+          "NIT format",
+          "Spanish language"
+        ],
+        "conflictingSources": [],
+        "requiresReview": "false"
+      },
+      "relatedParties": [
+        {
+          "type": "person",
+          "firstName": "ERNESTO JOSE",
+          "lastName": "CHALELA MARTINEZ",
+          "identificationType": "C.C.",
+          "identificationNumber": "9.287.800",
+          "relationshipType": "Shareholder",
+          "participationPercentage": "100",
+          "timeFound": "1",
+          "job": "REPRESENTANTE LEGAL"
+        }
+      ]
+    },
+    "documentType": "company",
+    "category": "ACC"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "{ \"result\": { \"companyName\": \"TRITON LOGISTICA Y CONSTRUCCIONES SAS\", \"documentCategory\": \"Equity Composition\", \"taxId\": \"901.127.166-9\", \"country\": \"Colombia\", \"identificationDetails\": { \"source\": \"id_analysis\", \"indicators\": [ \"NIT format\", \"Spanish language\" ], \"conflictingSources\": [], \"requiresReview\": \"false\" }, \"relatedParties\": [ { \"type\": \"person\", \"firstName\": \"ERNESTO JOSE\", \"lastName\": \"CHALELA MARTINEZ\", \"identificationType\": \"C.C.\", \"identificationNumber\": \"9.287.800\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"100\", \"timeFound\": \"1\", \"job\": \"REPRESENTANTE LEGAL\" } ] }, \"documentType\": \"company\", \"category\": \"ACC\" }"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 9,
+      "cache_creation_input_tokens": 6291,
+      "cache_read_input_tokens": 0,
+      "output_tokens": 927
+    },
+    "ResponseMetadata": {
+      "RequestId": "40ee6336-81f2-40c3-9da5-8ef035719f7e",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Fri, 29 Aug 2025 19:58:24 GMT",
+        "content-type": "application/json",
+        "content-length": "6394",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "40ee6336-81f2-40c3-9da5-8ef035719f7e",
+        "x-amzn-bedrock-invocation-latency": "25168",
+        "x-amzn-bedrock-cache-write-input-token-count": "6291",
+        "x-amzn-bedrock-cache-read-input-token-count": "0",
+        "x-amzn-bedrock-output-token-count": "927",
+        "x-amzn-bedrock-input-token-count": "9"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_01SMSZ4h3fZmYoEvLmA8fN2j",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-sonnet-4-20250514",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Looking at this document, I need to extract structured data about equity composition for a Colombian company. Let me analyze it step by step. **Step 1: Document Analysis** - This is a \"COMPOSICION ACCIONARIA\" (Equity/Shareholder Composition) document - The company issuing the document is \"TRITON LOGISTICA Y CONSTRUCCIONES SAS\" - There's one shareholder: \"ERNESTO JOSE CHALELA MARTINEZ\" **Step 2: Root Level Extraction** **companyName**: From the document, I can see \"TRITON LOGISTICA Y CONSTRUCCIONES SAS\" - this is the main reporting company. **taxId**: The document shows \"NIT. 901.127.166 - 9\" - this is formatted in Colombian style. **country**: Based on: 1. The tax ID format \"NIT\" which is Colombian 2. The document format and language suggests Colombia 3. The date format \"23 ENERO DEL 2020\" is Spanish **identificationDetails**: - source: \"id_analysis\" (based on NIT format) - indicators: [\"NIT format\", \"Spanish language\"] - No conflicts apparent - requiresReview: \"false\" **Step 3: Related Parties Processing** There's one shareholder: - Name: \"ERNESTO JOSE CHALELA MARTINEZ\" - ID: \"9,287,800\" (this appears to be 9.287.800) - Shares: 5,000 - Participation: 100% - Role: \"REPRESENTANTE LEGAL\" This is clearly a person (personal name format), not a company. For Colombian personal IDs, I need to check the format: - Original: 9,287,800 → removing dots/commas: 9287800 - This is 7 digits starting with 9 - According to Colombian rules: C.C. if matches /^[1-9][0-9]{3,9}$/ (4-10 digits) - 9287800 has 7 digits, starts with 9, so it fits C.C. pattern I'll break down the individual's name according to Latin American naming conventions. The given names \"ERNESTO JOSE\" precede the family names \"CHALELA MARTINEZ\". This confirms a standard Colombian name structure with two given names and two family names. The identification matches Colombian citizen documentation standards, and the 100% ownership indicates a sole proprietorship or single-shareholder company structure.",
+          "signature": "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"
+        },
+        {
+          "type": "text",
+          "text": "{ \"result\": { \"companyName\": \"TRITON LOGISTICA Y CONSTRUCCIONES SAS\", \"documentCategory\": \"Equity Composition\", \"taxId\": \"901.127.166-9\", \"country\": \"Colombia\", \"identificationDetails\": { \"source\": \"id_analysis\", \"indicators\": [ \"NIT format\", \"Spanish language\" ], \"conflictingSources\": [], \"requiresReview\": \"false\" }, \"relatedParties\": [ { \"type\": \"person\", \"firstName\": \"ERNESTO JOSE\", \"lastName\": \"CHALELA MARTINEZ\", \"identificationType\": \"C.C.\", \"identificationNumber\": \"9.287.800\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"100\", \"timeFound\": \"1\", \"job\": \"REPRESENTANTE LEGAL\" } ] }, \"documentType\": \"company\", \"category\": \"ACC\" }"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 9,
+        "cache_creation_input_tokens": 6291,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 927
+      }
+    },
+    "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 8000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+  "api_used": "invoke_model"
+}

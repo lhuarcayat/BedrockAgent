@@ -1,0 +1,90 @@
+{
+  "extraction_data": {
+    "path": "CECRL/900284349/79567666_2020-02-29.pdf",
+    "result": {
+      "firstName": "LEONARDO",
+      "lastName": "LAYTON AREVALO",
+      "country_issuer": "Colombia",
+      "nationality": "Colombia",
+      "identificationType": "Cédula de Ciudadanía",
+      "identificationNumber": "79.567.666",
+      "message": ""
+    },
+    "document_type": "person",
+    "documentNumber": "900284349",
+    "category": "CECRL"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "```json { \"result\": { \"firstName\": \"LEONARDO\", \"lastName\": \"LAYTON AREVALO\", \"country_issuer\": \"Colombia\", \"nationality\": \"Colombia\", \"identificationType\": \"Cédula de Ciudadanía\", \"identificationNumber\": \"79.567.666\", \"message\": \"\" }, \"document_type\": \"person\", \"category\": \"CECRL\" } ```"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 10,
+      "cache_creation_input_tokens": 5982,
+      "cache_read_input_tokens": 0,
+      "output_tokens": 566
+    },
+    "ResponseMetadata": {
+      "RequestId": "6c000b7f-b9ed-44af-b4f3-ce3e8274dabc",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Thu, 28 Aug 2025 15:45:23 GMT",
+        "content-type": "application/json",
+        "content-length": "2496",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "6c000b7f-b9ed-44af-b4f3-ce3e8274dabc",
+        "x-amzn-bedrock-invocation-latency": "12597",
+        "x-amzn-bedrock-cache-write-input-token-count": "5982",
+        "x-amzn-bedrock-cache-read-input-token-count": "0",
+        "x-amzn-bedrock-output-token-count": "566",
+        "x-amzn-bedrock-input-token-count": "10"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_01SBDwypswbfcaTEKrUiozdp",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-3-7-sonnet-20250219",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "I need to extract information from a Colombian identification document (Cédula de Ciudadanía). Let me go through the document and extract all the required fields following the schema and rules. The document appears to be a Colombian ID card (\"Cédula de Ciudadanía\") with both front and back sides visible. Let's extract the information step-by-step: 1. **firstName**: - Field label: \"NOMBRES\" - Value: \"LEONARDO\" 2. **lastName**: - Field label: \"APELLIDOS\" - Value: \"LAYTON AREVALO\" 3. **country_issuer**: - The document header states \"REPUBLICA DE COLOMBIA\" - Value: \"Colombia\" 4. **nationality**: - Not explicitly stated, but by default, this would be the same as the country issuer - Value: \"Colombia\" 5. **identificationType**: - Document title: \"IDENTIFICACION PERSONAL CEDULA DE CIUDADANIA\" - Value: \"Cédula de Ciudadanía\" 6. **identificationNumber**: - Value: \"79.567.666\" (shown as \"NUMERO 79.567.666\" on the document) 7. Additional information visible: - Birth date: \"28-OCT-1972\" - Birth place: \"BOGOTA D.C. (CUNDINAMARCA)\" - Height: \"1.71\" - Blood type: \"O+\" - Sex: \"M\" - Issue date: \"17-ABR-1991\" - Issue place: \"BOGOTA D.C.\" There are no apparent issues with the document that would require a special message. It appears to be a legitimate Colombian ID card with all required fields visible. Now I'll format this into the required JSON output:",
+          "signature": "ErcBCkgIBxABGAIiQNpUF9Mkyhnu+byqAuoTZv6Rv8OTz0dQmbwgMB0+3TW3WVlxINdv40m2jYGqteeyM/LDRXbVhVrkrUQSKzPhpisSDEMFilsLWK9vSgdl+BoMEchnlSPwAcIIDcL1IjAr6IylrhxtGS2SqFsCThCC8uJaXebBTrwAU9iVMSlWq28Tg6r4jhp9nsLSXH5anQYqHRvkMvbgGC9y6k4vpa1NmjdQxGWkBNH9C8eAfMlhGAI="
+        },
+        {
+          "type": "text",
+          "text": "```json { \"result\": { \"firstName\": \"LEONARDO\", \"lastName\": \"LAYTON AREVALO\", \"country_issuer\": \"Colombia\", \"nationality\": \"Colombia\", \"identificationType\": \"Cédula de Ciudadanía\", \"identificationNumber\": \"79.567.666\", \"message\": \"\" }, \"document_type\": \"person\", \"category\": \"CECRL\" } ```"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 10,
+        "cache_creation_input_tokens": 5982,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 566
+      }
+    },
+    "model_id": "us.anthropic.claude-3-7-sonnet-20250219-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 8000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "model_used": "us.anthropic.claude-3-7-sonnet-20250219-v1:0",
+  "api_used": "invoke_model"
+}

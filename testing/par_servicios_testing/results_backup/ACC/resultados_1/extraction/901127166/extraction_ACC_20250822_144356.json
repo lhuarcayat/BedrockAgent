@@ -1,0 +1,85 @@
+{
+  "extraction_data": {
+    "path": "ACC/901127166/169_CA_2020-02-29.pdf",
+    "result": {
+      "companyName": "TRITON LOGISTICA Y CONSTRUCCIONES SAS",
+      "documentType": "Equity Composition",
+      "taxId": "901.127.166-9",
+      "country": "Colombia",
+      "identificationDetails": {
+        "source": "id_analysis",
+        "indicators": [
+          "NIT format matches Colombia"
+        ],
+        "conflictingSources": [],
+        "requiresReview": false
+      },
+      "relatedParties": [
+        {
+          "firstName": "ERNESTO JOSE",
+          "lastName": "CHALELA MARTINEZ",
+          "identificationType": "CC",
+          "identificationNumber": "9.287.800",
+          "relationshipType": "Shareholder",
+          "participationPercentage": "100%",
+          "timeFound": 1,
+          "job": ""
+        },
+        {
+          "firstName": "ERNESTO JOSE",
+          "lastName": "CHALELA MARTINEZ",
+          "identificationType": "CC",
+          "identificationNumber": "9.287.800",
+          "relationshipType": "Shareholder",
+          "participationPercentage": "",
+          "timeFound": 2,
+          "job": "REPRESENTANTE LEGAL"
+        }
+      ]
+    },
+    "document_type": "company",
+    "document_number": "901127166",
+    "category": "ACC",
+    "confidenceScores": {
+      "companyName": 95,
+      "taxId": 95,
+      "country": 90,
+      "relatedParties": 95
+    }
+  },
+  "raw_response": {
+    "ResponseMetadata": {
+      "RequestId": "80e19384-76c7-466c-8b68-1a7e96fb8cf2",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Fri, 22 Aug 2025 19:43:56 GMT",
+        "content-type": "application/json",
+        "content-length": "2964",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "80e19384-76c7-466c-8b68-1a7e96fb8cf2"
+      },
+      "RetryAttempts": 0
+    },
+    "output": {
+      "message": {
+        "role": "assistant",
+        "content": [
+          {
+            "text": "Looking at this document, I need to extract the equity composition data step by step.\n\n**Step 1: Country Identification**\n- I can see \"NIT. 901.127.166 - 9\" which indicates Colombia (NIT is in COMPANY_ID[\"Colombia\"])\n- No explicit country/city references in the text\n- Source: ID-based inference\n\n**Step 2: Main Reporting Company (Root Level)**\n- Company Name: \"TRITON LOGISTICA Y CONSTRUCCIONES SAS\" (from the header)\n- Tax ID: \"901.127.166-9\" (NIT format, removing spaces and preserving dash)\n\n**Step 3: Related Parties**\n- One shareholder: \"ERNESTO JOSE CHALELA MARTINEZ\"\n- ID Number: \"9,287,800\" (from CEDULA column)\n- Participation: \"100%\" (from % column)\n- Also appears as \"REPRESENTANTE LEGAL\" with \"CC. 9.287.800\"\n\n**Step 4: Name Splitting**\n- \"ERNESTO JOSE CHALELA MARTINEZ\"\n- firstName: \"ERNESTO JOSE\" (two given names)\n- lastName: \"CHALELA MARTINEZ\" (two surnames)\n\n**Step 5: ID Type Classification**\n- \"9287800\" (removing dots) matches Colombia CC pattern /^[1-9][0-9]{3,9}$/\n- identificationType: \"CC\"\n\n**Step 6: Confidence Scoring**\n- All fields clearly extracted with high confidence\n- One related party fully identified\n- All required fields present\n\n```json\n{\n  \"path\": \"ACC/901127166/169_CA_2020-02-29.pdf\",\n  \"result\": {\n    \"companyName\": \"TRITON LOGISTICA Y CONSTRUCCIONES SAS\",\n    \"documentType\": \"Equity Composition\",\n    \"taxId\": \"901.127.166-9\",\n    \"country\": \"Colombia\",\n    \"identificationDetails\": {\n      \"source\": \"id_analysis\",\n      \"indicators\": [\"NIT format matches Colombia\"],\n      \"conflictingSources\": [],\n      \"requiresReview\": false\n    },\n    \"relatedParties\": [\n      {\n        \"firstName\": \"ERNESTO JOSE\",\n        \"lastName\": \"CHALELA MARTINEZ\",\n        \"identificationType\": \"CC\",\n        \"identificationNumber\": \"9.287.800\",\n        \"relationshipType\": \"Shareholder\",\n        \"participationPercentage\": \"100%\",\n        \"timeFound\": 1,\n        \"job\": \"\"\n      },\n      {\n        \"firstName\": \"ERNESTO JOSE\",\n        \"lastName\": \"CHALELA MARTINEZ\",\n        \"identificationType\": \"CC\",\n        \"identificationNumber\": \"9.287.800\",\n        \"relationshipType\": \"Shareholder\",\n        \"participationPercentage\": \"\",\n        \"timeFound\": 2,\n        \"job\": \"REPRESENTANTE LEGAL\"\n      }\n    ]\n  },\n  \"document_type\": \"company\",\n  \"document_number\": \"901127166\",\n  \"category\": \"ACC\",\n  \"confidenceScores\": {\n    \"companyName\": 95,\n    \"taxId\": 95,\n    \"country\": 90,\n    \"relatedParties\": 95\n  }\n}\n```"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "inputTokens": 8083,
+      "outputTokens": 798,
+      "totalTokens": 8881,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 18926
+    }
+  }
+}

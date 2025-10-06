@@ -1,0 +1,87 @@
+{
+  "classification_data": {
+    "category": "CECRL",
+    "text": "REPUBLICA DE COLOMBIA IDENTIFICACION PERSONAL CEDULA DE CIUDADANIA NUMERO 80.163.642 HERNANDEZ RAMIREZ APELLIDOS LUIS DARIO NOMBRES FIRMA FECHA DE NACIMIENTO 10-NOV-1983 BOGOTA D.C (CUNDINAMARCA) LUGAR DE NACIMIENTO 1.70 AB+ M ESTATURA G.S. RH SEXO 19-NOV-2001 BOGOTA D.C. FECHA Y LUGAR DE EXPEDICION INDICE DERECHO REGISTRADURIA NACIONAL CARLOS ARIEL SANCHEZ TORRES A-1500150-00653692-M-09801163642-20141229 004211930TH 1 1433211325",
+    "document_number": "UNKNOWN",
+    "path": "CECRL/900397317_80163642_2020-02-29/80163642_2020-02-29.pdf"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "```json { \"category\": \"CECRL\", \"text\": \"REPUBLICA DE COLOMBIA\\nIDENTIFICACION PERSONAL\\nCEDULA DE CIUDADANIA\\n\\nNUMERO 80.163.642\\nHERNANDEZ RAMIREZ\\nAPELLIDOS\\nLUIS DARIO\\nNOMBRES\\n\\nFIRMA\\n\\nFECHA DE NACIMIENTO 10-NOV-1983\\nBOGOTA D.C\\n(CUNDINAMARCA)\\nLUGAR DE NACIMIENTO\\n1.70 AB+ M\\nESTATURA G.S. RH SEXO\\n19-NOV-2001 BOGOTA D.C.\\nFECHA Y LUGAR DE EXPEDICION\\n\\nINDICE DERECHO\\n\\nREGISTRADURIA NACIONAL\\nCARLOS ARIEL SANCHEZ TORRES\\n\\nA-1500150-00653692-M-09801163642-20141229 004211930TH 1 1433211325\" } ```"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 9,
+      "cache_creation_input_tokens": 4570,
+      "cache_read_input_tokens": 0,
+      "output_tokens": 877
+    },
+    "ResponseMetadata": {
+      "RequestId": "7cfb0032-6e4a-4cec-a73c-dcdceaa52264",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Fri, 29 Aug 2025 15:54:27 GMT",
+        "content-type": "application/json",
+        "content-length": "5872",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "7cfb0032-6e4a-4cec-a73c-dcdceaa52264",
+        "x-amzn-bedrock-invocation-latency": "15041",
+        "x-amzn-bedrock-cache-write-input-token-count": "4570",
+        "x-amzn-bedrock-cache-read-input-token-count": "0",
+        "x-amzn-bedrock-output-token-count": "877",
+        "x-amzn-bedrock-input-token-count": "9"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_0145Zw5qs4PkJg6dLRx3hy3q",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-sonnet-4-20250514",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Let me analyze this document step by step: 1. **TEXT EXTRACTION** Looking at the PDF image, I can see: - This appears to be a Colombian identification document (cédula) - \"REPUBLICA DE COLOMBIA\" at the top - \"IDENTIFICACION PERSONAL\" - \"CEDULA DE CIUDADANIA\" - Number: 80.163.642 - Name: HERNANDEZ RAMIREZ, LUIS DARIO - There's a photo of a person - A signature section marked \"FIRMA\" - Back side shows: - Birth date: 10-NOV-1983 - Birth place: BOGOTA D.C (CUNDINAMARCA) - Height: 1.70 - Blood type: AB+ - Gender: M (masculino) - Issue date and place: 19-NOV-2001 BOGOTA D.C. - Fingerprint section - Barcode at bottom 2. **PRIORITY CHECKS** - Not BLANK - has substantial content - Not LINK_ONLY - no hyperlinks, this is a complete document 3. **ISSUER IDENTIFICATION** - This is issued by the Colombian government (República de Colombia) - This is a personal identification document (Cédula de Ciudadanía) - Not DIAN, not Chamber of Commerce 4. **DOCUMENT FUNCTION ANALYSIS** - This is clearly personal identification for an individual - Contains biographical data (birth date, place, blood type, gender) - Has security elements (photo, signature, fingerprint, barcode) - Single individual focus (Luis Dario Hernandez Ramirez) 5. **CATEGORY CLASSIFICATION** Based on the category definitions, this clearly fits CECRL: - Individual identification document ✓ - Personal biographical data (birth date/place, blood type, gender) ✓ - Individual photo, signature, fingerprint references ✓ - Government-issued personal ID number with individual name ✓ - Security elements (photo, signature, barcode, official seals) ✓ - Issued by government identification authority ✓ - Key pattern matches: \"REPUBLICA DE COLOMBIA IDENTIFICACION PERSONAL\", \"CEDULA DE CIUDADANIA NUMERO\" ✓ 6. **CONFIDENCE VALIDATION** I've confirmed this is a robust official Colombian identification document with comprehensive personal details and multiple security features. The document meets all critical verification criteria for a legitimate national ID.",
+          "signature": "ErsQCkgIBxABGAIqQLQfKM0X7qGZDocx6ZaZ/KNtKhu8Zp0JPvPCyd4aT/xlGbfSd0DCxO3ETx5WsjBF5I+Z1RQdE2SLS12lQmdwmnkSDEBTP8phZgJNADXXmBoMzCJn6tqFA3KUTbs1IjDjM+B04+DFJdMLhBWZ8l7qWenPVwiPRfqiFLi4PI02aDwx34lf8uTGJ7V+nOR4TFAqoA9Z+EL0mpuGcJT/y8K88WoDS465wrrj7GO1cvHXCYR/bJiFT3YNo8QFg77s+FEGP17mcCls15A7+xYMqkyj0miZq1sGchEN1q3lA5zGYY1LRaT0z1syqh0GHy0ODE9U6USRW8u9v9g1+PBpnFb9tYg0C2Ic8tk0jNuA+tEWFY2wY+o1Y7wx2m9FJI6c4L72YZ8QT8vPb+HAEjE+p+M+sOIkFErEL5BcYr57yYjw7oxFwoyeT8uQqi9lKMGTxnP2H+Yd+DZGGCdLdb9ZcDKC2QaQgCZqJkRqU7LaJN8norBohUY6lcYx6iHfxjlxmpMkx6O9PrctSlGuwN8fHDYXPTZrRhGhboSutEjeBoWVVVO55hUttjcMrbjBdzXnt73Biw7LdSRbGGLLiEKabs/UEjg/INXA2lNOvyv6hNb6J4IDH2ce5JfiT16+jqxLp8VAmt1/Xka7+iq9yOvji1hGzUjOi5C2stKgCihwJNE5Ov48DWedZ7OrRXJSKt+QSJXhSHOZjg5iBaeGda5kzoKDHU85MtAaqWzvVXICTndJP7RJj/3izrrRrmIdzLnSedPaKKd2aVDcp7kFrZmhm6GyNfsCw4nywWk+tQoAszxwS1pMQ37StKYLkSGE5JymMCDVprei8wQWGHDhpFBygmI1r4XOVyH+iA49MuF0ww8QGtiweJYv4U/b5EFX656BjOewap+Sh1eYYf3CLJkM3is2QRkJp3tha93BUE6P1fJh3jqfbwQDPKnOBT2zH96DtbTXJEJR7Ebvb+6MiC4/i7moBkCeQeI06WSRbRueJJqRpYrY19b2pGGP+OJhVfFbIedwSEBeQ/L4SqNzq5bSpYeq6ze9qqOPjIgv9aRcl/HMealf82jpe0C0TpjrsTaiZz8Kle4DDUy0kha4Nwi9rqURv6phC2IKTCezLnF6DHIcFHY7A7qhm/xrmcAVHjerAuAmZwGOwxwdP9uUFhW28NMZwY3p8EMq7caqps7XXc1pRXijFHN3Y77cJqHPrED6LwF+423tgIP3MMB+cagEtrjjLiJ01+kSSzG4medC1uuDrpijRy14vHOXIzg3rUWVyJa+zSKoxIb2PmXYPPeZSICbNf3Oo1bmnQo54r9coke9GZLr9w2Wr8lUbsv5efo0ib0LXUll1w8qmA/lE4BqIYGjFmNia7zEd39u7S3iuTy9/UlKe68p5iurxNsdqxPtp7c9tZY3CMpqwlm3VtL/97Uvm1YJbCWPogHouYEpvbuaEC6B8eFz7ZyR+g9IBLgEHQYraS9Yg8UbLOBQjQmzQGM0uXaf3GSQ1AeHCv222e99ROQr/beEXMl4OcAOO/7Hq7C9SpcJHvJkuN1DUNouRgy/uQWP8cjaU1KLsNyUrFszaAyT/2J4zkyJWPTF+tHZSh6N35ycUheitNfVRL0kE2IKCMuyjsW9nlSjLFgydiJsi8noeWcyEJXnOGiee6+oAU78RUdOnb9TCQq8vElnYCz3tlr8VYg8BJAbYmDMydwocxIGlFuT2I08/B/dV0IwOkZGdjQwakio8Bl1GYNB8Xr5jXO+4hr4nDf4tVM2tRN+F17pNNYz4PoFtwL/Ho7srRRf92rVYeGFiuVcMmumwUioeOcsoJDo64bw/RFRRb5UrTadeWqzTL6KInr8ax952aRbV1JxS5DvdrRFpmbC4/uhjtT7eLusZ+5DxxIKVH31afqC+nZbD7KHsHimvOa2DKYZ8Qj8vui8fAP9mQHpgl7yinIBkbiLa5ZAbHi1Da5L3+ccG3WxJuVTRc/S5DNgguJXsnu7go2Jmx+W9KdcJ/zEMszPFCmVku2fgLCAY1w+Zoq/v7nL8RQ0AcpXaxcyE83fNaPxgax82SeXSHvIFrkhrKdYdtnml2AhsDkGlJlAzWLJi4dp4oDVYC5r3M35YVYh2O/QCv8qa7Kh7Lh2XbjUDCjssKJkjrvwKyBXoMjcU4VUChGIge9eeoh37GauFuuHt38UgZ1YDjyC7iaHq4dKyK+cswy5ADO+oqsQTST4qu5/Z+/sp1H5dpIWOVxBaNTdxvF65lkpm/QkrtSoNNiqkSW0XCA3RptB2v2lcLPtuzFKtJLbhNfYNrUncSRSKlBabT9oVx7O0Qkaq0Mh3Bw13Vm2z8l7myk767pz9MspZC9qxSXe5vRoIzvzQR/YPqiy4QdyK/RmiZH9VXWy9LNwxOyU12oEjT20D2v5ESDO0g7TQhTit57lcNoo8ho9WA4zDIlV+xSKj/atAf/yKkfX+xxZLqWrr1eJU7CoXEg3z84dTLVYDlxhF3AGtd0cYKy5lI2CU4zOaGEefO23Zmx5DTDrvQ5h1ZkUY+LgDNnZ+dnvEb+mek9SqUXu6Pu9oW5vm4nAFOJN4SwhgTWjzVmrmCDSjG5oR4RgcDmHu27HHZmpNMP9cIwemvBsVHeDhtRitAOPRdj7cbhEAdTghtsC8odGpVkwyU1F7+y89RxNe4VZz2v7ZbO4VxNErZ6IkfmKLrA5iOt3eOCDz1aGcS6hTOalYJFc1VBSSTn6uwHCqsAyx2JUYsI3HQrI6m1rwt58RdQc+er2EkczfS5BdQto6fVdihAgvmxPgW7Lj0F/L8fR6RgB"
+        },
+        {
+          "type": "text",
+          "text": "```json { \"category\": \"CECRL\", \"text\": \"REPUBLICA DE COLOMBIA\\nIDENTIFICACION PERSONAL\\nCEDULA DE CIUDADANIA\\n\\nNUMERO 80.163.642\\nHERNANDEZ RAMIREZ\\nAPELLIDOS\\nLUIS DARIO\\nNOMBRES\\n\\nFIRMA\\n\\nFECHA DE NACIMIENTO 10-NOV-1983\\nBOGOTA D.C\\n(CUNDINAMARCA)\\nLUGAR DE NACIMIENTO\\n1.70 AB+ M\\nESTATURA G.S. RH SEXO\\n19-NOV-2001 BOGOTA D.C.\\nFECHA Y LUGAR DE EXPEDICION\\n\\nINDICE DERECHO\\n\\nREGISTRADURIA NACIONAL\\nCARLOS ARIEL SANCHEZ TORRES\\n\\nA-1500150-00653692-M-09801163642-20141229 004211930TH 1 1433211325\" } ```"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 9,
+        "cache_creation_input_tokens": 4570,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 877
+      }
+    },
+    "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 8000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "expected_category": "CECRL",
+  "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+  "api_used": "invoke_model",
+  "pdf_info": {
+    "original_size": 371255,
+    "first_page_size": 371208,
+    "is_scanned": true
+  }
+}

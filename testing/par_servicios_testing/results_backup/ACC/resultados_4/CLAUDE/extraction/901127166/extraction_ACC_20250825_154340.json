@@ -1,0 +1,124 @@
+{
+  "extraction_data": {
+    "path": "ACC/901127166/169_CA_2020-02-29.pdf",
+    "result": {
+      "companyName": "TRITON LOGISTICA Y CONSTRUCCIONES SAS",
+      "documentType": "Equity Composition",
+      "taxId": "901.127.166-9",
+      "country": "Colombia",
+      "identificationDetails": {
+        "source": "id_analysis",
+        "indicators": [
+          "NIT identification type",
+          "CC identification type"
+        ],
+        "conflictingSources": [],
+        "requiresReview": false
+      },
+      "relatedParties": [
+        {
+          "firstName": "ERNESTO JOSE",
+          "lastName": "CHALELA MARTINEZ",
+          "identificationType": "CC",
+          "identificationNumber": "9.287.800",
+          "relationshipType": "Shareholder",
+          "participationPercentage": "100",
+          "timeFound": 1,
+          "job": ""
+        },
+        {
+          "firstName": "ERNESTO JOSE",
+          "lastName": "CHALELA MARTINEZ",
+          "identificationType": "CC",
+          "identificationNumber": "9.287.800",
+          "relationshipType": "Shareholder",
+          "participationPercentage": "",
+          "timeFound": 2,
+          "job": "REPRESENTANTE LEGAL"
+        }
+      ]
+    },
+    "document_type": "company",
+    "document_number": "901127166",
+    "category": "ACC",
+    "confidenceScores": {
+      "companyName": 95,
+      "taxId": 95,
+      "country": 95,
+      "relatedParties": 90
+    }
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "```json { \"path\": \"ACC/901127166/169_CA_2020-02-29.pdf\", \"result\": { \"companyName\": \"TRITON LOGISTICA Y CONSTRUCCIONES SAS\", \"documentType\": \"Equity Composition\", \"taxId\": \"901.127.166-9\", \"country\": \"Colombia\", \"identificationDetails\": { \"source\": \"id_analysis\", \"indicators\": [ \"NIT identification type\", \"CC identification type\" ], \"conflictingSources\": [], \"requiresReview\": false }, \"relatedParties\": [ { \"firstName\": \"ERNESTO JOSE\", \"lastName\": \"CHALELA MARTINEZ\", \"identificationType\": \"CC\", \"identificationNumber\": \"9.287.800\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"100\", \"timeFound\": 1, \"job\": \"\" }, { \"firstName\": \"ERNESTO JOSE\", \"lastName\": \"CHALELA MARTINEZ\", \"identificationType\": \"CC\", \"identificationNumber\": \"9.287.800\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"\", \"timeFound\": 2, \"job\": \"REPRESENTANTE LEGAL\" } ] }, \"document_type\": \"company\", \"document_number\": \"901127166\", \"category\": \"ACC\", \"confidenceScores\": { \"companyName\": 95, \"taxId\": 95, \"country\": 95, \"relatedParties\": 90 } } ```"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 496,
+      "cache_creation_input_tokens": 9670,
+      "cache_read_input_tokens": 0,
+      "output_tokens": 1108
+    },
+    "ResponseMetadata": {
+      "RequestId": "7f00e3f6-fc94-497a-bded-d55904b42f5f",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Mon, 25 Aug 2025 20:43:39 GMT",
+        "content-type": "application/json",
+        "content-length": "7023",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "7f00e3f6-fc94-497a-bded-d55904b42f5f",
+        "x-amzn-bedrock-invocation-latency": "18866",
+        "x-amzn-bedrock-cache-write-input-token-count": "9670",
+        "x-amzn-bedrock-cache-read-input-token-count": "0",
+        "x-amzn-bedrock-output-token-count": "1108",
+        "x-amzn-bedrock-input-token-count": "496"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_012Bxotcha9LYxqcuPszq7FT",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-sonnet-4-20250514",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Let me analyze the PDF document step by step following the extraction rules. 1. **Country Identification (Multi-Layer Approach):** Looking at the document: - I see \"NIT\" which according to the COMPANY_ID hash table, indicates Colombia - The document shows \"TRITON LOGISTICA Y CONSTRUCCIONES SAS\" with \"NIT. 901.127.166 - 9\" - \"CC\" (Cédula de Ciudadanía) for the person also indicates Colombia based on PERSON_ID hash table So country = \"Colombia\" based on ID analysis. 2. **Root-Level main reporting Company fields Extraction:** Looking at the document: - Company name: \"TRITON LOGISTICA Y CONSTRUCCIONES SAS\" (appears in header and main table) - Tax ID: \"901.127.166 - 9\" (appears as \"NIT. 901.127.166 - 9\") 3. **Related Parties Extraction:** Looking at the shareholder table: - I see \"ERNESTO JOSE CHALELA MARTINEZ\" with: - CEDULA: 9,287,800 - ACCIONES: 5,000 - V/R NOMINAL: 10,000 - V/R TOTAL: $ 50,000,000 - %: 100 This person appears twice: 1. As a shareholder in the table 2. As \"REPRESENTANTE LEGAL\" with \"CC. 9.287.800\" So this is a PersonRelatedParty that appears twice (timeFound = 1 and 2). For the identification type: - The document shows \"CEDULA\" and \"CC\" - For Colombia, \"CC\" is in PERSON_ID[\"Colombia\"] - The number 9287800 (removing dots) matches the CC pattern for Colombia Name splitting: - \"ERNESTO JOSE CHALELA MARTINEZ\" - This follows a standard Colombian name format with first names and surnames - firstName captures \"ERNESTO JOSE\" - lastName captures \"CHALELA MARTINEZ\" - participationPercentage is directly extracted as \"100\" 4. **Confidence Scoring:** - companyName: Clear identification from header and table = 95 - taxId: Clear NIT format = 95 - country: Clear indicators (NIT, CC) = 95 - relatedParties: Complete data extracted, one person with two occurrences = 90 5. **Validation:** - All required fields present I confirm the identification type matches Colombian personal ID standards. The extraction process validates each field systematically, with no review flags needed and high confidence across all parameters.",
+          "signature": "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"
+        },
+        {
+          "type": "text",
+          "text": "```json { \"path\": \"ACC/901127166/169_CA_2020-02-29.pdf\", \"result\": { \"companyName\": \"TRITON LOGISTICA Y CONSTRUCCIONES SAS\", \"documentType\": \"Equity Composition\", \"taxId\": \"901.127.166-9\", \"country\": \"Colombia\", \"identificationDetails\": { \"source\": \"id_analysis\", \"indicators\": [ \"NIT identification type\", \"CC identification type\" ], \"conflictingSources\": [], \"requiresReview\": false }, \"relatedParties\": [ { \"firstName\": \"ERNESTO JOSE\", \"lastName\": \"CHALELA MARTINEZ\", \"identificationType\": \"CC\", \"identificationNumber\": \"9.287.800\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"100\", \"timeFound\": 1, \"job\": \"\" }, { \"firstName\": \"ERNESTO JOSE\", \"lastName\": \"CHALELA MARTINEZ\", \"identificationType\": \"CC\", \"identificationNumber\": \"9.287.800\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"\", \"timeFound\": 2, \"job\": \"REPRESENTANTE LEGAL\" } ] }, \"document_type\": \"company\", \"document_number\": \"901127166\", \"category\": \"ACC\", \"confidenceScores\": { \"companyName\": 95, \"taxId\": 95, \"country\": 95, \"relatedParties\": 90 } } ```"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 496,
+        "cache_creation_input_tokens": 9670,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 1108
+      }
+    },
+    "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 8000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+  "api_used": "invoke_model"
+}

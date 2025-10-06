@@ -1,0 +1,109 @@
+{
+  "extraction_data": {
+    "path": "ACC/900523022/201_CA_2020-02-29.pdf",
+    "result": {
+      "companyName": "PUBLIART COLORS SAS",
+      "documentCategory": "Equity Composition",
+      "taxId": "900.523.022-1",
+      "country": "Colombia",
+      "identificationDetails": {
+        "source": "text_reference",
+        "indicators": [
+          "Bogota D.C.",
+          "Colombia"
+        ],
+        "conflictingSources": [],
+        "requiresReview": "false"
+      },
+      "relatedParties": [
+        {
+          "type": "person",
+          "firstName": "JOHN FABIO",
+          "lastName": "MARTINEZ LIEVANO",
+          "identificationType": "C.C.",
+          "identificationNumber": "1.010.168.875",
+          "relationshipType": "Shareholder",
+          "participationPercentage": "100",
+          "timeFound": "1",
+          "job": "GERENTE"
+        }
+      ]
+    },
+    "documentType": "company",
+    "documentNumber": "900523022",
+    "category": "ACC"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "```json { \"result\": { \"companyName\": \"PUBLIART COLORS SAS\", \"documentCategory\": \"Equity Composition\", \"taxId\": \"900.523.022-1\", \"country\": \"Colombia\", \"identificationDetails\": { \"source\": \"text_reference\", \"indicators\": [ \"Bogota D.C.\", \"Colombia\" ], \"conflictingSources\": [], \"requiresReview\": \"false\" }, \"relatedParties\": [ { \"type\": \"person\", \"firstName\": \"JOHN FABIO\", \"lastName\": \"MARTINEZ LIEVANO\", \"identificationType\": \"C.C.\", \"identificationNumber\": \"1.010.168.875\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"100\", \"timeFound\": \"1\", \"job\": \"GERENTE\" } ] }, \"documentType\": \"company\", \"category\": \"ACC\" } ```"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 9,
+      "cache_creation_input_tokens": 6073,
+      "cache_read_input_tokens": 0,
+      "output_tokens": 666
+    },
+    "ResponseMetadata": {
+      "RequestId": "6509f6fd-d701-46b2-8cff-27a58d5e826e",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Thu, 28 Aug 2025 09:40:46 GMT",
+        "content-type": "application/json",
+        "content-length": "3001",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "6509f6fd-d701-46b2-8cff-27a58d5e826e",
+        "x-amzn-bedrock-invocation-latency": "16215",
+        "x-amzn-bedrock-cache-write-input-token-count": "6073",
+        "x-amzn-bedrock-cache-read-input-token-count": "0",
+        "x-amzn-bedrock-output-token-count": "666",
+        "x-amzn-bedrock-input-token-count": "9"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_01DaynGXmsqXDb6eWWbxYiLw",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-3-7-sonnet-20250219",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Let me analyze this document to extract the structured data according to the equity composition schema: ## Step 1: Document Analysis - This appears to be a certificate from Bogota, Colombia - The document is a certification of shareholder composition for a company called PUBLIART COLORS SAS - It's issued by a public accountant (Contador Público) - The document is in Spanish ## Step 2: Root Level Extraction - **companyName**: PUBLIART COLORS SAS - **taxId**: 900.523.022-1 (this is mentioned in \"identificada con Nit No. 900.523.022-1\") - **country**: Colombia (clear from \"Bogota D.C.\" at the top and \"normas de auditoria generalmente aceptadas en Colombia\") - **identificationDetails**: The source is text_reference with indicators like \"Bogota D.C.\" and references to Colombian standards ## Step 3: Related Parties Processing - There appears to be just one shareholder: JOHN FABIO MARTINEZ LIEVANO - Classification: Person (clear personal name, no company markers) - Identification: 1.010.168.875, type C.C. (Colombian Citizen ID) - Position: GERENTE - Participation percentage: 100% ## Step 4: Validation & Cross-checking - The taxId format seems to align with Colombian NIT format - The identification type C.C. is in the PERSON_ID table for Colombia - There's only one shareholder with 100% participation, which is valid - All required fields are present Now let me fill out the JSON structure according to the schema:",
+          "signature": "ErcBCkgIBxABGAIiQMoipdB6QbNj2pYucAS2AUDVO6f3kdKnt+c+3mopbxy9sPEiXYT63xOp1GN+N3MFRhNv2qJLVC0bG/qTAp2U2U8SDEWATpWoXrDwLEkmaxoME9NyPIb2KB23Gw44IjCM8dwrxa/mTMV6fy9LXcdTSroUu3tnmXmZhtpg8MYJKsOY8Sh0us9+FZ39TlOi7U8qHSvK+LIFyVUwK6DVWDPjnzinXQ1zUEfF0cD17jLLGAI="
+        },
+        {
+          "type": "text",
+          "text": "```json { \"result\": { \"companyName\": \"PUBLIART COLORS SAS\", \"documentCategory\": \"Equity Composition\", \"taxId\": \"900.523.022-1\", \"country\": \"Colombia\", \"identificationDetails\": { \"source\": \"text_reference\", \"indicators\": [ \"Bogota D.C.\", \"Colombia\" ], \"conflictingSources\": [], \"requiresReview\": \"false\" }, \"relatedParties\": [ { \"type\": \"person\", \"firstName\": \"JOHN FABIO\", \"lastName\": \"MARTINEZ LIEVANO\", \"identificationType\": \"C.C.\", \"identificationNumber\": \"1.010.168.875\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"100\", \"timeFound\": \"1\", \"job\": \"GERENTE\" } ] }, \"documentType\": \"company\", \"category\": \"ACC\" } ```"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 9,
+        "cache_creation_input_tokens": 6073,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 666
+      }
+    },
+    "model_id": "us.anthropic.claude-3-7-sonnet-20250219-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 8000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "model_used": "us.anthropic.claude-3-7-sonnet-20250219-v1:0",
+  "api_used": "invoke_model"
+}

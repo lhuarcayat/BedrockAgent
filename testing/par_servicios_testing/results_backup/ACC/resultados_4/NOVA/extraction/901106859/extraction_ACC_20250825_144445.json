@@ -1,0 +1,93 @@
+{
+  "extraction_data": {
+    "path": "ACC/901106859/131_CA_2020-02-29.pdf",
+    "result": {
+      "companyName": "CONSTRUCTORA E INMOBILIARIA RIVERA INCORA SAS",
+      "documentType": "Equity Composition",
+      "taxId": "901.106.859-4",
+      "country": "Colombia",
+      "identificationDetails": {
+        "source": "text_reference",
+        "indicators": [
+          "Bogotá",
+          "NIT 901.106.859-4"
+        ],
+        "conflictingSources": [],
+        "requiresReview": false
+      },
+      "relatedParties": [
+        {
+          "firstName": "LEOWLSTON",
+          "lastName": "RIVERA",
+          "identificationType": "CC",
+          "identificationNumber": "80.057.686",
+          "relationshipType": "Shareholder",
+          "participationPercentage": "49%",
+          "timeFound": 1,
+          "job": "Representante Legal"
+        },
+        {
+          "firstName": "MARCOS JAIR",
+          "lastName": "CUERVO",
+          "identificationType": "CC",
+          "identificationNumber": "1.022.372.943",
+          "relationshipType": "Shareholder",
+          "participationPercentage": "51%",
+          "timeFound": 1,
+          "job": ""
+        }
+      ]
+    },
+    "document_type": "company",
+    "document_number": "901106859",
+    "category": "ACC",
+    "confidenceScores": {
+      "companyName": 100,
+      "taxId": 100,
+      "country": 100,
+      "relatedParties": 100
+    }
+  },
+  "raw_response": {
+    "ResponseMetadata": {
+      "RequestId": "54bc62c8-4228-4e85-9a36-8416ec2257a7",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Mon, 25 Aug 2025 19:44:45 GMT",
+        "content-type": "application/json",
+        "content-length": "1656",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "54bc62c8-4228-4e85-9a36-8416ec2257a7"
+      },
+      "RetryAttempts": 0
+    },
+    "output": {
+      "message": {
+        "role": "assistant",
+        "content": [
+          {
+            "text": "```json { \"path\": \"ACC/901106859/131_CA_2020-02-29.pdf\", \"result\": { \"companyName\": \"CONSTRUCTORA E INMOBILIARIA RIVERA INCORA SAS\", \"documentType\": \"Equity Composition\", \"taxId\": \"901.106.859-4\", \"country\": \"Colombia\", \"identificationDetails\": { \"source\": \"text_reference\", \"indicators\": [ \"Bogotá\", \"NIT 901.106.859-4\" ], \"conflictingSources\": [], \"requiresReview\": false }, \"relatedParties\": [ { \"firstName\": \"LEOWLSTON\", \"lastName\": \"RIVERA\", \"identificationType\": \"CC\", \"identificationNumber\": \"80.057.686\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"49%\", \"timeFound\": 1, \"job\": \"Representante Legal\" }, { \"firstName\": \"MARCOS JAIR\", \"lastName\": \"CUERVO\", \"identificationType\": \"CC\", \"identificationNumber\": \"1.022.372.943\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"51%\", \"timeFound\": 1, \"job\": \"\" } ] }, \"document_type\": \"company\", \"document_number\": \"901106859\", \"category\": \"ACC\", \"confidenceScores\": { \"companyName\": 100, \"taxId\": 100, \"country\": 100, \"relatedParties\": 100 } } ```"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "inputTokens": 8602,
+      "outputTokens": 425,
+      "totalTokens": 9027
+    },
+    "metrics": {
+      "latencyMs": 11332
+    },
+    "model_id": "us.amazon.nova-pro-v1:0",
+    "api_used": "converse",
+    "model_params": {
+      "maxTokens": 8000,
+      "topP": 1,
+      "temperature": 0
+    }
+  },
+  "model_used": "us.amazon.nova-pro-v1:0",
+  "api_used": "converse"
+}

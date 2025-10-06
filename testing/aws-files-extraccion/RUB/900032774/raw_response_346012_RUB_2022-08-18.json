@@ -1,0 +1,33 @@
+{
+  "ResponseMetadata": {
+    "RequestId": "5e2661f2-0833-4761-94ff-6797664a092b",
+    "HTTPStatusCode": 200,
+    "HTTPHeaders": {
+      "date": "Tue, 17 Jun 2025 14:27:56 GMT",
+      "content-type": "application/json",
+      "content-length": "881",
+      "connection": "keep-alive",
+      "x-amzn-requestid": "5e2661f2-0833-4761-94ff-6797664a092b"
+    },
+    "RetryAttempts": 0
+  },
+  "output": {
+    "message": {
+      "role": "assistant",
+      "content": [
+        {
+          "text": "```json\n{\n  \"path\": \"s3://par-servicios-poc-dev-filling-desk/par-servicios-poc/RUB/900032774/346012_RUB_2022-08-18.pdf\",\n  \"result\": {\n    \"companyName\": \"Olimpia\",\n    \"country\": \"Colombia\",\n    \"documentType\": \"NIT\",\n    \"taxId\": \"900032774\",\n    \"relatedParties\": [\n      {\n        \"message\": \"Necesita revisión manual, documento no corresponde a formulario oficial\"\n      }\n    ]\n  },\n  \"confidenceScores\": {\n    \"companyName\": 95,\n    \"documentType\": 90,\n    \"country\": 90,\n    \"taxId\": 100,\n    \"relatedParties\": 70\n  },\n  \"document_type\": \"company\",\n  \"document_number\": \"900032774\",\n  \"category\": \"RUB\"\n}\n```"
+        }
+      ]
+    }
+  },
+  "stopReason": "end_turn",
+  "usage": {
+    "inputTokens": 6516,
+    "outputTokens": 236,
+    "totalTokens": 6752
+  },
+  "metrics": {
+    "latencyMs": 6133
+  }
+}

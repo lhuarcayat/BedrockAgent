@@ -1,0 +1,87 @@
+{
+  "classification_data": {
+    "category": "CECRL",
+    "text": "REPUBLICA DE COLOMBIA IDENTIFICACION PERSONAL CEDULA DE CIUDADANIA NUMERO 7.249.040 MESA GOMEZ APELLIDOS JOSE DEL CARMEN NOMBRES FIRMA FECHA DE NACIMIENTO 27-JUN-1962 PUERTO NARE (ANTIOQUIA) LUGAR DE NACIMIENTO 1.70 B+ M ESTATURA G.S. RH SEXO 23-FEB-1981 PUERTO BOYACA FECHA Y LUGAR DE EXPEDICION INDICE DERECHO REGISTRADOR NACIONAL CARLOS ARIEL SANCHEZ TORRES A-1500150-0011282-M-0007249040-2C081027 0004907388A1 1410020296",
+    "document_number": "7249040",
+    "path": "CECRL/7249040/7249040_2020-02-29.pdf"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "```json { \"category\": \"CECRL\", \"text\": \"REPUBLICA DE COLOMBIA\\nIDENTIFICACION PERSONAL\\nCEDULA DE CIUDADANIA\\nNUMERO 7.249.040\\nMESA GOMEZ\\nAPELLIDOS\\nJOSE DEL CARMEN\\nNOMBRES\\nFIRMA\\nFECHA DE NACIMIENTO 27-JUN-1962\\nPUERTO NARE\\n(ANTIOQUIA)\\nLUGAR DE NACIMIENTO\\n1.70 B+ M\\nESTATURA G.S. RH SEXO\\n23-FEB-1981 PUERTO BOYACA\\nFECHA Y LUGAR DE EXPEDICION\\nINDICE DERECHO\\nREGISTRADOR NACIONAL\\nCARLOS ARIEL SANCHEZ TORRES\\nA-1500150-0011282-M-0007249040-2C081027 0004907388A1 1410020296\" } ```"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 9,
+      "cache_creation_input_tokens": 4549,
+      "cache_read_input_tokens": 0,
+      "output_tokens": 884
+    },
+    "ResponseMetadata": {
+      "RequestId": "e8b859d1-29d3-45cc-862e-3faf16db7b30",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Fri, 29 Aug 2025 15:45:01 GMT",
+        "content-type": "application/json",
+        "content-length": "5922",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "e8b859d1-29d3-45cc-862e-3faf16db7b30",
+        "x-amzn-bedrock-invocation-latency": "14164",
+        "x-amzn-bedrock-cache-write-input-token-count": "4549",
+        "x-amzn-bedrock-cache-read-input-token-count": "0",
+        "x-amzn-bedrock-output-token-count": "884",
+        "x-amzn-bedrock-input-token-count": "9"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_01WrU2NK4VBxTrTCRBWmXum5",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-sonnet-4-20250514",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Let me analyze this document step by step following the workflow: 1. **TEXT EXTRACTION** Looking at the PDF image, I can see this appears to be a Colombian personal identification document. I can extract the following text: - REPUBLICA DE COLOMBIA - IDENTIFICACION PERSONAL - CEDULA DE CIUDADANIA - NUMERO: 7.249.040 - MESA GOMEZ - APELLIDOS: JOSE DEL CARMEN - NOMBRES: [appears to be a signature] On the lower portion: - FECHA DE NACIMIENTO: 27-JUN-1962 - PUERTO NARE - (ANTIOQUIA) - LUGAR DE NACIMIENTO - 1.70 B+ M - ESTATURA G.S. RH SEXO - 23-FEB-1981 PUERTO BOYACA - FECHA Y LUGAR DE EXPEDICION There's also a fingerprint image and a barcode at the bottom. 2. **PRIORITY CHECKS** - Not BLANK - has meaningful content - Not LINK_ONLY - no hyperlinks/URLs 3. **ISSUER IDENTIFICATION** This is issued by \"REPUBLICA DE COLOMBIA\" and is clearly a personal identification document (Cédula de Ciudadania). This is a government identification authority. 4. **DOCUMENT FUNCTION ANALYSIS** This is clearly for personal identification of an individual person. It contains: - Personal biographical data (birth date, birth place) - Physical characteristics (height, blood type, gender) - Individual photo - Individual fingerprint - Signature - Government-issued ID number with individual name 5. **CATEGORY CLASSIFICATION** This clearly fits CECRL based on: - Individual identification terminology: \"CEDULA DE CIUDADANIA\", \"IDENTIFICACION PERSONAL\" - Personal biographical data: birth date (27-JUN-1962), birth place (PUERTO NARE, ANTIOQUIA), blood type (B+), gender (M), height (1.70) I confirm this is a comprehensive Colombian national identification document with multiple verification elements. The card provides robust personal identification through visual and administrative features. Key identifiers include photographic evidence, unique government-issued number, and official governmental markings that validate the individual's identity comprehensively.",
+          "signature": "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"
+        },
+        {
+          "type": "text",
+          "text": "```json { \"category\": \"CECRL\", \"text\": \"REPUBLICA DE COLOMBIA\\nIDENTIFICACION PERSONAL\\nCEDULA DE CIUDADANIA\\nNUMERO 7.249.040\\nMESA GOMEZ\\nAPELLIDOS\\nJOSE DEL CARMEN\\nNOMBRES\\nFIRMA\\nFECHA DE NACIMIENTO 27-JUN-1962\\nPUERTO NARE\\n(ANTIOQUIA)\\nLUGAR DE NACIMIENTO\\n1.70 B+ M\\nESTATURA G.S. RH SEXO\\n23-FEB-1981 PUERTO BOYACA\\nFECHA Y LUGAR DE EXPEDICION\\nINDICE DERECHO\\nREGISTRADOR NACIONAL\\nCARLOS ARIEL SANCHEZ TORRES\\nA-1500150-0011282-M-0007249040-2C081027 0004907388A1 1410020296\" } ```"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 9,
+        "cache_creation_input_tokens": 4549,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 884
+      }
+    },
+    "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 8000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "expected_category": "CECRL",
+  "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+  "api_used": "invoke_model",
+  "pdf_info": {
+    "original_size": 189559,
+    "first_page_size": 185060,
+    "is_scanned": true
+  }
+}

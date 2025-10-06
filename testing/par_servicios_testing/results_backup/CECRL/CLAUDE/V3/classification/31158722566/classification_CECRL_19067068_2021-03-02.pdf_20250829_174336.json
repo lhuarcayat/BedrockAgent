@@ -1,0 +1,87 @@
+{
+  "classification_data": {
+    "category": "CECRL",
+    "text": "REPÚBLICA DE COLOMBIA IDENTIFICACIÓN PERSONAL CEDULA DE CIUDADANIA NUMERO 19.067.065 VARGAS VELOZA APELLIDOS LUIS ALBERTO NOMBRES FECHA DE NACIMIENTO 22-ABR-1949 UBATE (CUNDINAMARCA) LUGAR DE NACIMIENTO 1.65 A+ M ESTATURA G.S. RH SEXO 26-MAY-1970 BOGOTA D.C. FECHA Y LUGAR DE EXPEDICION INDICE DERECHO REGISTRADOR NACIONAL CARLOS ARIEL SANCHEZ TORRES A-1500150-00007261-M-0019067065-20080507 000024662AA 1 1150021138",
+    "document_number": "UNKNOWN",
+    "path": "CECRL/31158722566_19067068_2021-03-02/19067068_2021-03-02.pdf"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "```json { \"category\": \"CECRL\", \"text\": \"REPÚBLICA DE COLOMBIA\\nIDENTIFICACIÓN PERSONAL\\nCEDULA DE CIUDADANIA\\nNUMERO 19.067.065\\nVARGAS VELOZA\\nAPELLIDOS\\nLUIS ALBERTO\\nNOMBRES\\nFECHA DE NACIMIENTO 22-ABR-1949\\nUBATE\\n(CUNDINAMARCA)\\nLUGAR DE NACIMIENTO\\n1.65\\nA+\\nM\\nESTATURA\\nG.S. RH\\nSEXO\\n26-MAY-1970 BOGOTA D.C.\\nFECHA Y LUGAR DE EXPEDICION\\nINDICE DERECHO\\nREGISTRADOR NACIONAL\\nCARLOS ARIEL SANCHEZ TORRES\\nA-1500150-00007261-M-0019067065-20080507\\n000024662AA 1\\n1150021138\" } ```"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 9,
+      "cache_creation_input_tokens": 4753,
+      "cache_read_input_tokens": 0,
+      "output_tokens": 907
+    },
+    "ResponseMetadata": {
+      "RequestId": "e495d443-e9ac-4de5-8139-a09fd959fb3b",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Fri, 29 Aug 2025 22:43:21 GMT",
+        "content-type": "application/json",
+        "content-length": "6150",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "e495d443-e9ac-4de5-8139-a09fd959fb3b",
+        "x-amzn-bedrock-invocation-latency": "15523",
+        "x-amzn-bedrock-cache-write-input-token-count": "4753",
+        "x-amzn-bedrock-cache-read-input-token-count": "0",
+        "x-amzn-bedrock-output-token-count": "907",
+        "x-amzn-bedrock-input-token-count": "9"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_018gKTYJHzCgfmoUF8VkEPkC",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-sonnet-4-20250514",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Let me analyze this document step by step following the classification workflow: 1. **TEXT EXTRACTION** Looking at the document, I can see: - \"REPÚBLICA DE COLOMBIA\" - \"IDENTIFICACIÓN PERSONAL\" - \"CEDULA DE CIUDADANIA\" - \"NUMERO 19.067.065\" - \"VARGAS VELOZA\" - \"APELLIDOS\" - \"LUIS ALBERTO\" - \"NOMBRES\" - There's a photo of a person - \"FECHA DE NACIMIENTO 22-ABR-1949\" - \"UBATE\" - \"(CUNDINAMARCA)\" - \"LUGAR DE NACIMIENTO\" - \"1.65\" (height) - \"A+\" (blood type) - \"M\" (gender/sex) - \"ESTATURA\", \"G.S. RH\", \"SEXO\" - \"26-MAY-1970 BOGOTA D.C.\" - \"FECHA Y LUGAR DE EXPEDICION\" - There's a fingerprint - \"INDICE DERECHO\" - There's a signature area - \"REGISTRADOR NACIONAL\" - \"CARLOS ARIEL SANCHEZ TORRES\" - Various barcodes and ID numbers at the bottom 2. **PRIORITY CHECKS** - Not BLANK - there's meaningful content - Not LINK_ONLY - no URLs or hyperlinks 3. **DOCUMENT FUNCTION ANALYSIS** This is clearly a personal identification document. The PRIMARY PURPOSE is to identify an individual person (Luis Alberto Vargas Veloza). It contains: - Personal biographical data (birth date, place of birth) - Physical characteristics (height, blood type, gender) - Photo of the individual - Fingerprint - Government-issued ID number - Official seals and security elements 4. **ISSUER IDENTIFICATION** This is issued by the Colombian government (\"REPÚBLICA DE COLOMBIA\") as a personal identification document, not by DIAN or a Chamber of Commerce. 5. **CATEGORY CLASSIFICATION** I recognize this as a definitive CECRL document - a Colombian national identification card. The document contains comprehensive personal identification details with multiple security features, clearly designed to verify an individual's identity through official government channels. The card includes critical personal information like full name, birth details, physical characteristics, and unique identifiers such as a photo, fingerprint, and official ID number. Its official government issuance and comprehensive personal data confirm its classification as a standard personal identification document.",
+          "signature": "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"
+        },
+        {
+          "type": "text",
+          "text": "```json { \"category\": \"CECRL\", \"text\": \"REPÚBLICA DE COLOMBIA\\nIDENTIFICACIÓN PERSONAL\\nCEDULA DE CIUDADANIA\\nNUMERO 19.067.065\\nVARGAS VELOZA\\nAPELLIDOS\\nLUIS ALBERTO\\nNOMBRES\\nFECHA DE NACIMIENTO 22-ABR-1949\\nUBATE\\n(CUNDINAMARCA)\\nLUGAR DE NACIMIENTO\\n1.65\\nA+\\nM\\nESTATURA\\nG.S. RH\\nSEXO\\n26-MAY-1970 BOGOTA D.C.\\nFECHA Y LUGAR DE EXPEDICION\\nINDICE DERECHO\\nREGISTRADOR NACIONAL\\nCARLOS ARIEL SANCHEZ TORRES\\nA-1500150-00007261-M-0019067065-20080507\\n000024662AA 1\\n1150021138\" } ```"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 9,
+        "cache_creation_input_tokens": 4753,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 907
+      }
+    },
+    "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 8000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "expected_category": "CECRL",
+  "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+  "api_used": "invoke_model",
+  "pdf_info": {
+    "original_size": 123009,
+    "first_page_size": 119406,
+    "is_scanned": true
+  }
+}

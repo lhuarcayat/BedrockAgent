@@ -1,0 +1,144 @@
+{
+  "document_name": "201_CA_2020-02-29.pdf",
+  "category": "ACC",
+  "classification_success": true,
+  "extraction_success": true,
+  "overall_success": true,
+  "timestamp": "2025-08-28T02:37:41.558400",
+  "classification_result": {
+    "classification_data": {
+      "category": "ACC",
+      "text": "Bogota D.C. El suscrito Contador Público de PUBLIART COLORS SAS identificada con Nit No. 900.523.022-1, hace constar que, de acuerdo con el libro oficial de registro de accionistas, inscrito en el registro mercantil de conformidad con las normas de auditoria generalmente aceptadas en Colombia. CERTIFICA QUE: La composición accionaria es la siguiente: NOMBRE NÚMERO DE DOCUMENTO CARGO % PARTICIPACION TIPO DE DOCUMENTO NACIONALIDAD JOHN FABIO 1.010.168.875 GERENTE 100% C.C COLOMBI ANO MARTINEZ LLEVAN La presente certificación se expide al 18 día del mes de noviembre de 2019 con destino a registro de proveedores. [SIGNATURE] OSCAR ALBERTO LLLANOS GONZALEZ CC 72.257.114 TP 144030-T",
+      "document_number": "900523022",
+      "path": "ACC/900523022/201_CA_2020-02-29.pdf"
+    },
+    "raw_response": {
+      "ResponseMetadata": {
+        "RequestId": "9428b93d-701f-4224-ab03-03b79d71837e",
+        "HTTPStatusCode": 200,
+        "HTTPHeaders": {
+          "date": "Thu, 28 Aug 2025 07:37:46 GMT",
+          "content-type": "application/json",
+          "content-length": "1145",
+          "connection": "keep-alive",
+          "x-amzn-requestid": "9428b93d-701f-4224-ab03-03b79d71837e"
+        },
+        "RetryAttempts": 0
+      },
+      "output": {
+        "message": {
+          "role": "assistant",
+          "content": [
+            {
+              "text": "```json { \"category\": \"ACC\", \"text\": \"Bogota D.C.\\n\\nEl suscrito Contador Público de PUBLIART COLORS SAS\\nidentificada con Nit No. 900.523.022-1, hace constar que, de acuerdo\\ncon el libro oficial de registro de accionistas, inscrito en el registro\\nmercantil de conformidad con las normas de auditoria generalmente\\naceptadas en Colombia.\\n\\nCERTIFICA QUE:\\n\\nLa composición accionaria es la siguiente:\\n\\nNOMBRE\\nNÚMERO DE DOCUMENTO\\nCARGO\\n% PARTICIPACION\\nTIPO DE DOCUMENTO\\nNACIONALIDAD\\n\\n\\n\\nJOHN FABIO\\n1.010.168.875\\nGERENTE\\n100%\\nC.C\\nCOLOMBI\\nANO\\n\\nMARTINEZ LLEVAN\\n\\nLa presente certificación se expide al 18 día del mes de noviembre de 2019\\ncon destino a registro de proveedores.\\n\\n[SIGNATURE]\\n\\n\\nOSCAR ALBERTO LLLANOS GONZALEZ\\nCC 72.257.114\\nTP 144030-T\" } ```"
+            }
+          ]
+        }
+      },
+      "stopReason": "end_turn",
+      "usage": {
+        "inputTokens": 1790,
+        "outputTokens": 321,
+        "totalTokens": 4255,
+        "cacheReadInputTokens": 2144,
+        "cacheWriteInputTokens": 0
+      },
+      "metrics": {
+        "latencyMs": 6286
+      },
+      "model_id": "us.amazon.nova-pro-v1:0",
+      "api_used": "converse",
+      "model_params": {
+        "maxTokens": 8000,
+        "topP": 1,
+        "temperature": 0
+      }
+    },
+    "expected_category": "ACC",
+    "model_used": "us.amazon.nova-pro-v1:0",
+    "api_used": "converse",
+    "pdf_info": {
+      "original_size": 17294,
+      "first_page_size": 17107,
+      "is_scanned": true
+    }
+  },
+  "extraction_result": {
+    "extraction_data": {
+      "path": "ACC/900523022/201_CA_2020-02-29.pdf",
+      "result": {
+        "companyName": "PUBLIART COLORS SAS",
+        "documentCategory": "Equity Composition",
+        "taxId": "900.523.022-1",
+        "country": "Colombia",
+        "identificationDetails": {
+          "source": "text_reference",
+          "indicators": [
+            "Bogotá",
+            "Colombia"
+          ],
+          "conflictingSources": [],
+          "requiresReview": "false"
+        },
+        "relatedParties": [
+          {
+            "type": "person",
+            "firstName": "JOHN",
+            "lastName": "FABIIO MARTINEZ LIEvano",
+            "identificationType": "CC",
+            "identificationNumber": "1.010.168.875",
+            "relationshipType": "Shareholder",
+            "participationPercentage": "100%",
+            "timeFound": "1",
+            "job": ""
+          }
+        ]
+      },
+      "documentType": "company",
+      "documentNumber": "900523022",
+      "category": "ACC"
+    },
+    "raw_response": {
+      "ResponseMetadata": {
+        "RequestId": "e0850c21-7b02-4769-9102-bb325d4e45bb",
+        "HTTPStatusCode": 200,
+        "HTTPHeaders": {
+          "date": "Thu, 28 Aug 2025 07:37:55 GMT",
+          "content-type": "application/json",
+          "content-length": "1098",
+          "connection": "keep-alive",
+          "x-amzn-requestid": "e0850c21-7b02-4769-9102-bb325d4e45bb"
+        },
+        "RetryAttempts": 0
+      },
+      "output": {
+        "message": {
+          "role": "assistant",
+          "content": [
+            {
+              "text": "```json { \"result\": { \"companyName\": \"PUBLIART COLORS SAS\", \"documentCategory\": \"Equity Composition\", \"taxId\": \"900.523.022-1\", \"country\": \"Colombia\", \"identificationDetails\": { \"source\": \"text_reference\", \"indicators\": [ \"Bogotá\", \"Colombia\" ], \"conflictingSources\": [], \"requiresReview\": \"false\" }, \"relatedParties\": [ { \"type\": \"person\", \"firstName\": \"JOHN\", \"lastName\": \"FABIIO MARTINEZ LIEvano\", \"identificationType\": \"CC\", \"identificationNumber\": \"1.010.168.875\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"100%\", \"timeFound\": \"1\", \"job\": \"\" } ] }, \"documentType\": \"company\", \"category\": \"ACC\" } ```"
+            }
+          ]
+        }
+      },
+      "stopReason": "end_turn",
+      "usage": {
+        "inputTokens": 5407,
+        "outputTokens": 231,
+        "totalTokens": 5638
+      },
+      "metrics": {
+        "latencyMs": 7940
+      },
+      "model_id": "us.amazon.nova-pro-v1:0",
+      "api_used": "converse",
+      "model_params": {
+        "maxTokens": 8000,
+        "topP": 1,
+        "temperature": 0
+      }
+    },
+    "model_used": "us.amazon.nova-pro-v1:0",
+    "api_used": "converse"
+  }
+}

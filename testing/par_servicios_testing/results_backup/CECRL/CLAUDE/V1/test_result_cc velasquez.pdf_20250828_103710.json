@@ -1,0 +1,185 @@
+{
+  "document_name": "cc velasquez.pdf",
+  "category": "CECRL",
+  "classification_success": true,
+  "extraction_success": true,
+  "overall_success": true,
+  "timestamp": "2025-08-28T10:36:35.620604",
+  "classification_result": {
+    "classification_data": {
+      "category": "CECRL",
+      "text": "REPUBLICA DE COLOMBIA IDENTIFICACION PERSONAL CEDULA DE CIUDADANIA NUMERO 70.568.728 VELASQUEZ RUIZ GIOVANNY HUMBERTO FIRMA",
+      "document_number": "70568729",
+      "path": "CECRL/70568729/cc velasquez.pdf"
+    },
+    "raw_response": {
+      "output": {
+        "message": {
+          "content": [
+            {
+              "text": "```json { \"category\": \"CECRL\", \"text\": \"REPUBLICA DE COLOMBIA\\nIDENTIFICACION PERSONAL\\nCEDULA DE CIUDADANIA\\nNUMERO 70.568.728\\nVELASQUEZ RUIZ\\nGIOVANNY HUMBERTO\\nFIRMA\" } ```"
+            }
+          ]
+        }
+      },
+      "stopReason": "end_turn",
+      "usage": {
+        "input_tokens": 9,
+        "cache_creation_input_tokens": 4475,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 629
+      },
+      "ResponseMetadata": {
+        "RequestId": "1aad4052-52b0-4007-ba62-c0499a52b146",
+        "HTTPStatusCode": 200,
+        "HTTPHeaders": {
+          "date": "Thu, 28 Aug 2025 15:36:50 GMT",
+          "content-type": "application/json",
+          "content-length": "2959",
+          "connection": "keep-alive",
+          "x-amzn-requestid": "1aad4052-52b0-4007-ba62-c0499a52b146",
+          "x-amzn-bedrock-invocation-latency": "15272",
+          "x-amzn-bedrock-cache-write-input-token-count": "4475",
+          "x-amzn-bedrock-cache-read-input-token-count": "0",
+          "x-amzn-bedrock-output-token-count": "629",
+          "x-amzn-bedrock-input-token-count": "9"
+        },
+        "RetryAttempts": 0
+      },
+      "raw_anthropic_response": {
+        "id": "msg_bdrk_01Swi2bUtDpgVy1JnNxu5hPK",
+        "type": "message",
+        "role": "assistant",
+        "model": "claude-3-7-sonnet-20250219",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "Let me analyze the PDF document and extract all the visible text: From the image, I can see what appears to be a Colombian identification card (cédula de ciudadanía). The visible text includes: - \"REPUBLICA DE COLOMBIA\" - \"IDENTIFICACION PERSONAL\" - \"CEDULA DE CIUDADANIA\" - \"NUMERO: 70.568.728\" - \"VELASQUEZ RUIZ\" - \"GIOVANNY HUMBERTO\" - There's a signature field labeled \"FIRMA\" - There appears to be a photo of an individual Now let's classify this document according to the provided workflow: 1. TEXT EXTRACTION: - I've extracted all readable text from the document - There's an official Colombian ID card with personal identification information 2. PRIORITY CHECKS: - Not BLANK: The document has meaningful content - Not LINK_ONLY: There are no hyperlinks or URLs 3. ISSUER IDENTIFICATION: - This is issued by a Colombian government individual identification authority (not DIAN, not Chamber of Commerce) 4. DOCUMENT FUNCTION ANALYSIS: - This is a personal identification document - It is not related to tax/regulatory compliance, corporate documentation, ownership structure, or entity relationships 5. CATEGORY CLASSIFICATION: Following the evaluation order (CECRL → RUT → CERL → ACC → RUB → POR_REVISAR): CECRL (Official personal identification documents): - It has individual identification terminology: \"Cédula\", \"Identificación personal\" - Contains personal biographical data - Includes an individual photo and signature field - Has a government-issued personal ID number - Contains security elements typical of ID cards This document clearly fits into the CECRL category as it is a Colombian national identification card (cédula de ciudadanía). 6. CONFIDENCE VALIDATION: - Strong evidence: Clear must-have indicators present for CECRL - The document function is unambiguously personal identification - There are no conflicting signals from other categories Based on my analysis, this document is a Colombian national ID card (cédula de ciudadanía) which falls under the CECRL category.",
+            "signature": "ErcBCkgIBxABGAIiQI3nQqu+oKcfIMdqIsoy7k5SeuXbnbvQeLWPhMsIiaDbnIuzOdQLKNNM0hfti809liTpVAHytm8ZehHHNt6wCPUSDOYCtKjqOU7h7cFINhoM2AlAWrwIzk7DyJ5bIjADmJE29CedEewKZQGcRnbTGFgBavmLHUbnm5x+7q40U4t4pT82Q9e/W/o9Ir3ja5AqHdJQ9wNxf2KO+Fg8eF70THIagBRF8NZKC7oS+9w2GAI="
+          },
+          {
+            "type": "text",
+            "text": "```json { \"category\": \"CECRL\", \"text\": \"REPUBLICA DE COLOMBIA\\nIDENTIFICACION PERSONAL\\nCEDULA DE CIUDADANIA\\nNUMERO 70.568.728\\nVELASQUEZ RUIZ\\nGIOVANNY HUMBERTO\\nFIRMA\" } ```"
+          }
+        ],
+        "stop_reason": "end_turn",
+        "stop_sequence": null,
+        "usage": {
+          "input_tokens": 9,
+          "cache_creation_input_tokens": 4475,
+          "cache_read_input_tokens": 0,
+          "output_tokens": 629
+        }
+      },
+      "model_id": "us.anthropic.claude-3-7-sonnet-20250219-v1:0",
+      "api_used": "invoke_model",
+      "model_params": {
+        "max_tokens": 8000,
+        "top_p": 1,
+        "temperature": 1,
+        "thinking": {
+          "type": "enabled",
+          "budget_tokens": 4096
+        }
+      }
+    },
+    "expected_category": "CECRL",
+    "model_used": "us.anthropic.claude-3-7-sonnet-20250219-v1:0",
+    "api_used": "invoke_model",
+    "pdf_info": {
+      "original_size": 148584,
+      "first_page_size": 65327,
+      "is_scanned": true
+    }
+  },
+  "extraction_result": {
+    "extraction_data": {
+      "path": "CECRL/70568729/cc velasquez.pdf",
+      "result": {
+        "firstName": "GIOVANNY HUMBERTO",
+        "lastName": "VELASQUEZ RUIZ",
+        "country_issuer": "Colombia",
+        "nationality": "Colombia",
+        "identificationType": "Cédula de Ciudadanía",
+        "identificationNumber": "70.568.728",
+        "message": ""
+      },
+      "document_type": "person",
+      "documentNumber": "70568729",
+      "category": "CECRL"
+    },
+    "raw_response": {
+      "output": {
+        "message": {
+          "content": [
+            {
+              "text": "```json { \"result\": { \"firstName\": \"GIOVANNY HUMBERTO\", \"lastName\": \"VELASQUEZ RUIZ\", \"country_issuer\": \"Colombia\", \"nationality\": \"Colombia\", \"identificationType\": \"Cédula de Ciudadanía\", \"identificationNumber\": \"70.568.728\", \"message\": \"\" }, \"document_type\": \"person\", \"category\": \"CECRL\" } ```"
+            }
+          ]
+        }
+      },
+      "stopReason": "end_turn",
+      "usage": {
+        "input_tokens": 10,
+        "cache_creation_input_tokens": 7534,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 879
+      },
+      "ResponseMetadata": {
+        "RequestId": "d65256ef-0073-41ad-86e2-5cd477bc6378",
+        "HTTPStatusCode": 200,
+        "HTTPHeaders": {
+          "date": "Thu, 28 Aug 2025 15:37:09 GMT",
+          "content-type": "application/json",
+          "content-length": "3896",
+          "connection": "keep-alive",
+          "x-amzn-requestid": "d65256ef-0073-41ad-86e2-5cd477bc6378",
+          "x-amzn-bedrock-invocation-latency": "19044",
+          "x-amzn-bedrock-cache-write-input-token-count": "7534",
+          "x-amzn-bedrock-cache-read-input-token-count": "0",
+          "x-amzn-bedrock-output-token-count": "879",
+          "x-amzn-bedrock-input-token-count": "10"
+        },
+        "RetryAttempts": 0
+      },
+      "raw_anthropic_response": {
+        "id": "msg_bdrk_01MQJntHGXPWdSt9GV6QwE2j",
+        "type": "message",
+        "role": "assistant",
+        "model": "claude-3-7-sonnet-20250219",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "Let me analyze this Colombian ID document (Cédula de Ciudadanía) in detail using the extraction methodology provided. ## Document Structure Analysis The document appears to be a Colombian ID card (Cédula de Ciudadanía), shown over two pages/sides. It has official government headers and seals typical of Colombian identification documents. ## Field Extraction ### Page 1 (Front of ID): I can see: - Header: \"REPUBLICA DE COLOMBIA\" - Document type: \"IDENTIFICACION PERSONAL\" and \"CEDULA DE CIUDADANIA\" - ID Number: \"70.568.728\" - Last Name: \"VELASQUEZ RUIZ\" - First Name: \"GIOVANNY HUMBERTO\" - Signature field visible with what appears to be a signature ### Page 2 (Back of ID): I can see: - Birth date: \"17-OCT-1966\" - Place of birth: \"ENVIGADO (ANTIOQUIA)\" - Height: \"1.83\" - Blood Type: \"A+\" - Sex: \"M\" (Male) - Issue date information: \"30-NOV-1984 ENVIGADO\" - Fingerprint and barcode information Now I'll extract all required fields according to the schema: ### firstName From the front of the ID, I can see \"GIOVANNY HUMBERTO\" is listed after the surname. This appears to be the given name/first name of the individual. ### lastName From the front of the ID, \"VELASQUEZ RUIZ\" is clearly shown as the surname/last name. ### country_issuer The document is clearly issued by \"REPUBLICA DE COLOMBIA\" as stated in the header, so the country issuer is \"Colombia\". ### nationality There is no explicit nationality field visible, but following the provided hierarchy rules, I should assume the nationality is the same as the country issuer when no other information is provided. Therefore, the nationality is \"Colombia\". ### identificationType The document is labeled as \"CEDULA DE CIUDADANIA\" which translates to \"Cédula de Ciudadanía\" in proper Spanish formatting. This is a standard Colombian national ID card. ### identificationNumber The ID number shown on the front of the card is \"70.568.728\". I will preserve the original formatting with the period. ### message There are no issues with extraction or document validation. This is clearly an official Colombian ID document with all key fields visible. ## Final JSON Output: ```json { \"result\": { \"firstName\": \"GIOVANNY HUMBERTO\", \"lastName\": \"VELASQUEZ RUIZ\", \"country_issuer\": \"Colombia\", \"nationality\": \"Colombia\", \"identificationType\": \"Cédula de Ciudadanía\", \"identificationNumber\": \"70.568.728\", \"message\": \"\" }, \"document_type\": \"person\", \"category\": \"CECRL\" } ``` This output follows the schema exactly - I've included all required fields with the proper values extracted from the document. The identificationType is properly translated to Spanish as required, and I've preserved the original formatting of the identification number.",
+            "signature": "ErcBCkgIBxABGAIiQKQWpJOHldVAK12GeMHU0ljrq2xCbcwwyrbKdHmYh1T8l84R3sh15tkTYiPp+6Ub3XutGEXMnz7djzGhusGqOhYSDMeBwf0P8ncGHAZDSRoMktpNTUK2bKoKmmLFIjBY3/W8u8QgQy8Gyi0sAILeMdo3iGA+OhrWxcEaQl/s5F9kuVvo8ZRNXZcfKXNDVQkqHXkZKF7iOfDhDDBam+Xo3aXfAkJU1e4KrnLy7ffTGAI="
+          },
+          {
+            "type": "text",
+            "text": "```json { \"result\": { \"firstName\": \"GIOVANNY HUMBERTO\", \"lastName\": \"VELASQUEZ RUIZ\", \"country_issuer\": \"Colombia\", \"nationality\": \"Colombia\", \"identificationType\": \"Cédula de Ciudadanía\", \"identificationNumber\": \"70.568.728\", \"message\": \"\" }, \"document_type\": \"person\", \"category\": \"CECRL\" } ```"
+          }
+        ],
+        "stop_reason": "end_turn",
+        "stop_sequence": null,
+        "usage": {
+          "input_tokens": 10,
+          "cache_creation_input_tokens": 7534,
+          "cache_read_input_tokens": 0,
+          "output_tokens": 879
+        }
+      },
+      "model_id": "us.anthropic.claude-3-7-sonnet-20250219-v1:0",
+      "api_used": "invoke_model",
+      "model_params": {
+        "max_tokens": 8000,
+        "top_p": 1,
+        "temperature": 1,
+        "thinking": {
+          "type": "enabled",
+          "budget_tokens": 4096
+        }
+      }
+    },
+    "model_used": "us.anthropic.claude-3-7-sonnet-20250219-v1:0",
+    "api_used": "invoke_model"
+  }
+}

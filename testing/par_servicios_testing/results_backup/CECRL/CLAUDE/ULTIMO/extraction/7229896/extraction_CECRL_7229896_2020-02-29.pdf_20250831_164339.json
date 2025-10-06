@@ -1,0 +1,88 @@
+{
+  "extraction_data": {
+    "result": {
+      "FirstName": "CESAR AUGUSTO",
+      "LastName": "JEREZ BERRIO",
+      "CountryIssuer": "Colombia",
+      "Nationality": "colombiano",
+      "IdentificationType": "Cédula de Ciudadanía",
+      "IdentificationNumber": "7.229.896",
+      "Message": ""
+    },
+    "document_type": "person",
+    "category": "CECRL"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "```json { \"result\": { \"FirstName\": \"CESAR AUGUSTO\", \"LastName\": \"JEREZ BERRIO\", \"CountryIssuer\": \"Colombia\", \"Nationality\": \"colombiano\", \"IdentificationType\": \"Cédula de Ciudadanía\", \"IdentificationNumber\": \"7.229.896\", \"Message\": \"\" }, \"document_type\": \"person\", \"category\": \"CECRL\" } ```"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 1583,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 4300,
+      "output_tokens": 829
+    },
+    "ResponseMetadata": {
+      "RequestId": "7be1b728-b76f-41d2-8117-846065d8f307",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Sun, 31 Aug 2025 21:43:39 GMT",
+        "content-type": "application/json",
+        "content-length": "6465",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "7be1b728-b76f-41d2-8117-846065d8f307",
+        "x-amzn-bedrock-invocation-latency": "13089",
+        "x-amzn-bedrock-cache-write-input-token-count": "0",
+        "x-amzn-bedrock-cache-read-input-token-count": "4300",
+        "x-amzn-bedrock-output-token-count": "829",
+        "x-amzn-bedrock-input-token-count": "1583"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_01AGUKDjsebhrkZG6A9KBGf7",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-sonnet-4-20250514",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Let me analyze this Colombian citizenship card document carefully. First, I'll identify the structure and labels based on the extraction methodology: 1. Document header shows \"REPUBLICA DE COLOMBIA\" - this indicates Colombia as the issuing country 2. Document type: \"IDENTIFICACION PERSONAL\" and \"CEDULA DE CIUDADANIA\" - this is a Colombian citizenship card 3. Looking at the layout structure: - \"NUMERO: 7.229.896\" - this appears to be the identification number - \"JEREZ BERRIO\" - this appears after the number, likely the last name - \"APELLIDOS\" - this is the label for surnames - \"CESAR AUGUSTO\" - this appears after \"APELLIDOS\" - \"NOMBRES\" - this is the label for first names - There appears to be a signature but no clear text after \"NOMBRES\" Now I need to apply contextual analysis as described in the methodology, especially for Colombian documents which can have misaligned layouts: Looking at the structure: - The number \"7.229.896\" is clearly the identification number - After the number, we see \"JEREZ BERRIO\" - Then we see the label \"APELLIDOS\" - Then we see \"CESAR AUGUSTO\" - Then we see the label \"NOMBRES\" - But there doesn't seem to be text after \"NOMBRES\" This fits the pattern described in the methodology for Colombian documents with misaligned layouts: \"This misalignment occurs in Colombian documents, where the surnames appear first and then the label \"APELLIDOS\" along with the first name(s) and finally the label \"NAMES\" appears. In this case, the 'text' that appears in \"APELLIDOS\" is actually the name and belongs to the \"NAMES\" label.\" And: \"The 'NOMBRES' label will never be empty, so if you detect that the label does not have a 'text' then it means that the 'previous' text in fact belongs to this label, and then the text in the 'APELLIDOS' field must also be the previous one.\" I confirm the name structure: \"JEREZ BERRIO\" as surnames and \"CESAR AUGUSTO\" as first names. The document confirms Colombian nationality, with birth in Duitama, Boyaca on May 30, 1974. The identification details include a Cédula de Ciudadanía number 7.229.896, issued by Colombia for this citizen.",
+          "signature": "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"
+        },
+        {
+          "type": "text",
+          "text": "```json { \"result\": { \"FirstName\": \"CESAR AUGUSTO\", \"LastName\": \"JEREZ BERRIO\", \"CountryIssuer\": \"Colombia\", \"Nationality\": \"colombiano\", \"IdentificationType\": \"Cédula de Ciudadanía\", \"IdentificationNumber\": \"7.229.896\", \"Message\": \"\" }, \"document_type\": \"person\", \"category\": \"CECRL\" } ```"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 1583,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 4300,
+        "output_tokens": 829
+      }
+    },
+    "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 8000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+  "api_used": "invoke_model"
+}

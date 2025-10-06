@@ -1,0 +1,160 @@
+{
+  "document_name": "68_CA_2020-02-29.pdf",
+  "category": "ACC",
+  "classification_success": true,
+  "extraction_success": true,
+  "overall_success": true,
+  "timestamp": "2025-08-25T14:39:42.897914",
+  "classification_result": {
+    "classification_data": {
+      "category": "ACC",
+      "text": "Julio César Suaza Contador Público EL SUSCRITO CONTADOR PÚBLICO JULIO CÉSAR SUAZA, IDENTIFICADO CON LA CÉDULA DE CIUDADANIA No. 14.963.157 DE SANTIAGO DE CALI y TARJETA PROFESIONAL No. 9881-T CERTIFICA QUE: 1°.- A la fecha, la composición Accionaria de la sociedad MEGASERVICIOS DE INGENEIRÍA S.A.S., con NIT: 805.031.602 – 7, es de 2.000 acciones con un valor nominal de $50.000 cada acción, para un: CAPITAL AURIZADO $ 800.000.000 CAPITAL SUSCRIPTO $ 704.200.000 CAPITAL PAGADO $ 430.000.000 VR. ACCIÓN PARTICIPACIÓN ACCIONARIA NÚMERO DE ACCIONES ACCIONISTA -.- DORA MATILDE TREJOS 50.000 50% 7.042 PUERTA, C.C. 31.953.854 JUAN CARLOS ESCOBAR 50.000 50% 7.042 WELSCH, C.C. 16.733.280 TOTAL 14.084 2°.- Este certificado se expide por solicitud expresa del señor JUAN CARLOS ESCOBAR WELSCH, representante Legal de MEGASERVICIOS INGENEIRÍA S.A.S., NIT: 805.031.602 - 7, para tramites legales, comerciales y/o bancarios. Para constancia de lo anterior, se firma en la ciudad de Cali, a los veintitres (23) días del mes de septiembre de dos mil veinte (2020). JULTO CESÁS SUAZA Cesar Suaze Revisor Fiscal T. P. No. 9881 - T E-Mail: julicesua@gmail.com Móvil: 315 4962850 Cel. 315 496 2850 E-mail julicesua@hotmail.com Cali - Colombia",
+      "document_number": "805031602",
+      "path": "ACC/805031602/68_CA_2020-02-29.pdf"
+    },
+    "raw_response": {
+      "ResponseMetadata": {
+        "RequestId": "e9de0d33-586f-4908-ad32-1855ecd256c4",
+        "HTTPStatusCode": 200,
+        "HTTPHeaders": {
+          "date": "Mon, 25 Aug 2025 19:39:53 GMT",
+          "content-type": "application/json",
+          "content-length": "1764",
+          "connection": "keep-alive",
+          "x-amzn-requestid": "e9de0d33-586f-4908-ad32-1855ecd256c4"
+        },
+        "RetryAttempts": 0
+      },
+      "output": {
+        "message": {
+          "role": "assistant",
+          "content": [
+            {
+              "text": "```json { \"category\": \"ACC\", \"text\": \"Julio César Suaza Contador Público\\nEL SUSCRITO CONTADOR PÚBLICO JULIO CÉSAR SUAZA, IDENTIFICADO CON LA CÉDULA DE CIUDADANIA No. 14.963.157 DE SANTIAGO DE CALI y TARJETA PROFESIONAL No. 9881-T\\n\\nCERTIFICA QUE:\\n\\n1°.- A la fecha, la composición Accionaria de la sociedad MEGASERVICIOS DE INGENEIRÍA S.A.S., con NIT: 805.031.602 \\u2013 7, es de 2.000 acciones con un valor nominal de $50.000 cada acción, para un:\\n\\nCAPITAL AURIZADO\\n\\n$ 800.000.000\\nCAPITAL SUSCRIPTO\\n\\n$ 704.200.000\\nCAPITAL PAGADO\\n\\n$ 430.000.000\\n\\nVR. ACCIÓN\\nPARTICIPACIÓN\\nACCIONARIA\\nNÚMERO DE\\nACCIONES\\n\\nACCIONISTA\\n\\n-.- DORA MATILDE TREJOS\\n\\n50.000\\n\\n50%\\n\\n7.042\\n\\n\\nPUERTA, C.C. 31.953.854\\nJUAN CARLOS ESCOBAR\\n\\n50.000\\n\\n50%\\n\\n7.042\\n\\n\\nWELSCH, C.C. 16.733.280\\n\\nTOTAL\\n\\n14.084\\n2°.- Este certificado se expide por solicitud expresa del señor JUAN CARLOS ESCOBAR WELSCH, representante Legal de MEGASERVICIOS INGENEIRÍA S.A.S., NIT: 805.031.602 - 7, para tramites legales, comerciales y/o bancarios.\\nPara constancia de lo anterior, se firma en la ciudad de Cali, a los veintitres (23) días del mes de septiembre de dos mil veinte (2020).\\n\\n\\nJULTO CESÁS SUAZA\\nCesar Suaze\\nRevisor Fiscal\\nT. P. No. 9881 - T\\nE-Mail: julicesua@gmail.com\\nMóvil: 315 4962850\\n\\nCel. 315 496 2850 E-mail julicesua@hotmail.com Cali - Colombia\" } ```"
+            }
+          ]
+        }
+      },
+      "stopReason": "end_turn",
+      "usage": {
+        "inputTokens": 1889,
+        "outputTokens": 663,
+        "totalTokens": 4696,
+        "cacheReadInputTokens": 2144,
+        "cacheWriteInputTokens": 0
+      },
+      "metrics": {
+        "latencyMs": 10444
+      },
+      "model_id": "us.amazon.nova-pro-v1:0",
+      "api_used": "converse",
+      "model_params": {
+        "maxTokens": 8000,
+        "topP": 1,
+        "temperature": 0
+      }
+    },
+    "expected_category": "ACC",
+    "model_used": "us.amazon.nova-pro-v1:0",
+    "api_used": "converse",
+    "pdf_info": {
+      "original_size": 223694,
+      "first_page_size": 223173,
+      "is_scanned": true
+    }
+  },
+  "extraction_result": {
+    "extraction_data": {
+      "path": "ACC/805031602/68_CA_2020-02-29.pdf",
+      "result": {
+        "companyName": "MEGASERVICIOS DE INGENIERIA S.A.S.",
+        "documentType": "Equity Composition",
+        "taxId": "805.031.602 - 7",
+        "country": "Colombia",
+        "identificationDetails": {
+          "source": "text_reference",
+          "indicators": [
+            "NIT",
+            "Cali",
+            "Colombia"
+          ],
+          "conflictingSources": [],
+          "requiresReview": false
+        },
+        "relatedParties": [
+          {
+            "firstName": "Dora Matilde",
+            "lastName": "Trejos Puerta",
+            "identificationType": "C.C.",
+            "identificationNumber": "31.953.854",
+            "relationshipType": "Shareholder",
+            "participationPercentage": "50%",
+            "timeFound": 1,
+            "job": ""
+          },
+          {
+            "firstName": "Juan Carlos",
+            "lastName": "Escobar Welsch",
+            "identificationType": "C.C.",
+            "identificationNumber": "16.733.280",
+            "relationshipType": "Shareholder",
+            "participationPercentage": "50%",
+            "timeFound": 1,
+            "job": "Representante Legal"
+          }
+        ]
+      },
+      "document_type": "company",
+      "document_number": "805031602",
+      "category": "ACC",
+      "confidenceScores": {
+        "companyName": 90,
+        "taxId": 90,
+        "country": 99,
+        "relatedParties": 95
+      }
+    },
+    "raw_response": {
+      "ResponseMetadata": {
+        "RequestId": "4ec070c0-c0d4-4ca6-a16f-e7852dd95ff9",
+        "HTTPStatusCode": 200,
+        "HTTPHeaders": {
+          "date": "Mon, 25 Aug 2025 19:40:00 GMT",
+          "content-type": "application/json",
+          "content-length": "1666",
+          "connection": "keep-alive",
+          "x-amzn-requestid": "4ec070c0-c0d4-4ca6-a16f-e7852dd95ff9"
+        },
+        "RetryAttempts": 0
+      },
+      "output": {
+        "message": {
+          "role": "assistant",
+          "content": [
+            {
+              "text": "```json { \"path\": \"ACC/805031602/68_CA_2020-02-29.pdf\", \"result\": { \"companyName\": \"MEGASERVICIOS DE INGENIERIA S.A.S.\", \"documentType\": \"Equity Composition\", \"taxId\": \"805.031.602 - 7\", \"country\": \"Colombia\", \"identificationDetails\": { \"source\": \"text_reference\", \"indicators\": [ \"NIT\", \"Cali\", \"Colombia\" ], \"conflictingSources\": [], \"requiresReview\": false }, \"relatedParties\": [ { \"firstName\": \"Dora Matilde\", \"lastName\": \"Trejos Puerta\", \"identificationType\": \"C.C.\", \"identificationNumber\": \"31.953.854\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"50%\", \"timeFound\": 1, \"job\": \"\" }, { \"firstName\": \"Juan Carlos\", \"lastName\": \"Escobar Welsch\", \"identificationType\": \"C.C.\", \"identificationNumber\": \"16.733.280\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"50%\", \"timeFound\": 1, \"job\": \"Representante Legal\" } ] }, \"document_type\": \"company\", \"document_number\": \"805031602\", \"category\": \"ACC\", \"confidenceScores\": { \"companyName\": 90, \"taxId\": 90, \"country\": 99, \"relatedParties\": 95 } } ```"
+            }
+          ]
+        }
+      },
+      "stopReason": "end_turn",
+      "usage": {
+        "inputTokens": 8667,
+        "outputTokens": 415,
+        "totalTokens": 9082
+      },
+      "metrics": {
+        "latencyMs": 7650
+      },
+      "model_id": "us.amazon.nova-pro-v1:0",
+      "api_used": "converse",
+      "model_params": {
+        "maxTokens": 8000,
+        "topP": 1,
+        "temperature": 0
+      }
+    },
+    "model_used": "us.amazon.nova-pro-v1:0",
+    "api_used": "converse"
+  }
+}

@@ -1,0 +1,110 @@
+{
+  "extraction_data": {
+    "path": "ACC/901304620/237_CA_2020-02-29.pdf",
+    "result": {
+      "companyName": "PROCESS POINT COLOMBIA S.A.S.",
+      "documentCategory": "Equity Composition",
+      "taxId": "901.304.620-0",
+      "country": "Colombia",
+      "identificationDetails": {
+        "source": "text_reference",
+        "indicators": [
+          "Bogotá D.C."
+        ],
+        "conflictingSources": [
+          "Name discrepancy: Table shows 'TODD RUDERFORTH' while text mentions 'JAMIE TODD RUTHERFORD'"
+        ],
+        "requiresReview": "true"
+      },
+      "relatedParties": [
+        {
+          "type": "person",
+          "firstName": "JAMIE TODD",
+          "lastName": "RUTHERFORD",
+          "identificationType": "POR REVISAR",
+          "identificationNumber": "POR REVISAR",
+          "relationshipType": "Shareholder",
+          "participationPercentage": "100",
+          "timeFound": "1",
+          "job": ""
+        }
+      ]
+    },
+    "documentType": "company",
+    "documentNumber": "901304620",
+    "category": "ACC"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "```json { \"result\": { \"companyName\": \"PROCESS POINT COLOMBIA S.A.S.\", \"documentCategory\": \"Equity Composition\", \"taxId\": \"901.304.620-0\", \"country\": \"Colombia\", \"identificationDetails\": { \"source\": \"text_reference\", \"indicators\": [ \"Bogotá D.C.\" ], \"conflictingSources\": [ \"Name discrepancy: Table shows 'TODD RUDERFORTH' while text mentions 'JAMIE TODD RUTHERFORD'\" ], \"requiresReview\": \"true\" }, \"relatedParties\": [ { \"type\": \"person\", \"firstName\": \"JAMIE TODD\", \"lastName\": \"RUTHERFORD\", \"identificationType\": \"POR REVISAR\", \"identificationNumber\": \"POR REVISAR\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"100\", \"timeFound\": \"1\", \"job\": \"\" } ] }, \"documentType\": \"company\", \"category\": \"ACC\" } ```"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 9,
+      "cache_creation_input_tokens": 6094,
+      "cache_read_input_tokens": 0,
+      "output_tokens": 1959
+    },
+    "ResponseMetadata": {
+      "RequestId": "c3d9fffd-8ec4-4398-982c-1c8e5ae2a6bf",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Thu, 28 Aug 2025 09:47:30 GMT",
+        "content-type": "application/json",
+        "content-length": "7741",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "c3d9fffd-8ec4-4398-982c-1c8e5ae2a6bf",
+        "x-amzn-bedrock-invocation-latency": "40271",
+        "x-amzn-bedrock-cache-write-input-token-count": "6094",
+        "x-amzn-bedrock-cache-read-input-token-count": "0",
+        "x-amzn-bedrock-output-token-count": "1959",
+        "x-amzn-bedrock-input-token-count": "9"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_016S6snjEujZQFrSaQRKrpAK",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-3-7-sonnet-20250219",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Let me analyze this document step by step according to the workflow provided. ## Step 1: Document Analysis This appears to be a shareholder certification document (\"CERTIFICACIÓN COMPOSICIÓN ACCIONARIA\") for a company called \"PROCESS POINT COLOMBIA S.A.S.\" with tax ID \"Nit. 901.304.620-0\". The document is in Spanish and appears to be issued in Colombia (mentions \"Bogotá D.C.\"). The document is signed by JAVIER HERNÁN BECERRA RODRIGUEZ, identified as the accountant (\"Contador\") of the company. The document lists one shareholder: JAMIE TODD RUTHERFORD, who resides in Texas, United States and owns 100% of the company with 696 shares. The document was issued on January 7, 2020 in Bogotá. ## Step 2: Root Level Extraction - **companyName**: \"PROCESS POINT COLOMBIA S.A.S.\" - **documentCategory**: \"Equity Composition\" (fixed value) - **taxId**: \"901.304.620-0\" (preserving original format) - **country**: \"Colombia\" (explicit reference to Bogotá D.C., also NIT format typical for Colombia) - **identificationDetails**: - source: \"text_reference\" (explicit city reference) - indicators: [\"Bogotá D.C.\", \"Colombia\"] - conflictingSources: [] (no conflicts detected) - requiresReview: \"false\" (all fields present and consistent) ## Step 3: Related Parties Processing I identified one shareholder: - Name: JAMIE TODD RUTHERFORD - This appears to be a person (no company markers like S.A. or Ltd.) - Residence: Texas, United States - Participation: 100% (696 shares) - timeFound: 1 (appears once in document) - No specific job role is mentioned beyond being the sole shareholder For a PersonRelatedParty, I need to split the name: - firstName: \"JAMIE TODD\" - lastName: \"RUTHERFORD\" The document doesn't explicitly state an identification type or number for the shareholder. Since the shareholder resides in Texas, USA (which isn't in the PERSON_ID hash table), I'll use \"POR REVISAR\" for these fields. ## Step 4: Validation & Cross-checking - taxId type (NIT) aligns with country (Colombia) ✓ - identificationType for shareholder is \"POR REVISAR\" as we don't have this information - Only one shareholder with 100% participation ✓ - All required fields are present except the shareholder's identification details - The participation percentage is 100%, which is correct for a sole shareholder ✓ Since the identificationType and identificationNumber for the shareholder are missing, I should set requiresReview to \"true\" and note this conflict. ## Final JSON Output Now I'll format the output according to the schema: ```json { \"result\": { \"companyName\": \"PROCESS POINT COLOMBIA S.A.S.\", \"documentCategory\": \"Equity Composition\", \"taxId\": \"901.304.620-0\", \"country\": \"Colombia\", \"identificationDetails\": { \"source\": \"text_reference\", \"indicators\": [ \"Bogotá D.C.\" ], \"conflictingSources\": [\"Missing identification type and number for shareholder: JAMIE TODD RUTHERFORD\"], \"requiresReview\": \"true\" }, \"relatedParties\": [ { \"type\": \"person\", \"firstName\": \"JAMIE TODD\", \"lastName\": \"RUTHERFORD\", \"identificationType\": \"POR REVISAR\", \"identificationNumber\": \"POR REVISAR\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"100\", \"timeFound\": \"1\", \"job\": \"\" } ] }, \"documentType\": \"company\", \"category\": \"ACC\" } ``` Let me review this one more time to make sure it's correct: There is a slight discrepancy in the shareholder name between the table and the text. In the table it says \"TODD RUDERFORTH\" but in the text below it says \"JAMIE TODD RUTHERFORD\". I should report this conflict and use the more complete name. Wait, I need to look at this more carefully. Let me review the document again: - The table has \"ACCIONISTA ÚNICO\" (Sole Shareholder) column with \"TODD RUDERFORTH\" - The text below mentions \"JAMIE TODD RUTHERFORD con domicilio en Texas...\" There seems to be a spelling discrepancy between RUDERFORTH and RUTHERFORD, plus the addition of \"JAMIE\" in the text. I'll use the more complete name from the detailed text (JAMIE TODD RUTHERFORD) and note this conflict. Updated JSON: ```json { \"result\": { \"companyName\": \"PROCESS POINT COLOMBIA S.A.S.\", \"documentCategory\": \"Equity Composition\", \"taxId\": \"901.304.620-0\", \"country\": \"Colombia\", \"identificationDetails\": { \"source\": \"text_reference\", \"indicators\": [ \"Bogotá D.C.\" ], \"conflictingSources\": [ \"Missing identification type and number for shareholder\", \"Name discrepancy: Table shows 'TODD RUDERFORTH' while text mentions 'JAMIE TODD RUTHERFORD'\" ], \"requiresReview\": \"true\" }, \"relatedParties\": [ { \"type\": \"person\", \"firstName\": \"JAMIE TODD\", \"lastName\": \"RUTHERFORD\", \"identificationType\": \"POR REVISAR\", \"identificationNumber\": \"POR REVISAR\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"100\", \"timeFound\": \"1\", \"job\": \"\" } ] }, \"documentType\": \"company\", \"category\": \"ACC\" } ``` Wait, let me re-examine the document. The all-caps text in the table shows \"TODD RUDERFORTH\" while the text below shows \"JAMIE TODD RUTHERFORD\". There could be a typo in the original document. I should include both instances as separate entries with timeFound=1 for each and note the conflict. On second thought, looking at the context and the flow of the document, this is clearly meant to be the same person and there's just a spelling error in the document. I'll stick with the more complete name version and note the discrepancy in conflictingSources. Let's finalize the output:",
+          "signature": "ErcBCkgIBxABGAIiQHQkG9EnWIYoHflm2nlLj70AqOKAP2Nc+kkbpoKh1UrY83WqozF/mm6igKIEKO/ubvQmy6LSUnScC9owYnt4tUYSDHUgf81v6SH0a2MxvhoMWzwdStWL/sRKAnz4IjCXG/iPs21rSptv/YzyvNYxSYvAJ7GzEsTEVu/XuDqeZi5zKliiIHXfO1I1IgEMJFEqHZXF/5JZn2Zb9v8yC1YSlXdzfFet+u/EcMW2p6GSGAI="
+        },
+        {
+          "type": "text",
+          "text": "```json { \"result\": { \"companyName\": \"PROCESS POINT COLOMBIA S.A.S.\", \"documentCategory\": \"Equity Composition\", \"taxId\": \"901.304.620-0\", \"country\": \"Colombia\", \"identificationDetails\": { \"source\": \"text_reference\", \"indicators\": [ \"Bogotá D.C.\" ], \"conflictingSources\": [ \"Name discrepancy: Table shows 'TODD RUDERFORTH' while text mentions 'JAMIE TODD RUTHERFORD'\" ], \"requiresReview\": \"true\" }, \"relatedParties\": [ { \"type\": \"person\", \"firstName\": \"JAMIE TODD\", \"lastName\": \"RUTHERFORD\", \"identificationType\": \"POR REVISAR\", \"identificationNumber\": \"POR REVISAR\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"100\", \"timeFound\": \"1\", \"job\": \"\" } ] }, \"documentType\": \"company\", \"category\": \"ACC\" } ```"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 9,
+        "cache_creation_input_tokens": 6094,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 1959
+      }
+    },
+    "model_id": "us.anthropic.claude-3-7-sonnet-20250219-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 8000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "model_used": "us.anthropic.claude-3-7-sonnet-20250219-v1:0",
+  "api_used": "invoke_model"
+}

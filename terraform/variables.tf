@@ -1,7 +1,7 @@
 variable "aws_region" {
   description = "AWS region"
   type        = string
-  default     = "us-east-1"
+  default     = "us-east-2"
 }
 
 variable "stage_name" {
@@ -17,7 +17,23 @@ variable "service_name" {
 }
 
 variable "project_prefix" {
-  description = "Project prefix (e.g. mycompany-"
+  description = "Project prefix (e.g. mycompany-)"
   type        = string
   default     = "par-servicios-poc"
+}
+
+variable "cost_component" {
+  description = "cost identificator"
+  type        = string
+  default     = "agents-bedrock"
+}
+
+variable "bedrock_model" {
+  description = "bedrock model"
+  type        = string
+}
+
+variable "fallback_model" {
+  description = "fallback model"
+  type        = string
 }

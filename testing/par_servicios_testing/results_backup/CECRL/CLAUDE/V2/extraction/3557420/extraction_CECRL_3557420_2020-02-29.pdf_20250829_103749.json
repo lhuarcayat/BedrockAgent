@@ -1,0 +1,88 @@
+{
+  "extraction_data": {
+    "result": {
+      "firstName": "DARIO",
+      "lastName": "SANCHEZ DUARTE",
+      "country_issuer": "Colombia",
+      "nationality": "Colombia",
+      "identificationType": "Cédula de Ciudadanía",
+      "identificationNumber": "3.357.420",
+      "message": ""
+    },
+    "document_type": "person",
+    "category": "CECRL"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "```json { \"result\": { \"firstName\": \"DARIO\", \"lastName\": \"SANCHEZ DUARTE\", \"country_issuer\": \"Colombia\", \"nationality\": \"Colombia\", \"identificationType\": \"Cédula de Ciudadanía\", \"identificationNumber\": \"3.357.420\", \"message\": \"\" }, \"document_type\": \"person\", \"category\": \"CECRL\" } ```"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 10,
+      "cache_creation_input_tokens": 5982,
+      "cache_read_input_tokens": 0,
+      "output_tokens": 531
+    },
+    "ResponseMetadata": {
+      "RequestId": "3c6c8aaa-e899-4a5f-82c5-9c32418d14ae",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Fri, 29 Aug 2025 15:37:50 GMT",
+        "content-type": "application/json",
+        "content-length": "4201",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "3c6c8aaa-e899-4a5f-82c5-9c32418d14ae",
+        "x-amzn-bedrock-invocation-latency": "12470",
+        "x-amzn-bedrock-cache-write-input-token-count": "5982",
+        "x-amzn-bedrock-cache-read-input-token-count": "0",
+        "x-amzn-bedrock-output-token-count": "531",
+        "x-amzn-bedrock-input-token-count": "10"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_01UCdNFqMS1KWnmC123r8QdH",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-sonnet-4-20250514",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Let me carefully analyze the Colombian ID document (Cédula de Ciudadanía) shown in the image. Looking at the document, I can see: 1. The header says \"REPUBLICA DE COLOMBIA\" and \"IDENTIFICACION PERSONAL\" and \"CEDULA DE CIUDADANIA\" 2. I can see some personal information fields: - There appears to be a number: 3.357.420 - SANCHEZ DUARTE appears to be visible - DARIO appears to be visible 3. Below that I can see: - Birth information showing \"01-AGO-1962\" - Location information showing \"YONDO - CASABE\" and \"YONDO (ANTIOQUIA)\" - Height \"1.75\" - Blood type \"O+\" - Sex \"M\" - There's a date \"13-ABR-1991 YONDO\" 4. There's a fingerprint and what appears to be a barcode at the bottom Let me extract the information: - **firstName**: I can see \"DARIO\" - **lastName**: I can see \"SANCHEZ DUARTE\" - **country_issuer**: This is clearly Colombia based on \"REPUBLICA DE COLOMBIA\" - **nationality**: Since this is a Colombian citizenship card, the nationality would be Colombia - **identificationType**: This is \"CEDULA DE CIUDADANIA\" which translates to \"Cédula de Ciudadanía\" - **identificationNumber**: I can see \"3.357.420\" - **message**: This appears to be a legitimate government ID document, so I'll leave this empty The document appears to be in good condition and I can extract most of the required information clearly.",
+          "signature": "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"
+        },
+        {
+          "type": "text",
+          "text": "```json { \"result\": { \"firstName\": \"DARIO\", \"lastName\": \"SANCHEZ DUARTE\", \"country_issuer\": \"Colombia\", \"nationality\": \"Colombia\", \"identificationType\": \"Cédula de Ciudadanía\", \"identificationNumber\": \"3.357.420\", \"message\": \"\" }, \"document_type\": \"person\", \"category\": \"CECRL\" } ```"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 10,
+        "cache_creation_input_tokens": 5982,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 531
+      }
+    },
+    "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 8000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+  "api_used": "invoke_model"
+}

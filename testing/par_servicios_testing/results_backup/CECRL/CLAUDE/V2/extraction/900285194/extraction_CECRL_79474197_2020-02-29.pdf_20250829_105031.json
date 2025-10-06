@@ -1,0 +1,88 @@
+{
+  "extraction_data": {
+    "result": {
+      "firstName": "ALEXANDER",
+      "lastName": "TOVAR OSORIO",
+      "country_issuer": "Colombia",
+      "nationality": "Colombia",
+      "identificationType": "Cédula de Ciudadanía",
+      "identificationNumber": "79.474.197",
+      "message": ""
+    },
+    "document_type": "person",
+    "category": "CECRL"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "```json { \"result\": { \"firstName\": \"ALEXANDER\", \"lastName\": \"TOVAR OSORIO\", \"country_issuer\": \"Colombia\", \"nationality\": \"Colombia\", \"identificationType\": \"Cédula de Ciudadanía\", \"identificationNumber\": \"79.474.197\", \"message\": \"\" }, \"document_type\": \"person\", \"category\": \"CECRL\" } ```"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 10,
+      "cache_creation_input_tokens": 5982,
+      "cache_read_input_tokens": 0,
+      "output_tokens": 497
+    },
+    "ResponseMetadata": {
+      "RequestId": "36ccb840-2afb-4a6f-81e9-87b5dfbbba1d",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Fri, 29 Aug 2025 15:50:31 GMT",
+        "content-type": "application/json",
+        "content-length": "4158",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "36ccb840-2afb-4a6f-81e9-87b5dfbbba1d",
+        "x-amzn-bedrock-invocation-latency": "13992",
+        "x-amzn-bedrock-cache-write-input-token-count": "5982",
+        "x-amzn-bedrock-cache-read-input-token-count": "0",
+        "x-amzn-bedrock-output-token-count": "497",
+        "x-amzn-bedrock-input-token-count": "10"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_01LM2uwTSXUMJqhaeE86h1LZ",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-sonnet-4-20250514",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Let me analyze this Colombian ID document carefully: Looking at the document, this is a Colombian identification document (\"REPÚBLICA DE COLOMBIA\" and \"CEDULA DE CIUDADANIA\" visible in the header). I can see the following information: From the front side: - Name section appears to have \"TOVAR OSORIO\" (appears to be apellidos/surnames) - \"ALEXANDER\" (appears to be nombres/given name) - ID Number: \"79.474.197\" - The document type is clearly \"CÉDULA DE CIUDADANÍA\" From the back side: - Birth date: \"13-ENE-1969\" (January 13, 1969) - Birth place: \"BOGOTÁ D.C.\" (Bogotá, Colombia) - More detailed information including fingerprint and barcode Let me extract according to the field rules: 1. firstName: \"ALEXANDER\" - this appears to be the given name 2. lastName: \"TOVAR OSORIO\" - these appear to be the surnames 3. country_issuer: \"Colombia\" - clearly stated as \"REPÚBLICA DE COLOMBIA\" 4. nationality: \"Colombia\" - born in Bogotá D.C., so Colombian nationality 5. identificationType: \"Cédula de Ciudadanía\" - explicitly stated 6. identificationNumber: \"79.474.197\" - clearly visible 7. message: \"\" - this appears to be a legitimate Colombian ID document with all information clearly readable The document appears to be an official Colombian Cédula de Ciudadanía with all required information clearly visible and extractable.",
+          "signature": "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"
+        },
+        {
+          "type": "text",
+          "text": "```json { \"result\": { \"firstName\": \"ALEXANDER\", \"lastName\": \"TOVAR OSORIO\", \"country_issuer\": \"Colombia\", \"nationality\": \"Colombia\", \"identificationType\": \"Cédula de Ciudadanía\", \"identificationNumber\": \"79.474.197\", \"message\": \"\" }, \"document_type\": \"person\", \"category\": \"CECRL\" } ```"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 10,
+        "cache_creation_input_tokens": 5982,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 497
+      }
+    },
+    "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 8000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+  "api_used": "invoke_model"
+}

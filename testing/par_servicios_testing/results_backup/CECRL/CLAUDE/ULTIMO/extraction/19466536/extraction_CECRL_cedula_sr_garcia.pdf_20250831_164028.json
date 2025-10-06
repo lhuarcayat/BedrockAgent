@@ -1,0 +1,88 @@
+{
+  "extraction_data": {
+    "result": {
+      "FirstName": "JOSE REINALDO",
+      "LastName": "GARCIA GONZALEZ",
+      "CountryIssuer": "Colombia",
+      "Nationality": "colombiano",
+      "IdentificationType": "Cédula de Ciudadanía",
+      "IdentificationNumber": "19.466.536",
+      "Message": ""
+    },
+    "document_type": "person",
+    "category": "CECRL"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "```json { \"result\": { \"FirstName\": \"JOSE REINALDO\", \"LastName\": \"GARCIA GONZALEZ\", \"CountryIssuer\": \"Colombia\", \"Nationality\": \"colombiano\", \"IdentificationType\": \"Cédula de Ciudadanía\", \"IdentificationNumber\": \"19.466.536\", \"Message\": \"\" }, \"document_type\": \"person\", \"category\": \"CECRL\" } ```"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 1604,
+      "cache_creation_input_tokens": 4300,
+      "cache_read_input_tokens": 0,
+      "output_tokens": 611
+    },
+    "ResponseMetadata": {
+      "RequestId": "a6779656-f126-4244-ba7a-a16dd778c902",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Sun, 31 Aug 2025 21:40:27 GMT",
+        "content-type": "application/json",
+        "content-length": "4628",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "a6779656-f126-4244-ba7a-a16dd778c902",
+        "x-amzn-bedrock-invocation-latency": "10570",
+        "x-amzn-bedrock-cache-write-input-token-count": "4300",
+        "x-amzn-bedrock-cache-read-input-token-count": "0",
+        "x-amzn-bedrock-output-token-count": "611",
+        "x-amzn-bedrock-input-token-count": "1604"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_017Cf8UKs7H7nDFn7tTqknH7",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-sonnet-4-20250514",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Looking at this document, I can see it's a Colombian citizenship card (\"CEDULA DE CIUDADANIA\"). Let me analyze the structure: Top section shows: - REPUBLICA DE COLOMBIA - IDENTIFICACION PERSONAL - CEDULA DE CIUDADANIA I can see: - NUMERO: 19.466.536 - GARCIA GONZALEZ (appears to be last names) - APELLIDOS (label) - JOSE REINALDO (appears to be first names) - NOMBRES (label) This looks like a classic case of the Colombian \"misaligned\" document mentioned in the extraction methodology. The layout appears to be: NUMERO 19.466.536 GARCIA GONZALEZ APELLIDOS JOSE REINALDO NOMBRES So following the contextual analysis methodology for Colombian documents: - The surnames \"GARCIA GONZALEZ\" appear first - Then there's the \"APELLIDOS\" label - Then the names \"JOSE REINALDO\" appear - Then there's the \"NOMBRES\" label This matches the pattern described where \"the surnames appear first and then the label 'APELLIDOS' along with the first name(s) and finally the label 'NAMES' appears\". So the correct extraction should be: - FirstName: \"JOSE REINALDO\" - LastName: \"GARCIA GONZALEZ\" - CountryIssuer: \"Colombia\" (from \"REPUBLICA DE COLOMBIA\") - Nationality: \"colombiano\" (inferred from Colombian citizenship card) - IdentificationType: \"Cédula de Ciudadanía\" (from \"CEDULA DE CIUDADANIA\") - IdentificationNumber: \"19.466.536\" Additional information I can see: - Birth date: 14-FEB-1962 - Birth place: BOGOTÁ D.C. (CUNDINAMARCA) - Height: 1.80 - Sex: Male, confirming the document's \"M\" designation for gender",
+          "signature": "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"
+        },
+        {
+          "type": "text",
+          "text": "```json { \"result\": { \"FirstName\": \"JOSE REINALDO\", \"LastName\": \"GARCIA GONZALEZ\", \"CountryIssuer\": \"Colombia\", \"Nationality\": \"colombiano\", \"IdentificationType\": \"Cédula de Ciudadanía\", \"IdentificationNumber\": \"19.466.536\", \"Message\": \"\" }, \"document_type\": \"person\", \"category\": \"CECRL\" } ```"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 1604,
+        "cache_creation_input_tokens": 4300,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 611
+      }
+    },
+    "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 8000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+  "api_used": "invoke_model"
+}

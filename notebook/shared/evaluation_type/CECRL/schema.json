@@ -1,0 +1,44 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Identificación Rep Legal",
+  "type": "object",
+  "properties": {
+    "firstName": {
+      "type": "string",
+      "description": "Nombre de la persona relacionada"
+    },
+    "lastName": {
+      "type": "string",
+      "description": "Apellido de la persona relacionada"
+    },
+    "country_issuer": {
+      "type": "string",
+      "description": "País del documento"
+    },
+    "nationality": {
+      "type": "string",
+      "description": "Nacionalidad de la persona"
+    },
+    "identificationType": {
+      "type": "string",
+      "description": "Tipo de identificación de la persona (ej. Cédula de Ciudadanía)"
+    },
+    "identificationNumber": {
+      "type": "string",
+      "pattern": "^[0-9A-Za-z.\\-]+$",
+      "description": "Número de identificación de la persona relacionada"
+    },
+    "message": {
+      "type": "string",
+      "description": "Mensaje de evaluacion si documento evaluado no corresponde a documento oficial"
+    }
+  },
+  "required": [
+    "firstName",
+    "lastName",
+    "identificationType",
+    "identificationNumber",
+    "country"
+  ],
+  "additionalProperties": false
+}

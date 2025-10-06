@@ -1,0 +1,129 @@
+{
+  "extraction_data": {
+    "result": {
+      "companyName": "Asesorías y Gestiones Ambientales SAS",
+      "documentCategory": "Equity Composition",
+      "taxId": "900.964.285-3",
+      "country": "Colombia",
+      "identificationDetails": {
+        "source": "id_analysis",
+        "indicators": [
+          "NIT format used for company identification",
+          "C.C. format used for individual identification"
+        ],
+        "conflictingSources": [],
+        "requiresReview": "false"
+      },
+      "relatedParties": [
+        {
+          "type": "person",
+          "firstName": "Jaime Alexander",
+          "lastName": "Franco Pedraza",
+          "identificationType": "C.C.",
+          "identificationNumber": "79770147",
+          "relationshipType": "Shareholder",
+          "participationPercentage": "33.33",
+          "timeFound": "1",
+          "job": "Representante Legal"
+        },
+        {
+          "type": "person",
+          "firstName": "Martha Lilia",
+          "lastName": "Celis Gordo",
+          "identificationType": "C.C.",
+          "identificationNumber": "51880385",
+          "relationshipType": "Shareholder",
+          "participationPercentage": "33.33",
+          "timeFound": "1",
+          "job": ""
+        },
+        {
+          "type": "person",
+          "firstName": "Giovanny Andres",
+          "lastName": "Vega Forero",
+          "identificationType": "C.C.",
+          "identificationNumber": "79958347",
+          "relationshipType": "Shareholder",
+          "participationPercentage": "33.33",
+          "timeFound": "1",
+          "job": ""
+        }
+      ]
+    },
+    "documentType": "company",
+    "category": "ACC"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "{ \"result\": { \"companyName\": \"Asesorías y Gestiones Ambientales SAS\", \"documentCategory\": \"Equity Composition\", \"taxId\": \"900.964.285-3\", \"country\": \"Colombia\", \"identificationDetails\": { \"source\": \"id_analysis\", \"indicators\": [ \"NIT format used for company identification\", \"C.C. format used for individual identification\" ], \"conflictingSources\": [], \"requiresReview\": \"false\" }, \"relatedParties\": [ { \"type\": \"person\", \"firstName\": \"Jaime Alexander\", \"lastName\": \"Franco Pedraza\", \"identificationType\": \"C.C.\", \"identificationNumber\": \"79770147\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"33.33\", \"timeFound\": \"1\", \"job\": \"Representante Legal\" }, { \"type\": \"person\", \"firstName\": \"Martha Lilia\", \"lastName\": \"Celis Gordo\", \"identificationType\": \"C.C.\", \"identificationNumber\": \"51880385\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"33.33\", \"timeFound\": \"1\", \"job\": \"\" }, { \"type\": \"person\", \"firstName\": \"Giovanny Andres\", \"lastName\": \"Vega Forero\", \"identificationType\": \"C.C.\", \"identificationNumber\": \"79958347\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"33.33\", \"timeFound\": \"1\", \"job\": \"\" } ] }, \"documentType\": \"company\", \"category\": \"ACC\" }"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 9,
+      "cache_creation_input_tokens": 6073,
+      "cache_read_input_tokens": 0,
+      "output_tokens": 1263
+    },
+    "ResponseMetadata": {
+      "RequestId": "a88abd5b-0643-428b-91f4-0123e6e9f030",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Fri, 29 Aug 2025 17:03:22 GMT",
+        "content-type": "application/json",
+        "content-length": "7862",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "a88abd5b-0643-428b-91f4-0123e6e9f030",
+        "x-amzn-bedrock-invocation-latency": "20261",
+        "x-amzn-bedrock-cache-write-input-token-count": "6073",
+        "x-amzn-bedrock-cache-read-input-token-count": "0",
+        "x-amzn-bedrock-output-token-count": "1263",
+        "x-amzn-bedrock-input-token-count": "9"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_016RCbthofHLuwUNvTgKKUcz",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-sonnet-4-20250514",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Let me analyze this document carefully to extract the required information. Looking at the document: 1. **Company Name**: The document is about \"Asesorías y Gestiones Ambientales SAS\" with NIT 900.964.285-3. This appears to be the main reporting company. 2. **Tax ID**: NIT 900.964.285-3 3. **Country**: There's no explicit mention of country in the document, but the use of \"NIT\" strongly suggests Colombia, as NIT is the Colombian tax identification number format. 4. **Document Category**: This is an equity composition document (\"composición accionaria\") 5. **Related Parties**: Looking at the table, I can see three shareholders: - JAIME ALEXANDER FRANCO PEDRAZA (NIT 79770147) - 33.33% with 20.000 shares and 20.000.000 capital - MARTHA LILIA CELIS GORDO (NIT 51880385) - 33.33% with 20.000 shares and 20.000.000 capital - GIOVANNY ANDRES VEGA FORERO (NIT 79958347) - 33.33% with 20.000 shares and 20.000.000 capital Wait, I need to be careful about the identification numbers. The table shows \"NIT\" but these appear to be personal identification numbers based on their format. In Colombia, for individuals, these would typically be \"C.C.\" (Cédula de Ciudadanía) numbers. Looking at the signature section, it mentions: - Jaime Alexander Franco Pedraza - CC 79.770.147 - Representante Legal So the person signing is the legal representative with CC (Cédula de Ciudadanía) 79.770.147, which matches the first entry in the shareholder table. For the identification types: - Since this is Colombia (based on NIT usage), and these are personal identification numbers - The 8-digit identification numbers align perfectly with the Colombian C.C. format - Each number starts with a non-zero digit, confirming they are individual citizen identification numbers - The pattern matches the standard Colombian citizen ID structure, ranging from 4 to 10 digits - These IDs represent unique personal identifiers for the shareholders in this document Jaime Alexander Franco Pedraza is listed as the legal representative, while the other two shareholders lack specified roles. The ownership percentages are evenly distributed at approximately 33.33% each.",
+          "signature": "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"
+        },
+        {
+          "type": "text",
+          "text": "{ \"result\": { \"companyName\": \"Asesorías y Gestiones Ambientales SAS\", \"documentCategory\": \"Equity Composition\", \"taxId\": \"900.964.285-3\", \"country\": \"Colombia\", \"identificationDetails\": { \"source\": \"id_analysis\", \"indicators\": [ \"NIT format used for company identification\", \"C.C. format used for individual identification\" ], \"conflictingSources\": [], \"requiresReview\": \"false\" }, \"relatedParties\": [ { \"type\": \"person\", \"firstName\": \"Jaime Alexander\", \"lastName\": \"Franco Pedraza\", \"identificationType\": \"C.C.\", \"identificationNumber\": \"79770147\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"33.33\", \"timeFound\": \"1\", \"job\": \"Representante Legal\" }, { \"type\": \"person\", \"firstName\": \"Martha Lilia\", \"lastName\": \"Celis Gordo\", \"identificationType\": \"C.C.\", \"identificationNumber\": \"51880385\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"33.33\", \"timeFound\": \"1\", \"job\": \"\" }, { \"type\": \"person\", \"firstName\": \"Giovanny Andres\", \"lastName\": \"Vega Forero\", \"identificationType\": \"C.C.\", \"identificationNumber\": \"79958347\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"33.33\", \"timeFound\": \"1\", \"job\": \"\" } ] }, \"documentType\": \"company\", \"category\": \"ACC\" }"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 9,
+        "cache_creation_input_tokens": 6073,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 1263
+      }
+    },
+    "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 8000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+  "api_used": "invoke_model"
+}

@@ -1,0 +1,109 @@
+{
+  "extraction_data": {
+    "result": {
+      "PrincipalCompanyName": "QUIMEL INGENIERIA S.A.S.",
+      "DocumentCategory": "Equity Composition",
+      "TaxId": "901.108.357-8",
+      "IdentificationType": "NIT",
+      "Country": "Colombia",
+      "IdentificationDetails": {
+        "Source": "IdAnalysis",
+        "Indicators": [
+          "NIT",
+          "C.E",
+          "C.C"
+        ],
+        "ConflictingSources": [],
+        "RequiresReview": "false"
+      },
+      "RelatedParties": [
+        {
+          "Type": "person",
+          "FirstName": "JOSE CARLOS",
+          "LastName": "MENDOZA CARRANZA",
+          "IdType": "CE",
+          "IdNumber": "737708",
+          "RelationshipType": "Shareholder",
+          "ParticipationPercentage": "100%",
+          "TimeFound": "3",
+          "Job": "REPRESENTANTE LEGAL"
+        }
+      ]
+    },
+    "DocumentType": "company",
+    "Category": "ACC"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "{ \"result\": { \"PrincipalCompanyName\": \"QUIMEL INGENIERIA S.A.S.\", \"DocumentCategory\": \"Equity Composition\", \"TaxId\": \"901.108.357-8\", \"IdentificationType\": \"NIT\", \"Country\": \"Colombia\", \"IdentificationDetails\": { \"Source\": \"IdAnalysis\", \"Indicators\": [ \"NIT\", \"C.E\", \"C.C\" ], \"ConflictingSources\": [], \"RequiresReview\": \"false\" }, \"RelatedParties\": [ { \"Type\": \"person\", \"FirstName\": \"JOSE CARLOS\", \"LastName\": \"MENDOZA CARRANZA\", \"IdType\": \"CE\", \"IdNumber\": \"737708\", \"RelationshipType\": \"Shareholder\", \"ParticipationPercentage\": \"100%\", \"TimeFound\": \"3\", \"Job\": \"REPRESENTANTE LEGAL\" } ] }, \"DocumentType\": \"company\", \"Category\": \"ACC\" }"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 1997,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 4822,
+      "output_tokens": 871
+    },
+    "ResponseMetadata": {
+      "RequestId": "2539c08d-7054-4372-bac5-0bd2550e5d2a",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Mon, 01 Sep 2025 02:14:32 GMT",
+        "content-type": "application/json",
+        "content-length": "6035",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "2539c08d-7054-4372-bac5-0bd2550e5d2a",
+        "x-amzn-bedrock-invocation-latency": "15451",
+        "x-amzn-bedrock-cache-write-input-token-count": "0",
+        "x-amzn-bedrock-cache-read-input-token-count": "4822",
+        "x-amzn-bedrock-output-token-count": "871",
+        "x-amzn-bedrock-input-token-count": "1997"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_01KHqcj4nqxR2sjXpL4qcEjK",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-sonnet-4-20250514",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "I need to extract data from this Colombian shareholder composition document. Let me analyze it carefully: 1. PrincipalCompanyName: The document is about \"QUIMEL INGENIERIA S.A.S.\" This appears in both the header and in the main text where it states: \"QUIMEL INGENIERIA S.A.S., identificada con el NIT No. 901.108.357-8\" 2. DocumentCategory: Should always be \"Equity Composition\" 3. Country: The document contains several indicators: - Uses NIT (Colombian tax ID format) - Uses C.C and C.E identification types (Colombian person IDs) - The NIT format (901.108.357-8) is Colombian - The document is in Spanish with Colombian legal terminology This points to Colombia. 4. TaxId: \"901.108.357-8\" - found after \"NIT No.\" 5. IdentificationType: \"NIT\" - explicitly mentioned in the document 6. RelatedParties: I need to identify the shareholders: - JOSE CARLOS MENDOZA CARRANZA with C.E 737708, 100% participation - Also mentioned as the legal representative (REPRESENTANTE LEGAL) There's also Sandra Milena Bolaños Bravo mentioned as the accountant (CONTADORA) with C.C 27.191.211, but she doesn't appear to be a shareholder based on the shareholding table. Let me structure this properly: The shareholder is: - Type: person - FirstName: JOSE CARLOS - LastName: MENDOZA CARRANZA - IdType: CE - IdNumber: 737708 - RelationshipType: Shareholder (since he has participation percentage) - ParticipationPercentage: 100% - TimeFound: He's mentioned multiple times - in the shareholding table and as legal representative - Job: Legal Representative (REPRESENTANTE LEGAL) I've verified the identification details from the Colombian document. The NIT, C.E, and C.C identification types confirm the source is reliable. The 100% participation percentage checks out, with no conflicting information detected.",
+          "signature": "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"
+        },
+        {
+          "type": "text",
+          "text": "{ \"result\": { \"PrincipalCompanyName\": \"QUIMEL INGENIERIA S.A.S.\", \"DocumentCategory\": \"Equity Composition\", \"TaxId\": \"901.108.357-8\", \"IdentificationType\": \"NIT\", \"Country\": \"Colombia\", \"IdentificationDetails\": { \"Source\": \"IdAnalysis\", \"Indicators\": [ \"NIT\", \"C.E\", \"C.C\" ], \"ConflictingSources\": [], \"RequiresReview\": \"false\" }, \"RelatedParties\": [ { \"Type\": \"person\", \"FirstName\": \"JOSE CARLOS\", \"LastName\": \"MENDOZA CARRANZA\", \"IdType\": \"CE\", \"IdNumber\": \"737708\", \"RelationshipType\": \"Shareholder\", \"ParticipationPercentage\": \"100%\", \"TimeFound\": \"3\", \"Job\": \"REPRESENTANTE LEGAL\" } ] }, \"DocumentType\": \"company\", \"Category\": \"ACC\" }"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 1997,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 4822,
+        "output_tokens": 871
+      }
+    },
+    "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 8000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+  "api_used": "invoke_model"
+}

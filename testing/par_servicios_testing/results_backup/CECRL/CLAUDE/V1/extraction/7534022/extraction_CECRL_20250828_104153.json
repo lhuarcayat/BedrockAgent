@@ -1,0 +1,90 @@
+{
+  "extraction_data": {
+    "path": "CECRL/7534022/7534022_2020-02-29.pdf",
+    "result": {
+      "firstName": "JORGE DIEGO",
+      "lastName": "RESTREPO PEREZ",
+      "country_issuer": "Colombia",
+      "nationality": "Colombia",
+      "identificationType": "Cédula de Ciudadanía",
+      "identificationNumber": "7.534.022",
+      "message": ""
+    },
+    "document_type": "person",
+    "documentNumber": "7534022",
+    "category": "CECRL"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "```json { \"result\": { \"firstName\": \"JORGE DIEGO\", \"lastName\": \"RESTREPO PEREZ\", \"country_issuer\": \"Colombia\", \"nationality\": \"Colombia\", \"identificationType\": \"Cédula de Ciudadanía\", \"identificationNumber\": \"7.534.022\", \"message\": \"\" }, \"document_type\": \"person\", \"category\": \"CECRL\" } ```"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 10,
+      "cache_creation_input_tokens": 5982,
+      "cache_read_input_tokens": 0,
+      "output_tokens": 617
+    },
+    "ResponseMetadata": {
+      "RequestId": "d6822b29-05db-440d-a8b1-60fef4ee752a",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Thu, 28 Aug 2025 15:41:52 GMT",
+        "content-type": "application/json",
+        "content-length": "2715",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "d6822b29-05db-440d-a8b1-60fef4ee752a",
+        "x-amzn-bedrock-invocation-latency": "16961",
+        "x-amzn-bedrock-cache-write-input-token-count": "5982",
+        "x-amzn-bedrock-cache-read-input-token-count": "0",
+        "x-amzn-bedrock-output-token-count": "617",
+        "x-amzn-bedrock-input-token-count": "10"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_01KQ4f7DzeC4uN4JEq2cTkRD",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-3-7-sonnet-20250219",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "I need to extract information from this Colombian identification document (Cédula de Ciudadanía) following the detailed instructions and format requirements. Let me analyze this document systematically: ## Document Type Analysis This is clearly a Colombian \"Cédula de Ciudadanía\" (National ID card). I can see \"REPUBLICA DE COLOMBIA\" and \"IDENTIFICACION PERSONAL CEDULA DE CIUDADANIA\" at the top of the document. ## Information Fields Visible: The document shows both the front and back sides of the ID. Front side: - NUMERO: 7.534.022 - APELLIDOS: RESTREPO PEREZ - NOMBRES: JORGE DIEGO - Signature of the holder Back side: - FECHA DE NACIMIENTO (Birth date): 05-JUN-1960 - ARMENIA (QUINDIO) (Birth place) - LUGAR DE NACIMIENTO (Birth place) - 1.66 ESTATURA (Height) - O+ G.S. RH (Blood type) - M SEXO (Sex, male) - 08-MAR-1979 ARMENIA (Issue date and place) - FECHA Y LUGAR DE EXPEDICION (Issue date and place) - Fingerprint and barcode ## Extraction of Required Fields: 1. **firstName**: \"JORGE DIEGO\" - clearly shown under NOMBRES 2. **lastName**: \"RESTREPO PEREZ\" - clearly shown under APELLIDOS 3. **country_issuer**: \"Colombia\" - evident from \"REPUBLICA DE COLOMBIA\" header 4. **nationality**: \"Colombia\" - default assumption based on country_issuer 5. **identificationType**: \"Cédula de Ciudadanía\" - clearly shown in document title 6. **identificationNumber**: \"7.534.022\" - shown under NUMERO 7. **message**: \"\" - no issues with document validity or field extraction This document is clear and all fields are easily identifiable, so I don't need to use contextual inference methods. Let me prepare the JSON response according to the schema:",
+          "signature": "ErcBCkgIBxABGAIiQM/0e5ydyYmM7GTsgZEvHncBi2fxeH0Fk+7ng2Fv6HkOdvvCsr3LNLwBzA8WhVb+0Oiy/7lkAGLAC3NqLAUBwcISDJEKoOQ1jvLI6NYMShoMf3FkgjaK01GB0qXxIjC6ZkKYaB0blDshi/4/CnZtKA3P+MVyFbuivWISoyRxnwlhtwl1dod6F+IojWRtbBgqHc45x067/skiuQqA/g2ztAk+r8ueEhPKVkVkS9bsGAI="
+        },
+        {
+          "type": "text",
+          "text": "```json { \"result\": { \"firstName\": \"JORGE DIEGO\", \"lastName\": \"RESTREPO PEREZ\", \"country_issuer\": \"Colombia\", \"nationality\": \"Colombia\", \"identificationType\": \"Cédula de Ciudadanía\", \"identificationNumber\": \"7.534.022\", \"message\": \"\" }, \"document_type\": \"person\", \"category\": \"CECRL\" } ```"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 10,
+        "cache_creation_input_tokens": 5982,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 617
+      }
+    },
+    "model_id": "us.anthropic.claude-3-7-sonnet-20250219-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 8000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "model_used": "us.anthropic.claude-3-7-sonnet-20250219-v1:0",
+  "api_used": "invoke_model"
+}

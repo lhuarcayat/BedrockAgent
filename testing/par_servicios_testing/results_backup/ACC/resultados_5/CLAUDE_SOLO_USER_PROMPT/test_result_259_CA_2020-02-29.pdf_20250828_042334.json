@@ -1,0 +1,247 @@
+{
+  "document_name": "259_CA_2020-02-29.pdf",
+  "category": "ACC",
+  "classification_success": true,
+  "extraction_success": true,
+  "overall_success": true,
+  "timestamp": "2025-08-28T04:22:41.857189",
+  "classification_result": {
+    "classification_data": {
+      "category": "ACC",
+      "text": "EL SUSCRITO REVISOR FISCAL DE LA SOCIEDAD COTEL S.A.S NIT .800.122.811-2 CERTIFICA QUE: De acuerdo con el Acta No. 083 de la Asamblea General Ordinaria de Accionistas de Cotel S.A.S de fecha marzo 29 de 2022, la nueva composición accionaria quedó registrada así: Accionista | Documento Identificación | No. de Acciones | % de Participación ---|---|---|--- James Herney Quijano Morán | 16.758.096 | 5.740.000.000 | 82% María del Pilar Zuluaga Marín | 66.901.361 | 700.000.000 | 10% Nicolle Dayana Quijano Zuluaga | 1.107.089.788 | 210.000.000 | 3% Juan Pablo Quijano Zuluaga | 1.144.109.912 | 210.000.000 | 3% Cotel S.A.S | 800.122.811-2 | 140.000.000 | 2% Total | | 7.000.000.000 | 100% La nueva composición accionaria fue registrada en los libros contables, así mismo fue actualizado el libro de Registro de Accionistas. La presente certificación se expide en Santiago de Cali a los cinco (05) días del mes de febrero de 2024. Gustavo Adolfo Luna Salazar Revisor Fiscal TP No. 77391-T Miembro de Bloodhound Consulting Group SAS www.cotel.com.co",
+      "document_number": "800122811",
+      "path": "ACC/800122811/259_CA_2020-02-29.pdf"
+    },
+    "raw_response": {
+      "output": {
+        "message": {
+          "content": [
+            {
+              "text": "```json { \"category\": \"ACC\", \"text\": \"EL SUSCRITO REVISOR FISCAL DE LA SOCIEDAD COTEL S.A.S\\nNIT .800.122.811-2\\n\\n\\n\\nCERTIFICA QUE:\\n\\nDe acuerdo con el Acta No. 083 de la Asamblea General Ordinaria de Accionistas de Cotel S.A.S de fecha marzo 29 de 2022, la nueva composición accionaria quedó registrada así:\\n\\nAccionista | Documento Identificación | No. de Acciones | % de Participación\\n---|---|---|---\\nJames Herney Quijano Morán | 16.758.096 | 5.740.000.000 | 82%\\nMaría del Pilar Zuluaga Marín | 66.901.361 | 700.000.000 | 10%\\nNicolle Dayana Quijano Zuluaga | 1.107.089.788 | 210.000.000 | 3%\\nJuan Pablo Quijano Zuluaga | 1.144.109.912 | 210.000.000 | 3%\\nCotel S.A.S | 800.122.811-2 | 140.000.000 | 2%\\nTotal | | 7.000.000.000 | 100%\\n\\nLa nueva composición accionaria fue registrada en los libros contables, así mismo fue actualizado el libro de Registro de Accionistas.\\n\\n\\nLa presente certificación se expide en Santiago de Cali a los cinco (05) días del mes de febrero de 2024.\\n\\nGustavo Adolfo Luna Salazar\\nRevisor Fiscal\\nTP No. 77391-T\\nMiembro de Bloodhound Consulting Group SAS\\n\\nwww.cotel.com.co\" } ```"
+            }
+          ]
+        }
+      },
+      "stopReason": "end_turn",
+      "usage": {
+        "input_tokens": 9,
+        "cache_creation_input_tokens": 4475,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 1306
+      },
+      "ResponseMetadata": {
+        "RequestId": "913fd4e7-2dc5-4eb0-9177-d47acb438373",
+        "HTTPStatusCode": 200,
+        "HTTPHeaders": {
+          "date": "Thu, 28 Aug 2025 09:23:09 GMT",
+          "content-type": "application/json",
+          "content-length": "4700",
+          "connection": "keep-alive",
+          "x-amzn-requestid": "913fd4e7-2dc5-4eb0-9177-d47acb438373",
+          "x-amzn-bedrock-invocation-latency": "27879",
+          "x-amzn-bedrock-cache-write-input-token-count": "4475",
+          "x-amzn-bedrock-cache-read-input-token-count": "0",
+          "x-amzn-bedrock-output-token-count": "1306",
+          "x-amzn-bedrock-input-token-count": "9"
+        },
+        "RetryAttempts": 0
+      },
+      "raw_anthropic_response": {
+        "id": "msg_bdrk_01XgYGrF5Poe9vs5Ny3esHY6",
+        "type": "message",
+        "role": "assistant",
+        "model": "claude-3-7-sonnet-20250219",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "Let me analyze this document step by step following the workflow: 1. **TEXT EXTRACTION** This document appears to be a certification of shareholder composition for a Colombian company called Cotel S.A.S. The document includes: - Title: \"EL SUSCRITO REVISOR FISCAL DE LA SOCIEDAD COTEL S.A.S NIT .800.122.811-2\" - Certification statement: \"CERTIFICA QUE:\" - Reference to meeting minutes: \"De acuerdo con el Acta No. 083 de la Asamblea General Ordinaria de Accionistas de Cotel S.A.S de fecha marzo 29 de 2022, la nueva composición accionaria quedó registrada así:\" - A table showing shareholders with: * Names of shareholders * Identification documents * Number of shares * Ownership percentages Specific shareholders: - James Herney Quijano Morán: 5,740,000,000 shares (82%) - María del Pilar Zuluaga Marín: 700,000,000 shares (10%) - Nicolle Dayana Quijano Zuluaga: 210,000,000 shares (3%) - Juan Pablo Quijano Zuluaga: 210,000,000 shares (3%) - Cotel S.A.S: 140,000,000 shares (2%) - Total: 7,000,000,000 shares (100%) Statement that the new shareholder composition was recorded in accounting books and the shareholder registry. The certification was issued in Santiago de Cali on February 5, 2024. Signed by: Gustavo Adolfo Luna Salazar Revisor Fiscal TP No. 77391-T Miembro de Bloodhound Consulting Group SAS 2. **PRIORITY CHECKS** - Not BLANK: Contains substantial meaningful content - Not LINK_ONLY: Contains full document content, not just links 3. **ISSUER IDENTIFICATION** - This is issued by a corporate entity (Cotel S.A.S.) through their fiscal reviewer - Not issued by DIAN or Chamber of Commerce 4. **DOCUMENT FUNCTION ANALYSIS** - This document's primary function is to certify the ownership structure of Cotel S.A.S. - It provides shareholder names, identification numbers, share counts, and ownership percentages - The document is explicitly certifying the shareholder composition (\"composición accionaria\") 5. **CATEGORY CLASSIFICATION** This document contains all the must-have indicators for the \"ACC\" (Accionista) category: - Shareholder terminology: \"composición accionaria\" - Ownership data: clear percentage values (82%, 10%, 3%, 3%, 2%) - Number of shares for each shareholder - Owner identification with names and ID numbers - Relationship types indicating ownership (\"Accionista\") - Certification by a legal representative (fiscal reviewer in this case) The document is exclusively focused on certifying the ownership structure of the company, which is the primary purpose of ACC documents. 6. **CONFIDENCE VALIDATION** - Strong evidence: The document has all key indicators for ACC category - No conflicting signals or unclear purpose - Clear certification of shareholder composition with percentages Based on this analysis, the document clearly falls into the ACC category.",
+            "signature": "ErcBCkgIBxABGAIiQDXNokAyiBS810/7kRyNMkI/mgqc/2iSAuZb7Z8V67dlCHtFfijrMeLug0NXmdWrU5uDQoSVlX70XsqtspHKi64SDBTthly1NX6lL5sjthoMGUoj3bkXMO6gYt6WIjBI0QOSEuZewIsBoVIFKJdhsdnVBfV7gDc1nwmPFL+rDIWRJJnOqiXRR/hnIag2vOMqHcRbk0buplnzmr7d0TboPGFpnGCI8I64N7p8zTmaGAI="
+          },
+          {
+            "type": "text",
+            "text": "```json { \"category\": \"ACC\", \"text\": \"EL SUSCRITO REVISOR FISCAL DE LA SOCIEDAD COTEL S.A.S\\nNIT .800.122.811-2\\n\\n\\n\\nCERTIFICA QUE:\\n\\nDe acuerdo con el Acta No. 083 de la Asamblea General Ordinaria de Accionistas de Cotel S.A.S de fecha marzo 29 de 2022, la nueva composición accionaria quedó registrada así:\\n\\nAccionista | Documento Identificación | No. de Acciones | % de Participación\\n---|---|---|---\\nJames Herney Quijano Morán | 16.758.096 | 5.740.000.000 | 82%\\nMaría del Pilar Zuluaga Marín | 66.901.361 | 700.000.000 | 10%\\nNicolle Dayana Quijano Zuluaga | 1.107.089.788 | 210.000.000 | 3%\\nJuan Pablo Quijano Zuluaga | 1.144.109.912 | 210.000.000 | 3%\\nCotel S.A.S | 800.122.811-2 | 140.000.000 | 2%\\nTotal | | 7.000.000.000 | 100%\\n\\nLa nueva composición accionaria fue registrada en los libros contables, así mismo fue actualizado el libro de Registro de Accionistas.\\n\\n\\nLa presente certificación se expide en Santiago de Cali a los cinco (05) días del mes de febrero de 2024.\\n\\nGustavo Adolfo Luna Salazar\\nRevisor Fiscal\\nTP No. 77391-T\\nMiembro de Bloodhound Consulting Group SAS\\n\\nwww.cotel.com.co\" } ```"
+          }
+        ],
+        "stop_reason": "end_turn",
+        "stop_sequence": null,
+        "usage": {
+          "input_tokens": 9,
+          "cache_creation_input_tokens": 4475,
+          "cache_read_input_tokens": 0,
+          "output_tokens": 1306
+        }
+      },
+      "model_id": "us.anthropic.claude-3-7-sonnet-20250219-v1:0",
+      "api_used": "invoke_model",
+      "model_params": {
+        "max_tokens": 8000,
+        "top_p": 1,
+        "temperature": 1,
+        "thinking": {
+          "type": "enabled",
+          "budget_tokens": 4096
+        }
+      }
+    },
+    "expected_category": "ACC",
+    "model_used": "us.anthropic.claude-3-7-sonnet-20250219-v1:0",
+    "api_used": "invoke_model",
+    "pdf_info": {
+      "original_size": 250434,
+      "first_page_size": 250244,
+      "is_scanned": true
+    }
+  },
+  "extraction_result": {
+    "extraction_data": {
+      "path": "ACC/800122811/259_CA_2020-02-29.pdf",
+      "result": {
+        "companyName": "COTEL S.A.S",
+        "documentCategory": "Equity Composition",
+        "taxId": "800.122.811-2",
+        "country": "Colombia",
+        "identificationDetails": {
+          "source": "text_reference",
+          "indicators": [
+            "Santiago de Cali",
+            "NIT"
+          ],
+          "conflictingSources": [],
+          "requiresReview": "false"
+        },
+        "relatedParties": [
+          {
+            "type": "person",
+            "firstName": "James Herney",
+            "lastName": "Quijano Morán",
+            "identificationType": "C.C.",
+            "identificationNumber": "16.758.096",
+            "relationshipType": "Shareholder",
+            "participationPercentage": "82",
+            "timeFound": "1",
+            "job": ""
+          },
+          {
+            "type": "person",
+            "firstName": "María del Pilar",
+            "lastName": "Zuluaga Marín",
+            "identificationType": "C.C.",
+            "identificationNumber": "66.901.361",
+            "relationshipType": "Shareholder",
+            "participationPercentage": "10",
+            "timeFound": "1",
+            "job": ""
+          },
+          {
+            "type": "person",
+            "firstName": "Nicolle Dayana",
+            "lastName": "Quijano Zuluaga",
+            "identificationType": "C.C.",
+            "identificationNumber": "1.107.089.788",
+            "relationshipType": "Shareholder",
+            "participationPercentage": "3",
+            "timeFound": "1",
+            "job": ""
+          },
+          {
+            "type": "person",
+            "firstName": "Juan Pablo",
+            "lastName": "Quijano Zuluaga",
+            "identificationType": "C.C.",
+            "identificationNumber": "1.144.109.912",
+            "relationshipType": "Shareholder",
+            "participationPercentage": "3",
+            "timeFound": "1",
+            "job": ""
+          },
+          {
+            "type": "company",
+            "companyName": "Cotel S.A.S",
+            "identificationType": "NIT",
+            "identificationNumber": "800.122.811-2",
+            "relationshipType": "Shareholder",
+            "participationPercentage": "2",
+            "timeFound": "1",
+            "job": ""
+          }
+        ]
+      },
+      "documentType": "company",
+      "documentNumber": "800122811",
+      "category": "ACC"
+    },
+    "raw_response": {
+      "output": {
+        "message": {
+          "content": [
+            {
+              "text": "```json { \"result\": { \"companyName\": \"COTEL S.A.S\", \"documentCategory\": \"Equity Composition\", \"taxId\": \"800.122.811-2\", \"country\": \"Colombia\", \"identificationDetails\": { \"source\": \"text_reference\", \"indicators\": [ \"Santiago de Cali\", \"NIT\" ], \"conflictingSources\": [], \"requiresReview\": \"false\" }, \"relatedParties\": [ { \"type\": \"person\", \"firstName\": \"James Herney\", \"lastName\": \"Quijano Morán\", \"identificationType\": \"C.C.\", \"identificationNumber\": \"16.758.096\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"82\", \"timeFound\": \"1\", \"job\": \"\" }, { \"type\": \"person\", \"firstName\": \"María del Pilar\", \"lastName\": \"Zuluaga Marín\", \"identificationType\": \"C.C.\", \"identificationNumber\": \"66.901.361\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"10\", \"timeFound\": \"1\", \"job\": \"\" }, { \"type\": \"person\", \"firstName\": \"Nicolle Dayana\", \"lastName\": \"Quijano Zuluaga\", \"identificationType\": \"C.C.\", \"identificationNumber\": \"1.107.089.788\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"3\", \"timeFound\": \"1\", \"job\": \"\" }, { \"type\": \"person\", \"firstName\": \"Juan Pablo\", \"lastName\": \"Quijano Zuluaga\", \"identificationType\": \"C.C.\", \"identificationNumber\": \"1.144.109.912\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"3\", \"timeFound\": \"1\", \"job\": \"\" }, { \"type\": \"company\", \"companyName\": \"Cotel S.A.S\", \"identificationType\": \"NIT\", \"identificationNumber\": \"800.122.811-2\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"2\", \"timeFound\": \"1\", \"job\": \"\" } ] }, \"documentType\": \"company\", \"category\": \"ACC\" } ```"
+            }
+          ]
+        }
+      },
+      "stopReason": "end_turn",
+      "usage": {
+        "input_tokens": 8,
+        "cache_creation_input_tokens": 3991,
+        "cache_read_input_tokens": 2083,
+        "output_tokens": 1279
+      },
+      "ResponseMetadata": {
+        "RequestId": "e6cf50a8-c5da-49ad-a0f1-b52f73ebca8f",
+        "HTTPStatusCode": 200,
+        "HTTPHeaders": {
+          "date": "Thu, 28 Aug 2025 09:23:34 GMT",
+          "content-type": "application/json",
+          "content-length": "4843",
+          "connection": "keep-alive",
+          "x-amzn-requestid": "e6cf50a8-c5da-49ad-a0f1-b52f73ebca8f",
+          "x-amzn-bedrock-invocation-latency": "24270",
+          "x-amzn-bedrock-cache-write-input-token-count": "3991",
+          "x-amzn-bedrock-cache-read-input-token-count": "2083",
+          "x-amzn-bedrock-output-token-count": "1279",
+          "x-amzn-bedrock-input-token-count": "8"
+        },
+        "RetryAttempts": 0
+      },
+      "raw_anthropic_response": {
+        "id": "msg_bdrk_01TxT25sHmybJto6KS9eJisy",
+        "type": "message",
+        "role": "assistant",
+        "model": "claude-3-7-sonnet-20250219",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "Let's analyze this document systematically: ## Step 1: Document Analysis - This is a certification document from the fiscal auditor (Revisor Fiscal) of Cotel S.A.S - The document certifies the shareholder composition of the company - It's in Spanish - It appears to be from Colombia (Santiago de Cali is mentioned as the place of issuance) - The document shows the shareholder structure recorded after the General Assembly meeting ## Step 2: Root Level Extraction - The main company is \"COTEL S.A.S\" (this is the issuing entity) - The tax ID clearly states \"NIT .800.122.811-2\" - Country: Colombia (confirmed by the city \"Santiago de Cali\" and the use of \"NIT\" as the tax ID type) - The document is dated February 5, 2024 (certification date) ## Step 3: Related Parties Processing Looking at the table of shareholders: 1. James Herney Quijano Morán - Type: Person - ID: 16.758.096 - Shares: 5,740,000,000 - Percentage: 82% 2. María del Pilar Zuluaga Marín - Type: Person - ID: 66.901.361 - Shares: 700,000,000 - Percentage: 10% 3. Nicolle Dayana Quijano Zuluaga - Type: Person - ID: 1,107,089,788 - Shares: 210,000,000 - Percentage: 3% 4. Juan Pablo Quijano Zuluaga - Type: Person - ID: 1,144,109,912 - Shares: 210,000,000 - Percentage: 3% 5. Cotel S.A.S (the company itself) - Type: Company - ID: 800.122.811-2 (NIT) - Shares: 140,000,000 - Percentage: 2% ## Step 4: Validation & Cross-checking - The tax ID (NIT) aligns with Colombia - The document format matches Colombian standards - The percentages sum to 100% - The fiscal auditor is identified (Gustavo Adolfo Luna Salazar) - The document appears to be properly signed and authenticated Now, I'll structure this data according to the required JSON format:",
+            "signature": "ErcBCkgIBxABGAIiQEdN54LkSTmhc+1QyHj4A0NAG11KHBimH+1cmkMPiM0whdI15p8xz5KZQaFaqASIuVtXYzk4DzsO+xiaZDry27sSDEt61abhxnFfhbUoxhoM/64Y6DOCzLp2WqETIjDJwSKPoyuUg8ak88cgTXIkMqS+P+kgMX+SiZ2S60qPLQ0qPBulNzxEwrvBK/nh4nsqHUjJCkbDOhaou0ln2cSFzQymgax9rgbgIfDhCcZZGAI="
+          },
+          {
+            "type": "text",
+            "text": "```json { \"result\": { \"companyName\": \"COTEL S.A.S\", \"documentCategory\": \"Equity Composition\", \"taxId\": \"800.122.811-2\", \"country\": \"Colombia\", \"identificationDetails\": { \"source\": \"text_reference\", \"indicators\": [ \"Santiago de Cali\", \"NIT\" ], \"conflictingSources\": [], \"requiresReview\": \"false\" }, \"relatedParties\": [ { \"type\": \"person\", \"firstName\": \"James Herney\", \"lastName\": \"Quijano Morán\", \"identificationType\": \"C.C.\", \"identificationNumber\": \"16.758.096\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"82\", \"timeFound\": \"1\", \"job\": \"\" }, { \"type\": \"person\", \"firstName\": \"María del Pilar\", \"lastName\": \"Zuluaga Marín\", \"identificationType\": \"C.C.\", \"identificationNumber\": \"66.901.361\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"10\", \"timeFound\": \"1\", \"job\": \"\" }, { \"type\": \"person\", \"firstName\": \"Nicolle Dayana\", \"lastName\": \"Quijano Zuluaga\", \"identificationType\": \"C.C.\", \"identificationNumber\": \"1.107.089.788\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"3\", \"timeFound\": \"1\", \"job\": \"\" }, { \"type\": \"person\", \"firstName\": \"Juan Pablo\", \"lastName\": \"Quijano Zuluaga\", \"identificationType\": \"C.C.\", \"identificationNumber\": \"1.144.109.912\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"3\", \"timeFound\": \"1\", \"job\": \"\" }, { \"type\": \"company\", \"companyName\": \"Cotel S.A.S\", \"identificationType\": \"NIT\", \"identificationNumber\": \"800.122.811-2\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"2\", \"timeFound\": \"1\", \"job\": \"\" } ] }, \"documentType\": \"company\", \"category\": \"ACC\" } ```"
+          }
+        ],
+        "stop_reason": "end_turn",
+        "stop_sequence": null,
+        "usage": {
+          "input_tokens": 8,
+          "cache_creation_input_tokens": 3991,
+          "cache_read_input_tokens": 2083,
+          "output_tokens": 1279
+        }
+      },
+      "model_id": "us.anthropic.claude-3-7-sonnet-20250219-v1:0",
+      "api_used": "invoke_model",
+      "model_params": {
+        "max_tokens": 8000,
+        "top_p": 1,
+        "temperature": 1,
+        "thinking": {
+          "type": "enabled",
+          "budget_tokens": 4096
+        }
+      }
+    },
+    "model_used": "us.anthropic.claude-3-7-sonnet-20250219-v1:0",
+    "api_used": "invoke_model"
+  }
+}

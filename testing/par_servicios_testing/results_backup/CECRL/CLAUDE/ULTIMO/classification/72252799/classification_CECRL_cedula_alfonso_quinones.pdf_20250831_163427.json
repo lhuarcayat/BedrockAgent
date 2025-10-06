@@ -1,0 +1,87 @@
+{
+  "classification_data": {
+    "category": "CECRL",
+    "text": "REPUBLICA DE COLOMBIA IDENTIFICACION PERSONAL CEDULA DE CIUDADANIA NUMERO 72.252.799 QUIÑONES MORALES APELLIDOS ALFONSO ANGEL NOMBRES FIRMA FECHA DE NACIMIENTO 16-JUN-1979 SANTO TOMAS (ATLANTICO) LUGAR DE NACIMIENTO 1.83 A+ M ESTATURA G.S. RH SEXO 23-NOV-1998 BARRANQUILLA FECHA Y LUGAR DE EXPEDICION REGISTRADOR NACIONAL CARLOS ARIEL SANCHEZ TORRES INDICE DERECHO A:0300100-00126242-M:007225279G-200811109 000563704314 3370018651",
+    "document_number": "72252799",
+    "path": "CECRL/72252799/cedula_alfonso_quinones.pdf"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "```json { \"category\": \"CECRL\", \"text\": \"REPUBLICA DE COLOMBIA\\nIDENTIFICACION PERSONAL\\nCEDULA DE CIUDADANIA\\nNUMERO 72.252.799\\nQUIÑONES MORALES\\nAPELLIDOS\\nALFONSO ANGEL\\nNOMBRES\\nFIRMA\\nFECHA DE NACIMIENTO 16-JUN-1979\\nSANTO TOMAS\\n(ATLANTICO)\\nLUGAR DE NACIMIENTO\\n1.83 A+ M\\nESTATURA G.S. RH SEXO\\n23-NOV-1998 BARRANQUILLA\\nFECHA Y LUGAR DE EXPEDICION\\nREGISTRADOR NACIONAL\\nCARLOS ARIEL SANCHEZ TORRES\\nINDICE DERECHO\\nA:0300100-00126242-M:007225279G-200811109 000563704314 3370018651\" } ```"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 1584,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 3150,
+      "output_tokens": 841
+    },
+    "ResponseMetadata": {
+      "RequestId": "e425657c-0903-4bdb-84f7-3c339ded7c3e",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Sun, 31 Aug 2025 21:34:26 GMT",
+        "content-type": "application/json",
+        "content-length": "5777",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "e425657c-0903-4bdb-84f7-3c339ded7c3e",
+        "x-amzn-bedrock-invocation-latency": "12997",
+        "x-amzn-bedrock-cache-write-input-token-count": "0",
+        "x-amzn-bedrock-cache-read-input-token-count": "3150",
+        "x-amzn-bedrock-output-token-count": "841",
+        "x-amzn-bedrock-input-token-count": "1584"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_01HPafpFGkgUh42vreiJ3f2P",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-sonnet-4-20250514",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Let me analyze this PDF document following the classification workflow: 1. **TEXT EXTRACTION** Looking at the document, I can see this is a two-sided identification card from Colombia. Let me extract all the visible text: Front side: - REPUBLICA DE COLOMBIA - IDENTIFICACION PERSONAL - CEDULA DE CIUDADANIA - NUMERO 72.252.799 - QUIÑONES MORALES - APELLIDOS - ALFONSO ANGEL - NOMBRES - FIRMA Back side: - FECHA DE NACIMIENTO 16-JUN-1979 - SANTO TOMAS - (ATLANTICO) - LUGAR DE NACIMIENTO - 1.83 A+ M - ESTATURA G.S. RH SEXO - 23-NOV-1998 BARRANQUILLA - FECHA Y LUGAR DE EXPEDICION - REGISTRADOR NACIONAL - CARLOS ARIEL SANCHEZ TORRES - INDICE DERECHO - There's also a barcode and other identification numbers 2. **PRIORITY CHECKS** This is not BLANK (has substantial content) and not LINK_ONLY (no hyperlinks/URLs). 3. **DOCUMENT FUNCTION ANALYSIS** The MAIN PURPOSE of this document is personal identification. It contains: - Personal biographical data (date of birth, place of birth, blood type, sex, height) - Individual identification with photograph and fingerprint - Government-issued personal identification number (72.252.799) - Official government seal and security elements This clearly indicates CECRL (personal identification document). 4. **ISSUER IDENTIFICATION** This is issued by the government identification authority of Colombia (\"REPUBLICA DE COLOMBIA\"), not a tax authority or commercial registry. 5. **CATEGORY CLASSIFICATION** This matches CECRL perfectly: - Official personal identification document (cédula de ciudadanía) - Contains terminology like \"CÉDULA DE CIUDADANIA\", \"IDENTIFICACIÓN PERSONAL\" - Comprehensive identification details confirm its official status as a personal identification document I verify the document's authenticity through multiple unique identifiers and official markings that validate its classification as a Colombian national ID.",
+          "signature": "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"
+        },
+        {
+          "type": "text",
+          "text": "```json { \"category\": \"CECRL\", \"text\": \"REPUBLICA DE COLOMBIA\\nIDENTIFICACION PERSONAL\\nCEDULA DE CIUDADANIA\\nNUMERO 72.252.799\\nQUIÑONES MORALES\\nAPELLIDOS\\nALFONSO ANGEL\\nNOMBRES\\nFIRMA\\nFECHA DE NACIMIENTO 16-JUN-1979\\nSANTO TOMAS\\n(ATLANTICO)\\nLUGAR DE NACIMIENTO\\n1.83 A+ M\\nESTATURA G.S. RH SEXO\\n23-NOV-1998 BARRANQUILLA\\nFECHA Y LUGAR DE EXPEDICION\\nREGISTRADOR NACIONAL\\nCARLOS ARIEL SANCHEZ TORRES\\nINDICE DERECHO\\nA:0300100-00126242-M:007225279G-200811109 000563704314 3370018651\" } ```"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 1584,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 3150,
+        "output_tokens": 841
+      }
+    },
+    "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 8000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "expected_category": "CECRL",
+  "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+  "api_used": "invoke_model",
+  "pdf_info": {
+    "original_size": 107312,
+    "first_page_size": 102352,
+    "is_scanned": true
+  }
+}

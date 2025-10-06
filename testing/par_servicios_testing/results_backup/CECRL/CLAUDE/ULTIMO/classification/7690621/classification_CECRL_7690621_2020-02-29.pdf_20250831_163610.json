@@ -1,0 +1,87 @@
+{
+  "classification_data": {
+    "category": "CECRL",
+    "text": "REPUBLICA DE COLOMBIA IDENTIFICACION PERSONAL CEDULA DE CIUDADANIA NUMERO 7.690.621 BERMUDEZ FILBERT APELLIDOS LUIS KENNETH NOMBRES FIRMA FECHA DE NACIMIENTO 13-AGO-1972 NEIVA (HUILA) LUGAR DE NACIMIENTO 1.82 ESTATURA A+ G.S. RH M SEXO 13-SEP-1990 NEIVA FECHA Y LUGAR DE EXPEDICION REGISTRADORIA NACIONAL ALMAREA TRIZ RENGIFO LOPEZ INDICE DERECHO A-1900100-50131731-M-000769062 I-20060327 015690608GN 02 143194796",
+    "document_number": "7690621",
+    "path": "CECRL/7690621/7690621_2020-02-29.pdf"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "```json { \"category\": \"CECRL\", \"text\": \"REPUBLICA DE COLOMBIA\\nIDENTIFICACION PERSONAL\\nCEDULA DE CIUDADANIA\\nNUMERO 7.690.621\\nBERMUDEZ FILBERT\\nAPELLIDOS\\nLUIS KENNETH\\nNOMBRES\\nFIRMA\\nFECHA DE NACIMIENTO 13-AGO-1972\\nNEIVA\\n(HUILA)\\nLUGAR DE NACIMIENTO\\n1.82\\nESTATURA\\nA+\\nG.S. RH\\nM\\nSEXO\\n13-SEP-1990 NEIVA\\nFECHA Y LUGAR DE EXPEDICION\\nREGISTRADORIA NACIONAL\\nALMAREA TRIZ RENGIFO LOPEZ\\nINDICE DERECHO\\nA-1900100-50131731-M-000769062 I-20060327\\n015690608GN 02 143194796\" } ```"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 1584,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 3150,
+      "output_tokens": 933
+    },
+    "ResponseMetadata": {
+      "RequestId": "26fd8bde-494a-4670-bb3e-2136d3ee7da6",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Sun, 31 Aug 2025 21:36:09 GMT",
+        "content-type": "application/json",
+        "content-length": "5860",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "26fd8bde-494a-4670-bb3e-2136d3ee7da6",
+        "x-amzn-bedrock-invocation-latency": "14601",
+        "x-amzn-bedrock-cache-write-input-token-count": "0",
+        "x-amzn-bedrock-cache-read-input-token-count": "3150",
+        "x-amzn-bedrock-output-token-count": "933",
+        "x-amzn-bedrock-input-token-count": "1584"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_011y8SdwZyDrtJXm5WnFUFw1",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-sonnet-4-20250514",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Let me analyze this document step by step following the classification workflow: 1. **TEXT EXTRACTION** From the PDF, I can extract the following text: In the top section: - REPUBLICA DE COLOMBIA - IDENTIFICACION PERSONAL - CEDULA DE CIUDADANIA - NUMERO: 7.690.621 - BERMUDEZ FILBERT - APELLIDOS - LUIS KENNETH - NOMBRES - FIRMA And in the bottom section: - FECHA DE NACIMIENTO: 13-AGO-1972 - NEIVA - (HUILA) - LUGAR DE NACIMIENTO - 1.82 - ESTATURA - A+ - G.S. RH - M - SEXO - 13-SEP-1990 NEIVA - FECHA Y LUGAR DE EXPEDICION - REGISTRADORIA NACIONAL - INDICE DERECHO - Various barcode numbers and identifiers 2. **PRIORITY CHECKS** - BLANK: No - there is significant content - LINK_ONLY: No - no hyperlinks/URLs present 3. **DOCUMENT FUNCTION ANALYSIS** What is the MAIN PURPOSE of this document? - This is clearly a personal identification document - It contains \"IDENTIFICACION PERSONAL\" and \"CEDULA DE CIUDADANIA\" - It shows personal biographical data: name, birth date, height, blood type, sex - This is a Colombian citizenship card (cédula de ciudadanía) - Main purpose: personal identification → CECRL Indicative 4. **ISSUER IDENTIFICATION** - This is issued by \"REGISTRADORIA NACIONAL\" which is a government identification authority - Not issued by tax authority, commercial registry, or corporate entity - → CECRL Indicative 5. **CATEGORY CLASSIFICATION** Following the evaluation order: CECRL → CERL → ACC → RUT → RUB → BY_REVIEW I confirm the document's classification as a Colombian personal identification card with multiple verification indicators. The comprehensive security features and official government format validate its authenticity as a CECRL document. Key identifiers include precise personal details, official numbering, and government-issued authentication elements.",
+          "signature": "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"
+        },
+        {
+          "type": "text",
+          "text": "```json { \"category\": \"CECRL\", \"text\": \"REPUBLICA DE COLOMBIA\\nIDENTIFICACION PERSONAL\\nCEDULA DE CIUDADANIA\\nNUMERO 7.690.621\\nBERMUDEZ FILBERT\\nAPELLIDOS\\nLUIS KENNETH\\nNOMBRES\\nFIRMA\\nFECHA DE NACIMIENTO 13-AGO-1972\\nNEIVA\\n(HUILA)\\nLUGAR DE NACIMIENTO\\n1.82\\nESTATURA\\nA+\\nG.S. RH\\nM\\nSEXO\\n13-SEP-1990 NEIVA\\nFECHA Y LUGAR DE EXPEDICION\\nREGISTRADORIA NACIONAL\\nALMAREA TRIZ RENGIFO LOPEZ\\nINDICE DERECHO\\nA-1900100-50131731-M-000769062 I-20060327\\n015690608GN 02 143194796\" } ```"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 1584,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 3150,
+        "output_tokens": 933
+      }
+    },
+    "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 8000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "expected_category": "CECRL",
+  "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+  "api_used": "invoke_model",
+  "pdf_info": {
+    "original_size": 359687,
+    "first_page_size": 355186,
+    "is_scanned": true
+  }
+}

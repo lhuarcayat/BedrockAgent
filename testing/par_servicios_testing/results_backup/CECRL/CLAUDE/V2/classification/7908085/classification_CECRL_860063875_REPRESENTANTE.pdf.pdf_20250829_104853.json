@@ -1,0 +1,87 @@
+{
+  "classification_data": {
+    "category": "CECRL",
+    "text": "REPÚBLICA DE COLOMBIA COL Cédula de Extranjería MIGRANTE No. 7908085 7908085 APELLIDOS: CATALDO NOMBRES: MONICA NACIONALIDAD: ITA FECHA DE NACIMIENTO: 1975/03/29 SEXO: F RH: O+ EXPEDICIÓN: 2024/01/17 VENCE: 2024/11/22 PRG5047 El titular de este documento debe notificar su MIGRACIÓN COLOMBIA cualquier cambio en la condición o información registrada The holder of this document must notify MIGRACIÓN COLOMBIA any change of information or immigration status www.migracioncolombia.gov.co Fernando García Manosalva Director Migración Colombia I<COL7908085<<5<<<<<<<<<<<<<<< 7503290F2411222ITA<<<<<<<<<<<<6 CATALDO<<MONICA<<<<<<<<<<<<<<<",
+    "document_number": "7908085",
+    "path": "CECRL/7908085/860063875 REPRESENTANTE.pdf.pdf"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "```json { \"category\": \"CECRL\", \"text\": \"REPÚBLICA DE COLOMBIA\\nCOL Cédula de Extranjería\\nMIGRANTE No. 7908085 7908085\\nAPELLIDOS: CATALDO\\nNOMBRES: MONICA\\nNACIONALIDAD: ITA\\nFECHA DE NACIMIENTO: 1975/03/29\\nSEXO: F RH: O+\\nEXPEDICIÓN: 2024/01/17\\nVENCE: 2024/11/22\\nPRG5047\\nEl titular de este documento debe notificar su MIGRACIÓN COLOMBIA cualquier cambio\\nen la condición o información registrada\\nThe holder of this document must notify MIGRACIÓN COLOMBIA any change of\\ninformation or immigration status\\nwww.migracioncolombia.gov.co Fernando García Manosalva\\nDirector Migración Colombia\\nI<COL7908085<<5<<<<<<<<<<<<<<<\\n7503290F2411222ITA<<<<<<<<<<<<6\\nCATALDO<<MONICA<<<<<<<<<<<<<<<\" } ```"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 9,
+      "cache_creation_input_tokens": 4549,
+      "cache_read_input_tokens": 0,
+      "output_tokens": 818
+    },
+    "ResponseMetadata": {
+      "RequestId": "ae950e68-8679-4ba5-a72c-2dcbf9033b1c",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Fri, 29 Aug 2025 15:48:40 GMT",
+        "content-type": "application/json",
+        "content-length": "5753",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "ae950e68-8679-4ba5-a72c-2dcbf9033b1c",
+        "x-amzn-bedrock-invocation-latency": "14199",
+        "x-amzn-bedrock-cache-write-input-token-count": "4549",
+        "x-amzn-bedrock-cache-read-input-token-count": "0",
+        "x-amzn-bedrock-output-token-count": "818",
+        "x-amzn-bedrock-input-token-count": "9"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_01AtcxvywppEfDppoQSHqZU1",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-sonnet-4-20250514",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "I need to analyze this PDF document and classify it properly. Let me extract the text first and then follow the classification workflow. **TEXT EXTRACTION:** From the image, I can see this is a Colombian \"Cédula de Extranjería\" (Foreign ID Card). The document shows: - \"REPÚBLICA DE COLOMBIA\" - \"COL Cédula de Extranjería\" - \"MIGRANTE No. 7908085\" - \"APELLIDOS: CATALDO\" - \"NOMBRES: MONICA\" - \"NACIONALIDAD: ITA\" - \"FECHA DE NACIMIENTO: 1975/03/29\" - \"SEXO: F\" - \"RH: O+\" - \"EXPEDICIÓN: 2024/01/17\" - \"VENCE: 2024/11/22\" There's also a signature, photo, fingerprint, and barcode at the bottom. **PRIORITY CHECKS:** - Not BLANK - there is meaningful content - Not LINK_ONLY - this is not primarily URLs/links **ISSUER IDENTIFICATION:** This is issued by the Colombian government (República de Colombia) for personal identification of foreign nationals. **DOCUMENT FUNCTION ANALYSIS:** This is clearly a personal identification document - it's a \"Cédula de Extranjería\" which is an official Colombian ID card for foreign residents/migrants. It contains: - Individual biographical data (name, birth date, nationality, blood type, gender) - Individual photo - Signature area - Official government issuance - Security elements (barcode, fingerprint) **CATEGORY CLASSIFICATION:** This fits perfectly into CECRL: - It's an official personal identification document - Contains individual biographical data (birth date, nationality, blood type, gender) - Has individual photo, signature, fingerprint references - Government-issued personal ID number with individual name - Has security elements (barcode, official seals) The document confirms its official status as a government-issued identification for a foreign resident, specifically Monica Cataldo, an Italian national residing in Colombia.",
+          "signature": "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"
+        },
+        {
+          "type": "text",
+          "text": "```json { \"category\": \"CECRL\", \"text\": \"REPÚBLICA DE COLOMBIA\\nCOL Cédula de Extranjería\\nMIGRANTE No. 7908085 7908085\\nAPELLIDOS: CATALDO\\nNOMBRES: MONICA\\nNACIONALIDAD: ITA\\nFECHA DE NACIMIENTO: 1975/03/29\\nSEXO: F RH: O+\\nEXPEDICIÓN: 2024/01/17\\nVENCE: 2024/11/22\\nPRG5047\\nEl titular de este documento debe notificar su MIGRACIÓN COLOMBIA cualquier cambio\\nen la condición o información registrada\\nThe holder of this document must notify MIGRACIÓN COLOMBIA any change of\\ninformation or immigration status\\nwww.migracioncolombia.gov.co Fernando García Manosalva\\nDirector Migración Colombia\\nI<COL7908085<<5<<<<<<<<<<<<<<<\\n7503290F2411222ITA<<<<<<<<<<<<6\\nCATALDO<<MONICA<<<<<<<<<<<<<<<\" } ```"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 9,
+        "cache_creation_input_tokens": 4549,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 818
+      }
+    },
+    "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 8000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "expected_category": "CECRL",
+  "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+  "api_used": "invoke_model",
+  "pdf_info": {
+    "original_size": 58854,
+    "first_page_size": 54029,
+    "is_scanned": true
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "ResponseMetadata": {
+    "RequestId": "217d20c7-797b-432c-ae06-ea10918fd33d",
+    "HTTPStatusCode": 200,
+    "HTTPHeaders": {
+      "date": "Tue, 17 Jun 2025 14:30:30 GMT",
+      "content-type": "application/json",
+      "content-length": "1016",
+      "connection": "keep-alive",
+      "x-amzn-requestid": "217d20c7-797b-432c-ae06-ea10918fd33d"
+    },
+    "RetryAttempts": 0
+  },
+  "output": {
+    "message": {
+      "role": "assistant",
+      "content": [
+        {
+          "text": "```json\n{\n  \"path\": \"s3://par-servicios-poc-dev-filling-desk/par-servicios-poc/RUT/800002030/936_2020-02-29.pdf\",\n  \"result\": {\n    \"companyName\": \"COLSEIN SAS\",\n    \"country\": \"COLOMBIA\",\n    \"documentType\": \"NIT\",\n    \"taxId\": \"800002030\",\n    \"verificationDigit\": \"0\",\n    \"personType\": \"Persona Jurídica\",\n    \"address\": \"PAR INDUSTRIAL GRAN SABANA E 32, Cundinamarca\",\n    \"documentGenerationDate\": \"2025-01-08\"\n  },\n  \"confidenceScores\": {\n    \"companyName\": 100,\n    \"documentType\": 100,\n    \"country\": 100,\n    \"taxId\": 100,\n    \"verificationDigit\": 100,\n    \"personType\": 100,\n    \"address\": 95,\n    \"documentGenerationDate\": 100\n  },\n  \"document_type\": \"company\",\n  \"document_number\": \"800002030\",\n  \"category\": \"RUT\"\n}\n```"
+        }
+      ]
+    }
+  },
+  "stopReason": "end_turn",
+  "usage": {
+    "inputTokens": 7089,
+    "outputTokens": 291,
+    "totalTokens": 7380
+  },
+  "metrics": {
+    "latencyMs": 7356
+  }
+}

@@ -1,0 +1,88 @@
+{
+  "extraction_data": {
+    "result": {
+      "firstName": "ALFONSO ANGEL",
+      "lastName": "QUIÑONES MORALES",
+      "country_issuer": "Colombia",
+      "nationality": "Colombia",
+      "identificationType": "Cédula de Ciudadanía",
+      "identificationNumber": "72.252.799",
+      "message": ""
+    },
+    "document_type": "person",
+    "category": "CECRL"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "```json { \"result\": { \"firstName\": \"ALFONSO ANGEL\", \"lastName\": \"QUIÑONES MORALES\", \"country_issuer\": \"Colombia\", \"nationality\": \"Colombia\", \"identificationType\": \"Cédula de Ciudadanía\", \"identificationNumber\": \"72.252.799\", \"message\": \"\" }, \"document_type\": \"person\", \"category\": \"CECRL\" } ```"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 10,
+      "cache_creation_input_tokens": 5982,
+      "cache_read_input_tokens": 0,
+      "output_tokens": 517
+    },
+    "ResponseMetadata": {
+      "RequestId": "7dbd09a9-752b-4074-b5eb-0a072696221b",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Fri, 29 Aug 2025 15:43:50 GMT",
+        "content-type": "application/json",
+        "content-length": "4273",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "7dbd09a9-752b-4074-b5eb-0a072696221b",
+        "x-amzn-bedrock-invocation-latency": "7866",
+        "x-amzn-bedrock-cache-write-input-token-count": "5982",
+        "x-amzn-bedrock-cache-read-input-token-count": "0",
+        "x-amzn-bedrock-output-token-count": "517",
+        "x-amzn-bedrock-input-token-count": "10"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_01WLCTPcScvsqyW5NRsjwDH1",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-sonnet-4-20250514",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Looking at this Colombian Cédula de Ciudadanía document, I need to extract the required information using the dual-mode extraction system. From the document, I can see: 1. Document Type: This is a \"REPÚBLICA DE COLOMBIA IDENTIFICACIÓN PERSONAL CÉDULA DE CIUDADANÍA\" - so this is a Colombian citizenship ID card. 2. Names: I can see \"QUIÑONES MORALES\" which appears to be the surnames/apellidos, and \"ALFONSO ANGEL\" which appears to be the given names/nombres. 3. ID Number: \"72.252.799\" is clearly visible 4. Birth information: I can see \"FECHA DE NACIMIENTO 16-JUN-1979\" and \"SANTO TOMÁS (ATLÁNTICO)\" as the place of birth 5. Country issuer: This is clearly Colombia based on the header \"REPÚBLICA DE COLOMBIA\" 6. Document type: \"CÉDULA DE CIUDADANÍA\" Let me map this to the schema: - firstName: \"ALFONSO ANGEL\" (these are the given names) - lastName: \"QUIÑONES MORALES\" (these are the surnames) - country_issuer: \"Colombia\" (document issued by Colombia) - nationality: \"Colombia\" (Colombian citizenship document, and birth place is also in Colombia) - identificationType: \"Cédula de Ciudadanía\" (this is the document type) - identificationNumber: \"72.252.799\" (preserve the formatting with periods) - message: \"\" (everything extracted successfully) The document appears to be an official government ID with official seals and formatting, so no issues to report.",
+          "signature": "EpcMCkgIBxABGAIqQHHMi9RQIVjQ6xwLl5raJOSVfCRmbRulk0gqHAnmeGNwVFFIBwpsb59ov1Fowizw9ik4v0E1Hc8w+RH4Q8e5QrgSDOS3Do5tnKAZJ7ARGxoMejz3wwIkii2rxOsZIjA63Hbt9RoC2W4bhWUt9HFOwJyiSctfoptKRFb0pPy3lzHptWXJFrmETkv/gerOukgq/Ap84ftSlu6bIymxU68Elja1v+puMJy8lxuduUkMgJAn6H+eIQQ1m0Ps/lfqq3JDauYcQLHL1jOAyj1gHoHD3PZVfBm6K+1GeYAOQuJ6T+ehhQoa5zi6l8wxS3ScfBiQJj/IY3uIKSPPWKx33jjSCXEKdN9bfYZ+CnrWvzo2LTQJrFtFNc17qCfoLJmw1oqS4BPkgrpYcpo6bSjHRrQsMvK0Hgfxao1oInIQVOucE0sKFsqdWW1+mSMfbeAhGWlSMWVzWMjFQJ10xSJn4tJ3xiVUP0AX3aHvXAU1xUr3fCU/pxUqZDQ6Mq8b0Hz5AOpbS/GfLK54jEFv5WtB8RLy5xqFrpcWWkLj7nh0RCOdyauqvw0mu/eIlX/aDui17es+dImm+zW2zZyVxbNiJtV/3qr7E1q36/9dbv3hAe7Nci0bDofpgtya91oXRHvs81gNohwArXEGaS/IwpWSzrW1w7Z9VNMqzgpTveuSrkckjPs2PvmtOMU17/BGqDcusA3TBld3sUzxbJmIJwAvmah036Yiyw59rNXuIAxV6/J0XVIl026Xu01OBSz4nvjs1ilmu0vwegQRcNb79GGpAKy3x9YXe0rtMv8xBrCSO/jf+u/9819lbF9kZZ57uTeNHl6n4AJhLhe2btff787pMlKY4rsqgNEeiqFvzxp+8XIM5PXfvnTkRp7v+MWVxtju/V310w55BtCY0wSJWp7awTLuBMF3RpvNaUegdAdwvlsqqiCSc0ztZbc4avRWhUD1jgjsQwpD3nInGSoFKmnS2uzP2enDVBmo1xw40M3vZ4bsm7zrya0ON3UUTO/hpYwprLGA8J2zWFCz1hPbRH3xnMwCx1FhAVb0jW8kAQofY2pXMtF+A+DJEEewkCr6lgYUZAfihiDUN/ghLrDZ+oo0QDSdf3LxQYrNgjnr5/53CtejweES/LWLV8nQqi/jeDEKvcUURLCz7I2qmhQI1/TzRSwM2UT60UxnUJJ1BlPzfo2/lgnUSvV5FQ1I6a6bDtJbz8DX9SDGEANDtolMInTVzU/ZtXSYLq4ow6IFwKLZQ3pf3dtR8Au9MIlcltqW/uNQnFkDm4s7rKpsdclVwy3rJcCIDyntb8DDpw+HyJdaOBpZECBiHRPzG2zskLGQEY8a0gPr0MmHjMZAgEBiLTJs++2nnuHCHJKoC44mxbZwbHJg035yq4xNDLzkEprUeo5pZ5mv0Gl8anLSUFKzTN5dS8AReq4du86h7NkrCLTin8eAq8/iwCMB3x0qn3ORbj5M1D6ZByJ7Ez6PwEjHpd3xDOatAKFiA4llsPPqtjLI6vzJeMI1OpTxvizOY2jGUqjHxoP7SmWWLIFbdqQR37TlshsuGb77PwBxkvv9uhd4OFcdJP4h/ECyiH5HDQN02Qr31nsPVnSlHXsbVSwCMEkyDPhp8gVvj4JT2SwGtz8VfS8UMMu3Ozw2tPo69Udd/AAJ2JKiTACRYAjSE+SGK50B5FWbpw4QjJ00yNdb2EoGmf1764TVMdw/2VwpMaASkKAJ/GcOYZOIrX+w1zNNkHpG/n6h0Q32ih7W5caUJ2cM3bHojGu5AR/HL80medbCWAWI0FyqBjLcv7JiqzT1llZU0eR/PZkU3scvf1YoLnr9oEafC70tYIQ/OQ7LhGIm6wIhVEx/eyyi+uH2PjMh21wbnNYfps1jPmrYqt07Hx5G0PvuflfWFXgQTVjblzsmmKYrOQ6v2qGnZmeGcvMnWRQ67EmxVuHDxuCZt349mBocgTj2peC0zm9tpwJfOmMjZN55pCiEeszdoLWKO5pjpWK55rChOuacRvi3HZ0ybZ+r59MXhwVpsxJj3g+RQnan2TCfJCA7O/lKMm6+6te2L43dleEYAQ=="
+        },
+        {
+          "type": "text",
+          "text": "```json { \"result\": { \"firstName\": \"ALFONSO ANGEL\", \"lastName\": \"QUIÑONES MORALES\", \"country_issuer\": \"Colombia\", \"nationality\": \"Colombia\", \"identificationType\": \"Cédula de Ciudadanía\", \"identificationNumber\": \"72.252.799\", \"message\": \"\" }, \"document_type\": \"person\", \"category\": \"CECRL\" } ```"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 10,
+        "cache_creation_input_tokens": 5982,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 517
+      }
+    },
+    "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 8000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+  "api_used": "invoke_model"
+}

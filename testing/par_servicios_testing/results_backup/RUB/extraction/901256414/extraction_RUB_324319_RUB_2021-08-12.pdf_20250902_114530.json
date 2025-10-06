@@ -1,0 +1,123 @@
+{
+  "extraction_data": {
+    "result": {
+      "CompanyName": "AGROFUMIGACION INDUSTRIAL S.A.S.",
+      "TaxId": "901256414",
+      "IdentificationType": "NIT",
+      "Country": "Colombia",
+      "ConflictingSources": [
+        "Participation percentages total 175% (three beneficiaries with 25% each marked as 'Terminación' and one with 100% marked as 'Actualización')"
+      ],
+      "RequiresReview": "true"
+    },
+    "RelatedParties": [
+      {
+        "FirstName": "FREDDY HERNANDO",
+        "LastName": "CARRILLO LUNA",
+        "IdType": "NIT",
+        "IdNumber": "91261343",
+        "NoveltyType": "Terminación",
+        "ParticipationPercentage": "25"
+      },
+      {
+        "FirstName": "FREDY ANDRES",
+        "LastName": "CARRILLO MURILLO",
+        "IdType": "NIT",
+        "IdNumber": "1098644421",
+        "NoveltyType": "Terminación",
+        "ParticipationPercentage": "25"
+      },
+      {
+        "FirstName": "CINDY JOHANA",
+        "LastName": "BAUTISTA VANEGAS",
+        "IdType": "NIT",
+        "IdNumber": "1098672859",
+        "NoveltyType": "Terminación",
+        "ParticipationPercentage": "25"
+      },
+      {
+        "FirstName": "CECILIA",
+        "LastName": "MURILLO MARTINEZ",
+        "IdType": "NIT",
+        "IdNumber": "63337811",
+        "NoveltyType": "Actualización",
+        "ParticipationPercentage": "100"
+      }
+    ],
+    "DocumentType": "company",
+    "Category": "RUB"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "{ \"result\": { \"CompanyName\": \"AGROFUMIGACION INDUSTRIAL S.A.S.\", \"TaxId\": \"901256414\", \"IdentificationType\": \"NIT\", \"Country\": \"Colombia\", \"ConflictingSources\": [\"Participation percentages total 175% (three beneficiaries with 25% each marked as 'Terminación' and one with 100% marked as 'Actualización')\"], \"RequiresReview\": \"true\" }, \"RelatedParties\": [ { \"FirstName\": \"FREDDY HERNANDO\", \"LastName\": \"CARRILLO LUNA\", \"IdType\": \"NIT\", \"IdNumber\": \"91261343\", \"NoveltyType\": \"Terminación\", \"ParticipationPercentage\": \"25\" }, { \"FirstName\": \"FREDY ANDRES\", \"LastName\": \"CARRILLO MURILLO\", \"IdType\": \"NIT\", \"IdNumber\": \"1098644421\", \"NoveltyType\": \"Terminación\", \"ParticipationPercentage\": \"25\" }, { \"FirstName\": \"CINDY JOHANA\", \"LastName\": \"BAUTISTA VANEGAS\", \"IdType\": \"NIT\", \"IdNumber\": \"1098672859\", \"NoveltyType\": \"Terminación\", \"ParticipationPercentage\": \"25\" }, { \"FirstName\": \"CECILIA\", \"LastName\": \"MURILLO MARTINEZ\", \"IdType\": \"NIT\", \"IdNumber\": \"63337811\", \"NoveltyType\": \"Actualización\", \"ParticipationPercentage\": \"100\" } ], \"DocumentType\": \"company\", \"Category\": \"RUB\" }"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 8098,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 2039,
+      "output_tokens": 1379
+    },
+    "ResponseMetadata": {
+      "RequestId": "5f457e0f-2ecf-4010-b5f6-0fc491a7c861",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Tue, 02 Sep 2025 16:45:30 GMT",
+        "content-type": "application/json",
+        "content-length": "7924",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "5f457e0f-2ecf-4010-b5f6-0fc491a7c861",
+        "x-amzn-bedrock-invocation-latency": "22022",
+        "x-amzn-bedrock-cache-write-input-token-count": "0",
+        "x-amzn-bedrock-cache-read-input-token-count": "2039",
+        "x-amzn-bedrock-output-token-count": "1379",
+        "x-amzn-bedrock-input-token-count": "8098"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_01C4KspNEFvnt9Dqu4SUyoFN",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-sonnet-4-20250514",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Looking at this document, I can see it's a Final Beneficiaries Report (RUB) issued by DIAN (Colombian tax authority). Let me extract the required information: **Company Information:** - CompanyName: Looking at cell \"11. Denominación o razón social\" - I can see \"AGROFUMIGACION INDUSTRIAL S.A.S.\" - TaxId: Looking at cell \"18. Número de identificación\" - I can see \"901256414\" - IdentificationType: For Final Beneficiaries Report issued by DIAN, this should be \"NIT\" - Country: Since this is issued by DIAN, it's \"Colombia\" **Related Parties:** Looking at the \"Datos beneficiarios finales\" sections on pages 2 and 3, I can see information for multiple beneficiaries: First beneficiary (page 2): - 34. Primer apellido: CARRILLO - 35. Segundo apellido: LUNA - 36. Primer nombre: FREDDY - 37. Otros nombres: HERNANDO - 30. Número de identificación: 91261343 - 32. Número de Identificación Tributaria - NIT: 91261343 (matches) - 57. Porcentaje de participación: 25 - 61. Tipo de novedad: Terminación (código 3) Second beneficiary (page 2): - 34. Primer apellido: CARRILLO - 35. Segundo apellido: MURILLO - 36. Primer nombre: FREDY - 37. Otros nombres: ANDRES - 30. Número de identificación: 1098644421 - 32. Número de Identificación Tributaria - NIT: 1098644421 (matches) - 57. Porcentaje de participación: 25 - 61. Tipo de novedad: Terminación (código 3) Third beneficiary (page 3): - 34. Primer apellido: BAUTISTA - 35. Segundo apellido: VANEGAS - 36. Primer nombre: CINDY - 37. Otros nombres: JOHANA - 30. Número de identificación: 1098672859 - 32. Número de Identificación Tributaria - NIT: 1098672859 (matches) - 57. Porcentaje de participación: 25 - 61. Tipo de novedad: Terminación (código 3) I notice a consistent pattern of termination status across beneficiaries, indicating a significant change in the company's ownership structure. The participation percentages seem mathematically inconsistent, totaling 175%. This unusual distribution suggests potential errors or complex ownership arrangements that warrant careful verification. Some beneficiaries show a \"Termination\" status, which could explain the discrepancy in percentage allocation. For identification, the document confirms NIT as the standard identifier for this DIAN report.",
+          "signature": "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"
+        },
+        {
+          "type": "text",
+          "text": "{ \"result\": { \"CompanyName\": \"AGROFUMIGACION INDUSTRIAL S.A.S.\", \"TaxId\": \"901256414\", \"IdentificationType\": \"NIT\", \"Country\": \"Colombia\", \"ConflictingSources\": [\"Participation percentages total 175% (three beneficiaries with 25% each marked as 'Terminación' and one with 100% marked as 'Actualización')\"], \"RequiresReview\": \"true\" }, \"RelatedParties\": [ { \"FirstName\": \"FREDDY HERNANDO\", \"LastName\": \"CARRILLO LUNA\", \"IdType\": \"NIT\", \"IdNumber\": \"91261343\", \"NoveltyType\": \"Terminación\", \"ParticipationPercentage\": \"25\" }, { \"FirstName\": \"FREDY ANDRES\", \"LastName\": \"CARRILLO MURILLO\", \"IdType\": \"NIT\", \"IdNumber\": \"1098644421\", \"NoveltyType\": \"Terminación\", \"ParticipationPercentage\": \"25\" }, { \"FirstName\": \"CINDY JOHANA\", \"LastName\": \"BAUTISTA VANEGAS\", \"IdType\": \"NIT\", \"IdNumber\": \"1098672859\", \"NoveltyType\": \"Terminación\", \"ParticipationPercentage\": \"25\" }, { \"FirstName\": \"CECILIA\", \"LastName\": \"MURILLO MARTINEZ\", \"IdType\": \"NIT\", \"IdNumber\": \"63337811\", \"NoveltyType\": \"Actualización\", \"ParticipationPercentage\": \"100\" } ], \"DocumentType\": \"company\", \"Category\": \"RUB\" }"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 8098,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 2039,
+        "output_tokens": 1379
+      }
+    },
+    "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 9000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+  "api_used": "invoke_model"
+}

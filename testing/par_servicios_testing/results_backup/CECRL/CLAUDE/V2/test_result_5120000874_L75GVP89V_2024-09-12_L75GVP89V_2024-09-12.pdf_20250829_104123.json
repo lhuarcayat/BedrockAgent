@@ -1,0 +1,183 @@
+{
+  "document_name": "L75GVP89V_2024-09-12.pdf",
+  "category": "CECRL",
+  "classification_success": true,
+  "extraction_success": true,
+  "overall_success": true,
+  "timestamp": "2025-08-29T10:40:46.948598",
+  "classification_result": {
+    "classification_data": {
+      "category": "CECRL",
+      "text": "BUNDESREPUBLIK DEUTSCHLAND PERSONALAUSWEIS L75GVP89V Name/Surname/Nom BETZLER Vorname/Given names/Prénoms ANDREAS Geburtsdatum/Date of birth/Date de naissance 25.07.1975 DEUTSCH Geburtsort/Place of birth/Lieu de naissance PLETTENBERG Gültig bis/Date of expiry/Date d'expiration 04.06.2034 111360 Augen/Eyes/Couleur des yeux BLAU Größe/Height/Taille 186 cm Anschrift/Address/Adresse 51375 LEVERKUSEN EINTRACHTSTRASSE 86 Datum/Date/Date 05.06.24 Behörde/Authority/Autorité STADT LEVERKUSEN IDD<<L75GVP89V7<<<<<<<<<<<<<<<< 7507254<3406049D<<2405<<<<<<<1 BETZLER<<ANDREAS<<<<<<<<<<<<<<<<",
+      "document_number": "UNKNOWN",
+      "path": "CECRL/5120000874_L75GVP89V_2024-09-12/L75GVP89V_2024-09-12.pdf"
+    },
+    "raw_response": {
+      "output": {
+        "message": {
+          "content": [
+            {
+              "text": "```json { \"category\": \"CECRL\", \"text\": \"BUNDESREPUBLIK DEUTSCHLAND PERSONALAUSWEIS L75GVP89V Name/Surname/Nom BETZLER Vorname/Given names/Prénoms ANDREAS Geburtsdatum/Date of birth/Date de naissance 25.07.1975 DEUTSCH Geburtsort/Place of birth/Lieu de naissance PLETTENBERG Gültig bis/Date of expiry/Date d'expiration 04.06.2034 111360 Augen/Eyes/Couleur des yeux BLAU Größe/Height/Taille 186 cm Anschrift/Address/Adresse 51375 LEVERKUSEN EINTRACHTSTRASSE 86 Datum/Date/Date 05.06.24 Behörde/Authority/Autorité STADT LEVERKUSEN IDD<<L75GVP89V7<<<<<<<<<<<<<<<< 7507254<3406049D<<2405<<<<<<<1 BETZLER<<ANDREAS<<<<<<<<<<<<<<<<\" } ```"
+            }
+          ]
+        }
+      },
+      "stopReason": "end_turn",
+      "usage": {
+        "input_tokens": 9,
+        "cache_creation_input_tokens": 4549,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 868
+      },
+      "ResponseMetadata": {
+        "RequestId": "8dbc5166-4bf0-4acc-82ed-6047839d82bc",
+        "HTTPStatusCode": 200,
+        "HTTPHeaders": {
+          "date": "Fri, 29 Aug 2025 15:41:07 GMT",
+          "content-type": "application/json",
+          "content-length": "5880",
+          "connection": "keep-alive",
+          "x-amzn-requestid": "8dbc5166-4bf0-4acc-82ed-6047839d82bc",
+          "x-amzn-bedrock-invocation-latency": "19457",
+          "x-amzn-bedrock-cache-write-input-token-count": "4549",
+          "x-amzn-bedrock-cache-read-input-token-count": "0",
+          "x-amzn-bedrock-output-token-count": "868",
+          "x-amzn-bedrock-input-token-count": "9"
+        },
+        "RetryAttempts": 0
+      },
+      "raw_anthropic_response": {
+        "id": "msg_bdrk_01G1brSbDoMCvL1rXAGMWHLo",
+        "type": "message",
+        "role": "assistant",
+        "model": "claude-sonnet-4-20250514",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "Let me analyze this document step by step: 1. **TEXT EXTRACTION** Looking at the document, I can see this is a German ID document (Personalausweis). Let me extract the visible text: - BUNDESREPUBLIK DEUTSCHLAND - PERSONALAUSWEIS - L75GVP89V (appears to be document number) - Name: BETZLER - Vorname: ANDREAS - Geburtsdatum: 25.07.1975 DEUTSCH - Geburtsort: PLETTENBERG - Gültig bis: 04.06.2034 - Document number: 111360 - There's a photo of a man - Eye color: BLAU - Height: 186 cm - Date: 05.06.24 - Address: 51375 LEVERKUSEN, EINTRACHTSTRASSE 86 - STADT LEVERKUSEN - Machine readable zone at bottom: IDD<<L75GVP89V7<<<<<<<<<<<<<<<< 7507254<3406049D<<2405<<<<<<<1 BETZLER<<ANDREAS<<<<<<<<<<<<<<<< 2. **PRIORITY CHECKS** - This is not BLANK - there's substantial content - This is not LINK_ONLY - no hyperlinks 3. **ISSUER IDENTIFICATION** This is issued by \"BUNDESREPUBLIK DEUTSCHLAND\" (Federal Republic of Germany) - a government identification authority. 4. **DOCUMENT FUNCTION ANALYSIS** This is clearly a personal identification document for an individual named Andreas Betzler. It contains: - Personal biographical data (birth date, birth place, nationality) - Physical characteristics (eye color, height) - Photo - Address information - Official government issuance - Security elements 5. **CATEGORY CLASSIFICATION** This fits perfectly into CECRL category: - It's an official personal identification document (German Personalausweis) - Comprehensive personal identification evidence - Verified through multiple data points and official markings - Demonstrates clear individual identity verification 6. **CONFIDENCE VALIDATION** Definitive personal identification document with comprehensive individual verification markers.",
+            "signature": "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"
+          },
+          {
+            "type": "text",
+            "text": "```json { \"category\": \"CECRL\", \"text\": \"BUNDESREPUBLIK DEUTSCHLAND PERSONALAUSWEIS L75GVP89V Name/Surname/Nom BETZLER Vorname/Given names/Prénoms ANDREAS Geburtsdatum/Date of birth/Date de naissance 25.07.1975 DEUTSCH Geburtsort/Place of birth/Lieu de naissance PLETTENBERG Gültig bis/Date of expiry/Date d'expiration 04.06.2034 111360 Augen/Eyes/Couleur des yeux BLAU Größe/Height/Taille 186 cm Anschrift/Address/Adresse 51375 LEVERKUSEN EINTRACHTSTRASSE 86 Datum/Date/Date 05.06.24 Behörde/Authority/Autorité STADT LEVERKUSEN IDD<<L75GVP89V7<<<<<<<<<<<<<<<< 7507254<3406049D<<2405<<<<<<<1 BETZLER<<ANDREAS<<<<<<<<<<<<<<<<\" } ```"
+          }
+        ],
+        "stop_reason": "end_turn",
+        "stop_sequence": null,
+        "usage": {
+          "input_tokens": 9,
+          "cache_creation_input_tokens": 4549,
+          "cache_read_input_tokens": 0,
+          "output_tokens": 868
+        }
+      },
+      "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+      "api_used": "invoke_model",
+      "model_params": {
+        "max_tokens": 8000,
+        "top_p": 1,
+        "temperature": 1,
+        "thinking": {
+          "type": "enabled",
+          "budget_tokens": 4096
+        }
+      }
+    },
+    "expected_category": "CECRL",
+    "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model",
+    "pdf_info": {
+      "original_size": 74341,
+      "first_page_size": 70107,
+      "is_scanned": true
+    }
+  },
+  "extraction_result": {
+    "extraction_data": {
+      "result": {
+        "firstName": "ANDREAS",
+        "lastName": "BETZLER",
+        "country_issuer": "Alemania",
+        "nationality": "Alemania",
+        "identificationType": "documento de identidad personal",
+        "identificationNumber": "L75GVP89V",
+        "message": ""
+      },
+      "document_type": "person",
+      "category": "CECRL"
+    },
+    "raw_response": {
+      "output": {
+        "message": {
+          "content": [
+            {
+              "text": "```json { \"result\": { \"firstName\": \"ANDREAS\", \"lastName\": \"BETZLER\", \"country_issuer\": \"Alemania\", \"nationality\": \"Alemania\", \"identificationType\": \"documento de identidad personal\", \"identificationNumber\": \"L75GVP89V\", \"message\": \"\" }, \"document_type\": \"person\", \"category\": \"CECRL\" } ```"
+            }
+          ]
+        }
+      },
+      "stopReason": "end_turn",
+      "usage": {
+        "input_tokens": 10,
+        "cache_creation_input_tokens": 5982,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 646
+      },
+      "ResponseMetadata": {
+        "RequestId": "36aa0a61-1902-4223-acb8-9515f36df04d",
+        "HTTPStatusCode": 200,
+        "HTTPHeaders": {
+          "date": "Fri, 29 Aug 2025 15:41:24 GMT",
+          "content-type": "application/json",
+          "content-length": "5302",
+          "connection": "keep-alive",
+          "x-amzn-requestid": "36aa0a61-1902-4223-acb8-9515f36df04d",
+          "x-amzn-bedrock-invocation-latency": "17243",
+          "x-amzn-bedrock-cache-write-input-token-count": "5982",
+          "x-amzn-bedrock-cache-read-input-token-count": "0",
+          "x-amzn-bedrock-output-token-count": "646",
+          "x-amzn-bedrock-input-token-count": "10"
+        },
+        "RetryAttempts": 0
+      },
+      "raw_anthropic_response": {
+        "id": "msg_bdrk_01PVxMvtqsm2tNRXgMrXGDzy",
+        "type": "message",
+        "role": "assistant",
+        "model": "claude-sonnet-4-20250514",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "Let me analyze this German identification document step by step using the dual-mode extraction system: **Step 1: Document Structure Analysis** - This appears to be a German government identification document (Personalausweis - German ID card) - Header shows \"BUNDESREPUBLIK DEUTSCHLAND\" and \"PERSONALAUSWEIS\" - Contains official German government logos and formatting - Document number at top: L75GVP89V - This is clearly an official government identification document **Step 2: Field Detection** Looking at the document structure: - I can see \"BETZLER\" which appears to be the surname - \"ANDREAS\" appears to be the given name/first name - Birth date: 29.07.1975 - Birth place: PLETTENBERG - Nationality: DEUTSCH (German) - Document expiry: 05.06.24 - Issuing authority: STADT LEVERKUSEN - Address shows: 51375 LEVERKUSEN, EINTRACHTSTRASSE 86 **Step 3: Pattern-Based Text Extraction** - firstName: \"ANDREAS\" (this is clearly the given name) - lastName: \"BETZLER\" (this is clearly the surname) - country_issuer: This is a German document (BUNDESREPUBLIK DEUTSCHLAND) - nationality: \"DEUTSCH\" indicates German nationality - identificationType: This is a \"Personalausweis\" which translates to \"documento de identidad personal\" - identificationNumber: \"L75GVP89V\" (shown at top of document) **Step 4: Field Mapping and Validation** - firstName: \"ANDREAS\" ✓ - lastName: \"BETZLER\" ✓ - country_issuer: \"Alemania\" (German document) ✓ - nationality: \"Alemania\" (DEUTSCH = German) ✓ - identificationType: \"documento de identidad personal\" (Personalausweis) ✓ - identificationNumber: \"L75GVP89V\" ✓ **Step 5: Quality Control** I've completed a comprehensive extraction of all key details from this identification document. The process reveals a fully validated German ID card with no extraction issues or missing information.",
+            "signature": "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"
+          },
+          {
+            "type": "text",
+            "text": "```json { \"result\": { \"firstName\": \"ANDREAS\", \"lastName\": \"BETZLER\", \"country_issuer\": \"Alemania\", \"nationality\": \"Alemania\", \"identificationType\": \"documento de identidad personal\", \"identificationNumber\": \"L75GVP89V\", \"message\": \"\" }, \"document_type\": \"person\", \"category\": \"CECRL\" } ```"
+          }
+        ],
+        "stop_reason": "end_turn",
+        "stop_sequence": null,
+        "usage": {
+          "input_tokens": 10,
+          "cache_creation_input_tokens": 5982,
+          "cache_read_input_tokens": 0,
+          "output_tokens": 646
+        }
+      },
+      "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+      "api_used": "invoke_model",
+      "model_params": {
+        "max_tokens": 8000,
+        "top_p": 1,
+        "temperature": 1,
+        "thinking": {
+          "type": "enabled",
+          "budget_tokens": 4096
+        }
+      }
+    },
+    "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model"
+  }
+}

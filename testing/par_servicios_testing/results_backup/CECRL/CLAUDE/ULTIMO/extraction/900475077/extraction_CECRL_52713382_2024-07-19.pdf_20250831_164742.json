@@ -1,0 +1,88 @@
+{
+  "extraction_data": {
+    "result": {
+      "FirstName": "MARIA DEL ROSARIO",
+      "LastName": "GORDÓN SALAZAR",
+      "CountryIssuer": "Colombia",
+      "Nationality": "colombiano",
+      "IdentificationType": "Cédula de Ciudadanía",
+      "IdentificationNumber": "52.713.382",
+      "Message": ""
+    },
+    "document_type": "person",
+    "category": "CECRL"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "```json { \"result\": { \"FirstName\": \"MARIA DEL ROSARIO\", \"LastName\": \"GORDÓN SALAZAR\", \"CountryIssuer\": \"Colombia\", \"Nationality\": \"colombiano\", \"IdentificationType\": \"Cédula de Ciudadanía\", \"IdentificationNumber\": \"52.713.382\", \"Message\": \"\" }, \"document_type\": \"person\", \"category\": \"CECRL\" } ```"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 1604,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 4300,
+      "output_tokens": 867
+    },
+    "ResponseMetadata": {
+      "RequestId": "9ece7adc-31f6-4784-b7a5-49bca35a08f8",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Sun, 31 Aug 2025 21:47:42 GMT",
+        "content-type": "application/json",
+        "content-length": "7000",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "9ece7adc-31f6-4784-b7a5-49bca35a08f8",
+        "x-amzn-bedrock-invocation-latency": "15102",
+        "x-amzn-bedrock-cache-write-input-token-count": "0",
+        "x-amzn-bedrock-cache-read-input-token-count": "4300",
+        "x-amzn-bedrock-output-token-count": "867",
+        "x-amzn-bedrock-input-token-count": "1604"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_01EoNxHwE5FJJ5ykAPVG7QTM",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-sonnet-4-20250514",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Let me analyze this Colombian identification document step by step. From what I can see, this is a \"CÉDULA DE CIUDADANÍA\" (Citizenship Card) from Colombia. The document header clearly shows \"REPÚBLICA DE COLOMBIA\" and \"IDENTIFICACIÓN PERSONAL CEDULA DE CIUDADANÍA\". Let me extract the information using the methodology described: 1. **Document Type**: This is clearly a \"Cédula de Ciudadanía\" from Colombia, which should be translated to \"Cédula de Ciudadanía\" in Spanish (it's already in Spanish). 2. **Country Issuer**: The document shows \"REPÚBLICA DE COLOMBIA\", so the CountryIssuer is \"Colombia\". 3. **Identification Number**: I can see \"NUMERO 52.713.382\" clearly labeled. 4. **Names and Surnames**: Now this is where I need to be careful about the Colombian document layout issue mentioned in the instructions. I can see: - \"GORDÓN SALAZAR\" appears after \"NUMERO\" - \"APELLIDOS\" label is present - \"MARIA DEL ROSARIO\" appears after \"APELLIDOS\" - \"NOMBRES\" label is present but appears to have no visible text directly after it According to the extraction methodology for Colombian documents with \"bad layout\": - The document shows \"APELLIDOS\" followed by \"MARIA DEL ROSARIO\" - The \"NOMBRES\" label appears to be empty or separated - This suggests the layout is misaligned as described in the instructions Looking more carefully at the layout: - \"GORDÓN SALAZAR\" appears to be the surnames (after NUMERO but before APELLIDOS) - \"MARIA DEL ROSARIO\" appears after APELLIDOS but this would actually be the first names according to the misalignment pattern described - The NOMBRES label appears empty, which confirms the misalignment pattern Wait, let me re-examine this more carefully. Looking at the document: I confirm the document layout shows a typical misalignment pattern for Colombian identification documents. The surnames \"GORDÓN SALAZAR\" precede the APELLIDOS label, while \"MARIA DEL ROSARIO\" follows the APELLIDOS label, indicating these are actually the first names. The NOMBRES label appears minimally populated, further supporting the document's non-standard layout. The place of birth \"SAN MATEO (BOYACÁ)\" confirms the individual's Colombian origin, with nationality definitively established as \"colombiano\".",
+          "signature": "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"
+        },
+        {
+          "type": "text",
+          "text": "```json { \"result\": { \"FirstName\": \"MARIA DEL ROSARIO\", \"LastName\": \"GORDÓN SALAZAR\", \"CountryIssuer\": \"Colombia\", \"Nationality\": \"colombiano\", \"IdentificationType\": \"Cédula de Ciudadanía\", \"IdentificationNumber\": \"52.713.382\", \"Message\": \"\" }, \"document_type\": \"person\", \"category\": \"CECRL\" } ```"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 1604,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 4300,
+        "output_tokens": 867
+      }
+    },
+    "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 8000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+  "api_used": "invoke_model"
+}

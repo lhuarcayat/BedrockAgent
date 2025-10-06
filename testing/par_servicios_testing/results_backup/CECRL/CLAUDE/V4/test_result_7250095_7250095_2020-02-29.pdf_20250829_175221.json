@@ -1,0 +1,183 @@
+{
+  "document_name": "7250095_2020-02-29.pdf",
+  "category": "CECRL",
+  "classification_success": true,
+  "extraction_success": true,
+  "overall_success": true,
+  "timestamp": "2025-08-29T17:51:52.869126",
+  "classification_result": {
+    "classification_data": {
+      "category": "CECRL",
+      "text": "REPUBLICA DE COLOMBIA IDENTIFICACION PERSONAL CEDULA DE CIUDADANIA NUMERO 7.250.095 GARCIA VALENCIA APELLIDOS JOHN NOMBRES FECHA DE NACIMIENTO 19-AGO-1965 BOYACA LUGAR DE NACIMIENTO 1.74 ESTATURA SEXO M 20-AGO-1983 PUERTO BOYACA FECHA Y LUGAR DE EXPEDICION REGISTRADOR CARLOS ARIEL SANCHEZ TORRES A 0721400-00192696-M-0007250095-20091031 00176676284 1 27615422 REPUBLICA DE COLOMBIA IDENTIFICACION PERSONAL CEDULA DE CIUDADANIA NUMERO 7.250.095 GARCIA VALENCIA APELLIDOS JOHN NOMBRES FIRMA FECHA DE NACIMIENTO 19-AGO-1965 PUERTO BOYACA (BOYACA) LUGAR DE NACIMIENTO 1.74 ESTATURA O- G.S. RH M SEXO 20-AGO-1983 PUERTO BOYACA FECHA Y LUGAR DE EXPEDICION INDICE DERECHO REGISTRADOR NACIONAL CARLOS ARIEL SANCHEZ TORRES A-0721400-00192696-M-0007250095-20091031 00176676284 1 27615422",
+      "document_number": "7250095",
+      "path": "CECRL/7250095/7250095_2020-02-29.pdf"
+    },
+    "raw_response": {
+      "output": {
+        "message": {
+          "content": [
+            {
+              "text": "```json { \"category\": \"CECRL\", \"text\": \"REPUBLICA DE COLOMBIA IDENTIFICACION PERSONAL CEDULA DE CIUDADANIA NUMERO 7.250.095 GARCIA VALENCIA APELLIDOS JOHN NOMBRES FECHA DE NACIMIENTO 19-AGO-1965 BOYACA LUGAR DE NACIMIENTO 1.74 ESTATURA SEXO M 20-AGO-1983 PUERTO BOYACA FECHA Y LUGAR DE EXPEDICION REGISTRADOR CARLOS ARIEL SANCHEZ TORRES A 0721400-00192696-M-0007250095-20091031 00176676284 1 27615422 REPUBLICA DE COLOMBIA IDENTIFICACION PERSONAL CEDULA DE CIUDADANIA NUMERO 7.250.095 GARCIA VALENCIA APELLIDOS JOHN NOMBRES FIRMA FECHA DE NACIMIENTO 19-AGO-1965 PUERTO BOYACA (BOYACA) LUGAR DE NACIMIENTO 1.74 ESTATURA O- G.S. RH M SEXO 20-AGO-1983 PUERTO BOYACA FECHA Y LUGAR DE EXPEDICION INDICE DERECHO REGISTRADOR NACIONAL CARLOS ARIEL SANCHEZ TORRES A-0721400-00192696-M-0007250095-20091031 00176676284 1 27615422\" } ```"
+            }
+          ]
+        }
+      },
+      "stopReason": "end_turn",
+      "usage": {
+        "input_tokens": 9,
+        "cache_creation_input_tokens": 5136,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 931
+      },
+      "ResponseMetadata": {
+        "RequestId": "b52b0a6c-fca8-4af5-845d-f95bc427a2b7",
+        "HTTPStatusCode": 200,
+        "HTTPHeaders": {
+          "date": "Fri, 29 Aug 2025 22:52:11 GMT",
+          "content-type": "application/json",
+          "content-length": "6584",
+          "connection": "keep-alive",
+          "x-amzn-requestid": "b52b0a6c-fca8-4af5-845d-f95bc427a2b7",
+          "x-amzn-bedrock-invocation-latency": "17958",
+          "x-amzn-bedrock-cache-write-input-token-count": "5136",
+          "x-amzn-bedrock-cache-read-input-token-count": "0",
+          "x-amzn-bedrock-output-token-count": "931",
+          "x-amzn-bedrock-input-token-count": "9"
+        },
+        "RetryAttempts": 0
+      },
+      "raw_anthropic_response": {
+        "id": "msg_bdrk_01TkVbyEcV7PmWkUSnAtd2N8",
+        "type": "message",
+        "role": "assistant",
+        "model": "claude-sonnet-4-20250514",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "Let me analyze the document step by step according to the classification workflow: 1. **TEXT EXTRACTION** Looking at the document, I can see this is a Colombian identification document (cedula de ciudadania). The text includes: - REPUBLICA DE COLOMBIA - IDENTIFICACION PERSONAL - CEDULA DE CIUDADANIA - NUMERO 7.250.095 - GARCIA VALENCIA (apellidos/surnames) - JOHN (nombres/names) - FECHA DE NACIMIENTO 19-AGO-1965 (date of birth) - BOYACA (place of birth) - LUGAR DE NACIMIENTO - ESTATURA 1.74 (height) - SEXO M (gender male) - PUERTO BOYACA (appears to be registration location) - There's also a fingerprint image and what appears to be signature areas 2. **PRIORITY CHECKS** - Not BLANK - contains substantial meaningful content - Not LINK_ONLY - no hyperlinks or URLs directing elsewhere 3. **DOCUMENT FUNCTION ANALYSIS** This document's primary purpose is to serve as official personal identification for an individual named John Garcia Valencia. It provides biographical data, physical characteristics, photo, and other identifying information typical of a government-issued ID card. 4. **ISSUER IDENTIFICATION** This is issued by the Republic of Colombia as a personal identification document (cedula de ciudadania), not by DIAN or Chamber of Commerce. 5. **CATEGORY CLASSIFICATION** Looking at the category definitions: **CECRL**: This matches perfectly: - Individual identification terminology: \"Cédula\", \"Identificación personal\" ✓ - Personal biographical data: birth date/place, gender, physical characteristics ✓ - Individual photo, signature, fingerprint references ✓ - Government-issued personal ID numbers with individual names ✓ - Security elements: appears to have barcodes, official seals ✓ - Issued by government identification authorities ✓ - Key patterns confirm a single individual's identification document ✓ - Comprehensive biographic details validate government issuance ✓ 6. **CONFIDENCE VALIDATION** Strong evidence supports this as a genuine CECRL document with comprehensive identifying information.",
+            "signature": "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"
+          },
+          {
+            "type": "text",
+            "text": "```json { \"category\": \"CECRL\", \"text\": \"REPUBLICA DE COLOMBIA IDENTIFICACION PERSONAL CEDULA DE CIUDADANIA NUMERO 7.250.095 GARCIA VALENCIA APELLIDOS JOHN NOMBRES FECHA DE NACIMIENTO 19-AGO-1965 BOYACA LUGAR DE NACIMIENTO 1.74 ESTATURA SEXO M 20-AGO-1983 PUERTO BOYACA FECHA Y LUGAR DE EXPEDICION REGISTRADOR CARLOS ARIEL SANCHEZ TORRES A 0721400-00192696-M-0007250095-20091031 00176676284 1 27615422 REPUBLICA DE COLOMBIA IDENTIFICACION PERSONAL CEDULA DE CIUDADANIA NUMERO 7.250.095 GARCIA VALENCIA APELLIDOS JOHN NOMBRES FIRMA FECHA DE NACIMIENTO 19-AGO-1965 PUERTO BOYACA (BOYACA) LUGAR DE NACIMIENTO 1.74 ESTATURA O- G.S. RH M SEXO 20-AGO-1983 PUERTO BOYACA FECHA Y LUGAR DE EXPEDICION INDICE DERECHO REGISTRADOR NACIONAL CARLOS ARIEL SANCHEZ TORRES A-0721400-00192696-M-0007250095-20091031 00176676284 1 27615422\" } ```"
+          }
+        ],
+        "stop_reason": "end_turn",
+        "stop_sequence": null,
+        "usage": {
+          "input_tokens": 9,
+          "cache_creation_input_tokens": 5136,
+          "cache_read_input_tokens": 0,
+          "output_tokens": 931
+        }
+      },
+      "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+      "api_used": "invoke_model",
+      "model_params": {
+        "max_tokens": 8000,
+        "top_p": 1,
+        "temperature": 1,
+        "thinking": {
+          "type": "enabled",
+          "budget_tokens": 4096
+        }
+      }
+    },
+    "expected_category": "CECRL",
+    "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model",
+    "pdf_info": {
+      "original_size": 555906,
+      "first_page_size": 555702,
+      "is_scanned": false
+    }
+  },
+  "extraction_result": {
+    "extraction_data": {
+      "result": {
+        "firstName": "JOHN",
+        "lastName": "GARCIA VALENCIA",
+        "country_issuer": "Colombia",
+        "nationality": "Colombia",
+        "identificationType": "Cédula de Ciudadanía",
+        "identificationNumber": "7.250.095",
+        "message": ""
+      },
+      "document_type": "person",
+      "category": "CECRL"
+    },
+    "raw_response": {
+      "output": {
+        "message": {
+          "content": [
+            {
+              "text": "```json { \"result\": { \"firstName\": \"JOHN\", \"lastName\": \"GARCIA VALENCIA\", \"country_issuer\": \"Colombia\", \"nationality\": \"Colombia\", \"identificationType\": \"Cédula de Ciudadanía\", \"identificationNumber\": \"7.250.095\", \"message\": \"\" }, \"document_type\": \"person\", \"category\": \"CECRL\" } ```"
+            }
+          ]
+        }
+      },
+      "stopReason": "end_turn",
+      "usage": {
+        "input_tokens": 10,
+        "cache_creation_input_tokens": 6802,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 537
+      },
+      "ResponseMetadata": {
+        "RequestId": "7fb20edc-31a6-42a7-a132-314e0748994d",
+        "HTTPStatusCode": 200,
+        "HTTPHeaders": {
+          "date": "Fri, 29 Aug 2025 22:52:21 GMT",
+          "content-type": "application/json",
+          "content-length": "4682",
+          "connection": "keep-alive",
+          "x-amzn-requestid": "7fb20edc-31a6-42a7-a132-314e0748994d",
+          "x-amzn-bedrock-invocation-latency": "9842",
+          "x-amzn-bedrock-cache-write-input-token-count": "6802",
+          "x-amzn-bedrock-cache-read-input-token-count": "0",
+          "x-amzn-bedrock-output-token-count": "537",
+          "x-amzn-bedrock-input-token-count": "10"
+        },
+        "RetryAttempts": 0
+      },
+      "raw_anthropic_response": {
+        "id": "msg_bdrk_01EG2guKwLWzuNzGX2dQWDPc",
+        "type": "message",
+        "role": "assistant",
+        "model": "claude-sonnet-4-20250514",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "Let me analyze this Colombian identification document (Cédula de Ciudadanía) carefully. Looking at the document, I can see: 1. Document header shows \"REPUBLICA DE COLOMBIA\" and \"CEDULA DE CIUDADANIA\" 2. The identification number appears to be 7.250.095 3. I can see \"GARCIA VALENCIA\" which appears to be surnames 4. I can see \"JOHN\" which appears to be the first name 5. There's birth date information: \"19-AGO-1965\" 6. Birth place: \"PUERTO BOYACA\" and \"BOYACA\" 7. Height: \"1.74\" 8. Sex: appears to be \"M\" (masculine) Let me extract the information systematically: **firstName**: Looking for names/nombres field. I can see \"JOHN\" clearly listed as nombres. **lastName**: I see \"GARCIA VALENCIA\" listed as apellidos. **country_issuer**: This is clearly a Colombian document as stated in the header \"REPUBLICA DE COLOMBIA\" **nationality**: Since this is a Colombian citizenship card (\"CEDULA DE CIUDADANIA\"), the nationality would be Colombian. The birth place is also in Colombia (Puerto Boyacá, Boyacá), so nationality is Colombian. **identificationType**: This is a \"CEDULA DE CIUDADANIA\" which translates to \"Cédula de Ciudadanía\" in Spanish. **identificationNumber**: The number shown is \"7.250.095\" **message**: This appears to be a legitimate official Colombian identification document, so no issues to report. Let me double-check the extraction: - The document clearly shows official government formatting - All key information is readable - This is definitely an official identification document - All fields can be extracted successfully",
+            "signature": "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"
+          },
+          {
+            "type": "text",
+            "text": "```json { \"result\": { \"firstName\": \"JOHN\", \"lastName\": \"GARCIA VALENCIA\", \"country_issuer\": \"Colombia\", \"nationality\": \"Colombia\", \"identificationType\": \"Cédula de Ciudadanía\", \"identificationNumber\": \"7.250.095\", \"message\": \"\" }, \"document_type\": \"person\", \"category\": \"CECRL\" } ```"
+          }
+        ],
+        "stop_reason": "end_turn",
+        "stop_sequence": null,
+        "usage": {
+          "input_tokens": 10,
+          "cache_creation_input_tokens": 6802,
+          "cache_read_input_tokens": 0,
+          "output_tokens": 537
+        }
+      },
+      "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+      "api_used": "invoke_model",
+      "model_params": {
+        "max_tokens": 8000,
+        "top_p": 1,
+        "temperature": 1,
+        "thinking": {
+          "type": "enabled",
+          "budget_tokens": 4096
+        }
+      }
+    },
+    "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model"
+  }
+}

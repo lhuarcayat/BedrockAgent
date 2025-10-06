@@ -1,0 +1,87 @@
+{
+  "classification_data": {
+    "category": "CECRL",
+    "text": "BUNDESREPUBLIK DEUTSCHLAND PERSONALAUSWEIS L75GVP89V BETZLER ANDREAS 25.07.1975 DEUTSCH PLETTENBERG 04.06.2034 111360 BLAU 186 cm 05.06.24 STADT LEVERKUSEN 51375 LEVERKUSEN EINTRACHTSTRACE 86 IDD<<L75GVP89V7<<<<<<<<<<<<<<<< 7507254<3406049D<<2405<<<<<<<1 BETZLER<<ANDREAS<<<<<<<<<<<<<<<",
+    "document_number": "UNKNOWN",
+    "path": "CECRL/5120000874_L75GVP89V_2024-09-12/L75GVP89V_2024-09-12.pdf"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "```json { \"category\": \"CECRL\", \"text\": \"BUNDESREPUBLIK DEUTSCHLAND\\nPERSONALAUSWEIS\\nL75GVP89V\\n\\nBETZLER\\nANDREAS\\n25.07.1975 DEUTSCH\\nPLETTENBERG\\n04.06.2034\\n111360\\n\\nBLAU\\n186 cm\\n05.06.24\\nSTADT LEVERKUSEN\\n\\n51375 LEVERKUSEN\\nEINTRACHTSTRACE 86\\n\\nIDD<<L75GVP89V7<<<<<<<<<<<<<<<<\\n7507254<3406049D<<2405<<<<<<<1\\nBETZLER<<ANDREAS<<<<<<<<<<<<<<<\" } ```"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 1584,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 3150,
+      "output_tokens": 766
+    },
+    "ResponseMetadata": {
+      "RequestId": "1bcff119-57ac-4fdb-93d1-600be33a5cec",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Sun, 31 Aug 2025 21:33:20 GMT",
+        "content-type": "application/json",
+        "content-length": "5525",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "1bcff119-57ac-4fdb-93d1-600be33a5cec",
+        "x-amzn-bedrock-invocation-latency": "12171",
+        "x-amzn-bedrock-cache-write-input-token-count": "0",
+        "x-amzn-bedrock-cache-read-input-token-count": "3150",
+        "x-amzn-bedrock-output-token-count": "766",
+        "x-amzn-bedrock-input-token-count": "1584"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_011rga1wCbjaX6shgYqEbbZF",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-sonnet-4-20250514",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Let me analyze this document following the classification workflow: 1. **TEXT EXTRACTION** I can see text from what appears to be a German ID document. The main visible text includes: - \"BUNDESREPUBLIK DEUTSCHLAND\" (Federal Republic of Germany) - \"PERSONALAUSWEIS\" (Personal ID Card) - \"L75GVP89V\" (ID number) - \"BETZLER\" (surname) - \"ANDREAS\" (given name) - \"25.07.1975 DEUTSCH\" (date of birth and nationality) - \"PLETTENBERG\" (place) - \"04.06.2034\" (expiration date) - \"111360\" (some number) - Photo of a person - \"BLAU\" (blue - eye color) - \"186 cm\" (height) - \"05.06.24\" (date) - \"51375 LEVERKUSEN\" - \"EINTRACHTSTRACE 86\" (address) - \"STADT LEVERKUSEN\" (city) - Machine readable zone at bottom with encoded information 2. **PRIORITY CHECKS** This is not blank and not a link-only document. 3. **DOCUMENT FUNCTION ANALYSIS** - What is the MAIN PURPOSE of this document? This is clearly a personal identification document - Is it a personal identification document? YES -> CECRL Indicative - Contains personal biographical data: date of birth (25.07.1975), place information, height (186 cm), eye color (BLAU), nationality (DEUTSCH) - Has a photograph of an individual - Contains government-issued personal identification numbers - Has security elements including machine readable zone 4. **ISSUER IDENTIFICATION** - This is issued by \"BUNDESREPUBLIK DEUTSCHLAND\" (Federal Republic of Germany) government identification authority -> CECRL Indicative - This is a \"PERSONALAUSWEIS\" which is the official German personal identity card 5. **CATEGORY CLASSIFICATION** I confirm this meets all CECRL document criteria. The German identity card contains comprehensive personal details, official government validation, and critical identification elements that definitively classify it as a CECRL document.",
+          "signature": "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"
+        },
+        {
+          "type": "text",
+          "text": "```json { \"category\": \"CECRL\", \"text\": \"BUNDESREPUBLIK DEUTSCHLAND\\nPERSONALAUSWEIS\\nL75GVP89V\\n\\nBETZLER\\nANDREAS\\n25.07.1975 DEUTSCH\\nPLETTENBERG\\n04.06.2034\\n111360\\n\\nBLAU\\n186 cm\\n05.06.24\\nSTADT LEVERKUSEN\\n\\n51375 LEVERKUSEN\\nEINTRACHTSTRACE 86\\n\\nIDD<<L75GVP89V7<<<<<<<<<<<<<<<<\\n7507254<3406049D<<2405<<<<<<<1\\nBETZLER<<ANDREAS<<<<<<<<<<<<<<<\" } ```"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 1584,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 3150,
+        "output_tokens": 766
+      }
+    },
+    "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 8000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "expected_category": "CECRL",
+  "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+  "api_used": "invoke_model",
+  "pdf_info": {
+    "original_size": 74341,
+    "first_page_size": 70107,
+    "is_scanned": true
+  }
+}

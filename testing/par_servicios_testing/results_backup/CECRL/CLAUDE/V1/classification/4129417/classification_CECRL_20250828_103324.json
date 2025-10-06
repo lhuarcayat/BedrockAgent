@@ -1,0 +1,87 @@
+{
+  "classification_data": {
+    "category": "CECRL",
+    "text": "REPUBLICA DE COLOMBIA IDENTIFICACION PERSONAL CEDULA DE CIUDADANIA NUMERO 1.018.460.087 OVALLE BAYER APELLIDOS DIEGO FERNANDO NOMBRES Diego F. Ovalle B FIRMA FECHA DE NACIMIENTO 16-JUN-1993 MANI (CASANARE) LUGAR DE NACIMIENTO 1.73 O+ ESTATURA G.S. RH SEXO M 20-JUN-2011 BOGOTA D.C FECHA Y LUGAR DE EXPEDICION INDICE DERECHO REGISTRADOR NACIONAL",
+    "document_number": "4129417",
+    "path": "CECRL/4129417/1018460087_2020-06-26.pdf"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "```json { \"category\": \"CECRL\", \"text\": \"REPUBLICA DE COLOMBIA\\nIDENTIFICACION PERSONAL\\nCEDULA DE CIUDADANIA\\nNUMERO 1.018.460.087\\nOVALLE BAYER\\nAPELLIDOS DIEGO FERNANDO\\nNOMBRES\\nDiego F. Ovalle B\\nFIRMA\\nFECHA DE NACIMIENTO 16-JUN-1993\\nMANI\\n(CASANARE)\\nLUGAR DE NACIMIENTO\\n1.73 O+\\nESTATURA G.S. RH SEXO M\\n20-JUN-2011 BOGOTA D.C\\nFECHA Y LUGAR DE EXPEDICION\\nINDICE DERECHO\\nREGISTRADOR NACIONAL\" } ```"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 9,
+      "cache_creation_input_tokens": 4475,
+      "cache_read_input_tokens": 0,
+      "output_tokens": 993
+    },
+    "ResponseMetadata": {
+      "RequestId": "8c002baf-f2c2-43b5-8d0f-159d7744acd7",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Thu, 28 Aug 2025 15:32:53 GMT",
+        "content-type": "application/json",
+        "content-length": "3901",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "8c002baf-f2c2-43b5-8d0f-159d7744acd7",
+        "x-amzn-bedrock-invocation-latency": "27930",
+        "x-amzn-bedrock-cache-write-input-token-count": "4475",
+        "x-amzn-bedrock-cache-read-input-token-count": "0",
+        "x-amzn-bedrock-output-token-count": "993",
+        "x-amzn-bedrock-input-token-count": "9"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_01UsgAkaATwTZBfUKMuVmN6p",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-3-7-sonnet-20250219",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Let me analyze this document by following the classification workflow: 1. **TEXT EXTRACTION**: From the document, I can extract the following text: - \"REPUBLICA DE COLOMBIA\" - \"IDENTIFICACION PERSONAL\" - \"CEDULA DE CIUDADANIA\" - \"NUMERO 1.018.460.087\" - \"OVALLE BAYER\" - \"APELLIDOS DIEGO FERNANDO\" - \"NOMBRES\" - \"FIRMA\" - \"FECHA DE NACIMIENTO 16-JUN-1993\" - \"MANI (CASANARE)\" - \"LUGAR DE NACIMIENTO\" - \"1.73\" (height) - \"O+\" (blood type) - \"ESTATURA\" \"G.S. RH\" \"SEXO M\" - \"20-JUN-2011 BOGOTA D.C\" - \"FECHA Y LUGAR DE EXPEDICION\" - \"INDICE DERECHO\" - \"REGISTRADOR NACIONAL\" 2. **PRIORITY CHECKS**: - Not BLANK - has substantial content - Not LINK_ONLY - no URLs or hyperlinks 3. **ISSUER IDENTIFICATION**: This is a personal identification document issued by the Republic of Colombia. 4. **DOCUMENT FUNCTION ANALYSIS**: This is clearly a personal identification document - a Colombian national ID card (\"Cédula de Ciudadanía\"). 5. **CATEGORY CLASSIFICATION**: Looking at the category definitions, this appears to be a CECRL (personal identification document). Let's verify: **CECRL indicators present**: - Individual identification terminology: \"IDENTIFICACION PERSONAL\", \"CEDULA DE CIUDADANIA\" - Personal biographical data: birth date (16-JUN-1993), birth place (MANI (CASANARE)), blood type (O+), gender (M), physical characteristics (height 1.73) - Individual photo is visible - Signature is present - Fingerprint reference is present - Government-issued personal ID number: 1.018.460.087 - Security elements: appears to have a barcode, fingerprint - Document follows the pattern \"REPUBLICA DE COLOMBIA IDENTIFICACION PERSONAL\" None of the red flags for CECRL are present - there's no corporate entities, company names, or multiple individuals listed. This is focused on a single individual person. However, to be classified as CECRL rather than just a personal ID, it needs to be an \"Official personal identification document of legal representatives of companies.\" The document itself doesn't indicate whether this person is a legal representative of a company. The document just shows a standard Colombian ID card without any indication of corporate representation. Without evidence that this person is a legal representative of a company, I should classify this as POR_REVISAR rather than CECRL, since I don't have the context to determine if this is just a personal ID or specifically a legal representative's ID. 6. **CONFIDENCE VALIDATION**: While I'm confident this is a Colombian ID card (Cédula de Ciudadanía), I cannot confirm that this is specifically for a legal representative of a company. The document itself doesn't provide that context. Given this uncertainty, the appropriate classification is POR_REVISAR.",
+          "signature": "ErcBCkgIBxABGAIiQG9MXSCWfdeIVUsGriO7MTnApJ7Z2RnprRryzoDRJ4aHxnRJUs2eQGOsSfj2WCE46S229Jir52qne11xkt1c8LsSDBZCjq8ZU00XTPjavRoMuxDyXXds/e1fvY7sIjCElRFjO9Yy3p0Bfg1Zr/slTVGHOeFcl3rZQIZiIvANdm3UUdBZKboTqqB+l26XHccqHQwD/7tDpFBtXkWG+AmaNdxWJSdUTLSonF+4b2ESGAI="
+        },
+        {
+          "type": "text",
+          "text": "```json { \"category\": \"CECRL\", \"text\": \"REPUBLICA DE COLOMBIA\\nIDENTIFICACION PERSONAL\\nCEDULA DE CIUDADANIA\\nNUMERO 1.018.460.087\\nOVALLE BAYER\\nAPELLIDOS DIEGO FERNANDO\\nNOMBRES\\nDiego F. Ovalle B\\nFIRMA\\nFECHA DE NACIMIENTO 16-JUN-1993\\nMANI\\n(CASANARE)\\nLUGAR DE NACIMIENTO\\n1.73 O+\\nESTATURA G.S. RH SEXO M\\n20-JUN-2011 BOGOTA D.C\\nFECHA Y LUGAR DE EXPEDICION\\nINDICE DERECHO\\nREGISTRADOR NACIONAL\" } ```"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 9,
+        "cache_creation_input_tokens": 4475,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 993
+      }
+    },
+    "model_id": "us.anthropic.claude-3-7-sonnet-20250219-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 8000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "expected_category": "CECRL",
+  "model_used": "us.anthropic.claude-3-7-sonnet-20250219-v1:0",
+  "api_used": "invoke_model",
+  "pdf_info": {
+    "original_size": 478149,
+    "first_page_size": 478039,
+    "is_scanned": true
+  }
+}

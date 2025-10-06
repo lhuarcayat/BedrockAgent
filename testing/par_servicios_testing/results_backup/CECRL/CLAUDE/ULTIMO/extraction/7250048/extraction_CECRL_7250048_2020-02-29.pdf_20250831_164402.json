@@ -1,0 +1,88 @@
+{
+  "extraction_data": {
+    "result": {
+      "FirstName": "LEONCIO DE JESUS",
+      "LastName": "HERRERA MESA",
+      "CountryIssuer": "Colombia",
+      "Nationality": "colombiano",
+      "IdentificationType": "Cédula de Ciudadanía",
+      "IdentificationNumber": "7.250.048",
+      "Message": ""
+    },
+    "document_type": "person",
+    "category": "CECRL"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "```json { \"result\": { \"FirstName\": \"LEONCIO DE JESUS\", \"LastName\": \"HERRERA MESA\", \"CountryIssuer\": \"Colombia\", \"Nationality\": \"colombiano\", \"IdentificationType\": \"Cédula de Ciudadanía\", \"IdentificationNumber\": \"7.250.048\", \"Message\": \"\" }, \"document_type\": \"person\", \"category\": \"CECRL\" } ```"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 1607,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 4300,
+      "output_tokens": 635
+    },
+    "ResponseMetadata": {
+      "RequestId": "ea83faa4-1fba-4231-9c93-e1bdade7e6f2",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Sun, 31 Aug 2025 21:44:01 GMT",
+        "content-type": "application/json",
+        "content-length": "5144",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "ea83faa4-1fba-4231-9c93-e1bdade7e6f2",
+        "x-amzn-bedrock-invocation-latency": "10196",
+        "x-amzn-bedrock-cache-write-input-token-count": "0",
+        "x-amzn-bedrock-cache-read-input-token-count": "4300",
+        "x-amzn-bedrock-output-token-count": "635",
+        "x-amzn-bedrock-input-token-count": "1607"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_01AhDUMCW7JxMY4YyHqLxyuA",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-sonnet-4-20250514",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Let me analyze this Colombian identification document according to the extraction methodology provided. Looking at the document, I can see: 1. Header: \"REPUBLICA DE COLOMBIA IDENTIFICACION PERSONAL CEDULA DE CIUDADANIA\" 2. I can see: - NUMERO: 7.250.048 - HERRERA MESA - APELLIDOS - LEONCIO DE JESUS - NOMBRES This appears to be a Colombian ID card (Cédula de Ciudadanía). Looking at the layout, I need to be careful about the misalignment issue mentioned in the methodology for Colombian documents. Let me analyze: - I see \"NUMERO: 7.250.048\" - this seems correctly aligned - I see \"HERRERA MESA\" which appears after the number - I see \"APELLIDOS\" as a label - I see \"LEONCIO DE JESUS\" - I see \"NOMBRES\" as a label Based on the extraction methodology for Colombian documents with potential misalignment: - The document shows \"HERRERA MESA\" followed by \"APELLIDOS\" label, then \"LEONCIO DE JESUS\" followed by \"NOMBRES\" label - This suggests that \"HERRERA MESA\" are the surnames (apellidos) and \"LEONCIO DE JESUS\" are the first names (nombres) - This appears to be a case where the layout is correct - the surnames appear before their label and the names appear before their label So: - FirstName: \"LEONCIO DE JESUS\" - LastName: \"HERRERA MESA\" - CountryIssuer: \"Colombia\" (from \"REPUBLICA DE COLOMBIA\") - Nationality: \"colombiano\" (inferred from Colombian citizenship card) - IdentificationType: \"Cédula de Ciudadanía\" (from header) - IdentificationNumber: \"7.250.048\" (from NUMERO field) Let me also check for birth location: I can see \"REMEDIOS (ANTIOQUIA)\" which appears to be the place of birth, confirming Colombian nationality. The extraction process is complete with no issues detected. All required information has been successfully captured from the identification document.",
+          "signature": "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"
+        },
+        {
+          "type": "text",
+          "text": "```json { \"result\": { \"FirstName\": \"LEONCIO DE JESUS\", \"LastName\": \"HERRERA MESA\", \"CountryIssuer\": \"Colombia\", \"Nationality\": \"colombiano\", \"IdentificationType\": \"Cédula de Ciudadanía\", \"IdentificationNumber\": \"7.250.048\", \"Message\": \"\" }, \"document_type\": \"person\", \"category\": \"CECRL\" } ```"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 1607,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 4300,
+        "output_tokens": 635
+      }
+    },
+    "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 8000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+  "api_used": "invoke_model"
+}

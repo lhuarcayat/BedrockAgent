@@ -1,0 +1,119 @@
+{
+  "extraction_data": {
+    "result": {
+      "PrincipalCompanyName": "BUSINESS PROCESS MANAGEMENT LATINOAMERICA SAS",
+      "DocumentCategory": "Equity Composition",
+      "TaxId": "900.266.513-3",
+      "IdentificationType": "NIT",
+      "Country": "Colombia",
+      "IdentificationDetails": {
+        "Source": "TextReference",
+        "Indicators": [
+          "BOGOTA",
+          "COLOMBIANAS"
+        ],
+        "ConflictingSources": [],
+        "RequiresReview": "false"
+      },
+      "RelatedParties": [
+        {
+          "Type": "person",
+          "FirstName": "Mauricio",
+          "LastName": "Obregón Gutiérrez",
+          "IdType": "CC",
+          "IdNumber": "79.425.769",
+          "RelationshipType": "Shareholder",
+          "ParticipationPercentage": "80%",
+          "TimeFound": "1",
+          "Job": "GERENTE"
+        },
+        {
+          "Type": "person",
+          "FirstName": "Monica María",
+          "LastName": "Gutierrez Obregón",
+          "IdType": "CC",
+          "IdNumber": "51.826.093",
+          "RelationshipType": "Shareholder",
+          "ParticipationPercentage": "20%",
+          "TimeFound": "1",
+          "Job": "SUBGERENTE"
+        }
+      ]
+    },
+    "DocumentType": "company",
+    "Category": "ACC"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "{ \"result\": { \"PrincipalCompanyName\": \"BUSINESS PROCESS MANAGEMENT LATINOAMERICA SAS\", \"DocumentCategory\": \"Equity Composition\", \"TaxId\": \"900.266.513-3\", \"IdentificationType\": \"NIT\", \"Country\": \"Colombia\", \"IdentificationDetails\": { \"Source\": \"TextReference\", \"Indicators\": [\"BOGOTA\", \"COLOMBIANAS\"], \"ConflictingSources\": [], \"RequiresReview\": \"false\" }, \"RelatedParties\": [ { \"Type\": \"person\", \"FirstName\": \"Mauricio\", \"LastName\": \"Obregón Gutiérrez\", \"IdType\": \"CC\", \"IdNumber\": \"79.425.769\", \"RelationshipType\": \"Shareholder\", \"ParticipationPercentage\": \"80%\", \"TimeFound\": \"1\", \"Job\": \"GERENTE\" }, { \"Type\": \"person\", \"FirstName\": \"Monica María\", \"LastName\": \"Gutierrez Obregón\", \"IdType\": \"CC\", \"IdNumber\": \"51.826.093\", \"RelationshipType\": \"Shareholder\", \"ParticipationPercentage\": \"20%\", \"TimeFound\": \"1\", \"Job\": \"SUBGERENTE\" } ] }, \"DocumentType\": \"company\", \"Category\": \"ACC\" }"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 2070,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 4822,
+      "output_tokens": 1465
+    },
+    "ResponseMetadata": {
+      "RequestId": "ccddb4d3-937f-4c3b-9b83-21f89dd562ba",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Mon, 01 Sep 2025 02:12:08 GMT",
+        "content-type": "application/json",
+        "content-length": "9070",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "ccddb4d3-937f-4c3b-9b83-21f89dd562ba",
+        "x-amzn-bedrock-invocation-latency": "19442",
+        "x-amzn-bedrock-cache-write-input-token-count": "0",
+        "x-amzn-bedrock-cache-read-input-token-count": "4822",
+        "x-amzn-bedrock-output-token-count": "1465",
+        "x-amzn-bedrock-input-token-count": "2070"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_01ELFF1KDoZA3DfUUp3jhVdc",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-sonnet-4-20250514",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Let me analyze this shareholder composition document to extract the required data according to the field rules. 1. **PrincipalCompanyName**: I can see \"BUSINESS PROCESS MANAGEMENT LATINOAMERICA SAS\" mentioned multiple times in the document. This appears to be the main company whose shareholder composition is being certified. 2. **DocumentCategory**: Always \"Equity Composition\" 3. **Country**: The document mentions \"BOGOTA D.C.\" and references Colombian norms (\"NORMAS COLOMBIANAS\"), so this is clearly Colombia. 4. **TaxId**: I can see \"NIT 900.266.513-3\" mentioned for the main company. 5. **IdentificationType**: \"NIT\" is clearly mentioned. 6. **IdentificationDetails**: - Source: \"TextReference\" (because I found explicit references to \"BOGOTA\" and \"COLOMBIANAS\") - Indicators: [\"BOGOTA\", \"COLOMBIANAS\"] - ConflictingSources: I need to check for any conflicts - RequiresReview: Need to determine based on any \"ForReview\" values 7. **RelatedParties**: Looking at the table in the document, I can see two shareholders: - Mauricio Obregón Gutiérrez: CC 79.425.769, GERENTE, 80%, COLOMBIANO - Monica María Gutierrez Obregón: CC 51.826.093, SUBGERENTE, 20%, COLOMBIANA Let me verify the percentages: 80% + 20% = 100%, so that's correct. Both are people (not companies) based on their names and CC identification type. For the TimeFound, I need to count how many times each entity is mentioned. Looking through the document: - Mauricio Obregón Gutiérrez appears once in the table - Monica María Gutierrez Obregón appears once in the table I'll structure the data systematically, ensuring all key details are captured accurately in the JSON schema. The document provides a clear snapshot of the company's equity composition, with precise shareholder information and identification details. Mauricio Obregón Gutiérrez emerges as the primary shareholder, holding a substantial 80% ownership stake and serving as the company's manager. His identification credentials are meticulously documented, reflecting standard Colombian business registration practices. Monica María Gutierrez Obregón complements the ownership structure with her 20% shareholding, positioned as a sub-manager within the organizational hierarchy. Their shared corporate identity suggests a familial business arrangement typical in Latin American entrepreneurial contexts. The document confirms a complete ownership distribution, with both parties' identification details and roles precisely aligned.",
+          "signature": "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"
+        },
+        {
+          "type": "text",
+          "text": "{ \"result\": { \"PrincipalCompanyName\": \"BUSINESS PROCESS MANAGEMENT LATINOAMERICA SAS\", \"DocumentCategory\": \"Equity Composition\", \"TaxId\": \"900.266.513-3\", \"IdentificationType\": \"NIT\", \"Country\": \"Colombia\", \"IdentificationDetails\": { \"Source\": \"TextReference\", \"Indicators\": [\"BOGOTA\", \"COLOMBIANAS\"], \"ConflictingSources\": [], \"RequiresReview\": \"false\" }, \"RelatedParties\": [ { \"Type\": \"person\", \"FirstName\": \"Mauricio\", \"LastName\": \"Obregón Gutiérrez\", \"IdType\": \"CC\", \"IdNumber\": \"79.425.769\", \"RelationshipType\": \"Shareholder\", \"ParticipationPercentage\": \"80%\", \"TimeFound\": \"1\", \"Job\": \"GERENTE\" }, { \"Type\": \"person\", \"FirstName\": \"Monica María\", \"LastName\": \"Gutierrez Obregón\", \"IdType\": \"CC\", \"IdNumber\": \"51.826.093\", \"RelationshipType\": \"Shareholder\", \"ParticipationPercentage\": \"20%\", \"TimeFound\": \"1\", \"Job\": \"SUBGERENTE\" } ] }, \"DocumentType\": \"company\", \"Category\": \"ACC\" }"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 2070,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 4822,
+        "output_tokens": 1465
+      }
+    },
+    "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 8000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+  "api_used": "invoke_model"
+}

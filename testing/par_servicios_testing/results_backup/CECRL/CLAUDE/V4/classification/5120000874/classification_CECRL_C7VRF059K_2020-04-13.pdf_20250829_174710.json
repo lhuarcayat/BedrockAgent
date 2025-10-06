@@ -1,0 +1,87 @@
+{
+  "classification_data": {
+    "category": "CECRL",
+    "text": "BUNDESREPUBLIK DEUTSCHLAND FEDERAL REPUBLIC OF GERMANY REPUBLIQUE FEDERALE D'ALLEMAGNE REISEPASS Type/Typ/Type: P Code/Code/Code: D Pass-Nr./Passport No./Passeport No.: C7VRF059K Surname/Name/Nom: KOSFELD Given names/Prénoms: MICHAEL Nationality/Sex: DEUTSCH Date of birth/Date de naissance: 14.02.2019 Date of expiry/Date d'expiration: 13.02.2029 Place of birth/Lieu de naissance: STADT SIEGEN Authority/Autorité qui délivre: [signature present] P<D<<KOSFELD<<MICHAEL<<<<<<<<<<<<<<<<<<<<<<<<<<<< C7VRF059K2D<<6603285M2902131<<<<<<<<<<<<<<<<6",
+    "document_number": "UNKNOWN",
+    "path": "CECRL/5120000874_C7VRF059K_2020-04-13/C7VRF059K_2020-04-13.pdf"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "```json { \"category\": \"CECRL\", \"text\": \"BUNDESREPUBLIK DEUTSCHLAND\\nFEDERAL REPUBLIC OF GERMANY REPUBLIQUE FEDERALE D'ALLEMAGNE\\nREISEPASS\\nType/Typ/Type: P\\nCode/Code/Code: D\\nPass-Nr./Passport No./Passeport No.: C7VRF059K\\nSurname/Name/Nom: KOSFELD\\nGiven names/Prénoms: MICHAEL\\nNationality/Sex: DEUTSCH\\nDate of birth/Date de naissance: 14.02.2019\\nDate of expiry/Date d'expiration: 13.02.2029\\nPlace of birth/Lieu de naissance: STADT SIEGEN\\nAuthority/Autorité qui délivre: [signature present]\\nP<D<<KOSFELD<<MICHAEL<<<<<<<<<<<<<<<<<<<<<<<<<<<<\\nC7VRF059K2D<<6603285M2902131<<<<<<<<<<<<<<<<6\" } ```"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 9,
+      "cache_creation_input_tokens": 4774,
+      "cache_read_input_tokens": 0,
+      "output_tokens": 824
+    },
+    "ResponseMetadata": {
+      "RequestId": "b5bd3539-6ba0-4fca-837b-29f40200733e",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Fri, 29 Aug 2025 22:46:59 GMT",
+        "content-type": "application/json",
+        "content-length": "5661",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "b5bd3539-6ba0-4fca-837b-29f40200733e",
+        "x-amzn-bedrock-invocation-latency": "20300",
+        "x-amzn-bedrock-cache-write-input-token-count": "4774",
+        "x-amzn-bedrock-cache-read-input-token-count": "0",
+        "x-amzn-bedrock-output-token-count": "824",
+        "x-amzn-bedrock-input-token-count": "9"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_014rrvHU94oJv8weuhoQoAUe",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-sonnet-4-20250514",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Looking at the document, I can see this is a German passport from the Federal Republic of Germany (BUNDESREPUBLIK DEUTSCHLAND). Let me extract the text I can see: From the top of the document: - REISEPASS (Passport in German) - BUNDESREPUBLIK DEUTSCHLAND (Federal Republic of Germany) - FEDERAL REPUBLIC OF GERMANY REPUBLIQUE FEDERALE D'ALLEMAGNE From the passport page itself: - Type/Typ/Type: P - Code/Code/Code: D - Pass-Nr./Passport No./Passeport No.: C7VRF059K - Surname/Name/Nom: KOSFELD - Given names/Prénoms: MICHAEL - Nationality/Sex: DEUTSCH (German) - Date of birth/Lieu de naissance: 14.02.2019 - Date of expiry/Date d'expiration: 13.02.2029 - Place of birth/Autorité qui delivre: STADT SIEGEN - Signature of bearer/Signature du titulaire: [signature present] There's also a machine-readable zone at the bottom: P<D<<KOSFELD<<MICHAEL<<<<<<<<<<<<<<<<<<<<<<<<<<< C7VRF059K2D<<6603285M2902131<<<<<<<<<<<<<<<<6 And there appears to be some photo identification and other security features. Now, let me analyze this according to the classification workflow: 1. TEXT EXTRACTION: I can extract meaningful text from this German passport document. 2. PRIORITY CHECKS: This is not blank or link-only. 3. DOCUMENT FUNCTION ANALYSIS: This is clearly a personal identification document - specifically a German passport. Its primary purpose is to identify an individual person (Michael Kosfeld) for travel and identification purposes. 4. ISSUER IDENTIFICATION: This is issued by German government authorities (Federal Republic of Germany). 5. CATEGORY CLASSIFICATION: This fits perfectly into CECRL category as it is:",
+          "signature": "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"
+        },
+        {
+          "type": "text",
+          "text": "```json { \"category\": \"CECRL\", \"text\": \"BUNDESREPUBLIK DEUTSCHLAND\\nFEDERAL REPUBLIC OF GERMANY REPUBLIQUE FEDERALE D'ALLEMAGNE\\nREISEPASS\\nType/Typ/Type: P\\nCode/Code/Code: D\\nPass-Nr./Passport No./Passeport No.: C7VRF059K\\nSurname/Name/Nom: KOSFELD\\nGiven names/Prénoms: MICHAEL\\nNationality/Sex: DEUTSCH\\nDate of birth/Date de naissance: 14.02.2019\\nDate of expiry/Date d'expiration: 13.02.2029\\nPlace of birth/Lieu de naissance: STADT SIEGEN\\nAuthority/Autorité qui délivre: [signature present]\\nP<D<<KOSFELD<<MICHAEL<<<<<<<<<<<<<<<<<<<<<<<<<<<<\\nC7VRF059K2D<<6603285M2902131<<<<<<<<<<<<<<<<6\" } ```"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 9,
+        "cache_creation_input_tokens": 4774,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 824
+      }
+    },
+    "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 8000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "expected_category": "CECRL",
+  "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+  "api_used": "invoke_model",
+  "pdf_info": {
+    "original_size": 241711,
+    "first_page_size": 239989,
+    "is_scanned": true
+  }
+}

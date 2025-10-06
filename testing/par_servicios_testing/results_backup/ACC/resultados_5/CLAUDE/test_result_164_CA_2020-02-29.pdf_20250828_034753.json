@@ -1,0 +1,227 @@
+{
+  "document_name": "164_CA_2020-02-29.pdf",
+  "category": "ACC",
+  "classification_success": true,
+  "extraction_success": true,
+  "overall_success": true,
+  "timestamp": "2025-08-28T03:46:52.600977",
+  "classification_result": {
+    "classification_data": {
+      "category": "ACC",
+      "text": "Asesorías y gestiones ambientales S.A.S. Obrando en calidad de Representante Legal el suscrito Jaime Alexander Franco Pedraza de la sociedad Asesorías y Gestiones Ambientales SAS con NIT 900.964.285-3 CERTIFICA Que la composición accionaria de la sociedad es como se detalla a continuación: ASESORÍAS Y GESTIONES AMBIENTALES SAS NIT 900.964.285-3 NIT Nombre del accionista No. De Capital % acciones Pagado 79770147 JAIME ALEXANDER FRANCO 20.000 20.000.000 33,33% PEDRAZA 51880385 MARTHA LILIA CELIS GORDO 20.000 20.000.000 33,33% 79958347 GIOVANNY ANDRES VEGA FORERO 20.000 20.000.000 33,33% La presente certificación se suscribe a los quince días de Enero de 2020. Atentamente Jaime Alexander Franco Pedraza CC 79.770.147 Representante Legal Asesorías y gestiones Ambientales CALLE 3 D SUR No. 71 D 19 3004616 / 3184688021 talentohumano@agambientales.com",
+      "document_number": "900964285",
+      "path": "ACC/900964285/164_CA_2020-02-29.pdf"
+    },
+    "raw_response": {
+      "output": {
+        "message": {
+          "content": [
+            {
+              "text": "```json { \"category\": \"ACC\", \"text\": \"Asesorías y gestiones ambientales S.A.S.\\n\\nObrando en calidad de Representante Legal el suscrito Jaime Alexander Franco Pedraza de la sociedad Asesorías y Gestiones Ambientales SAS con NIT 900.964.285-3\\n\\nCERTIFICA\\n\\nQue la composición accionaria de la sociedad es como se detalla a continuación:\\n\\nASESORÍAS Y GESTIONES AMBIENTALES SAS\\nNIT 900.964.285-3\\n\\nNIT Nombre del accionista No. De Capital %\\n acciones Pagado\\n\\n79770147 JAIME ALEXANDER FRANCO 20.000 20.000.000 33,33%\\n PEDRAZA\\n\\n51880385 MARTHA LILIA CELIS GORDO 20.000 20.000.000 33,33%\\n\\n79958347 GIOVANNY ANDRES VEGA FORERO 20.000 20.000.000 33,33%\\n\\nLa presente certificación se suscribe a los quince días de Enero de 2020.\\n\\nAtentamente\\n\\nJaime Alexander Franco Pedraza\\nCC 79.770.147\\nRepresentante Legal\\nAsesorías y gestiones Ambientales\\n\\nCALLE 3 D SUR No. 71 D 19\\n3004616 / 3184688021\\ntalentohumano@agambientales.com\" } ```"
+            }
+          ]
+        }
+      },
+      "stopReason": "end_turn",
+      "usage": {
+        "input_tokens": 207,
+        "cache_creation_input_tokens": 4475,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 1369
+      },
+      "ResponseMetadata": {
+        "RequestId": "62607eed-767d-414c-8db8-1d550da74824",
+        "HTTPStatusCode": 200,
+        "HTTPHeaders": {
+          "date": "Thu, 28 Aug 2025 08:47:22 GMT",
+          "content-type": "application/json",
+          "content-length": "5022",
+          "connection": "keep-alive",
+          "x-amzn-requestid": "62607eed-767d-414c-8db8-1d550da74824",
+          "x-amzn-bedrock-invocation-latency": "31029",
+          "x-amzn-bedrock-cache-write-input-token-count": "4475",
+          "x-amzn-bedrock-cache-read-input-token-count": "0",
+          "x-amzn-bedrock-output-token-count": "1369",
+          "x-amzn-bedrock-input-token-count": "207"
+        },
+        "RetryAttempts": 0
+      },
+      "raw_anthropic_response": {
+        "id": "msg_bdrk_01BXapBbK6bvb934nTEWv8fi",
+        "type": "message",
+        "role": "assistant",
+        "model": "claude-3-7-sonnet-20250219",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "Let me analyze this document systematically according to the classification workflow. ## 1. TEXT EXTRACTION Here's the text I can extract from the document: ``` Asesorías y gestiones ambientales S.A.S. Obrando en calidad de Representante Legal el suscrito Jaime Alexander Franco Pedraza de la sociedad Asesorías y Gestiones Ambientales SAS con NIT 900.964.285-3 CERTIFICA Que la composición accionaria de la sociedad es como se detalla a continuación: ASESORÍAS Y GESTIONES AMBIENTALES SAS NIT 900.964.285-3 [Table with columns: NIT, Nombre del accionista, No. De acciones, Capital Pagado, %] 79770147 | JAIME ALEXANDER FRANCO PEDRAZA | 20.000 | 20.000.000 | 33,33% 51880385 | MARTHA LILIA CELIS GORDO | 20.000 | 20.000.000 | 33,33% 79958347 | GIOVANNY ANDRES VEGA FORERO | 20.000 | 20.000.000 | 33,33% La presente certificación se suscribe a los quince días de Enero de 2020. Atentamente [Signature] Jaime Alexander Franco Pedraza CC 79.770.147 Representante Legal Asesorías y gestiones Ambientales CALLE 3 D SUR No. 71 D 19 3004616 / 3184688021 talentohumano@agambientales.com ``` ## 2. PRIORITY CHECKS - Is it BLANK? No, it contains substantial text. - Is it LINK_ONLY? No, there's just one email address at the bottom but substantial other text. ## 3. ISSUER IDENTIFICATION - DIAN documents? No DIAN logo or mentions. - Chamber of Commerce? No \"Cámara de Comercio\" mentioned. - Corporate entity? Yes, this appears to be a document from a company called \"Asesorías y Gestiones Ambientales SAS\" - Individual identification authorities? No. ## 4. DOCUMENT FUNCTION ANALYSIS This document appears to be certifying the shareholder composition of a company. It lists three shareholders with their identification numbers, names, number of shares, paid capital, and percentage ownership (each owns 33.33%). The document is signed by the legal representative of the company. ## 5. CATEGORY CLASSIFICATION Let me evaluate in the specified order: - CECRL? No, this is not a personal identification document. - RUT? No, this is not a tax registration document from DIAN. - CERL? No, this is not a certificate from the Chamber of Commerce. - ACC? YES, this appears to match the ACC (Accionistas) category: - Has \"composición accionaria\" terminology - Lists shareholders with names and IDs - Shows ownership percentages (33.33% each) - Shows number of shares (20,000 each) - Shows capital contributions (20,000,000 each) - Is certified by the legal representative - RUB? No, not a DIAN beneficial ownership document. - POR_REVISAR? Not needed, as it matches ACC clearly. ## 6. CONFIDENCE VALIDATION - Strong evidence for ACC: - Clear indication of \"composición accionaria\" (shareholder composition) - Table with shareholder details including ownership percentages - Shows number of shares and capital paid - Certification by legal representative - Clear ownership structure purpose ## CONCLUSION This document clearly belongs to the ACC category (Documents that certify the ownership structure and shareholding composition of a company). Now I'll format the JSON output with the category and complete extracted text:",
+            "signature": "ErcBCkgIBxABGAIiQMtxQ8J1S6QkYY3rAfsxTAHXGXkF3cNg/be4rinNwzjANPt5OieaTZl39kzze/qiio9Wwqo9lSRBSUgQd4kyVUESDEywDX5jjNPbFEWJWhoMixZMLhXZHw1/5UfkIjAJVTqNn6pFfkrZanrRfYlD0Z7rbKKFnBlKF/ZrnIY06fAF5agGs7d7GW5Q76f59tIqHXA/MWRp3l4u7Tf8poCH0ZYTwZi1ODlsojjRzkeYGAI="
+          },
+          {
+            "type": "text",
+            "text": "```json { \"category\": \"ACC\", \"text\": \"Asesorías y gestiones ambientales S.A.S.\\n\\nObrando en calidad de Representante Legal el suscrito Jaime Alexander Franco Pedraza de la sociedad Asesorías y Gestiones Ambientales SAS con NIT 900.964.285-3\\n\\nCERTIFICA\\n\\nQue la composición accionaria de la sociedad es como se detalla a continuación:\\n\\nASESORÍAS Y GESTIONES AMBIENTALES SAS\\nNIT 900.964.285-3\\n\\nNIT Nombre del accionista No. De Capital %\\n acciones Pagado\\n\\n79770147 JAIME ALEXANDER FRANCO 20.000 20.000.000 33,33%\\n PEDRAZA\\n\\n51880385 MARTHA LILIA CELIS GORDO 20.000 20.000.000 33,33%\\n\\n79958347 GIOVANNY ANDRES VEGA FORERO 20.000 20.000.000 33,33%\\n\\nLa presente certificación se suscribe a los quince días de Enero de 2020.\\n\\nAtentamente\\n\\nJaime Alexander Franco Pedraza\\nCC 79.770.147\\nRepresentante Legal\\nAsesorías y gestiones Ambientales\\n\\nCALLE 3 D SUR No. 71 D 19\\n3004616 / 3184688021\\ntalentohumano@agambientales.com\" } ```"
+          }
+        ],
+        "stop_reason": "end_turn",
+        "stop_sequence": null,
+        "usage": {
+          "input_tokens": 207,
+          "cache_creation_input_tokens": 4475,
+          "cache_read_input_tokens": 0,
+          "output_tokens": 1369
+        }
+      },
+      "model_id": "us.anthropic.claude-3-7-sonnet-20250219-v1:0",
+      "api_used": "invoke_model",
+      "model_params": {
+        "max_tokens": 8000,
+        "top_p": 1,
+        "temperature": 1,
+        "thinking": {
+          "type": "enabled",
+          "budget_tokens": 4096
+        }
+      }
+    },
+    "expected_category": "ACC",
+    "model_used": "us.anthropic.claude-3-7-sonnet-20250219-v1:0",
+    "api_used": "invoke_model",
+    "pdf_info": {
+      "original_size": 196153,
+      "first_page_size": 196072,
+      "is_scanned": true
+    }
+  },
+  "extraction_result": {
+    "extraction_data": {
+      "path": "ACC/900964285/164_CA_2020-02-29.pdf",
+      "result": {
+        "companyName": "Asesorías y Gestiones Ambientales SAS",
+        "documentCategory": "Equity Composition",
+        "taxId": "900.964.285-3",
+        "country": "Colombia",
+        "identificationDetails": {
+          "source": "text_reference",
+          "indicators": [
+            "NIT format 900.964.285-3 (Colombian)",
+            "CC ID format (Colombian citizen ID)",
+            "CALLE 3 D SUR No. 71 D 19 (Colombian address format)"
+          ],
+          "conflictingSources": [],
+          "requiresReview": "false"
+        },
+        "relatedParties": [
+          {
+            "type": "person",
+            "firstName": "Jaime Alexander",
+            "lastName": "Franco Pedraza",
+            "identificationType": "C.C.",
+            "identificationNumber": "79.770.147",
+            "relationshipType": "Shareholder",
+            "participationPercentage": "33.33",
+            "timeFound": "1",
+            "job": "Representante Legal"
+          },
+          {
+            "type": "person",
+            "firstName": "Martha Lilia",
+            "lastName": "Celis Gordo",
+            "identificationType": "C.C.",
+            "identificationNumber": "51880385",
+            "relationshipType": "Shareholder",
+            "participationPercentage": "33.33",
+            "timeFound": "1",
+            "job": ""
+          },
+          {
+            "type": "person",
+            "firstName": "Giovanny Andres",
+            "lastName": "Vega Forero",
+            "identificationType": "C.C.",
+            "identificationNumber": "79958347",
+            "relationshipType": "Shareholder",
+            "participationPercentage": "33.33",
+            "timeFound": "1",
+            "job": ""
+          }
+        ]
+      },
+      "documentType": "company",
+      "documentNumber": "900964285",
+      "category": "ACC"
+    },
+    "raw_response": {
+      "output": {
+        "message": {
+          "content": [
+            {
+              "text": "```json { \"result\": { \"companyName\": \"Asesorías y Gestiones Ambientales SAS\", \"documentCategory\": \"Equity Composition\", \"taxId\": \"900.964.285-3\", \"country\": \"Colombia\", \"identificationDetails\": { \"source\": \"text_reference\", \"indicators\": [ \"NIT format 900.964.285-3 (Colombian)\", \"CC ID format (Colombian citizen ID)\", \"CALLE 3 D SUR No. 71 D 19 (Colombian address format)\" ], \"conflictingSources\": [], \"requiresReview\": \"false\" }, \"relatedParties\": [ { \"type\": \"person\", \"firstName\": \"Jaime Alexander\", \"lastName\": \"Franco Pedraza\", \"identificationType\": \"C.C.\", \"identificationNumber\": \"79.770.147\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"33.33\", \"timeFound\": \"1\", \"job\": \"Representante Legal\" }, { \"type\": \"person\", \"firstName\": \"Martha Lilia\", \"lastName\": \"Celis Gordo\", \"identificationType\": \"C.C.\", \"identificationNumber\": \"51880385\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"33.33\", \"timeFound\": \"1\", \"job\": \"\" }, { \"type\": \"person\", \"firstName\": \"Giovanny Andres\", \"lastName\": \"Vega Forero\", \"identificationType\": \"C.C.\", \"identificationNumber\": \"79958347\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"33.33\", \"timeFound\": \"1\", \"job\": \"\" } ] }, \"documentType\": \"company\", \"category\": \"ACC\" } ```"
+            }
+          ]
+        }
+      },
+      "stopReason": "end_turn",
+      "usage": {
+        "input_tokens": 425,
+        "cache_creation_input_tokens": 6074,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 1424
+      },
+      "ResponseMetadata": {
+        "RequestId": "373d0a4e-7079-4b6d-9bcb-7d65682bdb73",
+        "HTTPStatusCode": 200,
+        "HTTPHeaders": {
+          "date": "Thu, 28 Aug 2025 08:47:52 GMT",
+          "content-type": "application/json",
+          "content-length": "5694",
+          "connection": "keep-alive",
+          "x-amzn-requestid": "373d0a4e-7079-4b6d-9bcb-7d65682bdb73",
+          "x-amzn-bedrock-invocation-latency": "29460",
+          "x-amzn-bedrock-cache-write-input-token-count": "6074",
+          "x-amzn-bedrock-cache-read-input-token-count": "0",
+          "x-amzn-bedrock-output-token-count": "1424",
+          "x-amzn-bedrock-input-token-count": "425"
+        },
+        "RetryAttempts": 0
+      },
+      "raw_anthropic_response": {
+        "id": "msg_bdrk_01AXJhZ9fawbUPEXQASY1ZgX",
+        "type": "message",
+        "role": "assistant",
+        "model": "claude-3-7-sonnet-20250219",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "Let me analyze this document step by step and extract all the necessary information according to the provided rules and schema. ## Step 1: Document Analysis - This appears to be an equity composition certificate (\"composición accionaria\") from a Colombian company - The document is in Spanish - There's a letterhead for \"Asesorías y gestiones ambientales\" SAS - The document certifies the shareholding structure of the company - The document is signed by \"Jaime Alexander Franco Pedraza\" who is identified as the legal representative - The date on the document is January 15, 2020 ## Step 2: Root Level Extraction **Company Name:** The main reporting company is \"Asesorías y Gestiones Ambientales SAS\" as seen in the letterhead and repeated in the body of the document. **Tax ID:** The NIT (Colombian tax ID) is clearly stated multiple times as \"900.964.285-3\" **Country:** We can determine this is Colombia based on: 1. The use of \"NIT\" as tax ID type (matches Colombia in the hash tables) 2. The address format mentions \"CALLE 3 D SUR No. 71 D 19\" which is a Colombian address format 3. The document contains \"CC\" which is a Colombian ID type 4. The format of the tax ID follows Colombian patterns **Document Category:** Fixed as \"Equity Composition\" per instructions **Document Type:** Fixed as \"company\" per instructions **Category:** Fixed as \"ACC\" per instructions ## Step 3: Related Parties Processing I see a table with three shareholders, all appear to be individuals: 1. **JAIME ALEXANDER FRANCO PEDRAZA** - Type: person - ID Type: CC (Colombian citizen ID) - ID Number: 79770147 - Participation: 33.33% - No. of Shares: 20,000 - Capital: 20,000,000 - Role: Representante Legal (Legal Representative) 2. **MARTHA LILIA CELIS GORDO** - Type: person - ID Number: 51880385 - ID Type: not explicitly stated, but based on Colombian context and number format, likely CC - Participation: 33.33% - No. of Shares: 20,000 - Capital: 20,000,000 - Role: Not specified 3. **GIOVANNY ANDRES VEGA FORERO** - Type: person - ID Number: 79958347 - ID Type: not explicitly stated, but based on Colombian context and number format, likely CC - Participation: 33.33% - No. of Shares: 20,000 - Capital: 20,000,000 - Role: Not specified ## Step 4: Validation & Cross-checking - The tax ID type \"NIT\" aligns with identified country \"Colombia\" ✓ - All identification types appear to align with Colombia's standards ✓ - The percentages add up to 99.99% (which is essentially 100%, likely due to rounding) ✓ - For MARTHA LILIA CELIS GORDO and GIOVANNY ANDRES VEGA FORERO, the ID type isn't explicitly stated but is likely \"C.C.\" based on Colombian context and number pattern. According to the Colombia ID type rules, if the number matches /^[1-9][0-9]{3,9}$/, which these do, it's classified as C.C. - For conflictingSources, I don't see any conflicts - For identificationType for the shareholders, Colombia's system shows CC is appropriate for citizens, so I'll use that for all three people since they have standard Colombian citizen ID formats Now I'll construct the final JSON:",
+            "signature": "ErcBCkgIBxABGAIiQHcgyB1JAQ/9bYjImlSVS7JE+AqYidXZLjMdSWyMvdzRWJ3bu8wz85L7siTizuUrHujwrOXtaSvW3epM34TCnHASDG6R+xMHsxmmOii7shoMxVBfPxdAtFlBqhrSIjCXNKbdoCjQY5s1tjlD0ywUTJtCJEhXlZa7TdiZ52+kQiO1xWPBDBCdvomsnKDu2W0qHfX8wSwWAyhucKTk2N7bcicVwfdJJO9Dgune2GbGGAI="
+          },
+          {
+            "type": "text",
+            "text": "```json { \"result\": { \"companyName\": \"Asesorías y Gestiones Ambientales SAS\", \"documentCategory\": \"Equity Composition\", \"taxId\": \"900.964.285-3\", \"country\": \"Colombia\", \"identificationDetails\": { \"source\": \"text_reference\", \"indicators\": [ \"NIT format 900.964.285-3 (Colombian)\", \"CC ID format (Colombian citizen ID)\", \"CALLE 3 D SUR No. 71 D 19 (Colombian address format)\" ], \"conflictingSources\": [], \"requiresReview\": \"false\" }, \"relatedParties\": [ { \"type\": \"person\", \"firstName\": \"Jaime Alexander\", \"lastName\": \"Franco Pedraza\", \"identificationType\": \"C.C.\", \"identificationNumber\": \"79.770.147\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"33.33\", \"timeFound\": \"1\", \"job\": \"Representante Legal\" }, { \"type\": \"person\", \"firstName\": \"Martha Lilia\", \"lastName\": \"Celis Gordo\", \"identificationType\": \"C.C.\", \"identificationNumber\": \"51880385\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"33.33\", \"timeFound\": \"1\", \"job\": \"\" }, { \"type\": \"person\", \"firstName\": \"Giovanny Andres\", \"lastName\": \"Vega Forero\", \"identificationType\": \"C.C.\", \"identificationNumber\": \"79958347\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"33.33\", \"timeFound\": \"1\", \"job\": \"\" } ] }, \"documentType\": \"company\", \"category\": \"ACC\" } ```"
+          }
+        ],
+        "stop_reason": "end_turn",
+        "stop_sequence": null,
+        "usage": {
+          "input_tokens": 425,
+          "cache_creation_input_tokens": 6074,
+          "cache_read_input_tokens": 0,
+          "output_tokens": 1424
+        }
+      },
+      "model_id": "us.anthropic.claude-3-7-sonnet-20250219-v1:0",
+      "api_used": "invoke_model",
+      "model_params": {
+        "max_tokens": 8000,
+        "top_p": 1,
+        "temperature": 1,
+        "thinking": {
+          "type": "enabled",
+          "budget_tokens": 4096
+        }
+      }
+    },
+    "model_used": "us.anthropic.claude-3-7-sonnet-20250219-v1:0",
+    "api_used": "invoke_model"
+  }
+}

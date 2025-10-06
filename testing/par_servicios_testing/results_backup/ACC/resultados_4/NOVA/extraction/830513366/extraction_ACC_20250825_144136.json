@@ -1,0 +1,102 @@
+{
+  "extraction_data": {
+    "path": "ACC/830513366/240_CA_2020-02-29.pdf",
+    "result": {
+      "companyName": "NEWSAT S.A.S.",
+      "documentType": "Equity Composition",
+      "taxId": "830.513.366-3",
+      "country": "Colombia",
+      "identificationDetails": {
+        "source": "text_reference",
+        "indicators": [
+          "Colombia"
+        ],
+        "conflictingSources": [],
+        "requiresReview": false
+      },
+      "relatedParties": [
+        {
+          "firstName": "Carlos Enrique",
+          "lastName": "Rosero Cerón",
+          "identificationType": "CC/NIT",
+          "identificationNumber": "6386024",
+          "relationshipType": "Shareholder",
+          "participationPercentage": "40%",
+          "timeFound": 1,
+          "job": ""
+        },
+        {
+          "firstName": "Shai",
+          "lastName": "Bercovici",
+          "identificationType": "CC/NIT",
+          "identificationNumber": "301680",
+          "relationshipType": "Shareholder",
+          "participationPercentage": "40%",
+          "timeFound": 1,
+          "job": ""
+        },
+        {
+          "firstName": "Diego Alejandro",
+          "lastName": "Sálazar Vásquez",
+          "identificationType": "CC/NIT",
+          "identificationNumber": "91499446",
+          "relationshipType": "Shareholder",
+          "participationPercentage": "20%",
+          "timeFound": 1,
+          "job": ""
+        }
+      ]
+    },
+    "document_type": "company",
+    "document_number": "830513366",
+    "category": "ACC",
+    "confidenceScores": {
+      "companyName": 95,
+      "taxId": 95,
+      "country": 95,
+      "relatedParties": 90
+    }
+  },
+  "raw_response": {
+    "ResponseMetadata": {
+      "RequestId": "c7a33072-67ee-4d45-a1a7-b457a579b392",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Mon, 25 Aug 2025 19:41:35 GMT",
+        "content-type": "application/json",
+        "content-length": "1924",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "c7a33072-67ee-4d45-a1a7-b457a579b392"
+      },
+      "RetryAttempts": 0
+    },
+    "output": {
+      "message": {
+        "role": "assistant",
+        "content": [
+          {
+            "text": "```json { \"path\": \"ACC/830513366/240_CA_2020-02-29.pdf\", \"result\": { \"companyName\": \"NEWSAT S.A.S.\", \"documentType\": \"Equity Composition\", \"taxId\": \"830.513.366-3\", \"country\": \"Colombia\", \"identificationDetails\": { \"source\": \"text_reference\", \"indicators\": [ \"Colombia\" ], \"conflictingSources\": [], \"requiresReview\": false }, \"relatedParties\": [ { \"firstName\": \"Carlos Enrique\", \"lastName\": \"Rosero Cerón\", \"identificationType\": \"CC/NIT\", \"identificationNumber\": \"6386024\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"40%\", \"timeFound\": 1, \"job\": \"\" }, { \"firstName\": \"Shai\", \"lastName\": \"Bercovici\", \"identificationType\": \"CC/NIT\", \"identificationNumber\": \"301680\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"40%\", \"timeFound\": 1, \"job\": \"\" }, { \"firstName\": \"Diego Alejandro\", \"lastName\": \"Sálazar Vásquez\", \"identificationType\": \"CC/NIT\", \"identificationNumber\": \"91499446\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"20%\", \"timeFound\": 1, \"job\": \"\" } ] }, \"document_type\": \"company\", \"document_number\": \"830513366\", \"category\": \"ACC\", \"confidenceScores\": { \"companyName\": 95, \"taxId\": 95, \"country\": 95, \"relatedParties\": 90 } } ```"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "inputTokens": 8569,
+      "outputTokens": 462,
+      "totalTokens": 9031
+    },
+    "metrics": {
+      "latencyMs": 7921
+    },
+    "model_id": "us.amazon.nova-pro-v1:0",
+    "api_used": "converse",
+    "model_params": {
+      "maxTokens": 8000,
+      "topP": 1,
+      "temperature": 0
+    }
+  },
+  "model_used": "us.amazon.nova-pro-v1:0",
+  "api_used": "converse"
+}

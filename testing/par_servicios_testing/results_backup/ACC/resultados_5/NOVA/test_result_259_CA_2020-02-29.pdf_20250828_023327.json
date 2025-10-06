@@ -1,0 +1,189 @@
+{
+  "document_name": "259_CA_2020-02-29.pdf",
+  "category": "ACC",
+  "classification_success": true,
+  "extraction_success": true,
+  "overall_success": true,
+  "timestamp": "2025-08-28T02:33:11.401957",
+  "classification_result": {
+    "classification_data": {
+      "category": "ACC",
+      "text": "cotel integración avanzada EL SUSCRITO REVISOR FISCAL DE LA SOCIEDAD COTEL S.A.S NIT: 800.122.811-2 CERTIFICA QUE: De acuerdo con el Acta No. 083 de la Asamblea General Ordinaria de Accionistas de Cotel S.A.S de fecha marzo 29 de 2022, la nueva composición accionaria quedó registrada así: Accionista Documento Identificación No. de Acciones % de Participación James Herney Quijano Morán 16.758.096 5.740.000.000 82% María del Pilar Zuluaga Marín 66.901.361 700.000.000 10% Nicolle Dayana Quijano Zuluaga 1.107.89.788 210.000.000 3% Juan Pablo Quijano Zuluaga 1.144.109.912 210.000.000 3% Cotel S.A.S 800.122.811-2 140.000.000 2% Total 7.000.000.000 100% La nueva composición accionaria fue registrada en los libros contables, así mismo fue actualizado el libro de Registro de Accionistas. La presente certificación se expide en Santiago de Cali a los cinco (05) días del mes de febrero de 2024. Gustavo Adolfo Luna Salazar Revisor Fiscal TP No. 77391-T Miembro de Bloodhound Consulting Group SAS www.cotel.com.co",
+      "document_number": "800122811",
+      "path": "ACC/800122811/259_CA_2020-02-29.pdf"
+    },
+    "raw_response": {
+      "ResponseMetadata": {
+        "RequestId": "84a5ae50-04b1-44b4-8bc6-f07b46b66e4f",
+        "HTTPStatusCode": 200,
+        "HTTPHeaders": {
+          "date": "Thu, 28 Aug 2025 07:33:17 GMT",
+          "content-type": "application/json",
+          "content-length": "1391",
+          "connection": "keep-alive",
+          "x-amzn-requestid": "84a5ae50-04b1-44b4-8bc6-f07b46b66e4f"
+        },
+        "RetryAttempts": 0
+      },
+      "output": {
+        "message": {
+          "role": "assistant",
+          "content": [
+            {
+              "text": "```json { \"category\": \"ACC\", \"text\": \"cotel integración avanzada EL SUSCRITO REVISOR FISCAL DE LA SOCIEDAD COTEL S.A.S NIT: 800.122.811-2 CERTIFICA QUE: De acuerdo con el Acta No. 083 de la Asamblea General Ordinaria de Accionistas de Cotel S.A.S de fecha marzo 29 de 2022, la nueva composición accionaria quedó registrada así: Accionista Documento Identificación No. de Acciones % de Participación James Herney Quijano Morán 16.758.096 5.740.000.000 82% María del Pilar Zuluaga Marín 66.901.361 700.000.000 10% Nicolle Dayana Quijano Zuluaga 1.107.89.788 210.000.000 3% Juan Pablo Quijano Zuluaga 1.144.109.912 210.000.000 3% Cotel S.A.S 800.122.811-2 140.000.000 2% Total 7.000.000.000 100% La nueva composición accionaria fue registrada en los libros contables, así mismo fue actualizado el libro de Registro de Accionistas. La presente certificación se expide en Santiago de Cali a los cinco (05) días del mes de febrero de 2024. Gustavo Adolfo Luna Salazar Revisor Fiscal TP No. 77391-T Miembro de Bloodhound Consulting Group SAS www.cotel.com.co\" } ```"
+            }
+          ]
+        }
+      },
+      "stopReason": "end_turn",
+      "usage": {
+        "inputTokens": 1790,
+        "outputTokens": 427,
+        "totalTokens": 4361,
+        "cacheReadInputTokens": 2144,
+        "cacheWriteInputTokens": 0
+      },
+      "metrics": {
+        "latencyMs": 7024
+      },
+      "model_id": "us.amazon.nova-pro-v1:0",
+      "api_used": "converse",
+      "model_params": {
+        "maxTokens": 8000,
+        "topP": 1,
+        "temperature": 0
+      }
+    },
+    "expected_category": "ACC",
+    "model_used": "us.amazon.nova-pro-v1:0",
+    "api_used": "converse",
+    "pdf_info": {
+      "original_size": 250434,
+      "first_page_size": 250244,
+      "is_scanned": true
+    }
+  },
+  "extraction_result": {
+    "extraction_data": {
+      "path": "ACC/800122811/259_CA_2020-02-29.pdf",
+      "result": {
+        "companyName": "COTEL S.A.S.",
+        "documentCategory": "Equity Composition",
+        "taxId": "800122-811-2",
+        "country": "POR REVISAR",
+        "identificationDetails": {
+          "source": "taxId inference",
+          "indicators": [
+            "COTEL",
+            "800122-811-2"
+          ],
+          "conflictingSources": [
+            "Cannot determine country based on taxId alone"
+          ],
+          "requiresReview": "true"
+        },
+        "relatedParties": [
+          {
+            "type": "person",
+            "firstName": "James Herney",
+            "lastName": "Quijano Morán",
+            "identificationType": "TP",
+            "identificationNumber": "16.758.096",
+            "relationshipType": "Shareholder",
+            "participationPercentage": "82%",
+            "timeFound": "1",
+            "job": ""
+          },
+          {
+            "type": "person",
+            "firstName": "María del Pilar",
+            "lastName": "Zuluaga Marín",
+            "identificationType": "TP",
+            "identificationNumber": "66.901.361",
+            "relationshipType": "Shareholder",
+            "participationPercentage": "10%",
+            "timeFound": "1",
+            "job": ""
+          },
+          {
+            "type": "person",
+            "firstName": "Nicolle Dayana",
+            "lastName": "Quijano Zuluaga",
+            "identificationType": "TP",
+            "identificationNumber": "101.108.788",
+            "relationshipType": "Shareholder",
+            "participationPercentage": "3%",
+            "timeFound": "1",
+            "job": ""
+          },
+          {
+            "type": "person",
+            "firstName": "Juan Pablo",
+            "lastName": "Quijano Zuluaga",
+            "identificationType": "TP",
+            "identificationNumber": "1.144.109.912",
+            "relationshipType": "Shareholder",
+            "participationPercentage": "3%",
+            "timeFound": "1",
+            "job": ""
+          },
+          {
+            "type": "company",
+            "companyName": "COTEL S.A.S.",
+            "identificationType": "NIT",
+            "identificationNumber": "800.122.811-2",
+            "relationshipType": "Shareholder",
+            "participationPercentage": "2%",
+            "timeFound": "1",
+            "job": ""
+          }
+        ]
+      },
+      "documentType": "company",
+      "documentNumber": "800122811",
+      "category": "ACC"
+    },
+    "raw_response": {
+      "ResponseMetadata": {
+        "RequestId": "eee9f723-36ca-4a15-bb60-cc26bb249c14",
+        "HTTPStatusCode": 200,
+        "HTTPHeaders": {
+          "date": "Thu, 28 Aug 2025 07:33:26 GMT",
+          "content-type": "application/json",
+          "content-length": "2632",
+          "connection": "keep-alive",
+          "x-amzn-requestid": "eee9f723-36ca-4a15-bb60-cc26bb249c14"
+        },
+        "RetryAttempts": 0
+      },
+      "output": {
+        "message": {
+          "role": "assistant",
+          "content": [
+            {
+              "text": "```json { \"result\": { \"companyName\": \"COTEL S.A.S.\", \"documentCategory\": \"Equity Composition\", \"taxId\": \"800122-811-2\", \"country\": \"POR REVISAR\", \"identificationDetails\": { \"source\": \"taxId inference\", \"indicators\": [ \"COTEL\", \"800122-811-2\" ], \"conflictingSources\": [ \"Cannot determine country based on taxId alone\" ], \"requiresReview\": \"true\" }, \"relatedParties\": [ { \"type\": \"person\", \"firstName\": \"James Herney\", \"lastName\": \"Quijano Morán\", \"identificationType\": \"TP\", \"identificationNumber\": \"16.758.096\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"82%\", \"timeFound\": \"1\", \"job\": \"\" }, { \"type\": \"person\", \"firstName\": \"María del Pilar\", \"lastName\": \"Zuluaga Marín\", \"identificationType\": \"TP\", \"identificationNumber\": \"66.901.361\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"10%\", \"timeFound\": \"1\", \"job\": \"\" }, { \"type\": \"person\", \"firstName\": \"Nicolle Dayana\", \"lastName\": \"Quijano Zuluaga\", \"identificationType\": \"TP\", \"identificationNumber\": \"101.108.788\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"3%\", \"timeFound\": \"1\", \"job\": \"\" }, { \"type\": \"person\", \"firstName\": \"Juan Pablo\", \"lastName\": \"Quijano Zuluaga\", \"identificationType\": \"TP\", \"identificationNumber\": \"1.144.109.912\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"3%\", \"timeFound\": \"1\", \"job\": \"\" }, { \"type\": \"company\", \"companyName\": \"COTEL S.A.S.\", \"identificationType\": \"NIT\", \"identificationNumber\": \"800.122.811-2\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"2%\", \"timeFound\": \"1\", \"job\": \"\" } ] }, \"documentType\": \"company\", \"category\": \"ACC\" } ```"
+            }
+          ]
+        }
+      },
+      "stopReason": "end_turn",
+      "usage": {
+        "inputTokens": 5407,
+        "outputTokens": 598,
+        "totalTokens": 6005
+      },
+      "metrics": {
+        "latencyMs": 8635
+      },
+      "model_id": "us.amazon.nova-pro-v1:0",
+      "api_used": "converse",
+      "model_params": {
+        "maxTokens": 8000,
+        "topP": 1,
+        "temperature": 0
+      }
+    },
+    "model_used": "us.amazon.nova-pro-v1:0",
+    "api_used": "converse"
+  }
+}

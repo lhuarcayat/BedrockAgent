@@ -1,0 +1,185 @@
+{
+  "document_name": "79474197_2020-02-29.pdf",
+  "category": "CECRL",
+  "classification_success": true,
+  "extraction_success": true,
+  "overall_success": true,
+  "timestamp": "2025-08-28T10:45:24.439137",
+  "classification_result": {
+    "classification_data": {
+      "category": "CECRL",
+      "text": "REPUBLICA DE COLOMBIA IDENTIFICACION PERSONAL CEDULA DE CIUDADANIA NUMERO 79.474.197 TOVAR OSORIO APELLIDOS ALEXANDER NOMBRES FECHA DE NACIMIENTO 13-ENE-1969 BOGOTA D.C. (CUNDINAMARCA) LUGAR DE NACIMIENTO 1.70 ESTATURA O+ G.S RH M SEXO 31-MAR-1987 BOGOTA D.C. FECHA Y LUGAR DE EXPEDICION",
+      "document_number": "900285194",
+      "path": "CECRL/900285194/79474197_2020-02-29.pdf"
+    },
+    "raw_response": {
+      "output": {
+        "message": {
+          "content": [
+            {
+              "text": "```json { \"category\": \"CECRL\", \"text\": \"REPUBLICA DE COLOMBIA\\nIDENTIFICACION PERSONAL\\nCEDULA DE CIUDADANIA\\nNUMERO 79.474.197\\nTOVAR OSORIO\\nAPELLIDOS\\nALEXANDER\\nNOMBRES\\nFECHA DE NACIMIENTO 13-ENE-1969\\nBOGOTA D.C.\\n(CUNDINAMARCA)\\nLUGAR DE NACIMIENTO\\n1.70\\nESTATURA\\nO+\\nG.S RH\\nM\\nSEXO\\n31-MAR-1987 BOGOTA D.C.\\nFECHA Y LUGAR DE EXPEDICION\" } ```"
+            }
+          ]
+        }
+      },
+      "stopReason": "end_turn",
+      "usage": {
+        "input_tokens": 9,
+        "cache_creation_input_tokens": 4475,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 1011
+      },
+      "ResponseMetadata": {
+        "RequestId": "347cb77f-d344-4558-b7eb-47691f96483d",
+        "HTTPStatusCode": 200,
+        "HTTPHeaders": {
+          "date": "Thu, 28 Aug 2025 15:45:46 GMT",
+          "content-type": "application/json",
+          "content-length": "4237",
+          "connection": "keep-alive",
+          "x-amzn-requestid": "347cb77f-d344-4558-b7eb-47691f96483d",
+          "x-amzn-bedrock-invocation-latency": "22797",
+          "x-amzn-bedrock-cache-write-input-token-count": "4475",
+          "x-amzn-bedrock-cache-read-input-token-count": "0",
+          "x-amzn-bedrock-output-token-count": "1011",
+          "x-amzn-bedrock-input-token-count": "9"
+        },
+        "RetryAttempts": 0
+      },
+      "raw_anthropic_response": {
+        "id": "msg_bdrk_01DG2ZPGNMjskBYuMTuwPn8V",
+        "type": "message",
+        "role": "assistant",
+        "model": "claude-3-7-sonnet-20250219",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "Let me analyze this document carefully according to the classification workflow: ### 1. TEXT EXTRACTION From the provided PDF document, I can extract the following text: - \"REPUBLICA DE COLOMBIA\" - \"IDENTIFICACION PERSONAL\" - \"CEDULA DE CIUDADANIA\" - \"NUMERO 79.474.197\" - \"TOVAR OSORIO\" (Apellidos/Surname) - \"ALEXANDER\" (Nombres/Name) - \"FECHA DE NACIMIENTO 13-ENE-1969\" (Date of Birth) - \"BOGOTA D.C. (CUNDINAMARCA)\" (Place of birth) - \"LUGAR DE NACIMIENTO\" - \"1.70\" (Height) - \"O+\" (Blood type) - \"M\" (Sex/Gender) - \"31-MAR-1987 BOGOTA D.C.\" (Issue date and place) - \"FECHA Y LUGAR DE EXPEDICION\" The document contains a photograph of a person, a signature, and a fingerprint. There's also a barcode at the bottom of the ID card. ### 2. PRIORITY CHECKS This is not a BLANK document as it contains meaningful content. This is not a LINK_ONLY document as it contains no hyperlinks/URLs. ### 3. ISSUER IDENTIFICATION The document is issued by \"REPUBLICA DE COLOMBIA\" and appears to be a government-issued identification card (\"CEDULA DE CIUDADANIA\"). This is not from DIAN or Chamber of Commerce. This is from a government individual identification authority. ### 4. DOCUMENT FUNCTION ANALYSIS This is clearly a personal identification document for an individual. It contains personal biographical data such as name, birth date, place of birth, height, blood type, and gender. It includes security elements like a photograph, signature, and fingerprint. It is not a corporate document, tax/regulatory compliance document, or ownership structure document. ### 5. CATEGORY CLASSIFICATION Following our evaluation order: - CECRL: This appears to be an official personal identification document (cédula) which matches the CECRL category. However, to properly classify as CECRL, I need to confirm that this person is a legal representative of a company, which is not evident from the document itself. - Since I cannot confirm the legal representative status, this document is more accurately a personal identification document without the corporate representation context. ### 6. CONFIDENCE VALIDATION The document clearly shows a Colombian \"Cédula de Ciudadanía\" which is a personal identification document. It has all the must-have indicators for a personal ID: - Individual identification terminology: \"IDENTIFICACION PERSONAL\", \"CEDULA DE CIUDADANIA\" - Personal biographical data: birth date/place, blood type, gender - Individual photo, signature, fingerprint - Government-issued personal ID number - Security elements: barcode, official format However, there is no indication that this person is a legal representative of a company, which is a requirement for the CECRL category. The document only shows personal identification without any corporate context. Since this does not fit clearly into any of the defined categories (it's a personal ID but without the corporate representation context), I should classify it as POR_REVISAR. ### Final classification: Since this is a personal identification document but doesn't clearly fit the CECRL category without evidence of corporate representation, I'll classify it as POR_REVISAR.",
+            "signature": "ErcBCkgIBxABGAIiQBmFD9cXSXmO8AQN1N3XMlVfQBwVR3jcwmSQhwlrjO0arjvqot+19uUr1bf5uwCr8nm5iTWHbmXzCvDYVmOpul0SDJRy4OqSLwXmJXEjGhoMhClCacTLQQ6hkEPLIjB++PDF5x7oeWSt9dqUByX11nxUyfmmqiEJmC1ae9XN4ZebGoUhElTcHBb751i3YpkqHUsSt6tgDjL0ZH4WdXs49rO2/HDhkfcu3XFTJ1kgGAI="
+          },
+          {
+            "type": "text",
+            "text": "```json { \"category\": \"CECRL\", \"text\": \"REPUBLICA DE COLOMBIA\\nIDENTIFICACION PERSONAL\\nCEDULA DE CIUDADANIA\\nNUMERO 79.474.197\\nTOVAR OSORIO\\nAPELLIDOS\\nALEXANDER\\nNOMBRES\\nFECHA DE NACIMIENTO 13-ENE-1969\\nBOGOTA D.C.\\n(CUNDINAMARCA)\\nLUGAR DE NACIMIENTO\\n1.70\\nESTATURA\\nO+\\nG.S RH\\nM\\nSEXO\\n31-MAR-1987 BOGOTA D.C.\\nFECHA Y LUGAR DE EXPEDICION\" } ```"
+          }
+        ],
+        "stop_reason": "end_turn",
+        "stop_sequence": null,
+        "usage": {
+          "input_tokens": 9,
+          "cache_creation_input_tokens": 4475,
+          "cache_read_input_tokens": 0,
+          "output_tokens": 1011
+        }
+      },
+      "model_id": "us.anthropic.claude-3-7-sonnet-20250219-v1:0",
+      "api_used": "invoke_model",
+      "model_params": {
+        "max_tokens": 8000,
+        "top_p": 1,
+        "temperature": 1,
+        "thinking": {
+          "type": "enabled",
+          "budget_tokens": 4096
+        }
+      }
+    },
+    "expected_category": "CECRL",
+    "model_used": "us.anthropic.claude-3-7-sonnet-20250219-v1:0",
+    "api_used": "invoke_model",
+    "pdf_info": {
+      "original_size": 184804,
+      "first_page_size": 183392,
+      "is_scanned": true
+    }
+  },
+  "extraction_result": {
+    "extraction_data": {
+      "path": "CECRL/900285194/79474197_2020-02-29.pdf",
+      "result": {
+        "firstName": "ALEXANDER",
+        "lastName": "TOVAR OSORIO",
+        "country_issuer": "Colombia",
+        "nationality": "Colombia",
+        "identificationType": "Cédula de Ciudadanía",
+        "identificationNumber": "79.474.197",
+        "message": ""
+      },
+      "document_type": "person",
+      "documentNumber": "900285194",
+      "category": "CECRL"
+    },
+    "raw_response": {
+      "output": {
+        "message": {
+          "content": [
+            {
+              "text": "```json { \"result\": { \"firstName\": \"ALEXANDER\", \"lastName\": \"TOVAR OSORIO\", \"country_issuer\": \"Colombia\", \"nationality\": \"Colombia\", \"identificationType\": \"Cédula de Ciudadanía\", \"identificationNumber\": \"79.474.197\", \"message\": \"\" }, \"document_type\": \"person\", \"category\": \"CECRL\" } ```"
+            }
+          ]
+        }
+      },
+      "stopReason": "end_turn",
+      "usage": {
+        "input_tokens": 10,
+        "cache_creation_input_tokens": 5982,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 682
+      },
+      "ResponseMetadata": {
+        "RequestId": "ddcd6097-7ae9-4fe4-ae0d-c2c4e1a59bf0",
+        "HTTPStatusCode": 200,
+        "HTTPHeaders": {
+          "date": "Thu, 28 Aug 2025 15:46:04 GMT",
+          "content-type": "application/json",
+          "content-length": "3095",
+          "connection": "keep-alive",
+          "x-amzn-requestid": "ddcd6097-7ae9-4fe4-ae0d-c2c4e1a59bf0",
+          "x-amzn-bedrock-invocation-latency": "17230",
+          "x-amzn-bedrock-cache-write-input-token-count": "5982",
+          "x-amzn-bedrock-cache-read-input-token-count": "0",
+          "x-amzn-bedrock-output-token-count": "682",
+          "x-amzn-bedrock-input-token-count": "10"
+        },
+        "RetryAttempts": 0
+      },
+      "raw_anthropic_response": {
+        "id": "msg_bdrk_01My5u36VupKCMaZTKkUh7Kz",
+        "type": "message",
+        "role": "assistant",
+        "model": "claude-3-7-sonnet-20250219",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "I need to analyze the document images and extract the required information according to the schema. Let me carefully examine what is shown in the PDF: The document appears to be a Colombian identification card (\"Cédula de Ciudadanía\"). Let me extract the information systematically: 1. **Document Analysis:** - This is clearly a government-issued ID from Colombia - The document title states \"REPUBLICA DE COLOMBIA\" and \"IDENTIFICACION PERSONAL\" / \"CEDULA DE CIUDADANIA\" - The document contains two sides shown in the images (front and back) 2. **Field Extraction:** **firstName:** - The document shows \"ALEXANDER\" under \"NOMBRES\" - This is clearly the given name/first name field **lastName:** - The document shows \"TOVAR OSORIO\" under \"APELLIDOS\" - These are the surnames/last names **country_issuer:** - The document header clearly states \"REPUBLICA DE COLOMBIA\" - The issuing country is Colombia **nationality:** - While not explicitly stated, the document type (Cédula de Ciudadanía) is for Colombian citizens - The nationality can be inferred as Colombia - The birth place shown is \"BOGOTA D.C. (CUNDINAMARCA)\" which is in Colombia **identificationType:** - The document states \"CEDULA DE CIUDADANIA\" - This is the official Colombian national ID card **identificationNumber:** - The document shows \"79.474.197\" next to \"NUMERO\" - This is the identification number **Additional Information (not in required schema but visible):** - Birth date: \"13-ENE-1969\" (January 13, 1969) - Birth place: \"BOGOTA D.C. (CUNDINAMARCA)\" - Height: \"1.70\" - Blood type: \"O+\" - Sex: \"M\" (Male) - Issue date: \"31-MAR-1987 BOGOTA D.C.\" 3. **Final Validation:** - All required fields have been identified - Document is a valid government-issued ID - No contradictions or issues detected - Message field can remain empty as there are no issues to report Now I'll prepare the JSON output according to the required schema:",
+            "signature": "ErcBCkgIBxABGAIiQEn5J+gkusfOtqfC5etX0vMZGc0OTqfWkeN0/7Lb9MQuiJaWeBaCPAIOHncUcTrWEVAoGhVht7JMH0xjiPOIGWsSDMR0TZnYPb8VNSCbnRoMvOf64v3H5Hd9+UOvIjC+ssmuidnBC0K8pdei5C1E2iJrdsNGxqldNtBTEzhJBbi3DJfX/b/Iox6ME6LHb5wqHRb2uff1afHRCIijwMCerrJ5Hvl4nZI0lvNQZyI9GAI="
+          },
+          {
+            "type": "text",
+            "text": "```json { \"result\": { \"firstName\": \"ALEXANDER\", \"lastName\": \"TOVAR OSORIO\", \"country_issuer\": \"Colombia\", \"nationality\": \"Colombia\", \"identificationType\": \"Cédula de Ciudadanía\", \"identificationNumber\": \"79.474.197\", \"message\": \"\" }, \"document_type\": \"person\", \"category\": \"CECRL\" } ```"
+          }
+        ],
+        "stop_reason": "end_turn",
+        "stop_sequence": null,
+        "usage": {
+          "input_tokens": 10,
+          "cache_creation_input_tokens": 5982,
+          "cache_read_input_tokens": 0,
+          "output_tokens": 682
+        }
+      },
+      "model_id": "us.anthropic.claude-3-7-sonnet-20250219-v1:0",
+      "api_used": "invoke_model",
+      "model_params": {
+        "max_tokens": 8000,
+        "top_p": 1,
+        "temperature": 1,
+        "thinking": {
+          "type": "enabled",
+          "budget_tokens": 4096
+        }
+      }
+    },
+    "model_used": "us.anthropic.claude-3-7-sonnet-20250219-v1:0",
+    "api_used": "invoke_model"
+  }
+}

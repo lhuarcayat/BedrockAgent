@@ -1,0 +1,109 @@
+{
+  "extraction_data": {
+    "result": {
+      "companyName": "PROCESS POINT COLOMBIA S.A.S.",
+      "documentCategory": "Equity Composition",
+      "taxId": "901.304.620-0",
+      "country": "Colombia",
+      "identificationDetails": {
+        "source": "text_reference",
+        "indicators": [
+          "Bogotá D.C.",
+          "Colombia"
+        ],
+        "conflictingSources": [
+          "Name inconsistency found: table shows 'TODD RUDERFORTH' but text shows 'JAMIE TODD RUTHERFORD'"
+        ],
+        "requiresReview": "true"
+      },
+      "relatedParties": [
+        {
+          "type": "person",
+          "firstName": "Jamie Todd",
+          "lastName": "Rutherford",
+          "identificationType": "POR REVISAR",
+          "identificationNumber": "POR REVISAR",
+          "relationshipType": "Shareholder",
+          "participationPercentage": "100%",
+          "timeFound": "1",
+          "job": ""
+        }
+      ]
+    },
+    "documentType": "company",
+    "category": "ACC"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "{ \"result\": { \"companyName\": \"PROCESS POINT COLOMBIA S.A.S.\", \"documentCategory\": \"Equity Composition\", \"taxId\": \"901.304.620-0\", \"country\": \"Colombia\", \"identificationDetails\": { \"source\": \"text_reference\", \"indicators\": [ \"Bogotá D.C.\", \"Colombia\" ], \"conflictingSources\": [ \"Name inconsistency found: table shows 'TODD RUDERFORTH' but text shows 'JAMIE TODD RUTHERFORD'\" ], \"requiresReview\": \"true\" }, \"relatedParties\": [ { \"type\": \"person\", \"firstName\": \"Jamie Todd\", \"lastName\": \"Rutherford\", \"identificationType\": \"POR REVISAR\", \"identificationNumber\": \"POR REVISAR\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"100%\", \"timeFound\": \"1\", \"job\": \"\" } ] }, \"documentType\": \"company\", \"category\": \"ACC\" }"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 9,
+      "cache_creation_input_tokens": 6094,
+      "cache_read_input_tokens": 0,
+      "output_tokens": 1008
+    },
+    "ResponseMetadata": {
+      "RequestId": "2323d0b8-38cc-4246-8160-3570234313b0",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Fri, 29 Aug 2025 17:06:17 GMT",
+        "content-type": "application/json",
+        "content-length": "6766",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "2323d0b8-38cc-4246-8160-3570234313b0",
+        "x-amzn-bedrock-invocation-latency": "20925",
+        "x-amzn-bedrock-cache-write-input-token-count": "6094",
+        "x-amzn-bedrock-cache-read-input-token-count": "0",
+        "x-amzn-bedrock-output-token-count": "1008",
+        "x-amzn-bedrock-input-token-count": "9"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_01ADhis58SoTaFHLgLgHwiLd",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-sonnet-4-20250514",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Let me analyze this Spanish document step by step according to the field rules. **Document Analysis:** This is a \"CERTIFICACIÓN COMPOSICIÓN ACCIONARIA\" (Equity Composition Certification) document from Colombia. **Root Level Extraction:** 1. **companyName**: From the document header: \"COMPOSICIÓN ACCIONARIA PROCESS POINT COLOMBIA S.A.S.\" - so the company name is \"PROCESS POINT COLOMBIA S.A.S.\" 2. **taxId**: The document states \"con Nit. 901.304.620-0\" - so the tax ID is \"901.304.620-0\" 3. **country**: The document shows \"La presente certificación se expide en Bogotá D.C.\" (This certification is issued in Bogotá D.C.) which clearly identifies Colombia as the country. 4. **identificationDetails**: - source: \"text_reference\" (based on explicit mention of Bogotá D.C.) - indicators: [\"Bogotá D.C.\", \"Colombia\"] - conflictingSources: No conflicts apparent - requiresReview: Need to check if any fields require review **Related Parties Processing:** Looking at the table, I see: - ACCIONISTA ÚNICO (Single Shareholder): TODD RUDERFORTH - ACCIONES (Shares): 696 - PORCENTAJE (Percentage): 100% Then it mentions \"JAMIE TODD RUTHERFORD con domicilio en Texas, Estados Unidos de América; al ser el único accionista cuenta con el porcentaje de participación del 100% en la sociedad PROCESS POINT COLOMBIA S.A.S.\" So we have one shareholder: - Name: There's a discrepancy - the table shows \"TODD RUDERFORTH\" but the text shows \"JAMIE TODD RUTHERFORD\" - The names likely refer to the same person - Domicile is Texas, United States - 100% shareholder of the company - Individual shareholder with potential name variation - Identification type remains unspecified, marked as \"POR REVISAR\" Name discrepancy detected between document sources requires careful review. Tax identification appears valid, but name inconsistency triggers further validation needed.",
+          "signature": "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"
+        },
+        {
+          "type": "text",
+          "text": "{ \"result\": { \"companyName\": \"PROCESS POINT COLOMBIA S.A.S.\", \"documentCategory\": \"Equity Composition\", \"taxId\": \"901.304.620-0\", \"country\": \"Colombia\", \"identificationDetails\": { \"source\": \"text_reference\", \"indicators\": [ \"Bogotá D.C.\", \"Colombia\" ], \"conflictingSources\": [ \"Name inconsistency found: table shows 'TODD RUDERFORTH' but text shows 'JAMIE TODD RUTHERFORD'\" ], \"requiresReview\": \"true\" }, \"relatedParties\": [ { \"type\": \"person\", \"firstName\": \"Jamie Todd\", \"lastName\": \"Rutherford\", \"identificationType\": \"POR REVISAR\", \"identificationNumber\": \"POR REVISAR\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"100%\", \"timeFound\": \"1\", \"job\": \"\" } ] }, \"documentType\": \"company\", \"category\": \"ACC\" }"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 9,
+        "cache_creation_input_tokens": 6094,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 1008
+      }
+    },
+    "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 8000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+  "api_used": "invoke_model"
+}

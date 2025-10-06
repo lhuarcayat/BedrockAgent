@@ -1,0 +1,109 @@
+{
+  "extraction_data": {
+    "path": "ACC/901127166/169_CA_2020-02-29.pdf",
+    "result": {
+      "companyName": "TRITON LOGISTICA Y CONSTRUCCIONES SAS",
+      "documentCategory": "Equity Composition",
+      "taxId": "901.127.166 - 9",
+      "country": "Colombia",
+      "identificationDetails": {
+        "source": "id_analysis",
+        "indicators": [
+          "NIT format 901.127.166 - 9",
+          "Cédula format (Colombian ID)"
+        ],
+        "conflictingSources": [],
+        "requiresReview": "false"
+      },
+      "relatedParties": [
+        {
+          "type": "person",
+          "firstName": "ERNESTO JOSE",
+          "lastName": "CHALELA MARTINEZ",
+          "identificationType": "C.C.",
+          "identificationNumber": "9,287,800",
+          "relationshipType": "Shareholder",
+          "participationPercentage": "100",
+          "timeFound": "1",
+          "job": "Representante Legal"
+        }
+      ]
+    },
+    "documentType": "company",
+    "documentNumber": "901127166",
+    "category": "ACC"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "```json { \"result\": { \"companyName\": \"TRITON LOGISTICA Y CONSTRUCCIONES SAS\", \"documentCategory\": \"Equity Composition\", \"taxId\": \"901.127.166 - 9\", \"country\": \"Colombia\", \"identificationDetails\": { \"source\": \"id_analysis\", \"indicators\": [ \"NIT format 901.127.166 - 9\", \"Cédula format (Colombian ID)\" ], \"conflictingSources\": [], \"requiresReview\": \"false\" }, \"relatedParties\": [ { \"type\": \"person\", \"firstName\": \"ERNESTO JOSE\", \"lastName\": \"CHALELA MARTINEZ\", \"identificationType\": \"C.C.\", \"identificationNumber\": \"9,287,800\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"100\", \"timeFound\": \"1\", \"job\": \"Representante Legal\" } ] }, \"documentType\": \"company\", \"category\": \"ACC\" } ```"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 425,
+      "cache_creation_input_tokens": 6292,
+      "cache_read_input_tokens": 0,
+      "output_tokens": 1084
+    },
+    "ResponseMetadata": {
+      "RequestId": "0aa1170d-83a4-4cf7-9c0d-549360b5fee6",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Thu, 28 Aug 2025 08:50:34 GMT",
+        "content-type": "application/json",
+        "content-length": "4396",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "0aa1170d-83a4-4cf7-9c0d-549360b5fee6",
+        "x-amzn-bedrock-invocation-latency": "23467",
+        "x-amzn-bedrock-cache-write-input-token-count": "6292",
+        "x-amzn-bedrock-cache-read-input-token-count": "0",
+        "x-amzn-bedrock-output-token-count": "1084",
+        "x-amzn-bedrock-input-token-count": "425"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_01A18eL3NGjg98yTxnxWmxNE",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-3-7-sonnet-20250219",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Let's approach this systematically according to the extraction rules and workflow: ## Step 1: Document Analysis - The document appears to be an equity composition certificate for a Colombian company (based on NIT format) - The main reporting company is TRITON LOGISTICA Y CONSTRUCCIONES SAS - The document clearly shows a shareholder table with percentage ownership - The document is in Spanish language - There's a signature from a legal representative ## Step 2: Root Level Extraction - **companyName**: \"TRITON LOGISTICA Y CONSTRUCCIONES SAS\" (appears clearly in the header) - **documentCategory**: \"Equity Composition\" (fixed value) - **taxId**: \"901.127.166 - 9\" (appears in the format of a Colombian NIT) - **country**: \"Colombia\" (can be inferred from the NIT format and the document structure) - **documentType**: \"company\" (fixed value) - **category**: \"ACC\" (fixed value) ## Step 3: Related Parties Processing There appears to be only one shareholder: - ERNESTO JOSE CHALELA MARTINEZ - Identification number (CEDULA): 9,287,800 - Shares: 5,000 - Nominal value: 10,000 - Total value: 50,000,000 - Percentage: 100% This is clearly a person (not a company) based on the structure. The person is also identified as the \"REPRESENTANTE LEGAL\" (Legal Representative). For identificationDetails: - **source**: \"id_analysis\" (inferring from NIT format) - **indicators**: [\"NIT format 901.127.166 - 9\"] - **conflictingSources**: [] (none found) - **requiresReview**: \"false\" (all critical information is clear) ## Step 4: Validation & Cross-checking: - The taxId format (NIT XXX.XXX.XXX-X) matches Colombia - The identificationType \"C.C.\" for the person is in PERSON_ID[\"Colombia\"] - The percentage adds up to 100% - All required fields are present with clear data - No conflicts are found Now let's construct the JSON output: For relatedParties: - **type**: \"person\" - **firstName**: \"ERNESTO JOSE\" - **lastName**: \"CHALELA MARTINEZ\" - **identificationType**: \"C.C.\" (Colombian Cédula de Ciudadanía) - **identificationNumber**: \"9,287,800\" (preserve the format) - **relationshipType**: \"Shareholder\" - **participationPercentage**: \"100\" - **timeFound**: \"1\" (appears once in the table) - **job**: \"Representante Legal\" Let me confirm the format for identificationType: According to the Colombia ID type rules, the \"C.C.\" (Cédula de Ciudadanía) should be used if the ID number matches /^[1-9][0-9]{3,9}$/. \"9,287,800\" without commas is \"9287800\" which matches the pattern: it starts with a digit 1-9 and has 7 digits total, within the valid range. So the identificationType should be \"C.C.\" which is correct. Let me put this all together into the required JSON structure:",
+          "signature": "ErcBCkgIBxABGAIiQKuXKqrQ6BQsFt/f/ykUIFenlFTj511M0YhHjf4Soj8DOkY3G2cxi66IWpjLw8r9GvjYIIGWE77dMwTHUQ4IYm0SDGBbDZaaNJPzzyydixoMcYGFoBjz9N0bIx+lIjDdOjWInCdNTVZ2NsDFwtS08n6fDK/DiHt9W6fVPJ/R+HcSi71hScvtPDl2+yR/0voqHcXd6WwocCopN99AasL0GeOo5utpXGCFH2fej+H7GAI="
+        },
+        {
+          "type": "text",
+          "text": "```json { \"result\": { \"companyName\": \"TRITON LOGISTICA Y CONSTRUCCIONES SAS\", \"documentCategory\": \"Equity Composition\", \"taxId\": \"901.127.166 - 9\", \"country\": \"Colombia\", \"identificationDetails\": { \"source\": \"id_analysis\", \"indicators\": [ \"NIT format 901.127.166 - 9\", \"Cédula format (Colombian ID)\" ], \"conflictingSources\": [], \"requiresReview\": \"false\" }, \"relatedParties\": [ { \"type\": \"person\", \"firstName\": \"ERNESTO JOSE\", \"lastName\": \"CHALELA MARTINEZ\", \"identificationType\": \"C.C.\", \"identificationNumber\": \"9,287,800\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"100\", \"timeFound\": \"1\", \"job\": \"Representante Legal\" } ] }, \"documentType\": \"company\", \"category\": \"ACC\" } ```"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 425,
+        "cache_creation_input_tokens": 6292,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 1084
+      }
+    },
+    "model_id": "us.anthropic.claude-3-7-sonnet-20250219-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 8000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "model_used": "us.anthropic.claude-3-7-sonnet-20250219-v1:0",
+  "api_used": "invoke_model"
+}

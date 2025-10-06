@@ -1,0 +1,33 @@
+{
+  "ResponseMetadata": {
+    "RequestId": "eefe7d25-f245-4944-a649-8b70d8fb757e",
+    "HTTPStatusCode": 200,
+    "HTTPHeaders": {
+      "date": "Tue, 17 Jun 2025 14:30:18 GMT",
+      "content-type": "application/json",
+      "content-length": "1008",
+      "connection": "keep-alive",
+      "x-amzn-requestid": "eefe7d25-f245-4944-a649-8b70d8fb757e"
+    },
+    "RetryAttempts": 0
+  },
+  "output": {
+    "message": {
+      "role": "assistant",
+      "content": [
+        {
+          "text": "```json\n{\n  \"path\": \"s3://par-servicios-poc-dev-filling-desk/par-servicios-poc/RUT/800003837/942_2020-02-29.pdf\",\n  \"result\": {\n    \"companyName\": \"INSIGHT S.A.S.\",\n    \"country\": \"Colombia\",\n    \"documentType\": \"NIT\",\n    \"taxId\": \"800003837\",\n    \"verificationDigit\": \"3\",\n    \"personType\": \"Persona Jurídica\",\n    \"address\": \"Calle 15 # 88-64 Of. 722, Bogotá, D.C.\",\n    \"documentGenerationDate\": \"2013-03-11\"\n  },\n  \"confidenceScores\": {\n    \"companyName\": 95,\n    \"documentType\": 90,\n    \"country\": 100,\n    \"taxId\": 100,\n    \"verificationDigit\": 95,\n    \"personType\": 90,\n    \"address\": 85,\n    \"documentGenerationDate\": 90\n  },\n  \"document_type\": \"company\",\n  \"document_number\": \"800003837\",\n  \"category\": \"RUT\"\n}\n```"
+        }
+      ]
+    }
+  },
+  "stopReason": "end_turn",
+  "usage": {
+    "inputTokens": 7089,
+    "outputTokens": 297,
+    "totalTokens": 7386
+  },
+  "metrics": {
+    "latencyMs": 7147
+  }
+}

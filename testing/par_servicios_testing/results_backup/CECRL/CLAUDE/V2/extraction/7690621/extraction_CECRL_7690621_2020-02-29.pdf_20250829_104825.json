@@ -1,0 +1,88 @@
+{
+  "extraction_data": {
+    "result": {
+      "firstName": "LUIS KENNETH",
+      "lastName": "BERMUDEZ FILBERT",
+      "country_issuer": "Colombia",
+      "nationality": "Colombia",
+      "identificationType": "Cédula de Ciudadanía",
+      "identificationNumber": "7.690.621",
+      "message": ""
+    },
+    "document_type": "person",
+    "category": "CECRL"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "```json { \"result\": { \"firstName\": \"LUIS KENNETH\", \"lastName\": \"BERMUDEZ FILBERT\", \"country_issuer\": \"Colombia\", \"nationality\": \"Colombia\", \"identificationType\": \"Cédula de Ciudadanía\", \"identificationNumber\": \"7.690.621\", \"message\": \"\" }, \"document_type\": \"person\", \"category\": \"CECRL\" } ```"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 10,
+      "cache_creation_input_tokens": 5982,
+      "cache_read_input_tokens": 0,
+      "output_tokens": 573
+    },
+    "ResponseMetadata": {
+      "RequestId": "c86cf5ca-177f-4006-898e-332c1650c4f8",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Fri, 29 Aug 2025 15:48:25 GMT",
+        "content-type": "application/json",
+        "content-length": "4845",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "c86cf5ca-177f-4006-898e-332c1650c4f8",
+        "x-amzn-bedrock-invocation-latency": "12153",
+        "x-amzn-bedrock-cache-write-input-token-count": "5982",
+        "x-amzn-bedrock-cache-read-input-token-count": "0",
+        "x-amzn-bedrock-output-token-count": "573",
+        "x-amzn-bedrock-input-token-count": "10"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_01Wrp68RoqpLjxLRduEBN3xZ",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-sonnet-4-20250514",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Let me analyze this Colombian identification document step by step: 1. Document Structure Analysis: - This appears to be a Colombian \"CÉDULA DE CIUDADANÍA\" (Citizenship ID) from \"REPÚBLICA DE COLOMBIA\" - I can see official formatting and structure - There's an official photo and fingerprint - Clear government document indicators 2. Field Detection: Let me scan for the specific field labels: - I can see \"APELLIDOS\" which should map to lastName - I can see \"NOMBRES\" which should map to firstName - The ID number appears to be \"7.690.621\" - Birth information shows \"FECHA DE NACIMIENTO 13-AGO-1972\" - Birth place shows \"NEIVA (HUILA)\" - There's signature and official stamps 3. Text Extraction: - APELLIDOS: \"BERMUDEZ FILBERT\" (this is the lastName) - NOMBRES: \"LUIS KENNETH\" (this is the firstName) - The ID number is \"7.690.621\" - Country is clearly Colombia from the header \"REPÚBLICA DE COLOMBIA\" - Document type is \"CÉDULA DE CIUDADANÍA\" 4. Field Mapping: - firstName: \"LUIS KENNETH\" (from NOMBRES field) - lastName: \"BERMUDEZ FILBERT\" (from APELLIDOS field) - country_issuer: \"Colombia\" (from document header) - nationality: \"Colombia\" (default to same as issuer since no explicit nationality field and birth is in Colombia) - identificationType: \"Cédula de Ciudadanía\" (from document title) - identificationNumber: \"7.690.621\" (preserve original formatting) - message: \"\" (seems to be a valid official document with clear information) 5. Quality Control: - All information is clearly readable - Document appears to be official Colombian identification - All required fields can be extracted successfully",
+          "signature": "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"
+        },
+        {
+          "type": "text",
+          "text": "```json { \"result\": { \"firstName\": \"LUIS KENNETH\", \"lastName\": \"BERMUDEZ FILBERT\", \"country_issuer\": \"Colombia\", \"nationality\": \"Colombia\", \"identificationType\": \"Cédula de Ciudadanía\", \"identificationNumber\": \"7.690.621\", \"message\": \"\" }, \"document_type\": \"person\", \"category\": \"CECRL\" } ```"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 10,
+        "cache_creation_input_tokens": 5982,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 573
+      }
+    },
+    "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 8000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+  "api_used": "invoke_model"
+}

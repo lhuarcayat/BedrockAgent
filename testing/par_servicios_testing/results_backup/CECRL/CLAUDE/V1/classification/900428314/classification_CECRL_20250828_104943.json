@@ -1,0 +1,87 @@
+{
+  "classification_data": {
+    "category": "CECRL",
+    "text": "REPUBLICA DE COLOMBIA IDENTIFICACION PERSONAL CEDULA DE CIUDADANIA NUMERO 38.199.170 FUENTES LEON APELLIDOS NORBERTO NOMBRES FECHA DE NACIMIENTO 27-NOV-1970 CHIMA (SANTANDER) LUGAR DE NACIMIENTO 1.61 B+ M ESTATURA G.S. RH SEXO 03-OCT-1990 CUCUTA FECHA Y LUGAR DE EXPEDICION INDICE DERECHO REGISTRADOR NACIONAL CARLOS ARIEL SANCHEZ TORRES",
+    "document_number": "900428314",
+    "path": "CECRL/900428314/88199170_2020-02-29.pdf"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "```json { \"category\": \"CECRL\", \"text\": \"REPUBLICA DE COLOMBIA\\nIDENTIFICACION PERSONAL\\nCEDULA DE CIUDADANIA\\nNUMERO 38.199.170\\nFUENTES LEON\\nAPELLIDOS\\nNORBERTO\\nNOMBRES\\nFECHA DE NACIMIENTO 27-NOV-1970\\nCHIMA\\n(SANTANDER)\\nLUGAR DE NACIMIENTO\\n1.61 B+ M\\nESTATURA G.S. RH SEXO\\n03-OCT-1990 CUCUTA\\nFECHA Y LUGAR DE EXPEDICION\\nINDICE DERECHO REGISTRADOR NACIONAL\\nCARLOS ARIEL SANCHEZ TORRES\" } ```"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 9,
+      "cache_creation_input_tokens": 4475,
+      "cache_read_input_tokens": 0,
+      "output_tokens": 865
+    },
+    "ResponseMetadata": {
+      "RequestId": "3c34b8c6-ab17-4436-a401-4306e6298785",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Thu, 28 Aug 2025 15:48:24 GMT",
+        "content-type": "application/json",
+        "content-length": "3415",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "3c34b8c6-ab17-4436-a401-4306e6298785",
+        "x-amzn-bedrock-invocation-latency": "20680",
+        "x-amzn-bedrock-cache-write-input-token-count": "4475",
+        "x-amzn-bedrock-cache-read-input-token-count": "0",
+        "x-amzn-bedrock-output-token-count": "865",
+        "x-amzn-bedrock-input-token-count": "9"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_01Hc6rnWehmUccZeivLbNT3B",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-3-7-sonnet-20250219",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Let me analyze the PDF document and follow the classification workflow: ### 1. TEXT EXTRACTION From the image I can extract the following text: - \"REPUBLICA DE COLOMBIA\" - \"IDENTIFICACION PERSONAL\" - \"CEDULA DE CIUDADANIA\" - \"NUMERO 38.199.170\" - \"FUENTES LEON\" - \"APELLIDOS NORBERTO\" - \"NOMBRES\" (appears to have a signature below) - \"FECHA DE NACIMIENTO: 27-NOV-1970\" - \"CHIMA (SANTANDER)\" - \"LUGAR DE NACIMIENTO\" - \"1.61\" (appears to be height) - \"B+\" (blood type) - \"M\" (gender - male) - \"ESTATURA\" \"G.S. RH\" \"SEXO\" - \"03-OCT-1990 CUCUTA\" (appears to be issue date and place) - \"FECHA Y LUGAR DE EXPEDICION\" - There's a fingerprint image - \"INDICE DERECHO\" - There's also a barcode at the bottom ### 2. PRIORITY CHECKS - Not BLANK: Document contains meaningful content - Not LINK_ONLY: No hyperlinks/URLs as primary content ### 3. ISSUER IDENTIFICATION This appears to be an official identification document issued by the Colombian government. It's a \"Cédula de Ciudadanía\" which is Colombia's national ID card. ### 4. DOCUMENT FUNCTION ANALYSIS This is clearly a personal identification document. It contains: - Personal biographical data (birth date, birthplace, blood type, gender) - A photo of the individual - Fingerprint - Security elements (appears to have watermarks/security features) - Official government ID number ### 5. CATEGORY CLASSIFICATION Following the evaluation order, this document is a CECRL (Official personal identification document). It matches all the must-have indicators: - Individual identification terminology: \"Identificación personal\", \"Cédula de Ciudadanía\" - Personal biographical data: birth date/place, blood type, gender - Individual photo, signature, fingerprint references - Government-issued personal ID number with individual name - Security elements (appears to have watermarks, barcode) It perfectly matches the key pattern: \"REPUBLICA DE COLOMBIA IDENTIFICACION PERSONAL\", \"CEDULA DE CIUDADANIA NUMERO\" ### 6. CONFIDENCE VALIDATION I have strong evidence for this classification: - Clear must-have indicators present - Unambiguous document function (personal ID) - Contains all typical elements of a Colombian national ID card I'm very confident this is a CECRL (Official personal identification document).",
+          "signature": "ErcBCkgIBxABGAIiQD9YjyrjjFdeDjV6sXpyKqdB36hPvApZ/GsHC4vIN8U6KamAiOy+NhAkbcDZNaKVQALHKU5Uc2OVemNkd9dwMAMSDPGLNaM1PGCtc7b8sxoM4Oacg9yXBOL0c8LcIjBVXMSNtJXhGiDETsuSKwBdVM4p/RN6nMmDcIYiXFbUl8hpGumS33F1j9OCtPrHrEkqHfCgTkGqC9030tQWwRdOqQM1A2pYx0W9eSuHJMUWGAI="
+        },
+        {
+          "type": "text",
+          "text": "```json { \"category\": \"CECRL\", \"text\": \"REPUBLICA DE COLOMBIA\\nIDENTIFICACION PERSONAL\\nCEDULA DE CIUDADANIA\\nNUMERO 38.199.170\\nFUENTES LEON\\nAPELLIDOS\\nNORBERTO\\nNOMBRES\\nFECHA DE NACIMIENTO 27-NOV-1970\\nCHIMA\\n(SANTANDER)\\nLUGAR DE NACIMIENTO\\n1.61 B+ M\\nESTATURA G.S. RH SEXO\\n03-OCT-1990 CUCUTA\\nFECHA Y LUGAR DE EXPEDICION\\nINDICE DERECHO REGISTRADOR NACIONAL\\nCARLOS ARIEL SANCHEZ TORRES\" } ```"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 9,
+        "cache_creation_input_tokens": 4475,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 865
+      }
+    },
+    "model_id": "us.anthropic.claude-3-7-sonnet-20250219-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 8000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "expected_category": "CECRL",
+  "model_used": "us.anthropic.claude-3-7-sonnet-20250219-v1:0",
+  "api_used": "invoke_model",
+  "pdf_info": {
+    "original_size": 177615,
+    "first_page_size": 173116,
+    "is_scanned": true
+  }
+}

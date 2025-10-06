@@ -1,0 +1,132 @@
+{
+  "extraction_data": {
+    "path": "ACC/900964285/164_CA_2020-02-29.pdf",
+    "result": {
+      "companyName": "Asesorías y Gestiones Ambientales SAS",
+      "documentCategory": "Equity Composition",
+      "taxId": "900.964.285-3",
+      "country": "Colombia",
+      "identificationDetails": {
+        "source": "text_reference",
+        "indicators": [
+          "NIT format 900.964.285-3 (Colombian)",
+          "CC ID format (Colombian citizen ID)",
+          "CALLE 3 D SUR No. 71 D 19 (Colombian address format)"
+        ],
+        "conflictingSources": [],
+        "requiresReview": "false"
+      },
+      "relatedParties": [
+        {
+          "type": "person",
+          "firstName": "Jaime Alexander",
+          "lastName": "Franco Pedraza",
+          "identificationType": "C.C.",
+          "identificationNumber": "79.770.147",
+          "relationshipType": "Shareholder",
+          "participationPercentage": "33.33",
+          "timeFound": "1",
+          "job": "Representante Legal"
+        },
+        {
+          "type": "person",
+          "firstName": "Martha Lilia",
+          "lastName": "Celis Gordo",
+          "identificationType": "C.C.",
+          "identificationNumber": "51880385",
+          "relationshipType": "Shareholder",
+          "participationPercentage": "33.33",
+          "timeFound": "1",
+          "job": ""
+        },
+        {
+          "type": "person",
+          "firstName": "Giovanny Andres",
+          "lastName": "Vega Forero",
+          "identificationType": "C.C.",
+          "identificationNumber": "79958347",
+          "relationshipType": "Shareholder",
+          "participationPercentage": "33.33",
+          "timeFound": "1",
+          "job": ""
+        }
+      ]
+    },
+    "documentType": "company",
+    "documentNumber": "900964285",
+    "category": "ACC"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "```json { \"result\": { \"companyName\": \"Asesorías y Gestiones Ambientales SAS\", \"documentCategory\": \"Equity Composition\", \"taxId\": \"900.964.285-3\", \"country\": \"Colombia\", \"identificationDetails\": { \"source\": \"text_reference\", \"indicators\": [ \"NIT format 900.964.285-3 (Colombian)\", \"CC ID format (Colombian citizen ID)\", \"CALLE 3 D SUR No. 71 D 19 (Colombian address format)\" ], \"conflictingSources\": [], \"requiresReview\": \"false\" }, \"relatedParties\": [ { \"type\": \"person\", \"firstName\": \"Jaime Alexander\", \"lastName\": \"Franco Pedraza\", \"identificationType\": \"C.C.\", \"identificationNumber\": \"79.770.147\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"33.33\", \"timeFound\": \"1\", \"job\": \"Representante Legal\" }, { \"type\": \"person\", \"firstName\": \"Martha Lilia\", \"lastName\": \"Celis Gordo\", \"identificationType\": \"C.C.\", \"identificationNumber\": \"51880385\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"33.33\", \"timeFound\": \"1\", \"job\": \"\" }, { \"type\": \"person\", \"firstName\": \"Giovanny Andres\", \"lastName\": \"Vega Forero\", \"identificationType\": \"C.C.\", \"identificationNumber\": \"79958347\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"33.33\", \"timeFound\": \"1\", \"job\": \"\" } ] }, \"documentType\": \"company\", \"category\": \"ACC\" } ```"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 425,
+      "cache_creation_input_tokens": 6074,
+      "cache_read_input_tokens": 0,
+      "output_tokens": 1424
+    },
+    "ResponseMetadata": {
+      "RequestId": "373d0a4e-7079-4b6d-9bcb-7d65682bdb73",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Thu, 28 Aug 2025 08:47:52 GMT",
+        "content-type": "application/json",
+        "content-length": "5694",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "373d0a4e-7079-4b6d-9bcb-7d65682bdb73",
+        "x-amzn-bedrock-invocation-latency": "29460",
+        "x-amzn-bedrock-cache-write-input-token-count": "6074",
+        "x-amzn-bedrock-cache-read-input-token-count": "0",
+        "x-amzn-bedrock-output-token-count": "1424",
+        "x-amzn-bedrock-input-token-count": "425"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_01AXJhZ9fawbUPEXQASY1ZgX",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-3-7-sonnet-20250219",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Let me analyze this document step by step and extract all the necessary information according to the provided rules and schema. ## Step 1: Document Analysis - This appears to be an equity composition certificate (\"composición accionaria\") from a Colombian company - The document is in Spanish - There's a letterhead for \"Asesorías y gestiones ambientales\" SAS - The document certifies the shareholding structure of the company - The document is signed by \"Jaime Alexander Franco Pedraza\" who is identified as the legal representative - The date on the document is January 15, 2020 ## Step 2: Root Level Extraction **Company Name:** The main reporting company is \"Asesorías y Gestiones Ambientales SAS\" as seen in the letterhead and repeated in the body of the document. **Tax ID:** The NIT (Colombian tax ID) is clearly stated multiple times as \"900.964.285-3\" **Country:** We can determine this is Colombia based on: 1. The use of \"NIT\" as tax ID type (matches Colombia in the hash tables) 2. The address format mentions \"CALLE 3 D SUR No. 71 D 19\" which is a Colombian address format 3. The document contains \"CC\" which is a Colombian ID type 4. The format of the tax ID follows Colombian patterns **Document Category:** Fixed as \"Equity Composition\" per instructions **Document Type:** Fixed as \"company\" per instructions **Category:** Fixed as \"ACC\" per instructions ## Step 3: Related Parties Processing I see a table with three shareholders, all appear to be individuals: 1. **JAIME ALEXANDER FRANCO PEDRAZA** - Type: person - ID Type: CC (Colombian citizen ID) - ID Number: 79770147 - Participation: 33.33% - No. of Shares: 20,000 - Capital: 20,000,000 - Role: Representante Legal (Legal Representative) 2. **MARTHA LILIA CELIS GORDO** - Type: person - ID Number: 51880385 - ID Type: not explicitly stated, but based on Colombian context and number format, likely CC - Participation: 33.33% - No. of Shares: 20,000 - Capital: 20,000,000 - Role: Not specified 3. **GIOVANNY ANDRES VEGA FORERO** - Type: person - ID Number: 79958347 - ID Type: not explicitly stated, but based on Colombian context and number format, likely CC - Participation: 33.33% - No. of Shares: 20,000 - Capital: 20,000,000 - Role: Not specified ## Step 4: Validation & Cross-checking - The tax ID type \"NIT\" aligns with identified country \"Colombia\" ✓ - All identification types appear to align with Colombia's standards ✓ - The percentages add up to 99.99% (which is essentially 100%, likely due to rounding) ✓ - For MARTHA LILIA CELIS GORDO and GIOVANNY ANDRES VEGA FORERO, the ID type isn't explicitly stated but is likely \"C.C.\" based on Colombian context and number pattern. According to the Colombia ID type rules, if the number matches /^[1-9][0-9]{3,9}$/, which these do, it's classified as C.C. - For conflictingSources, I don't see any conflicts - For identificationType for the shareholders, Colombia's system shows CC is appropriate for citizens, so I'll use that for all three people since they have standard Colombian citizen ID formats Now I'll construct the final JSON:",
+          "signature": "ErcBCkgIBxABGAIiQHcgyB1JAQ/9bYjImlSVS7JE+AqYidXZLjMdSWyMvdzRWJ3bu8wz85L7siTizuUrHujwrOXtaSvW3epM34TCnHASDG6R+xMHsxmmOii7shoMxVBfPxdAtFlBqhrSIjCXNKbdoCjQY5s1tjlD0ywUTJtCJEhXlZa7TdiZ52+kQiO1xWPBDBCdvomsnKDu2W0qHfX8wSwWAyhucKTk2N7bcicVwfdJJO9Dgune2GbGGAI="
+        },
+        {
+          "type": "text",
+          "text": "```json { \"result\": { \"companyName\": \"Asesorías y Gestiones Ambientales SAS\", \"documentCategory\": \"Equity Composition\", \"taxId\": \"900.964.285-3\", \"country\": \"Colombia\", \"identificationDetails\": { \"source\": \"text_reference\", \"indicators\": [ \"NIT format 900.964.285-3 (Colombian)\", \"CC ID format (Colombian citizen ID)\", \"CALLE 3 D SUR No. 71 D 19 (Colombian address format)\" ], \"conflictingSources\": [], \"requiresReview\": \"false\" }, \"relatedParties\": [ { \"type\": \"person\", \"firstName\": \"Jaime Alexander\", \"lastName\": \"Franco Pedraza\", \"identificationType\": \"C.C.\", \"identificationNumber\": \"79.770.147\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"33.33\", \"timeFound\": \"1\", \"job\": \"Representante Legal\" }, { \"type\": \"person\", \"firstName\": \"Martha Lilia\", \"lastName\": \"Celis Gordo\", \"identificationType\": \"C.C.\", \"identificationNumber\": \"51880385\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"33.33\", \"timeFound\": \"1\", \"job\": \"\" }, { \"type\": \"person\", \"firstName\": \"Giovanny Andres\", \"lastName\": \"Vega Forero\", \"identificationType\": \"C.C.\", \"identificationNumber\": \"79958347\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"33.33\", \"timeFound\": \"1\", \"job\": \"\" } ] }, \"documentType\": \"company\", \"category\": \"ACC\" } ```"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 425,
+        "cache_creation_input_tokens": 6074,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 1424
+      }
+    },
+    "model_id": "us.anthropic.claude-3-7-sonnet-20250219-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 8000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "model_used": "us.anthropic.claude-3-7-sonnet-20250219-v1:0",
+  "api_used": "invoke_model"
+}

@@ -1,0 +1,87 @@
+{
+  "classification_data": {
+    "category": "CECRL",
+    "text": "REPUBLICA DE COLOMBIA IDENTIFICACION PERSONAL CEDULA DE CIUDADANIA NUMERO 7.534.022 RESTREPO PEREZ APELLIDOS JORGE DIEGO NOMBRE REPUBLICA DE COLOMBIA FIRMA FECHA DE NACIMIENTO 05-JUN-1960 ARMENIA (QUINDIO) LUGAR DE NACIMIENTO 1.66 O+ M ESTATURA G.S. RH SEXO 08-MAR-1979 ARMENIA FECHA Y LUGAR DE EXPEDICION INDICE DERECHO A-4600100-00132855-M-000753402Z-200812C2 000738291QA 1 817000746G",
+    "document_number": "7534022",
+    "path": "CECRL/7534022/7534022_2020-02-29.pdf"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "```json { \"category\": \"CECRL\", \"text\": \"REPUBLICA DE COLOMBIA IDENTIFICACION PERSONAL CEDULA DE CIUDADANIA NUMERO 7.534.022 RESTREPO PEREZ APELLIDOS JORGE DIEGO NOMBRE REPUBLICA DE COLOMBIA FIRMA FECHA DE NACIMIENTO 05-JUN-1960 ARMENIA (QUINDIO) LUGAR DE NACIMIENTO 1.66 O+ M ESTATURA G.S. RH SEXO 08-MAR-1979 ARMENIA FECHA Y LUGAR DE EXPEDICION INDICE DERECHO A-4600100-00132855-M-000753402Z-200812C2 000738291QA 1 817000746G\" } ```"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 1584,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 3150,
+      "output_tokens": 806
+    },
+    "ResponseMetadata": {
+      "RequestId": "f104527e-8109-4526-b37c-f62de38ddc0d",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Sun, 31 Aug 2025 21:35:45 GMT",
+        "content-type": "application/json",
+        "content-length": "5735",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "f104527e-8109-4526-b37c-f62de38ddc0d",
+        "x-amzn-bedrock-invocation-latency": "12295",
+        "x-amzn-bedrock-cache-write-input-token-count": "0",
+        "x-amzn-bedrock-cache-read-input-token-count": "3150",
+        "x-amzn-bedrock-output-token-count": "806",
+        "x-amzn-bedrock-input-token-count": "1584"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_01JgaEfvqBA9pi7x6sCeUodE",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-sonnet-4-20250514",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Let me analyze this document following the classification workflow: 1. **TEXT EXTRACTION**: The document contains Colombian identification card data. First, let me extract the text I can see: Front of the card: - REPUBLICA DE COLOMBIA - IDENTIFICACION PERSONAL - CEDULA DE CIUDADANIA - NUMERO: 7.534.022 - RESTREPO PEREZ - APELLIDOS - JORGE DIEGO - NOMBRE - FIRMA (signature present) Back of the card: - FECHA DE NACIMIENTO: 05-JUN-1960 - ARMENIA - (QUINDIO) - LUGAR DE NACIMIENTO - 1.66 (ESTATURA) - O+ (G.S. RH) - M (SEXO) - 08-MAR-1979 ARMENIA - FECHA Y LUGAR DE EXPEDICION - Various barcodes and identification numbers - INDICE DERECHO (fingerprint area) - A-4600100-00132855-M-000753402Z-200812C2 ... 000738291QA 1 817000746G 2. **PRIORITY CHECKS**: This is not blank or link-only - it has substantial content. 3. **DOCUMENT FUNCTION ANALYSIS**: This is clearly a personal identification document. The main purpose is to identify an individual person. It contains: - Personal biographical data (date of birth, place of birth, blood type, sex, height) - Individual references with photograph and fingerprints - Government-issued personal identification number (7.534.022) - Security elements (barcodes, official seals) 4. **ISSUER IDENTIFICATION**: This is issued by the Republic of Colombia government as a personal identification authority. 5. **CATEGORY CLASSIFICATION**: According to the workflow, I should evaluate in this order: CECRL → CERL → ACC → RUT → RUB → BY_REVIEW I confirm this document precisely matches the CECRL classification. The card embodies all key characteristics of a Colombian personal identification document, with comprehensive personal details and official government markers. Its comprehensive security features and official format definitively place it in the CECRL document category.",
+          "signature": "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"
+        },
+        {
+          "type": "text",
+          "text": "```json { \"category\": \"CECRL\", \"text\": \"REPUBLICA DE COLOMBIA IDENTIFICACION PERSONAL CEDULA DE CIUDADANIA NUMERO 7.534.022 RESTREPO PEREZ APELLIDOS JORGE DIEGO NOMBRE REPUBLICA DE COLOMBIA FIRMA FECHA DE NACIMIENTO 05-JUN-1960 ARMENIA (QUINDIO) LUGAR DE NACIMIENTO 1.66 O+ M ESTATURA G.S. RH SEXO 08-MAR-1979 ARMENIA FECHA Y LUGAR DE EXPEDICION INDICE DERECHO A-4600100-00132855-M-000753402Z-200812C2 000738291QA 1 817000746G\" } ```"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 1584,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 3150,
+        "output_tokens": 806
+      }
+    },
+    "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 8000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "expected_category": "CECRL",
+  "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+  "api_used": "invoke_model",
+  "pdf_info": {
+    "original_size": 163354,
+    "first_page_size": 161857,
+    "is_scanned": true
+  }
+}

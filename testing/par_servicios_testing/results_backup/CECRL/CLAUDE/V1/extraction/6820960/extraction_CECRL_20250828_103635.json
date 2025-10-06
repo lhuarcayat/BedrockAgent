@@ -1,0 +1,90 @@
+{
+  "extraction_data": {
+    "path": "CECRL/6820960/6820960_2020-02-29.pdf",
+    "result": {
+      "firstName": "JORGE EMILIO",
+      "lastName": "MONTES MONTES",
+      "country_issuer": "Colombia",
+      "nationality": "Colombia",
+      "identificationType": "Cédula de Ciudadanía",
+      "identificationNumber": "6.820.960",
+      "message": ""
+    },
+    "document_type": "person",
+    "documentNumber": "6820960",
+    "category": "CECRL"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "```json { \"result\": { \"firstName\": \"JORGE EMILIO\", \"lastName\": \"MONTES MONTES\", \"country_issuer\": \"Colombia\", \"nationality\": \"Colombia\", \"identificationType\": \"Cédula de Ciudadanía\", \"identificationNumber\": \"6.820.960\", \"message\": \"\" }, \"document_type\": \"person\", \"category\": \"CECRL\" } ```"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 10,
+      "cache_creation_input_tokens": 5982,
+      "cache_read_input_tokens": 0,
+      "output_tokens": 626
+    },
+    "ResponseMetadata": {
+      "RequestId": "8acaa3d9-530a-46a4-9687-091e08884bea",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Thu, 28 Aug 2025 15:36:34 GMT",
+        "content-type": "application/json",
+        "content-length": "2999",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "8acaa3d9-530a-46a4-9687-091e08884bea",
+        "x-amzn-bedrock-invocation-latency": "15337",
+        "x-amzn-bedrock-cache-write-input-token-count": "5982",
+        "x-amzn-bedrock-cache-read-input-token-count": "0",
+        "x-amzn-bedrock-output-token-count": "626",
+        "x-amzn-bedrock-input-token-count": "10"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_01HZcZ3hhBaxMr3xhquznVnq",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-3-7-sonnet-20250219",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Let me carefully analyze this Colombian identification document to extract the required information following the methodology and rules provided. ## Document Structure Analysis - The document appears to be a \"Cédula de Ciudadanía\" from Colombia (clear header \"REPUBLICA DE COLOMBIA\" and \"CEDULA DE CIUDADANIA\") - This is an official government-issued identification document - The document is in Spanish - It has a photo, signature, and typical ID card layout - The document appears to have both front and back sides visible ## Field Extraction ### First Name (firstName) Looking for field labels like \"NOMBRES:\" I can see \"JORGE EMILIO\" under the word \"NOMBRES\" - This is the firstName. ### Last Name (lastName) Looking for field labels like \"APELLIDOS:\" I can see \"MONTES MONTES\" under the word \"APELLIDOS\" - This is the lastName. ### Country Issuer (country_issuer) The document header clearly states \"REPUBLICA DE COLOMBIA\" - The country_issuer is \"Colombia\". ### Nationality (nationality) There is no explicit nationality field visible, but following the hierarchy: 1. No explicit nationality field 2. Birth place appears to be \"SINCELEJO (SUCRE)\" based on info on the back of the card 3. Default to country_issuer: \"Colombia\" ### Identification Type (identificationType) The document title clearly states \"CEDULA DE CIUDADANIA\" - The identificationType is \"Cédula de Ciudadanía\". ### Identification Number (identificationNumber) I can see \"6.820.960\" prominently displayed - This is the identificationNumber. ### Additional Information - Birth date appears to be \"05-SEP-1955\" (visible on the back side) - Height: 1.73 m - Gender: M (Masculine) - Issue date appears to be \"04-JUN-1977\" in SINCELEJO - There's a fingerprint and barcode on the back side ## Final Validation All required fields have been clearly identified and can be extracted with high confidence. Now I'll format this into the required JSON:",
+          "signature": "ErcBCkgIBxABGAIiQOWNiysgin7yksEzVz5wwZiJk7wJBwKFHVkmi5JcSPgzZ+DNWqD7U9sRBZXkQDPtjBxBJCPD6bmsoIj5KBsG+C4SDDyCB/T9qBHg4gR9HxoM+E3GVhAqxYGAdICRIjCpnHJHyUEjZy7Biq0YSvUOpOz51ZcZE0fUSEZCt/OIVBo+kzrCJFzjQtef+E//WR0qHbzK8tUVQLojTnjqM1GQmygqopoNvo/5sr2qeuM1GAI="
+        },
+        {
+          "type": "text",
+          "text": "```json { \"result\": { \"firstName\": \"JORGE EMILIO\", \"lastName\": \"MONTES MONTES\", \"country_issuer\": \"Colombia\", \"nationality\": \"Colombia\", \"identificationType\": \"Cédula de Ciudadanía\", \"identificationNumber\": \"6.820.960\", \"message\": \"\" }, \"document_type\": \"person\", \"category\": \"CECRL\" } ```"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 10,
+        "cache_creation_input_tokens": 5982,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 626
+      }
+    },
+    "model_id": "us.anthropic.claude-3-7-sonnet-20250219-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 8000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "model_used": "us.anthropic.claude-3-7-sonnet-20250219-v1:0",
+  "api_used": "invoke_model"
+}

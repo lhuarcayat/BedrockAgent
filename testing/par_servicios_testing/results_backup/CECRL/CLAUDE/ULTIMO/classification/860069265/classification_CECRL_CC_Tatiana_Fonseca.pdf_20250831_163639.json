@@ -1,0 +1,87 @@
+{
+  "classification_data": {
+    "category": "CECRL",
+    "text": "REPUBLICA DE COLOMBIA IDENTIFICACION PERSONAL CÉDULA DE CIUDADANIA NUMERO 52.255.747 FONSECA URIBE APELLIDOS CLAUDIA TATIANA NOMBRES FIRMA FECHA DE NACIMIENTO 15-SEP-1974 BOGOTA D.C. (CUNDINAMARCA) LUGAR DE NACIMIENTO 1.70 A- F ESTATURA G.S. RH SEXO 15-JUL-1993 BOGOTA D.C. FECHA Y LUGAR DE EXPEDICION ÍNDICE DERECHO REGISTRADOR NACIONAL IDENTIFICACIONES DEL CIUDADANO A-1500101-47 154892-F-005255747-20071025 04465 07295G Q2 227065132",
+    "document_number": "860069265",
+    "path": "CECRL/860069265/CC_Tatiana_Fonseca.pdf"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "```json { \"category\": \"CECRL\", \"text\": \"REPUBLICA DE COLOMBIA\\nIDENTIFICACION PERSONAL\\nCÉDULA DE CIUDADANIA\\n\\nNUMERO 52.255.747\\n\\nFONSECA URIBE\\nAPELLIDOS\\n\\nCLAUDIA TATIANA\\nNOMBRES\\n\\nFIRMA\\n\\nFECHA DE NACIMIENTO 15-SEP-1974\\nBOGOTA D.C.\\n(CUNDINAMARCA)\\nLUGAR DE NACIMIENTO\\n\\n1.70 A- F\\nESTATURA G.S. RH SEXO\\n\\n15-JUL-1993 BOGOTA D.C.\\nFECHA Y LUGAR DE EXPEDICION\\n\\nÍNDICE DERECHO\\n\\nREGISTRADOR NACIONAL\\nIDENTIFICACIONES DEL CIUDADANO\\n\\nA-1500101-47 154892-F-005255747-20071025 04465 07295G Q2 227065132\" } ```"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 1584,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 3150,
+      "output_tokens": 1030
+    },
+    "ResponseMetadata": {
+      "RequestId": "07da3849-3390-48c8-9a61-47a06fd0a25c",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Sun, 31 Aug 2025 21:36:38 GMT",
+        "content-type": "application/json",
+        "content-length": "6339",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "07da3849-3390-48c8-9a61-47a06fd0a25c",
+        "x-amzn-bedrock-invocation-latency": "14898",
+        "x-amzn-bedrock-cache-write-input-token-count": "0",
+        "x-amzn-bedrock-cache-read-input-token-count": "3150",
+        "x-amzn-bedrock-output-token-count": "1030",
+        "x-amzn-bedrock-input-token-count": "1584"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_01TTRqVeDQeAw1FDLU6h8EYr",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-sonnet-4-20250514",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Let me analyze this document step by step according to the classification workflow. 1. **TEXT EXTRACTION** Looking at the document, I can extract the following text: REPUBLICA DE COLOMBIA IDENTIFICACION PERSONAL CÉDULA DE CIUDADANIA NUMERO 52.255.747 FONSECA URIBE APELLIDOS CLAUDIA TATIANA NOMBRES FIRMA FECHA DE NACIMIENTO 15-SEP-1974 BOGOTA D.C. (CUNDINAMARCA) LUGAR DE NACIMIENTO 1.70 A- F ESTATURA G.S. RH SEXO 15-JUL-1993 BOGOTA D.C. FECHA Y LUGAR DE EXPEDICION ÍNDICE DERECHO REGISTRADOR NACIONAL [IDENTIFICACIONES DEL CIUDADANO] [There is a barcode at the bottom and some reference numbers] A-1500101-47 154892-F-005255747-20071025 04465 07295G Q2 227065132 2. **PRIORITY CHECKS** - This is not BLANK - it has substantial content - This is not LINK_ONLY - there are no hyperlinks or URLs directing to external sources 3. **DOCUMENT FUNCTION ANALYSIS** - What is the MAIN PURPOSE of this document? This is clearly a personal identification document - Is it a personal identification document? YES -> CECRL Indicative - The document shows \"IDENTIFICACIÓN PERSONAL\" and \"CÉDULA DE CIUDADANIA\" which are clear indicators of personal identification - It contains personal biographical data: date of birth (15-SEP-1974), place of birth (BOGOTA D.C.), blood type (A-), sex (F), height (1.70) - It has a photograph of an individual - It has a signature and fingerprint - It has a government-issued personal identification number (52.255.747) I confirm this is a Colombian government-issued identification document with comprehensive personal details. The national registrar has verified Claudia Tatiana Fonseca Uribe's identity through multiple authentication markers. The document definitively belongs to the CECRL personal identification category, distinguished by its unique national registration characteristics and comprehensive personal verification elements.",
+          "signature": "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"
+        },
+        {
+          "type": "text",
+          "text": "```json { \"category\": \"CECRL\", \"text\": \"REPUBLICA DE COLOMBIA\\nIDENTIFICACION PERSONAL\\nCÉDULA DE CIUDADANIA\\n\\nNUMERO 52.255.747\\n\\nFONSECA URIBE\\nAPELLIDOS\\n\\nCLAUDIA TATIANA\\nNOMBRES\\n\\nFIRMA\\n\\nFECHA DE NACIMIENTO 15-SEP-1974\\nBOGOTA D.C.\\n(CUNDINAMARCA)\\nLUGAR DE NACIMIENTO\\n\\n1.70 A- F\\nESTATURA G.S. RH SEXO\\n\\n15-JUL-1993 BOGOTA D.C.\\nFECHA Y LUGAR DE EXPEDICION\\n\\nÍNDICE DERECHO\\n\\nREGISTRADOR NACIONAL\\nIDENTIFICACIONES DEL CIUDADANO\\n\\nA-1500101-47 154892-F-005255747-20071025 04465 07295G Q2 227065132\" } ```"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 1584,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 3150,
+        "output_tokens": 1030
+      }
+    },
+    "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 8000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "expected_category": "CECRL",
+  "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+  "api_used": "invoke_model",
+  "pdf_info": {
+    "original_size": 226738,
+    "first_page_size": 223294,
+    "is_scanned": true
+  }
+}

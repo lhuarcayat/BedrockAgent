@@ -1,0 +1,88 @@
+{
+  "extraction_data": {
+    "result": {
+      "FirstName": "MONICA",
+      "LastName": "CATALDO",
+      "CountryIssuer": "Colombia",
+      "Nationality": "italiana",
+      "IdentificationType": "Cédula de Extranjería",
+      "IdentificationNumber": "7908085",
+      "Message": ""
+    },
+    "document_type": "person",
+    "category": "CECRL"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "```json { \"result\": { \"FirstName\": \"MONICA\", \"LastName\": \"CATALDO\", \"CountryIssuer\": \"Colombia\", \"Nationality\": \"italiana\", \"IdentificationType\": \"Cédula de Extranjería\", \"IdentificationNumber\": \"7908085\", \"Message\": \"\" }, \"document_type\": \"person\", \"category\": \"CECRL\" } ```"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 1583,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 4300,
+      "output_tokens": 565
+    },
+    "ResponseMetadata": {
+      "RequestId": "3c77fc12-ebad-40f7-8839-8f18e4ac06a6",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Sun, 31 Aug 2025 21:44:53 GMT",
+        "content-type": "application/json",
+        "content-length": "4450",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "3c77fc12-ebad-40f7-8839-8f18e4ac06a6",
+        "x-amzn-bedrock-invocation-latency": "9069",
+        "x-amzn-bedrock-cache-write-input-token-count": "0",
+        "x-amzn-bedrock-cache-read-input-token-count": "4300",
+        "x-amzn-bedrock-output-token-count": "565",
+        "x-amzn-bedrock-input-token-count": "1583"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_01EzEHFGy1KngzKcSzcvcBix",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-sonnet-4-20250514",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Let me analyze this Colombian identification document step by step: 1. **Document Type**: This is a Colombian \"Cédula de Extranjería\" (Foreign ID card) as shown in the header \"REPÚBLICA DE COLOMBIA\" and \"Cédula de Extranjería\" 2. **Structured Label Detection**: - I can see clear labels on the document: - \"APELLIDOS:\" followed by \"CATALDO\" - \"NOMBRES:\" followed by \"MONICA\" - \"NACIONALIDAD:\" followed by \"ITA\" - \"MIGRANTE No.\" followed by \"7908085\" 3. **Field Extraction**: - **FirstName**: Looking at \"NOMBRES:\" label, I see \"MONICA\" - **LastName**: Looking at \"APELLIDOS:\" label, I see \"CATALDO\" - **IdentificationNumber**: The document shows \"MIGRANTE No. 7908085\", so the ID number is \"7908085\" - **CountryIssuer**: This is clearly a Colombian document (\"REPÚBLICA DE COLOMBIA\"), so \"Colombia\" - **Nationality**: The document shows \"NACIONALIDAD: ITA\" which likely means \"Italia\" (Italy), so \"italiana\" - **IdentificationType**: This is a \"Cédula de Extranjería\" 4. **Validation**: - The labels match the extracted data correctly - No misalignment issues detected - All required information is clearly visible 5. **Translation Requirements**: - CountryIssuer: \"Colombia\" (already in Spanish) - Nationality: \"ITA\" → \"italiana\" - IdentificationType: \"Cédula de Extranjería\" (already in Spanish) All fields can be extracted properly, so no \"ForReview\" needed and Message can be empty.",
+          "signature": "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"
+        },
+        {
+          "type": "text",
+          "text": "```json { \"result\": { \"FirstName\": \"MONICA\", \"LastName\": \"CATALDO\", \"CountryIssuer\": \"Colombia\", \"Nationality\": \"italiana\", \"IdentificationType\": \"Cédula de Extranjería\", \"IdentificationNumber\": \"7908085\", \"Message\": \"\" }, \"document_type\": \"person\", \"category\": \"CECRL\" } ```"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 1583,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 4300,
+        "output_tokens": 565
+      }
+    },
+    "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 8000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+  "api_used": "invoke_model"
+}

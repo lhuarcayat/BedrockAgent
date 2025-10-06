@@ -1,0 +1,90 @@
+{
+  "classification_data": {
+    "document_number": "UNKNOWN",
+    "document_type": "company",
+    "category": "UNKNOWN",
+    "text": "ERROR_PARSING_RESPONSE",
+    "path": "CECRL/4951616/4951616_2020-02-29.pdf",
+    "parse_error": "Invalid \\escape: line 1 column 55 (char 54)",
+    "has_raw_response": true
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "```json { \"category\": \"CECRL\", \"text\": \"ryry\\n- \\nü'#-lu*\\nr\\\\PFLi-iDC$\\n,tAMüt*\\nl'\\\".t:,i]il.<\\n'ltS\\n.\\nt.,,,, t t \\n''t:\\n\\nREPUBLICA DE COLOMBIA\\nIDENTIFICACION PERSONAL\\nCEDULA DE CIUDADANIA\\n\\nNUMERO 4.951.616\\nROJAS SALAZAR\\n\\nAPELLIDOS\\nCAMILO\\n\\nNOMBRES\\n\\nFIRMA\" } ```"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 9,
+      "cache_creation_input_tokens": 4581,
+      "cache_read_input_tokens": 0,
+      "output_tokens": 1041
+    },
+    "ResponseMetadata": {
+      "RequestId": "9937afce-d2d0-4285-8d7d-9fd5d3ed83b3",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Thu, 28 Aug 2025 15:33:50 GMT",
+        "content-type": "application/json",
+        "content-length": "4565",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "9937afce-d2d0-4285-8d7d-9fd5d3ed83b3",
+        "x-amzn-bedrock-invocation-latency": "26442",
+        "x-amzn-bedrock-cache-write-input-token-count": "4581",
+        "x-amzn-bedrock-cache-read-input-token-count": "0",
+        "x-amzn-bedrock-output-token-count": "1041",
+        "x-amzn-bedrock-input-token-count": "9"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_01STDixenkXRp44ptyqxPFbs",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-3-7-sonnet-20250219",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Let me analyze this document carefully following the classification workflow: 1. **TEXT EXTRACTION**: The visible text in the document appears to be: - \"REPUBLICA DE COLOMBIA\" - \"IDENTIFICACION PERSONAL\" - \"CEDULA DE CIUDADANIA\" - \"NUMERO 4.951.616\" - \"ROJAS SALAZAR\" - \"APELLIDOS\" - \"CAMILO\" - \"NOMBRES\" - \"FIRMA\" There also appears to be a photograph of a person on the right side of the document, and a signature. 2. **PRIORITY CHECKS**: - This is not a BLANK document as it contains meaningful content. - This is not a LINK_ONLY document as there are no hyperlinks. 3. **ISSUER IDENTIFICATION**: The document is issued by the Republic of Colombia as a personal identification document. 4. **DOCUMENT FUNCTION ANALYSIS**: This is clearly a personal identification document (Cédula de Ciudadanía) issued by the Colombian government. 5. **CATEGORY CLASSIFICATION**: Looking at the document characteristics: - It's a personal identification document (\"CEDULA DE CIUDADANIA\") - It contains personal information for an individual (name: CAMILO ROJAS SALAZAR) - It has an ID number (4.951.616) - It includes a photograph and signature - It's issued by the government (\"REPUBLICA DE COLOMBIA\") This matches the criteria for \"CECRL\" (Official personal identification documents of legal representatives of companies). However, I need to be careful here. While this is definitely a Colombian ID card (Cédula de Ciudadanía), to classify it as CECRL, I would need evidence that this person is a legal representative of a company. The document itself doesn't explicitly state that this person is a legal representative - it's simply a personal identification document. For CECRL classification, I would need to see something indicating the person's role as a legal representative. Without that context, this appears to be simply a personal identification document. 6. **CONFIDENCE VALIDATION**: This is clearly a Colombian national ID card (Cédula de Ciudadanía). It has all the typical elements: - Government header \"REPUBLICA DE COLOMBIA\" - \"IDENTIFICACION PERSONAL\" and \"CEDULA DE CIUDADANIA\" text - ID number, full name fields - Photo and signature Since this is a personal ID document but we don't have evidence that this person is a legal representative of a company, I need to decide between classifying as CECRL or POR_REVISAR. Based on the document alone, it matches all the characteristics of a personal identification document as described in the CECRL category: - Individual identification terminology: \"Cédula\", \"Identificación personal\" - Personal data with individual name - Individual photo and signature - Government-issued personal ID number The only thing missing is explicit confirmation that this person is a legal representative of a company. However, the CECRL category is specifically for \"Official personal identification documents (cédulas, passports, etc.) of legal representatives of companies.\" Since I don't have evidence that shows this person is a legal representative, I need to be cautious. However, the document itself is clearly a cédula, which is one of the document types listed in CECRL. Based on the classification rules and the document presented, I'll classify this as \"CECRL\" since it's clearly a Colombian citizen ID card (cédula), which is one of the document types explicitly mentioned in the CECRL category, and this matches all the \"must-have indicators\" specified for this category, even though I don't have explicit confirmation of the legal representative status.",
+          "signature": "ErcBCkgIBxABGAIiQAaIQiFXmy0nyRxkqh5lPBDPgZ1BbeBYHO06pmIZQTOmPUU+SOpfUMWFl9BULm3zZPZF1euLnnkkARIGL0lyl0oSDOCjqkKeyT6hGQ5KWBoMdYYpM0feyeHr+VypIjAdot9H9E6pf60Ox4qEWRI01VUyksSeEALr+nbEt+bOlaUgrmxF8p9LpWpUodbVDKQqHU7XVx2q416s5VQPmiklymkAq09Bt8cwKmb7KcmbGAI="
+        },
+        {
+          "type": "text",
+          "text": "```json { \"category\": \"CECRL\", \"text\": \"ryry\\n- \\nü'#-lu*\\nr\\\\PFLi-iDC$\\n,tAMüt*\\nl'\\\".t:,i]il.<\\n'ltS\\n.\\nt.,,,, t t \\n''t:\\n\\nREPUBLICA DE COLOMBIA\\nIDENTIFICACION PERSONAL\\nCEDULA DE CIUDADANIA\\n\\nNUMERO 4.951.616\\nROJAS SALAZAR\\n\\nAPELLIDOS\\nCAMILO\\n\\nNOMBRES\\n\\nFIRMA\" } ```"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 9,
+        "cache_creation_input_tokens": 4581,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 1041
+      }
+    },
+    "model_id": "us.anthropic.claude-3-7-sonnet-20250219-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 8000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "expected_category": "CECRL",
+  "model_used": "us.anthropic.claude-3-7-sonnet-20250219-v1:0",
+  "api_used": "invoke_model",
+  "pdf_info": {
+    "original_size": 958761,
+    "first_page_size": 608654,
+    "is_scanned": false
+  }
+}

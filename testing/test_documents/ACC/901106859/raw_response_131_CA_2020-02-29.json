@@ -1,0 +1,33 @@
+{
+  "ResponseMetadata": {
+    "RequestId": "d73384dd-aad5-45c4-8f56-1c88ee1d828b",
+    "HTTPStatusCode": 200,
+    "HTTPHeaders": {
+      "date": "Mon, 16 Jun 2025 20:49:24 GMT",
+      "content-type": "application/json",
+      "content-length": "1625",
+      "connection": "keep-alive",
+      "x-amzn-requestid": "d73384dd-aad5-45c4-8f56-1c88ee1d828b"
+    },
+    "RetryAttempts": 0
+  },
+  "output": {
+    "message": {
+      "role": "assistant",
+      "content": [
+        {
+          "text": "```json\n{\n  \"path\": \"s3://par-servicios-poc-dev-filling-desk/par-servicios-poc/ACC/901106859/131_CA_2020-02-29.pdf\",\n  \"result\": {\n    \"companyName\": \"CONSTRUCTORA E INMOBILIARIA RIVERA INCORA SAS\",\n    \"documentType\": \"Equity Composition\",\n    \"taxId\": \"901.106.859-4\",\n    \"country\": \"Colombia\",\n    \"identificationDetails\": {\n      \"source\": \"text_reference\",\n      \"indicators\": [\n        \"Bogotá\",\n        \"Colombia\"\n      ],\n      \"requiresReview\": false\n    },\n    \"relatedParties\": [\n      {\n        \"firstName\": \"LEOWILSTON\",\n        \"lastName\": \"RIVERA\",\n        \"identificationType\": \"CC\",\n        \"identificationNumber\": \"80.057.686\",\n        \"relationshipType\": \"Shareholder\",\n        \"participationPercentage\": \"49\",\n        \"timeFound\": 1\n      },\n      {\n        \"firstName\": \"MARCOS JAIR\",\n        \"lastName\": \"CUEVO\",\n        \"identificationType\": \"CC\",\n        \"identificationNumber\": \"1.022.372.943\",\n        \"relationshipType\": \"Shareholder\",\n        \"participationPercentage\": \"51\",\n        \"timeFound\": 1\n      }\n    ]\n  },\n  \"document_type\": \"company\",\n  \"document_number\": \"901106859\",\n  \"category\": \"ACC\",\n  \"confidenceScores\": {\n    \"companyName\": 95,\n    \"documentType\": 100,\n    \"taxId\": 100,\n    \"country\": 95,\n    \"relatedParties\": 90\n  }\n}\n```"
+        }
+      ]
+    }
+  },
+  "stopReason": "end_turn",
+  "usage": {
+    "inputTokens": 5468,
+    "outputTokens": 418,
+    "totalTokens": 5886
+  },
+  "metrics": {
+    "latencyMs": 8977
+  }
+}

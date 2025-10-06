@@ -1,0 +1,33 @@
+{
+  "ResponseMetadata": {
+    "RequestId": "6fa16993-8b38-47d7-b917-fcd93f53804f",
+    "HTTPStatusCode": 200,
+    "HTTPHeaders": {
+      "date": "Mon, 16 Jun 2025 20:49:38 GMT",
+      "content-type": "application/json",
+      "content-length": "1276",
+      "connection": "keep-alive",
+      "x-amzn-requestid": "6fa16993-8b38-47d7-b917-fcd93f53804f"
+    },
+    "RetryAttempts": 0
+  },
+  "output": {
+    "message": {
+      "role": "assistant",
+      "content": [
+        {
+          "text": "```json\n{\n  \"path\": \"s3://par-servicios-poc-dev-filling-desk/par-servicios-poc/ACC/860031028/Compisicion_accionaria_S_A__Mayo_2023.pdf\",\n  \"result\": {\n    \"companyName\": \"Siemens S.A.S\",\n    \"documentType\": \"Equity Composition\",\n    \"taxId\": \"860.031.028-9\",\n    \"country\": \"Colombia\",\n    \"identificationDetails\": {\n      \"source\": \"id_analysis\",\n      \"indicators\": [\n        \"NIT\"\n      ],\n      \"conflictingSources\": {}\n    },\n    \"relatedParties\": [\n      {\n        \"companyName\": \"Siemens International Holding B.V.\",\n        \"identificationType\": \"NIT\",\n        \"identificationNumber\": \"860.031.028-9\",\n        \"relationshipType\": \"Shareholder\",\n        \"participationPercentage\": \"100.0\",\n        \"timeFound\": 1\n      }\n    ]\n  },\n  \"document_type\": \"company\",\n  \"document_number\": \"860031028\",\n  \"category\": \"ACC\",\n  \"confidenceScores\": {\n    \"companyName\": 100,\n    \"documentType\": 100,\n    \"taxId\": 100,\n    \"country\": 100,\n    \"relatedParties\": 100\n  }\n}\n```"
+        }
+      ]
+    }
+  },
+  "stopReason": "end_turn",
+  "usage": {
+    "inputTokens": 5437,
+    "outputTokens": 339,
+    "totalTokens": 5776
+  },
+  "metrics": {
+    "latencyMs": 7000
+  }
+}

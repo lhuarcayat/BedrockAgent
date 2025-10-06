@@ -1,0 +1,87 @@
+{
+  "classification_data": {
+    "category": "CECRL",
+    "text": "REPUBLICA DE COLOMBIA IDENTIFICACION PERSONAL CEDULA DE CIUDADANIA 3.950.169 NUMERO HOYOS ROJAS APELLIDOS JOSE MANUEL NOMBRES FECHA DE NACIMIENTO 19-ABR-1938 EL COLEGIO (CUNDINAMARCA) LUGAR DE NACIMIENTO 1.74 ESTATURA C+ G.S. RH M SEXO 03-MAR-1978 EL COLEGIO FECHA Y LUGAR DE EXPEDICION INDICE DERECHO REGISTRADOR NACIONAL DEL ESTADO CIVIL A-4624000-70133593-M-000250169-200050705 DIG07051888 02 147582909",
+    "document_number": "3250169",
+    "path": "CECRL/3250169/3250169_2020-02-29.pdf"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "```json { \"category\": \"CECRL\", \"text\": \"REPUBLICA DE COLOMBIA\\nIDENTIFICACION PERSONAL\\nCEDULA DE CIUDADANIA\\n3.950.169\\nNUMERO\\nHOYOS ROJAS\\nAPELLIDOS\\nJOSE MANUEL\\nNOMBRES\\nFECHA DE NACIMIENTO 19-ABR-1938\\nEL COLEGIO\\n(CUNDINAMARCA)\\nLUGAR DE NACIMIENTO\\n1.74\\nESTATURA\\nC+\\nG.S. RH\\nM\\nSEXO\\n03-MAR-1978 EL COLEGIO\\nFECHA Y LUGAR DE EXPEDICION\\nINDICE DERECHO\\nREGISTRADOR NACIONAL\\nDEL ESTADO CIVIL\\nA-4624000-70133593-M-000250169-200050705\\nDIG07051888 02 147582909\" } ```"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 9,
+      "cache_creation_input_tokens": 4549,
+      "cache_read_input_tokens": 0,
+      "output_tokens": 836
+    },
+    "ResponseMetadata": {
+      "RequestId": "3de80748-8881-458a-96fb-3edb53b5bdd4",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Fri, 29 Aug 2025 15:37:09 GMT",
+        "content-type": "application/json",
+        "content-length": "5773",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "3de80748-8881-458a-96fb-3edb53b5bdd4",
+        "x-amzn-bedrock-invocation-latency": "27072",
+        "x-amzn-bedrock-cache-write-input-token-count": "4549",
+        "x-amzn-bedrock-cache-read-input-token-count": "0",
+        "x-amzn-bedrock-output-token-count": "836",
+        "x-amzn-bedrock-input-token-count": "9"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_01HFcbot24fnsmcLMS84J7eT",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-sonnet-4-20250514",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Let me analyze this document step by step following the classification workflow: 1. **TEXT EXTRACTION** I can see text in this document. It appears to be a Colombian identification document. The text I can extract includes: - REPUBLICA DE COLOMBIA - IDENTIFICACION PERSONAL - CEDULA DE CIUDADANIA - Number appears to be 3.950.169 - HOYOS ROJAS (appears to be apellidos/surnames) - JOSE MANUEL (appears to be names) - There's a signature area - FECHA DE NACIMIENTO: 19-ABR-1938 - EL COLEGIO (CUNDINAMARCA) - LUGAR DE NACIMIENTO - Various other fields like ESTATURA, SEXO - 03-MAR-1978 EL COLEGIO - FECHA Y LUGAR DE EXPEDICION - There's a fingerprint area - INDICE DERECHO - Various numbers and codes at the bottom 2. **PRIORITY CHECKS** This is not BLANK - it has substantial meaningful content This is not LINK_ONLY - no hyperlinks or URLs 3. **ISSUER IDENTIFICATION** This appears to be issued by government identification authorities (República de Colombia), not DIAN or Chamber of Commerce 4. **DOCUMENT FUNCTION ANALYSIS** This is clearly personal identification documentation for an individual named José Manuel Hoyos Rojas, with biographical data, birth information, etc. 5. **CATEGORY CLASSIFICATION** Let me check CECRL first: - Individual identification terminology: ✓ \"CEDULA DE CIUDADANIA\", \"IDENTIFICACION PERSONAL\" - Personal biographical data: ✓ birth date (19-ABR-1938), place of birth (EL COLEGIO CUNDINAMARCA), gender, etc. - Individual photo: ✓ (visible in the document) - Government-issued personal ID numbers: ✓ (3.950.169) - Security elements: ✓ fingerprint area, official seals and structure - Issued by government identification authorities: ✓ \"REPUBLICA DE COLOMBIA\" The document definitively meets all criteria for an official Colombian personal identification document, with comprehensive verification through multiple security and identification markers. 6. **CONFIDENCE VALIDATION** Strong evidence - all key indicators are present and unambiguous.",
+          "signature": "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"
+        },
+        {
+          "type": "text",
+          "text": "```json { \"category\": \"CECRL\", \"text\": \"REPUBLICA DE COLOMBIA\\nIDENTIFICACION PERSONAL\\nCEDULA DE CIUDADANIA\\n3.950.169\\nNUMERO\\nHOYOS ROJAS\\nAPELLIDOS\\nJOSE MANUEL\\nNOMBRES\\nFECHA DE NACIMIENTO 19-ABR-1938\\nEL COLEGIO\\n(CUNDINAMARCA)\\nLUGAR DE NACIMIENTO\\n1.74\\nESTATURA\\nC+\\nG.S. RH\\nM\\nSEXO\\n03-MAR-1978 EL COLEGIO\\nFECHA Y LUGAR DE EXPEDICION\\nINDICE DERECHO\\nREGISTRADOR NACIONAL\\nDEL ESTADO CIVIL\\nA-4624000-70133593-M-000250169-200050705\\nDIG07051888 02 147582909\" } ```"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 9,
+        "cache_creation_input_tokens": 4549,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 836
+      }
+    },
+    "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 8000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "expected_category": "CECRL",
+  "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+  "api_used": "invoke_model",
+  "pdf_info": {
+    "original_size": 176920,
+    "first_page_size": 175337,
+    "is_scanned": true
+  }
+}

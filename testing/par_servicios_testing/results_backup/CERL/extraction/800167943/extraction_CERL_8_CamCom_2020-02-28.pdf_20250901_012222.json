@@ -1,0 +1,110 @@
+{
+  "extraction_data": {
+    "result": {
+      "CompanyName": "PAPELERIA D'CLASE SAS",
+      "CompanyType": "SAS",
+      "Country": "Colombia",
+      "DocumentPages": "5",
+      "DocumentType": "CERL",
+      "TaxId": "8001679431",
+      "MainAddress": "CR 9 23 59 LC 601, Bogotá D.C.",
+      "IncorporationDate": "1992-07-22",
+      "CompanyDuration": "indefinido",
+      "RegistrationNumber": "00507871",
+      "Size": "",
+      "RelatedParties": [
+        {
+          "FirstName": "MARCO ANTONIO",
+          "LastName": "PACHON ORJUELA",
+          "IdType": "C.C.",
+          "IdNumber": "000000011253821",
+          "RelationshipType": "GERENTE GENERAL"
+        },
+        {
+          "FirstName": "SABRINA",
+          "LastName": "PACHON TORRES",
+          "IdType": "C.C.",
+          "IdNumber": "000000053107729",
+          "RelationshipType": "PRIMER SUPLENTE DEL GERENTE GENERAL"
+        }
+      ],
+      "Embargoes": "",
+      "Liquidations": "",
+      "DocumentIssueDate": "2015-04-24",
+      "LastRegistrationRenewalDate": "2015-04-01"
+    }
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "```json { \"result\": { \"CompanyName\": \"PAPELERIA D'CLASE SAS\", \"CompanyType\": \"SAS\", \"Country\": \"Colombia\", \"DocumentPages\": \"5\", \"DocumentType\": \"CERL\", \"TaxId\": \"8001679431\", \"MainAddress\": \"CR 9 23 59 LC 601, Bogotá D.C.\", \"IncorporationDate\": \"1992-07-22\", \"CompanyDuration\": \"indefinido\", \"RegistrationNumber\": \"00507871\", \"Size\": \"\", \"RelatedParties\": [ { \"FirstName\": \"MARCO ANTONIO\", \"LastName\": \"PACHON ORJUELA\", \"IdType\": \"C.C.\", \"IdNumber\": \"000000011253821\", \"RelationshipType\": \"GERENTE GENERAL\" }, { \"FirstName\": \"SABRINA\", \"LastName\": \"PACHON TORRES\", \"IdType\": \"C.C.\", \"IdNumber\": \"000000053107729\", \"RelationshipType\": \"PRIMER SUPLENTE DEL GERENTE GENERAL\" } ], \"Embargoes\": \"\", \"Liquidations\": \"\", \"DocumentIssueDate\": \"2015-04-24\", \"LastRegistrationRenewalDate\": \"2015-04-01\" } } ```"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 13781,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 2304,
+      "output_tokens": 1107
+    },
+    "ResponseMetadata": {
+      "RequestId": "2c51cca7-82ce-4f9e-9cfa-b12da7f50bb1",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Mon, 01 Sep 2025 06:22:22 GMT",
+        "content-type": "application/json",
+        "content-length": "6764",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "2c51cca7-82ce-4f9e-9cfa-b12da7f50bb1",
+        "x-amzn-bedrock-invocation-latency": "16737",
+        "x-amzn-bedrock-cache-write-input-token-count": "0",
+        "x-amzn-bedrock-cache-read-input-token-count": "2304",
+        "x-amzn-bedrock-output-token-count": "1107",
+        "x-amzn-bedrock-input-token-count": "13781"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_01Xn4tVbt1WtKCLj5REVQeKm",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-sonnet-4-20250514",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "I need to extract information from this Colombian legal business registration document (\"Certificado de Existencia y Representación Legal\") issued by \"La Cámara de Comercio de Bogotá\". Let me analyze each required field systematically: 1. DocumentPages: I need to count the pages by looking at the \"Páginas X de Y\" bookmarks. I can see \"1 de 5\", \"2 de 5\", \"3 de 5\", \"4 de 5\", and \"5 de 5\" at the bottom of each page, so this is a 5-page document. 2. CompanyName: Looking at the document, I see \"PAPELERIA D`CLASE SAS\" at the top and throughout the document. The document shows various name changes over time, but the current name appears to be \"PAPELERIA D'CLASE SAS\" (note the apostrophe instead of backtick). 3. CompanyType: \"SAS\" (Sociedad por Acciones Simplificada) 4. Country: Colombia (issued by Cámara de Comercio de Bogotá) 5. TaxId: \"8001679431\" (appears as \"NIT - 8001679431\") 6. IdentificationType: \"NIT\" (standard for Colombian companies) 7. MainAddress: \"CR 9 23 59 LC 601\" is the address, and I need to find the city. The document mentions \"SANTAFE DE BOGOTA\" and \"BOGOTA D.C.\" in various places. The address appears to be in Bogotá D.C. 8. IncorporationDate: Looking at the constitution section, I see \"22 DE JULIO DE 1.992\" - need to convert to YYYY-MM-DD format: 1992-07-22 9. CompanyDuration: The document states \"QUE EL TERMINO DE DURACION DE LA SOCIEDAD ES INDEFINIDO\" - so this should be \"indefinido\" I continue extracting key registration details. The registration number is \"00507871\", confirmed in the document's matricula section. Regarding company size, no specific classification is evident, so I'll mark it as \"ForReview\". The document was issued on 24/04/2015 at 17:02, which converts to 2015-04-24. The last registration renewal occurred on 2015-04-01. In the nominations section, I've identified \"PACH\" as a related party. The leadership details reveal ON ORJUELA MARCO ANTONIO as General Manager, with PACHON TORRES SABRINA serving as First Alternate General Manager. No embargoes or liquidation information appears in the document.",
+          "signature": "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"
+        },
+        {
+          "type": "text",
+          "text": "```json { \"result\": { \"CompanyName\": \"PAPELERIA D'CLASE SAS\", \"CompanyType\": \"SAS\", \"Country\": \"Colombia\", \"DocumentPages\": \"5\", \"DocumentType\": \"CERL\", \"TaxId\": \"8001679431\", \"MainAddress\": \"CR 9 23 59 LC 601, Bogotá D.C.\", \"IncorporationDate\": \"1992-07-22\", \"CompanyDuration\": \"indefinido\", \"RegistrationNumber\": \"00507871\", \"Size\": \"\", \"RelatedParties\": [ { \"FirstName\": \"MARCO ANTONIO\", \"LastName\": \"PACHON ORJUELA\", \"IdType\": \"C.C.\", \"IdNumber\": \"000000011253821\", \"RelationshipType\": \"GERENTE GENERAL\" }, { \"FirstName\": \"SABRINA\", \"LastName\": \"PACHON TORRES\", \"IdType\": \"C.C.\", \"IdNumber\": \"000000053107729\", \"RelationshipType\": \"PRIMER SUPLENTE DEL GERENTE GENERAL\" } ], \"Embargoes\": \"\", \"Liquidations\": \"\", \"DocumentIssueDate\": \"2015-04-24\", \"LastRegistrationRenewalDate\": \"2015-04-01\" } } ```"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 13781,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 2304,
+        "output_tokens": 1107
+      }
+    },
+    "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 8000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+  "api_used": "invoke_model"
+}

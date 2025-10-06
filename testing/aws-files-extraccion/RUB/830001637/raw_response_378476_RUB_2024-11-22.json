@@ -1,0 +1,33 @@
+{
+  "ResponseMetadata": {
+    "RequestId": "d33939d5-225b-41f6-8971-9eb7069a666e",
+    "HTTPStatusCode": 200,
+    "HTTPHeaders": {
+      "date": "Tue, 17 Jun 2025 14:28:01 GMT",
+      "content-type": "application/json",
+      "content-length": "1627",
+      "connection": "keep-alive",
+      "x-amzn-requestid": "d33939d5-225b-41f6-8971-9eb7069a666e"
+    },
+    "RetryAttempts": 0
+  },
+  "output": {
+    "message": {
+      "role": "assistant",
+      "content": [
+        {
+          "text": "```json\n{\n  \"path\": \"s3://par-servicios-poc-dev-filling-desk/par-servicios-poc/RUB/830001637/378476_RUB_2024-11-22.pdf\",\n  \"result\": {\n    \"companyName\": \"SONDA DE COLOMBIA S A\",\n    \"country\": \"Colombia\",\n    \"documentType\": \"NIT\",\n    \"taxId\": \"830001637\",\n    \"relatedParties\": [\n      {\n        \"firstName\": \"SANTAMARIA\",\n        \"lastName\": \"ARDILA YESID EFREN\",\n        \"identificationType\": \"Cédula de Ciudadanía\",\n        \"identificationNumber\": \"5658060\",\n        \"noveltyType\": \"Registro\",\n        \"participationPercentage\": \"13.49\"\n      },\n      {\n        \"firstName\": \"NAVARRRO\",\n        \"lastName\": \"HAEUSSLER\",\n        \"identificationType\": \"NIT\",\n        \"identificationNumber\": \"21150787028\",\n        \"noveltyType\": \"Registro\",\n        \"participationPercentage\": \"5.41\"\n      },\n      {\n        \"firstName\": \"ANDRES\",\n        \"lastName\": \"PABLO\",\n        \"identificationType\": \"NIT\",\n        \"identificationNumber\": \"21164416626\",\n        \"noveltyType\": \"Registro\",\n        \"participationPercentage\": \"5.41\"\n      }\n    ]\n  },\n  \"confidenceScores\": {\n    \"companyName\": 95,\n    \"documentType\": 90,\n    \"country\": 100,\n    \"taxId\": 100,\n    \"relatedParties\": 85\n  },\n  \"document_type\": \"company\",\n  \"document_number\": \"830001637\",\n  \"category\": \"RUB\"\n}\n```"
+        }
+      ]
+    }
+  },
+  "stopReason": "end_turn",
+  "usage": {
+    "inputTokens": 8126,
+    "outputTokens": 438,
+    "totalTokens": 8564
+  },
+  "metrics": {
+    "latencyMs": 9206
+  }
+}

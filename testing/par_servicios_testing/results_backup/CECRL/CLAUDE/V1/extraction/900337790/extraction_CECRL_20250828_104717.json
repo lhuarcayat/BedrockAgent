@@ -1,0 +1,90 @@
+{
+  "extraction_data": {
+    "path": "CECRL/900337790/79211501_2020-02-29.pdf",
+    "result": {
+      "firstName": "JOHN WILTER",
+      "lastName": "STERLING NEIRA",
+      "country_issuer": "Colombia",
+      "nationality": "Colombia",
+      "identificationType": "Cédula de Ciudadanía",
+      "identificationNumber": "79.211.501",
+      "message": ""
+    },
+    "document_type": "person",
+    "documentNumber": "900337790",
+    "category": "CECRL"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "```json { \"result\": { \"firstName\": \"JOHN WILTER\", \"lastName\": \"STERLING NEIRA\", \"country_issuer\": \"Colombia\", \"nationality\": \"Colombia\", \"identificationType\": \"Cédula de Ciudadanía\", \"identificationNumber\": \"79.211.501\", \"message\": \"\" }, \"document_type\": \"person\", \"category\": \"CECRL\" } ```"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 10,
+      "cache_creation_input_tokens": 7741,
+      "cache_read_input_tokens": 0,
+      "output_tokens": 579
+    },
+    "ResponseMetadata": {
+      "RequestId": "d0786067-50f0-4d70-9b61-6bc457518d90",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Thu, 28 Aug 2025 15:47:16 GMT",
+        "content-type": "application/json",
+        "content-length": "2589",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "d0786067-50f0-4d70-9b61-6bc457518d90",
+        "x-amzn-bedrock-invocation-latency": "14019",
+        "x-amzn-bedrock-cache-write-input-token-count": "7741",
+        "x-amzn-bedrock-cache-read-input-token-count": "0",
+        "x-amzn-bedrock-output-token-count": "579",
+        "x-amzn-bedrock-input-token-count": "10"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_016X9be9NbASiHLX6cXu5hzK",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-3-7-sonnet-20250219",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "I need to analyze the provided Colombian identification document (Cédula de Ciudadanía) and extract the required information according to the schema. Let me go through the document carefully. First, let's identify what we can see in the ID document: Page 1: - Document Title: \"REPUBLICA DE COLOMBIA IDENTIFICACION PERSONAL CEDULA DE CIUDADANIA\" - Number: \"79.211.501\" - Last Name: \"STERLING NEIRA\" - First Name: \"JOHN WILTER\" - Signature: Shows the person's signature - Photo: The ID contains a photograph of a person Page 2: - Date of Birth: \"05.SEP.1975\" - Place of Birth: \"NEIVA (HUILA)\" - Height: \"1.65\" - Blood Type: \"O+\" - Sex: \"M\" (Male) - Date and Place of Issuance: \"30-SEP-1993 SOACHA\" - Fingerprint: Shows a fingerprint (right index finger) - Barcode at bottom of the card Let me organize this information according to the required schema: 1. firstName: \"JOHN WILTER\" - This is clearly marked under \"NOMBRES\" on the ID 2. lastName: \"STERLING NEIRA\" - This is clearly marked under \"APELLIDOS\" on the ID 3. country_issuer: \"Colombia\" - The document is titled \"REPUBLICA DE COLOMBIA\" 4. nationality: \"Colombia\" - There's no explicit nationality field, but for Colombian cédulas, we assume Colombian nationality 5. identificationType: \"Cédula de Ciudadanía\" - This is explicitly stated on the document 6. identificationNumber: \"79.211.501\" - This is shown under \"NUMERO\" 7. message: \"\" - No issues with extraction, document is clearly a valid ID Now I'll format this according to the required JSON schema:",
+          "signature": "ErcBCkgIBxABGAIiQJVgfCNdPRJ0Pbr0MQOmMwdzj0bc5tYxYXtm9wJgdhC0GOeYCxQR+MB2M5G8W5EeHtZ/7l4FEDSBQZMbJKKWRXMSDP8O2BLr01vhMHachRoM02zlIlgAUQJhoywzIjDcBjLiq3EWpXcxLOjvgSHT+wVlcZYCysZ6R9MUBaWROY9WVl3DzCsVsuPJJeRUuJ8qHRyWQw7J+wfoHP4JRVGrLbAmZ6STIKEqPYMhrcPuGAI="
+        },
+        {
+          "type": "text",
+          "text": "```json { \"result\": { \"firstName\": \"JOHN WILTER\", \"lastName\": \"STERLING NEIRA\", \"country_issuer\": \"Colombia\", \"nationality\": \"Colombia\", \"identificationType\": \"Cédula de Ciudadanía\", \"identificationNumber\": \"79.211.501\", \"message\": \"\" }, \"document_type\": \"person\", \"category\": \"CECRL\" } ```"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 10,
+        "cache_creation_input_tokens": 7741,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 579
+      }
+    },
+    "model_id": "us.anthropic.claude-3-7-sonnet-20250219-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 8000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "model_used": "us.anthropic.claude-3-7-sonnet-20250219-v1:0",
+  "api_used": "invoke_model"
+}

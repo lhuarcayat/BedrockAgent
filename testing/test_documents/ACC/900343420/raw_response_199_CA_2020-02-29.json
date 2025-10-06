@@ -1,0 +1,33 @@
+{
+  "ResponseMetadata": {
+    "RequestId": "0ce8b317-da7b-4bf7-9fd8-0fc4697075ea",
+    "HTTPStatusCode": 200,
+    "HTTPHeaders": {
+      "date": "Mon, 16 Jun 2025 20:49:19 GMT",
+      "content-type": "application/json",
+      "content-length": "1310",
+      "connection": "keep-alive",
+      "x-amzn-requestid": "0ce8b317-da7b-4bf7-9fd8-0fc4697075ea"
+    },
+    "RetryAttempts": 0
+  },
+  "output": {
+    "message": {
+      "role": "assistant",
+      "content": [
+        {
+          "text": "```json\n{\n  \"path\": \"s3://par-servicios-poc-dev-filling-desk/par-servicios-poc/ACC/900343420/199_CA_2020-02-29.pdf\",\n  \"result\": {\n    \"companyName\": \"PUNTO ESTRATÉGICO RED DE CONSULTORES SAS\",\n    \"documentType\": \"Equity Composition\",\n    \"taxId\": \"900.343.420-7\",\n    \"country\": \"Colombia\",\n    \"identificationDetails\": {\n      \"source\": \"text_reference\",\n      \"indicators\": [\n        \"Colombia\"\n      ],\n      \"requiresReview\": false\n    },\n    \"relatedParties\": [\n      {\n        \"firstName\": \"ADalberto\",\n        \"lastName\": \"de Jesus Escorcia Guzman\",\n        \"identificationType\": \"CC/NIT\",\n        \"identificationNumber\": \"72335489\",\n        \"relationshipType\": \"Shareholder\",\n        \"participationPercentage\": \"100\",\n        \"timeFound\": 1\n      }\n    ]\n  },\n  \"document_type\": \"company\",\n  \"document_number\": \"900343420\",\n  \"category\": \"ACC\",\n  \"confidenceScores\": {\n    \"companyName\": 95,\n    \"documentType\": 100,\n    \"taxId\": 100,\n    \"country\": 95,\n    \"relatedParties\": 90\n  }\n}\n```"
+        }
+      ]
+    }
+  },
+  "stopReason": "end_turn",
+  "usage": {
+    "inputTokens": 5435,
+    "outputTokens": 339,
+    "totalTokens": 5774
+  },
+  "metrics": {
+    "latencyMs": 7045
+  }
+}

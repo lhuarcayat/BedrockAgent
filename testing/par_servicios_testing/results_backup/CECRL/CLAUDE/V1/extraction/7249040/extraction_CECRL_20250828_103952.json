@@ -1,0 +1,90 @@
+{
+  "extraction_data": {
+    "path": "CECRL/7249040/7249040_2020-02-29.pdf",
+    "result": {
+      "firstName": "JOSE DEL CARMEN",
+      "lastName": "MESA GOMEZ",
+      "country_issuer": "Colombia",
+      "nationality": "Colombia",
+      "identificationType": "Cédula de Ciudadanía",
+      "identificationNumber": "7.249.040",
+      "message": ""
+    },
+    "document_type": "person",
+    "documentNumber": "7249040",
+    "category": "CECRL"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "```json { \"result\": { \"firstName\": \"JOSE DEL CARMEN\", \"lastName\": \"MESA GOMEZ\", \"country_issuer\": \"Colombia\", \"nationality\": \"Colombia\", \"identificationType\": \"Cédula de Ciudadanía\", \"identificationNumber\": \"7.249.040\", \"message\": \"\" }, \"document_type\": \"person\", \"category\": \"CECRL\" } ```"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 10,
+      "cache_creation_input_tokens": 5982,
+      "cache_read_input_tokens": 0,
+      "output_tokens": 839
+    },
+    "ResponseMetadata": {
+      "RequestId": "981144dd-9d8e-44ec-96a3-32f710fefc63",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Thu, 28 Aug 2025 15:39:51 GMT",
+        "content-type": "application/json",
+        "content-length": "3684",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "981144dd-9d8e-44ec-96a3-32f710fefc63",
+        "x-amzn-bedrock-invocation-latency": "20182",
+        "x-amzn-bedrock-cache-write-input-token-count": "5982",
+        "x-amzn-bedrock-cache-read-input-token-count": "0",
+        "x-amzn-bedrock-output-token-count": "839",
+        "x-amzn-bedrock-input-token-count": "10"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_014sGKCX8kgCxLRPUHsw2wwp",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-3-7-sonnet-20250219",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Let me carefully analyze the Colombian ID card image provided. ## Step 1: Document Structure Analysis This appears to be a Colombian national ID document (\"Cédula de Ciudadanía\") as indicated by the header \"REPUBLICA DE COLOMBIA IDENTIFICACION PERSONAL\" and the specific mention of \"CEDULA DE CIUDADANIA\". The document is in Spanish and follows the standard Colombian ID format with: - Official header identifying the issuing country - Document type - ID number - Personal information (names) - Biographical data (birth date, birth place) - Physical characteristics - Issue date and place - Fingerprint and signature - Barcode This is definitely an official government identification document. ## Step 2: Field Detection Let me identify the fields based on the visible labels: - \"REPUBLICA DE COLOMBIA\" - Header indicating country issuer - \"CEDULA DE CIUDADANIA\" - Document type - \"NUMERO: 7.249.040\" - Identification number - \"APELLIDOS: MESA GOMEZ\" - Last name - \"JOSE DEL CARMEN\" - First name (appears to be under \"NOMBRES\" though the label is partially visible) - \"FECHA DE NACIMIENTO: 27-JUN-1962\" - Birth date - \"PUERTO NARE (ANTIOQUIA)\" - Birth place - \"ESTATURA: 1.70\" - Height - \"G.S. RH: B+\" - Blood type - \"SEXO: M\" - Sex/Gender - \"FECHA Y LUGAR DE EXPEDICION: 23-FEB-1981 PUERTO BOYACA\" - Issue date and place ## Step 3: Text Extraction For each field: - firstName: \"JOSE DEL CARMEN\" (appears to be under NOMBRES label) - lastName: \"MESA GOMEZ\" (labeled as APELLIDOS) - country_issuer: \"Colombia\" (from header \"REPUBLICA DE COLOMBIA\") - nationality: \"Colombia\" (inferring from country of issue) - identificationType: \"Cédula de Ciudadanía\" (clearly stated on document) - identificationNumber: \"7.249.040\" (labeled as NUMERO) ## Step 4: Field Mapping and Validation - firstName: The first name appears to be \"JOSE DEL CARMEN\" which follows standard naming convention - lastName: \"MESA GOMEZ\" clearly labeled as last name - country_issuer: \"Colombia\" - clearly indicated in the document header - nationality: \"Colombia\" - assuming same as issuing country (no explicit nationality field present) - identificationType: \"Cédula de Ciudadanía\" - explicitly stated on document - identificationNumber: \"7.249.040\" - clearly labeled ## Step 5: Quality Control and Output All required fields are accounted for with good confidence. There are no obvious issues with the extraction. The document is clearly a Colombian ID card with all relevant information visible. According to the schema, I should prepare the JSON output following the specified format:",
+          "signature": "ErcBCkgIBxABGAIiQJZRS+kovZB/9Ir2LWiwAQeKaL8cYpdXS5/6aXEAQNVsoIyLLZyG5KY5Lk6cK7zkW9GnxNuKSZK0gh9i5lPH5acSDJFJf+9Ab0QvCX2bmRoMaWLh1QbRq8QHbC9oIjBZ+d0gMy4IyMqu6uVIJub2kac2FgBX6dstBiK1w+I6tEcVZw1r7uzR002vVzWss0YqHSxle2LqwetUiSiGAA7yaJVNMOO8OSxW4AEKT74dGAI="
+        },
+        {
+          "type": "text",
+          "text": "```json { \"result\": { \"firstName\": \"JOSE DEL CARMEN\", \"lastName\": \"MESA GOMEZ\", \"country_issuer\": \"Colombia\", \"nationality\": \"Colombia\", \"identificationType\": \"Cédula de Ciudadanía\", \"identificationNumber\": \"7.249.040\", \"message\": \"\" }, \"document_type\": \"person\", \"category\": \"CECRL\" } ```"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 10,
+        "cache_creation_input_tokens": 5982,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 839
+      }
+    },
+    "model_id": "us.anthropic.claude-3-7-sonnet-20250219-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 8000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "model_used": "us.anthropic.claude-3-7-sonnet-20250219-v1:0",
+  "api_used": "invoke_model"
+}

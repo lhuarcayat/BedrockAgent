@@ -1,0 +1,88 @@
+{
+  "extraction_data": {
+    "result": {
+      "FirstName": "LAURA XIMENA",
+      "LastName": "GALEANO NIÑO",
+      "CountryIssuer": "Colombia",
+      "Nationality": "colombiano",
+      "IdentificationType": "Cédula de Ciudadanía",
+      "IdentificationNumber": "1.019.077.438",
+      "Message": ""
+    },
+    "document_type": "person",
+    "category": "CECRL"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "```json { \"result\": { \"FirstName\": \"LAURA XIMENA\", \"LastName\": \"GALEANO NIÑO\", \"CountryIssuer\": \"Colombia\", \"Nationality\": \"colombiano\", \"IdentificationType\": \"Cédula de Ciudadanía\", \"IdentificationNumber\": \"1.019.077.438\", \"Message\": \"\" }, \"document_type\": \"person\", \"category\": \"CECRL\" } ```"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 1604,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 4300,
+      "output_tokens": 643
+    },
+    "ResponseMetadata": {
+      "RequestId": "23162b42-0cab-4f39-a904-7ec746376714",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Sun, 31 Aug 2025 21:47:15 GMT",
+        "content-type": "application/json",
+        "content-length": "5439",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "23162b42-0cab-4f39-a904-7ec746376714",
+        "x-amzn-bedrock-invocation-latency": "10817",
+        "x-amzn-bedrock-cache-write-input-token-count": "0",
+        "x-amzn-bedrock-cache-read-input-token-count": "4300",
+        "x-amzn-bedrock-output-token-count": "643",
+        "x-amzn-bedrock-input-token-count": "1604"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_013g5HZtfvChvDKQPmFsTnYc",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-sonnet-4-20250514",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "I need to analyze this Colombian identification document. Let me look at the structure and content: From the document, I can see: 1. Header: \"REPÚBLICA DE COLOMBIA\" - this indicates it's a Colombian document 2. Document type: \"IDENTIFICACIÓN PERSONAL\" and \"CÉDULA DE CIUDADANÍA\" - this is a Colombian citizenship card 3. Number: \"1.019.077.438\" 4. There's text that shows \"GALEANO NIÑO\" which appears to be a surname 5. There's text showing \"APELLIDOS:\" followed by \"LAURA XIMENA\" 6. There's text showing \"NOMBRES:\" but I need to look carefully at what comes after it Looking more carefully at the layout, this appears to be one of those Colombian documents with misaligned layout that the instructions specifically mention. Let me analyze step by step: The text flow appears to be: - NÚMERO: 1.019.077.438 - GALEANO NIÑO (this appears to be the surname) - APELLIDOS: LAURA XIMENA (but this doesn't make sense as \"LAURA XIMENA\" are typically first names) - NOMBRES: (appears to have no text after it) This is exactly the type of misalignment described in the methodology. According to the instructions for Colombian documents: - The surnames appear first, then the \"APELLIDOS\" label with what's actually the first name - The \"NOMBRES\" label appears but might be empty or separated So the correct interpretation should be: - FirstName: LAURA XIMENA (what follows \"APELLIDOS:\" is actually the first name due to misalignment) - LastName: GALEANO NIÑO (this appears before the \"APELLIDOS:\" label and represents the actual surnames) - CountryIssuer: Colombia (from \"REPÚBLICA DE COLOMBIA\") - Nationality: Colombian (inferred from the issuing country) - IdentificationType: Cédula de Ciudadanía (clearly stated in the document) - IdentificationNumber: 1.019.077.438 (clearly marked as \"NÚMERO\") I'll extract the precise identification details from the Colombian document, noting the unique layout challenges.",
+          "signature": "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"
+        },
+        {
+          "type": "text",
+          "text": "```json { \"result\": { \"FirstName\": \"LAURA XIMENA\", \"LastName\": \"GALEANO NIÑO\", \"CountryIssuer\": \"Colombia\", \"Nationality\": \"colombiano\", \"IdentificationType\": \"Cédula de Ciudadanía\", \"IdentificationNumber\": \"1.019.077.438\", \"Message\": \"\" }, \"document_type\": \"person\", \"category\": \"CECRL\" } ```"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 1604,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 4300,
+        "output_tokens": 643
+      }
+    },
+    "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 8000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+  "api_used": "invoke_model"
+}

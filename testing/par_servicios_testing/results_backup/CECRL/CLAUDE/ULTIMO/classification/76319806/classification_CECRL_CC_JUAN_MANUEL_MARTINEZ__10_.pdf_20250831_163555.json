@@ -1,0 +1,87 @@
+{
+  "classification_data": {
+    "category": "CECRL",
+    "text": "REPUBLICA DE COLOMBIA IDENTIFICACION PERSONAL CEDULA DE CIUDADANIA NUMERO 76319806 MARTINEZ FERNANDEZ APELLIDOS JUAN MANUEL NOMBRES FIRMA",
+    "document_number": "76319806",
+    "path": "CECRL/76319806/CC_JUAN_MANUEL_MARTINEZ__10_.pdf"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "```json { \"category\": \"CECRL\", \"text\": \"REPUBLICA DE COLOMBIA\\nIDENTIFICACION PERSONAL\\nCEDULA DE CIUDADANIA\\nNUMERO 76319806\\nMARTINEZ FERNANDEZ\\nAPELLIDOS\\nJUAN MANUEL\\nNOMBRES\\nFIRMA\" } ```"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 1584,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 3150,
+      "output_tokens": 519
+    },
+    "ResponseMetadata": {
+      "RequestId": "e8d264c3-4a34-42c9-a202-828a613ce080",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Sun, 31 Aug 2025 21:35:54 GMT",
+        "content-type": "application/json",
+        "content-length": "4616",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "e8d264c3-4a34-42c9-a202-828a613ce080",
+        "x-amzn-bedrock-invocation-latency": "8067",
+        "x-amzn-bedrock-cache-write-input-token-count": "0",
+        "x-amzn-bedrock-cache-read-input-token-count": "3150",
+        "x-amzn-bedrock-output-token-count": "519",
+        "x-amzn-bedrock-input-token-count": "1584"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_01Exfoj27TDWgyKJxv8zC44U",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-sonnet-4-20250514",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Let me analyze this document following the classification workflow: 1. **TEXT EXTRACTION** The document contains the following text: - REPUBLICA DE COLOMBIA - IDENTIFICACION PERSONAL - CEDULA DE CIUDADANIA - NUMERO 76319806 - MARTINEZ FERNANDEZ - APELLIDOS - JUAN MANUEL - NOMBRES - FIRMA There's also a photograph of a person and what appears to be a signature area. 2. **PRIORITY CHECKS** - This is not BLANK as it has significant content - This is not LINK_ONLY as there are no hyperlinks or URLs 3. **DOCUMENT FUNCTION ANALYSIS** The main purpose of this document is personal identification. The key indicators are: - \"IDENTIFICACION PERSONAL\" (Personal Identification) - \"CEDULA DE CIUDADANIA\" (Citizenship Card) - Personal biographical data: names, surnames, identification number - Individual photograph - Signature area - This is clearly a government-issued personal identification document 4. **ISSUER IDENTIFICATION** The document is issued by \"REPUBLICA DE COLOMBIA\" which is a government identification authority, not a tax authority, commercial registry, or corporate entity. 5. **CATEGORY CLASSIFICATION** Based on the analysis: - This is clearly a CECRL (personal identification document) - It contains all the essential indicators for CECRL: - Terminology: \"CEDULA DE CIUDADANIA\", \"IDENTIFICACION PERSONAL\" - Personal biographical data: names, identification number - Individual reference with photograph and signature - Government-issued personal identification number (76319806) This is definitely a CECRL document - it's a Colombian citizenship card (cédula de ciudadanía).",
+          "signature": "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"
+        },
+        {
+          "type": "text",
+          "text": "```json { \"category\": \"CECRL\", \"text\": \"REPUBLICA DE COLOMBIA\\nIDENTIFICACION PERSONAL\\nCEDULA DE CIUDADANIA\\nNUMERO 76319806\\nMARTINEZ FERNANDEZ\\nAPELLIDOS\\nJUAN MANUEL\\nNOMBRES\\nFIRMA\" } ```"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 1584,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 3150,
+        "output_tokens": 519
+      }
+    },
+    "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 8000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "expected_category": "CECRL",
+  "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+  "api_used": "invoke_model",
+  "pdf_info": {
+    "original_size": 625017,
+    "first_page_size": 205446,
+    "is_scanned": true
+  }
+}

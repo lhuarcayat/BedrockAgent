@@ -1,0 +1,129 @@
+{
+  "extraction_data": {
+    "result": {
+      "PrincipalCompanyName": "ENEL COLOMBIA S.A. ESP",
+      "DocumentCategory": "Equity Composition",
+      "TaxId": "860.063.875-8",
+      "IdentificationType": "NIT",
+      "Country": "Colombia",
+      "IdentificationDetails": {
+        "Source": "TextReference",
+        "Indicators": [
+          "Bogotá, Colombia",
+          "NIT"
+        ],
+        "ConflictingSources": [
+          "Missing identification details for entity: OTROS ACCIONISTAS MINORITARIOS"
+        ],
+        "RequiresReview": "true"
+      },
+      "RelatedParties": [
+        {
+          "Type": "company",
+          "CompanyName": "ENEL AMERICAS S.A.",
+          "IdType": "NIT",
+          "IdNumber": "900.283.352-6",
+          "RelationshipType": "Shareholder",
+          "ParticipationPercentage": "57,345",
+          "TimeFound": "1",
+          "Job": ""
+        },
+        {
+          "Type": "company",
+          "CompanyName": "GRUPO ENERGÍA BOGOTÁ S.A. E.S.P.",
+          "IdType": "NIT",
+          "IdNumber": "899.999.082-3",
+          "RelationshipType": "Shareholder",
+          "ParticipationPercentage": "42,515",
+          "TimeFound": "1",
+          "Job": ""
+        },
+        {
+          "Type": "company",
+          "CompanyName": "OTROS ACCIONISTAS MINORITARIOS",
+          "IdType": "ForReview",
+          "IdNumber": "ForReview",
+          "RelationshipType": "Shareholder",
+          "ParticipationPercentage": "0,140",
+          "TimeFound": "1",
+          "Job": ""
+        }
+      ]
+    },
+    "DocumentType": "company",
+    "Category": "ACC"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "{ \"result\": { \"PrincipalCompanyName\": \"ENEL COLOMBIA S.A. ESP\", \"DocumentCategory\": \"Equity Composition\", \"TaxId\": \"860.063.875-8\", \"IdentificationType\": \"NIT\", \"Country\": \"Colombia\", \"IdentificationDetails\": { \"Source\": \"TextReference\", \"Indicators\": [ \"Bogotá, Colombia\", \"NIT\" ], \"ConflictingSources\": [\"Missing identification details for entity: OTROS ACCIONISTAS MINORITARIOS\"], \"RequiresReview\": \"true\" }, \"RelatedParties\": [ { \"Type\": \"company\", \"CompanyName\": \"ENEL AMERICAS S.A.\", \"IdType\": \"NIT\", \"IdNumber\": \"900.283.352-6\", \"RelationshipType\": \"Shareholder\", \"ParticipationPercentage\": \"57,345\", \"TimeFound\": \"1\", \"Job\": \"\" }, { \"Type\": \"company\", \"CompanyName\": \"GRUPO ENERGÍA BOGOTÁ S.A. E.S.P.\", \"IdType\": \"NIT\", \"IdNumber\": \"899.999.082-3\", \"RelationshipType\": \"Shareholder\", \"ParticipationPercentage\": \"42,515\", \"TimeFound\": \"1\", \"Job\": \"\" }, { \"Type\": \"company\", \"CompanyName\": \"OTROS ACCIONISTAS MINORITARIOS\", \"IdType\": \"ForReview\", \"IdNumber\": \"ForReview\", \"RelationshipType\": \"Shareholder\", \"ParticipationPercentage\": \"0,140\", \"TimeFound\": \"1\", \"Job\": \"\" } ] }, \"DocumentType\": \"company\", \"Category\": \"ACC\" }"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 3956,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 4822,
+      "output_tokens": 1203
+    },
+    "ResponseMetadata": {
+      "RequestId": "574b66c9-d65a-4980-9a3f-165ac3853c1d",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Mon, 01 Sep 2025 02:11:33 GMT",
+        "content-type": "application/json",
+        "content-length": "7187",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "574b66c9-d65a-4980-9a3f-165ac3853c1d",
+        "x-amzn-bedrock-invocation-latency": "22555",
+        "x-amzn-bedrock-cache-write-input-token-count": "0",
+        "x-amzn-bedrock-cache-read-input-token-count": "4822",
+        "x-amzn-bedrock-output-token-count": "1203",
+        "x-amzn-bedrock-input-token-count": "3956"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_01PJY7WcaD5GYVSgkvKwyZm2",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-sonnet-4-20250514",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Let me analyze this document step by step according to the extraction rules. **Document Analysis:** 1. **PrincipalCompanyName**: Looking at the document header and main content: - The document title mentions \"CERTIFICACIÓN DE COMPOSICIÓN ACCIONARIA\" - The main company mentioned is \"ENEL COLOMBIA S.A. ESP\" - This appears throughout the document as the company whose shareholder composition is being certified - Full legal name with suffix: \"ENEL COLOMBIA S.A. ESP\" 2. **TaxId**: - Found \"NIT. 860.063.875-8\" in the document (page 1, span 1-4) - Note: There's also \"860.063.875-6\" mentioned in the header, but the main certification refers to \"860.063.875-8\" - Format: \"860.063.875-8\" (Colombian format with dots and dash) 3. **IdentificationType**: - Clearly stated as \"NIT\" multiple times in the document 4. **Country**: - Explicitly mentioned \"Bogotá, Colombia\" multiple times - Clear text references to Colombia - Consistent with NIT identification type 5. **RelatedParties**: From the shareholding table: **ENEL AMERICAS S.A.** - Type: company (has S.A. suffix) - NIT. 900.283.352-6 - Participation: 57,345% (or could be 57.345%) - Mentioned once in the main table **GRUPO ENERGÍA BOGOTÁ S.A. E.S.P.** - Type: company (has S.A. E.S.P. suffix) - NIT 899.999.082-3 - Participation: 42,515% (or could be 42.515%) - Mentioned once in the main table **OTROS ACCIONISTAS MINORITARIOS** - Represents a group of minority shareholders - Categorized as a company entity - No specific tax identification number available - Minimal participation of 0,140% - Appears once in the shareholding documentation 6. **Validation**: - Percentages total exactly 100% - Shareholders are all corporate entities The entity lacks critical identification details, necessitating a thorough review process. The absence of a specific tax identification number creates potential verification challenges.",
+          "signature": "Ep8SCkgIBxABGAIqQLgERKExDz/cVZgM9QwdlTo5pHO1r9146un2PNxltizjb5F1Pi4xR/rHFNPUJuPMw3ObiQVqxF+WARwvCLW5WN0SDMYssYSQ2iibF9GA5RoMlfyNklQxDKQJSoVpIjA9nUXzWY/eZ2jm7wT8uyQYzpikElq+rSSq0Lwxg8ww1HrofWeYE21hq1sILe9CaJIqhBFtICe6hm99HVKTfV9wAe+2KU/cidZsfPvOKOWcV88BZPMFdI0k7+txNJ4DVcsYLIpp9p3Vj2Y77VHUIsCM1b7qOr24HiB9V93o5y4FgJ3JjBjkGYsVlvBycAHQUjaSB61YR8uQtgOF0Tcqw2drHYnX7DAQ0ju5pvxBtoEUzm/jOvwX0CvxSj8iuQaeP1QOiLUi6Z0NI6Ljxm8PABKHLL5JGUNzNVm+Y7dv51gGLQK3LKfIHN+ULPvDWjr3tgzbUzAYe8+E1oOGfuLbCeQeB7sMXlccmmubprP6gRLvX+yD2yuV/r3jPN3E+VTRm41ne6sGh8c7YeqJFAZ7b4KBrSyx4/fyEZuRuwd1YhlbK2qwroKn/mxcI/7X9qDvI0GyVVQKSUB217flt3IPAZYFylITADju6zKMDsqDF9gYbt3KBM3Cj7TXc7qftmXt1xiWlV1cYVYwyEyvlXq1ePH2krnTGrIyRRjsnmeOKWutCBU9IxCjG01d6tXAFCcOqlcjAlA+keJrqK5kIobveKyc47wQh0vzFgEv9jz3GKLCTC+HlgE0riJY44csDKKditubsmWYkszJfudfjdhNJCKfA/Q3KxgnsQaXAzbi4qhnvC7gZzRZlgg8jFkjS/7MsmMmk+OunQRhUnMunTkWEAUfLDHe+EMDrshcbhJzOCyuX7riDTpKJIgsfCLtWw7AeekPQkuvyKVa8jvorj+OGF235UKHMICLCxzxyblqY8GBBGA8HW1Y+hB+EgKvaFGyOekMZjxGTwVBIdxzSc72FJhqQaY68rRn6y473LjloOG4yD4PtK8UnFD7KzzZv984FXFz2OkbmCOhGR7VqljS5wCEhumrdal60uhCBhKgL5JFLUIsDycpi/gYIJ83YSVav1eWORJUCwCKYBn/0APjZ1Hk+R+80FC4QBgD9aXmcJHLPlQoswjV6d1Yo+qP82/KWLFTMGWtlJJrzk9OLa5iUlWNLtJUCh9RxM7p5Z3SEaUcTwAchDIi3u9n5qQvhBHWAUqdWte6Y8HzoIQN2iN31xP3RAt7TJn3WRTghjuWNzeYYQmX75HVtypM5aRfWEN5vWvT6yigpXDnne3vl2iUn+fYHRURRE56T8tEjKMOsHIEjc3SBV9JVJ+c2wE+Drlioq2lQ5tQiJRxVUQaxH3PO5zej/wxIYyPZEh3uEuF7Sd6qSvLPG47fFKEHWgRwsH34FrYKI15wj9jOJ81YgahJVKVQPErNPEe82UiPD4dt3g7lT6/+xeUhtK5bjAVeryUPU4GLwlqXs5xqsG8wPEwvSGB5Ao2vtSQS+VsEwGv3CbG2XnWQHL3oU2rYxd3b4oFIO1lMszN5p0pjr4EAAyNfMxTgeNzDubd+a6vXxy4s9k6sfapd3t5OnQqaLPaJ8manIdrjiZOXIZ2i9cuXQOUTWE4VCAlE89JmnbNA00SclmDhorqMufrx25bzaES7dU051R5OlJ39dDdoE3c8xNRrXfdwmbEbi9TuJtWI+br1tC7MRgY7KEgx67/gQOdivQk68pXiJ3EXybvKCVP5P/h3SiCHxadK/FIfQ7Iz6JVVGjMs9JamRYfgTnvC8RxUpLl066d3dGdWGR1iKP0tWFLhznpgmIdWtTG4emKSYd7j61PI2apApMvPg+3fV31tecZTTJHFSwOo9SyZ0N8hBtyVRG8hjFXkCEsO4QzbI9hk9yRN5ve8ducYHEsDOwGbMo8zObvxtST8NhrI7YB2nEDAyVXCk2uzSvlDN64RAjOBqruxIuNam8u/6XJcY+AtCcyumo3DoAPMdrt5T1cDzuhrFuIsJnXoHI6sXFJmpcunlVCUWrpRF32OMTZlJuQrph/1tSD4RVm1SX2zIzXs0M4FRSN/ObL422sYdBXqNnEZeT9Mn5BhX6gJdeC4nDLaCjocqAALysHdzXsHlkCW9mnar3GFM/3wMxrJg+eXn8S8QQp618JMCTbeoHfZRDr4SbPTkZuGPvP5xlJ79xaF60KMm7T+ef5oPofDUVaO3ln/0oICNoT38aoQfamdgYSjYGr1J0xP67MWi01mzUbMMWMlTyBxow6uS/9AY3KpC4qfALttq1rU7ZXBUDXhikzprclkhdvQF1SPXesgD8IyYoFqYjJrt0UBU4SvyFjTioK9Y2a5R/SDr7p8lTDleVV2ZQhMOK4BTTwsvi/VlRsff2a2JaurWlMaWnfdENZfak/wiu26KH7rgNbuWdaQrV+FvGgmU/X7bH4NXX2rIb3suLkmpnJUDIN3ovA52kvUeMJ8iSd+wTYM+7LDRE5fO/JztQqSInlASM5uFbePpFcPSJ3dS1SgaqU/PgoeJamPp2oJPPO5nKLkXkXWMPnhIGx+KrBq5XxMNnTPAKPyyb1vxVPrC9IdazGswHhW6jMzqqz6r2U+oTu5EXjE0UqX9hzttf+KBNiKFN6tKETibx2RmO5bUbvbSIX/8nhfnSEmW5dzIcFXMvMsQq1DZ7D1fDKHleEiGZj+9qq2aDaZZ539eUakzNcph1Zv57NoXhz9nRRCE61+TFEQMFhQyGgK+2aHwg4yp9pA3I9phUxpB06DJ4uAGtiTO6k6wqbc/qzucPIpbl4tbxgCJkLvWltWSOzOL1oxtBavpm2ohwa15eFCZYsm0+zEusf5554bPJGfNd4uwkg1/LCJbPgpZbvbMMk5DnmzD2Ij2ZoLF9nxeq/InvLLvbuIZ0YglgMenuc1BkC7eTBEyyFeRrLmDwHBHXjYBRCG/YOjm9qLm9DgWsQ/7UsRYM19lP7LvCIe68FEX/nXZL1+yj3gQRSWgLvWWuRkUVtXNnsFwycJBKqvy+BRpy0s2dJgAhXlU3Iy5r5fwvk2KiAOi3eD6arFc0vfhnnOjX9Atu2JPdeV3eO+hvSb876pJrsNQ/f5riLehgB"
+        },
+        {
+          "type": "text",
+          "text": "{ \"result\": { \"PrincipalCompanyName\": \"ENEL COLOMBIA S.A. ESP\", \"DocumentCategory\": \"Equity Composition\", \"TaxId\": \"860.063.875-8\", \"IdentificationType\": \"NIT\", \"Country\": \"Colombia\", \"IdentificationDetails\": { \"Source\": \"TextReference\", \"Indicators\": [ \"Bogotá, Colombia\", \"NIT\" ], \"ConflictingSources\": [\"Missing identification details for entity: OTROS ACCIONISTAS MINORITARIOS\"], \"RequiresReview\": \"true\" }, \"RelatedParties\": [ { \"Type\": \"company\", \"CompanyName\": \"ENEL AMERICAS S.A.\", \"IdType\": \"NIT\", \"IdNumber\": \"900.283.352-6\", \"RelationshipType\": \"Shareholder\", \"ParticipationPercentage\": \"57,345\", \"TimeFound\": \"1\", \"Job\": \"\" }, { \"Type\": \"company\", \"CompanyName\": \"GRUPO ENERGÍA BOGOTÁ S.A. E.S.P.\", \"IdType\": \"NIT\", \"IdNumber\": \"899.999.082-3\", \"RelationshipType\": \"Shareholder\", \"ParticipationPercentage\": \"42,515\", \"TimeFound\": \"1\", \"Job\": \"\" }, { \"Type\": \"company\", \"CompanyName\": \"OTROS ACCIONISTAS MINORITARIOS\", \"IdType\": \"ForReview\", \"IdNumber\": \"ForReview\", \"RelationshipType\": \"Shareholder\", \"ParticipationPercentage\": \"0,140\", \"TimeFound\": \"1\", \"Job\": \"\" } ] }, \"DocumentType\": \"company\", \"Category\": \"ACC\" }"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 3956,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 4822,
+        "output_tokens": 1203
+      }
+    },
+    "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 8000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+  "api_used": "invoke_model"
+}

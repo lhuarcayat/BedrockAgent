@@ -1,0 +1,88 @@
+{
+  "extraction_data": {
+    "result": {
+      "FirstName": "LEONARDO",
+      "LastName": "LAYTON AREVALO",
+      "CountryIssuer": "Colombia",
+      "Nationality": "colombiano",
+      "IdentificationType": "Cédula de Ciudadanía",
+      "IdentificationNumber": "79.567.566",
+      "Message": ""
+    },
+    "document_type": "person",
+    "category": "CECRL"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "```json { \"result\": { \"FirstName\": \"LEONARDO\", \"LastName\": \"LAYTON AREVALO\", \"CountryIssuer\": \"Colombia\", \"Nationality\": \"colombiano\", \"IdentificationType\": \"Cédula de Ciudadanía\", \"IdentificationNumber\": \"79.567.566\", \"Message\": \"\" }, \"document_type\": \"person\", \"category\": \"CECRL\" } ```"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 1583,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 4300,
+      "output_tokens": 823
+    },
+    "ResponseMetadata": {
+      "RequestId": "a08106cb-5f3a-4608-9741-5277fa2743ee",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Sun, 31 Aug 2025 21:45:16 GMT",
+        "content-type": "application/json",
+        "content-length": "6778",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "a08106cb-5f3a-4608-9741-5277fa2743ee",
+        "x-amzn-bedrock-invocation-latency": "13358",
+        "x-amzn-bedrock-cache-write-input-token-count": "0",
+        "x-amzn-bedrock-cache-read-input-token-count": "4300",
+        "x-amzn-bedrock-output-token-count": "823",
+        "x-amzn-bedrock-input-token-count": "1583"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_01WBoKG2KC6PGLjUKJQseq2n",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-sonnet-4-20250514",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Let me carefully analyze this Colombian identification document following the extraction methodology. First, let me identify what type of document this is: - The header reads \"REPUBLICA DE COLOMBIA\" - \"IDENTIFICACION PERSONAL\" - \"CEDULA DE CIUDADANIA\" This is clearly a Colombian Cédula de Ciudadanía (Citizenship Card) Now let me extract the information systematically: 1. **Document Number/ID Number**: I can see \"79.567.566\" prominently displayed near the top 2. **Names and surnames**: Looking at the document, I see: - \"LAYTON AREVALO\" appears near the top - Below that I see \"APELLIDOS\" (surnames label) - Then \"LEONARDO\" appears - Below that I see \"NOMBRES\" (names label) This appears to be a case of the \"misaligned\" Colombian document layout that was described in the methodology. Let me analyze this carefully: The extraction methodology specifically mentions: \"This misalignment occurs in Colombian documents, where the surnames appear first and then the label 'APELLIDOS' along with the first name(s) and finally the label 'NAMES' appears. In this case, the 'text' that appears in 'APELLIDOS' is actually the name and belongs to the 'NAMES' label.\" Looking at the layout: - \"LAYTON AREVALO\" appears at the top - Then there's the \"APELLIDOS\" label - Then \"LEONARDO\" appears - Then there's the \"NOMBRES\" label Based on the contextual analysis methodology for Colombian documents: - The surnames should be \"LAYTON AREVALO\" (what appears before the APELLIDOS label) - The names should be \"LEONARDO\" (what appears between APELLIDOS and NOMBRES labels) 3. **Country Issuer**: \"REPUBLICA DE COLOMBIA\" - this should be translated to \"Colombia\" 4. **Nationality**: Since this is a Colombian citizenship card, the nationality would be \"colombiano\" I verify the birth details, noting the individual was born in Bogotá on October 28, 1972. This confirms the Colombian origin and provides key personal identification information. The document type of Cédula de Ciudadanía further validates the individual's national identity and citizenship status. Examining the name structure, I confirm the standard Colombian document format: surname precedes first name, with clear labeling of \"APELLIDOS\" and \"NOMBRES\" sections. The extracted name follows the expected pattern, with \"LAYTON AREVALO\" representing the full surname and \"LEONARDO\" as the first name.",
+          "signature": "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"
+        },
+        {
+          "type": "text",
+          "text": "```json { \"result\": { \"FirstName\": \"LEONARDO\", \"LastName\": \"LAYTON AREVALO\", \"CountryIssuer\": \"Colombia\", \"Nationality\": \"colombiano\", \"IdentificationType\": \"Cédula de Ciudadanía\", \"IdentificationNumber\": \"79.567.566\", \"Message\": \"\" }, \"document_type\": \"person\", \"category\": \"CECRL\" } ```"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 1583,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 4300,
+        "output_tokens": 823
+      }
+    },
+    "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 8000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+  "api_used": "invoke_model"
+}

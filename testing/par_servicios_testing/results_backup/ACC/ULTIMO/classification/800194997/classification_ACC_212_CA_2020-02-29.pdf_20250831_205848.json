@@ -1,0 +1,87 @@
+{
+  "classification_data": {
+    "category": "ACC",
+    "text": "DOCUPRINT S.A.S. NIT. 800.194.997-1 EL SUSCRITO CONTADOR PUBLICO CERTIFICA QUE La composición accionaria de la empresa DOCUPRINT S.A.S NIT 800.194.997-1 según registros contables a 31 de Diciembre de 2019 presenta lo siguiente SOCIO CC o NIT ACCIONES VR NOMINAL VR CAPITAL PAGADO CARLOS A. MOLINA SUAREZ 12.119.319 1170 100.000 117.000.000 FAST PRINT LTDA 800.149.757 1170 100.000 117.000.000 TOTALES 2340 200.000 234.000.000 Se expide la presente certificación en la ciudad de Medellín Enero 09 de 2020 para trámites legales JAIRO DE JESÚS ZAPATA VALENCIA CC 15.501.332 de Copacabana Contador Público TP 9899-T Carrera 43 B No. 9 - 43 PBX: 444 58 61 Fax: 444 58 61 Medellín e-mail: docuprintcontabilidad@aurosnet.com",
+    "document_number": "800194997",
+    "path": "ACC/800194997/212_CA_2020-02-29.pdf"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "```json { \"category\": \"ACC\", \"text\": \"DOCUPRINT S.A.S.\\nNIT. 800.194.997-1\\n\\nEL SUSCRITO CONTADOR PUBLICO CERTIFICA QUE\\n\\nLa composición accionaria de la empresa DOCUPRINT S.A.S NIT 800.194.997-1 según registros contables a 31 de Diciembre de 2019 presenta lo siguiente\\n\\nSOCIO\\t\\t\\tCC o NIT\\tACCIONES VR NOMINAL\\tVR CAPITAL PAGADO\\n\\nCARLOS A. MOLINA SUAREZ\\t12.119.319\\t\\t1170\\t100.000\\t\\t117.000.000\\nFAST PRINT LTDA\\t\\t800.149.757\\t\\t1170\\t100.000\\t\\t117.000.000\\n\\nTOTALES\\t\\t\\t\\t\\t2340\\t200.000\\t\\t234.000.000\\n\\nSe expide la presente certificación en la ciudad de Medellín Enero 09 de 2020 para trámites legales\\n\\nJAIRO DE JESÚS ZAPATA VALENCIA\\nCC 15.501.332 de Copacabana\\nContador Público TP 9899-T\\n\\nCarrera 43 B No. 9 - 43 PBX: 444 58 61 Fax: 444 58 61 Medellín\\ne-mail: docuprintcontabilidad@aurosnet.com\" } ```"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 1584,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 3150,
+      "output_tokens": 1179
+    },
+    "ResponseMetadata": {
+      "RequestId": "ef2668ef-20a3-47d8-a94a-dad3ca7cf8a2",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Mon, 01 Sep 2025 01:58:48 GMT",
+        "content-type": "application/json",
+        "content-length": "7254",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "ef2668ef-20a3-47d8-a94a-dad3ca7cf8a2",
+        "x-amzn-bedrock-invocation-latency": "19917",
+        "x-amzn-bedrock-cache-write-input-token-count": "0",
+        "x-amzn-bedrock-cache-read-input-token-count": "3150",
+        "x-amzn-bedrock-output-token-count": "1179",
+        "x-amzn-bedrock-input-token-count": "1584"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_01VFnpvVPk1P4Pp1mimjQHHZ",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-sonnet-4-20250514",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Let me analyze this document step by step according to the classification workflow: 1. **TEXT EXTRACTION**: The document contains the following text: - DOCUPRINT S.A.S - NIT. 800.194.997-1 - EL SUSCRITO CONTADOR PUBLICO CERTIFICA QUE - La composición accionaria de la empresa DOCUPRINT S.A.S NIT 800.194.997-1 según registros contables a 31 de Diciembre de 2019 presenta lo siguiente - A table with SOCIO, CC o NIT, ACCIONES VR NOMINAL, VR CAPITAL PAGADO columns - CARLOS A. MOLINA SUAREZ: 12.119.319, 1170, 100.000, 117.000.000 - FAST PRINT LTDA: 800.149.757, 1170, 100.000, 117.000.000 - TOTALES: 2340, 200.000, 234.000.000 - Se expide la presente certificación en la ciudad de Medellín Enero 09 de 2020 para trámites legales - JAIRO DE JESÚS ZAPATA VALENCIA - CC 15.501.332 de Copacabana - Contador Público TP 9899-T - Contact information at the bottom 2. **PRIORITY CHECKS**: - Not BLANK - has significant content - Not LINK_ONLY - no hyperlinks or URLs redirecting elsewhere 3. **DOCUMENT FUNCTION ANALYSIS**: What is the MAIN PURPOSE of this document? - This document shows the shareholding composition of the company DOCUPRINT S.A.S - It details the shareholders (CARLOS A. MOLINA SUAREZ and FAST PRINT LTDA) with their shares information - Shows number of shares (1170 each), nominal value (100.000 each), and paid capital (117.000.000 each) - This is clearly indicating shareholding composition with % participation, capital contributions, and number of shares -> ACC Indicative 4. **ISSUER IDENTIFICATION**: I recognize this as a professional certification by a public accountant. The document provides detailed shareholding information for DOCUPRINT S.A.S, verified by JAIRO DE JESÚS ZAPATA VALENCIA, a certified public accountant. The certification confirms the company's ownership structure as of December 31, 2019, with two primary shareholders having equal stake. 5. **CATEGORY CLASSIFICATION**: The document definitively falls under the ACC category - a shareholding composition certificate. It comprehensively details shareholder identities, their respective share percentages, capital contributions, and total number of shares, serving as an official record of the company's ownership structure.",
+          "signature": "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"
+        },
+        {
+          "type": "text",
+          "text": "```json { \"category\": \"ACC\", \"text\": \"DOCUPRINT S.A.S.\\nNIT. 800.194.997-1\\n\\nEL SUSCRITO CONTADOR PUBLICO CERTIFICA QUE\\n\\nLa composición accionaria de la empresa DOCUPRINT S.A.S NIT 800.194.997-1 según registros contables a 31 de Diciembre de 2019 presenta lo siguiente\\n\\nSOCIO\\t\\t\\tCC o NIT\\tACCIONES VR NOMINAL\\tVR CAPITAL PAGADO\\n\\nCARLOS A. MOLINA SUAREZ\\t12.119.319\\t\\t1170\\t100.000\\t\\t117.000.000\\nFAST PRINT LTDA\\t\\t800.149.757\\t\\t1170\\t100.000\\t\\t117.000.000\\n\\nTOTALES\\t\\t\\t\\t\\t2340\\t200.000\\t\\t234.000.000\\n\\nSe expide la presente certificación en la ciudad de Medellín Enero 09 de 2020 para trámites legales\\n\\nJAIRO DE JESÚS ZAPATA VALENCIA\\nCC 15.501.332 de Copacabana\\nContador Público TP 9899-T\\n\\nCarrera 43 B No. 9 - 43 PBX: 444 58 61 Fax: 444 58 61 Medellín\\ne-mail: docuprintcontabilidad@aurosnet.com\" } ```"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 1584,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 3150,
+        "output_tokens": 1179
+      }
+    },
+    "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 8000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "expected_category": "ACC",
+  "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+  "api_used": "invoke_model",
+  "pdf_info": {
+    "original_size": 124345,
+    "first_page_size": 124172,
+    "is_scanned": true
+  }
+}

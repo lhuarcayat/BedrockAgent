@@ -1,0 +1,87 @@
+{
+  "classification_data": {
+    "category": "CECRL",
+    "text": "REPUBLICA DE COLOMBIA IDENTIFICACION PERSONAL CEDULA DE CIUDADANIA NUMERO 79.211.501 STERLING NEIRA APELLIDOS JOHN WILTER NOMBRES FIRMA",
+    "document_number": "UNKNOWN",
+    "path": "CECRL/900337790_79211501_2020-02-29/79211501_2020-02-29.pdf"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "```json { \"category\": \"CECRL\", \"text\": \"REPUBLICA DE COLOMBIA IDENTIFICACION PERSONAL CEDULA DE CIUDADANIA NUMERO 79.211.501 STERLING NEIRA APELLIDOS JOHN WILTER NOMBRES FIRMA\" } ```"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 9,
+      "cache_creation_input_tokens": 4797,
+      "cache_read_input_tokens": 0,
+      "output_tokens": 503
+    },
+    "ResponseMetadata": {
+      "RequestId": "2368a094-4f82-45b0-a9e4-05acafd0fa63",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Fri, 29 Aug 2025 22:56:28 GMT",
+        "content-type": "application/json",
+        "content-length": "4722",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "2368a094-4f82-45b0-a9e4-05acafd0fa63",
+        "x-amzn-bedrock-invocation-latency": "10226",
+        "x-amzn-bedrock-cache-write-input-token-count": "4797",
+        "x-amzn-bedrock-cache-read-input-token-count": "0",
+        "x-amzn-bedrock-output-token-count": "503",
+        "x-amzn-bedrock-input-token-count": "9"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_01SJ9REAEvSbPtkcwx7koSsN",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-sonnet-4-20250514",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Let me analyze this document carefully. 1. **TEXT EXTRACTION** Looking at the image, I can see text in Spanish that appears to be an identification document from Colombia. I can extract: - \"REPUBLICA DE COLOMBIA\" - \"IDENTIFICACION PERSONAL\" - \"CEDULA DE CIUDADANIA\" - \"NUMERO 79.211.501\" - \"STERLING NEIRA\" - \"APELLIDOS JOHN WILTER\" - \"NOMBRES\" - \"FIRMA\" There appears to be a photo of a person on the right side. 2. **PRIORITY CHECKS** This is not BLANK (has substantial meaningful content) and not LINK_ONLY (no URLs/links). 3. **DOCUMENT FUNCTION ANALYSIS** The primary purpose of this document is personal identification. It's a Colombian identity card (cédula de ciudadanía) that identifies a specific individual named \"STERLING NEIRA JOHN WILTER\" with ID number 79.211.501. This is clearly for individual identification purposes. 4. **ISSUER IDENTIFICATION** This is issued by the Colombian government as a personal identification document (\"REPUBLICA DE COLOMBIA IDENTIFICACION PERSONAL CEDULA DE CIUDADANIA\"). 5. **CATEGORY CLASSIFICATION** Based on the analysis: - This contains individual identification terminology: \"CEDULA DE CIUDADANIA\", \"IDENTIFICACION PERSONAL\" - Has personal data: individual name, photo, ID number - Government-issued personal ID number with individual name - Contains a photo - Issued by government identification authorities (República de Colombia) This clearly fits CECRL criteria as it's an official personal identification document that serves to identify an individual. 6. **CONFIDENCE VALIDATION** Strong evidence: Clear personal identification document with all the must-have indicators for CECRL present.",
+          "signature": "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"
+        },
+        {
+          "type": "text",
+          "text": "```json { \"category\": \"CECRL\", \"text\": \"REPUBLICA DE COLOMBIA IDENTIFICACION PERSONAL CEDULA DE CIUDADANIA NUMERO 79.211.501 STERLING NEIRA APELLIDOS JOHN WILTER NOMBRES FIRMA\" } ```"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 9,
+        "cache_creation_input_tokens": 4797,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 503
+      }
+    },
+    "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 8000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "expected_category": "CECRL",
+  "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+  "api_used": "invoke_model",
+  "pdf_info": {
+    "original_size": 229067,
+    "first_page_size": 133257,
+    "is_scanned": false
+  }
+}

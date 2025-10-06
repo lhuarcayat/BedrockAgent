@@ -1,0 +1,107 @@
+{
+  "extraction_data": {
+    "result": {
+      "companyName": "QUIMEL INGENIERIA S.A.S.",
+      "documentCategory": "Equity Composition",
+      "taxId": "901.108.357-8",
+      "country": "Colombia",
+      "identificationDetails": {
+        "source": "id_analysis",
+        "indicators": [
+          "NIT format 901.108.357-8",
+          "Spanish language document"
+        ],
+        "conflictingSources": [],
+        "requiresReview": "false"
+      },
+      "relatedParties": [
+        {
+          "type": "person",
+          "firstName": "JOSE CARLOS",
+          "lastName": "MENDOZA CARRANZA",
+          "identificationType": "C.E",
+          "identificationNumber": "737708",
+          "relationshipType": "Shareholder",
+          "participationPercentage": "100%",
+          "timeFound": "1",
+          "job": "REPRESENTANTE LEGAL"
+        }
+      ]
+    },
+    "documentType": "company",
+    "category": "ACC"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "{ \"result\": { \"companyName\": \"QUIMEL INGENIERIA S.A.S.\", \"documentCategory\": \"Equity Composition\", \"taxId\": \"901.108.357-8\", \"country\": \"Colombia\", \"identificationDetails\": { \"source\": \"id_analysis\", \"indicators\": [ \"NIT format 901.108.357-8\", \"Spanish language document\" ], \"conflictingSources\": [], \"requiresReview\": \"false\" }, \"relatedParties\": [ { \"type\": \"person\", \"firstName\": \"JOSE CARLOS\", \"lastName\": \"MENDOZA CARRANZA\", \"identificationType\": \"C.E\", \"identificationNumber\": \"737708\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"100%\", \"timeFound\": \"1\", \"job\": \"REPRESENTANTE LEGAL\" } ] }, \"documentType\": \"company\", \"category\": \"ACC\" }"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 9,
+      "cache_creation_input_tokens": 6486,
+      "cache_read_input_tokens": 0,
+      "output_tokens": 1179
+    },
+    "ResponseMetadata": {
+      "RequestId": "7c78fc85-fcfa-4df7-8ddb-d208ccf4b150",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Sun, 31 Aug 2025 05:54:03 GMT",
+        "content-type": "application/json",
+        "content-length": "7424",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "7c78fc85-fcfa-4df7-8ddb-d208ccf4b150",
+        "x-amzn-bedrock-invocation-latency": "18549",
+        "x-amzn-bedrock-cache-write-input-token-count": "6486",
+        "x-amzn-bedrock-cache-read-input-token-count": "0",
+        "x-amzn-bedrock-output-token-count": "1179",
+        "x-amzn-bedrock-input-token-count": "9"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_01KSuEvp4aAZ5eXJr9ymEnb9",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-sonnet-4-20250514",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Looking at this document, I need to extract structured data from this Spanish equity composition certificate. Let me analyze the document step by step: 1. **Company Name**: The document is certified by the public accountant of \"QUIMEL INGENIERIA S.A.S.\" This appears to be the main reporting company. 2. **Tax ID**: The document mentions \"identificada con el NIT No. 901.108.357-8\" 3. **Country**: The document is in Spanish and uses \"NIT\" which based on the hash table corresponds to Colombia. Also, the format \"901.108.357-8\" matches Colombian NIT format. 4. **Capital Information**: The document states the company has authorized, subscribed and paid capital of 520 million pesos ($520.000.000.00), divided into 5,200 shares of nominal value $100,000 each. 5. **Shareholders**: Looking at the shareholding table: - IDENTIFICATION: C.E 737708 - NOMBRE ACCIONISTAS: MENDOZA CARRANZA JOSE CARLOS - NO. DE ACCIONES: 5.200 - % PARTICIPACIÓN: 100% - VALOR NOMINAL POR ACCIÓN: $100.000 - NACIONALIDAD DE LOS SOCIOS: SALVADOREÑO 6. **Signatures**: - SANDRA MILENA BOLAÑOS BRAVO (T.P 158280-T, C.C 27.191.211) - CONTADORA - JOSE CARLOS MENDOZA CARRANZA (C.E 737708) - REPRESENTANTE LEGAL The document is dated December 30, 2022. Now let me structure this according to the schema: - **companyName**: \"QUIMEL INGENIERIA S.A.S.\" - **documentCategory**: \"Equity Composition\" - **taxId**: \"901.108.357-8\" - **country**: Colombia's identification is confirmed through linguistic and administrative markers - **relatedParties**: I've identified the sole shareholder as a Salvadoran individual with specific identification details The verification process reveals a comprehensive profile of the company's ownership and national context. I'm examining the identification number's structure against Colombia's validation rules, noting the 6-digit format suggests potential alignment with C.E. or C.C. identification standards. The document confirms this individual's singular presence across two roles - shareholder and legal representative - which validates the single time occurrence tracking. The identification matches specific pattern requirements, confirming its potential validity within Colombian documentation protocols.",
+          "signature": "EqAWCkgIBxABGAIqQOd3gMfqsURG1ypbTJstVbHxXqnGcUMbWz3D9rUG4jpYZ5Qaid0z/2PfbRicY8/9+UWRfD/Qavn+gLrm3fOUlE4SDKryMxQTfza6GjgXnhoMSwzMNTdNvDepHrrJIjC91v2HjOlg70VdDSzQvSs6F+40bQH3VOW52Afj4n6pTK9IgYEb2EJlSQ+YPA2Qd0QqhRV3S9YbHg7Jbsi1+ql9iRCmgWv+TPhGy/G01ChlltHnfYtix8rEZQRjrHG+HcQPNO1FG6uosJFyyrKysglmr+Mx8S1kF3yXQOL7dPgZ2m3elcdM7yGatiMN2saPDGX+vKZZATbv1L29bnOi3NZJ0YcKIwdv5tc5Hzam8/lSd6a/agiHOSUi5Fwiy5N8GyBhwI5pAgYs///YLtUzNKCh3lySgp6dAAHCtvSTqpXZmqwFVubwRFWYXPizL+fKO+XYrF0b7qbECD7wYplINtB2h9dnp6D9EyBOuXpvGELwSsNWcFK5oL6+PZVVGMO0ibH6tMFDaDWE/sXMD9VvTw7P6ey5+L4U9IgsceyNY6d54peZOcRgBWPswnH/9tTIQhTnX8cUfkP1xpJElB1ZRvVAuTG8CcBNZmD0Up+w+MM7Q0Mp3VDr7HCTyNvq7Gsaz2qskjPj/fzvcvY/syxba1vunWHKwJW7tSoulQQNv/XLsVTwuiKODO8BipR29nXvYWkk8LVzbRXNAgbSc0X//Q4bOr5GOjVvyLVv3U/Kzk1cIHhV1FTVTBU9C5jVGOARNNgkA+CnQ8B8D+ccdCRLzl1y4kNM+f9RCmIQN9mlM7qfh5e7rHU8/j9iEoC/6fr9Y2Qmr4tkyLMzoWbcwzkjWA4epevvnZQPZLHk5o2jY5oAyvRW97VIJd3VjRsXBUirVx2F8nMclXEAkqUm/36F5LYYxaoxI0kmOPLjElI4sE7D/rXR78JJF/0tv8hZxIN+/PabD76KihJrUgH/PYh2bbKI6MJq4kLpGT1zxH37Dst5yxc6YguYio8WOs034+NGbmFDvHt5ZOU4dxj1SKdHO5FX0LJrgULvCnOSRUXl6oLzXFDO4vtfBp2eT9s3F41mnMn6MFeCeLA2ApbLuojtQUiSCQvFJTMkaCYOpYQQr0emBa0dGxm24ORu4Px/gWnE8iqYeEnGNt4KnuE2SqyWTU0DSDU6CpQqOITkqBqjQNP0/g/BRk04qyaRbTKlOoL4mnNlhvV8kQ17Tc7PQv26/ZM7Jq9OYaAtmzAGn183VHHzZdUo0DnGD7JHAp3fNgfITl1QvFLQqAZn1YFaJXnZ+nLUekQyEwH43gVYBwwfnbSk1+sO/XAWKiVW1v02j9LwvwIHgSd62JIR/ugSxWlcDj79r52EcRt9WbomsgtRXoPnYEc8E9FK2Bc1jKa+QuCUvooIuOWe0sQAVvYtHroco8mWNT+UV9HDpWqFm6vLG5ChIM0RWS58V+BCKW9EWsL9cCDAQce6XGsmx3mX21cSNiaQARcUuUHWKIlXYzDrQoExTLawVQb41iLhqVwmHOQWLTeMlsjA+smqKRvhg5DCZeamiQJMkvavgWQX6TQ2Z/Oc28GiehwN9RC4V2PaVNrho1UnMpyw4jFhwCWEizTDVCCsM1pC4ioJA9LCFSwG96a0Tk6zuf7dUi/6yzANnLEHLpDdP1/vVq+PUDgfHiLIl1h7pppzZPZpxHKW+F3TJ35T714bbOCe+VQAenmwvQeTjT+qKfoaTpAnFWCAcMmloiyanjCVZ2ua2OHVN24VMh6KDulrGhgwlFO4QjhP2FvrKuzWrNrW/3pwp+o2n9C1GY9u2Z6likhPopeswERCWO7DdWrlkHB7Zv7ZQTi4QkEAjOTJd+anoEKrNdRssS5HWBifmMJ/wGX9W9MNyZtdG7F9MMbg9IsfUrm7ncOCy/EeXBOHBOX8Sqxiv2Tm3TN1uSZZP2n06PTYP5l0rEnXzcbxIUG1z3jiggGuJLz+eUHF7xPG1CQy7tqfJOttn/Uk1oiy0b+R+BpNTqXgl6TMNajp+720/cS/zg2+Bguenh5GMcYLcJpVNh/yHIXpq7PbldSyJKoifuS7LRDA2OeBs3l3n1rMY7r5v1Dc6BxJPJymXwhf1vEP6qPsPZ1PNR2skl1slmXda31cpXcA5abi/mfqcPzaBU+h7Wjh+bmc3X24/teAKbhRyRZVhl/ftTW+T6LiI1docqwUXKkA1Wb8TJRvKfs6Oo+Q3rrzVy1zIGl+aTr2uNux7Yldj4rzL3qghso9qY8vT0H63zHGKokmzfDy+rrf2GCr5yF4n8n05iXq6PCXoJlI6vTIxiDagQFr1khwaAnS3slyd801LwvQqbWGqaBO4zreVrcYn6y76dM678zOo+OVLT1P2FwAc9LukMJpsYt3K4U/s/QbONvfStRTseRXZ5ul2uErIrtvTvlthLPb6MEuIrd5VH4/b/xQli7S8DCHARR8753EnDkljikuqcnCIfsHT9n8RQKmqGyORgorKht8JsMNgEMyVsI8NP8tBjJZjhWwRpWwJXhxtdAuPDnXk7m40hq1aEkTFhTaGMftb6DAVCWRodHCngGV1c8c3EGOOb+U6ficyzElpX2WznMGpuohbBaZtT2hTO52TQoW0dj2vqukAmJll2ow1uAlUWmWF74TwpEjBXaj6mSDy53ncgN0KsbhyhggssvKRaWQKuM3tpBGh/UdVYQL79G5Qx7+oQZOAUU4Wkc4ydE/Mo7IlWyQ511Tt1N0VP7RcDyxzf6ulpHxSnIZIuQxWUL8KfuJGpIdlWpDHRQMsgWQwdvTHAvEqMESgP5LtvuwsMmcKvyVT9XEyzEillgoT2gWnS48t4EZ6P/OgQoBR01oBbOGLI2kS5K6vBOsdOdJE3lFguMaicPEy4YgxeKsDh7BF9si/Uyo6TW+kUnSk5aUGBNrPTBqOQFYprq1sKQoL6utE69VYZa3AXJNnkAivZGa197fXsZcKY6egbIPxHDQCGjAhJjVnEPPS2dyDEhHRPGrwpXXcSxT2oSnmmOTacFCQjRo8817YMM2lBnQ2czChugyw9EPwWAykaR3ZFjg3K5pYUZbthltEgiR7Md+QDNtlXaesSA79qVVd+t3jmZeCvaLvcA/QpglVbfxRx2UT+OQrAoEi08a5BEYjs1CUPfY1FxfKzEVVIzptX45TU9HR7AaVM9KdoDEEaLhkz4VuVgjZLpjXHMSMzLnbmfOupXE/QEzbxBetj1XD42V5INI69KI44c2fD0naMZzD6tKOrs0nfMxpzLoYM3x+qn1dmFERXX6ZDmhAowpLwAx7jteFMBxWgygJvv+Gb7tnCqiuNj9OLf2HQZVtM8aQm2M792Nc4gJnc+MMUfzEiGeGL66C8ovF5N7So3ZTmIUloUOI+j83runTEp02tnuezd6WTrmSfbLD5Ja8Sp5Oc+1+kw0wZNrhludnOKCfU2QEjWje8IoRGzpd8M6KxGAwbMDcwbIh9VYKPYQf72+o3U/mUD1+p/YqLnAO2+jxrt8/kxx01ZEJLIoD08ITWoiSGTKqVYxDbZZS9lMjfJCrgzLi/mn5mZFt0j8KU1MJk8Bcg1Wsdz81rRdsv7c76RYL14vlRYAEdyMJ042U8uKvCagvkZVINlLEZUTuFFsBBv2bBfcXa0ZKFwdDJngL5Q/g9AWI7G2FRAKNzpp9BozKzjv2QKHqT8kPsW9s7fMlVtGHZGf2gIw4X+ZAfARTMSCMeOnELu7iIHKj07AXpkRW6fSwgcnl01qNPUV/RwhM3OqMa2U/wAKzs5vHu5PYhgB"
+        },
+        {
+          "type": "text",
+          "text": "{ \"result\": { \"companyName\": \"QUIMEL INGENIERIA S.A.S.\", \"documentCategory\": \"Equity Composition\", \"taxId\": \"901.108.357-8\", \"country\": \"Colombia\", \"identificationDetails\": { \"source\": \"id_analysis\", \"indicators\": [ \"NIT format 901.108.357-8\", \"Spanish language document\" ], \"conflictingSources\": [], \"requiresReview\": \"false\" }, \"relatedParties\": [ { \"type\": \"person\", \"firstName\": \"JOSE CARLOS\", \"lastName\": \"MENDOZA CARRANZA\", \"identificationType\": \"C.E\", \"identificationNumber\": \"737708\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"100%\", \"timeFound\": \"1\", \"job\": \"REPRESENTANTE LEGAL\" } ] }, \"documentType\": \"company\", \"category\": \"ACC\" }"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 9,
+        "cache_creation_input_tokens": 6486,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 1179
+      }
+    },
+    "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 8000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+  "api_used": "invoke_model"
+}

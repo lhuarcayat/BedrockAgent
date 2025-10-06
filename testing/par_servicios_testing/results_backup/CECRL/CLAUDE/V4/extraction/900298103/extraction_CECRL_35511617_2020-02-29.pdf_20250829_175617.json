@@ -1,0 +1,88 @@
+{
+  "extraction_data": {
+    "result": {
+      "firstName": "LUISA FERNANDA",
+      "lastName": "CHARRY RAMIREZ",
+      "country_issuer": "Colombia",
+      "nationality": "Colombia",
+      "identificationType": "Cédula de Ciudadanía",
+      "identificationNumber": "39511017",
+      "message": ""
+    },
+    "document_type": "person",
+    "category": "CECRL"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "```json { \"result\": { \"firstName\": \"LUISA FERNANDA\", \"lastName\": \"CHARRY RAMIREZ\", \"country_issuer\": \"Colombia\", \"nationality\": \"Colombia\", \"identificationType\": \"Cédula de Ciudadanía\", \"identificationNumber\": \"39511017\", \"message\": \"\" }, \"document_type\": \"person\", \"category\": \"CECRL\" } ```"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 10,
+      "cache_creation_input_tokens": 6919,
+      "cache_read_input_tokens": 0,
+      "output_tokens": 512
+    },
+    "ResponseMetadata": {
+      "RequestId": "ad12f5ba-3cbe-4e51-82d9-cb5ad1daa2a5",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Fri, 29 Aug 2025 22:56:18 GMT",
+        "content-type": "application/json",
+        "content-length": "4448",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "ad12f5ba-3cbe-4e51-82d9-cb5ad1daa2a5",
+        "x-amzn-bedrock-invocation-latency": "10819",
+        "x-amzn-bedrock-cache-write-input-token-count": "6919",
+        "x-amzn-bedrock-cache-read-input-token-count": "0",
+        "x-amzn-bedrock-output-token-count": "512",
+        "x-amzn-bedrock-input-token-count": "10"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_01ND3k3BRmv7cUnCJTW8erFe",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-sonnet-4-20250514",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Looking at this document, I can see it's an identification document from Colombia. Let me analyze what I can extract: From the document content I can see: - \"REPUBLICA DE COLOMBIA\" in the header - indicates it's issued by Colombia - \"IDENTIFICACION PERSONAL\" - indicates this is a personal identification document - \"CEDULA DE CIUDADANIA\" - this is the document type - Number \"39511017\" appears to be the identification number - I can see \"CHARRY RAMIREZ\" which appears to be the last name - \"LUISA FERNANDA\" appears to be the first name - There's information about place of birth: \"BOGOTA D.C.\" with date \"10-NOV-1968\" - The document shows \"CUNDINAMARCA\" which is a department in Colombia Let me extract the information following the schema: 1. firstName: I can see \"LUISA FERNANDA\" clearly in the document 2. lastName: I can see \"CHARRY RAMIREZ\" clearly in the document 3. country_issuer: This is clearly Colombia based on \"REPUBLICA DE COLOMBIA\" 4. nationality: Since this is a Colombian cédula de ciudadanía and no explicit nationality field is shown differently, this would be Colombia 5. identificationType: This is a \"Cédula de Ciudadanía\" based on the text visible 6. identificationNumber: \"39511017\" appears to be the ID number 7. message: The document appears to be a legitimate Colombian identification document, so this can be empty The document appears to be somewhat degraded/low quality in parts but I can make out the key information needed.",
+          "signature": "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"
+        },
+        {
+          "type": "text",
+          "text": "```json { \"result\": { \"firstName\": \"LUISA FERNANDA\", \"lastName\": \"CHARRY RAMIREZ\", \"country_issuer\": \"Colombia\", \"nationality\": \"Colombia\", \"identificationType\": \"Cédula de Ciudadanía\", \"identificationNumber\": \"39511017\", \"message\": \"\" }, \"document_type\": \"person\", \"category\": \"CECRL\" } ```"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 10,
+        "cache_creation_input_tokens": 6919,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 512
+      }
+    },
+    "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 8000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+  "api_used": "invoke_model"
+}

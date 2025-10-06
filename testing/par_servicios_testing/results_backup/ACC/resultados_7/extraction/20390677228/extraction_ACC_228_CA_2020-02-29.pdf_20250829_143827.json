@@ -1,0 +1,121 @@
+{
+  "extraction_data": {
+    "result": {
+      "companyName": "APROGAS S.A.C.",
+      "documentCategory": "Equity Composition",
+      "taxId": "POR REVISAR",
+      "country": "Perú",
+      "identificationDetails": {
+        "source": "text_reference",
+        "indicators": [
+          "LIMA",
+          "PROVINCIA Y DEPARTAMENTO DE LIMA",
+          "REGISTRO DE PERSONAS JURIDICAS DE LIMA"
+        ],
+        "conflictingSources": [
+          "Company RUC not found in document"
+        ],
+        "requiresReview": "true"
+      },
+      "relatedParties": [
+        {
+          "type": "person",
+          "firstName": "TICIANO",
+          "lastName": "MUÑOZ SANCHEZ",
+          "identificationType": "DNI",
+          "identificationNumber": "09163077",
+          "relationshipType": "Shareholder",
+          "participationPercentage": "99.99",
+          "timeFound": "2",
+          "job": "Presidente"
+        },
+        {
+          "type": "person",
+          "firstName": "CHANO",
+          "lastName": "MUÑOZ LLONTOP",
+          "identificationType": "DNI",
+          "identificationNumber": "70008642",
+          "relationshipType": "Shareholder",
+          "participationPercentage": "0.01",
+          "timeFound": "2",
+          "job": "Secretario"
+        }
+      ]
+    },
+    "documentType": "company",
+    "category": "ACC"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "{ \"result\": { \"companyName\": \"APROGAS S.A.C.\", \"documentCategory\": \"Equity Composition\", \"taxId\": \"POR REVISAR\", \"country\": \"Perú\", \"identificationDetails\": { \"source\": \"text_reference\", \"indicators\": [ \"LIMA\", \"PROVINCIA Y DEPARTAMENTO DE LIMA\", \"REGISTRO DE PERSONAS JURIDICAS DE LIMA\" ], \"conflictingSources\": [\"Company RUC not found in document\"], \"requiresReview\": \"true\" }, \"relatedParties\": [ { \"type\": \"person\", \"firstName\": \"TICIANO\", \"lastName\": \"MUÑOZ SANCHEZ\", \"identificationType\": \"DNI\", \"identificationNumber\": \"09163077\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"99.99\", \"timeFound\": \"2\", \"job\": \"Presidente\" }, { \"type\": \"person\", \"firstName\": \"CHANO\", \"lastName\": \"MUÑOZ LLONTOP\", \"identificationType\": \"DNI\", \"identificationNumber\": \"70008642\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"0.01\", \"timeFound\": \"2\", \"job\": \"Secretario\" } ] }, \"documentType\": \"company\", \"category\": \"ACC\" }"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 9,
+      "cache_creation_input_tokens": 20251,
+      "cache_read_input_tokens": 0,
+      "output_tokens": 1273
+    },
+    "ResponseMetadata": {
+      "RequestId": "a70a08fb-adec-4953-bd1b-d1c47cef086e",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Fri, 29 Aug 2025 19:38:27 GMT",
+        "content-type": "application/json",
+        "content-length": "7487",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "a70a08fb-adec-4953-bd1b-d1c47cef086e",
+        "x-amzn-bedrock-invocation-latency": "28450",
+        "x-amzn-bedrock-cache-write-input-token-count": "20251",
+        "x-amzn-bedrock-cache-read-input-token-count": "0",
+        "x-amzn-bedrock-output-token-count": "1273",
+        "x-amzn-bedrock-input-token-count": "9"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_011yY5iqCZi3VTnJRG5jZxUC",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-sonnet-4-20250514",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Looking at this document, I can see this is a notarized document from Peru in Spanish. Let me analyze it step by step: 1. **Document Analysis**: - This appears to be a \"Junta Universal de Accionistas\" (Universal Shareholders Meeting) document from APROGAS SOCIEDAD ANONIMA CERRADA - The document is from Lima, Peru (mentioned multiple times) - Date: November 18, 2019 2. **Root Level Extraction**: - **Company Name**: \"APROGAS S.A.C.\" (mentioned as \"APROGAS SOCIEDAD ANONIMA CERRADA\", but abbreviated as \"APROGAS S.A.C.\") - **Tax ID**: I can see DNI numbers mentioned for individuals, but I need to look for the company's RUC. Looking through the document, I see \"APROGAS SAC, INSCRITO EN LA PARTIDA ELECTRONICA N° 11016561 DEL REGISTRO DE PERSONAS JURIDICAS DE LIMA\" - but I don't see a clear RUC number for the company itself. - **Country**: Peru (Lima mentioned multiple times) 3. **Related Parties Processing**: Looking at the document, I can see two shareholders: Page 1: - TICIANO MUÑOZ SANCHEZ, identificado con DNI N° 09163077, TITULAR DE 549,945 ACCIONES - CHANO MUÑOZ LLONTOP, identificado con DNI N° 70008642, TITULAR DE 55 ACCIONES Page 4: - TICIANO MUÑOZ SANCHEZ, IDENTIFICADO CON DNI 09163077, TITULAR DE 549,945 ACCIONES A S/. 1.00 CADA UNA, INTEGRAMENTE SUSCRITAS Y TOTALMENTE PAGADAS. - CHANO MUÑOZ LLONTOP, IDENTIFICADO CON DNI 70008642, TITULAR DE 55 ACCIONES A S/. 1.00 CADA UNA, INTEGRAMENTE SUSCRITAS Y TOTALMENTE PAGADAS. The total share distribution reveals a near-total ownership: - Ticiano holds 549,945 shares (99.99%) - Chano holds 55 shares (0.01%) - Total shares: 550,000 Ticiano and Chano have been appointed to key board positions: Ticiano as President and Chano as Secretary. The document confirms their Peruvian identities through DNI numbers, though the company's tax identification remains unclear. I'll mark APROGAS S.A.C.'s RUC status as \"POR REVISAR\" since no definitive tax ID is visible in the document.",
+          "signature": "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"
+        },
+        {
+          "type": "text",
+          "text": "{ \"result\": { \"companyName\": \"APROGAS S.A.C.\", \"documentCategory\": \"Equity Composition\", \"taxId\": \"POR REVISAR\", \"country\": \"Perú\", \"identificationDetails\": { \"source\": \"text_reference\", \"indicators\": [ \"LIMA\", \"PROVINCIA Y DEPARTAMENTO DE LIMA\", \"REGISTRO DE PERSONAS JURIDICAS DE LIMA\" ], \"conflictingSources\": [\"Company RUC not found in document\"], \"requiresReview\": \"true\" }, \"relatedParties\": [ { \"type\": \"person\", \"firstName\": \"TICIANO\", \"lastName\": \"MUÑOZ SANCHEZ\", \"identificationType\": \"DNI\", \"identificationNumber\": \"09163077\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"99.99\", \"timeFound\": \"2\", \"job\": \"Presidente\" }, { \"type\": \"person\", \"firstName\": \"CHANO\", \"lastName\": \"MUÑOZ LLONTOP\", \"identificationType\": \"DNI\", \"identificationNumber\": \"70008642\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"0.01\", \"timeFound\": \"2\", \"job\": \"Secretario\" } ] }, \"documentType\": \"company\", \"category\": \"ACC\" }"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 9,
+        "cache_creation_input_tokens": 20251,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 1273
+      }
+    },
+    "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 8000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+  "api_used": "invoke_model"
+}

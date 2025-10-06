@@ -1,0 +1,33 @@
+{
+  "ResponseMetadata": {
+    "RequestId": "8bb0a966-295a-4572-892e-56790c7c437e",
+    "HTTPStatusCode": 200,
+    "HTTPHeaders": {
+      "date": "Mon, 16 Jun 2025 20:49:28 GMT",
+      "content-type": "application/json",
+      "content-length": "1232",
+      "connection": "keep-alive",
+      "x-amzn-requestid": "8bb0a966-295a-4572-892e-56790c7c437e"
+    },
+    "RetryAttempts": 0
+  },
+  "output": {
+    "message": {
+      "role": "assistant",
+      "content": [
+        {
+          "text": "```json\n{\n  \"path\": \"s3://par-servicios-poc-dev-filling-desk/par-servicios-poc/ACC/901127166/169_CA_2020-02-29.pdf\",\n  \"result\": {\n    \"companyName\": \"TRITON LOGISTICA Y CONSTRUCCIONES SAS\",\n    \"documentType\": \"Equity Composition\",\n    \"taxId\": \"901.127.166-9\",\n    \"country\": \"Colombia\",\n    \"identificationDetails\": {\n      \"source\": \"id_analysis\",\n      \"indicators\": [\n        \"NIT\"\n      ],\n      \"requiresReview\": false\n    },\n    \"relatedParties\": [\n      {\n        \"firstName\": \"ERNESTO JOSE\",\n        \"lastName\": \"CHALELA MARTINEZ\",\n        \"identificationType\": \"CC\",\n        \"identificationNumber\": \"9.287.800\",\n        \"relationshipType\": \"Shareholder\",\n        \"participationPercentage\": \"100\",\n        \"timeFound\": 1,\n        \"job\": \"Representante Legal\"\n      }\n    ]\n  },\n  \"confidenceScores\": {\n    \"companyName\": 95,\n    \"documentType\": 100,\n    \"taxId\": 95,\n    \"country\": 95,\n    \"relatedParties\": 90\n  }\n}\n```"
+        }
+      ]
+    }
+  },
+  "stopReason": "end_turn",
+  "usage": {
+    "inputTokens": 5426,
+    "outputTokens": 311,
+    "totalTokens": 5737
+  },
+  "metrics": {
+    "latencyMs": 6560
+  }
+}

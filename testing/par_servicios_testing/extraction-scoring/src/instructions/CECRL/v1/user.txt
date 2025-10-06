@@ -1,0 +1,191 @@
+# Version: 2.2.1
+# Date: 2025-08-12
+# Changes:
+#   - Fixed field label interpretation logic from v2.2.0
+#   - Clearer step-by-step instructions to prevent field confusion
+#   - Maintained universal language support
+#   - Added explicit validation steps
+
+Extract personal identification data from the provided JSON document using universal language patterns. Follow these detailed guidelines:
+
+Show me your reasoning in numbered steps (how you decided what to extract, which patterns you detected, how you handled field combinations, etc.).
+Then output the final JSON with all extracted information.
+
+# Universal Extraction Requirements
+
+1. Document Processing:
+   - Input is a JSON with document_number, document_type, category, text, and path
+   - Documents may be in ANY language: Spanish, Portuguese, English, Italian, French, German, Dutch, Polish, etc.
+   - Use pattern-based field detection, NEVER assume field order or position
+   - Preserve original language terms in personal names with proper accents
+   - Translate document types to their Spanish equivalents
+
+2. Document Validation:
+   - Check that the document is an official identification document
+   - If the document doesn't correspond to an official identification document:
+     * Fill only the fields you can identify with confidence
+     * Add a message: "Necesita revisión manual, documento no corresponde a documento oficial de identificación"
+   - Look for official seals, headers, or other indicators of government issuance
+
+3. **CLEAR NAME EXTRACTION PROCESS:**
+
+   **STEP 1: Find Field Labels**
+   Scan the document for these field labels (look for the colon ":" after each):
+
+   **Surname/Family Name Labels:**
+   - Spanish: "APELLIDOS:", "PRIMER APELLIDO:", "SEGUNDO APELLIDO:", "APELLIDO PATERNO:", "APELLIDO MATERNO:"
+   - Portuguese: "SOBRENOME:", "APELIDOS:", "PRIMEIRO SOBRENOME:", "SEGUNDO SOBRENOME:"
+   - English: "SURNAME:", "FAMILY NAME:", "LAST NAME:"
+   - French: "NOM:", "NOM DE FAMILLE:"
+   - Italian: "COGNOME:"
+   - German: "NACHNAME:", "FAMILIENNAME:"
+
+   **Given Name/First Name Labels:**
+   - Spanish: "NOMBRES:", "NOMBRE:", "PRENOMBRE:", "PRIMER NOMBRE:", "SEGUNDO NOMBRE:"
+   - Portuguese: "NOME:", "NOMES:", "PRENOME:", "PRIMEIRO NOME:"
+   - English: "GIVEN NAME:", "GIVEN NAMES:", "FIRST NAME:", "FORENAME:"
+   - French: "PRÉNOM:", "PRÉNOMS:"
+   - Italian: "NOME:", "NOMI:"
+   - German: "VORNAME:", "VORNAMEN:"
+
+   **STEP 2: Extract Text Following Each Label**
+   For each label found:
+   1. Locate the label in the document text (e.g., "APELLIDOS:")
+   2. Extract the text that comes immediately AFTER the colon
+   3. Stop extracting when you reach the next field label or line break
+
+   **STEP 3: Map to Correct JSON Fields**
+   - Text following surname/family name labels → lastName
+   - Text following given name/first name labels → firstName
+   - If multiple surname fields exist → combine with spaces → lastName
+   - If multiple given name fields exist → combine with spaces → firstName
+
+   **CRITICAL EXAMPLES:**
+
+   ```
+   Document contains: "APELLIDOS: HERNANDEZ RAMIREZ NOMBRES: LUIS DARIO"
+   Correct mapping:
+   - Found label "APELLIDOS:" with following text "HERNANDEZ RAMIREZ" → lastName: "HERNANDEZ RAMIREZ"
+   - Found label "NOMBRES:" with following text "LUIS DARIO" → firstName: "LUIS DARIO"
+   ```
+
+   ```
+   Document contains: "PRIMER APELLIDO: GARCIA SEGUNDO APELLIDO: LOPEZ NOMBRES: CARLOS ALBERTO"
+   Correct mapping:
+   - Found labels "PRIMER APELLIDO:" + "SEGUNDO APELLIDO:" → combine → lastName: "GARCIA LOPEZ"
+   - Found label "NOMBRES:" with following text "CARLOS ALBERTO" → firstName: "CARLOS ALBERTO"
+   ```
+
+4. Document Type Translation:
+   - Identify the document type and translate to Spanish equivalents:
+     * Germany: Personalausweis → documento de identidad personal
+     * Italy: Carta d'Identità → tarjeta de identidad
+     * France: Carte d'identité → tarjeta de identidad
+     * UK: Various types → Permiso de Residencia Biométrico, etc.
+     * Portugal: Cartão de Cidadão → tarjeta de ciudadano
+     * Netherlands: Identiteitskaart → tarjeta de identidad
+     * Sweden/Norway: ID-kort → tarjeta de identidad
+     * Poland: Dowód osobisty → documento personal
+
+5. Country Field Extraction:
+   - Extract identification number exactly as formatted in the document
+   - Determine both fields carefully:
+     * country_issuer: the country that issued the document
+     * nationality: the country where the person was born (from place of birth field)
+
+6. Critical Pattern-Based Mapping:
+   - **NEVER use text order** to determine firstName vs lastName
+   - **ALWAYS use field labels** when available
+   - **Validate extraction** against detected patterns
+   - **Multi-language examples**:
+
+     ```
+     Colombian Cédula:
+     Text: "APELLIDOS: HERNÁNDEZ DÍAZ NOMBRES: LUIS IGNACIO"
+     Correct mapping: firstName: "LUIS IGNACIO", lastName: "HERNÁNDEZ DÍAZ"
+
+     Peruvian DNI:
+     Text: "PRIMER APELLIDO: GARCÍA SEGUNDO APELLIDO: LÓPEZ NOMBRES: CARLOS ALBERTO"
+     Correct mapping: firstName: "CARLOS ALBERTO", lastName: "GARCÍA LÓPEZ"
+
+     US Passport:
+     Text: "Surname: ADAMS Given Names: DIRK ELRIC"
+     Correct mapping: firstName: "DIRK ELRIC", lastName: "ADAMS"
+
+     Italian ID:
+     Text: "COGNOME: ROSSI NOME: MARCO ANTONIO"
+     Correct mapping: firstName: "MARCO ANTONIO", lastName: "ROSSI"
+     ```
+
+5. **MANDATORY VALIDATION PROCESS:**
+   After extraction, verify your work:
+
+   a) **Label-Text Verification:**
+   - Check: Did text following surname labels go to lastName?
+   - Check: Did text following given name labels go to firstName?
+   - Check: Are the field mappings logically correct?
+
+   b) **Common Sense Check:**
+   - Does firstName contain typical given names?
+   - Does lastName contain typical family names?
+   - If something seems wrong, re-read the document and correct
+
+8. Image Document and OCR Considerations:
+   - Always attempt extraction regardless of document quality
+   - Look for field labels and patterns even in poor quality images
+   - Use document structure and layout to identify field relationships
+   - Prioritize pattern matching over text quality assumptions
+
+7. Confidence Assessment:
+   - Evaluate field label detection and text extraction clarity:
+     * 95-100: Clear field labels found, text extracted successfully
+     * 85-94: Field labels found but some text extraction ambiguity
+     * 70-84: Partial field detection, some inference required
+     * Below 70: Poor field detection, requires manual review
+   - ALWAYS include scores in final output as a separate "confidenceScores" object
+
+6. Step-by-Step Extraction Process:
+   1. Scan document text for ALL field labels
+   2. Extract text following each field label
+   3. Identify which labels are surname-related vs given name-related
+   4. Map extracted text to correct JSON fields (lastName vs firstName)
+   5. Combine multi-field surnames or given names if applicable
+   6. Validate extraction against label meanings
+   7. Apply confidence scoring based on label detection clarity
+   8. Generate final JSON with clear reasoning
+
+# Required Output Format
+```json
+{
+  "path": "$pdf_path",
+  "result": {
+    "firstName": "",
+    "lastName": "",
+    "country_issuer": "",
+    "nationality": "",
+    "identificationType": "",
+    "identificationNumber": "",
+    "message": ""
+  },
+  "confidenceScores": {
+    "firstName": 95,
+    "lastName": 90,
+    "country_issuer": 85,
+    "nationality": 80,
+    "identificationType": 90,
+    "identificationNumber": 100
+  },
+  "document_type": "$document_type",
+  "document_number": "$document_number",
+  "category": "$category"
+}
+```
+
+Remember to provide detailed reasoning about:
+1. Which field patterns you detected in the document text
+2. How you mapped specific text sections to firstName/lastName using patterns
+3. Any multi-field combinations you performed
+4. Pattern validation checks you completed
+5. Why you assigned specific confidence scores
+
+Only return the data collected in the required JSON format after showing your pattern-based reasoning.

@@ -1,0 +1,87 @@
+{
+  "classification_data": {
+    "category": "CECRL",
+    "text": "REPUBLICA DE COLOMBIA IDENTIFICACION PERSONAL CEDULA DE CIUDADANIA NUMERO 7.249.040 MESA GOMEZ APELLIDOS JOSE DEL CARMEN NOMBRES FIRMA FECHA DE NACIMIENTO 27-JUN-1962 PUERTO NARE (ANTIOQUIA) LUGAR DE NACIMIENTO 1.70 B+ M ESTATURA G.S. RH SEXO 23-FEB-1981 PUERTO BOYACA FECHA Y LUGAR DE EXPEDICION REGISTRADOR NACIONAL CARLOS ARIEL SANCHEZ TORRES INDICE DERECHO A-1500150-0012822-M-0007249040-2C081027 00049073B8A 1 1410020296",
+    "document_number": "7249040",
+    "path": "CECRL/7249040/7249040_2020-02-29.pdf"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "```json { \"category\": \"CECRL\", \"text\": \"REPUBLICA DE COLOMBIA\\nIDENTIFICACION PERSONAL\\nCEDULA DE CIUDADANIA\\n\\nNUMERO 7.249.040\\nMESA GOMEZ\\nAPELLIDOS\\nJOSE DEL CARMEN\\nNOMBRES\\n\\nFIRMA\\n\\nFECHA DE NACIMIENTO 27-JUN-1962\\nPUERTO NARE\\n(ANTIOQUIA)\\nLUGAR DE NACIMIENTO\\n\\n1.70 B+ M\\nESTATURA G.S. RH SEXO\\n\\n23-FEB-1981 PUERTO BOYACA\\nFECHA Y LUGAR DE EXPEDICION\\n\\nREGISTRADOR NACIONAL\\nCARLOS ARIEL SANCHEZ TORRES\\n\\nINDICE DERECHO\\n\\nA-1500150-0012822-M-0007249040-2C081027 00049073B8A 1 1410020296\" } ```"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 9,
+      "cache_creation_input_tokens": 4753,
+      "cache_read_input_tokens": 0,
+      "output_tokens": 974
+    },
+    "ResponseMetadata": {
+      "RequestId": "4797e734-fe97-4c7d-b52c-5aa7ec981275",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Fri, 29 Aug 2025 22:50:51 GMT",
+        "content-type": "application/json",
+        "content-length": "6460",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "4797e734-fe97-4c7d-b52c-5aa7ec981275",
+        "x-amzn-bedrock-invocation-latency": "16764",
+        "x-amzn-bedrock-cache-write-input-token-count": "4753",
+        "x-amzn-bedrock-cache-read-input-token-count": "0",
+        "x-amzn-bedrock-output-token-count": "974",
+        "x-amzn-bedrock-input-token-count": "9"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_01UnCmFqgkPqN2b8xLQ2fv1z",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-sonnet-4-20250514",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Let me analyze this document step by step following the classification workflow: 1. **TEXT EXTRACTION** From the image, I can see this is a Colombian identification document. Let me extract all visible text: - Header: \"REPUBLICA DE COLOMBIA IDENTIFICACION PERSONAL CEDULA DE CIUDADANIA\" - Number: \"7.249.040\" - Below that: \"MESA GOMEZ\" - \"APELLIDOS JOSE DEL CARMEN\" - \"NOMBRES\" - There's a signature and the word \"FIRMA\" - A photo of a person (male) - \"FECHA DE NACIMIENTO 27-JUN-1962\" - \"PUERTO NARE\" - \"(ANTIOQUIA)\" - \"LUGAR DE NACIMIENTO\" - \"1.70\" (height) - \"B+\" (blood type) - \"M\" (sex) - \"ESTATURA G.S. RH SEXO\" - \"23-FEB-1981 PUERTO BOYACA\" - \"FECHA Y LUGAR DE EXPEDICION\" - There's a fingerprint - \"INDICE DERECHO\" - There's also some registration information at the bottom and a barcode This is clearly a Colombian \"Cédula de Ciudadanía\" (citizenship card/national ID card). 2. **PRIORITY CHECKS** - Not BLANK - contains substantial meaningful content - Not LINK_ONLY - no URLs or redirect content 3. **DOCUMENT FUNCTION ANALYSIS** The PRIMARY PURPOSE is personal identification. This document: - Identifies an individual person (Jose del Carmen Mesa Gomez) - Contains personal biographical data (birth date, place of birth, blood type, height, sex) - Has security elements (photo, signature area, fingerprint, barcode) - Is issued by Colombian government for personal identification 4. **ISSUER IDENTIFICATION** This is issued by the Colombian government identification authority (República de Colombia), not DIAN or Chamber of Commerce. 5. **CATEGORY CLASSIFICATION** I confirm this meets all standard identification document criteria. The document perfectly aligns with government-issued personal identification standards, containing comprehensive individual verification elements that establish a clear, authoritative personal identity profile. 6. **CONFIDENCE VALIDATION** The evidence strongly supports full classification confidence. All critical identification markers are definitively present, ensuring robust verification potential.",
+          "signature": "EukTCkgIBxABGAIqQNeslJ8SfNF/uhdL2zdC/shTNKGYzjSqss3QIctrfF3rYrdBv/o7mxH65qEEYKGc/r8HoOGVJCce+t0ghIhuF3oSDFN36NyarapN+E+bOhoMyYnIxrpsI6BqO5bNIjDV5vBS++aZrya+PxztdOB8GEBibyxOLeXI30PNTYgxqVqz4JiZUpFkifNjtLgL8CsqzhLC/jB4ezArSVxJulTAAoOnAKLZOp6VbGdN8eIj4bBGkZVbggp8hwkFsp2mEK2BVGqfaFi/xMUza8o0qhEt1u8RU0SKvgewZYy4p1Hq83zNM03KYK/8qHDYFy3C154cOmvi2jsjE6JYhOjw83eLJGChQTT1xbE2gLheriodTjp9qEYFO6bIHnue3qR57o3VaSs8R1CGhP90khng5mmI6fdRTQoYsr/LgfyHjlO7mhL2/ovGjaJgZwaHiX+VwiaTsSoya1sVGFdQ5g/m4QU1A7qCCYpzgIPOgWSLL9Mnk6OLvaejfH0Wk0+6kbzr0SajWxgHovC4Kky3N74PzmcUcPwDODA86DSXLELw6lMArDvtUJQQAW6uoifiwRAnq1HHau/AMKLPhdOFpyagZ/Pi8oEwbtBf+WhNMCWStQ75RTm8hEsrma5RgrQSf6zqGmYwiaAtmEAVRI9HUDi/rdJs8Ma4GPC6E9PrzSPFuQVnCfRSk4zyTIroPfEb8NRTmDkMAEliiSNkg5m3g+SBnyCDPnIHb9XKv1nGharoDuD1YeC8r2mvP5aWdtMDBxl6dgH271dDIW7OvrlZFXsefDu2EqIlc7aSEUe34gDGO+XRL5CDRPJl/gSneUoCF6FsOobnuA+pPNxUyAUdEQ6xMfbyjPbNnaBJfoOJrQmaIOsyZubiSp0nSrbrD1lNFo/GxUrB/eKr2NXhXsYGf6Tt5a6qvcbTmTqDOXMK63NPOgAM5o5V11DsoDL40fpIlNnEUcSQE+hxSYE4k5FMxys1m8hB9gEbKkMC9O9mKfHESG7XOiVupRWzfSNYYKKk90ZuuDyDCzVXLnsH+On7N+kikfLq04EBmaS4aSwZjNFLeEVj3ugw3cT/qEP86aJLHEeVuzxCDkSSdgT9/ca1+NaqLlkzVD7MymL9JhC6GzR2fMIVLrmPaNTQZIShB3GV1Iik9RtOBf9xX6NEwa5LpTONdJmmNTyha1Tv643ZcI0A0CYAPnktAZ+uoWEkCUQk01YC5K7TJnGYYoKNNx3H3A3qo6uTqJ8EfshRZY33PIG8rj8dTkKsdG+qRm192p234oCBvoMAXNUR+ID139xNTsf8i0dRbZTcU4vKQHZJW2jRQ4oO1etHIP/iQjg+XYXB/ZrE/6dOh63mFyQMI+i1Aggqi87Z5jsA0RAoYONJiT2Atx5IRn7lOOARC9u6YH5q2SBVAX33DBZ5Cgls1rOJvN12Cnvsh4N8L+Q5SjZ9v440D9+By8arZnGJuxA5PmBu1XunXPkC+mwSjJbAqjvxlqeQXDdCHsc5D38xcTTz4CekHYKun/IvnkSeigXPFvAdXI6yNrpG0fgfLyWwgJ/bGwzh2zGmd+ABtGGrQx5SLVT7UNsrFVnvA98t7taryGN3tdmUxTBeAX4slxLsV8kw/dkZTfZqn1AsZ6l9ZkoS6SEJw3RPz5KIwI9/FOdXa1YOY3kGOjFsBoA4Vb6R8kOX22BaQ6oxoJnud8AWySFH4ZXXos5gg8Td9HZbF21gc1C9BD1b9o7d2LCEI3j4zBDbhit5JNSMjhoO4vbr9ehkx1EHaJJbgZTsBTIPsns2Zko3eFLmVsuKErCTj63A8pbOsCUR7Kj7gNpqD1orRrvY/BVvm68qt0lmu74zPLdiqkr+4cfI3dlDZmr8HZH7QkeoQdbc+Py+4GJb2OB2JnLcPeRQIvPYNF+coUh50zUfPKdWFDcj4G2F3lTIkY/Mx3B8zlg6j5LM04xnVL93Fk0ZCpIqvXWR3gLaQ6fB75OTYexYXAxREUn+BQmOoOjPtZ/VPkS5l6wEoQAhMxj/SeFSR6s2QeCPoazfvqghn9iytNx8e65wDogSzHF4peI09x2OG+COS6gtQfeduQSQhPaUgXXFe12kZt20AA1K4YkAN0q+ZeODh0zGvyAJlds68T0qxZeHMvRfwrT/LQBsit7t23DzUHXAu+lveSDjHriB5+5BK6qSsM4lDWCsNHufkgbQdxB17xRenMv0KLHSP0hXH4YjB0PnXA79e7B5LJM9uKPkAlox93jvVjw0A+8icekCTx3zQcDrG8+ma6IER0piUOO9Md8Zg4DPAe1CVaHHccFnDq+LC0u6cj1Xi43NYuzqHxMhnuZK6YQE2wKM2ifUnKIZ0xw7/Ty1NMbZbH9yWJ9jwIC+J46CeYXSiWN7NrrC+YKswA99CUJmc9MLgXN2lSADRLFIpSsgDN+v9GTGwux5zwPyQBvrQk9Lu399o5ZwjQs+PRSd9J5GYsSC2LXbAg7pf0au8I3ZRNfefcak4U1LmNpt90ssVTiCVXdHzulSbkJT7stDEI3a10+plywHXwBz3vGwJ/0f74uk+6aYEMU2RjridJHWcv4OYKG0YKjbJjllALoOgb0K7Ole2QqZ9o+mEpYusbR5zmLJLZsZ+dmDyZT+aiv9ym30eTJ1Tw2dG+dZLbRMVAt20VD3SSqy0Quk1SiY4eEsG9YarB05iqdTz9JwljzYErLH4C/O0J1cPVUofDrQHJJHvHayOtPnfZ09ac+uDheC+2qcq6ciSAXXdQh1vdWJ+XVObgqDyx2X4DS4PNrJWsOP3mt9kiFJgYJkoNQHj9/RP08QcZy1PTNqB6ycOrgVGWU95PJkYk8AMCxJz4cjAzlgSgJWVzj94YtitACkAlpK0OQVoysY10N5cDwq1fRYZ+6+SXlnCWgLh8iZfEdleK5IOcaLJEDOZH1OTt7YewzT+dnfEeA/6xzSM8xy55PU4BTugRHWycos75EP8tv0IYbcGyUE+kCyIN7ChBtPvi8Nwx/CxgLlUV9HLyRcYw/nv5Rxs5eFnzLTE3QgZhopQ9Zs7PMC7MVV3VU6v+5JG7dWL6mnMA6Nk/mcJI+64METmvCOimfjVLQFWBcuckukmE670rz3wIE1Ct48i0CdXow3LZGTpYu7H0Cb/BvoQa0viqtK3Z+y5qx8zW92DeTw8UOa80lmikW3EqfMT8OZ9dT/CudG5nVOqSdhCuzRnUF7JonOHniM6YwXpS4YnjU08VpkK5x3obu3E+ry6gPAZKR/1yAZG6cXSFwSf/rOY1Z0myPkEnECMrWQWo7choLurLN2imIdUR15TmPYYmAGH/voUVxW455G++PTNLD8yO1VFXSKjd3lxGiuVnUlaYRc6OhaS6yNj0b/V2CivGJIPpkYAQ=="
+        },
+        {
+          "type": "text",
+          "text": "```json { \"category\": \"CECRL\", \"text\": \"REPUBLICA DE COLOMBIA\\nIDENTIFICACION PERSONAL\\nCEDULA DE CIUDADANIA\\n\\nNUMERO 7.249.040\\nMESA GOMEZ\\nAPELLIDOS\\nJOSE DEL CARMEN\\nNOMBRES\\n\\nFIRMA\\n\\nFECHA DE NACIMIENTO 27-JUN-1962\\nPUERTO NARE\\n(ANTIOQUIA)\\nLUGAR DE NACIMIENTO\\n\\n1.70 B+ M\\nESTATURA G.S. RH SEXO\\n\\n23-FEB-1981 PUERTO BOYACA\\nFECHA Y LUGAR DE EXPEDICION\\n\\nREGISTRADOR NACIONAL\\nCARLOS ARIEL SANCHEZ TORRES\\n\\nINDICE DERECHO\\n\\nA-1500150-0012822-M-0007249040-2C081027 00049073B8A 1 1410020296\" } ```"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 9,
+        "cache_creation_input_tokens": 4753,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 974
+      }
+    },
+    "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 8000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "expected_category": "CECRL",
+  "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+  "api_used": "invoke_model",
+  "pdf_info": {
+    "original_size": 189559,
+    "first_page_size": 185060,
+    "is_scanned": true
+  }
+}

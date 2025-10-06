@@ -1,0 +1,134 @@
+{
+  "extraction_data": {
+    "path": "ACC/901108357/204_CA_2020-02-29.pdf",
+    "result": {
+      "companyName": "QUIMEL INGENIERIA S.A.S.",
+      "documentType": "Equity Composition",
+      "taxId": "901.108.357-8",
+      "country": "Colombia",
+      "identificationDetails": {
+        "source": "id_analysis",
+        "indicators": [
+          "NIT identification type",
+          "C.C and C.E identification types for individuals"
+        ],
+        "conflictingSources": [],
+        "requiresReview": false
+      },
+      "relatedParties": [
+        {
+          "firstName": "JOSE CARLOS",
+          "lastName": "MENDOZA CARRANZA",
+          "identificationType": "CE",
+          "identificationNumber": "737708",
+          "relationshipType": "Shareholder",
+          "participationPercentage": "100%",
+          "timeFound": 1,
+          "job": ""
+        },
+        {
+          "firstName": "JOSE CARLOS",
+          "lastName": "MENDOZA CARRANZA",
+          "identificationType": "CE",
+          "identificationNumber": "737708",
+          "relationshipType": "Shareholder",
+          "participationPercentage": "",
+          "timeFound": 2,
+          "job": "REPRESENTANTE LEGAL"
+        },
+        {
+          "firstName": "SANDRA MILENA",
+          "lastName": "BOLAÑOS BRAVO",
+          "identificationType": "CC",
+          "identificationNumber": "27.191.211",
+          "relationshipType": "Shareholder",
+          "participationPercentage": "",
+          "timeFound": 1,
+          "job": "CONTADORA"
+        }
+      ]
+    },
+    "document_type": "company",
+    "document_number": "901108357",
+    "category": "ACC",
+    "confidenceScores": {
+      "companyName": 95,
+      "taxId": 95,
+      "country": 90,
+      "relatedParties": 85
+    }
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "```json { \"path\": \"ACC/901108357/204_CA_2020-02-29.pdf\", \"result\": { \"companyName\": \"QUIMEL INGENIERIA S.A.S.\", \"documentType\": \"Equity Composition\", \"taxId\": \"901.108.357-8\", \"country\": \"Colombia\", \"identificationDetails\": { \"source\": \"id_analysis\", \"indicators\": [ \"NIT identification type\", \"C.C and C.E identification types for individuals\" ], \"conflictingSources\": [], \"requiresReview\": false }, \"relatedParties\": [ { \"firstName\": \"JOSE CARLOS\", \"lastName\": \"MENDOZA CARRANZA\", \"identificationType\": \"CE\", \"identificationNumber\": \"737708\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"100%\", \"timeFound\": 1, \"job\": \"\" }, { \"firstName\": \"JOSE CARLOS\", \"lastName\": \"MENDOZA CARRANZA\", \"identificationType\": \"CE\", \"identificationNumber\": \"737708\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"\", \"timeFound\": 2, \"job\": \"REPRESENTANTE LEGAL\" }, { \"firstName\": \"SANDRA MILENA\", \"lastName\": \"BOLAÑOS BRAVO\", \"identificationType\": \"CC\", \"identificationNumber\": \"27.191.211\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"\", \"timeFound\": 1, \"job\": \"CONTADORA\" } ] }, \"document_type\": \"company\", \"document_number\": \"901108357\", \"category\": \"ACC\", \"confidenceScores\": { \"companyName\": 95, \"taxId\": 95, \"country\": 90, \"relatedParties\": 85 } } ```"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 496,
+      "cache_creation_input_tokens": 9865,
+      "cache_read_input_tokens": 0,
+      "output_tokens": 1297
+    },
+    "ResponseMetadata": {
+      "RequestId": "ffe6fb5c-7a07-44a3-b914-7a0a78580ecb",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Mon, 25 Aug 2025 20:43:01 GMT",
+        "content-type": "application/json",
+        "content-length": "7963",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "ffe6fb5c-7a07-44a3-b914-7a0a78580ecb",
+        "x-amzn-bedrock-invocation-latency": "19541",
+        "x-amzn-bedrock-cache-write-input-token-count": "9865",
+        "x-amzn-bedrock-cache-read-input-token-count": "0",
+        "x-amzn-bedrock-output-token-count": "1297",
+        "x-amzn-bedrock-input-token-count": "496"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_013dZiLDMdTdJzXDwdXtZMg5",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-sonnet-4-20250514",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Let me analyze this PDF document step by step: 1. **Country Identification**: - Looking for explicit country or city references - I don't see any explicit mentions of countries or cities in the document - Looking at tax ID: The document shows \"NIT No. 901.108.357-8\" - From the COMPANY_ID hash table: \"Colombia\":[\"NIT\"] - So the country should be \"Colombia\" based on NIT identification - The identificationType \"C.E\" for the person suggests this might be a foreign ID in Colombia (Cédula de Extranjería) - Also \"SALVADOREÑO\" nationality is mentioned for the shareholder 2. **Main Reporting Company (Root Level)**: - Company Name: \"QUIMEL INGENIERIA S.A.S.\" (appears multiple times in the document) - Tax ID: \"901.108.357-8\" (from \"NIT No. 901.108.357-8\") 3. **Related Parties**: Looking at the table, there's one shareholder: - Name: \"MENDOZA CARRANZA JOSE CARLOS\" - Identification: \"C.E 737708\" - Shares: 5,200 (100%) - Participation: 100% - Nationality: SALVADOREÑO This person also appears as \"REPRESENTANTE LEGAL\" at the bottom. There's also mention of \"SANDRA MILENA BOLAÑOS BRAVO\" as \"CONTADORA\" with \"C.C 27.191.211\" Let me structure the related parties: For JOSE CARLOS MENDOZA CARRANZA: - First appearance: as shareholder with 100% participation - Second appearance: as \"REPRESENTANTE LEGAL\" For SANDRA MILENA BOLAÑOS BRAVO: - Appears as \"CONTADORA\" I'll break down the name structures and identification details. Jose Carlos Mendoza Carranza's name follows a surname-first format, with \"JOSE CARLOS\" as the first name and \"MENDOZA CARRANZA\" as the full surname. Sandra Milena Bolaños Bravo's name follows a given-name-first order, with \"SANDRA MILENA\" as her first name and \"BOLAÑOS BRAVO\" as her surname. The identification type \"C.E\" for Jose Carlos indicates a foreign identification specific to Colombia's system. The participation breakdown shows Jose Carlos holding 100% involvement, while Sandra appears to be in an administrative role without specified ownership. Despite the main shareholder being Salvadoran, the company's registration in Colombia through its NIT suggests a Colombian corporate context.",
+          "signature": "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"
+        },
+        {
+          "type": "text",
+          "text": "```json { \"path\": \"ACC/901108357/204_CA_2020-02-29.pdf\", \"result\": { \"companyName\": \"QUIMEL INGENIERIA S.A.S.\", \"documentType\": \"Equity Composition\", \"taxId\": \"901.108.357-8\", \"country\": \"Colombia\", \"identificationDetails\": { \"source\": \"id_analysis\", \"indicators\": [ \"NIT identification type\", \"C.C and C.E identification types for individuals\" ], \"conflictingSources\": [], \"requiresReview\": false }, \"relatedParties\": [ { \"firstName\": \"JOSE CARLOS\", \"lastName\": \"MENDOZA CARRANZA\", \"identificationType\": \"CE\", \"identificationNumber\": \"737708\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"100%\", \"timeFound\": 1, \"job\": \"\" }, { \"firstName\": \"JOSE CARLOS\", \"lastName\": \"MENDOZA CARRANZA\", \"identificationType\": \"CE\", \"identificationNumber\": \"737708\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"\", \"timeFound\": 2, \"job\": \"REPRESENTANTE LEGAL\" }, { \"firstName\": \"SANDRA MILENA\", \"lastName\": \"BOLAÑOS BRAVO\", \"identificationType\": \"CC\", \"identificationNumber\": \"27.191.211\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"\", \"timeFound\": 1, \"job\": \"CONTADORA\" } ] }, \"document_type\": \"company\", \"document_number\": \"901108357\", \"category\": \"ACC\", \"confidenceScores\": { \"companyName\": 95, \"taxId\": 95, \"country\": 90, \"relatedParties\": 85 } } ```"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 496,
+        "cache_creation_input_tokens": 9865,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 1297
+      }
+    },
+    "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 8000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+  "api_used": "invoke_model"
+}

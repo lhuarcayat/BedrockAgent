@@ -1,0 +1,97 @@
+{
+  "extraction_data": {
+    "result": {
+      "companyName": "POR REVISAR",
+      "documentCategory": "Equity Composition",
+      "taxId": "POR REVISAR",
+      "country": "Perú",
+      "identificationDetails": {
+        "source": "text_reference",
+        "indicators": [
+          "Piura",
+          "Notaria de Piura"
+        ],
+        "conflictingSources": [
+          "Document appears to be a property transfer document rather than equity composition"
+        ],
+        "requiresReview": "true"
+      },
+      "relatedParties": []
+    },
+    "documentType": "company",
+    "category": "ACC"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "{ \"result\": { \"companyName\": \"POR REVISAR\", \"documentCategory\": \"Equity Composition\", \"taxId\": \"POR REVISAR\", \"country\": \"Perú\", \"identificationDetails\": { \"source\": \"text_reference\", \"indicators\": [ \"Piura\", \"Notaria de Piura\" ], \"conflictingSources\": [ \"Document appears to be a property transfer document rather than equity composition\" ], \"requiresReview\": \"true\" }, \"relatedParties\": [] }, \"documentType\": \"company\", \"category\": \"ACC\" }"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 9,
+      "cache_creation_input_tokens": 6094,
+      "cache_read_input_tokens": 0,
+      "output_tokens": 649
+    },
+    "ResponseMetadata": {
+      "RequestId": "f1d6e1ed-52f1-4d8f-9943-82c4fbee684b",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Fri, 29 Aug 2025 19:37:13 GMT",
+        "content-type": "application/json",
+        "content-length": "5794",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "f1d6e1ed-52f1-4d8f-9943-82c4fbee684b",
+        "x-amzn-bedrock-invocation-latency": "10563",
+        "x-amzn-bedrock-cache-write-input-token-count": "6094",
+        "x-amzn-bedrock-cache-read-input-token-count": "0",
+        "x-amzn-bedrock-output-token-count": "649",
+        "x-amzn-bedrock-input-token-count": "9"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_01HRp9hwoUvRYU65CQTBtFZP",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-sonnet-4-20250514",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Let me analyze this document. It appears to be a legal document in Spanish from Peru, specifically a property transfer document (transferencia de propiedad). This is not an equity composition document, but a property transfer document between individuals. However, I need to follow the instructions and extract data according to the schema provided. From the document, I can see: 1. The header shows \"Carolina M. Núñez Ricalde - Notaria de Piura\" 2. The document mentions \"PIURA\" multiple times, which indicates Peru 3. The main document appears to be about a property transfer (\"TRANSFERENCIA DE PROPIEDAD\") Looking at the content: - This is a notarial document from Piura, Peru - It's about a property transfer, not equity composition - The parties involved are: - Don Enrique Baffi Arroyo (Acquirer/Transferee) - Don Sergio Francisco Vidal Castillo (Transferor) - The document mentions a company \"Pronte Ingenieros S.A.C.\" but this appears to be the context of the transfer, not the main subject However, according to the instructions, I need to treat this as an equity composition document and extract data accordingly. Since this is clearly NOT an equity composition document but rather a property transfer document, I should set appropriate fields to \"POR REVISAR\" where the document doesn't contain the expected information. Let me identify: 1. Company Name: This is tricky because this isn't really about a company's equity composition. The document mentions \"Pronte Ingenieros S.A.C.\" but in the context of a property transfer. 2. Tax ID: I don't see clear company tax IDs 3. Country: Peru (based on \"Piura\" and document format) 4. Related Parties: The individuals mentioned are in a property transfer context, not as shareholders Since this document is fundamentally about property transfer and not equity composition, most fields should be \"POR REVISAR\" as the document doesn't contain the expected equity composition information.",
+          "signature": "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"
+        },
+        {
+          "type": "text",
+          "text": "{ \"result\": { \"companyName\": \"POR REVISAR\", \"documentCategory\": \"Equity Composition\", \"taxId\": \"POR REVISAR\", \"country\": \"Perú\", \"identificationDetails\": { \"source\": \"text_reference\", \"indicators\": [ \"Piura\", \"Notaria de Piura\" ], \"conflictingSources\": [ \"Document appears to be a property transfer document rather than equity composition\" ], \"requiresReview\": \"true\" }, \"relatedParties\": [] }, \"documentType\": \"company\", \"category\": \"ACC\" }"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 9,
+        "cache_creation_input_tokens": 6094,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 649
+      }
+    },
+    "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 8000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+  "api_used": "invoke_model"
+}

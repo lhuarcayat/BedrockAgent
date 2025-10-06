@@ -1,0 +1,87 @@
+{
+  "classification_data": {
+    "category": "CECRL",
+    "text": "OLOMBIA PERSONAL ADANIA REPUBLICA DE COLOMBIA IDENTIFICACION PERSONAL CEDULA DE CIUDADANIA NUMERO 79.214.402 STERLING NEIRA APELLIDOS RENE NOMBRES FIRMA",
+    "document_number": "UNKNOWN",
+    "path": "CECRL/900337790_79214402_2020-02-29/79214402_2020-02-29.pdf"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "```json { \"category\": \"CECRL\", \"text\": \"OLOMBIA\\nPERSONAL\\nADANIA\\n\\nREPUBLICA DE COLOMBIA\\nIDENTIFICACION PERSONAL\\nCEDULA DE CIUDADANIA\\n\\nNUMERO 79.214.402\\nSTERLING NEIRA\\n\\nAPELLIDOS\\nRENE\\n\\nNOMBRES\\n\\nFIRMA\" } ```"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 9,
+      "cache_creation_input_tokens": 4800,
+      "cache_read_input_tokens": 0,
+      "output_tokens": 644
+    },
+    "ResponseMetadata": {
+      "RequestId": "070866f0-e6a0-4449-b18d-536f87109ad5",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Fri, 29 Aug 2025 22:57:12 GMT",
+        "content-type": "application/json",
+        "content-length": "5311",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "070866f0-e6a0-4449-b18d-536f87109ad5",
+        "x-amzn-bedrock-invocation-latency": "11696",
+        "x-amzn-bedrock-cache-write-input-token-count": "4800",
+        "x-amzn-bedrock-cache-read-input-token-count": "0",
+        "x-amzn-bedrock-output-token-count": "644",
+        "x-amzn-bedrock-input-token-count": "9"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_01G3PRv621uZ1oFjx8iykVMN",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-sonnet-4-20250514",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Let me analyze this document step by step following the classification workflow: 1. **TEXT EXTRACTION** Looking at the image, I can see this is a Colombian identification document. Let me extract the text: - \"REPUBLICA DE COLOMBIA\" - \"IDENTIFICACION PERSONAL\" - \"CEDULA DE CIUDADANIA\" - \"NUMERO 79.214.402\" - \"STERLING NEIRA\" - \"APELLIDOS\" - \"RENE\" - \"NOMBRES\" - There's a signature at the bottom labeled \"FIRMA\" - There's also a photo of a person on the right side 2. **PRIORITY CHECKS** - This is not BLANK - it contains meaningful content - This is not LINK_ONLY - it's not primarily hyperlinks/URLs 3. **DOCUMENT FUNCTION ANALYSIS** The PRIMARY PURPOSE of this document is personal identification. It's a Colombian national ID card (cédula de ciudadanía) that provides: - Individual identification number (79.214.402) - Person's name (Sterling Neira Rene) - Photo identification - Signature - Official government issuance This is clearly for identifying an individual person for legal, administrative, or other purposes. 4. **ISSUER IDENTIFICATION** This is issued by the Colombian government identification authority, not DIAN or Chamber of Commerce. 5. **CATEGORY CLASSIFICATION** Looking at the category definitions: **CECRL** fits perfectly: - Individual identification terminology: \"IDENTIFICACION PERSONAL\", \"CEDULA DE CIUDADANIA\" - Personal biographical data: Individual name and ID number - Individual photo and signature reference (\"FIRMA\") - Government-issued personal ID number with individual name - Official government document format - Key pattern matches: \"REPUBLICA DE COLOMBIA IDENTIFICACION PERSONAL\", \"CEDULA DE CIUDADANIA NUMERO\" This is clearly a CECRL document - a personal identification document issued by government authorities.",
+          "signature": "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"
+        },
+        {
+          "type": "text",
+          "text": "```json { \"category\": \"CECRL\", \"text\": \"OLOMBIA\\nPERSONAL\\nADANIA\\n\\nREPUBLICA DE COLOMBIA\\nIDENTIFICACION PERSONAL\\nCEDULA DE CIUDADANIA\\n\\nNUMERO 79.214.402\\nSTERLING NEIRA\\n\\nAPELLIDOS\\nRENE\\n\\nNOMBRES\\n\\nFIRMA\" } ```"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 9,
+        "cache_creation_input_tokens": 4800,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 644
+      }
+    },
+    "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 8000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "expected_category": "CECRL",
+  "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+  "api_used": "invoke_model",
+  "pdf_info": {
+    "original_size": 156911,
+    "first_page_size": 64506,
+    "is_scanned": false
+  }
+}

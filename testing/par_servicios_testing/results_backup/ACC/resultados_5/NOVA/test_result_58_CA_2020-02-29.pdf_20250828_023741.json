@@ -1,0 +1,145 @@
+{
+  "document_name": "58_CA_2020-02-29.pdf",
+  "category": "ACC",
+  "classification_success": true,
+  "extraction_success": true,
+  "overall_success": true,
+  "timestamp": "2025-08-28T02:37:30.072105",
+  "classification_result": {
+    "classification_data": {
+      "category": "ACC",
+      "text": "CERTIFICADO DE COMPOSICIÓN ACCIONARIA Yo, HENRY ANTONIO ALTERIO GONZÁLEZ identifico con (CC/C/E/PP/D) CC No. 79694634 obrando en representación de (nombre del representante) ECOSIMPLE SAS identificado con (NIT/TAX ID /otro) NIT No. 900365151-5 certifica bajo la gravedad del juramento, sujeto a las sanciones establecidas en el Código Penal, que los asociados, socios o accionistas que tienen más del CINCO PORCIENTO (5%) de participación en el capital social de la entidad que represento son las personas naturales o jurídicas que aparecen en la siguiente relación: NOMBRE DEL ACCIONISTA, SOCIO O ASOCIADO IDENTIFICACIÃN PARTICIPACIÃN EN EL CAPITAL SOCIAL (%%) HENRY ANTONIO ALTERIO GONZÁLEZ 79694634 100 Fecha de diligenciamiento: 27 DE FEBRERO DE 2023 Nombre de la entidad: ECOSIMPLE SAS No. 900365151-5 [SIGNATURE] Firma del representante legal Nombre del representante legal: HENRY ANTONIO ALTERIO GONZÁLEZ Documento de Identificación: 79694634",
+      "document_number": "900365151",
+      "path": "ACC/900365151/58_CA_2020-02-29.pdf"
+    },
+    "raw_response": {
+      "ResponseMetadata": {
+        "RequestId": "5f799c0e-979f-4bf3-875a-b117437644b3",
+        "HTTPStatusCode": 200,
+        "HTTPHeaders": {
+          "date": "Thu, 28 Aug 2025 07:37:35 GMT",
+          "content-type": "application/json",
+          "content-length": "1427",
+          "connection": "keep-alive",
+          "x-amzn-requestid": "5f799c0e-979f-4bf3-875a-b117437644b3"
+        },
+        "RetryAttempts": 0
+      },
+      "output": {
+        "message": {
+          "role": "assistant",
+          "content": [
+            {
+              "text": "```json { \"category\": \"ACC\", \"text\": \"CERTIFICADO DE COMPOSICIÓN ACCIONARIA\\n\\nYo, HENRY ANTONIO ALTERIO GONZÁLEZ\\nidentifico con \\n(CC/C/E/PP/D) CC\\n\\nNo. 79694634\\nobrando en representación de (nombre del representante) \\nECOSIMPLE SAS\\nidentificado con (NIT/TAX ID /otro) NIT\\n\\nNo. 900365151-5 certifica bajo la gravedad del juramento, sujeto a las sanciones establecidas en el Código Penal, que los asociados, socios o accionistas que tienen más del CINCO PORCIENTO (5%) de participación en el capital social de la entidad que represento son las personas naturales o jurídicas que aparecen en la siguiente relación:\\n\\nNOMBRE DEL ACCIONISTA, SOCIO O ASOCIADO\\nIDENTIFICACI\\u00c3N\\nPARTICIPACI\\u00c3N EN EL CAPITAL SOCIAL (%%)\\nHENRY ANTONIO ALTERIO GONZ\\u00c1LEZ\\n79694634\\n100\\n\\nFecha de diligenciamiento: 27 DE FEBRERO DE 2023\\nNombre de la entidad: ECOSIMPLE SAS\\nNo. 900365151-5\\n\\n[SIGNATURE]\\n\\nFirma del representante legal\\n\\n\\u00a0Nombre del representante legal: HENRY ANTONIO ALTERIO GONZ\\u00c1LEZ\\nDocumento de Identificaci\\u00f3n: 79694634\" } ```"
+            }
+          ]
+        }
+      },
+      "stopReason": "end_turn",
+      "usage": {
+        "inputTokens": 1790,
+        "outputTokens": 406,
+        "totalTokens": 4340,
+        "cacheReadInputTokens": 2144,
+        "cacheWriteInputTokens": 0
+      },
+      "metrics": {
+        "latencyMs": 6525
+      },
+      "model_id": "us.amazon.nova-pro-v1:0",
+      "api_used": "converse",
+      "model_params": {
+        "maxTokens": 8000,
+        "topP": 1,
+        "temperature": 0
+      }
+    },
+    "expected_category": "ACC",
+    "model_used": "us.amazon.nova-pro-v1:0",
+    "api_used": "converse",
+    "pdf_info": {
+      "original_size": 54956,
+      "first_page_size": 45636,
+      "is_scanned": false
+    }
+  },
+  "extraction_result": {
+    "extraction_data": {
+      "path": "ACC/900365151/58_CA_2020-02-29.pdf",
+      "result": {
+        "companyName": "ECOSIMPLE SAS",
+        "documentCategory": "Equity Composition",
+        "taxId": "900365151-5",
+        "country": "POR REVISAR",
+        "identificationDetails": {
+          "source": "text_reference",
+          "indicators": [
+            "NIT"
+          ],
+          "conflictingSources": [
+            "Missing country reference, defaulting to POR REVISAR"
+          ],
+          "requiresReview": "true"
+        },
+        "relatedParties": [
+          {
+            "type": "person",
+            "firstName": "HENRY",
+            "lastName": "ANTONIO ALTERIO GONZALEZ",
+            "identificationType": "CC",
+            "identificationNumber": "79694634",
+            "relationshipType": "Shareholder",
+            "participationPercentage": "100",
+            "timeFound": "1",
+            "job": "Representante legal"
+          }
+        ]
+      },
+      "documentType": "company",
+      "documentNumber": "900365151",
+      "category": "ACC"
+    },
+    "raw_response": {
+      "ResponseMetadata": {
+        "RequestId": "a963d814-d4e7-4784-b9f7-0ffe582187cf",
+        "HTTPStatusCode": 200,
+        "HTTPHeaders": {
+          "date": "Thu, 28 Aug 2025 07:37:40 GMT",
+          "content-type": "application/json",
+          "content-length": "1154",
+          "connection": "keep-alive",
+          "x-amzn-requestid": "a963d814-d4e7-4784-b9f7-0ffe582187cf"
+        },
+        "RetryAttempts": 0
+      },
+      "output": {
+        "message": {
+          "role": "assistant",
+          "content": [
+            {
+              "text": "```json { \"result\": { \"companyName\": \"ECOSIMPLE SAS\", \"documentCategory\": \"Equity Composition\", \"taxId\": \"900365151-5\", \"country\": \"POR REVISAR\", \"identificationDetails\": { \"source\": \"text_reference\", \"indicators\": [ \"NIT\" ], \"conflictingSources\": [ \"Missing country reference, defaulting to POR REVISAR\" ], \"requiresReview\": \"true\" }, \"relatedParties\": [ { \"type\": \"person\", \"firstName\": \"HENRY\", \"lastName\": \"ANTONIO ALTERIO GONZALEZ\", \"identificationType\": \"CC\", \"identificationNumber\": \"79694634\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"100\", \"timeFound\": \"1\", \"job\": \"Representante legal\" } ] }, \"documentType\": \"company\", \"category\": \"ACC\" } ```"
+            }
+          ]
+        }
+      },
+      "stopReason": "end_turn",
+      "usage": {
+        "inputTokens": 5407,
+        "outputTokens": 240,
+        "totalTokens": 5647
+      },
+      "metrics": {
+        "latencyMs": 4603
+      },
+      "model_id": "us.amazon.nova-pro-v1:0",
+      "api_used": "converse",
+      "model_params": {
+        "maxTokens": 8000,
+        "topP": 1,
+        "temperature": 0
+      }
+    },
+    "model_used": "us.amazon.nova-pro-v1:0",
+    "api_used": "converse"
+  }
+}

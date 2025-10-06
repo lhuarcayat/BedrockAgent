@@ -1,0 +1,87 @@
+{
+  "classification_data": {
+    "category": "CECRL",
+    "text": "REPUBLICA DE COLOMBIA IDENTIFICACION PERSONAL CEDULA DE CIUDADANIA NUMERO 7.229.896 JEREZ BERRIO APELLIDOS CESAR AUGUSTO NOMBRES FIRMA FECHA DE NACIMIENTO 30-MAY-1974 DUITAMA (BOYACA) LUGAR DE NACIMIENTO 1.67 O+ M ESTATURA G.S.RH- SEXO 21-SEP-1992 DUITAMA FECHA Y LUGAR DE EXPEDICION INDICE DERECHO REGISTRADOR NACIONAL CARLOS ARIEL SANCHEZ TORRES A-46040000-0021749G-M 000722996G-201 00223 0021217A 1 816003416",
+    "document_number": "7229896",
+    "path": "CECRL/7229896/7229896_2020-02-29.pdf"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "```json { \"category\": \"CECRL\", \"text\": \"REPUBLICA DE COLOMBIA\\nIDENTIFICACION PERSONAL\\nCEDULA DE CIUDADANIA\\n\\nNUMERO 7.229.896\\nJEREZ BERRIO\\n\\nAPELLIDOS\\n\\nCESAR AUGUSTO\\n\\nNOMBRES\\n\\nFIRMA\\n\\nFECHA DE NACIMIENTO 30-MAY-1974\\nDUITAMA\\n(BOYACA)\\nLUGAR DE NACIMIENTO\\n\\n1.67 O+ M\\nESTATURA G.S.RH- SEXO\\n\\n21-SEP-1992 DUITAMA\\nFECHA Y LUGAR DE EXPEDICION\\n\\nINDICE DERECHO\\n\\nREGISTRADOR NACIONAL\\nCARLOS ARIEL SANCHEZ TORRES\\n\\nA-46040000-0021749G-M 000722996G-201 00223 0021217A 1 816003416\" } ```"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 1584,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 3150,
+      "output_tokens": 900
+    },
+    "ResponseMetadata": {
+      "RequestId": "6cf6706b-23e3-483f-9dcc-1f2b956323ab",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Sun, 31 Aug 2025 21:34:41 GMT",
+        "content-type": "application/json",
+        "content-length": "5511",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "6cf6706b-23e3-483f-9dcc-1f2b956323ab",
+        "x-amzn-bedrock-invocation-latency": "14158",
+        "x-amzn-bedrock-cache-write-input-token-count": "0",
+        "x-amzn-bedrock-cache-read-input-token-count": "3150",
+        "x-amzn-bedrock-output-token-count": "900",
+        "x-amzn-bedrock-input-token-count": "1584"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_0192prZM4eYNaY7MLQ2BxLB9",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-sonnet-4-20250514",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Let me analyze this document step by step according to the classification workflow: **1. TEXT EXTRACTION** The document contains: - REPUBLICA DE COLOMBIA - IDENTIFICACION PERSONAL - CEDULA DE CIUDADANIA - NUMERO: 7.229.896 - JEREZ BERRIO - APELLIDOS - CESAR AUGUSTO - NOMBRES - [Signature] - FIRMA - [Photograph of a person] - [Fingerprint] - FECHA DE NACIMIENTO: 30-MAY-1974 - DUITAMA (BOYACA) - LUGAR DE NACIMIENTO - 1.67 O+ M - ESTATURA G.S.RH- SEXO - 21-SEP-1992 DUITAMA - FECHA Y LUGAR DE EXPEDICION - REGISTRADOR NACIONAL - CARLOS ARIEL SANCHEZ TORRES - [Barcode with numbers: A-46040000-0021749G-M 000722996G-201 00223 0021217A 1 816003416] **2. PRIORITY CHECKS** - Not BLANK: There is substantial content - Not LINK_ONLY: No hyperlinks or URLs present **3. DOCUMENT FUNCTION ANALYSIS** This document's main purpose is personal identification. It contains: - Personal biographical data: date of birth, place of birth, blood type, sex, height - Individual references with photograph, signature and fingerprint - Government-issued personal identification number (7.229.896) - Security elements: barcode, official format **4. ISSUER IDENTIFICATION** The document is issued by \"REPUBLICA DE COLOMBIA\" - a government identification authority for personal identification. **5. CATEGORY CLASSIFICATION** Following the order CECRL → CERL → ACC → RUT → RUB → BY_REVIEW: This clearly matches CECRL category: I confirm this is a Colombian citizenship identification card with comprehensive personal details. The document contains critical identifying information verified by official government markers, including a unique personal number, biometric data, and official authentication elements.",
+          "signature": "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"
+        },
+        {
+          "type": "text",
+          "text": "```json { \"category\": \"CECRL\", \"text\": \"REPUBLICA DE COLOMBIA\\nIDENTIFICACION PERSONAL\\nCEDULA DE CIUDADANIA\\n\\nNUMERO 7.229.896\\nJEREZ BERRIO\\n\\nAPELLIDOS\\n\\nCESAR AUGUSTO\\n\\nNOMBRES\\n\\nFIRMA\\n\\nFECHA DE NACIMIENTO 30-MAY-1974\\nDUITAMA\\n(BOYACA)\\nLUGAR DE NACIMIENTO\\n\\n1.67 O+ M\\nESTATURA G.S.RH- SEXO\\n\\n21-SEP-1992 DUITAMA\\nFECHA Y LUGAR DE EXPEDICION\\n\\nINDICE DERECHO\\n\\nREGISTRADOR NACIONAL\\nCARLOS ARIEL SANCHEZ TORRES\\n\\nA-46040000-0021749G-M 000722996G-201 00223 0021217A 1 816003416\" } ```"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 1584,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 3150,
+        "output_tokens": 900
+      }
+    },
+    "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 8000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "expected_category": "CECRL",
+  "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+  "api_used": "invoke_model",
+  "pdf_info": {
+    "original_size": 168479,
+    "first_page_size": 163978,
+    "is_scanned": true
+  }
+}

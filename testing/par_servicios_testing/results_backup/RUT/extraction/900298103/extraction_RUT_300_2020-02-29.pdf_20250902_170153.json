@@ -1,0 +1,94 @@
+{
+  "extraction_data": {
+    "result": {
+      "CompanyName": "BACK CONTAINER LIMITADA",
+      "Country": "COLOMBIA",
+      "TaxId": "900628103",
+      "VerificationDigit": "4",
+      "IdentificationType": "NIT",
+      "PersonType": "ForReview",
+      "ConflictingSources": [
+        "Cell 24. Tipo de contribuyente is not clearly readable due to document quality"
+      ],
+      "RequiresReview": "true"
+    },
+    "RelatedParties": [],
+    "Address": "CRA 11 190 OF 09, Cundinamarca, COLOMBIA",
+    "DocumentGenerationDate": "20-10-06-02",
+    "DocumentType": "company",
+    "Category": "RUT"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "{ \"result\": { \"CompanyName\": \"BACK CONTAINER LIMITADA\", \"Country\": \"COLOMBIA\", \"TaxId\": \"900628103\", \"VerificationDigit\": \"4\", \"IdentificationType\": \"NIT\", \"PersonType\": \"ForReview\", \"ConflictingSources\": [\"Cell 24. Tipo de contribuyente is not clearly readable due to document quality\"], \"RequiresReview\": \"true\" }, \"RelatedParties\": [], \"Address\": \"CRA 11 190 OF 09, Cundinamarca, COLOMBIA\", \"DocumentGenerationDate\": \"20-10-06-02\", \"DocumentType\": \"company\", \"Category\": \"RUT\" }"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 1773,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 2990,
+      "output_tokens": 875
+    },
+    "ResponseMetadata": {
+      "RequestId": "50a86ead-1e44-4749-8219-8e35c78358e2",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Tue, 02 Sep 2025 22:01:53 GMT",
+        "content-type": "application/json",
+        "content-length": "6179",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "50a86ead-1e44-4749-8219-8e35c78358e2",
+        "x-amzn-bedrock-invocation-latency": "14382",
+        "x-amzn-bedrock-cache-write-input-token-count": "0",
+        "x-amzn-bedrock-cache-read-input-token-count": "2990",
+        "x-amzn-bedrock-output-token-count": "875",
+        "x-amzn-bedrock-input-token-count": "1773"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_01GaMhjWRKJvsq8nkfWvemca",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-sonnet-4-20250514",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Looking at this document, I can see it's a Colombian RUT (Registro Único Tributario) from DIAN. Let me extract the information according to the field rules: 1. CompanyName - Found in cell \"35. Razón social\": \"BACK CONTAINER LIMITADA\" 2. Country - According to the rules, for a RUT from DIAN, this is found in cell \"38. País\": I can see \"COLOMBIA\" in the document 3. TaxId - Found in cell \"5. Número de Identificación Tributaria (NIT)\": I can see \"900628103\" 4. VerificationDigit - Found in cell \"6. DV\": I can see \"4\" next to the NIT 5. IdentificationType - For RUT from DIAN, this is \"NIT\" 6. PersonType - Found in cell \"24. Tipo de contribuyente\": I need to look for this... I can see some numbers in what appears to be cell 24 but it's not completely clear 7. Address - Composed of cells \"41. Dirección principal\", \"40. Ciudad/Municipio\", \"39. Departamento\": - 41. Dirección principal: \"CRA 11 190 OF 09\" - 40. Ciudad/Municipio: \"Cundinamarca\" - 39. Departamento: Looking at the document structure, I can see \"COLOMBIA\" in cell 38 8. DocumentGenerationDate - At bottom of page next to \"Fecha generación documento PDF:\": I can see \"20 10 06 02\" 9. RelatedParties - I need to look for sections about \"Socios y/o miembros de Juntas Directivas\" and \"Revisor Fiscal y contador\". Looking at the document, I can see there are sections for this but the text is not clearly readable in many parts. 10. DocumentType - Always \"company\" 11. Category - Confirmed as \"RUT\" based on the document type and origin from DIAN. I'm focusing on the clearly legible information, noting the key details about the company's identification and location while acknowledging some sections remain challenging to read completely. The document date fragment suggests a potential generation timestamp, and I'll carefully mark uncertain sections to ensure accuracy during further review.",
+          "signature": "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"
+        },
+        {
+          "type": "text",
+          "text": "{ \"result\": { \"CompanyName\": \"BACK CONTAINER LIMITADA\", \"Country\": \"COLOMBIA\", \"TaxId\": \"900628103\", \"VerificationDigit\": \"4\", \"IdentificationType\": \"NIT\", \"PersonType\": \"ForReview\", \"ConflictingSources\": [\"Cell 24. Tipo de contribuyente is not clearly readable due to document quality\"], \"RequiresReview\": \"true\" }, \"RelatedParties\": [], \"Address\": \"CRA 11 190 OF 09, Cundinamarca, COLOMBIA\", \"DocumentGenerationDate\": \"20-10-06-02\", \"DocumentType\": \"company\", \"Category\": \"RUT\" }"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 1773,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 2990,
+        "output_tokens": 875
+      }
+    },
+    "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 9000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+  "api_used": "invoke_model"
+}

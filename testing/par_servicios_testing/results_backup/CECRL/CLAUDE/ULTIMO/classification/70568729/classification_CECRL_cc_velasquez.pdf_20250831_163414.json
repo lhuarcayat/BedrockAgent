@@ -1,0 +1,87 @@
+{
+  "classification_data": {
+    "category": "CECRL",
+    "text": "REPÚBLICA DE COLOMBIA IDENTIFICACIÓN PERSONAL CÉDULA DE CIUDADANÍA 79.568.729 VELÁSQUEZ RUIZ GIOVANNY HUMBERTO",
+    "document_number": "70568729",
+    "path": "CECRL/70568729/cc velasquez.pdf"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "```json { \"category\": \"CECRL\", \"text\": \"REPÚBLICA DE COLOMBIA\\nIDENTIFICACIÓN PERSONAL\\nCÉDULA DE CIUDADANÍA\\n79.568.729\\nVELÁSQUEZ RUIZ\\nGIOVANNY HUMBERTO\" } ```"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 1584,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 3150,
+      "output_tokens": 592
+    },
+    "ResponseMetadata": {
+      "RequestId": "bbe498a6-af14-4c27-8df2-9e69b9af77c5",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Sun, 31 Aug 2025 21:34:13 GMT",
+        "content-type": "application/json",
+        "content-length": "5195",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "bbe498a6-af14-4c27-8df2-9e69b9af77c5",
+        "x-amzn-bedrock-invocation-latency": "9244",
+        "x-amzn-bedrock-cache-write-input-token-count": "0",
+        "x-amzn-bedrock-cache-read-input-token-count": "3150",
+        "x-amzn-bedrock-output-token-count": "592",
+        "x-amzn-bedrock-input-token-count": "1584"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_01XVxRRrzKmJMDMkrmv8noJj",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-sonnet-4-20250514",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Let me analyze this document according to the classification workflow: 1. **TEXT EXTRACTION** Looking at the document, I can see: - \"REPUBLICA DE COLOMBIA\" - \"IDENTIFICACIÓN PERSONAL\" - \"CÉDULA DE CIUDADANÍA\" - Number: \"79.568.729\" - \"VELÁSQUEZ RUIZ\" - \"GIOVANNY HUMBERTO\" - There's a photo of a person - There appears to be a signature 2. **PRIORITY CHECKS** - This is not BLANK - there's significant content - This is not LINK_ONLY - no hyperlinks redirecting elsewhere 3. **DOCUMENT FUNCTION ANALYSIS** - What is the MAIN PURPOSE? This is clearly a personal identification document - Is it a personal identification document? YES - this shows \"CÉDULA DE CIUDADANÍA\" which is an official Colombian identity card - It contains personal data: name (GIOVANNY HUMBERTO VELÁSQUEZ RUIZ), ID number (79.568.729), photograph, signature - This is definitely CECRL indicative 4. **ISSUER IDENTIFICATION** - This is issued by the Colombian government (REPÚBLICA DE COLOMBIA) - It's a government-issued personal identification document -> CECRL indicative 5. **CATEGORY CLASSIFICATION** This clearly fits CECRL category: - Contains \"CÉDULA DE CIUDADANÍA\" which is mentioned as an essential indicator for CECRL - Contains \"IDENTIFICACIÓN PERSONAL\" - Shows personal biographical data (name, ID number) - Has individual references with photograph and signature - Government-issued personal identification - Contains the pattern \"REPÚBLICA DE COLOMBIA IDENTIFICACIÓN PERSONAL\" which is specifically mentioned as a pattern for CECRL This is definitively a CECRL document. Now I need to extract all the text I can see: - REPÚBLICA DE COLOMBIA - IDENTIFICACIÓN PERSONAL - CÉDULA DE CIUDADANÍA - 79.568.729 - VELÁSQUEZ RUIZ - GIOVANNY HUMBERTO I've identified the key personal identification details for this Colombian citizen. The document provides critical information including full name and unique identification number, confirming its status as an official government-issued identity card.",
+          "signature": "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"
+        },
+        {
+          "type": "text",
+          "text": "```json { \"category\": \"CECRL\", \"text\": \"REPÚBLICA DE COLOMBIA\\nIDENTIFICACIÓN PERSONAL\\nCÉDULA DE CIUDADANÍA\\n79.568.729\\nVELÁSQUEZ RUIZ\\nGIOVANNY HUMBERTO\" } ```"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 1584,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 3150,
+        "output_tokens": 592
+      }
+    },
+    "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 8000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "expected_category": "CECRL",
+  "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+  "api_used": "invoke_model",
+  "pdf_info": {
+    "original_size": 148584,
+    "first_page_size": 65327,
+    "is_scanned": true
+  }
+}

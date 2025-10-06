@@ -1,0 +1,107 @@
+{
+  "extraction_data": {
+    "result": {
+      "CompanyName": "SDV COLOMBIA S A S",
+      "Country": "COLOMBIA",
+      "TaxId": "8300127713",
+      "VerificationDigit": "3",
+      "IdentificationType": "NIT",
+      "PersonType": "Persona jurídica",
+      "ConflictingSources": [],
+      "RequiresReview": "false"
+    },
+    "RelatedParties": [
+      {
+        "FirstName": "CARLOS EDUARDO",
+        "LastName": "ATUESTA MANRIQUE",
+        "IdType": "Cédula de Ciudadanía",
+        "IdNumber": "19065613",
+        "RelationshipType": "Revisor fiscal principal"
+      },
+      {
+        "FirstName": "NORMA CONSTANZA",
+        "LastName": "MARIN GOMEZ",
+        "IdType": "Cédula de Ciudadanía",
+        "IdNumber": "39619289",
+        "RelationshipType": "Contador"
+      }
+    ],
+    "Address": "KM 34 AUT TUNJA ENTRADA NORTE VEREDA SAN MARTIN LT EL CHARCO DIAGONAL A LA FABRICA DE PAPEL, Gachancipá, Cundinamarca",
+    "DocumentGenerationDate": "16-07-2024 02:48:37PM",
+    "DocumentType": "company",
+    "Category": "RUT"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "{ \"result\": { \"CompanyName\": \"SDV COLOMBIA S A S\", \"Country\": \"COLOMBIA\", \"TaxId\": \"8300127713\", \"VerificationDigit\": \"3\", \"IdentificationType\": \"NIT\", \"PersonType\": \"Persona jurídica\", \"ConflictingSources\": [], \"RequiresReview\": \"false\" }, \"RelatedParties\": [ { \"FirstName\": \"CARLOS EDUARDO\", \"LastName\": \"ATUESTA MANRIQUE\", \"IdType\": \"Cédula de Ciudadanía\", \"IdNumber\": \"19065613\", \"RelationshipType\": \"Revisor fiscal principal\" }, { \"FirstName\": \"NORMA CONSTANZA\", \"LastName\": \"MARIN GOMEZ\", \"IdType\": \"Cédula de Ciudadanía\", \"IdNumber\": \"39619289\", \"RelationshipType\": \"Contador\" } ], \"Address\": \"KM 34 AUT TUNJA ENTRADA NORTE VEREDA SAN MARTIN LT EL CHARCO DIAGONAL A LA FABRICA DE PAPEL, Gachancipá, Cundinamarca\", \"DocumentGenerationDate\": \"16-07-2024 02:48:37PM\", \"DocumentType\": \"company\", \"Category\": \"RUT\" }"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 19570,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 2990,
+      "output_tokens": 1256
+    },
+    "ResponseMetadata": {
+      "RequestId": "c5546f96-11aa-44af-aeee-6d6192e68a1d",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Tue, 02 Sep 2025 21:56:02 GMT",
+        "content-type": "application/json",
+        "content-length": "7824",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "c5546f96-11aa-44af-aeee-6d6192e68a1d",
+        "x-amzn-bedrock-invocation-latency": "23318",
+        "x-amzn-bedrock-cache-write-input-token-count": "0",
+        "x-amzn-bedrock-cache-read-input-token-count": "2990",
+        "x-amzn-bedrock-output-token-count": "1256",
+        "x-amzn-bedrock-input-token-count": "19570"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_01GukT2hFRFCZNyHjzNMuU1E",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-sonnet-4-20250514",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Let me carefully extract the information from this Colombian RUT document issued by DIAN. Looking at the first page, I can find: 1. **CompanyName**: Found in cell \"35. Razón social\" = \"SDV COLOMBIA S A S\" 2. **Country**: Found in cell \"38. País\" = \"COLOMBIA\" 3. **TaxId**: Found in cell \"5. Número de Identificación Tributaria (NIT)\" = \"8300127713\" 4. **VerificationDigit**: Found in cell \"6. DV\" = \"3\" 5. **IdentificationType**: For RUT document, this is \"NIT\" 6. **PersonType**: Found in cell \"24. Tipo de contribuyente\" = \"Persona jurídica\" 7. **Address**: Composed of cells \"41. Dirección principal\", \"40. Ciudad/Municipio\", \"39. Departamento\" = \"KM 34 AUT TUNJA ENTRADA NORTE VEREDA SAN MARTIN LT EL CHARCO DIAGONAL A LA FABRICA DE PAPEL, Gachancipá, Cundinamarca\" 8. **DocumentGenerationDate**: At the bottom \"Fecha generación documento PDF: 16-07-2024 02:48:37PM\" For **RelatedParties**, I need to check pages 4-8 for sections about \"Socios y/o miembros de Juntas Directivas, Consorcios, Uniones Temporales\" and \"Revisor Fiscal y contador\". From pages 4-7, I can see several related parties in the socios section with various names and details. Let me extract them: 1. From page 4, I see entries for various people like BAGARELLA GLEIM, RODRIGUEZ BORRAS JAVIER, CAMACHO BEJARANO SERGIO ALEJANDRO, ALONSO SANTODOMINGO NARYAN FERNANDO, ROSSI RAFAEL 2. From page 5, I see more entries about additional shareholders and their details, carefully noting each individual's information. 3. From page 8, I identify key administrative personnel: - Revisor fiscal principal: ATUESTA MANRIQUE CARLOS EDUARDO - Contador: MARIN GOMEZ NORMA CONSTANZA I'll systematically document each related party, ensuring I capture precise details from the appropriate document sections. The passport entry reveals an interesting pattern of identification. I notice cells with specific numbering that seem to contain personal information. The cells include passport details, names with potential variations, and other identifying characteristics. I'll need to map these carefully to understand the full context of the individual's identification. The document structure suggests a methodical approach is necessary to extract accurate related party information across different sections and pages.",
+          "signature": "EsAXCkgIBxABGAIqQCwSUb2DGsRG0OFEfZaWUKxcByNXQ/9VfHt2F7qR9/bJilKYZlv5Fe46M0C3ShdqvTM9WZJW+tsHX6PhZvrSI5sSDFD01qfuWczxge3qPRoMO3TcLAU+tTLXVAoBIjAhB+f8k69rSUzIKaQzljHRvOG6eWmLV+emXewc2YDwZ3RIzMaJ7TytHAZUGJAl6xMqpRZmD6/qV2kr+66G5Hhx8nFCoJlGO4Ct3f1BJmP6VF43+nISsT2BvZN6WcIuFEu14xgRFh+x3kGPLrI/ooT5HlTqzTCj6uEBeWXVBm/hH3VK1j6mj/2J5oS/1KpUUMoPYwylprkd5BUye2xvGqBIIeTpxtYxrfp5SPWIGgE1fnWpZF4fSR3BLZ9IIetEt6lHIrpzpNkmueIrDydzbrqm5Qkdb0HUhL8aBckMlbrX6+y5MZxdZIsEyO8fTds1dbKjJHHtyZTW8SS761/eYETAZdfkp7elhMsIG4QFeDZMyjbEfoK0F4lAVEfStfMyw8rvhD6bX57d37mefDGmUU2W7BuvvUylLmhkVuwuXhiS8bj4C/HZkYJTrZsFZWozFBlFewlsRVaA5zc4WhwoSTJkwpeXedRPrulDgeEVBh8rGosilPgZoDNiHRfJgMg+H5FEWIkWIQg9gGXfba3MYMTnAndwqbrWnzzuzvkec3keaVGq/i3DC7/8VAgJxsgd10QvZtv1KkAZzqKjeYBFMTRyqiF6u7tZWmUfI4nH4iZN0uiY/XpvtERtMlVf3DiXbFZCLjLhbhtZiPLywyrq5iH/Uzo75WuytF/R6Om2cjKC6024cYXyBb7rfYYVItmy7Qm6Y29zNb19FAFAYI3ZAgxIjuh/jBDe8u6tvj4c7/SVmzuTNdw2TZf/T6qrrt/2awZ1nI0V+49OjIu4G3vlb33FtUI//EGscRztOSKlmdWYwzrmrHlnu5JZQuzq9dr9Wab7pKWJLxsFECOLNaR5mayaEfp7ri9/WQf+1eJ3j7XvSQMBFQQ69kg6YqfuXyuXRj8dYRMCpvxGShvX5Zz1Z5ac8HeW438m/5UVCmN898qj7sJbjf8dZgYjeLo+4eaeJ7AWhl7hS0x9kJJ6kng4VJY2VZR9S7FvFTY+xBf9u9kF35Oyeac8sZk0Y02BF+608X+AaTtwdbNptdgxq2P9Kk/LcpLdVbeSrYeA35CFiJx5Jv07sU8JjkdHqQ/u5cYTL6FrrijPZiSkvFRkK43cXFleTwIFK71fZ5nuZm7EDSE17G1KWM7CNLmzuGTDwINfCUSwgQF8fJce4nj3kIg5/SgTMArchbSPYSgl6ldQ3IP81q6JBaYj4j2QRcTtDtrePz7362tKRK7UDpM6cNnLz9alss6gg1uwBusXepuwR1yzUzWoQmlokUiHxJ+RlVCYlg8IxzURyjjPn1BNIQIiY5GKhhwhlI1PqtBSqsOWBCA/8F64MyQBfjfJc0oMBE4r93Rzc8WPppzsmMU/pCM2MomQvwPA335M2OIAXHgjRUYX3dJR+2T0isEfeB49z9SwN8okCIgiMXJnL+bSoWOPpWn0nDh3JVC+uhb3/QyO9RQI0hd6QJhKGwHTO8Fdfdd03B8ef4kBwK6MUv7SNqfcCPjwtvVmwRTzW6Nim7e06fv4q7RtYCn8oPysmFgjhTdur57EGTXev1dn1GWwLFm7OBKxACjQftBEIdVV4ljj+tuKKQQOxs0t9FtXmvW/Fa8HOqgcv8/C0aPvlsH2PWHw/SQMl3rnBPTGIT6eSNYBMi8VSnfukLyKJ/lA8JOkXC+BPSlCrsPMxyUu9gXb2rq0USyPUySI02Jy62ZlswBycamLtM+nmE6ygkny7DeZPX06RoIncAJ52Kg8QUEoKoEH/3UEKgfsKGlDA8TiGxEdNlhQOVcOEGCQ8ivK10JL8ghitMl5DS91no9OZgIQxWSr72PwvmCczKLAJDt68oy80xnETHq3TJvwos8s60lGAl8IoA/DWCC6FqSJ+XZWmhnLZpo4rr51cOCq2c2HGDrNFXw4Qx2nW+YXauxgf3F43TewtAwjsTCuHDt4xKB6DSi7IZku9e8fII3a8YuVsKVQdEg+ddnHv5TPxFbl5HXKSGHBDswulsb6VrSfTuiQA8Jnc86PIwud/dJppiiM+GozrxOc1xZVCwA8a8RVAQ6OVBLGrwct5+2zGLBlGuEnpl1P2o8GQKuVh4wwuvNFLZB2kBNglId1QhnbJoJbfvy9PLYyTKbGTxd7RgJoDjod47uM2NQ6esNWxpNGLRHObsagSURdNciRfQSX/aj8GNeBrcuPQDKadun0lJVJeECQ1XMjgpf7AzgLCwquVoGdv6udnVA3Vr0e74ZDxAkz3mxdsY1t5TYr6v2/+DT6qlTFtiN3vjX7/IkXFJHS8415UWsnAbtZcHn1hMP0TNZdC1NPbpm6NX+oPIqK+BTFImAoalq+d9A5YL15Zm8AegRTA67d2hNe/52Fx5gNAOB59//JY85Fi87RzedZQpU+egq/qCJQASCs5KTL99FrzXmrDCBoMc862X6GYQVlQ1r9nBCpO/hN73jmK/tzvMpPI2uKs1WB3qzcNLurhh7NppwdB/L8KGU7sZaaPS8OvEOZjSkVY6l3POgMV6fNVgon5peGAR1mAFtuRJr9C6owtnGGATcaXD2ejcMIcE6wM/WFzpaKdjpcm9chqbQvh+WXnCIMC4Gn8JIxh50V2VdLJn7XGkXSjd/uk2J99LM3y7k5iZ2/CPal+J5Hv0su42Nn7leYy0fp0pwxkCbhWyVPic1aTr+CvyRg608E89HzxE83m1U1lJVajxibTDGr/twd9riDjgBel6tavEP2upANZFfhV1my6jh92We/tVj5RU3NUTMZ8adSvPq2yjzjjnH8IBrxVbnuQ61W0DntODk1zN11npptEaOh7Qw84Pd4qoNH5pbWJT/uNvOKOQ3ufoGBAlAdZLNWDEfQoPiTeH0TfyHvniz3L0+oHQ0MkP5MNyKeXeFtRV8tep4jWu9J5ci0eoImq35ht6Kb67uYj3XH0BOTBUngZwODzkM6LQnUE5XM5EjV3QwfY+yZ3MiHyIvush7ImFUzW0eNM/fFbWuREBa3a4X85/g36OxQmeGQeSZC+eR3XGgmMgU/ToSwgUiLNkqfexIFDzVca62pDT6YlvC+uHGIaUKzTGSHgg+cElSiCo0Mk79H21Euzb6VvCvOA4l26tnUlpdYqhn7y+2ldvOFJ6N+EntOOk12xt/jJJr4yW7Q5wogwJU88wB2hYq1A0LMSIBBlqH8viRyeUPgNmgpkgs/Iw3InHlWe3bQFqBAY9yMhqOUwQUNPZERn7cEYrGQ7zim7pr3dB/0KLPmQtFRtHXaZXZMDkjPX6Hj5MdxD2AZMmK4CJIqw6omOmCG+Ma793bhS5dzmuJPZq2YxrsV0nvhY6RVAscUSIhW6RUYnBK6OMI4GpLw/Y+pxtG8PZO6OLlOoRyRLUmWtJriwva/lRmonalGWQ0yjSgTNomBWgSpEv7KQ3aDh3DP23y77UzpA7MmeGSAyV7ZpQPe1Eo1WC+p/fism5nx30HV2CAbHmgiDIAdzbv7n6DAzOlIo5aAirUQ/4yUTvUT5sWLm1YUTlbNmN9Pr0gY1LEpXT6fMzvhqPbzu9gO+wLlg7g5+8x2o6n1ucOy54xKcYBOVKDf6z4ZFjvUF0OrGgreixmj3oJf91iZsFAvsiQ/thO2ASvcJbxmA+QF+q9cBVy6WOnF0lQte0OLbn6p1UKqgbdmcsh8E/pTxXqY16KCtrgMp3V5tuYFaU3hHoWuzsVwNwLyhJWRJgyYsxDW2jmB2eWEZwhnMPL+MdoZCy00NHnn4uTwkRP1eamnNXuigwF5sThg3PO96aj4Rv0rcl2a03JK+FvY+ctMZRFhZjNYBAR5Lbk//fBd08BnmAM1gwOrUQjvnb61AZqkHvAbPL0Ifszikilk2mrRKmmhKM3L9/Rq5r4k9tYJnH00VNEUjekRg0sYAQ=="
+        },
+        {
+          "type": "text",
+          "text": "{ \"result\": { \"CompanyName\": \"SDV COLOMBIA S A S\", \"Country\": \"COLOMBIA\", \"TaxId\": \"8300127713\", \"VerificationDigit\": \"3\", \"IdentificationType\": \"NIT\", \"PersonType\": \"Persona jurídica\", \"ConflictingSources\": [], \"RequiresReview\": \"false\" }, \"RelatedParties\": [ { \"FirstName\": \"CARLOS EDUARDO\", \"LastName\": \"ATUESTA MANRIQUE\", \"IdType\": \"Cédula de Ciudadanía\", \"IdNumber\": \"19065613\", \"RelationshipType\": \"Revisor fiscal principal\" }, { \"FirstName\": \"NORMA CONSTANZA\", \"LastName\": \"MARIN GOMEZ\", \"IdType\": \"Cédula de Ciudadanía\", \"IdNumber\": \"39619289\", \"RelationshipType\": \"Contador\" } ], \"Address\": \"KM 34 AUT TUNJA ENTRADA NORTE VEREDA SAN MARTIN LT EL CHARCO DIAGONAL A LA FABRICA DE PAPEL, Gachancipá, Cundinamarca\", \"DocumentGenerationDate\": \"16-07-2024 02:48:37PM\", \"DocumentType\": \"company\", \"Category\": \"RUT\" }"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 19570,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 2990,
+        "output_tokens": 1256
+      }
+    },
+    "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 9000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+  "api_used": "invoke_model"
+}

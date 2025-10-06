@@ -1,0 +1,88 @@
+{
+  "extraction_data": {
+    "result": {
+      "firstName": "LUIS FRANCISCO",
+      "lastName": "GALEANO HERRERA",
+      "country_issuer": "Colombia",
+      "nationality": "Colombia",
+      "identificationType": "Cédula de Ciudadanía",
+      "identificationNumber": "19.335.891",
+      "message": ""
+    },
+    "document_type": "person",
+    "category": "CECRL"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "```json { \"result\": { \"firstName\": \"LUIS FRANCISCO\", \"lastName\": \"GALEANO HERRERA\", \"country_issuer\": \"Colombia\", \"nationality\": \"Colombia\", \"identificationType\": \"Cédula de Ciudadanía\", \"identificationNumber\": \"19.335.891\", \"message\": \"\" }, \"document_type\": \"person\", \"category\": \"CECRL\" } ```"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 10,
+      "cache_creation_input_tokens": 6440,
+      "cache_read_input_tokens": 0,
+      "output_tokens": 633
+    },
+    "ResponseMetadata": {
+      "RequestId": "9343b0ab-fd9f-4aa6-8898-a9534a8c39b5",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Fri, 29 Aug 2025 23:00:29 GMT",
+        "content-type": "application/json",
+        "content-length": "5355",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "9343b0ab-fd9f-4aa6-8898-a9534a8c39b5",
+        "x-amzn-bedrock-invocation-latency": "10918",
+        "x-amzn-bedrock-cache-write-input-token-count": "6440",
+        "x-amzn-bedrock-cache-read-input-token-count": "0",
+        "x-amzn-bedrock-output-token-count": "633",
+        "x-amzn-bedrock-input-token-count": "10"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_0194pQp2MgMhcVWPaeLhHyyp",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-sonnet-4-20250514",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "I need to analyze this document carefully. Let me examine what I can see: 1. The document appears to be from Colombia based on \"REPÚBLICA DE COLOMBIA\" at the top 2. I can see \"IDENTIFICACIÓN PERSONAL\" which suggests this is a personal identification document 3. There are some numbers visible: \"19.335.891\" 4. I can see \"GALEANO HERRERA\" which appears to be names 5. There's \"LUIS FRANCISCO\" which also appears to be names 6. I can see \"VÉLEZ\" and a date \"05-MAY-1955\" 7. There are some other numbers like \"1.73\" and \"O+\" and \"M\" Let me try to understand the structure: - At the top: \"REPÚBLICA DE COLOMBIA\" with \"IDENTIFICACIÓN PERSONAL\" - this indicates it's a Colombian ID document - The number \"19.335.891\" appears to be an identification number - \"GALEANO HERRERA\" and \"LUIS FRANCISCO\" appear to be names - There's a fingerprint image - There's what looks like \"VÉLEZ\" as a location and \"05-MAY-1955\" as a date - The \"1.73\", \"O+\", \"M\" could be height, blood type, and gender Based on the structure and the fact that this is a Colombian document with \"IDENTIFICACIÓN PERSONAL\", this appears to be a Cédula de Ciudadanía (Colombian national ID card). Looking at the names: - \"GALEANO HERRERA\" appears to be positioned as surnames (apellidos) - \"LUIS FRANCISCO\" appears to be positioned as given names (nombres) The identification number appears to be \"19.335.891\" For country_issuer: This is clearly Colombia based on \"REPÚBLICA DE COLOMBIA\" For nationality: Since this is a Colombian ID document and there's no explicit nationality field showing a different country, I'll assume Colombian nationality I'll extract the specific identification details from the Colombian personal identification document. The document type is a Cédula de Ciudadanía, with the unique identification number \"19.335.891\" clearly visible.",
+          "signature": "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"
+        },
+        {
+          "type": "text",
+          "text": "```json { \"result\": { \"firstName\": \"LUIS FRANCISCO\", \"lastName\": \"GALEANO HERRERA\", \"country_issuer\": \"Colombia\", \"nationality\": \"Colombia\", \"identificationType\": \"Cédula de Ciudadanía\", \"identificationNumber\": \"19.335.891\", \"message\": \"\" }, \"document_type\": \"person\", \"category\": \"CECRL\" } ```"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 10,
+        "cache_creation_input_tokens": 6440,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 633
+      }
+    },
+    "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 8000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+  "api_used": "invoke_model"
+}

@@ -1,0 +1,33 @@
+{
+  "ResponseMetadata": {
+    "RequestId": "3b619984-9491-42b6-9f3c-97405c0e66c6",
+    "HTTPStatusCode": 200,
+    "HTTPHeaders": {
+      "date": "Thu, 05 Jun 2025 22:01:23 GMT",
+      "content-type": "application/json",
+      "content-length": "1634",
+      "connection": "keep-alive",
+      "x-amzn-requestid": "3b619984-9491-42b6-9f3c-97405c0e66c6"
+    },
+    "RetryAttempts": 0
+  },
+  "output": {
+    "message": {
+      "role": "assistant",
+      "content": [
+        {
+          "text": "1. The provided JSON document does not contain any information about the document content, as the `<document_content>` tag is empty. Therefore, it is not possible to extract any personal identification data.\n\n2. Based on the provided JSON structure, it appears that the document content is supposed to be stored in the `<document_content>` tag. However, since this tag is empty, we cannot proceed with the extraction process.\n\n3. Given the lack of information in the document content, we cannot determine the document type, country issuer, nationality, identification type, or identification number.\n\n4. Since we cannot extract any information, we will add a message indicating that the document is not legible.\n\n5. We will assign a confidence score of 0 to all fields, as we were unable to extract any information.\n\nHere is the final JSON output:\n\n```json\n{\n  \"path\": \"\",\n  \"result\": {\n    \"firstName\": \"\",\n    \"lastName\": \"\",\n    \"country_issuer\": \"\",\n    \"nationality\": \"\",\n    \"identificationType\": \"\",\n    \"identificationNumber\": \"\",\n    \"message\": \"Necesita revisión manual, documento ilegible\"\n  },\n  \"confidenceScores\": {\n    \"firstName\": 0,\n    \"lastName\": 0,\n    \"country_issuer\": 0,\n    \"nationality\": 0,\n    \"identificationType\": 0,\n    \"identificationNumber\": 0\n  },\n  \"document_type\": \"\",\n  \"document_number\": \"\",\n  \"category\": \"\"\n}\n```"
+        }
+      ]
+    }
+  },
+  "stopReason": "end_turn",
+  "usage": {
+    "inputTokens": 3084,
+    "outputTokens": 312,
+    "totalTokens": 3396
+  },
+  "metrics": {
+    "latencyMs": 5781
+  }
+}

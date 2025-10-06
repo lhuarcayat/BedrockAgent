@@ -1,0 +1,120 @@
+{
+  "extraction_data": {
+    "path": "ACC/900266513/53_CA_2020-02-29.pdf",
+    "result": {
+      "companyName": "BUSINESS PROCESS MANAGEMENT LATINOAMERICA SAS",
+      "documentCategory": "Equity Composition",
+      "taxId": "900.266.513-3",
+      "country": "Colombia",
+      "identificationDetails": {
+        "source": "text_reference",
+        "indicators": [
+          "BOGOTA D.C.",
+          "NORMAS COLOMBIANAS"
+        ],
+        "conflictingSources": [],
+        "requiresReview": "false"
+      },
+      "relatedParties": [
+        {
+          "type": "person",
+          "firstName": "Mauricio",
+          "lastName": "Obregón Gutiérrez",
+          "identificationType": "C.C.",
+          "identificationNumber": "79.425.769",
+          "relationshipType": "Shareholder",
+          "participationPercentage": "80",
+          "timeFound": "1",
+          "job": "GERENTE"
+        },
+        {
+          "type": "person",
+          "firstName": "Monica María",
+          "lastName": "Gutierrez Obregón",
+          "identificationType": "C.C.",
+          "identificationNumber": "51.826.093",
+          "relationshipType": "Shareholder",
+          "participationPercentage": "20",
+          "timeFound": "1",
+          "job": "SUBGERENTE"
+        }
+      ]
+    },
+    "documentType": "company",
+    "documentNumber": "900266513",
+    "category": "ACC"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "```json { \"result\": { \"companyName\": \"BUSINESS PROCESS MANAGEMENT LATINOAMERICA SAS\", \"documentCategory\": \"Equity Composition\", \"taxId\": \"900.266.513-3\", \"country\": \"Colombia\", \"identificationDetails\": { \"source\": \"text_reference\", \"indicators\": [ \"BOGOTA D.C.\", \"NORMAS COLOMBIANAS\" ], \"conflictingSources\": [], \"requiresReview\": \"false\" }, \"relatedParties\": [ { \"type\": \"person\", \"firstName\": \"Mauricio\", \"lastName\": \"Obregón Gutiérrez\", \"identificationType\": \"C.C.\", \"identificationNumber\": \"79.425.769\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"80\", \"timeFound\": \"1\", \"job\": \"GERENTE\" }, { \"type\": \"person\", \"firstName\": \"Monica María\", \"lastName\": \"Gutierrez Obregón\", \"identificationType\": \"C.C.\", \"identificationNumber\": \"51.826.093\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"20\", \"timeFound\": \"1\", \"job\": \"SUBGERENTE\" } ] }, \"documentType\": \"company\", \"category\": \"ACC\" } ```"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 9,
+      "cache_creation_input_tokens": 6559,
+      "cache_read_input_tokens": 0,
+      "output_tokens": 1844
+    },
+    "ResponseMetadata": {
+      "RequestId": "446ca216-5feb-4b26-ac41-07abf301fcf2",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Thu, 28 Aug 2025 09:38:24 GMT",
+        "content-type": "application/json",
+        "content-length": "7041",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "446ca216-5feb-4b26-ac41-07abf301fcf2",
+        "x-amzn-bedrock-invocation-latency": "37409",
+        "x-amzn-bedrock-cache-write-input-token-count": "6559",
+        "x-amzn-bedrock-cache-read-input-token-count": "0",
+        "x-amzn-bedrock-output-token-count": "1844",
+        "x-amzn-bedrock-input-token-count": "9"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_01XeuyUStZBKtYS1qks8Tp6N",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-3-7-sonnet-20250219",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Let's analyze this document systematically: ## Step 1: Document Analysis This appears to be a certification document (certificado) issued by a fiscal auditor (revisor fiscal) named Samir Enrique Martinez Estrada for a Colombian company. Key observations: - The document is a certification of the equity composition of a company - Language is Spanish - The company is located in Bogota, Colombia - The company has two shareholders - The document contains information about the company's capital structure - The document is dated September 17, 2020 ## Step 2: Root Level Extraction Let's extract the basic company information: 1. **companyName**: \"BUSINESS PROCESS MANAGEMENT LATINOAMERICA SAS\" - Evidence: Appears in the header \"LA SOCIEDAD BUSINESS PROCESS MANAGEMENT LATINOAMERICA SAS\" 2. **taxId**: \"900.266.513-3\" - Evidence: Clearly stated as \"NIT 900.266.513-3\" 3. **country**: \"Colombia\" - Evidence: Multiple indicators: - \"BOGOTA D.C.\" mentioned as company domicile - Uses \"NIT\" which is the tax ID format for Colombia - Reference to \"NORMAS COLOMBIANAS\" - Document uses Colombian ID type nomenclature (C.C.) 4. **identificationDetails**: - source: \"text_reference\" (explicit mentions of Colombia) - indicators: [\"BOGOTA D.C.\", \"NORMAS COLOMBIANAS\", \"NIT format\"] - conflictingSources: [] (no conflicts observed) - requiresReview: \"false\" (all information appears clear and consistent) ## Step 3: Related Parties Processing The document lists two shareholders: 1. First shareholder: - Name: \"Mauricio Obregón Gutiérrez\" - Document Number: \"79.425.769\" - Position: \"GERENTE\" - Participation: \"80%\" - Document Type: \"C.C.\" (Cédula de Ciudadanía) - Nationality: \"COLOMBIANO\" 2. Second shareholder: - Name: \"Monica María Gutierrez Obregón\" - Document Number: \"51.826.093\" - Position: \"SUBGERENTE\" - Participation: \"20%\" - Document Type: \"C.C.\" (Cédula de Ciudadanía) - Nationality: \"COLOMBIANA\" Both shareholders appear to be individuals (persons) rather than companies, and both have Colombian citizenship. Let's format these into the relatedParties array: ```json \"relatedParties\": [ { \"type\": \"person\", \"firstName\": \"Mauricio\", \"lastName\": \"Obregón Gutiérrez\", \"identificationType\": \"C.C.\", \"identificationNumber\": \"79.425.769\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"80\", \"timeFound\": \"1\", \"job\": \"GERENTE\" }, { \"type\": \"person\", \"firstName\": \"Monica María\", \"lastName\": \"Gutierrez Obregón\", \"identificationType\": \"C.C.\", \"identificationNumber\": \"51.826.093\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"20\", \"timeFound\": \"1\", \"job\": \"SUBGERENTE\" } ] ``` ## Step 4: Validation & Cross-checking Let's validate the information: 1. **taxId format**: \"900.266.513-3\" follows the Colombian NIT format with dots and hyphen. 2. **identificationType**: C.C. is correct for Colombian citizens per the PERSON_ID hash table. 3. **Percentage total**: 80% + 20% = 100% (correct sum) 4. **Job titles**: \"GERENTE\" and \"SUBGERENTE\" are executive roles, common in Colombian companies. 5. **Required fields**: All required fields are present. 6. **Conflicts**: None detected. Based on this validation, the requiresReview flag should be set to \"false\" as all information appears clear and consistent. ## Final JSON Output Based on the analysis, I'll now prepare the final JSON: ```json { \"result\": { \"companyName\": \"BUSINESS PROCESS MANAGEMENT LATINOAMERICA SAS\", \"documentCategory\": \"Equity Composition\", \"taxId\": \"900.266.513-3\", \"country\": \"Colombia\", \"identificationDetails\": { \"source\": \"text_reference\", \"indicators\": [ \"BOGOTA D.C.\", \"NORMAS COLOMBIANAS\" ], \"conflictingSources\": [], \"requiresReview\": \"false\" }, \"relatedParties\": [ { \"type\": \"person\", \"firstName\": \"Mauricio\", \"lastName\": \"Obregón Gutiérrez\", \"identificationType\": \"C.C.\", \"identificationNumber\": \"79.425.769\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"80\", \"timeFound\": \"1\", \"job\": \"GERENTE\" }, { \"type\": \"person\", \"firstName\": \"Monica María\", \"lastName\": \"Gutierrez Obregón\", \"identificationType\": \"C.C.\", \"identificationNumber\": \"51.826.093\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"20\", \"timeFound\": \"1\", \"job\": \"SUBGERENTE\" } ] }, \"documentType\": \"company\", \"category\": \"ACC\" } ```",
+          "signature": "ErcBCkgIBxABGAIiQNhJIypzt2V34u753Mmklj0anuUxeem6pvLN3ZMufUanOhSTCce28Euk5iG1W0aV1mJb8+vCN4ahG3MQXU6bd90SDKMSbrqeH1aGnSufMhoMg566Kly5H+JvhMA9IjA0i4dobg8+uS+ahl6OQ2Rumuf5RbfKKR7+An53u+GcPDA7H5TtpZ5SAHUjmvsis/wqHRFkEfCMK7t97633Zql+mmzVMypToyHrb2kUK6AdGAI="
+        },
+        {
+          "type": "text",
+          "text": "```json { \"result\": { \"companyName\": \"BUSINESS PROCESS MANAGEMENT LATINOAMERICA SAS\", \"documentCategory\": \"Equity Composition\", \"taxId\": \"900.266.513-3\", \"country\": \"Colombia\", \"identificationDetails\": { \"source\": \"text_reference\", \"indicators\": [ \"BOGOTA D.C.\", \"NORMAS COLOMBIANAS\" ], \"conflictingSources\": [], \"requiresReview\": \"false\" }, \"relatedParties\": [ { \"type\": \"person\", \"firstName\": \"Mauricio\", \"lastName\": \"Obregón Gutiérrez\", \"identificationType\": \"C.C.\", \"identificationNumber\": \"79.425.769\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"80\", \"timeFound\": \"1\", \"job\": \"GERENTE\" }, { \"type\": \"person\", \"firstName\": \"Monica María\", \"lastName\": \"Gutierrez Obregón\", \"identificationType\": \"C.C.\", \"identificationNumber\": \"51.826.093\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"20\", \"timeFound\": \"1\", \"job\": \"SUBGERENTE\" } ] }, \"documentType\": \"company\", \"category\": \"ACC\" } ```"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 9,
+        "cache_creation_input_tokens": 6559,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 1844
+      }
+    },
+    "model_id": "us.anthropic.claude-3-7-sonnet-20250219-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 8000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "model_used": "us.anthropic.claude-3-7-sonnet-20250219-v1:0",
+  "api_used": "invoke_model"
+}

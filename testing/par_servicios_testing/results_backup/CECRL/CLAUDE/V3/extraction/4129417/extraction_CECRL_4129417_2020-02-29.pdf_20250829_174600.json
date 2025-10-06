@@ -1,0 +1,88 @@
+{
+  "extraction_data": {
+    "result": {
+      "firstName": "PABLO EMILIO",
+      "lastName": "OVALLE GUTIERREZ",
+      "country_issuer": "Colombia",
+      "nationality": "Colombia",
+      "identificationType": "Cédula de Ciudadanía",
+      "identificationNumber": "4129417",
+      "message": ""
+    },
+    "document_type": "person",
+    "category": "CECRL"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "```json { \"result\": { \"firstName\": \"PABLO EMILIO\", \"lastName\": \"OVALLE GUTIERREZ\", \"country_issuer\": \"Colombia\", \"nationality\": \"Colombia\", \"identificationType\": \"Cédula de Ciudadanía\", \"identificationNumber\": \"4129417\", \"message\": \"\" }, \"document_type\": \"person\", \"category\": \"CECRL\" } ```"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 10,
+      "cache_creation_input_tokens": 6495,
+      "cache_read_input_tokens": 0,
+      "output_tokens": 467
+    },
+    "ResponseMetadata": {
+      "RequestId": "2bc58a7f-df47-4f63-b968-60d0fa61e38f",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Fri, 29 Aug 2025 22:46:00 GMT",
+        "content-type": "application/json",
+        "content-length": "3670",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "2bc58a7f-df47-4f63-b968-60d0fa61e38f",
+        "x-amzn-bedrock-invocation-latency": "8616",
+        "x-amzn-bedrock-cache-write-input-token-count": "6495",
+        "x-amzn-bedrock-cache-read-input-token-count": "0",
+        "x-amzn-bedrock-output-token-count": "467",
+        "x-amzn-bedrock-input-token-count": "10"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_01AJsYapMgNMUTjX83XAGhQy",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-sonnet-4-20250514",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Let me analyze this Colombian ID document (Cédula de Ciudadanía) carefully. Looking at the document, I can see: 1. **Document Type**: This is clearly a \"CÉDULA DE CIUDADANÍA\" from \"REPÚBLICA DE COLOMBIA\" 2. **Country Issuer**: Colombia (this is clearly stated in the header \"REPÚBLICA DE COLOMBIA\") 3. **Name Information**: - I can see \"OVALLE GUTIERREZ\" and \"PABLO EMILIO\" - Looking at the structure, it appears \"OVALLE GUTIERREZ\" are the surnames (apellidos) and \"PABLO EMILIO\" is the first name (nombres) 4. **Identification Number**: I can see \"4129417\" as the number on the card 5. **Nationality**: Since this is a Colombian citizenship card, the nationality would be Colombian 6. **Additional Information**: I can see some other details like birth date (10-OCT-1951), place (GARAGOA BOYACA), etc. Let me extract the information following the schema: - firstName: \"PABLO EMILIO\" - lastName: \"OVALLE GUTIERREZ\" - country_issuer: \"Colombia\" - nationality: \"Colombia\" (since it's a citizenship card) - identificationType: \"Cédula de Ciudadanía\" - identificationNumber: \"4129417\" - message: \"\" (no issues)",
+          "signature": "EpYKCkgIBxABGAIqQMmNqH+yE9drVV/abTv04uyEx+raD2gBVUQOBFgIPIdpo4aa0AwOKJswyLmyezjFGjs/Onzk3qrEyQ6ogT6kfO0SDIrTTTCjCkKbDMzuBxoMtGi/k4hbKg/xnDvyIjBaQDSlViXrHsgZUkkpCclNPsclcOCOWfzWxhlm/BJT372hjp+G+F1G243e8P7w3owq+wgiNq36IHjMANh7CdOjoxqHV3MYG3zN8IqaNIknnTLMskiuH0wjHmS5fFYm8D+GuHEBq8nV8Fc7CIbQJ4gu41BifzBb9UJB2w9KHy92hpA/DhnROw5sHuoCf0wc3ObeMYSax6ZdwkNjsmSDwyS4z37puakBnkgcFPVVxigdEW+Vs90Sgc733yLWI3C1nELDD7VqoEA21YvRJgHLx+Rako93Ucntm9xDWFTr3MlkWDQgGQ15ycB9ac/Y8CPYNtgoH69ymeYbzuBQ30ko/SXXzWcTlaHz4s65DtIFgQ3h6WGUVGc5p95RWSQ6iDxMpkMKLM/GR8kz1wCOn9S8HOWQGUFzGSHlqmH7nVaLTHBM7hXBNczImFSRISbdcmyd5HLogAO9CTylAgMFKn9CAlU3Jf5UngbPIjMAQt1taataX1UIA0p+wR7a0nS8xw37XnEahIntVHdWvpuPpye4aWPusvxjvJVaFNSk399bRf1qT05r9oSW/+YjlHPT4JND8tMKb/KUwJRELbxZYo0YwTwpyIKQmSpA3x+SiALtvgjUeKjucThmOjqVYannCvU/TgGxjO7t+XtS2IbjOIOPMlyDjxlOSZHi3ftcsMRgRQAlzF1KeMXZkzNFOrySxMziCfSPPIg9dSb3xrLkoBitcqvGDyfVphZXqgllQqIvnu+O5WYPdtdCSnii3L/RrzbIzVigjMRQIpRCGisAPyXM5W/q0gywiLIN7hCpP2tJj7iKbeYeYC6K62qmBeU45SZKZ86fkml+1JTUeF5dpOOVUnhPlQSTGjAWMl3PIVbPRNBqCUCQTf5FJTvStSg70NP3M3aNV/kBKaBU3eC0QFOGELXLLjW7RarIW3p4e3jA3i6Djx7tvTRqHX0lP2SFodDw3seNe4yI+OWyGDH1A3kyldfKjKXeOPWNY/v0FV8+yAYmGDuvUNx6xtH81BbQ7FOZ9MePmVyh/H99IJnodwcaDmgEYPZ5iqK/ShhBCVGhfnzfqRROY3nU1SVwr/wh0dz9+72XtdUU1vV19U4i8gc4Te/HnXN1Q8ZtUxeAR+b30llyQki1M0H9lrNBlNFUGv7naz+0vu7UABUaeLTAAh3cKbwpCGqGCB8KXa05xEiMwCn7VjtxNFuI5YZ6ywFg5E+eCruUiHBy9bQmVRZprnWZ0fIRL6lxFCQrdRp0kchDPd2/E1DJcgYio8NSbaVNrVX6LBRpMHC28CtiL8UvydcbkJxgQPmJcFdDnYhQeLbkOjU/l0mpmJaPiimSP47uYiA7Z3o40EWa3iHu0yeTOTa3aT2TQ5+blA+tCYQvJyYaWp0iaZezHdvh9LaKcp6H/JdscpjNzd6tFz+uV/8NOmqp1ygMfmL1lO58M87RgHaJ+xOxHz4Mu6rSnvg/Z8IYHJ914FsBXU78uONzlLpLmv0CaohY384j65H2BBXPEyHle0EPjKpRRFQ05tbA/iuF51ognsntYLtrkiPDY/1CBSSBT7Jl0hI5/0LCkH7oOAmcvIZxP4+HRGjp+/fezw0GRo12GAE="
+        },
+        {
+          "type": "text",
+          "text": "```json { \"result\": { \"firstName\": \"PABLO EMILIO\", \"lastName\": \"OVALLE GUTIERREZ\", \"country_issuer\": \"Colombia\", \"nationality\": \"Colombia\", \"identificationType\": \"Cédula de Ciudadanía\", \"identificationNumber\": \"4129417\", \"message\": \"\" }, \"document_type\": \"person\", \"category\": \"CECRL\" } ```"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 10,
+        "cache_creation_input_tokens": 6495,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 467
+      }
+    },
+    "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 8000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+  "api_used": "invoke_model"
+}

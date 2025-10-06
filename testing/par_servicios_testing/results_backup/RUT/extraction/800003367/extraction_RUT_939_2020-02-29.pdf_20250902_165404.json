@@ -1,0 +1,92 @@
+{
+  "extraction_data": {
+    "result": {
+      "CompanyName": "SUMINISTROS INDUSTRIALES Y ASESORIAS S.A.S",
+      "Country": "COLOMBIA",
+      "TaxId": "800003367",
+      "VerificationDigit": "3",
+      "IdentificationType": "NIT",
+      "PersonType": "Persona jurídica",
+      "ConflictingSources": [],
+      "RequiresReview": "false"
+    },
+    "RelatedParties": [],
+    "Address": "CL 77 B 57 103 P 8 OF 803, Barranquilla, Atlántico",
+    "DocumentGenerationDate": "11-02-2022 09:03:34AM",
+    "DocumentType": "company",
+    "Category": "RUT"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "{ \"result\": { \"CompanyName\": \"SUMINISTROS INDUSTRIALES Y ASESORIAS S.A.S\", \"Country\": \"COLOMBIA\", \"TaxId\": \"800003367\", \"VerificationDigit\": \"3\", \"IdentificationType\": \"NIT\", \"PersonType\": \"Persona jurídica\", \"ConflictingSources\": [], \"RequiresReview\": \"false\" }, \"RelatedParties\": [], \"Address\": \"CL 77 B 57 103 P 8 OF 803, Barranquilla, Atlántico\", \"DocumentGenerationDate\": \"11-02-2022 09:03:34AM\", \"DocumentType\": \"company\", \"Category\": \"RUT\" }"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 2645,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 2990,
+      "output_tokens": 905
+    },
+    "ResponseMetadata": {
+      "RequestId": "f1313079-fc0b-4635-8909-38bac056177d",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Tue, 02 Sep 2025 21:54:04 GMT",
+        "content-type": "application/json",
+        "content-length": "5831",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "f1313079-fc0b-4635-8909-38bac056177d",
+        "x-amzn-bedrock-invocation-latency": "16253",
+        "x-amzn-bedrock-cache-write-input-token-count": "0",
+        "x-amzn-bedrock-cache-read-input-token-count": "2990",
+        "x-amzn-bedrock-output-token-count": "905",
+        "x-amzn-bedrock-input-token-count": "2645"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_01CNd6hk2tMZ8qW1PoszJjKN",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-sonnet-4-20250514",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Let me analyze this Colombian RUT (Registro Único Tributario) document from DIAN and extract the required information based on the field rules provided. Looking at the document, I can see: 1. **CompanyName** (cell 35. Razón social): \"SUMINISTROS INDUSTRIALES Y ASESORIAS S.A.S\" 2. **Country** (cell 38. País): \"COLOMBIA\" 3. **TaxId** (cell 5. Número de Identificación Tributaria (NIT)): \"800003367\" 4. **VerificationDigit** (cell 6. DV): \"3\" 5. **IdentificationType**: For RUT documents issued by DIAN, this is \"NIT\" 6. **PersonType** (cell 24. Tipo de contribuyente): \"Persona jurídica\" 7. **Address**: Need to combine cells 41, 40, and 39: - Cell 41. Dirección principal: \"CL 77 B 57 103 P 8 OF 803\" - Cell 40. Ciudad/Municipio: \"Barranquilla\" - Cell 39. Departamento: \"Atlántico\" So: \"CL 77 B 57 103 P 8 OF 803, Barranquilla, Atlántico\" 8. **DocumentGenerationDate**: At the bottom I can see \"Fecha generación documento PDF: 11-02-2022 09:03:34AM\" 9. **RelatedParties**: I need to look for sections \"Socios y/o miembros de Juntas Directivas, Consorcios, Uniones Temporales\" and \"Revisor Fiscal y contador\". Looking at the document, I don't see these sections clearly populated with specific information in the expected cells. This appears to be a single-page document and those sections may not be filled or visible. I'll verify potential conflicts and review requirements. The key details seem consistent, with no immediate red flags in the document's information. I'll cross-reference the NIT, verification digit, and company details to ensure accuracy and completeness of the extracted data. The RUT form appears incomplete, lacking specific sections for related parties like partners or auditors that would typically be populated in a comprehensive document.",
+          "signature": "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"
+        },
+        {
+          "type": "text",
+          "text": "{ \"result\": { \"CompanyName\": \"SUMINISTROS INDUSTRIALES Y ASESORIAS S.A.S\", \"Country\": \"COLOMBIA\", \"TaxId\": \"800003367\", \"VerificationDigit\": \"3\", \"IdentificationType\": \"NIT\", \"PersonType\": \"Persona jurídica\", \"ConflictingSources\": [], \"RequiresReview\": \"false\" }, \"RelatedParties\": [], \"Address\": \"CL 77 B 57 103 P 8 OF 803, Barranquilla, Atlántico\", \"DocumentGenerationDate\": \"11-02-2022 09:03:34AM\", \"DocumentType\": \"company\", \"Category\": \"RUT\" }"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 2645,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 2990,
+        "output_tokens": 905
+      }
+    },
+    "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 9000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+  "api_used": "invoke_model"
+}

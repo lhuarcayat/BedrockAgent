@@ -1,0 +1,183 @@
+{
+  "document_name": "7534022_2020-02-29.pdf",
+  "category": "CECRL",
+  "classification_success": true,
+  "extraction_success": true,
+  "overall_success": true,
+  "timestamp": "2025-08-29T10:46:36.793532",
+  "classification_result": {
+    "classification_data": {
+      "category": "CECRL",
+      "text": "REPUBLICA DE COLOMBIA IDENTIFICACION PERSONAL CEDULA DE CIUDADANIA NUMERO 7.534.022 RESTREPO PEREZ APELLIDOS JORGE DIEGO NOMBRES REPUBLICA DE COLOMBIA FIRMA FECHA DE NACIMIENTO 05-JUN-1960 ARMENIA (QUINDIO) LUGAR DE NACIMIENTO 1.66 ESTATURA O+ G.S. RH M SEXO 08-MAR-1979 ARMENIA FECHA Y LUGAR DE EXPEDICION INDICE DERECHO A-46001016-00132855-M-000754022-200812 000738291DA 1 817000749G",
+      "document_number": "7534022",
+      "path": "CECRL/7534022/7534022_2020-02-29.pdf"
+    },
+    "raw_response": {
+      "output": {
+        "message": {
+          "content": [
+            {
+              "text": "```json { \"category\": \"CECRL\", \"text\": \"REPUBLICA DE COLOMBIA IDENTIFICACION PERSONAL CEDULA DE CIUDADANIA NUMERO 7.534.022 RESTREPO PEREZ APELLIDOS JORGE DIEGO NOMBRES REPUBLICA DE COLOMBIA FIRMA FECHA DE NACIMIENTO 05-JUN-1960 ARMENIA (QUINDIO) LUGAR DE NACIMIENTO 1.66 ESTATURA O+ G.S. RH M SEXO 08-MAR-1979 ARMENIA FECHA Y LUGAR DE EXPEDICION INDICE DERECHO A-46001016-00132855-M-000754022-200812 000738291DA 1 817000749G\" } ```"
+            }
+          ]
+        }
+      },
+      "stopReason": "end_turn",
+      "usage": {
+        "input_tokens": 9,
+        "cache_creation_input_tokens": 4549,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 901
+      },
+      "ResponseMetadata": {
+        "RequestId": "ff3bc4ed-34be-425e-a0b4-4c0f78452a5b",
+        "HTTPStatusCode": 200,
+        "HTTPHeaders": {
+          "date": "Fri, 29 Aug 2025 15:46:55 GMT",
+          "content-type": "application/json",
+          "content-length": "6787",
+          "connection": "keep-alive",
+          "x-amzn-requestid": "ff3bc4ed-34be-425e-a0b4-4c0f78452a5b",
+          "x-amzn-bedrock-invocation-latency": "17723",
+          "x-amzn-bedrock-cache-write-input-token-count": "4549",
+          "x-amzn-bedrock-cache-read-input-token-count": "0",
+          "x-amzn-bedrock-output-token-count": "901",
+          "x-amzn-bedrock-input-token-count": "9"
+        },
+        "RetryAttempts": 0
+      },
+      "raw_anthropic_response": {
+        "id": "msg_bdrk_01NcNQDPeJNLBBUqGsxNCciC",
+        "type": "message",
+        "role": "assistant",
+        "model": "claude-sonnet-4-20250514",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "Let me analyze this document step by step according to the classification workflow: 1. **TEXT EXTRACTION** Looking at the images, I can see two documents: First document (top): - REPUBLICA DE COLOMBIA - IDENTIFICACION PERSONAL - CEDULA DE CIUDADANIA - NUMERO: 7.534.022 - RESTREPO PEREZ - APELLIDOS - JORGE DIEGO - NOMBRES - Contains what appears to be a photo and signature - REPUBLICA DE COLOMBIA appears multiple times as watermarks/security text Second document (bottom): - FECHA DE NACIMIENTO: 05-JUN-1960 - ARMENIA - (QUINDIO) - LUGAR DE NACIMIENTO - 1.66 ESTATURA - O+ G.S. RH - M SEXO - 08-MAR-1979 ARMENIA - FECHA Y LUGAR DE EXPEDICION - Contains fingerprint - INDICE DERECHO - Barcode at bottom - Various numbers at bottom: A-46001016-00132855-M-000754022-200812... etc. 2. **PRIORITY CHECKS** This is not BLANK - there's substantial meaningful content This is not LINK_ONLY - no hyperlinks or URLs 3. **ISSUER IDENTIFICATION** The text clearly shows \"REPUBLICA DE COLOMBIA\" and \"IDENTIFICACION PERSONAL\" and \"CEDULA DE CIUDADANIA\" which indicates this is issued by Colombian government identification authorities. 4. **DOCUMENT FUNCTION ANALYSIS** This is a personal identification document for an individual person named Jorge Diego Restrepo Perez. It contains: - Personal biographical data (birth date: 05-JUN-1960, birth place: Armenia Quindio) - Physical characteristics (height: 1.66, blood type: O+, sex: M) - Individual photo, fingerprint, and signature references - Government-issued personal ID number: 7.534.022 - Multiple security elements with official formatting 5. **CATEGORY CLASSIFICATION** I recognize this as a standard Colombian personal identification document (Cédula de Ciudadanía): - Definitively a government-issued personal ID - Comprehensive individual identification details - Official security features present - Unique identifier matching government records - Comprehensive personal information verified across document sections The document unequivocally represents an official personal identification credential from Colombian authorities. 6. **CONFIDENCE VALIDATION** Confirming document authenticity through: - Precise government identification terminology - Comprehensive personal data verification - Unambiguous identification purpose - Standard official document structure",
+            "signature": "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"
+          },
+          {
+            "type": "text",
+            "text": "```json { \"category\": \"CECRL\", \"text\": \"REPUBLICA DE COLOMBIA IDENTIFICACION PERSONAL CEDULA DE CIUDADANIA NUMERO 7.534.022 RESTREPO PEREZ APELLIDOS JORGE DIEGO NOMBRES REPUBLICA DE COLOMBIA FIRMA FECHA DE NACIMIENTO 05-JUN-1960 ARMENIA (QUINDIO) LUGAR DE NACIMIENTO 1.66 ESTATURA O+ G.S. RH M SEXO 08-MAR-1979 ARMENIA FECHA Y LUGAR DE EXPEDICION INDICE DERECHO A-46001016-00132855-M-000754022-200812 000738291DA 1 817000749G\" } ```"
+          }
+        ],
+        "stop_reason": "end_turn",
+        "stop_sequence": null,
+        "usage": {
+          "input_tokens": 9,
+          "cache_creation_input_tokens": 4549,
+          "cache_read_input_tokens": 0,
+          "output_tokens": 901
+        }
+      },
+      "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+      "api_used": "invoke_model",
+      "model_params": {
+        "max_tokens": 8000,
+        "top_p": 1,
+        "temperature": 1,
+        "thinking": {
+          "type": "enabled",
+          "budget_tokens": 4096
+        }
+      }
+    },
+    "expected_category": "CECRL",
+    "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model",
+    "pdf_info": {
+      "original_size": 163354,
+      "first_page_size": 161857,
+      "is_scanned": true
+    }
+  },
+  "extraction_result": {
+    "extraction_data": {
+      "result": {
+        "firstName": "JORGE DIEGO",
+        "lastName": "RESTREPO PEREZ",
+        "country_issuer": "Colombia",
+        "nationality": "Colombia",
+        "identificationType": "Cédula de Ciudadanía",
+        "identificationNumber": "7.534.022",
+        "message": ""
+      },
+      "document_type": "person",
+      "category": "CECRL"
+    },
+    "raw_response": {
+      "output": {
+        "message": {
+          "content": [
+            {
+              "text": "```json { \"result\": { \"firstName\": \"JORGE DIEGO\", \"lastName\": \"RESTREPO PEREZ\", \"country_issuer\": \"Colombia\", \"nationality\": \"Colombia\", \"identificationType\": \"Cédula de Ciudadanía\", \"identificationNumber\": \"7.534.022\", \"message\": \"\" }, \"document_type\": \"person\", \"category\": \"CECRL\" } ```"
+            }
+          ]
+        }
+      },
+      "stopReason": "end_turn",
+      "usage": {
+        "input_tokens": 10,
+        "cache_creation_input_tokens": 5982,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 493
+      },
+      "ResponseMetadata": {
+        "RequestId": "61b7f44e-d1ed-406d-a1b0-a41943f64fea",
+        "HTTPStatusCode": 200,
+        "HTTPHeaders": {
+          "date": "Fri, 29 Aug 2025 15:47:23 GMT",
+          "content-type": "application/json",
+          "content-length": "4316",
+          "connection": "keep-alive",
+          "x-amzn-requestid": "61b7f44e-d1ed-406d-a1b0-a41943f64fea",
+          "x-amzn-bedrock-invocation-latency": "28561",
+          "x-amzn-bedrock-cache-write-input-token-count": "5982",
+          "x-amzn-bedrock-cache-read-input-token-count": "0",
+          "x-amzn-bedrock-output-token-count": "493",
+          "x-amzn-bedrock-input-token-count": "10"
+        },
+        "RetryAttempts": 0
+      },
+      "raw_anthropic_response": {
+        "id": "msg_bdrk_01X95A4MFzsMAhj39CfDcVmf",
+        "type": "message",
+        "role": "assistant",
+        "model": "claude-sonnet-4-20250514",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "Let me analyze this document. It appears to be a Colombian identification document (\"REPÚBLICA DE COLOMBIA\" is visible on the document header). I can see: - Top document has \"CÉDULA DE CIUDADANÍA\" text visible - I can see \"RESTREPO PEREZ\" which appears to be a surname - I can see \"JORGE DIEGO\" which appears to be a first name - The number \"7.534.022\" appears to be the identification number - There's a signature visible - The bottom document seems to show additional information with a date \"05-JUN-1960\" and location \"ARMENIA (QUINDIO)\" which suggests birth information Let me extract the information systematically: 1. firstName: \"JORGE DIEGO\" - this appears after what looks like a first names section 2. lastName: \"RESTREPO PEREZ\" - this appears to be the surname section 3. country_issuer: \"Colombia\" - clearly stated as \"REPÚBLICA DE COLOMBIA\" 4. nationality: Since this is a Colombian cédula and I see birth place as Armenia, Quindío (which is in Colombia), the nationality should be \"Colombia\" 5. identificationType: This appears to be a \"Cédula de Ciudadanía\" based on the document type visible 6. identificationNumber: \"7.534.022\" - this number is clearly visible 7. message: The document appears to be an official Colombian ID document, so message should be empty The document appears to be a legitimate Colombian Cédula de Ciudadanía with all the required official elements visible.",
+            "signature": "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"
+          },
+          {
+            "type": "text",
+            "text": "```json { \"result\": { \"firstName\": \"JORGE DIEGO\", \"lastName\": \"RESTREPO PEREZ\", \"country_issuer\": \"Colombia\", \"nationality\": \"Colombia\", \"identificationType\": \"Cédula de Ciudadanía\", \"identificationNumber\": \"7.534.022\", \"message\": \"\" }, \"document_type\": \"person\", \"category\": \"CECRL\" } ```"
+          }
+        ],
+        "stop_reason": "end_turn",
+        "stop_sequence": null,
+        "usage": {
+          "input_tokens": 10,
+          "cache_creation_input_tokens": 5982,
+          "cache_read_input_tokens": 0,
+          "output_tokens": 493
+        }
+      },
+      "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+      "api_used": "invoke_model",
+      "model_params": {
+        "max_tokens": 8000,
+        "top_p": 1,
+        "temperature": 1,
+        "thinking": {
+          "type": "enabled",
+          "budget_tokens": 4096
+        }
+      }
+    },
+    "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model"
+  }
+}

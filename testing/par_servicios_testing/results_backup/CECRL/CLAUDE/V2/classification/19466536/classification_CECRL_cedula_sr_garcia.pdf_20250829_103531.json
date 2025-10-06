@@ -1,0 +1,87 @@
+{
+  "classification_data": {
+    "category": "CECRL",
+    "text": "REPUBLICA DE COLOMBIA IDENTIFICACION PERSONAL CEDULA DE CIUDADANIA NUMERO 19.466.536 GARCIA GONZALEZ APELLIDOS JOSE REINALDO NOMBRES FIRMA FECHA DE NACIMIENTO 14-FEB-1962 BOGOTA D.C. (CUNDINAMARCA) LUGAR DE NACIMIENTO 1.80 O+ M ESTATURA G.S. RH SEXO 20-JUN-1990 BOGOTA D.C. FECHA Y LUGAR DE EXPEDICION REGISTRADOR NACIONAL INDICE DERECHO A-1560150-000144623-M-001946650635202008618 00005115534A 1 1250021543",
+    "document_number": "19466536",
+    "path": "CECRL/19466536/cedula sr garcia.pdf"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "```json { \"category\": \"CECRL\", \"text\": \"REPUBLICA DE COLOMBIA\\nIDENTIFICACION PERSONAL\\nCEDULA DE CIUDADANIA\\n\\nNUMERO 19.466.536\\nGARCIA GONZALEZ\\nAPELLIDOS\\nJOSE REINALDO\\nNOMBRES\\nFIRMA\\n\\nFECHA DE NACIMIENTO 14-FEB-1962\\nBOGOTA D.C.\\n(CUNDINAMARCA)\\nLUGAR DE NACIMIENTO\\n\\n1.80 O+ M\\nESTATURA G.S. RH SEXO\\n\\n20-JUN-1990 BOGOTA D.C.\\nFECHA Y LUGAR DE EXPEDICION\\nREGISTRADOR NACIONAL\\n\\nINDICE DERECHO\\n\\nA-1560150-000144623-M-001946650635202008618 00005115534A 1 1250021543\" } ```"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 9,
+      "cache_creation_input_tokens": 4570,
+      "cache_read_input_tokens": 0,
+      "output_tokens": 1119
+    },
+    "ResponseMetadata": {
+      "RequestId": "83b175bc-54d6-4d54-9971-b8029c4d0024",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Fri, 29 Aug 2025 15:35:18 GMT",
+        "content-type": "application/json",
+        "content-length": "6817",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "83b175bc-54d6-4d54-9971-b8029c4d0024",
+        "x-amzn-bedrock-invocation-latency": "20565",
+        "x-amzn-bedrock-cache-write-input-token-count": "4570",
+        "x-amzn-bedrock-cache-read-input-token-count": "0",
+        "x-amzn-bedrock-output-token-count": "1119",
+        "x-amzn-bedrock-input-token-count": "9"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_0123HHTMbCPGuwGgprP8V5sz",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-sonnet-4-20250514",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Let me analyze this document step by step: 1. **TEXT EXTRACTION**: Looking at the document, I can see: - It's an identification document from Colombia (\"REPUBLICA DE COLOMBIA\") - It states \"IDENTIFICACION PERSONAL\" and \"CEDULA DE CIUDADANIA\" - Number: 19.466.536 - Name: GARCIA GONZALEZ (last names) JOSE REINALDO (names) - Contains a photo of a person - Has a signature - Date of birth: 14-FEB-1962 - Place of birth: BOGOTA D.C. (CUNDINAMARCA) - Place of expedition: 1.80 (unclear), apparently BOGOTA D.C. - Height: 1.80 - Blood type: O+ - Gender: M (Male) - Date and place of expedition: 20-JUN-1990 BOGOTA D.C. - Has a fingerprint - Contains a barcode at the bottom - Various official markings and seals 2. **PRIORITY CHECKS**: - Not BLANK - contains meaningful content - Not LINK_ONLY - not redirecting to external sources 3. **ISSUER IDENTIFICATION**: - This is issued by Colombian government identification authorities (República de Colombia) - Not DIAN (tax authority) - Not Chamber of Commerce - Government identification authority → Consider CECRL 4. **DOCUMENT FUNCTION ANALYSIS**: - This is clearly a personal identification document (Cédula de Ciudadanía) - Used to identify an individual person - Contains biographic data (birth date, birth place, blood type, gender, height) - Has photo, signature, and fingerprint - Individual ID number with person's name 5. **CATEGORY CLASSIFICATION**: This clearly fits CECRL: - Individual identification terminology: \"CEDULA DE CIUDADANIA\", \"IDENTIFICACION PERSONAL\" - Personal biographical data confirms individual identity - Government-issued document with comprehensive personal details - Multiple security features validate authenticity 6. **CONFIDENCE VALIDATION**: Strong evidence - all must-have indicators are clearly present, unambiguous The document serves as an official Colombian national identification card, providing comprehensive personal verification through detailed biographical information and security elements.",
+          "signature": "EskWCkgIBxABGAIqQP3DO1IZDkofEeNepl4e2hUOJE2IAl67hjR5ruea4btmF0UPUQHN2qKR5xd/WQQHrNKuJY/+eoTGlgm7Ezyg8jgSDNIjYCCXqF+pzIFirxoMRHhLhunK4HL+NK6yIjAEkNTyCwkWAva6obse4eCl45JGvZLqihJc1Be80jUrCY5sTEWsGGS4NEePrq0oe28qrhVo/Kogh3LUH4bmgy1wFmpr03gbhr5v7+BvN34qCb01SwUjTgGIg/004i0BHbmVswfRDNYWf7KOH+nD/iQkdPAFJHv1k5Lwr2KHgIksv87nQVQJx+wio/kuSZVGAh3dRJHgy2Mf5PFAQelLpqjmohuUVE+7lItGEl14M1eEGuF1R19olPrs8c8fZFpkpdM/rNqzwI+lo58qkzyyNztVKvcExU1Rah/32Il3tH1Q1uaFNLcXGi7G2X1D6FgHvy/3pvYxPEo0YndeKBCSibpICVsIePIaM1bl27mPsAFQ/x8PeMZs4KiHvmp9JdGdJjk3EU5cXth9NyYt9VGQIxrsf6laIwRTB/QdKvx/EW8rdSi3U7Po6JghB6DwfIS424RtypwUDQR47D7TEUfAdpQaNPJgksYlQSaCpRs08wzN016gyVHV6Pey/41hjuG84MgtzT7CUyXvLZMrrVNVHzE1lEQ57/BSftnn/N0OXQ2tXDNoxso2jYcAXAlHkKJC6AW3VLBQFwy2gFJABoCiroR21dIfLJYLyHLRzLW/QP5LZhK84BRcPjmYkCOGfCvmtB/bcvqd5UF5Unx3perQGgpWJwkZMtZOQHtme2qKg2LGkJWFFHxtsusNwXPQJfPX9QcvdaKgfm2fTknHgWpswn9yHDLoo+9nkYTHFboEeBHxPGWyFgKzMG2t+BrwuuRpPAFypbfIJl2MHhr34CAGP/NN5PF2dsc58vAnpksq6tbBC543HZc6dLuyz6gQH95+cioj8u2Vn9qoFiHTjCW7gJiSe0siAMbBOOfx+Pc57auWKfrsVzssMvjCdRf5BSg4rq8Tl+f/t+0iPKRSJtYcZVNPJn/A9dMhPIBQil4UlnfRL5gCSS5RSF+oKv0D1uwMyqIMh2faKO0fwr8KwWRGcVGJoPw4zhGJKpLIH3Ub1Xi1O7jROMbKtZY26TybMJW4BUGWizA6RqDit0/RCt4534cmHwtoyx8dv8wti4cFq+0wC9ngqJmlHQS9Xtbfq/sFUF7bx6/UkWQSwfSa96jioOUBdBHMzScYrEIH86ddmjPcNuU49nXcg+Jhx3z+qVAbU0f61WqH3qThUL4FwO4LVQoeV2BzZs1WFTRh9e3onpwFwgv5/LdS2YOrA2QO7e0wbv3IOYqh8WBxRLXZ2EiBX5Aw8g6dK4B4ZqkKSf3eVMmAQE27l1BCIVzB5MndFMNSkWv/93fjnQYTp/x6m3cPhM7Pztw9yUCiDmzx4N1/Ti7Y1IytdJQrgiUcBmo5HZ/PR4KNQfqdiQBNb78y4PzP3oi9EOrFgUBg0pnoNbiHVILHhuCeRVX3Z08GzmdWJUSiiAEp2+6UYE/WseTwW2J96CpiHRE8gUNpDp6Hz+Imb+iDn+I++yctsRr3bLkAlD3eOtqJbMWgvTR48wgL1/YQYtcpw/IydJR74xkOI117zSRK4dVoXtu9c95NRXI8/CuOiCtLBA3SdoYVDWKlyCUhIZmDiJc+Y9IAn7nSZfkb2dq1jriFzSgAT3YcxcsOlGVtQkx8+p76eEj0m4elbFIvehg3bL90d5Tg67XCJDHeIqXSU3YCF+TnlquA/go+nYlfIKDQSZJ42QdbaxpJ6eddHY/LWzJKZcmMw6aNgE4PJ9Yj0UwO0MrA0CQPiBj2v+FOq4eYZwQ3tFytmMTZAkGBmXvW7TDfU+2gn8uWZ2RtvQPl7GBc2ocRd64su9aTqcAzjkAgpexjNs68t6bnUoCsQLM2W1GOS5pqzp1hKJYvtJ7X+XoGkhrGpB2znE9nU8EtB1ARjBWq3pRQciQSIFjT5sY1gqflEca5nqqrFjWjZfdMoDh7GmMjZS22pByPeVlL5/e+nC9poxq1X0rTNCAHsQALG36Wkb8YR/eQoXI5Fmv9ahH4/oEx0Z5M0mupO7y8C3N2MAswJjXtM19MZMqoF8THada9wsLR6FN6FcWoXrSv8kqbGIcVGVHR1a3cOkGcv5+Tekp4q013lJMvXRfJl+jOzShU7waJEyi6MuNk3z4L7ZHgSOxyWM8ZcG1OxJcNXM7K1q/jgg94H3F3xSc1/2skGL1xIAvzmLcGuvsmBr1JKfBdxzeInlPa97DUMcjWc3eblbFobRVSf3FEYSx9vJ8e8hD8KBl5ZID43GfjgJfR8dHyzs9VuVz7r+mYPJ/4etn3YhIWKgjh+zm+QkyCosll6eQu2Ji7xhTAg3xGfAs6SzgxRYhZrak0hiU9wDYaRrMFuSoNdtOPmrWpnF6Bz+3GEjMvWtzj1dhnhhEVyagb6wNjdFVKL3wvkku3AEYD+nQKlgjCyQoKFF8XB7TdavWy86tbEQbWKvgWk6R5hRWm2gYJT+rliThLFAuruaGDlaT6QpdkOGscYJAz6wkem7++K2EsWmRewE1RkzYjzuYeqXElMuufveXRlVAO2i+tWeYBX5F+8WH9vn+GEPuBQk0dhyEAlDp2Vaoe/AKAScnepozs+Hrrw4H1kRJxignpwdygR0F5KxFgvBNGDTEpwuzdy+WaVvwXa88gy/DYnjrEfQg2SymKLOOGu9c6zOWfnZIyhLIrEkdb65befCeqGJ3cs6cXiKTTHNEFsivCmA7ArukUqyBrNaYxoScA5dNQKtALcgW1Jzb+UUwGXr0/fBYb3bimFcSYMf3pxzltXYSw/Ysgb6YiJg2Tk1PCurwe36lsxoojhHuGcGGl349/9eEgWb/qhlWmYzPR/k7Oiq7DvZFaVrO27lrCMwERL06kI1rmvQA7iRUnR+KmHeoEVlOEfm5y+x91VLQqEy6f49rrqYvSgvyOYmCYb44JxcRYOfpE/Ab8S+Lp0GunjJW1/eIQb1q2opqBl4sUafW436wPDNyZVpQ0XNIxTddaDMQoyJfnxZ/9pGon4kpF/Z+mlgjOY0zioHJ+ho1u4FQa06p84fpLouhtq8Smljip1A742krAkzUA+a7Gb52VheF/IasuHXpo3+Pj3lyjWplqKeZ0pThPH6FTKcTZrQwkPETsLCLXuMSd3RIjYgtuUUQ+4AJvMYQmPd5SmPnTExgE9W8Wr9cuV2kRN4VklTBV6Q8zeu3rxtb41gSsy4WhgV2AlduIMPx6z66ILAPAyQM+pmGQ2SYiyGT6S0hSNXuNNOPjuP6wZrKQ/yrg+jP+cnvCro+Thp4KdQwEFOMRgRF6UK9anfszqmZwJ2sLtszXs75X+vKoGgS49+w9dcZKQ3em043yrb6W2NrwSCu4/64vzmT5TD35X1wOyRgSLrltP6MzIvYT6E+lKLc7yBUFY734WRpSJas3YPTHBIPmM0JAqCs4ANeHJ36ByTC7jHHveETJYA5qs6M52n8gaO4zRGk6ZgYAjFhKO1wfaRUxx6KdRTvvF47ZOEamiusSLO9PirV6IDW9nY2waxVaN4t97WIUQDlFsLlWCwq/CE/5p/80LzMFmEt/tw6xtC08gWoPQNlHtmmPiMmhNIgBZpBRwkYs7ZyKC7GUs8uBxPgMBI79I2qa6MSMITCdHzE+9/2xubfr6Qa5Syo6rWEVksZXA4ZNCz0Ry/H7oKSte7xM3aZPoDgBlLbCxAgnEyBsIxvVXp0ddSj9cTiEP4FvIhqDN4orbM7vWzk1zQPf7sWqGH7S4t1MBa+psgUFky3+BeJdsnGLRke8GAE="
+        },
+        {
+          "type": "text",
+          "text": "```json { \"category\": \"CECRL\", \"text\": \"REPUBLICA DE COLOMBIA\\nIDENTIFICACION PERSONAL\\nCEDULA DE CIUDADANIA\\n\\nNUMERO 19.466.536\\nGARCIA GONZALEZ\\nAPELLIDOS\\nJOSE REINALDO\\nNOMBRES\\nFIRMA\\n\\nFECHA DE NACIMIENTO 14-FEB-1962\\nBOGOTA D.C.\\n(CUNDINAMARCA)\\nLUGAR DE NACIMIENTO\\n\\n1.80 O+ M\\nESTATURA G.S. RH SEXO\\n\\n20-JUN-1990 BOGOTA D.C.\\nFECHA Y LUGAR DE EXPEDICION\\nREGISTRADOR NACIONAL\\n\\nINDICE DERECHO\\n\\nA-1560150-000144623-M-001946650635202008618 00005115534A 1 1250021543\" } ```"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 9,
+        "cache_creation_input_tokens": 4570,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 1119
+      }
+    },
+    "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 8000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "expected_category": "CECRL",
+  "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+  "api_used": "invoke_model",
+  "pdf_info": {
+    "original_size": 88839,
+    "first_page_size": 88628,
+    "is_scanned": true
+  }
+}

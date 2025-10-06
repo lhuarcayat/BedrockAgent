@@ -1,0 +1,87 @@
+{
+  "classification_data": {
+    "category": "ACC",
+    "text": "Bogotá D.C. El suscrito Contador Público de PUBLIART COLORS SAS identificada con Nit No. 900.523.022-1, hace constar que, de acuerdo con el libro oficial de registro de accionistas, inscrito en el registro mercantil de conformidad con las normas de auditoría generalmente aceptadas en Colombia. CERTIFICA QUE: La composición accionara es la siguiente: NOMBRE: JOHN FABIO MARTINEZ LIEVANO NUMERO DE DOCUMENTO: 1.010.168.875 CARGO: GERENTE % PARTICIPACION: 100% TIPO DE DOCUMENTO: C.C NACIONALIDAD: COLOMBIANO La presente certificación se expide el 18 día del mes de noviembre de 2019 con destino a registro de proveedores. OSCAR ALBERTO LLANOS GONZALEZ CC 72.257.114 TP 144030-T",
+    "document_number": "900523022",
+    "path": "ACC/900523022/201_CA_2020-02-29.pdf"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "```json { \"category\": \"ACC\", \"text\": \"Bogotá D.C.\\n\\nEl suscrito Contador Público de PUBLIART COLORS SAS identificada con Nit No. 900.523.022-1, hace constar que, de acuerdo con el libro oficial de registro de accionistas, inscrito en el registro mercantil de conformidad con las normas de auditoría generalmente aceptadas en Colombia.\\n\\nCERTIFICA QUE:\\n\\nLa composición accionara es la siguiente:\\n\\nNOMBRE: JOHN FABIO MARTINEZ LIEVANO\\nNUMERO DE DOCUMENTO: 1.010.168.875\\nCARGO: GERENTE\\n% PARTICIPACION: 100%\\nTIPO DE DOCUMENTO: C.C\\nNACIONALIDAD: COLOMBIANO\\n\\nLa presente certificación se expide el 18 día del mes de noviembre de 2019 con destino a registro de proveedores.\\n\\nOSCAR ALBERTO LLANOS GONZALEZ\\nCC 72.257.114\\nTP 144030-T\" } ```"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 9,
+      "cache_creation_input_tokens": 4669,
+      "cache_read_input_tokens": 0,
+      "output_tokens": 1120
+    },
+    "ResponseMetadata": {
+      "RequestId": "229959db-bf0e-4c75-b74e-808891201357",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Fri, 29 Aug 2025 19:52:44 GMT",
+        "content-type": "application/json",
+        "content-length": "7834",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "229959db-bf0e-4c75-b74e-808891201357",
+        "x-amzn-bedrock-invocation-latency": "30361",
+        "x-amzn-bedrock-cache-write-input-token-count": "4669",
+        "x-amzn-bedrock-cache-read-input-token-count": "0",
+        "x-amzn-bedrock-output-token-count": "1120",
+        "x-amzn-bedrock-input-token-count": "9"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_015V1RdNEb2F5f4ZaThEJ17N",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-sonnet-4-20250514",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Let me analyze this document step by step following the classification workflow. 1. **TEXT EXTRACTION** Looking at the document, I can extract the following text: - Bogotá D.C. - El suscrito Contador Público de PUBLIART COLORS SAS identificada con Nit No. 900.523.022-1, hace constar que, de acuerdo con el libro oficial de registro de accionistas, inscrito en el registro mercantil de conformidad con las normas de auditoría generalmente aceptadas en Colombia. - CERTIFICA QUE: - La composición accionara es la siguiente: - Table with headers: NOMBRE, NUMERO DE DOCUMENTO, CARGO, % PARTICIPACION, TIPO DE DOCUMENTO, NACIONALIDAD - Table row: JOHN FABIO MARTINEZ LIEVANO, 1.010.168.875, GERENTE, 100%, C.C, COLOMBIANO - La presente certificación se expide el 18 día del mes de noviembre de 2019 con destino a registro de proveedores. - Signature - OSCAR ALBERTO LLANOS GONZALEZ - CC 72.257.114 - TP 144030-T 2. **PRIORITY CHECKS** - Not BLANK - there's meaningful content - Not LINK_ONLY - no hyperlinks redirecting elsewhere 3. **DOCUMENT FUNCTION ANALYSIS** The PRIMARY PURPOSE of this document is to show the ownership structure of PUBLIART COLORS SAS. Let me analyze: - The document is a certification (\"CERTIFICA QUE\") - It specifically states \"La composición accionara es la siguiente\" (The shareholding composition is the following) - It shows a table with ownership data including \"% PARTICIPACION\" (participation percentage) - It shows John Fabio Martinez Lievano owns 100% of the company - The main value of this document is to document the ownership structure 4. **ISSUER IDENTIFICATION** I see this is a corporate ownership certification issued by the company's public accountant. The document provides official verification of the company's sole shareholder, highlighting key ownership details for potential business interactions. 5. **CATEGORY CLASSIFICATION** The document serves as an internal corporate certification, providing authoritative evidence of the company's ownership structure for provider registration purposes. 6. **CONFIDENCE VALIDATION** This is a precise shareholding composition document with robust validation markers. The certification definitively shows 100% ownership by John Fabio Martinez Lievano, including his complete identification details and explicit ownership relationship.",
+          "signature": "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"
+        },
+        {
+          "type": "text",
+          "text": "```json { \"category\": \"ACC\", \"text\": \"Bogotá D.C.\\n\\nEl suscrito Contador Público de PUBLIART COLORS SAS identificada con Nit No. 900.523.022-1, hace constar que, de acuerdo con el libro oficial de registro de accionistas, inscrito en el registro mercantil de conformidad con las normas de auditoría generalmente aceptadas en Colombia.\\n\\nCERTIFICA QUE:\\n\\nLa composición accionara es la siguiente:\\n\\nNOMBRE: JOHN FABIO MARTINEZ LIEVANO\\nNUMERO DE DOCUMENTO: 1.010.168.875\\nCARGO: GERENTE\\n% PARTICIPACION: 100%\\nTIPO DE DOCUMENTO: C.C\\nNACIONALIDAD: COLOMBIANO\\n\\nLa presente certificación se expide el 18 día del mes de noviembre de 2019 con destino a registro de proveedores.\\n\\nOSCAR ALBERTO LLANOS GONZALEZ\\nCC 72.257.114\\nTP 144030-T\" } ```"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 9,
+        "cache_creation_input_tokens": 4669,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 1120
+      }
+    },
+    "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 8000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "expected_category": "ACC",
+  "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+  "api_used": "invoke_model",
+  "pdf_info": {
+    "original_size": 17294,
+    "first_page_size": 17107,
+    "is_scanned": true
+  }
+}

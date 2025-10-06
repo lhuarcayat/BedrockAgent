@@ -1,0 +1,92 @@
+{
+  "extraction_data": {
+    "result": {
+      "CompanyName": "GUIAS DE IMPRESION LTDA",
+      "Country": "Colombia",
+      "TaxId": "900284345",
+      "VerificationDigit": "5",
+      "IdentificationType": "NIT",
+      "PersonType": "Persona jurídica",
+      "ConflictingSources": [],
+      "RequiresReview": "false"
+    },
+    "RelatedParties": [],
+    "Address": "CR 69 P 65 27 CA ERR ESTRADA, Bogotá D.C., Bogotá D.C.",
+    "DocumentGenerationDate": "06-02-2019 10:20:46AM",
+    "DocumentType": "company",
+    "Category": "RUT"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "{ \"result\": { \"CompanyName\": \"GUIAS DE IMPRESION LTDA\", \"Country\": \"Colombia\", \"TaxId\": \"900284345\", \"VerificationDigit\": \"5\", \"IdentificationType\": \"NIT\", \"PersonType\": \"Persona jurídica\", \"ConflictingSources\": [], \"RequiresReview\": \"false\" }, \"RelatedParties\": [], \"Address\": \"CR 69 P 65 27 CA ERR ESTRADA, Bogotá D.C., Bogotá D.C.\", \"DocumentGenerationDate\": \"06-02-2019 10:20:46AM\", \"DocumentType\": \"company\", \"Category\": \"RUT\" }"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 1584,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 2990,
+      "output_tokens": 874
+    },
+    "ResponseMetadata": {
+      "RequestId": "d9af2957-fcd0-4967-bc90-def8d0d2fcc4",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Tue, 02 Sep 2025 22:01:16 GMT",
+        "content-type": "application/json",
+        "content-length": "5606",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "d9af2957-fcd0-4967-bc90-def8d0d2fcc4",
+        "x-amzn-bedrock-invocation-latency": "13544",
+        "x-amzn-bedrock-cache-write-input-token-count": "0",
+        "x-amzn-bedrock-cache-read-input-token-count": "2990",
+        "x-amzn-bedrock-output-token-count": "874",
+        "x-amzn-bedrock-input-token-count": "1584"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_01RQ7DNtzQ7KRzLwWDAaqmaY",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-sonnet-4-20250514",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Let me extract the information from this RUT document carefully, following the specific rules provided. Looking at the document, I can see: 1. This is a Colombian RUT document (\"Formulario del Registro Único Tributario\") from DIAN. Let me identify the fields: **CompanyName**: From cell \"35. Razón social\" - I can see \"GUIAS DE IMPRESION LTDA\" **Country**: From cell \"38. País\" - I can see \"1 8 5\" which appears to be Colombia based on the DIAN issuer **TaxId**: From cell \"5. Número de Identificación Tributaria (NIT)\" - I can see \"9 0 0 2 8 4 3 4 5\" **VerificationDigit**: From cell \"6. DV\" - I can see \"5\" **IdentificationType**: Since this is a RUT from DIAN, this should be \"NIT\" **PersonType**: From cell \"24. Tipo de contribuyente\" - I can see \"Persona jurídica\" **Address**: From cells: - \"41. Dirección principal\": \"CR 69 P 65 27 CA ERR ESTRADA\" - \"40. Ciudad/Municipio\": \"Bogotá D.C.\" - \"39. Departamento\": \"Bogotá D.C.\" **DocumentGenerationDate**: At the bottom I can see \"Fecha generación documento PDF: 06-02-2019 10:20:46AM\" **RelatedParties**: I need to check if there are sections for \"Socios y/o miembros de Juntas Directivas, Consorcios, Uniones Temporales\" and \"Revisor Fiscal y contador\". I don't see clear sections for these in this page, so it might be empty. Let me double-check the values I can clearly see: I've verified the key details of the Colombian RUT document for GUIAS DE IMPRESION LTDA. The document confirms the company's tax identification, legal status, and primary location in Bogotá. The RUT classification indicates this is an official company registration document, with no review requirements and no related party entries. The document was generated in February 2019, providing current validation of the company's legal standing.",
+          "signature": "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"
+        },
+        {
+          "type": "text",
+          "text": "{ \"result\": { \"CompanyName\": \"GUIAS DE IMPRESION LTDA\", \"Country\": \"Colombia\", \"TaxId\": \"900284345\", \"VerificationDigit\": \"5\", \"IdentificationType\": \"NIT\", \"PersonType\": \"Persona jurídica\", \"ConflictingSources\": [], \"RequiresReview\": \"false\" }, \"RelatedParties\": [], \"Address\": \"CR 69 P 65 27 CA ERR ESTRADA, Bogotá D.C., Bogotá D.C.\", \"DocumentGenerationDate\": \"06-02-2019 10:20:46AM\", \"DocumentType\": \"company\", \"Category\": \"RUT\" }"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 1584,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 2990,
+        "output_tokens": 874
+      }
+    },
+    "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 9000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+  "api_used": "invoke_model"
+}

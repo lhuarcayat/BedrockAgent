@@ -1,0 +1,119 @@
+{
+  "extraction_data": {
+    "result": {
+      "companyName": "MV GESTION Y CONTROL FISCAL S.A.C.",
+      "documentCategory": "Equity Composition",
+      "taxId": "POR REVISAR",
+      "country": "Peru",
+      "identificationDetails": {
+        "source": "text_reference",
+        "indicators": [
+          "SUNARP",
+          "LIMA",
+          "ZONA REGISTRAL N° IX, SEDE LIMA"
+        ],
+        "conflictingSources": [],
+        "requiresReview": "true"
+      },
+      "relatedParties": [
+        {
+          "type": "person",
+          "firstName": "Martha Liliana",
+          "lastName": "Mejia Manrique",
+          "identificationType": "DNI",
+          "identificationNumber": "09587099",
+          "relationshipType": "Shareholder",
+          "participationPercentage": "50.0",
+          "timeFound": "1",
+          "job": "Gerente General"
+        },
+        {
+          "type": "person",
+          "firstName": "Sebas Augusto",
+          "lastName": "Vega Pando",
+          "identificationType": "DNI",
+          "identificationNumber": "07824226",
+          "relationshipType": "Shareholder",
+          "participationPercentage": "50.0",
+          "timeFound": "1",
+          "job": "Representante"
+        }
+      ]
+    },
+    "documentType": "company",
+    "category": "ACC"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "{ \"result\": { \"companyName\": \"MV GESTION Y CONTROL FISCAL S.A.C.\", \"documentCategory\": \"Equity Composition\", \"taxId\": \"POR REVISAR\", \"country\": \"Peru\", \"identificationDetails\": { \"source\": \"text_reference\", \"indicators\": [ \"SUNARP\", \"LIMA\", \"ZONA REGISTRAL N° IX, SEDE LIMA\" ], \"conflictingSources\": [], \"requiresReview\": \"true\" }, \"relatedParties\": [ { \"type\": \"person\", \"firstName\": \"Martha Liliana\", \"lastName\": \"Mejia Manrique\", \"identificationType\": \"DNI\", \"identificationNumber\": \"09587099\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"50.0\", \"timeFound\": \"1\", \"job\": \"Gerente General\" }, { \"type\": \"person\", \"firstName\": \"Sebas Augusto\", \"lastName\": \"Vega Pando\", \"identificationType\": \"DNI\", \"identificationNumber\": \"07824226\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"50.0\", \"timeFound\": \"1\", \"job\": \"Representante\" } ] }, \"documentType\": \"company\", \"category\": \"ACC\" }"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 9,
+      "cache_creation_input_tokens": 20251,
+      "cache_read_input_tokens": 0,
+      "output_tokens": 1412
+    },
+    "ResponseMetadata": {
+      "RequestId": "ff63920f-fb63-4f6b-aedb-e4c0b4db810c",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Fri, 29 Aug 2025 20:51:05 GMT",
+        "content-type": "application/json",
+        "content-length": "8426",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "ff63920f-fb63-4f6b-aedb-e4c0b4db810c",
+        "x-amzn-bedrock-invocation-latency": "54644",
+        "x-amzn-bedrock-cache-write-input-token-count": "20251",
+        "x-amzn-bedrock-cache-read-input-token-count": "0",
+        "x-amzn-bedrock-output-token-count": "1412",
+        "x-amzn-bedrock-input-token-count": "9"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_01FQteLLotuj9qXGVCv2PAwb",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-sonnet-4-20250514",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "I need to analyze this PDF document to extract the structured data following the schema provided. Let me examine the document carefully. From the document, I can see this is from SUNARP (Superintendencia Nacional de los Registros Públicos), which is Peru's national public registry. This is clearly a Peruvian document. Let me extract the key information: 1. **Company Name**: The document appears to be about \"MV GESTION Y CONTROL FISCAL S.A.C.\" - this appears to be the main company being registered. 2. **Tax ID**: Looking for RUC numbers... I can see some numbers but need to identify the main company's RUC. 3. **Country**: This is clearly Peru based on SUNARP and the format. 4. **Related Parties**: I need to look for shareholders/founding members. Looking at the document more carefully: Page 1 shows: - \"INSCRIPCION DE SOCIEDADES ANONIMAS MV GESTION Y CONTROL FISCAL S.A.C.\" - \"SOCIOS FUNDADORES Y APORTES:\" - \"1. MARTHA LILIANA MEJIA MANRIQUE, PERUANA, SOLTERA, suscribe 500 acciones\" - \"2. SEBAS AUGUSTO VEGA PANDO, PERUANA, SOLTERO, ASESOR, suscribe 500 acciones\" So the founding shareholders are: 1. MARTHA LILIANA MEJIA MANRIQUE - 500 shares 2. SEBAS AUGUSTO VEGA PANDO - 500 shares The capital is \"S/. 1,000.00 NUEVOS SOLES, DIVIDIDO EN 1,000 ACCIONES NOMINATIVAS DE S/1.00 NUEVO SOL CADA UNA\" So each person has 500 out of 1,000 shares = 50% each. Page 4 shows: Martha Liliana Mejia Manrique is appointed as the General Manager with DNI 09587099. Additionally, two representatives are named: Sebas Augusto Vega Pando (DNI 07824226) and Raul Alejandro Calderon Alvarez (DNI 10278571). The company leadership structure is now clear, with Mejia Manrique holding a key management role and both founding shareholders having significant representation in the organization. I'm searching for the company's tax identification number. The document doesn't clearly display the RUC, which could indicate it's a new registration or the number is omitted. Peru uses RUC for companies and DNI for individuals. The shareholders are Martha Liliana Mejia Manrique and Sebas Augusto Vega Pando, each holding 50% ownership with 500 shares. The company is registered as \"MV GESTION Y CONTROL FISCAL S.A.C.\" in the Lima Registry. I'll need to verify the tax ID through additional documentation or direct inquiry with the company.",
+          "signature": "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"
+        },
+        {
+          "type": "text",
+          "text": "{ \"result\": { \"companyName\": \"MV GESTION Y CONTROL FISCAL S.A.C.\", \"documentCategory\": \"Equity Composition\", \"taxId\": \"POR REVISAR\", \"country\": \"Peru\", \"identificationDetails\": { \"source\": \"text_reference\", \"indicators\": [ \"SUNARP\", \"LIMA\", \"ZONA REGISTRAL N° IX, SEDE LIMA\" ], \"conflictingSources\": [], \"requiresReview\": \"true\" }, \"relatedParties\": [ { \"type\": \"person\", \"firstName\": \"Martha Liliana\", \"lastName\": \"Mejia Manrique\", \"identificationType\": \"DNI\", \"identificationNumber\": \"09587099\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"50.0\", \"timeFound\": \"1\", \"job\": \"Gerente General\" }, { \"type\": \"person\", \"firstName\": \"Sebas Augusto\", \"lastName\": \"Vega Pando\", \"identificationType\": \"DNI\", \"identificationNumber\": \"07824226\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"50.0\", \"timeFound\": \"1\", \"job\": \"Representante\" } ] }, \"documentType\": \"company\", \"category\": \"ACC\" }"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 9,
+        "cache_creation_input_tokens": 20251,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 1412
+      }
+    },
+    "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 8000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+  "api_used": "invoke_model"
+}

@@ -1,0 +1,102 @@
+{
+  "extraction_data": {
+    "path": "ACC/20357499691/244_CA_2020-02-29.pdf",
+    "result": {
+      "companyName": "Prointe Ingenieros S.A.C.",
+      "documentType": "Equity Composition",
+      "taxId": "20357499691",
+      "country": "Perú",
+      "identificationDetails": {
+        "source": "id_analysis",
+        "indicators": [
+          "RUC: 20357499691"
+        ],
+        "conflictingSources": [],
+        "requiresReview": false
+      },
+      "relatedParties": [
+        {
+          "firstName": "Enrique Baffi Arruoya",
+          "lastName": "Arruoya",
+          "identificationType": "DNI",
+          "identificationNumber": "46070304",
+          "relationshipType": "Shareholder",
+          "participationPercentage": "96.10%",
+          "timeFound": 1,
+          "job": "Presidente del Directorio"
+        },
+        {
+          "firstName": "Enrique Baffi Arruoya",
+          "lastName": "Arruoya",
+          "identificationType": "DNI",
+          "identificationNumber": "35371272",
+          "relationshipType": "Shareholder",
+          "participationPercentage": "3.76%",
+          "timeFound": 2,
+          "job": ""
+        },
+        {
+          "firstName": "Mario Lazo Ruíz",
+          "lastName": "Ruíz",
+          "identificationType": "DNI",
+          "identificationNumber": "100000",
+          "relationshipType": "Shareholder",
+          "participationPercentage": "0.14%",
+          "timeFound": 3,
+          "job": ""
+        }
+      ]
+    },
+    "document_type": "company",
+    "document_number": "20357499691",
+    "category": "ACC",
+    "confidenceScores": {
+      "companyName": 95,
+      "taxId": 95,
+      "country": 95,
+      "relatedParties": 90
+    }
+  },
+  "raw_response": {
+    "ResponseMetadata": {
+      "RequestId": "e0ed47d8-4345-4af6-b2e5-cf1fd8bc3451",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Mon, 25 Aug 2025 19:37:12 GMT",
+        "content-type": "application/json",
+        "content-length": "1969",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "e0ed47d8-4345-4af6-b2e5-cf1fd8bc3451"
+      },
+      "RetryAttempts": 0
+    },
+    "output": {
+      "message": {
+        "role": "assistant",
+        "content": [
+          {
+            "text": "```json { \"path\": \"ACC/20357499691/244_CA_2020-02-29.pdf\", \"result\": { \"companyName\": \"Prointe Ingenieros S.A.C.\", \"documentType\": \"Equity Composition\", \"taxId\": \"20357499691\", \"country\": \"Perú\", \"identificationDetails\": { \"source\": \"id_analysis\", \"indicators\": [ \"RUC: 20357499691\" ], \"conflictingSources\": [], \"requiresReview\": false }, \"relatedParties\": [ { \"firstName\": \"Enrique Baffi Arruoya\", \"lastName\": \"Arruoya\", \"identificationType\": \"DNI\", \"identificationNumber\": \"46070304\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"96.10%\", \"timeFound\": 1, \"job\": \"Presidente del Directorio\" }, { \"firstName\": \"Enrique Baffi Arruoya\", \"lastName\": \"Arruoya\", \"identificationType\": \"DNI\", \"identificationNumber\": \"35371272\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"3.76%\", \"timeFound\": 2, \"job\": \"\" }, { \"firstName\": \"Mario Lazo Ruíz\", \"lastName\": \"Ruíz\", \"identificationType\": \"DNI\", \"identificationNumber\": \"100000\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"0.14%\", \"timeFound\": 3, \"job\": \"\" } ] }, \"document_type\": \"company\", \"document_number\": \"20357499691\", \"category\": \"ACC\", \"confidenceScores\": { \"companyName\": 95, \"taxId\": 95, \"country\": 95, \"relatedParties\": 90 } } ```"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "inputTokens": 8705,
+      "outputTokens": 497,
+      "totalTokens": 9202
+    },
+    "metrics": {
+      "latencyMs": 9232
+    },
+    "model_id": "us.amazon.nova-pro-v1:0",
+    "api_used": "converse",
+    "model_params": {
+      "maxTokens": 8000,
+      "topP": 1,
+      "temperature": 0
+    }
+  },
+  "model_used": "us.amazon.nova-pro-v1:0",
+  "api_used": "converse"
+}

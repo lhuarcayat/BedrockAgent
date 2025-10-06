@@ -1,0 +1,120 @@
+{
+  "extraction_data": {
+    "path": "ACC/800194997/212_CA_2020-02-29.pdf",
+    "result": {
+      "companyName": "DOCUPRINT S.A.S.",
+      "documentCategory": "Equity Composition",
+      "taxId": "800.194.997-1",
+      "country": "Colombia",
+      "identificationDetails": {
+        "source": "text_reference",
+        "indicators": [
+          "Medellín",
+          "NIT format",
+          "CC format"
+        ],
+        "conflictingSources": [],
+        "requiresReview": "false"
+      },
+      "relatedParties": [
+        {
+          "type": "person",
+          "firstName": "CARLOS A.",
+          "lastName": "MOLINA SUAREZ",
+          "identificationType": "C.C.",
+          "identificationNumber": "12.119.319",
+          "relationshipType": "Shareholder",
+          "participationPercentage": "50.0",
+          "timeFound": "1",
+          "job": ""
+        },
+        {
+          "type": "company",
+          "companyName": "FAST PRINT LTDA",
+          "identificationType": "NIT",
+          "identificationNumber": "800.149.757",
+          "relationshipType": "Shareholder",
+          "participationPercentage": "50.0",
+          "timeFound": "1",
+          "job": ""
+        }
+      ]
+    },
+    "documentType": "company",
+    "documentNumber": "800194997",
+    "category": "ACC"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "```json { \"result\": { \"companyName\": \"DOCUPRINT S.A.S.\", \"documentCategory\": \"Equity Composition\", \"taxId\": \"800.194.997-1\", \"country\": \"Colombia\", \"identificationDetails\": { \"source\": \"text_reference\", \"indicators\": [ \"Medellín\", \"NIT format\", \"CC format\" ], \"conflictingSources\": [], \"requiresReview\": \"false\" }, \"relatedParties\": [ { \"type\": \"person\", \"firstName\": \"CARLOS A.\", \"lastName\": \"MOLINA SUAREZ\", \"identificationType\": \"C.C.\", \"identificationNumber\": \"12.119.319\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"50.0\", \"timeFound\": \"1\", \"job\": \"\" }, { \"type\": \"company\", \"companyName\": \"FAST PRINT LTDA\", \"identificationType\": \"NIT\", \"identificationNumber\": \"800.149.757\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"50.0\", \"timeFound\": \"1\", \"job\": \"\" } ] }, \"documentType\": \"company\", \"category\": \"ACC\" } ```"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 425,
+      "cache_creation_input_tokens": 6074,
+      "cache_read_input_tokens": 0,
+      "output_tokens": 1439
+    },
+    "ResponseMetadata": {
+      "RequestId": "ec3cfd86-0548-42ab-a0e3-0de46443add7",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Thu, 28 Aug 2025 08:27:03 GMT",
+        "content-type": "application/json",
+        "content-length": "5479",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "ec3cfd86-0548-42ab-a0e3-0de46443add7",
+        "x-amzn-bedrock-invocation-latency": "31421",
+        "x-amzn-bedrock-cache-write-input-token-count": "6074",
+        "x-amzn-bedrock-cache-read-input-token-count": "0",
+        "x-amzn-bedrock-output-token-count": "1439",
+        "x-amzn-bedrock-input-token-count": "425"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_01T2exaYqSLUmh7YDVwkMadB",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-3-7-sonnet-20250219",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Let me extract the company equity composition data from the provided PDF document following the extraction rules and structure outlined in the instructions. ## Step 1: Document Analysis This document appears to be an equity composition certificate (\"composición accionaria\") for a company called DOCUPRINT S.A.S. Let me identify the key elements: - Main reporting company: DOCUPRINT S.A.S. - NIT (tax ID): 800.194.997-1 - The document is in Spanish - It's dated January 9, 2020 (\"Enero 09 de 2020\") - Location: Medellín (Colombia) - There are shareholders listed with their participation - The document is signed by a public accountant (contador público) ## Step 2: Root Level Extraction 1. **companyName**: \"DOCUPRINT S.A.S.\" - Clear from the header and content 2. **documentCategory**: \"Equity Composition\" (as required by the rules) 3. **taxId**: \"800.194.997-1\" - Clearly shown at the top of the document 4. **country**: \"Colombia\" - Inferred from multiple indicators: - City \"Medellín\" is mentioned explicitly - Document uses NIT for tax ID format (used in Colombia) - The document is in Spanish - Uses CC (Cédula de Ciudadanía) which is a Colombian ID type For identificationDetails: - **source**: \"text_reference\" (as we have explicit city mentions) - **indicators**: [\"Medellín\", \"Colombia\", \"NIT format\"] - **conflictingSources**: [] (No conflicts detected) - **requiresReview**: \"false\" (All fields are clear) ## Step 3: Related Parties Processing Looking at the shareholders table: 1. First shareholder: - Name: CARLOS A. MOLINA SUAREZ - This is clearly a person - CC o NIT: 12.119.319 - Acciones: 1170 - VR Nominal: 100.000 - VR Capital Pagado: 117.000.000 Classification: PersonRelatedParty - type: \"person\" - firstName: \"CARLOS A.\" - lastName: \"MOLINA SUAREZ\" - identificationType: \"C.C.\" (as this appears to be a Colombian personal ID) - identificationNumber: \"12.119.319\" - relationshipType: \"Shareholder\" - participationPercentage: We need to calculate this. Since there are 2340 total shares and this shareholder has 1170, the percentage is (1170/2340)*100 = 50% - timeFound: \"1\" (appears once in document) - job: \"\" (no job role mentioned) 2. Second shareholder: - Name: FAST PRINT LTDA - This is clearly a company (has LTDA suffix) - CC o NIT: 800.149.757 - Acciones: 1170 - VR Nominal: 100.000 - VR Capital Pagado: 117.000.000 Classification: CompanyRelatedParty - type: \"company\" - companyName: \"FAST PRINT LTDA\" - identificationType: \"NIT\" (Colombian business tax ID) - identificationNumber: \"800.149.757\" - relationshipType: \"Shareholder\" - participationPercentage: We need to calculate this. Since there are 2340 total shares and this shareholder has 1170, the percentage is (1170/2340)*100 = 50% - timeFound: \"1\" (appears once in document) - job: \"\" (no job role mentioned) ## Step 4: Validation & Cross-checking - **taxId type (NIT)** aligns with country (Colombia) ✓ - **identificationType** (C.C. and NIT) exists in respective hash table for Colombia ✓ - **timeFound** increments correctly ✓ - Percentage calculation: The sum of percentages is 50% + 50% = 100%, which is accurate ✓ - All required fields are present ✓ - No conflicts or missing data ✓ - Unique identification numbers ✓ Based on this validation, **requiresReview**: \"false\" Let's now build the final JSON output:",
+          "signature": "ErcBCkgIBxABGAIiQFDG6IDPDagDq9FCw3X5vI+77jDezC9aJHS8J2KwJdfg6FQcDW7QOSMsXx8zUARoZjVB05xGjinkOip4rraXcDYSDAa6j8/wsNCDIdlqERoMsJ2U5uoJnnPII40XIjDvRBHcqLMMKH8TEC62e8p7nBuanCYPmVycK0ibJq0WcM4+rpzZhoWhrHB8cbYRjIEqHSAwH8rBBR/8YGs+fQefmVrHKBni9vwfPFaD1R68GAI="
+        },
+        {
+          "type": "text",
+          "text": "```json { \"result\": { \"companyName\": \"DOCUPRINT S.A.S.\", \"documentCategory\": \"Equity Composition\", \"taxId\": \"800.194.997-1\", \"country\": \"Colombia\", \"identificationDetails\": { \"source\": \"text_reference\", \"indicators\": [ \"Medellín\", \"NIT format\", \"CC format\" ], \"conflictingSources\": [], \"requiresReview\": \"false\" }, \"relatedParties\": [ { \"type\": \"person\", \"firstName\": \"CARLOS A.\", \"lastName\": \"MOLINA SUAREZ\", \"identificationType\": \"C.C.\", \"identificationNumber\": \"12.119.319\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"50.0\", \"timeFound\": \"1\", \"job\": \"\" }, { \"type\": \"company\", \"companyName\": \"FAST PRINT LTDA\", \"identificationType\": \"NIT\", \"identificationNumber\": \"800.149.757\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"50.0\", \"timeFound\": \"1\", \"job\": \"\" } ] }, \"documentType\": \"company\", \"category\": \"ACC\" } ```"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 425,
+        "cache_creation_input_tokens": 6074,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 1439
+      }
+    },
+    "model_id": "us.anthropic.claude-3-7-sonnet-20250219-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 8000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "model_used": "us.anthropic.claude-3-7-sonnet-20250219-v1:0",
+  "api_used": "invoke_model"
+}

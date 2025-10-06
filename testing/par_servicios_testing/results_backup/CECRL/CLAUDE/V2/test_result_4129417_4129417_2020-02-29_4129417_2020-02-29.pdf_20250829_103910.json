@@ -1,0 +1,183 @@
+{
+  "document_name": "4129417_2020-02-29.pdf",
+  "category": "CECRL",
+  "classification_success": true,
+  "extraction_success": true,
+  "overall_success": true,
+  "timestamp": "2025-08-29T10:38:38.644168",
+  "classification_result": {
+    "classification_data": {
+      "category": "CECRL",
+      "text": "NUMEBQ'v' REPUBLICA DE COLOMBIA IDENTIFICACION PERSONAL CEDULA DECIUDADANÍA ™* OVALLE GUTIERREZ PABLO EMILIO REPUBLICA DE COLOMBIA IDENTIFICACION PERSONAL CEDULA DE CIUDADANIA 4129417 NUMERO OVALLE GUTIERREZ APELLIDOS PABLO EMILIO NOMBRES FECHA DE NACIMIENTO 10-OCT-1951 GARAGOA (BOYACA) LUGAR DE NACIMIENTO 1.65 O+ M ESTATURA G.S. RH SEXO 23-ABR-1973 GUATEQUE FECHA Y LUGAR DE EXPEDICION INDICE DERECHO REGISTRADOR NACIONAL IVAN DUQUE ESCOBAR A-4652000-70087669-M-000412417-20010515 007750135A 01 091993775",
+      "document_number": "UNKNOWN",
+      "path": "CECRL/4129417_4129417_2020-02-29/4129417_2020-02-29.pdf"
+    },
+    "raw_response": {
+      "output": {
+        "message": {
+          "content": [
+            {
+              "text": "```json { \"category\": \"CECRL\", \"text\": \"NUMEBQ'v' REPUBLICA DE COLOMBIA IDENTIFICACION PERSONAL CEDULA DECIUDADANÍA ™* OVALLE GUTIERREZ PABLO EMILIO REPUBLICA DE COLOMBIA IDENTIFICACION PERSONAL CEDULA DE CIUDADANIA 4129417 NUMERO OVALLE GUTIERREZ APELLIDOS PABLO EMILIO NOMBRES FECHA DE NACIMIENTO 10-OCT-1951 GARAGOA (BOYACA) LUGAR DE NACIMIENTO 1.65 O+ M ESTATURA G.S. RH SEXO 23-ABR-1973 GUATEQUE FECHA Y LUGAR DE EXPEDICION INDICE DERECHO REGISTRADOR NACIONAL IVAN DUQUE ESCOBAR A-4652000-70087669-M-000412417-20010515 007750135A 01 091993775\" } ```"
+            }
+          ]
+        }
+      },
+      "stopReason": "end_turn",
+      "usage": {
+        "input_tokens": 9,
+        "cache_creation_input_tokens": 4625,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 996
+      },
+      "ResponseMetadata": {
+        "RequestId": "a024705e-e690-4d37-8e9b-c2bf9cdcf46b",
+        "HTTPStatusCode": 200,
+        "HTTPHeaders": {
+          "date": "Fri, 29 Aug 2025 15:39:01 GMT",
+          "content-type": "application/json",
+          "content-length": "6615",
+          "connection": "keep-alive",
+          "x-amzn-requestid": "a024705e-e690-4d37-8e9b-c2bf9cdcf46b",
+          "x-amzn-bedrock-invocation-latency": "21630",
+          "x-amzn-bedrock-cache-write-input-token-count": "4625",
+          "x-amzn-bedrock-cache-read-input-token-count": "0",
+          "x-amzn-bedrock-output-token-count": "996",
+          "x-amzn-bedrock-input-token-count": "9"
+        },
+        "RetryAttempts": 0
+      },
+      "raw_anthropic_response": {
+        "id": "msg_bdrk_013r7iLEf7svNTy7Wj751kSh",
+        "type": "message",
+        "role": "assistant",
+        "model": "claude-sonnet-4-20250514",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "Let me analyze this document step by step: 1. **TEXT EXTRACTION** I can see this is a Colombian identification document (cédula de ciudadanía). Let me extract all the visible text: From the header: - NUMEBQ'v' - REPUBLICA DE COLOMBIA - IDENTIFICACION PERSONAL - CEDULA DECIUDADANÍA ™* - OVALLE GUTIERREZ - PABLO EMILIO From the ID card itself: - REPUBLICA DE COLOMBIA - IDENTIFICACION PERSONAL - CEDULA DE CIUDADANIA - 4129417 - NUMERO - OVALLE GUTIERREZ - APELLIDOS - PABLO EMILIO - NOMBRES From the back/bottom section: - FECHA DE NACIMIENTO: 10-OCT-1951 - GARAGOA - (BOYACA) - LUGAR DE NACIMIENTO - 1.65 (ESTATURA) - O+ (G.S. RH - blood type) - M (SEXO) - 23-ABR-1973 GUATEQUE - FECHA Y LUGAR DE EXPEDICION - INDICE DERECHO (fingerprint section) - REGISTRADOR NACIONAL - IVAN DUQUE ESCOBAR - Various barcode and identification numbers 2. **PRIORITY CHECKS** - Not BLANK - has substantial content - Not LINK_ONLY - no hyperlinks or redirections 3. **ISSUER IDENTIFICATION** - This is issued by \"REPUBLICA DE COLOMBIA\" government identification authorities - Not DIAN - this is a personal identification document - Not Chamber of Commerce - this is a personal ID - This is a government-issued personal identification document 4. **DOCUMENT FUNCTION ANALYSIS** - This is clearly personal identification (individual person: Pablo Emilio Ovalle Gutierrez) - Comprehensive personal details confirm individual identity with multiple verification elements - Includes physical characteristics, official markings, and unique identifiers 5. **CATEGORY CLASSIFICATION** This clearly fits CECRL: - ✓ Individual identification terminology: \"CEDULA DE CIUDADANIA\", \"IDENTIFICACION PERSONAL\" - ✓ Personal biographical data: birth date, birth place, blood type, gender, physical characteristics (height) - ✓ Individual The document contains robust authentication features typical of official government identification, with clear validation of personal information and security protocols.",
+            "signature": "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"
+          },
+          {
+            "type": "text",
+            "text": "```json { \"category\": \"CECRL\", \"text\": \"NUMEBQ'v' REPUBLICA DE COLOMBIA IDENTIFICACION PERSONAL CEDULA DECIUDADANÍA ™* OVALLE GUTIERREZ PABLO EMILIO REPUBLICA DE COLOMBIA IDENTIFICACION PERSONAL CEDULA DE CIUDADANIA 4129417 NUMERO OVALLE GUTIERREZ APELLIDOS PABLO EMILIO NOMBRES FECHA DE NACIMIENTO 10-OCT-1951 GARAGOA (BOYACA) LUGAR DE NACIMIENTO 1.65 O+ M ESTATURA G.S. RH SEXO 23-ABR-1973 GUATEQUE FECHA Y LUGAR DE EXPEDICION INDICE DERECHO REGISTRADOR NACIONAL IVAN DUQUE ESCOBAR A-4652000-70087669-M-000412417-20010515 007750135A 01 091993775\" } ```"
+          }
+        ],
+        "stop_reason": "end_turn",
+        "stop_sequence": null,
+        "usage": {
+          "input_tokens": 9,
+          "cache_creation_input_tokens": 4625,
+          "cache_read_input_tokens": 0,
+          "output_tokens": 996
+        }
+      },
+      "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+      "api_used": "invoke_model",
+      "model_params": {
+        "max_tokens": 8000,
+        "top_p": 1,
+        "temperature": 1,
+        "thinking": {
+          "type": "enabled",
+          "budget_tokens": 4096
+        }
+      }
+    },
+    "expected_category": "CECRL",
+    "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model",
+    "pdf_info": {
+      "original_size": 580288,
+      "first_page_size": 580252,
+      "is_scanned": false
+    }
+  },
+  "extraction_result": {
+    "extraction_data": {
+      "result": {
+        "firstName": "PABLO EMILIO",
+        "lastName": "OVALLE GUTIERREZ",
+        "country_issuer": "Colombia",
+        "nationality": "Colombia",
+        "identificationType": "Cédula de Ciudadanía",
+        "identificationNumber": "4129417",
+        "message": ""
+      },
+      "document_type": "person",
+      "category": "CECRL"
+    },
+    "raw_response": {
+      "output": {
+        "message": {
+          "content": [
+            {
+              "text": "```json { \"result\": { \"firstName\": \"PABLO EMILIO\", \"lastName\": \"OVALLE GUTIERREZ\", \"country_issuer\": \"Colombia\", \"nationality\": \"Colombia\", \"identificationType\": \"Cédula de Ciudadanía\", \"identificationNumber\": \"4129417\", \"message\": \"\" }, \"document_type\": \"person\", \"category\": \"CECRL\" } ```"
+            }
+          ]
+        }
+      },
+      "stopReason": "end_turn",
+      "usage": {
+        "input_tokens": 10,
+        "cache_creation_input_tokens": 6058,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 542
+      },
+      "ResponseMetadata": {
+        "RequestId": "a29152b7-f9bd-44f7-ae6b-38023cc5f9bc",
+        "HTTPStatusCode": 200,
+        "HTTPHeaders": {
+          "date": "Fri, 29 Aug 2025 15:39:10 GMT",
+          "content-type": "application/json",
+          "content-length": "4346",
+          "connection": "keep-alive",
+          "x-amzn-requestid": "a29152b7-f9bd-44f7-ae6b-38023cc5f9bc",
+          "x-amzn-bedrock-invocation-latency": "9340",
+          "x-amzn-bedrock-cache-write-input-token-count": "6058",
+          "x-amzn-bedrock-cache-read-input-token-count": "0",
+          "x-amzn-bedrock-output-token-count": "542",
+          "x-amzn-bedrock-input-token-count": "10"
+        },
+        "RetryAttempts": 0
+      },
+      "raw_anthropic_response": {
+        "id": "msg_bdrk_01A63R8y7yDyVHKqKahwRQHv",
+        "type": "message",
+        "role": "assistant",
+        "model": "claude-sonnet-4-20250514",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "Let me analyze this Colombian identification document using the extraction methodology provided. Looking at the document: 1. Header shows \"REPUBLICA DE COLOMBIA\" and \"IDENTIFICACION PERSONAL\" 2. Document type shows \"CEDULA DE CIUDADANÍA\" 3. The ID number appears to be 4129417 The person's name appears as: - \"OVALLE GUTIERREZ\" - \"PABLO EMILIO\" Based on Colombian naming conventions and the layout, it appears: - \"OVALLE GUTIERREZ\" are the surnames/apellidos - \"PABLO EMILIO\" are the given names/nombres The back of the document shows: - Birth date: 10-OCT-1951 - Birth place: GARAGOA (BOYACÁ) - Height: 1.65 - Blood type: O+ - Sex: M - Issue date: 23-ABR-1973 GUATEQUE Since this is a Colombian document issued by Colombia, and there's no explicit nationality field but the birth place is in Colombia (Garagoa, Boyacá), the nationality would be Colombia. The identification number appears to be 4129417 based on the front of the document. Let me extract according to the rules: - firstName: \"PABLO EMILIO\" (the nombres/given names) - lastName: \"OVALLE GUTIERREZ\" (the apellidos/surnames) - country_issuer: \"Colombia\" (República de Colombia header) - nationality: \"Colombia\" (birth in Colombian city + Colombian document) - identificationType: \"Cédula de Ciudadanía\" (explicitly stated) - identificationNumber: \"4129417\" (the number shown on the front) - message: \"\" (all fields extracted successfully)",
+            "signature": "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"
+          },
+          {
+            "type": "text",
+            "text": "```json { \"result\": { \"firstName\": \"PABLO EMILIO\", \"lastName\": \"OVALLE GUTIERREZ\", \"country_issuer\": \"Colombia\", \"nationality\": \"Colombia\", \"identificationType\": \"Cédula de Ciudadanía\", \"identificationNumber\": \"4129417\", \"message\": \"\" }, \"document_type\": \"person\", \"category\": \"CECRL\" } ```"
+          }
+        ],
+        "stop_reason": "end_turn",
+        "stop_sequence": null,
+        "usage": {
+          "input_tokens": 10,
+          "cache_creation_input_tokens": 6058,
+          "cache_read_input_tokens": 0,
+          "output_tokens": 542
+        }
+      },
+      "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+      "api_used": "invoke_model",
+      "model_params": {
+        "max_tokens": 8000,
+        "top_p": 1,
+        "temperature": 1,
+        "thinking": {
+          "type": "enabled",
+          "budget_tokens": 4096
+        }
+      }
+    },
+    "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model"
+  }
+}

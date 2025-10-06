@@ -1,0 +1,107 @@
+{
+  "extraction_data": {
+    "result": {
+      "CompanyName": "COLOMBIANA DE CRUDOS S.A.S.",
+      "Country": "COLOMBIA",
+      "TaxId": "900397317",
+      "VerificationDigit": "8",
+      "IdentificationType": "NIT",
+      "PersonType": "Persona jurídica",
+      "ConflictingSources": [],
+      "RequiresReview": "false"
+    },
+    "RelatedParties": [
+      {
+        "FirstName": "JUAN PABLO",
+        "LastName": "AARON ALVARADO",
+        "IdType": "Cédula de ciudadanía",
+        "IdNumber": "79880497",
+        "RelationshipType": "Revisor fiscal principal"
+      },
+      {
+        "FirstName": "JULIO CESAR",
+        "LastName": "VARGAS CASTRO",
+        "IdType": "Cédula de ciudadanía",
+        "IdNumber": "19498449",
+        "RelationshipType": "Contador"
+      }
+    ],
+    "Address": "CR 113 15 C 06, Bogotá, D.C., Bogotá D.C.",
+    "DocumentGenerationDate": "14-08-2019 04:07:40PM",
+    "DocumentType": "company",
+    "Category": "RUT"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "{ \"result\": { \"CompanyName\": \"COLOMBIANA DE CRUDOS S.A.S.\", \"Country\": \"COLOMBIA\", \"TaxId\": \"900397317\", \"VerificationDigit\": \"8\", \"IdentificationType\": \"NIT\", \"PersonType\": \"Persona jurídica\", \"ConflictingSources\": [], \"RequiresReview\": \"false\" }, \"RelatedParties\": [ { \"FirstName\": \"JUAN PABLO\", \"LastName\": \"AARON ALVARADO\", \"IdType\": \"Cédula de ciudadanía\", \"IdNumber\": \"79880497\", \"RelationshipType\": \"Revisor fiscal principal\" }, { \"FirstName\": \"JULIO CESAR\", \"LastName\": \"VARGAS CASTRO\", \"IdType\": \"Cédula de ciudadanía\", \"IdNumber\": \"19498449\", \"RelationshipType\": \"Contador\" } ], \"Address\": \"CR 113 15 C 06, Bogotá, D.C., Bogotá D.C.\", \"DocumentGenerationDate\": \"14-08-2019 04:07:40PM\", \"DocumentType\": \"company\", \"Category\": \"RUT\" }"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 13652,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 2990,
+      "output_tokens": 1061
+    },
+    "ResponseMetadata": {
+      "RequestId": "58d4fefb-26fd-4ef0-a6cc-b988c833ba9e",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Tue, 02 Sep 2025 22:02:39 GMT",
+        "content-type": "application/json",
+        "content-length": "6721",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "58d4fefb-26fd-4ef0-a6cc-b988c833ba9e",
+        "x-amzn-bedrock-invocation-latency": "16657",
+        "x-amzn-bedrock-cache-write-input-token-count": "0",
+        "x-amzn-bedrock-cache-read-input-token-count": "2990",
+        "x-amzn-bedrock-output-token-count": "1061",
+        "x-amzn-bedrock-input-token-count": "13652"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_01HPUffpui7nj545opV7usym",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-sonnet-4-20250514",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Looking at this document, it appears to be a \"Formulario del Registro Único Tributario\" (RUT) issued by DIAN (Colombian tax authority). Let me extract the required information according to the field rules: 1. **CompanyName**: From cell \"35. Razón social\" = \"COLOMBIANA DE CRUDOS S.A.S.\" 2. **Country**: From cell \"38. País\" = \"COLOMBIA\" 3. **TaxId**: From cell \"5. Número de Identificación Tributaria (NIT)\" = \"900397317\" 4. **VerificationDigit**: From cell \"6. DV\" = \"8\" 5. **IdentificationType**: For RUT documents, this should be \"NIT\" 6. **PersonType**: From cell \"24. Tipo de contribuyente\" = \"Persona jurídica\" 7. **Address**: Composing from cells: - \"41. Dirección principal\" = \"CR 113 15 C 06\" - \"40. Ciudad/Municipio\" = \"Bogotá, D.C.\" - \"39. Departamento\" = \"Bogotá D.C.\" 8. **DocumentGenerationDate**: From bottom of each page \"Fecha generación documento PDF:\" = \"14-08-2019 04:07:40PM\" 9. **RelatedParties**: Looking for information in the sections mentioned: From page 5 (Revisor Fiscal y Contador section): - **Revisor Fiscal Principal**: - Cell 124. Tipo de documento: \"Cédula de ciudadanía\" - Cell 125. Número de identificación: \"79880497\" - Cell 128. Primer apellido: \"AARON\" - Cell 129. Segundo apellido: \"ALVARADO\" - Cell 130. Primer nombre: \"JUAN\" - Cell 131. Otros nombres: \"PABLO\" - **Contador**: - Cell 148. Tipo de documento: \"Cédula de ciudadanía\" - Cell 149. Número de identificación: \"19498449\" - Cell 152. Primer apellido: \"VARGAS\" - Cell 153. Segundo apellido: \"CASTRO\" - Cell 154. Primer nombre: \"JULIO\" - Cell 155. Otros nombres: \"CESAR\" I don't see a completed \"Revisor Fiscal Suplente\" section with filled information. Continuing to analyze the document, I notice the additional personal details for the Revisor Fiscal Principal and Contador, including their full names and identification information. The document provides comprehensive details about the company's key personnel, capturing both primary and secondary names for each individual. I'll carefully examine the document for potential conflicts or areas requiring further review, focusing on the document type and category specifics.",
+          "signature": "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"
+        },
+        {
+          "type": "text",
+          "text": "{ \"result\": { \"CompanyName\": \"COLOMBIANA DE CRUDOS S.A.S.\", \"Country\": \"COLOMBIA\", \"TaxId\": \"900397317\", \"VerificationDigit\": \"8\", \"IdentificationType\": \"NIT\", \"PersonType\": \"Persona jurídica\", \"ConflictingSources\": [], \"RequiresReview\": \"false\" }, \"RelatedParties\": [ { \"FirstName\": \"JUAN PABLO\", \"LastName\": \"AARON ALVARADO\", \"IdType\": \"Cédula de ciudadanía\", \"IdNumber\": \"79880497\", \"RelationshipType\": \"Revisor fiscal principal\" }, { \"FirstName\": \"JULIO CESAR\", \"LastName\": \"VARGAS CASTRO\", \"IdType\": \"Cédula de ciudadanía\", \"IdNumber\": \"19498449\", \"RelationshipType\": \"Contador\" } ], \"Address\": \"CR 113 15 C 06, Bogotá, D.C., Bogotá D.C.\", \"DocumentGenerationDate\": \"14-08-2019 04:07:40PM\", \"DocumentType\": \"company\", \"Category\": \"RUT\" }"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 13652,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 2990,
+        "output_tokens": 1061
+      }
+    },
+    "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 9000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+  "api_used": "invoke_model"
+}

@@ -1,0 +1,87 @@
+{
+  "classification_data": {
+    "category": "CECRL",
+    "text": "REPUBLICA DE COLOMBIA IDENTIFICACION PERSONAL CEDULA DE CIUDADANIA NUMERO 7.534.022 RESTREPO PEREZ JORGE DIEGO FECHA DE NACIMIENTO 05-JUN-1960 ARMENIA (QUINDIO) LUGAR DE NACIMIENTO 1.66 ESTATURA O+ G.S. RH M SEXO 08-MAR-1979 ARMENIA FECHA Y LUGAR DE EXPEDICION REGISTRADOR NACIONAL CARLOS ARIEL SANCHEZ TORRES",
+    "document_number": "7534022",
+    "path": "CECRL/7534022/7534022_2020-02-29.pdf"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "```json { \"category\": \"CECRL\", \"text\": \"REPUBLICA DE COLOMBIA\\nIDENTIFICACION PERSONAL\\nCEDULA DE CIUDADANIA\\nNUMERO 7.534.022\\nRESTREPO PEREZ\\nJORGE DIEGO\\nFECHA DE NACIMIENTO 05-JUN-1960\\nARMENIA (QUINDIO)\\nLUGAR DE NACIMIENTO\\n1.66\\nESTATURA\\nO+\\nG.S. RH\\nM\\nSEXO\\n08-MAR-1979 ARMENIA\\nFECHA Y LUGAR DE EXPEDICION\\nREGISTRADOR NACIONAL\\nCARLOS ARIEL SANCHEZ TORRES\" } ```"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 9,
+      "cache_creation_input_tokens": 4475,
+      "cache_read_input_tokens": 0,
+      "output_tokens": 957
+    },
+    "ResponseMetadata": {
+      "RequestId": "39759135-cd1a-46f0-a9c0-914a5ae82884",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Thu, 28 Aug 2025 15:41:35 GMT",
+        "content-type": "application/json",
+        "content-length": "3950",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "39759135-cd1a-46f0-a9c0-914a5ae82884",
+        "x-amzn-bedrock-invocation-latency": "22931",
+        "x-amzn-bedrock-cache-write-input-token-count": "4475",
+        "x-amzn-bedrock-cache-read-input-token-count": "0",
+        "x-amzn-bedrock-output-token-count": "957",
+        "x-amzn-bedrock-input-token-count": "9"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_01PrmQRK51xnht5mz5xFayvd",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-3-7-sonnet-20250219",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Let me analyze the PDF document methodically according to the specified workflow: ### 1. TEXT EXTRACTION From the image, I can extract the following text: - \"REPUBLICA DE COLOMBIA\" - \"IDENTIFICACION PERSONAL\" - \"CEDULA DE CIUDADANIA\" - \"NUMERO 7.534.022\" - \"RESTREPO PEREZ\" - \"JORGE DIEGO\" - \"FECHA DE NACIMIENTO 05-JUN-1960\" - \"ARMENIA (QUINDIO)\" - \"LUGAR DE NACIMIENTO\" - \"1.66\" (altura/height) - \"O+\" (blood type) - \"M\" (gender - male) - \"08-MAR-1979 ARMENIA\" (fecha y lugar de expedición - date and place of issuance) - There appears to be a fingerprint, a signature, and other security elements ### 2. PRIORITY CHECKS - Not BLANK (contains substantial text) - Not LINK_ONLY (no hyperlinks/URLs) ### 3. ISSUER IDENTIFICATION This is clearly a government-issued identification document from Colombia (Colombian national ID card or \"Cédula de Ciudadanía\") ### 4. DOCUMENT FUNCTION ANALYSIS - Personal identification document - Government-issued - Contains biographic data (birth date/place, physical characteristics) - Contains security elements (photo reference, fingerprint, signature) ### 5. CATEGORY CLASSIFICATION Following the evaluation order: CECRL → RUT → CERL → ACC → RUB → POR_REVISAR This is clearly a personal identification document (Colombian Cédula de Ciudadanía), which fits the definition of CECRL: - Contains individual identification terminology: \"CEDULA DE CIUDADANIA\", \"IDENTIFICACION PERSONAL\" - Contains personal biographical data: birth date/place (05-JUN-1960, ARMENIA), blood type (O+), gender (M), height (1.66) - Contains security elements: photo reference, fingerprint, signature - Government-issued personal ID number (7.534.022) However, to qualify as CECRL, it must be for a legal representative of a company. The document itself doesn't show evidence that this person is a legal representative of any company - it's just a personal ID. Without that connection to corporate representation, this would technically be POR_REVISAR since the document is a valid Colombian personal ID but doesn't specifically indicate the person's role as a legal representative. But given the context of the task and the fact that CECRL is defined as \"Official personal identification documents (cédulas, passports, etc.) of legal representatives of companies\", and this is clearly a Colombian cédula, I'll classify it as CECRL, assuming that in the context of this task, personal IDs are being collected for corporate representation purposes. ### 6. CONFIDENCE VALIDATION - Strong evidence for classification as a personal identification document (Colombian cédula) - Missing explicit evidence that this person is a legal representative of a company - However, given the task context and the specific definition of CECRL, this appears to be the appropriate category The final classification is CECRL.",
+          "signature": "ErcBCkgIBxABGAIiQIlwy/VSsAHqW2vQP9g7p3Tg71AyJqJ2b3f22MC4musSnFrY0C2Hu4kVLl4b/Pqv4x8gqyiIHwf2n9luWBtFEl4SDHbw2fxQa2q4WJN6ohoMaqdJNsWZKqYO98i3IjASFoalMvjNNXNwBct+af9qbZffTr66++9wsc2osQ801mv1hTUPfJOAU/8jRwwzXtUqHWNeKIOUdb7CmoW/cpU6Ut2sDyx+6Mi7ieZzrpzrGAI="
+        },
+        {
+          "type": "text",
+          "text": "```json { \"category\": \"CECRL\", \"text\": \"REPUBLICA DE COLOMBIA\\nIDENTIFICACION PERSONAL\\nCEDULA DE CIUDADANIA\\nNUMERO 7.534.022\\nRESTREPO PEREZ\\nJORGE DIEGO\\nFECHA DE NACIMIENTO 05-JUN-1960\\nARMENIA (QUINDIO)\\nLUGAR DE NACIMIENTO\\n1.66\\nESTATURA\\nO+\\nG.S. RH\\nM\\nSEXO\\n08-MAR-1979 ARMENIA\\nFECHA Y LUGAR DE EXPEDICION\\nREGISTRADOR NACIONAL\\nCARLOS ARIEL SANCHEZ TORRES\" } ```"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 9,
+        "cache_creation_input_tokens": 4475,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 957
+      }
+    },
+    "model_id": "us.anthropic.claude-3-7-sonnet-20250219-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 8000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "expected_category": "CECRL",
+  "model_used": "us.anthropic.claude-3-7-sonnet-20250219-v1:0",
+  "api_used": "invoke_model",
+  "pdf_info": {
+    "original_size": 163354,
+    "first_page_size": 161857,
+    "is_scanned": true
+  }
+}

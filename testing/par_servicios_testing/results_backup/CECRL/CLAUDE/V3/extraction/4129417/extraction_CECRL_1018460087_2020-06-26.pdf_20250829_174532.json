@@ -1,0 +1,88 @@
+{
+  "extraction_data": {
+    "result": {
+      "firstName": "DIEGO FERNANDO",
+      "lastName": "OVALLE BAYER",
+      "country_issuer": "Colombia",
+      "nationality": "Colombia",
+      "identificationType": "Cédula de Ciudadanía",
+      "identificationNumber": "1.018.460.087",
+      "message": "Etiquetas de campos parecen estar desalineadas - se aplicó análisis contextual para determinar nombres y apellidos correctamente"
+    },
+    "document_type": "person",
+    "category": "CECRL"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "```json { \"result\": { \"firstName\": \"DIEGO FERNANDO\", \"lastName\": \"OVALLE BAYER\", \"country_issuer\": \"Colombia\", \"nationality\": \"Colombia\", \"identificationType\": \"Cédula de Ciudadanía\", \"identificationNumber\": \"1.018.460.087\", \"message\": \"Etiquetas de campos parecen estar desalineadas - se aplicó análisis contextual para determinar nombres y apellidos correctamente\" }, \"document_type\": \"person\", \"category\": \"CECRL\" } ```"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 10,
+      "cache_creation_input_tokens": 6419,
+      "cache_read_input_tokens": 0,
+      "output_tokens": 851
+    },
+    "ResponseMetadata": {
+      "RequestId": "2243259b-2e2c-4224-ad05-0c88258d0c40",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Fri, 29 Aug 2025 22:45:33 GMT",
+        "content-type": "application/json",
+        "content-length": "6601",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "2243259b-2e2c-4224-ad05-0c88258d0c40",
+        "x-amzn-bedrock-invocation-latency": "15360",
+        "x-amzn-bedrock-cache-write-input-token-count": "6419",
+        "x-amzn-bedrock-cache-read-input-token-count": "0",
+        "x-amzn-bedrock-output-token-count": "851",
+        "x-amzn-bedrock-input-token-count": "10"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_01MQEPnezkDXQuC2Erge42He",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-sonnet-4-20250514",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Let me analyze this Colombian identification document carefully. Looking at the document: 1. At the top I can see \"REPÚBLICA DE COLOMBIA\" which indicates this is a Colombian document 2. The document type appears to be \"IDENTIFICACION PERSONAL\" and \"CEDULA DE CIUDADANIA\" - this is a Colombian Cédula de Ciudadanía 3. The ID number shows \"1.018.460.087\" 4. I can see \"OVALLE BAYER\" prominently displayed 5. Under \"APELLIDOS\" I see \"DIEGO FERNANDO\" 6. Under \"NOMBRES\" there appears to be a handwritten signature that looks like \"Diego F. Ovalle B\" Let me analyze this more carefully: - The field \"OVALLE BAYER\" appears to be prominently displayed, likely the surname - \"DIEGO FERNANDO\" appears under \"APELLIDOS\" which means surnames - There's a \"NOMBRES\" field but it shows what appears to be a signature Wait, let me re-examine this. The structure is: - \"NUMERO: 1.018.460.087\" - this is the ID number - \"OVALLE BAYER\" - this appears to be positioned as a surname - \"APELLIDOS: DIEGO FERNANDO\" - but this says surnames: Diego Fernando - \"NOMBRES:\" followed by what looks like a signature This is confusing because typically \"APELLIDOS\" means surnames and \"NOMBRES\" means given names, but \"DIEGO FERNANDO\" under \"APELLIDOS\" looks like given names. Looking more carefully at the layout, I think there might be a misalignment in the document or the way it's structured. Let me consider contextual analysis: The prominent text \"OVALLE BAYER\" is positioned where a surname typically would be on a Colombian cédula. \"DIEGO FERNANDO\" under \"APELLIDOS\" - this is strange because Diego Fernando are typically given names, not surnames. From the back of the document, I can see: The individual was born on 16 June 1993 in Mani, Casanare. He is a male, standing 1.73 meters tall. The document was issued on 20 June 2011 in Bogota D.C. I'll confirm the name structure: \"OVALLE BAYER\" is most likely the surname, with \"DIEGO FERNANDO\" representing the given names. This aligns with typical Colombian naming conventions. The identification details reveal a Colombian citizen with a national ID number, highlighting a potential labeling discrepancy in the document's layout.",
+          "signature": "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"
+        },
+        {
+          "type": "text",
+          "text": "```json { \"result\": { \"firstName\": \"DIEGO FERNANDO\", \"lastName\": \"OVALLE BAYER\", \"country_issuer\": \"Colombia\", \"nationality\": \"Colombia\", \"identificationType\": \"Cédula de Ciudadanía\", \"identificationNumber\": \"1.018.460.087\", \"message\": \"Etiquetas de campos parecen estar desalineadas - se aplicó análisis contextual para determinar nombres y apellidos correctamente\" }, \"document_type\": \"person\", \"category\": \"CECRL\" } ```"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 10,
+        "cache_creation_input_tokens": 6419,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 851
+      }
+    },
+    "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 8000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+  "api_used": "invoke_model"
+}

@@ -1,0 +1,33 @@
+{
+  "ResponseMetadata": {
+    "RequestId": "a36ddf47-f5d6-4723-9c4e-3d0d2de63c18",
+    "HTTPStatusCode": 200,
+    "HTTPHeaders": {
+      "date": "Tue, 17 Jun 2025 14:30:34 GMT",
+      "content-type": "application/json",
+      "content-length": "2131",
+      "connection": "keep-alive",
+      "x-amzn-requestid": "a36ddf47-f5d6-4723-9c4e-3d0d2de63c18"
+    },
+    "RetryAttempts": 0
+  },
+  "output": {
+    "message": {
+      "role": "assistant",
+      "content": [
+        {
+          "text": "```json\n{\n  \"path\": \"s3://par-servicios-poc-dev-filling-desk/par-servicios-poc/RUT/800001845/935_2020-02-29.pdf\",\n  \"result\": {\n    \"companyName\": \"SERPET J.R Y CIA S.A.S.\",\n    \"country\": \"COLOMBIA\",\n    \"documentType\": \"NIT\",\n    \"taxId\": \"800001845\",\n    \"verificationDigit\": \"3\",\n    \"personType\": \"Persona Jurídica\",\n    \"relatedParties\": [\n      {\n        \"firstName\": \"JOSE\",\n        \"lastName\": \"REINADO\",\n        \"identificationType\": \"Cédula de Ciudadanía\",\n        \"identificationNumber\": \"20030822\",\n        \"relationshipType\": \"Representante legal\"\n      },\n      {\n        \"firstName\": \"JULIAN\",\n        \"lastName\": \"RENATO\",\n        \"identificationType\": \"Cédula de Ciudadanía\",\n        \"identificationNumber\": \"20091030\",\n        \"relationshipType\": \"Representante legal\"\n      },\n      {\n        \"firstName\": \"ARANGUREN\",\n        \"lastName\": \"ILLESCAS\",\n        \"identificationType\": \"Cédula de Ciudadanía\",\n        \"identificationNumber\": \"672037\",\n        \"relationshipType\": \"Revisor Fiscal\"\n      },\n      {\n        \"firstName\": \"MONGUI\",\n        \"lastName\": \"ROJAS\",\n        \"identificationType\": \"Cédula de Ciudadanía\",\n        \"identificationNumber\": \"1412857\",\n        \"relationshipType\": \"Contador\"\n      }\n    ],\n    \"address\": \"CR 30 46 140 CR 5 34 34 VDA LA NIATA CR 5 29 28 VIA YOPAL MORICHA LAS AMERICAS 1 2 19 VDA YOPITO VDÁ PIÑALITO TAURAMEN\",\n    \"documentGenerationDate\": \"2024-01-10\"\n  },\n  \"confidenceScores\": {\n    \"companyName\": 95,\n    \"documentType\": 90,\n    \"country\": 100,\n    \"taxId\": 100,\n    \"verificationDigit\": 95,\n    \"personType\": 90,\n    \"address\": 85,\n    \"relatedParties\": 85\n  },\n  \"document_type\": \"company\",\n  \"document_number\": \"800001845\",\n  \"category\": \"RUT\"\n}\n```"
+        }
+      ]
+    }
+  },
+  "stopReason": "end_turn",
+  "usage": {
+    "inputTokens": 15139,
+    "outputTokens": 593,
+    "totalTokens": 15732
+  },
+  "metrics": {
+    "latencyMs": 14158
+  }
+}

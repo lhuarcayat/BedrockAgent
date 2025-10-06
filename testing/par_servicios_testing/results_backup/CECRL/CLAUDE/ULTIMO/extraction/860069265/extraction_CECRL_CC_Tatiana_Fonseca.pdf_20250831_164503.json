@@ -1,0 +1,88 @@
+{
+  "extraction_data": {
+    "result": {
+      "FirstName": "CLAUDIA TATIANA",
+      "LastName": "FONSECA URIBE",
+      "CountryIssuer": "Colombia",
+      "Nationality": "colombiano",
+      "IdentificationType": "Cédula de Ciudadanía",
+      "IdentificationNumber": "52.255.747",
+      "Message": ""
+    },
+    "document_type": "person",
+    "category": "CECRL"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "```json { \"result\": { \"FirstName\": \"CLAUDIA TATIANA\", \"LastName\": \"FONSECA URIBE\", \"CountryIssuer\": \"Colombia\", \"Nationality\": \"colombiano\", \"IdentificationType\": \"Cédula de Ciudadanía\", \"IdentificationNumber\": \"52.255.747\", \"Message\": \"\" }, \"document_type\": \"person\", \"category\": \"CECRL\" } ```"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 1583,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 4300,
+      "output_tokens": 547
+    },
+    "ResponseMetadata": {
+      "RequestId": "71ab7c55-efa6-40a0-bae5-80b77762a49e",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Sun, 31 Aug 2025 21:45:02 GMT",
+        "content-type": "application/json",
+        "content-length": "4179",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "71ab7c55-efa6-40a0-bae5-80b77762a49e",
+        "x-amzn-bedrock-invocation-latency": "8721",
+        "x-amzn-bedrock-cache-write-input-token-count": "0",
+        "x-amzn-bedrock-cache-read-input-token-count": "4300",
+        "x-amzn-bedrock-output-token-count": "547",
+        "x-amzn-bedrock-input-token-count": "1583"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_012KQjuCAAmNPcQWyXiHJXLh",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-sonnet-4-20250514",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "I need to analyze this Colombian identification document. Let me look at the image structure and content carefully. From the document, I can see: 1. Header: \"REPUBLICA DE COLOMBIA\" and \"IDENTIFICACION PERSONAL\" and \"CEDULA DE CIUDADANIA\" 2. Number: \"52.255.747\" (labeled as \"NUMERO\") 3. Surnames: \"FONSECA URIBE\" (labeled as \"APELLIDOS\") 4. Names: \"CLAUDIA TATIANA\" (labeled as \"NOMBRES\") 5. Birth date: \"15-SEP-1974\" (labeled as \"FECHA DE NACIMIENTO\") 6. Birth place: \"BOGOTA D.C. (CUNDINAMARCA)\" (labeled as \"LUGAR DE NACIMIENTO\") Now let me extract the required fields: - FirstName: \"CLAUDIA TATIANA\" (from NOMBRES field) - LastName: \"FONSECA URIBE\" (from APELLIDOS field) - CountryIssuer: This is a Colombian document (\"REPUBLICA DE COLOMBIA\"), so \"Colombia\" in Spanish - Nationality: Since this is a Colombian citizenship card (Cédula de Ciudadanía) and the person was born in Bogotá D.C. (Colombia), the nationality would be \"colombiano\" in Spanish - IdentificationType: This is a \"CEDULA DE CIUDADANIA\" which translates to \"Cédula de Ciudadanía\" in Spanish - IdentificationNumber: \"52.255.747\" (preserve the format with dots) - Message: All fields were extracted successfully, so empty string The document appears to be properly aligned with clear labels matching their corresponding data, so no contextual analysis is needed.",
+          "signature": "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"
+        },
+        {
+          "type": "text",
+          "text": "```json { \"result\": { \"FirstName\": \"CLAUDIA TATIANA\", \"LastName\": \"FONSECA URIBE\", \"CountryIssuer\": \"Colombia\", \"Nationality\": \"colombiano\", \"IdentificationType\": \"Cédula de Ciudadanía\", \"IdentificationNumber\": \"52.255.747\", \"Message\": \"\" }, \"document_type\": \"person\", \"category\": \"CECRL\" } ```"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 1583,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 4300,
+        "output_tokens": 547
+      }
+    },
+    "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 8000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+  "api_used": "invoke_model"
+}

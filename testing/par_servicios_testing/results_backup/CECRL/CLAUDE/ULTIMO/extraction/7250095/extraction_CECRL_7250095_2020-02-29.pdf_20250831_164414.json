@@ -1,0 +1,88 @@
+{
+  "extraction_data": {
+    "result": {
+      "FirstName": "JOHN",
+      "LastName": "GARCIA VALENCIA",
+      "CountryIssuer": "Colombia",
+      "Nationality": "colombiano",
+      "IdentificationType": "Cédula de Ciudadanía",
+      "IdentificationNumber": "7.250.095",
+      "Message": ""
+    },
+    "document_type": "person",
+    "category": "CECRL"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "```json { \"result\": { \"FirstName\": \"JOHN\", \"LastName\": \"GARCIA VALENCIA\", \"CountryIssuer\": \"Colombia\", \"Nationality\": \"colombiano\", \"IdentificationType\": \"Cédula de Ciudadanía\", \"IdentificationNumber\": \"7.250.095\", \"Message\": \"\" }, \"document_type\": \"person\", \"category\": \"CECRL\" } ```"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 1966,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 4300,
+      "output_tokens": 614
+    },
+    "ResponseMetadata": {
+      "RequestId": "71800e83-fcc0-4655-9803-0ca98b24937d",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Sun, 31 Aug 2025 21:44:14 GMT",
+        "content-type": "application/json",
+        "content-length": "5324",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "71800e83-fcc0-4655-9803-0ca98b24937d",
+        "x-amzn-bedrock-invocation-latency": "12167",
+        "x-amzn-bedrock-cache-write-input-token-count": "0",
+        "x-amzn-bedrock-cache-read-input-token-count": "4300",
+        "x-amzn-bedrock-output-token-count": "614",
+        "x-amzn-bedrock-input-token-count": "1966"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_01TYrPQLJv2cz6AS54kjkRoQ",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-sonnet-4-20250514",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Looking at this Colombian citizenship card (Cédula de Ciudadanía), I need to extract the information following the guidelines, especially considering the potential for misaligned Colombian documents. Let me identify the structure: 1. Document header: \"REPUBLICA DE COLOMBIA\", \"IDENTIFICACION PERSONAL\", \"CEDULA DE CIUDADANIA\" 2. Number: \"7.250.095\" 3. Looking at the layout: \"GARCIA VALENCIA\" appears after \"NUMERO\" and before \"APELLIDOS\" 4. \"JOHN\" appears after \"APELLIDOS\" and before \"NOMBRES\" This appears to be a classic case of a misaligned Colombian document as described in the extraction methodology. In the text I can see: \"NUMERO 7.250.095 GARCIA VALENCIA APELLIDOS JOHN NOMBRES\" Following the extraction methodology for contextual analysis: - The \"GARCIA VALENCIA\" appears to be the surnames (apellidos) but is positioned before the \"APELLIDOS\" label - The \"JOHN\" appears to be the first names but is positioned before the \"NOMBRES\" label - This is exactly the pattern described: \"This misalignment occurs in Colombian documents, where the surnames appear first and then the label 'APELLIDOS' along with the first name(s) and finally the label 'NAMES' appears\" So the correct extraction should be: - FirstName: \"JOHN\" (keeping exactly as written) - LastName: \"GARCIA VALENCIA\" (keeping exactly as written) - IdentificationNumber: \"7.250.095\" - CountryIssuer: \"Colombia\" (from \"REPUBLICA DE COLOMBIA\") - Nationality: \"colombiano\" (inferred from being a Colombian citizenship card) - IdentificationType: \"Cédula de Ciudadanía\" (from document header) - Message: empty since all fields were extracted successfully Additional information I can see: - Birth date: 19-AGO-1965 - Birth place: PUERTO BOYACA (BOYACA) I note the birthplace details, though they aren't critical for the primary extraction schema. The location provides additional context about the individual's origin within Colombia.",
+          "signature": "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"
+        },
+        {
+          "type": "text",
+          "text": "```json { \"result\": { \"FirstName\": \"JOHN\", \"LastName\": \"GARCIA VALENCIA\", \"CountryIssuer\": \"Colombia\", \"Nationality\": \"colombiano\", \"IdentificationType\": \"Cédula de Ciudadanía\", \"IdentificationNumber\": \"7.250.095\", \"Message\": \"\" }, \"document_type\": \"person\", \"category\": \"CECRL\" } ```"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 1966,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 4300,
+        "output_tokens": 614
+      }
+    },
+    "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 8000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+  "api_used": "invoke_model"
+}

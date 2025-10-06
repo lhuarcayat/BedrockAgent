@@ -1,0 +1,78 @@
+{
+  "extraction_data": {
+    "path": "ACC/890900608/CERTIFICADO_COMPOCISION_ACCIONARIA_FEBRERO_2024.pdf",
+    "result": {
+      "companyName": "GRUPO ÉXITO S.A.",
+      "documentCategory": "Equity Composition",
+      "taxId": "900.114.184-5",
+      "country": "Colombia",
+      "identificationDetails": {
+        "source": "text_reference",
+        "indicators": [
+          "Colombia",
+          "Bogotá"
+        ],
+        "conflictingSources": [],
+        "requiresReview": "false"
+      },
+      "relatedParties": [
+        {
+          "type": "person",
+          "firstName": "Giovanni",
+          "lastName": "Humberto Velasquez Ruiz",
+          "identificationType": "CC",
+          "identificationNumber": "37.608.077",
+          "relationshipType": "Shareholder",
+          "participationPercentage": "POR REVISAR",
+          "timeFound": "1",
+          "job": "Apoderado Especial"
+        }
+      ]
+    },
+    "documentType": "company",
+    "documentNumber": "890900608",
+    "category": "ACC"
+  },
+  "raw_response": {
+    "ResponseMetadata": {
+      "RequestId": "52edf18a-dbf4-4cc1-b82c-a2ce08ab5f96",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Thu, 28 Aug 2025 07:36:54 GMT",
+        "content-type": "application/json",
+        "content-length": "1122",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "52edf18a-dbf4-4cc1-b82c-a2ce08ab5f96"
+      },
+      "RetryAttempts": 0
+    },
+    "output": {
+      "message": {
+        "role": "assistant",
+        "content": [
+          {
+            "text": "```json { \"result\": { \"companyName\": \"GRUPO ÉXITO S.A.\", \"documentCategory\": \"Equity Composition\", \"taxId\": \"900.114.184-5\", \"country\": \"Colombia\", \"identificationDetails\": { \"source\": \"text_reference\", \"indicators\": [ \"Colombia\", \"Bogotá\" ], \"conflictingSources\": [], \"requiresReview\": \"false\" }, \"relatedParties\": [ { \"type\": \"person\", \"firstName\": \"Giovanni\", \"lastName\": \"Humberto Velasquez Ruiz\", \"identificationType\": \"CC\", \"identificationNumber\": \"37.608.077\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"POR REVISAR\", \"timeFound\": \"1\", \"job\": \"Apoderado Especial\" } ] }, \"documentType\": \"company\", \"category\": \"ACC\" } ```"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "inputTokens": 5539,
+      "outputTokens": 232,
+      "totalTokens": 5771
+    },
+    "metrics": {
+      "latencyMs": 4898
+    },
+    "model_id": "us.amazon.nova-pro-v1:0",
+    "api_used": "converse",
+    "model_params": {
+      "maxTokens": 8000,
+      "topP": 1,
+      "temperature": 0
+    }
+  },
+  "model_used": "us.amazon.nova-pro-v1:0",
+  "api_used": "converse"
+}

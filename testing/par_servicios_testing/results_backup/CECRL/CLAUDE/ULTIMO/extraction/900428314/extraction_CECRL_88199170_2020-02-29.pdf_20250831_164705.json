@@ -1,0 +1,88 @@
+{
+  "extraction_data": {
+    "result": {
+      "FirstName": "NORBERTO",
+      "LastName": "FUENTES LEÓN",
+      "CountryIssuer": "Colombia",
+      "Nationality": "colombiana",
+      "IdentificationType": "Cédula de Ciudadanía",
+      "IdentificationNumber": "36.199.170",
+      "Message": ""
+    },
+    "document_type": "person",
+    "category": "CECRL"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "```json { \"result\": { \"FirstName\": \"NORBERTO\", \"LastName\": \"FUENTES LEÓN\", \"CountryIssuer\": \"Colombia\", \"Nationality\": \"colombiana\", \"IdentificationType\": \"Cédula de Ciudadanía\", \"IdentificationNumber\": \"36.199.170\", \"Message\": \"\" }, \"document_type\": \"person\", \"category\": \"CECRL\" } ```"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 1583,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 4300,
+      "output_tokens": 1328
+    },
+    "ResponseMetadata": {
+      "RequestId": "1790a553-8206-4a82-9ef7-56cc63908cb7",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Sun, 31 Aug 2025 21:47:04 GMT",
+        "content-type": "application/json",
+        "content-length": "9778",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "1790a553-8206-4a82-9ef7-56cc63908cb7",
+        "x-amzn-bedrock-invocation-latency": "20816",
+        "x-amzn-bedrock-cache-write-input-token-count": "0",
+        "x-amzn-bedrock-cache-read-input-token-count": "4300",
+        "x-amzn-bedrock-output-token-count": "1328",
+        "x-amzn-bedrock-input-token-count": "1583"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_01V8dEEZN79ZB6G52doTQTiA",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-sonnet-4-20250514",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Looking at this document, I can see it's a Colombian identification card (Cédula de Ciudadanía). Let me extract the information step by step: 1. Document analysis: - This is a \"REPÚBLICA DE COLOMBIA IDENTIFICACIÓN PERSONAL CÉDULA DE CIUDADANÍA\" - The document header clearly indicates it's from Colombia - This is a citizenship card from Colombia 2. Field extraction: **Number/Identification Number**: I can see \"36.199.170\" which appears to be the identification number. **Names and Surnames**: Looking at the layout, I see: - \"FUENTES LEÓN\" appears next to what seems like a location indicator - \"APELLIDOS\" label with \"NORBERTO\" - \"NOMBRES\" section Wait, let me analyze this more carefully. This seems to be one of those \"misaligned\" Colombian documents mentioned in the methodology. Let me re-examine: Looking at the structure: - I see \"36.199.170\" as the number - \"FUENTES LEÓN\" appears to be associated with a location/place - Under \"APELLIDOS\" I see \"NORBERTO\" - The \"NOMBRES\" section appears to have a signature This is confusing because typically in Colombian documents, we would expect the surnames first, then the names. But here it looks like: - APELLIDOS: NORBERTO (this would typically be a first name) - NOMBRES: (appears to have signature/handwritten text) Let me look more carefully at the text flow. The document shows: - Number: 36.199.170 - FUENTES LEÓN (this appears to be associated with place/location info) - APELLIDOS: NORBERTO - NOMBRES: (handwritten signature area) Actually, looking more carefully, I think there might be a layout issue here. Let me check if this follows the pattern described in the methodology about misaligned Colombian documents. The methodology says Colombian documents can have misalignment where: - Surnames appear first, then the \"APELLIDOS\" label - Then first names, then \"NOMBRES\" label appears I notice an unusual pattern in the document's layout that suggests potential data misalignment. The identification number is clear, but the name fields seem unconventional. The placement of \"FUENTES LEÓN\" and the unexpected positioning of \"NORBERTO\" under APELLIDOS indicates this might be a non-standard document layout. The place of birth in Chima, Santander provides additional context that could help clarify the name structure. I'm seeing potential complexity in how the surname and first name are recorded, which might require careful cross-referencing with other document sections. The key details seem to be: - Surnames likely \"FUENTES LEÓN\" - First name \"NORBERTO\" - Potential document layout misalignment affecting name placement The document appears to be a Colombian identification document with specific details about the individual's origin and personal information.",
+          "signature": "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"
+        },
+        {
+          "type": "text",
+          "text": "```json { \"result\": { \"FirstName\": \"NORBERTO\", \"LastName\": \"FUENTES LEÓN\", \"CountryIssuer\": \"Colombia\", \"Nationality\": \"colombiana\", \"IdentificationType\": \"Cédula de Ciudadanía\", \"IdentificationNumber\": \"36.199.170\", \"Message\": \"\" }, \"document_type\": \"person\", \"category\": \"CECRL\" } ```"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 1583,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 4300,
+        "output_tokens": 1328
+      }
+    },
+    "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 8000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+  "api_used": "invoke_model"
+}

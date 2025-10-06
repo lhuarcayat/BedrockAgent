@@ -1,0 +1,87 @@
+{
+  "classification_data": {
+    "category": "ACC",
+    "text": "SOCIOS CEDULA ACCIONES V/R NOMINAL V/R TOTAL % ERNESTO JOSE CHALELA MARTINEZ 9,287,800 5,000 10,000 $ 50,000,000 100 TOTALES 5,000 50,000,000 100 ERNESTO JOSE CHALELA MARTINEZ REPRESENTANTE LEGAL CC. 9.287.800 FECHA: 23 ENERO DEL 2020 COMPOSICION ACCIONARIA TRITON LOGISTICA Y CONSTRUCCIONES SAS NIT. 901.127.166 - 9 TOMADO FIELMENTE DEL LIBRO DE ACCIONISTA QUE REPOSA EN LA EMPRESA TRITON LOGISTICA Y CONSTRUCCIONES SAS NIT. 901.127.166 - 9 COMPOSICION ACCIONARIA SOCIOS CEDULA ACCIONES V/R NOMINAL V/R TOTAL % ERNESTO JOSE CHALELA MARTINEZ 9,287,800 5,000 10,000 $ 50,000,000 100 TOTALES 5,000 50,000,000 100 TOMADO FIELMENTE DEL LIBRO DE ACCIONISTA QUE REPOSA EN LA EMPRESA ERNESTO JOSE CHALELA MARTINEZ REPRESENTANTE LEGAL CC. 9.287.800 FECHA: 23 ENERO DEL 2020 POWERFUL INNOVATION",
+    "document_number": "901127166",
+    "path": "ACC/901127166/169_CA_2020-02-29.pdf"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "```json { \"category\": \"ACC\", \"text\": \"SOCIOS CEDULA ACCIONES V/R NOMINAL V/R TOTAL %\\nERNESTO JOSE CHALELA MARTINEZ 9,287,800 5,000 10,000 $ 50,000,000 100\\nTOTALES 5,000 50,000,000 100\\nERNESTO JOSE CHALELA MARTINEZ\\nREPRESENTANTE LEGAL\\nCC. 9.287.800\\nFECHA: 23 ENERO DEL 2020\\nCOMPOSICION ACCIONARIA\\nTRITON LOGISTICA Y CONSTRUCCIONES SAS\\nNIT. 901.127.166 - 9\\nTOMADO FIELMENTE DEL LIBRO DE ACCIONISTA QUE REPOSA EN LA EMPRESA\\n\\nTRITON LOGISTICA Y CONSTRUCCIONES SAS\\nNIT. 901.127.166 - 9\\n\\nCOMPOSICION ACCIONARIA\\n\\nSOCIOS CEDULA ACCIONES V/R NOMINAL V/R TOTAL %\\nERNESTO JOSE CHALELA MARTINEZ 9,287,800 5,000 10,000 $ 50,000,000 100\\nTOTALES 5,000 50,000,000 100\\n\\nTOMADO FIELMENTE DEL LIBRO DE ACCIONISTA QUE REPOSA EN LA EMPRESA\\n\\nERNESTO JOSE CHALELA MARTINEZ\\nREPRESENTANTE LEGAL\\nCC. 9.287.800\\n\\nFECHA: 23 ENERO DEL 2020\\n\\nPOWERFUL INNOVATION\" } ```"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 9,
+      "cache_creation_input_tokens": 4887,
+      "cache_read_input_tokens": 0,
+      "output_tokens": 1314
+    },
+    "ResponseMetadata": {
+      "RequestId": "3a89b505-06de-477f-a9db-7def44fd7397",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Fri, 29 Aug 2025 19:57:58 GMT",
+        "content-type": "application/json",
+        "content-length": "8177",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "3a89b505-06de-477f-a9db-7def44fd7397",
+        "x-amzn-bedrock-invocation-latency": "25256",
+        "x-amzn-bedrock-cache-write-input-token-count": "4887",
+        "x-amzn-bedrock-cache-read-input-token-count": "0",
+        "x-amzn-bedrock-output-token-count": "1314",
+        "x-amzn-bedrock-input-token-count": "9"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_01UHKb43E9N8FTB95Q7m9HQA",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-sonnet-4-20250514",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Let me analyze this document step by step following the workflow: 1. **TEXT EXTRACTION** Looking at the document, I can see: - SOCIOS CEDULA ACCIONES V/R NOMINAL V/R TOTAL % - ERNESTO JOSE CHALELA MARTINEZ 9,287,800 5,000 10,000 $ 50,000,000 100 - TOTALES 5,000 50,000,000 100 - ERNESTO JOSE CHALELA MARTINEZ - REPRESENTANTE LEGAL - CC. 9.287.800 - FECHA: 23 ENERO DEL 2020 - COMPOSICION ACCIONARIA - TRITON LOGISTICA Y CONSTRUCCIONES SAS - NIT. 901.127.166 - 9 - TOMADO FIELMENTE DEL LIBRO DE ACCIONISTA QUE REPOSA EN LA EMPRESA There's also a table showing the same information in a formatted way. 2. **PRIORITY CHECKS** - Not BLANK - has meaningful content - Not LINK_ONLY - no hyperlinks or URLs 3. **DOCUMENT FUNCTION ANALYSIS** This document's primary purpose appears to be showing the shareholding composition of a company called \"TRITON LOGISTICA Y CONSTRUCCIONES SAS\". It shows: - Shareholder name (ERNESTO JOSE CHALELA MARTINEZ) - Number of shares (5,000) - Ownership percentage (100%) - Total value ($ 50,000,000) - The document is titled \"COMPOSICION ACCIONARIA\" (Shareholding composition) This is clearly about ownership structure and shareholding composition. 4. **ISSUER IDENTIFICATION** This appears to be issued by the company itself (\"TOMADO FIELMENTE DEL LIBRO DE ACCIONISTA QUE REPOSA EN LA EMPRESA\" - taken faithfully from the shareholder book that rests in the company). It's signed by the legal representative. 5. **CATEGORY CLASSIFICATION** I'm examining the document's specific classification carefully. The document is definitively an ownership composition record (ACC), focusing solely on the company's shareholding structure. It's not a personal identification document, tax registration, or legal representation certificate. The ACC classification precisely captures its core purpose of detailing company ownership. The key evidence points to a pure shareholding composition document, with clear ownership details for Triton Logistica y Construcciones SAS. 6. **CONFIDENCE VALIDATION** The ACC classification is strongly supported by multiple critical indicators. The document explicitly shows 5,000 shares, complete 100% ownership, and identifies the sole shareholder ERNESTO JOSE CHALELA MARTINEZ. These specific ownership markers provide high confidence in the categorization. I'll focus on extracting the precise ownership details systematically, ensuring accurate documentation of the shareholding composition.",
+          "signature": "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"
+        },
+        {
+          "type": "text",
+          "text": "```json { \"category\": \"ACC\", \"text\": \"SOCIOS CEDULA ACCIONES V/R NOMINAL V/R TOTAL %\\nERNESTO JOSE CHALELA MARTINEZ 9,287,800 5,000 10,000 $ 50,000,000 100\\nTOTALES 5,000 50,000,000 100\\nERNESTO JOSE CHALELA MARTINEZ\\nREPRESENTANTE LEGAL\\nCC. 9.287.800\\nFECHA: 23 ENERO DEL 2020\\nCOMPOSICION ACCIONARIA\\nTRITON LOGISTICA Y CONSTRUCCIONES SAS\\nNIT. 901.127.166 - 9\\nTOMADO FIELMENTE DEL LIBRO DE ACCIONISTA QUE REPOSA EN LA EMPRESA\\n\\nTRITON LOGISTICA Y CONSTRUCCIONES SAS\\nNIT. 901.127.166 - 9\\n\\nCOMPOSICION ACCIONARIA\\n\\nSOCIOS CEDULA ACCIONES V/R NOMINAL V/R TOTAL %\\nERNESTO JOSE CHALELA MARTINEZ 9,287,800 5,000 10,000 $ 50,000,000 100\\nTOTALES 5,000 50,000,000 100\\n\\nTOMADO FIELMENTE DEL LIBRO DE ACCIONISTA QUE REPOSA EN LA EMPRESA\\n\\nERNESTO JOSE CHALELA MARTINEZ\\nREPRESENTANTE LEGAL\\nCC. 9.287.800\\n\\nFECHA: 23 ENERO DEL 2020\\n\\nPOWERFUL INNOVATION\" } ```"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 9,
+        "cache_creation_input_tokens": 4887,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 1314
+      }
+    },
+    "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 8000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "expected_category": "ACC",
+  "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+  "api_used": "invoke_model",
+  "pdf_info": {
+    "original_size": 47218,
+    "first_page_size": 42331,
+    "is_scanned": false
+  }
+}

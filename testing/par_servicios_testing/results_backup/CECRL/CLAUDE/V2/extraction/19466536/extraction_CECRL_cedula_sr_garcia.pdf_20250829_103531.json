@@ -1,0 +1,88 @@
+{
+  "extraction_data": {
+    "result": {
+      "firstName": "JOSE REINALDO",
+      "lastName": "GARCIA GONZALEZ",
+      "country_issuer": "Colombia",
+      "nationality": "Colombia",
+      "identificationType": "Cédula de Ciudadanía",
+      "identificationNumber": "19.466.536",
+      "message": ""
+    },
+    "document_type": "person",
+    "category": "CECRL"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "```json { \"result\": { \"firstName\": \"JOSE REINALDO\", \"lastName\": \"GARCIA GONZALEZ\", \"country_issuer\": \"Colombia\", \"nationality\": \"Colombia\", \"identificationType\": \"Cédula de Ciudadanía\", \"identificationNumber\": \"19.466.536\", \"message\": \"\" }, \"document_type\": \"person\", \"category\": \"CECRL\" } ```"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 10,
+      "cache_creation_input_tokens": 6003,
+      "cache_read_input_tokens": 0,
+      "output_tokens": 722
+    },
+    "ResponseMetadata": {
+      "RequestId": "eff6b6c9-96b5-48b2-9b5f-1a5835a10338",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Fri, 29 Aug 2025 15:35:32 GMT",
+        "content-type": "application/json",
+        "content-length": "5639",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "eff6b6c9-96b5-48b2-9b5f-1a5835a10338",
+        "x-amzn-bedrock-invocation-latency": "13588",
+        "x-amzn-bedrock-cache-write-input-token-count": "6003",
+        "x-amzn-bedrock-cache-read-input-token-count": "0",
+        "x-amzn-bedrock-output-token-count": "722",
+        "x-amzn-bedrock-input-token-count": "10"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_01T7FwzrnHvVWwhc71RHMHie",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-sonnet-4-20250514",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Looking at this document, I can see it's a Colombian personal identification document (Cédula de Ciudadanía). Let me analyze it carefully: 1. **Document Type**: This appears to be a \"REPÚBLICA DE COLOMBIA IDENTIFICACIÓN PERSONAL CÉDULA DE CIUDADANÍA\" - so it's a Colombian citizenship card. 2. **Reading the document**: - At the top I can see \"REPÚBLICA DE COLOMBIA\" - \"IDENTIFICACIÓN PERSONAL\" - \"CÉDULA DE CIUDADANÍA\" - Number: \"19.466.536\" - Name information: - I can see \"GARCIA GONZALEZ\" (appears to be lastName) - \"JOSE REINALDO\" (appears to be firstName) 3. **Additional information from the bottom section**: - Date: \"14-FEB-1962\" (birth date) - Place: \"BOGOTA D.C. (CUNDINAMARCA)\" (place of birth) - Height: \"1.80\" - Blood type: \"O+\" - Sex: \"M\" - There's also \"20-JUN-1980 BOGOTA D.C.\" which might be issuance date - And there's a fingerprint Let me extract the information following the field rules: **firstName**: Looking for \"NOMBRES:\" or similar labels. I can see \"JOSE REINALDO\" which appears to be the given names. **lastName**: Looking for \"APELLIDOS:\" or similar. I can see \"GARCIA GONZALEZ\" which appears to be the surnames. **country_issuer**: This is clearly \"Colombia\" as indicated by \"REPÚBLICA DE COLOMBIA\" at the top. **nationality**: Since this is a Colombian citizenship document and the person was born in Bogotá, Colombia, the nationality should be \"Colombia\". **identificationType**: This is a \"CÉDULA DE CIUDADANÍA\" which translates to \"Cédula de Ciudadanía\" in Spanish. I confirm the identification number is \"19.466.536\". The document appears to be a standard Colombian official identification card with typical personal details. The name format follows the traditional Colombian style of surnames preceding given names.",
+          "signature": "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"
+        },
+        {
+          "type": "text",
+          "text": "```json { \"result\": { \"firstName\": \"JOSE REINALDO\", \"lastName\": \"GARCIA GONZALEZ\", \"country_issuer\": \"Colombia\", \"nationality\": \"Colombia\", \"identificationType\": \"Cédula de Ciudadanía\", \"identificationNumber\": \"19.466.536\", \"message\": \"\" }, \"document_type\": \"person\", \"category\": \"CECRL\" } ```"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 10,
+        "cache_creation_input_tokens": 6003,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 722
+      }
+    },
+    "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 8000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+  "api_used": "invoke_model"
+}

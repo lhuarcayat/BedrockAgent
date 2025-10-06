@@ -1,0 +1,183 @@
+{
+  "document_name": "C7VRF059K_2020-04-13.pdf",
+  "category": "CECRL",
+  "classification_success": true,
+  "extraction_success": true,
+  "overall_success": true,
+  "timestamp": "2025-08-29T17:46:38.537645",
+  "classification_result": {
+    "classification_data": {
+      "category": "CECRL",
+      "text": "BUNDESREPUBLIK DEUTSCHLAND FEDERAL REPUBLIC OF GERMANY REPUBLIQUE FEDERALE D'ALLEMAGNE REISEPASS Type/Typ/Type: P Code/Code/Code: D Pass-Nr./Passport No./Passeport No.: C7VRF059K Surname/Name/Nom: KOSFELD Given names/Prénoms: MICHAEL Nationality/Sex: DEUTSCH Date of birth/Date de naissance: 14.02.2019 Date of expiry/Date d'expiration: 13.02.2029 Place of birth/Lieu de naissance: STADT SIEGEN Authority/Autorité qui délivre: [signature present] P<D<<KOSFELD<<MICHAEL<<<<<<<<<<<<<<<<<<<<<<<<<<<< C7VRF059K2D<<6603285M2902131<<<<<<<<<<<<<<<<6",
+      "document_number": "UNKNOWN",
+      "path": "CECRL/5120000874_C7VRF059K_2020-04-13/C7VRF059K_2020-04-13.pdf"
+    },
+    "raw_response": {
+      "output": {
+        "message": {
+          "content": [
+            {
+              "text": "```json { \"category\": \"CECRL\", \"text\": \"BUNDESREPUBLIK DEUTSCHLAND\\nFEDERAL REPUBLIC OF GERMANY REPUBLIQUE FEDERALE D'ALLEMAGNE\\nREISEPASS\\nType/Typ/Type: P\\nCode/Code/Code: D\\nPass-Nr./Passport No./Passeport No.: C7VRF059K\\nSurname/Name/Nom: KOSFELD\\nGiven names/Prénoms: MICHAEL\\nNationality/Sex: DEUTSCH\\nDate of birth/Date de naissance: 14.02.2019\\nDate of expiry/Date d'expiration: 13.02.2029\\nPlace of birth/Lieu de naissance: STADT SIEGEN\\nAuthority/Autorité qui délivre: [signature present]\\nP<D<<KOSFELD<<MICHAEL<<<<<<<<<<<<<<<<<<<<<<<<<<<<\\nC7VRF059K2D<<6603285M2902131<<<<<<<<<<<<<<<<6\" } ```"
+            }
+          ]
+        }
+      },
+      "stopReason": "end_turn",
+      "usage": {
+        "input_tokens": 9,
+        "cache_creation_input_tokens": 4774,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 824
+      },
+      "ResponseMetadata": {
+        "RequestId": "b5bd3539-6ba0-4fca-837b-29f40200733e",
+        "HTTPStatusCode": 200,
+        "HTTPHeaders": {
+          "date": "Fri, 29 Aug 2025 22:46:59 GMT",
+          "content-type": "application/json",
+          "content-length": "5661",
+          "connection": "keep-alive",
+          "x-amzn-requestid": "b5bd3539-6ba0-4fca-837b-29f40200733e",
+          "x-amzn-bedrock-invocation-latency": "20300",
+          "x-amzn-bedrock-cache-write-input-token-count": "4774",
+          "x-amzn-bedrock-cache-read-input-token-count": "0",
+          "x-amzn-bedrock-output-token-count": "824",
+          "x-amzn-bedrock-input-token-count": "9"
+        },
+        "RetryAttempts": 0
+      },
+      "raw_anthropic_response": {
+        "id": "msg_bdrk_014rrvHU94oJv8weuhoQoAUe",
+        "type": "message",
+        "role": "assistant",
+        "model": "claude-sonnet-4-20250514",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "Looking at the document, I can see this is a German passport from the Federal Republic of Germany (BUNDESREPUBLIK DEUTSCHLAND). Let me extract the text I can see: From the top of the document: - REISEPASS (Passport in German) - BUNDESREPUBLIK DEUTSCHLAND (Federal Republic of Germany) - FEDERAL REPUBLIC OF GERMANY REPUBLIQUE FEDERALE D'ALLEMAGNE From the passport page itself: - Type/Typ/Type: P - Code/Code/Code: D - Pass-Nr./Passport No./Passeport No.: C7VRF059K - Surname/Name/Nom: KOSFELD - Given names/Prénoms: MICHAEL - Nationality/Sex: DEUTSCH (German) - Date of birth/Lieu de naissance: 14.02.2019 - Date of expiry/Date d'expiration: 13.02.2029 - Place of birth/Autorité qui delivre: STADT SIEGEN - Signature of bearer/Signature du titulaire: [signature present] There's also a machine-readable zone at the bottom: P<D<<KOSFELD<<MICHAEL<<<<<<<<<<<<<<<<<<<<<<<<<<< C7VRF059K2D<<6603285M2902131<<<<<<<<<<<<<<<<6 And there appears to be some photo identification and other security features. Now, let me analyze this according to the classification workflow: 1. TEXT EXTRACTION: I can extract meaningful text from this German passport document. 2. PRIORITY CHECKS: This is not blank or link-only. 3. DOCUMENT FUNCTION ANALYSIS: This is clearly a personal identification document - specifically a German passport. Its primary purpose is to identify an individual person (Michael Kosfeld) for travel and identification purposes. 4. ISSUER IDENTIFICATION: This is issued by German government authorities (Federal Republic of Germany). 5. CATEGORY CLASSIFICATION: This fits perfectly into CECRL category as it is:",
+            "signature": "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"
+          },
+          {
+            "type": "text",
+            "text": "```json { \"category\": \"CECRL\", \"text\": \"BUNDESREPUBLIK DEUTSCHLAND\\nFEDERAL REPUBLIC OF GERMANY REPUBLIQUE FEDERALE D'ALLEMAGNE\\nREISEPASS\\nType/Typ/Type: P\\nCode/Code/Code: D\\nPass-Nr./Passport No./Passeport No.: C7VRF059K\\nSurname/Name/Nom: KOSFELD\\nGiven names/Prénoms: MICHAEL\\nNationality/Sex: DEUTSCH\\nDate of birth/Date de naissance: 14.02.2019\\nDate of expiry/Date d'expiration: 13.02.2029\\nPlace of birth/Lieu de naissance: STADT SIEGEN\\nAuthority/Autorité qui délivre: [signature present]\\nP<D<<KOSFELD<<MICHAEL<<<<<<<<<<<<<<<<<<<<<<<<<<<<\\nC7VRF059K2D<<6603285M2902131<<<<<<<<<<<<<<<<6\" } ```"
+          }
+        ],
+        "stop_reason": "end_turn",
+        "stop_sequence": null,
+        "usage": {
+          "input_tokens": 9,
+          "cache_creation_input_tokens": 4774,
+          "cache_read_input_tokens": 0,
+          "output_tokens": 824
+        }
+      },
+      "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+      "api_used": "invoke_model",
+      "model_params": {
+        "max_tokens": 8000,
+        "top_p": 1,
+        "temperature": 1,
+        "thinking": {
+          "type": "enabled",
+          "budget_tokens": 4096
+        }
+      }
+    },
+    "expected_category": "CECRL",
+    "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model",
+    "pdf_info": {
+      "original_size": 241711,
+      "first_page_size": 239989,
+      "is_scanned": true
+    }
+  },
+  "extraction_result": {
+    "extraction_data": {
+      "result": {
+        "firstName": "MICHAEL",
+        "lastName": "KOSFELD",
+        "country_issuer": "Alemania",
+        "nationality": "Alemania",
+        "identificationType": "Pasaporte",
+        "identificationNumber": "C7VRF059",
+        "message": ""
+      },
+      "document_type": "person",
+      "category": "CECRL"
+    },
+    "raw_response": {
+      "output": {
+        "message": {
+          "content": [
+            {
+              "text": "```json { \"result\": { \"firstName\": \"MICHAEL\", \"lastName\": \"KOSFELD\", \"country_issuer\": \"Alemania\", \"nationality\": \"Alemania\", \"identificationType\": \"Pasaporte\", \"identificationNumber\": \"C7VRF059\", \"message\": \"\" }, \"document_type\": \"person\", \"category\": \"CECRL\" } ```"
+            }
+          ]
+        }
+      },
+      "stopReason": "end_turn",
+      "usage": {
+        "input_tokens": 10,
+        "cache_creation_input_tokens": 6440,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 558
+      },
+      "ResponseMetadata": {
+        "RequestId": "a54abb6d-301b-4cb5-af28-5375dd1ed3a1",
+        "HTTPStatusCode": 200,
+        "HTTPHeaders": {
+          "date": "Fri, 29 Aug 2025 22:47:10 GMT",
+          "content-type": "application/json",
+          "content-length": "4987",
+          "connection": "keep-alive",
+          "x-amzn-requestid": "a54abb6d-301b-4cb5-af28-5375dd1ed3a1",
+          "x-amzn-bedrock-invocation-latency": "10952",
+          "x-amzn-bedrock-cache-write-input-token-count": "6440",
+          "x-amzn-bedrock-cache-read-input-token-count": "0",
+          "x-amzn-bedrock-output-token-count": "558",
+          "x-amzn-bedrock-input-token-count": "10"
+        },
+        "RetryAttempts": 0
+      },
+      "raw_anthropic_response": {
+        "id": "msg_bdrk_017azJDZq9y46f3ajbCJgCqM",
+        "type": "message",
+        "role": "assistant",
+        "model": "claude-sonnet-4-20250514",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "Let me carefully analyze this German passport document to extract the required information. From what I can see in the document: 1. This appears to be a German passport (\"REISEPASS\" is visible in the header) 2. I can see \"BUNDESREPUBLIK DEUTSCHLAND\" which confirms this is a German document 3. There's a photo of a man 4. Looking at the personal information section: - I can see \"KOSFELD\" appears prominently - \"MICHAEL\" is clearly visible as well - There are various numbered fields typical of passport format Let me extract the information systematically: **Document Type**: This is clearly a German passport (\"REISEPASS\") **Country Issuer**: Germany (\"BUNDESREPUBLIK DEUTSCHLAND\") **Names**: I can see: - \"KOSFELD\" appears to be the surname - \"MICHAEL\" appears to be the given name **Identification Number**: I can see what appears to be \"C7VRF059\" followed by some additional characters **Nationality**: Since this is a German passport and I don't see explicit nationality information that differs, it would be German **Dates**: I can see dates like \"14.02.2019\" and \"13.02.2029\" which are likely issue and expiry dates Let me structure this according to the schema: - firstName: \"MICHAEL\" - lastName: \"KOSFELD\" - country_issuer: \"Alemania\" (Germany in Spanish) - nationality: \"Alemania\" (assuming German nationality unless stated otherwise) - identificationType: \"Pasaporte\" (German Reisepass = Passport in Spanish) - identificationNumber: Need to look more carefully at the document number - message: \"\" (if all information is clear) Looking more carefully at the identification number, I can see \"C7VRF059\" followed by what appears to be additional characters/numbers.",
+            "signature": "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"
+          },
+          {
+            "type": "text",
+            "text": "```json { \"result\": { \"firstName\": \"MICHAEL\", \"lastName\": \"KOSFELD\", \"country_issuer\": \"Alemania\", \"nationality\": \"Alemania\", \"identificationType\": \"Pasaporte\", \"identificationNumber\": \"C7VRF059\", \"message\": \"\" }, \"document_type\": \"person\", \"category\": \"CECRL\" } ```"
+          }
+        ],
+        "stop_reason": "end_turn",
+        "stop_sequence": null,
+        "usage": {
+          "input_tokens": 10,
+          "cache_creation_input_tokens": 6440,
+          "cache_read_input_tokens": 0,
+          "output_tokens": 558
+        }
+      },
+      "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+      "api_used": "invoke_model",
+      "model_params": {
+        "max_tokens": 8000,
+        "top_p": 1,
+        "temperature": 1,
+        "thinking": {
+          "type": "enabled",
+          "budget_tokens": 4096
+        }
+      }
+    },
+    "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model"
+  }
+}

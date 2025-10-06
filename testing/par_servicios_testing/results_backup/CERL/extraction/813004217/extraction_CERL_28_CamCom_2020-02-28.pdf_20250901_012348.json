@@ -1,0 +1,103 @@
+{
+  "extraction_data": {
+    "result": {
+      "CompanyName": "CIMPERCOL S.A.S.",
+      "CompanyType": "S.A.S.",
+      "Country": "Colombia",
+      "DocumentPages": "2",
+      "DocumentType": "Certificado de Existencia y Representación Legal",
+      "TaxId": "813004217-9",
+      "MainAddress": "CALLE 8 NO. 34-09 LOCAL 2 EDIFICIO BALCONES DE GENOVA DE NEIVA, Neiva",
+      "IncorporationDate": "1999-05-12",
+      "CompanyDuration": "undefined",
+      "RegistrationNumber": "00095591",
+      "Size": "Pequeñas",
+      "RelatedParties": [
+        {
+          "FirstName": "ANTONIO ESTEBAN",
+          "LastName": "BRAVO RIVERA",
+          "IdType": "C.C.",
+          "IdNumber": "000000019479044",
+          "RelationshipType": "Representante Legal"
+        }
+      ],
+      "Embargoes": "",
+      "Liquidations": "",
+      "DocumentIssueDate": "2018-09-18",
+      "LastRegistrationRenewalDate": "2016-07-22"
+    }
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "```json { \"result\": { \"CompanyName\": \"CIMPERCOL S.A.S.\", \"CompanyType\": \"S.A.S.\", \"Country\": \"Colombia\", \"DocumentPages\": \"2\", \"DocumentType\": \"Certificado de Existencia y Representación Legal\", \"TaxId\": \"813004217-9\", \"MainAddress\": \"CALLE 8 NO. 34-09 LOCAL 2 EDIFICIO BALCONES DE GENOVA DE NEIVA, Neiva\", \"IncorporationDate\": \"1999-05-12\", \"CompanyDuration\": \"undefined\", \"RegistrationNumber\": \"00095591\", \"Size\": \"Pequeñas\", \"RelatedParties\": [ { \"FirstName\": \"ANTONIO ESTEBAN\", \"LastName\": \"BRAVO RIVERA\", \"IdType\": \"C.C.\", \"IdNumber\": \"000000019479044\", \"RelationshipType\": \"Representante Legal\" } ], \"Embargoes\": \"\", \"Liquidations\": \"\", \"DocumentIssueDate\": \"2018-09-18\", \"LastRegistrationRenewalDate\": \"2016-07-22\" } } ```"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 3842,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 2304,
+      "output_tokens": 926
+    },
+    "ResponseMetadata": {
+      "RequestId": "115fe94b-6e11-4fef-923a-2e3e9c676ddc",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Mon, 01 Sep 2025 06:23:48 GMT",
+        "content-type": "application/json",
+        "content-length": "5674",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "115fe94b-6e11-4fef-923a-2e3e9c676ddc",
+        "x-amzn-bedrock-invocation-latency": "12773",
+        "x-amzn-bedrock-cache-write-input-token-count": "0",
+        "x-amzn-bedrock-cache-read-input-token-count": "2304",
+        "x-amzn-bedrock-output-token-count": "926",
+        "x-amzn-bedrock-input-token-count": "3842"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_01Wk5EtG2fwpMHGXh1Ujt4rF",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-sonnet-4-20250514",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "I need to analyze this Colombian business registration certificate (CERL - Certificado de Existencia y Representación Legal) and extract the required information according to the schema provided. Let me go through each section: 1. Page Count: The document shows \"Pagina 1 de 2\" and \"Pagina 2 de 2\" at the bottom, so it's 2 pages. 2. Company Information: - CompanyName: \"CIMPERCOL S.A.S.\" (appears in \"Razón Social\") - CompanyType: \"S.A.S.\" (part of the name) - Country: Colombia (based on \"Cámara de comercio\" and \"País: COLOMBIA\") - TaxId: \"813004217-9\" (appears as \"NIT\") - IdentificationType: \"NIT\" 3. Address and Location: - MainAddress: \"CALLE 8 NO. 34-09 LOCAL 2 EDIFICIO BALCONES DE GENOVA DE NEIVA, Neiva\" - The address is \"CALLE 8 NO. 34-09 LOCAL 2 EDIFICIO BALCONES DE GENOVA DE NEIVA\" and the city is \"Neiva\" 4. Dates (converting to YYYY-MM-DD format): - IncorporationDate: Not explicitly stated as \"Fecha de Constitución\" but there's \"Fecha Registro Mercantil: 1999-05-12\" - CompanyDuration: Not mentioned, so \"undefined\" - DocumentIssueDate: The document shows \"2018/09/18\" at the top, so \"2018-09-18\" - LastRegistrationRenewalDate: \"Fecha Últimna Renovación: 22/07/2016\" = \"2016-07-22\" 5. Registration Information: - RegistrationNumber: \"00095591\" (appears as \"Matricula Registro Mercantil\") - Size: \"Pequeñas\" (appears under \"Tamaño\") 6. Related Parties: - Representative Legal: \"BRAVO RIVERA ANTONIO ESTEBAN\" - ID Type: \"C.C.\" (Cédula de Ciudadanía) - ID Number: \"000000019479044\" I've identified the company's key details, including its small business classification and legal representative. The certificate provides comprehensive information about CIMPERCOL S.A.S., confirming its legal status and primary identification details.",
+          "signature": "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"
+        },
+        {
+          "type": "text",
+          "text": "```json { \"result\": { \"CompanyName\": \"CIMPERCOL S.A.S.\", \"CompanyType\": \"S.A.S.\", \"Country\": \"Colombia\", \"DocumentPages\": \"2\", \"DocumentType\": \"Certificado de Existencia y Representación Legal\", \"TaxId\": \"813004217-9\", \"MainAddress\": \"CALLE 8 NO. 34-09 LOCAL 2 EDIFICIO BALCONES DE GENOVA DE NEIVA, Neiva\", \"IncorporationDate\": \"1999-05-12\", \"CompanyDuration\": \"undefined\", \"RegistrationNumber\": \"00095591\", \"Size\": \"Pequeñas\", \"RelatedParties\": [ { \"FirstName\": \"ANTONIO ESTEBAN\", \"LastName\": \"BRAVO RIVERA\", \"IdType\": \"C.C.\", \"IdNumber\": \"000000019479044\", \"RelationshipType\": \"Representante Legal\" } ], \"Embargoes\": \"\", \"Liquidations\": \"\", \"DocumentIssueDate\": \"2018-09-18\", \"LastRegistrationRenewalDate\": \"2016-07-22\" } } ```"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 3842,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 2304,
+        "output_tokens": 926
+      }
+    },
+    "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 8000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+  "api_used": "invoke_model"
+}

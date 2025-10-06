@@ -1,0 +1,87 @@
+{
+  "classification_data": {
+    "category": "CECRL",
+    "text": "REPUBLICA DE COLOMBIA IDENTIFICACION PERSONAL CEDULA DE CIUDADANIA NUMERO: 1.018.460.087 OVALLE BAYER APELLIDOS DIEGO FERNANDO NOMBRES FIRMA FECHA DE NACIMIENTO: 16-JUN-1993 MANI (CASANARE) LUGAR DE NACIMIENTO 1.73 O+ M ESTATURA G.S. RH SEXO 20-JUN-2011 BOGOTA D.C FECHA Y LUGAR DE EXPEDICION REGISTRADOR NACIONAL CARLOS ARIEL SANCHEZ TORRES INDICE DERECHO P-1500150-00313681-M-1018460087-20110713 00271996479A 1 36822300",
+    "document_number": "UNKNOWN",
+    "path": "CECRL/4129417_1018460087_2020-06-26/1018460087_2020-06-26.pdf"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "```json { \"category\": \"CECRL\", \"text\": \"REPUBLICA DE COLOMBIA\\nIDENTIFICACION PERSONAL\\nCEDULA DE CIUDADANIA\\nNUMERO: 1.018.460.087\\nOVALLE BAYER\\nAPELLIDOS\\nDIEGO FERNANDO\\nNOMBRES\\nFIRMA\\nFECHA DE NACIMIENTO: 16-JUN-1993\\nMANI\\n(CASANARE)\\nLUGAR DE NACIMIENTO\\n1.73 O+ M\\nESTATURA G.S. RH SEXO\\n20-JUN-2011 BOGOTA D.C\\nFECHA Y LUGAR DE EXPEDICION\\nREGISTRADOR NACIONAL\\nCARLOS ARIEL SANCHEZ TORRES\\nINDICE DERECHO\\nP-1500150-00313681-M-1018460087-20110713 00271996479A 1 36822300\" } ```"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 1584,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 3150,
+      "output_tokens": 982
+    },
+    "ResponseMetadata": {
+      "RequestId": "6fced18a-7de0-4ffd-a2fb-ae96134a53fc",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Sun, 31 Aug 2025 21:32:22 GMT",
+        "content-type": "application/json",
+        "content-length": "6341",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "6fced18a-7de0-4ffd-a2fb-ae96134a53fc",
+        "x-amzn-bedrock-invocation-latency": "14637",
+        "x-amzn-bedrock-cache-write-input-token-count": "0",
+        "x-amzn-bedrock-cache-read-input-token-count": "3150",
+        "x-amzn-bedrock-output-token-count": "982",
+        "x-amzn-bedrock-input-token-count": "1584"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_01CyYRgDjzKVNh1bC8NXtXLk",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-sonnet-4-20250514",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Let me analyze this PDF document step by step following the classification workflow: 1. **TEXT EXTRACTION** Looking at the document, I can extract the following text: Front side: - REPUBLICA DE COLOMBIA - IDENTIFICACION PERSONAL - CEDULA DE CIUDADANIA - NUMERO: 1.018.460.087 - OVALLE BAYER - APELLIDOS - DIEGO FERNANDO - NOMBRES - (There's a signature visible) - FIRMA Back side: - FECHA DE NACIMIENTO: 16-JUN-1993 - MANI (CASANARE) - LUGAR DE NACIMIENTO - 1.73 O+ M - ESTATURA G.S. RH SEXO - 20-JUN-2011 BOGOTA D.C - FECHA Y LUGAR DE EXPEDICION - REGISTRADOR NACIONAL - CARLOS ARIEL SANCHEZ TORRES - INDICE DERECHO - (There's a fingerprint visible) - (There's a barcode at the bottom) - P-1500150-00313681-M-1018460087-20110713 00271996479A 1 36822300 2. **PRIORITY CHECKS** - This is not BLANK - it has substantial content - This is not LINK_ONLY - there are no hyperlinks/URLs 3. **DOCUMENT FUNCTION ANALYSIS** - What is the MAIN PURPOSE of this document? - This is clearly a personal identification document - It shows \"CEDULA DE CIUDADANIA\" (Citizenship ID Card) - It contains personal biographical data: date of birth (16-JUN-1993), place of birth (MANI, CASANARE), sex (M), blood type (O+), height (1.73) - It has a photograph of an individual - It has a signature and fingerprint - It has an identification number (1.018.460.087) - This is definitely a CECRL document 4. **ISSUER IDENTIFICATION** I recognize this as an official Colombian government-issued identification document. The national registry has validated the individual's personal details with an official seal and unique identifier. The document provides comprehensive personal information authenticated by the state. 5. **CATEGORY CLASSIFICATION** The identification meets all standard criteria for a government-issued personal document. It contains critical personal verification elements including photographic identification, official registration details, and biometric markers like signature and fingerprint. The document represents a standard Colombian citizenship identification card with comprehensive security and verification features.",
+          "signature": "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"
+        },
+        {
+          "type": "text",
+          "text": "```json { \"category\": \"CECRL\", \"text\": \"REPUBLICA DE COLOMBIA\\nIDENTIFICACION PERSONAL\\nCEDULA DE CIUDADANIA\\nNUMERO: 1.018.460.087\\nOVALLE BAYER\\nAPELLIDOS\\nDIEGO FERNANDO\\nNOMBRES\\nFIRMA\\nFECHA DE NACIMIENTO: 16-JUN-1993\\nMANI\\n(CASANARE)\\nLUGAR DE NACIMIENTO\\n1.73 O+ M\\nESTATURA G.S. RH SEXO\\n20-JUN-2011 BOGOTA D.C\\nFECHA Y LUGAR DE EXPEDICION\\nREGISTRADOR NACIONAL\\nCARLOS ARIEL SANCHEZ TORRES\\nINDICE DERECHO\\nP-1500150-00313681-M-1018460087-20110713 00271996479A 1 36822300\" } ```"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 1584,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 3150,
+        "output_tokens": 982
+      }
+    },
+    "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 8000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "expected_category": "CECRL",
+  "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+  "api_used": "invoke_model",
+  "pdf_info": {
+    "original_size": 478149,
+    "first_page_size": 478039,
+    "is_scanned": true
+  }
+}

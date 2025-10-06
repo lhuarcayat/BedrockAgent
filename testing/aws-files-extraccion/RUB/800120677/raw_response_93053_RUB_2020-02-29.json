@@ -1,0 +1,33 @@
+{
+  "ResponseMetadata": {
+    "RequestId": "14cce4fd-9ad3-45d9-be9a-fa8d0db84708",
+    "HTTPStatusCode": 200,
+    "HTTPHeaders": {
+      "date": "Tue, 17 Jun 2025 14:28:00 GMT",
+      "content-type": "application/json",
+      "content-length": "1591",
+      "connection": "keep-alive",
+      "x-amzn-requestid": "14cce4fd-9ad3-45d9-be9a-fa8d0db84708"
+    },
+    "RetryAttempts": 0
+  },
+  "output": {
+    "message": {
+      "role": "assistant",
+      "content": [
+        {
+          "text": "```json\n{\n  \"path\": \"s3://par-servicios-poc-dev-filling-desk/par-servicios-poc/RUB/800120677/93053_RUB_2020-02-29.pdf\",\n  \"result\": {\n    \"companyName\": \"AINECOL S.A.\",\n    \"country\": \"Colombia\",\n    \"documentType\": \"NIT\",\n    \"taxId\": \"800120677\",\n    \"relatedParties\": [\n      {\n        \"firstName\": \"ESCOBAR\",\n        \"lastName\": \"PUENTES\",\n        \"identificationType\": \"NIT\",\n        \"identificationNumber\": \"1075214370\",\n        \"noveltyType\": \"Actualización\",\n        \"participationPercentage\": \"15\"\n      },\n      {\n        \"firstName\": \"ESCOBAR\",\n        \"lastName\": \"PUENTES\",\n        \"identificationType\": \"NIT\",\n        \"identificationNumber\": \"12124202\",\n        \"noveltyType\": \"Actualización\",\n        \"participationPercentage\": \"8\"\n      },\n      {\n        \"firstName\": \"JUAN\",\n        \"lastName\": \"SANDINO\",\n        \"identificationType\": \"NIT\",\n        \"identificationNumber\": \"36173009\",\n        \"noveltyType\": \"Actualización\",\n        \"participationPercentage\": \"10\"\n      }\n    ]\n  },\n  \"confidenceScores\": {\n    \"companyName\": 95,\n    \"documentType\": 90,\n    \"country\": 100,\n    \"taxId\": 100,\n    \"relatedParties\": 85\n  },\n  \"document_type\": \"company\",\n  \"document_number\": \"800120677\",\n  \"category\": \"RUB\"\n}\n```"
+        }
+      ]
+    }
+  },
+  "stopReason": "end_turn",
+  "usage": {
+    "inputTokens": 11345,
+    "outputTokens": 409,
+    "totalTokens": 11754
+  },
+  "metrics": {
+    "latencyMs": 10656
+  }
+}

@@ -1,0 +1,117 @@
+{
+  "extraction_data": {
+    "result": {
+      "CompanyName": "INGENIERIA Y GEOTECNIA S.A.S",
+      "CompanyType": "S.A.S",
+      "Country": "Colombia",
+      "DocumentPages": "9",
+      "DocumentType": "CERTIFICADO DE EXISTENCIA Y REPRESENTACIÓN LEGAL",
+      "TaxId": "860.046.951-8",
+      "MainAddress": "Cr 29 39 B 29, Bogotá D.C.",
+      "IncorporationDate": "1976-02-10",
+      "CompanyDuration": "undefined",
+      "RegistrationNumber": "00070735",
+      "Size": "Pequeña",
+      "RelatedParties": [
+        {
+          "FirstName": "Maria Paula",
+          "LastName": "Garcia Ospina",
+          "IdType": "C.C.",
+          "IdNumber": "1018422036",
+          "RelationshipType": "Gerente"
+        },
+        {
+          "FirstName": "Johan Camilo",
+          "LastName": "Garzon Cubides",
+          "IdType": "C.C.",
+          "IdNumber": "1015412416",
+          "RelationshipType": "Representante Legal Suplente"
+        },
+        {
+          "FirstName": "Beatriz Eugenia",
+          "LastName": "Betancourt Paez",
+          "IdType": "C.C.",
+          "IdNumber": "52764786",
+          "RelationshipType": "Revisor Fiscal"
+        }
+      ],
+      "Embargoes": "",
+      "Liquidations": "",
+      "DocumentIssueDate": "2024-12-31",
+      "LastRegistrationRenewalDate": "2024-03-11"
+    }
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "```json { \"result\": { \"CompanyName\": \"INGENIERIA Y GEOTECNIA S.A.S\", \"CompanyType\": \"S.A.S\", \"Country\": \"Colombia\", \"DocumentPages\": \"9\", \"DocumentType\": \"CERTIFICADO DE EXISTENCIA Y REPRESENTACIÓN LEGAL\", \"TaxId\": \"860.046.951-8\", \"MainAddress\": \"Cr 29 39 B 29, Bogotá D.C.\", \"IncorporationDate\": \"1976-02-10\", \"CompanyDuration\": \"undefined\", \"RegistrationNumber\": \"00070735\", \"Size\": \"Pequeña\", \"RelatedParties\": [ { \"FirstName\": \"Maria Paula\", \"LastName\": \"Garcia Ospina\", \"IdType\": \"C.C.\", \"IdNumber\": \"1018422036\", \"RelationshipType\": \"Gerente\" }, { \"FirstName\": \"Johan Camilo\", \"LastName\": \"Garzon Cubides\", \"IdType\": \"C.C.\", \"IdNumber\": \"1015412416\", \"RelationshipType\": \"Representante Legal Suplente\" }, { \"FirstName\": \"Beatriz Eugenia\", \"LastName\": \"Betancourt Paez\", \"IdType\": \"C.C.\", \"IdNumber\": \"52764786\", \"RelationshipType\": \"Revisor Fiscal\" } ], \"Embargoes\": \"\", \"Liquidations\": \"\", \"DocumentIssueDate\": \"2024-12-31\", \"LastRegistrationRenewalDate\": \"2024-03-11\" } } ```"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 22485,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 2304,
+      "output_tokens": 1089
+    },
+    "ResponseMetadata": {
+      "RequestId": "41bc8539-240c-41ec-b132-789f82441a6b",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Mon, 01 Sep 2025 06:28:01 GMT",
+        "content-type": "application/json",
+        "content-length": "6124",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "41bc8539-240c-41ec-b132-789f82441a6b",
+        "x-amzn-bedrock-invocation-latency": "16842",
+        "x-amzn-bedrock-cache-write-input-token-count": "0",
+        "x-amzn-bedrock-cache-read-input-token-count": "2304",
+        "x-amzn-bedrock-output-token-count": "1089",
+        "x-amzn-bedrock-input-token-count": "22485"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_01B6Q83d7dvBGbDe3yqRAWez",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-sonnet-4-20250514",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "I need to extract data from this Colombian \"Certificado de Existencia y Representación Legal\" (CERL) document. Let me go through each section systematically: 1. Document Pages: I can see \"Página X de 9\" at the bottom of each page, so this is a 9-page document. 2. Company Information: - Company Name: Looking at the document, I can see \"Razón social: INGENIERIA Y GEOTECNIA S.A.S\" and \"Sigla: IGL SAS\" - Company Type: S.A.S - Country: Colombia (issued by Cámara de Comercio de Bogotá) - Tax ID: \"Nit: 860.046.951-8\" - Identification Type: NIT 3. Address Processing: - Main Address: \"Dirección del domicilio principal: Cr 29 39 B 29\" and \"Municipio: Bogotá D.C.\" - So MainAddress should be \"Cr 29 39 B 29, Bogotá D.C.\" 4. Date Normalization: - Document Issue Date: \"Fecha Expedición: 31 de diciembre de 2024\" = 2024-12-31 - Incorporation Date: \"Fecha de matrícula: 10 de febrero de 1976\" = 1976-02-10 - Company Duration: \"La persona jurídica no se encuentra disuelta y su duración es indefinida\" = \"undefined\" - Last Registration Renewal Date: \"Fecha de renovación: 11 de marzo de 2024\" = 2024-03-11 5. Registration Info: - Registration Number: \"Matrícula No. 00070735\" - Size: \"De conformidad con lo previsto...el tamaño de la empresa es Pequeña\" 6. Related Parties: Looking through the document for representatives, I can see: - Legal Representatives include Maria Paula Garcia Ospina as Manager and Johan Camilo Garzon Cubides as Alternate Legal Representative - Fiscal Reviewer is Beatriz Eugenia Betancourt Paez, with professional card number 208201-T 7. Extra fields: - No liquidation or embargo information found - Document is a standard Existence and Legal Representation Certificate",
+          "signature": "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"
+        },
+        {
+          "type": "text",
+          "text": "```json { \"result\": { \"CompanyName\": \"INGENIERIA Y GEOTECNIA S.A.S\", \"CompanyType\": \"S.A.S\", \"Country\": \"Colombia\", \"DocumentPages\": \"9\", \"DocumentType\": \"CERTIFICADO DE EXISTENCIA Y REPRESENTACIÓN LEGAL\", \"TaxId\": \"860.046.951-8\", \"MainAddress\": \"Cr 29 39 B 29, Bogotá D.C.\", \"IncorporationDate\": \"1976-02-10\", \"CompanyDuration\": \"undefined\", \"RegistrationNumber\": \"00070735\", \"Size\": \"Pequeña\", \"RelatedParties\": [ { \"FirstName\": \"Maria Paula\", \"LastName\": \"Garcia Ospina\", \"IdType\": \"C.C.\", \"IdNumber\": \"1018422036\", \"RelationshipType\": \"Gerente\" }, { \"FirstName\": \"Johan Camilo\", \"LastName\": \"Garzon Cubides\", \"IdType\": \"C.C.\", \"IdNumber\": \"1015412416\", \"RelationshipType\": \"Representante Legal Suplente\" }, { \"FirstName\": \"Beatriz Eugenia\", \"LastName\": \"Betancourt Paez\", \"IdType\": \"C.C.\", \"IdNumber\": \"52764786\", \"RelationshipType\": \"Revisor Fiscal\" } ], \"Embargoes\": \"\", \"Liquidations\": \"\", \"DocumentIssueDate\": \"2024-12-31\", \"LastRegistrationRenewalDate\": \"2024-03-11\" } } ```"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 22485,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 2304,
+        "output_tokens": 1089
+      }
+    },
+    "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 8000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+  "api_used": "invoke_model"
+}

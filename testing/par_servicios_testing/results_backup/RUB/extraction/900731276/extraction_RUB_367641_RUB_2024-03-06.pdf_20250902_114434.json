@@ -1,0 +1,97 @@
+{
+  "extraction_data": {
+    "result": {
+      "CompanyName": "ALCUBO PRODUCCIONES SAS",
+      "TaxId": "90073127617",
+      "IdentificationType": "NIT",
+      "Country": "Colombia",
+      "ConflictingSources": [],
+      "RequiresReview": "false"
+    },
+    "RelatedParties": [
+      {
+        "FirstName": "EDGAR HERNAN",
+        "LastName": "CUADROS ROMERO",
+        "IdType": "NIT",
+        "IdNumber": "91262818",
+        "NoveltyType": "Registro",
+        "ParticipationPercentage": "100"
+      }
+    ],
+    "DocumentType": "company",
+    "Category": "RUB"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "{ \"result\": { \"CompanyName\": \"ALCUBO PRODUCCIONES SAS\", \"TaxId\": \"90073127617\", \"IdentificationType\": \"NIT\", \"Country\": \"Colombia\", \"ConflictingSources\": [], \"RequiresReview\": \"false\" }, \"RelatedParties\": [ { \"FirstName\": \"EDGAR HERNAN\", \"LastName\": \"CUADROS ROMERO\", \"IdType\": \"NIT\", \"IdNumber\": \"91262818\", \"NoveltyType\": \"Registro\", \"ParticipationPercentage\": \"100\" } ], \"DocumentType\": \"company\", \"Category\": \"RUB\" }"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 4806,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 2039,
+      "output_tokens": 1062
+    },
+    "ResponseMetadata": {
+      "RequestId": "5fe6dd5f-2e42-4ea3-a5df-d18d57a763e9",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Tue, 02 Sep 2025 16:44:34 GMT",
+        "content-type": "application/json",
+        "content-length": "6971",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "5fe6dd5f-2e42-4ea3-a5df-d18d57a763e9",
+        "x-amzn-bedrock-invocation-latency": "19906",
+        "x-amzn-bedrock-cache-write-input-token-count": "0",
+        "x-amzn-bedrock-cache-read-input-token-count": "2039",
+        "x-amzn-bedrock-output-token-count": "1062",
+        "x-amzn-bedrock-input-token-count": "4806"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_01BL5ifTSY6kBcX4rhRr88QC",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-sonnet-4-20250514",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Looking at this document, I can see it is a \"Reporte de Beneficiarios Finales\" (Final Beneficiaries Report) issued by DIAN, which is the Colombian tax authority. Let me extract the information according to the rules provided. First, let me identify the key fields: 1. **CompanyName**: Looking for cell \"11. Denominación o razón social\" - From page 1, I can see: \"ALCUBO PRODUCCIONES SAS\" 2. **Country**: Since this is a Final Beneficiaries Report issued by DIAN, the country is \"Colombia\" 3. **TaxId**: Looking for cell \"18. Número de identificación\" - From page 1, I can see: \"9007312761\" (with DV \"7\") 4. **IdentificationType**: For Final Beneficiaries Report issued by DIAN, this is \"NIT\" 5. **RelatedParties**: Looking for beneficiaries information starting from \"Datos Beneficiarios Finales\" From page 2, I can see one beneficiary: - Cell \"34. Primer apellido\": \"CUADROS\" - Cell \"35. Segundo apellido\": \"ROMERO\" - Cell \"36. Primer nombre\": \"EDGAR\" - Cell \"37. Otros nombres\": \"HERNAN\" - Cell \"30. Número de identificación\": \"91262818\" - Cell \"32. Número de Identificación Tributaria - NIT\": \"91262818\" (matches) - Cell \"57. Porcentaje de participación\": \"100\" - Cell \"61. Tipo de novedad\": \"Registro\" Let me validate: - The identification numbers match (91262818) - The participation percentage is 100% which makes sense for a single beneficiary - The IdType should be \"NIT\" for this type of document I'm carefully reviewing the TaxId details. The form shows multiple identification numbers, including \"9007312761\" with a verification digit of \"7\". This suggests the full TaxId might be a combination of these elements. The top of the document also contains a form number \"2687100009688\", which is distinct from the identification numbers. On page 2, I notice another identification number \"91262818\" which seems to relate to a beneficiary, not the main company. The company details for ALCUBO PRODUCCIONES SAS include a tax identification section that requires precise verification. The beneficiary details reveal a complete individual profile with full participation and registration status.",
+          "signature": "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"
+        },
+        {
+          "type": "text",
+          "text": "{ \"result\": { \"CompanyName\": \"ALCUBO PRODUCCIONES SAS\", \"TaxId\": \"90073127617\", \"IdentificationType\": \"NIT\", \"Country\": \"Colombia\", \"ConflictingSources\": [], \"RequiresReview\": \"false\" }, \"RelatedParties\": [ { \"FirstName\": \"EDGAR HERNAN\", \"LastName\": \"CUADROS ROMERO\", \"IdType\": \"NIT\", \"IdNumber\": \"91262818\", \"NoveltyType\": \"Registro\", \"ParticipationPercentage\": \"100\" } ], \"DocumentType\": \"company\", \"Category\": \"RUB\" }"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 4806,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 2039,
+        "output_tokens": 1062
+      }
+    },
+    "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 9000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+  "api_used": "invoke_model"
+}

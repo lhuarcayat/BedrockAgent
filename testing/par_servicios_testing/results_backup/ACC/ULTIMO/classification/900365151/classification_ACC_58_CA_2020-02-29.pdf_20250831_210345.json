@@ -1,0 +1,87 @@
+{
+  "classification_data": {
+    "category": "ACC",
+    "text": "CERTIFICADO DE COMPOSICIÓN ACCIONARIA Yo, _HENRY ANTONIO ALTERIO GONZÁLEZ , identificado con (CC/CE/PP/ID) _CC _ECOSIMPLE SAS No._79694634 obrando en representación de (nombre del representado) identificado con (NIT/TAX ID /Otro) _NIT No. 900365151-5 certifico bajo la gravedad del juramento, sujeto a las sanciones establecidas en el Código Penal, que los asociados, socios o accionistas que tienen más del CINCO PORCIENTO (5%) de participación en el capital social de la entidad que represento son las personas naturales o jurídicas que aparecen en la siguiente relación: NOMBRE DEL ACCIONISTA, SOCIO O ASOCIADO IDENTIFICACIÓN PARTICIPACIÓN EN EL CAPITALSOCIAL (%) HENRY ANTONIO ALTERIO GONZÁLEZ 79694634 100 Fecha de diligenciamiento: 27 DE FEBRERO DE 2023 Nombre de la entidad: ECOSIMPLE SAS No. 900365151-5 Firma del representante legal Nombre del representante legal: HENRY ANTONIO ALTERIO GONZÁLEZ Documento de Identificación: 79694634",
+    "document_number": "900365151",
+    "path": "ACC/900365151/58_CA_2020-02-29.pdf"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "```json { \"category\": \"ACC\", \"text\": \"CERTIFICADO DE COMPOSICIÓN ACCIONARIA\\nYo, _HENRY ANTONIO ALTERIO GONZÁLEZ ,\\nidentificado con (CC/CE/PP/ID) _CC\\n_ECOSIMPLE SAS\\nNo._79694634 obrando en representación de (nombre del representado)\\nidentificado con (NIT/TAX ID /Otro) _NIT\\nNo. 900365151-5 certifico bajo la gravedad del juramento, sujeto a las sanciones establecidas en el Código Penal, que\\nlos asociados, socios o accionistas que tienen más del CINCO PORCIENTO (5%) de participación en el capital social de la\\nentidad que represento son las personas naturales o jurídicas que aparecen en la siguiente relación:\\nNOMBRE DEL ACCIONISTA,\\nSOCIO O ASOCIADO IDENTIFICACIÓN PARTICIPACIÓN EN EL CAPITALSOCIAL (%)\\nHENRY ANTONIO ALTERIO\\nGONZÁLEZ\\n79694634 100\\nFecha de diligenciamiento: 27 DE FEBRERO DE 2023\\nNombre de la entidad: ECOSIMPLE SAS\\nNo. 900365151-5\\nFirma del representante legal\\nNombre del representante legal: HENRY ANTONIO ALTERIO GONZÁLEZ\\nDocumento de Identificación: 79694634\" } ```"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 1943,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 3150,
+      "output_tokens": 848
+    },
+    "ResponseMetadata": {
+      "RequestId": "8783f965-dd6f-4361-a34c-02c45394ce29",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Mon, 01 Sep 2025 02:03:45 GMT",
+        "content-type": "application/json",
+        "content-length": "6357",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "8783f965-dd6f-4361-a34c-02c45394ce29",
+        "x-amzn-bedrock-invocation-latency": "15737",
+        "x-amzn-bedrock-cache-write-input-token-count": "0",
+        "x-amzn-bedrock-cache-read-input-token-count": "3150",
+        "x-amzn-bedrock-output-token-count": "848",
+        "x-amzn-bedrock-input-token-count": "1943"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_01J8Sk1dpTg5ghhdQFrmmCnX",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-sonnet-4-20250514",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Let me analyze this PDF document step by step following the classification workflow: 1. **TEXT EXTRACTION** The document contains substantial text in Spanish. I can see \"CERTIFICADO DE COMPOSICIÓN ACCIONARIA\" which translates to \"CERTIFICATE OF SHAREHOLDING COMPOSITION\". The document contains information about shareholders, their identification, and their participation percentage in the company capital. 2. **PRIORITY CHECKS** - BLANK: No, this document has significant content - LINK_ONLY: No, this document doesn't contain hyperlinks as main content 3. **DOCUMENT FUNCTION ANALYSIS** What is the MAIN PURPOSE of this document? - This document shows the shareholding composition of a company (ECOSIMPLE SAS) - It indicates percentage participation in capital (100% for HENRY ANTONIO ALTERIO GONZÁLEZ) - It lists shareholders/partners with their identification and participation percentages - This clearly indicates ACC (shareholding composition document) 4. **ISSUER IDENTIFICATION** - The document is issued by the same private company (ECOSIMPLE SAS) through its legal representative - It's not issued by a tax authority (DIAN) → not RUT or RUB - It's not issued by a commercial registry authority (Chamber of Commerce) → not CERL - It's not a government identification document → not CECRL 5. **CATEGORY CLASSIFICATION** Based on the analysis: - CECRL: No, this is not a personal identification document - CERL: No, this is not issued by a commercial registry authority - ACC: YES - This document shows shareholding composition with: - Title: \"CERTIFICADO DE COMPOSICIÓN ACCIONARIA\" (Certificate of Shareholding Composition) - Shareholder information: HENRY ANTONIO ALTERIO GONZÁLEZ with 100% participation - Capital participation percentages - Document issued by the company itself - Main function is to show shareholding composition This is clearly an ACC document - it shows the shareholding composition of ECOSIMPLE SAS with specific participation percentages.",
+          "signature": "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"
+        },
+        {
+          "type": "text",
+          "text": "```json { \"category\": \"ACC\", \"text\": \"CERTIFICADO DE COMPOSICIÓN ACCIONARIA\\nYo, _HENRY ANTONIO ALTERIO GONZÁLEZ ,\\nidentificado con (CC/CE/PP/ID) _CC\\n_ECOSIMPLE SAS\\nNo._79694634 obrando en representación de (nombre del representado)\\nidentificado con (NIT/TAX ID /Otro) _NIT\\nNo. 900365151-5 certifico bajo la gravedad del juramento, sujeto a las sanciones establecidas en el Código Penal, que\\nlos asociados, socios o accionistas que tienen más del CINCO PORCIENTO (5%) de participación en el capital social de la\\nentidad que represento son las personas naturales o jurídicas que aparecen en la siguiente relación:\\nNOMBRE DEL ACCIONISTA,\\nSOCIO O ASOCIADO IDENTIFICACIÓN PARTICIPACIÓN EN EL CAPITALSOCIAL (%)\\nHENRY ANTONIO ALTERIO\\nGONZÁLEZ\\n79694634 100\\nFecha de diligenciamiento: 27 DE FEBRERO DE 2023\\nNombre de la entidad: ECOSIMPLE SAS\\nNo. 900365151-5\\nFirma del representante legal\\nNombre del representante legal: HENRY ANTONIO ALTERIO GONZÁLEZ\\nDocumento de Identificación: 79694634\" } ```"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 1943,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 3150,
+        "output_tokens": 848
+      }
+    },
+    "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 8000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "expected_category": "ACC",
+  "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+  "api_used": "invoke_model",
+  "pdf_info": {
+    "original_size": 54956,
+    "first_page_size": 45636,
+    "is_scanned": false
+  }
+}

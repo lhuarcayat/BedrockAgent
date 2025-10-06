@@ -1,0 +1,90 @@
+{
+  "extraction_data": {
+    "path": "CECRL/7250048/7250048_2020-02-29.pdf",
+    "result": {
+      "firstName": "LEONCIO DE JESUS",
+      "lastName": "HERRERA MESA",
+      "country_issuer": "Colombia",
+      "nationality": "Colombia",
+      "identificationType": "Cédula de Ciudadanía",
+      "identificationNumber": "7.250.048",
+      "message": ""
+    },
+    "document_type": "person",
+    "documentNumber": "7250048",
+    "category": "CECRL"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "```json { \"result\": { \"firstName\": \"LEONCIO DE JESUS\", \"lastName\": \"HERRERA MESA\", \"country_issuer\": \"Colombia\", \"nationality\": \"Colombia\", \"identificationType\": \"Cédula de Ciudadanía\", \"identificationNumber\": \"7.250.048\", \"message\": \"\" }, \"document_type\": \"person\", \"category\": \"CECRL\" } ```"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 10,
+      "cache_creation_input_tokens": 6006,
+      "cache_read_input_tokens": 0,
+      "output_tokens": 764
+    },
+    "ResponseMetadata": {
+      "RequestId": "5ebe4201-47c0-4db0-bd14-b94694385242",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Thu, 28 Aug 2025 15:40:37 GMT",
+        "content-type": "application/json",
+        "content-length": "3310",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "5ebe4201-47c0-4db0-bd14-b94694385242",
+        "x-amzn-bedrock-invocation-latency": "16499",
+        "x-amzn-bedrock-cache-write-input-token-count": "6006",
+        "x-amzn-bedrock-cache-read-input-token-count": "0",
+        "x-amzn-bedrock-output-token-count": "764",
+        "x-amzn-bedrock-input-token-count": "10"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_01DJXvhnFM3a5YZr5TDAK5ww",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-3-7-sonnet-20250219",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "I need to extract information from the Colombian ID document (Cédula de Ciudadanía) shown in the image. Let me analyze the document and extract the required information according to the schema. First, let me identify what kind of document this is and verify it's an official government ID: - The document has \"REPUBLICA DE COLOMBIA\" at the top - It's labeled as \"IDENTIFICACION PERSONAL\" and \"CEDULA DE CIUDADANIA\" - It contains standard ID elements: photo, signature, fingerprint, barcode - This is definitely an official Colombian national ID card (Cédula de Ciudadanía) Now I'll extract the required fields using the structured field detection method: 1. **firstName**: - I see \"NOMBRES: LEONCIO DE JESUS\" - So firstName = \"LEONCIO DE JESUS\" 2. **lastName**: - I see \"APELLIDOS: HERRERA MESA\" - So lastName = \"HERRERA MESA\" 3. **country_issuer**: - The document header clearly states \"REPUBLICA DE COLOMBIA\" - So country_issuer = \"Colombia\" 4. **nationality**: - There's no explicit nationality field shown - Birth place is listed as \"REMEDIOS (ANTIOQUIA)\" - Since this is a Colombian Cédula de Ciudadanía and the birthplace is in Colombia, we can determine the nationality is Colombian - So nationality = \"Colombia\" 5. **identificationType**: - The document is clearly labeled \"CEDULA DE CIUDADANIA\" - So identificationType = \"Cédula de Ciudadanía\" 6. **identificationNumber**: - I see \"NUMERO: 7.250.048\" - So identificationNumber = \"7.250.048\" 7. **Additional information** (not part of the required schema but visible in the document): - Birth date: 27-SEP-1964 - Birth place: REMEDIOS (ANTIOQUIA) - Height: 1.60 - Blood type: A+ - Sex: M (Male) - Issue date and place: 22-MAR-1983 PUERTO BOYACA 8. **message**: - The document is clearly an official ID and all fields could be extracted properly - So message = \"\" (empty string) Let me validate my extraction: - All required fields have been identified - The document is definitely an official government ID (Colombian Cédula de Ciudadanía) - The format of the extracted information matches what's visible in the document Now I'll format the output according to the required JSON schema:",
+          "signature": "ErcBCkgIBxABGAIiQGOxI0eFtgG/Oc0fLoTBzQPKwUkXqpPQfYiR8ko2372NSrYUTubp5peq6M/s6iWsZB5SVE/Hwl9akw+KXL8zuIMSDHYMKcj82fBurTU9RRoMaKEVukYo9UY6l5lOIjDdbmdEVfrEHlYmbxeIZlRvaUNzmscrpq+6powzub58d0nfirU/+Gg3IFuh0ZS8uCkqHUyHQ/FZ5HNtra2ACDTApu4BUPNYrDGy/AVx5y1EGAI="
+        },
+        {
+          "type": "text",
+          "text": "```json { \"result\": { \"firstName\": \"LEONCIO DE JESUS\", \"lastName\": \"HERRERA MESA\", \"country_issuer\": \"Colombia\", \"nationality\": \"Colombia\", \"identificationType\": \"Cédula de Ciudadanía\", \"identificationNumber\": \"7.250.048\", \"message\": \"\" }, \"document_type\": \"person\", \"category\": \"CECRL\" } ```"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 10,
+        "cache_creation_input_tokens": 6006,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 764
+      }
+    },
+    "model_id": "us.anthropic.claude-3-7-sonnet-20250219-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 8000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "model_used": "us.anthropic.claude-3-7-sonnet-20250219-v1:0",
+  "api_used": "invoke_model"
+}

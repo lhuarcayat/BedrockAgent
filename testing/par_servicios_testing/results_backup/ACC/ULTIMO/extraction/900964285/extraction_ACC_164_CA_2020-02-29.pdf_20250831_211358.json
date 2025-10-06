@@ -1,0 +1,129 @@
+{
+  "extraction_data": {
+    "result": {
+      "PrincipalCompanyName": "Asesorías y Gestiones Ambientales SAS",
+      "DocumentCategory": "Equity Composition",
+      "TaxId": "900.964.285-3",
+      "IdentificationType": "NIT",
+      "Country": "Colombia",
+      "IdentificationDetails": {
+        "Source": "IdAnalysis",
+        "Indicators": [
+          "NIT (Colombia)"
+        ],
+        "ConflictingSources": [],
+        "RequiresReview": "false"
+      },
+      "RelatedParties": [
+        {
+          "Type": "person",
+          "FirstName": "Jaime Alexander",
+          "LastName": "Franco Pedraza",
+          "IdType": "CC",
+          "IdNumber": "79.770.147",
+          "RelationshipType": "Shareholder",
+          "ParticipationPercentage": "33,33%",
+          "TimeFound": "2",
+          "Job": "Representante Legal"
+        },
+        {
+          "Type": "person",
+          "FirstName": "Martha Lilia",
+          "LastName": "Celis Gordo",
+          "IdType": "CC",
+          "IdNumber": "51.880.385",
+          "RelationshipType": "Shareholder",
+          "ParticipationPercentage": "33,33%",
+          "TimeFound": "1",
+          "Job": ""
+        },
+        {
+          "Type": "person",
+          "FirstName": "Giovanny Andres",
+          "LastName": "Vega Forero",
+          "IdType": "CC",
+          "IdNumber": "79.958.347",
+          "RelationshipType": "Shareholder",
+          "ParticipationPercentage": "33,33%",
+          "TimeFound": "1",
+          "Job": ""
+        }
+      ]
+    },
+    "DocumentType": "company",
+    "Category": "ACC"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "{ \"result\": { \"PrincipalCompanyName\": \"Asesorías y Gestiones Ambientales SAS\", \"DocumentCategory\": \"Equity Composition\", \"TaxId\": \"900.964.285-3\", \"IdentificationType\": \"NIT\", \"Country\": \"Colombia\", \"IdentificationDetails\": { \"Source\": \"IdAnalysis\", \"Indicators\": [ \"NIT (Colombia)\" ], \"ConflictingSources\": [], \"RequiresReview\": \"false\" }, \"RelatedParties\": [ { \"Type\": \"person\", \"FirstName\": \"Jaime Alexander\", \"LastName\": \"Franco Pedraza\", \"IdType\": \"CC\", \"IdNumber\": \"79.770.147\", \"RelationshipType\": \"Shareholder\", \"ParticipationPercentage\": \"33,33%\", \"TimeFound\": \"2\", \"Job\": \"Representante Legal\" }, { \"Type\": \"person\", \"FirstName\": \"Martha Lilia\", \"LastName\": \"Celis Gordo\", \"IdType\": \"CC\", \"IdNumber\": \"51.880.385\", \"RelationshipType\": \"Shareholder\", \"ParticipationPercentage\": \"33,33%\", \"TimeFound\": \"1\", \"Job\": \"\" }, { \"Type\": \"person\", \"FirstName\": \"Giovanny Andres\", \"LastName\": \"Vega Forero\", \"IdType\": \"CC\", \"IdNumber\": \"79.958.347\", \"RelationshipType\": \"Shareholder\", \"ParticipationPercentage\": \"33,33%\", \"TimeFound\": \"1\", \"Job\": \"\" } ] }, \"DocumentType\": \"company\", \"Category\": \"ACC\" }"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 1584,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 4822,
+      "output_tokens": 1417
+    },
+    "ResponseMetadata": {
+      "RequestId": "0bb63cef-b47b-437c-a53b-187d17865626",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Mon, 01 Sep 2025 02:13:57 GMT",
+        "content-type": "application/json",
+        "content-length": "8583",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "0bb63cef-b47b-437c-a53b-187d17865626",
+        "x-amzn-bedrock-invocation-latency": "24618",
+        "x-amzn-bedrock-cache-write-input-token-count": "0",
+        "x-amzn-bedrock-cache-read-input-token-count": "4822",
+        "x-amzn-bedrock-output-token-count": "1417",
+        "x-amzn-bedrock-input-token-count": "1584"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_01PnQryCt8NyQCZcxAAwgDrL",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-sonnet-4-20250514",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Let me analyze this Spanish document that appears to be a shareholder composition certificate. From the document, I can extract: 1. **PrincipalCompanyName**: Looking at the header and document content, I can see \"Asesorías y Gestiones Ambientales SAS\" mentioned multiple times, and it's specifically mentioned in the context \"sociedad Asesorías y Gestiones Ambientales SAS con NIT 900.964.285-3\". The full text says \"ASESORÍAS Y GESTIONES AMBIENTALES SAS\" and \"NIT 900.964.285-3\". 2. **DocumentCategory**: This should be \"Equity Composition\" as per the rules. 3. **Country**: I need to look for indicators. I see \"NIT\" which according to the COMPANY_ID table corresponds to Bolivia or Colombia. The document has Colombian formatting patterns and the email domain appears to be Colombian. The address mentions \"CALLE 3 D SUR No. 71 D 19\" which looks like Colombian addressing format. I'll set this to Colombia. 4. **TaxId**: I can see \"NIT 900.964.285-3\" mentioned for the main company. 5. **IdentificationType**: \"NIT\" is clearly mentioned. 6. **IdentificationDetails**: - Source: \"IdAnalysis\" since I'm inferring from NIT being Colombian - Indicators: [\"NIT (Colombia)\"] - ConflictingSources: Need to check if percentages add up - RequiresReview: Need to determine based on conflicts 7. **RelatedParties**: Looking at the table, I can see three shareholders: - JAIME ALEXANDER FRANCO PEDRAZA with NIT 79770147, 20.000 shares, 20.000.000 capital, 33.33% - MARTHA LILIA CELIS GORDO with NIT 51880385, 20.000 shares, 20.000.000 capital, 33.33% - GIOVANNY ANDRES VEGA FORERO with NIT 79958347, 20.000 shares, 20.000.000 capital, 33.33% I'm noticing a discrepancy with the identification types. The table shows \"NIT\", but the identification numbers actually appear to be Colombian personal identification numbers (Cedula de Ciudadania). Each shareholder's ID follows the CC format typical for individual citizen identifications in Colombia. The ownership structure looks balanced, with three shareholders each holding approximately 33.33% of the company. Jaime Alexander Franco Pedraza is listed as the Legal Representative, indicating an official leadership role. The identification numbers consistently match the Colombian CC pattern of 8 digits, confirming they are personal IDs rather than corporate tax identification numbers. I've parsed the names into first and last name components, revealing a typical Colombian naming convention with multiple given names and two-part surnames.",
+          "signature": "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"
+        },
+        {
+          "type": "text",
+          "text": "{ \"result\": { \"PrincipalCompanyName\": \"Asesorías y Gestiones Ambientales SAS\", \"DocumentCategory\": \"Equity Composition\", \"TaxId\": \"900.964.285-3\", \"IdentificationType\": \"NIT\", \"Country\": \"Colombia\", \"IdentificationDetails\": { \"Source\": \"IdAnalysis\", \"Indicators\": [ \"NIT (Colombia)\" ], \"ConflictingSources\": [], \"RequiresReview\": \"false\" }, \"RelatedParties\": [ { \"Type\": \"person\", \"FirstName\": \"Jaime Alexander\", \"LastName\": \"Franco Pedraza\", \"IdType\": \"CC\", \"IdNumber\": \"79.770.147\", \"RelationshipType\": \"Shareholder\", \"ParticipationPercentage\": \"33,33%\", \"TimeFound\": \"2\", \"Job\": \"Representante Legal\" }, { \"Type\": \"person\", \"FirstName\": \"Martha Lilia\", \"LastName\": \"Celis Gordo\", \"IdType\": \"CC\", \"IdNumber\": \"51.880.385\", \"RelationshipType\": \"Shareholder\", \"ParticipationPercentage\": \"33,33%\", \"TimeFound\": \"1\", \"Job\": \"\" }, { \"Type\": \"person\", \"FirstName\": \"Giovanny Andres\", \"LastName\": \"Vega Forero\", \"IdType\": \"CC\", \"IdNumber\": \"79.958.347\", \"RelationshipType\": \"Shareholder\", \"ParticipationPercentage\": \"33,33%\", \"TimeFound\": \"1\", \"Job\": \"\" } ] }, \"DocumentType\": \"company\", \"Category\": \"ACC\" }"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 1584,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 4822,
+        "output_tokens": 1417
+      }
+    },
+    "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 8000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+  "api_used": "invoke_model"
+}

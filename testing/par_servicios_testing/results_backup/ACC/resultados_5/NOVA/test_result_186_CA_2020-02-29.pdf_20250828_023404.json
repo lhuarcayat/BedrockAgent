@@ -1,0 +1,154 @@
+{
+  "document_name": "186_CA_2020-02-29.pdf",
+  "category": "ACC",
+  "classification_success": true,
+  "extraction_success": true,
+  "overall_success": true,
+  "timestamp": "2025-08-28T02:33:51.795697",
+  "classification_result": {
+    "classification_data": {
+      "category": "ACC",
+      "text": "COMPOSICION ACCIONARIA NOMBRE DE LA ENTIDAD: S & T INGENERIA Y CONSULTORIA SAS NIT 802,013,773-0 INFORMACION A: 19 DE MAYO DEL AÑO 2020 NOMBRE DEL ACCIONISTA C.C. NATURALEZA JURIDICA N° DE VALOR UNITARIO % DE PARTICIPAC DEL SOCIO ACCIONES DE LAS ACCIONES ION SOBRE EL CAPITAL TANIA ELENA CHEMAS AVENDANO 32.728.993 PERSONAL NATURAL 280 $0 1.000.000 50,00% FARID EDUARDO RADI SAGBINI 77.025.796 PERSONAL NATURAL 280 $ 1.000.000 50,00% TOTAL ACCIONES 560 100% [SIGNATURE] Der Rady FARID EDUARDO RADI SAGBINI REPRESENTANTE LEGAL [SIGNATURE] ZULMASPINO ALVAREZ CONTADOR TP-49271-T",
+      "document_number": "802013773",
+      "path": "ACC/802013773/186_CA_2020-02-29.pdf"
+    },
+    "raw_response": {
+      "ResponseMetadata": {
+        "RequestId": "aec30883-c4f5-4ef7-b1ed-d19bd8b070eb",
+        "HTTPStatusCode": 200,
+        "HTTPHeaders": {
+          "date": "Thu, 28 Aug 2025 07:33:57 GMT",
+          "content-type": "application/json",
+          "content-length": "1054",
+          "connection": "keep-alive",
+          "x-amzn-requestid": "aec30883-c4f5-4ef7-b1ed-d19bd8b070eb"
+        },
+        "RetryAttempts": 0
+      },
+      "output": {
+        "message": {
+          "role": "assistant",
+          "content": [
+            {
+              "text": "```json { \"category\": \"ACC\", \"text\": \"COMPOSICION ACCIONARIA\\nNOMBRE DE LA ENTIDAD: S & T INGENERIA Y CONSULTORIA SAS\\nNIT 802,013,773-0\\nINFORMACION A:\\n19 DE MAYO\\nDEL AÑO 2020\\n\\nNOMBRE DEL ACCIONISTA\\tC.C.\\tNATURALEZA JURIDICA\\tN° DE\\tVALOR UNITARIO\\t% DE\\tPARTICIPAC\\n\\tDEL SOCIO\\tACCIONES\\tDE LAS ACCIONES\\tION SOBRE\\tEL CAPITAL\\nTANIA ELENA CHEMAS AVENDANO\\t32.728.993\\tPERSONAL NATURAL\\t280\\t$0\\t1.000.000\\t50,00%\\nFARID EDUARDO RADI SAGBINI\\t77.025.796\\tPERSONAL NATURAL\\t280\\t$\\t1.000.000\\t50,00%\\nTOTAL ACCIONES\\t\\t\\t560\\t\\t\\t\\t100%\\n\\n[SIGNATURE]\\nDer Rady\\nFARID EDUARDO RADI SAGBINI\\nREPRESENTANTE LEGAL\\n\\n[SIGNATURE]\\nZULMASPINO ALVAREZ\\nCONTADOR\\nTP-49271-T\" } ```"
+            }
+          ]
+        }
+      },
+      "stopReason": "end_turn",
+      "usage": {
+        "inputTokens": 1781,
+        "outputTokens": 362,
+        "totalTokens": 4287,
+        "cacheReadInputTokens": 2144,
+        "cacheWriteInputTokens": 0
+      },
+      "metrics": {
+        "latencyMs": 6499
+      },
+      "model_id": "us.amazon.nova-pro-v1:0",
+      "api_used": "converse",
+      "model_params": {
+        "maxTokens": 8000,
+        "topP": 1,
+        "temperature": 0
+      }
+    },
+    "expected_category": "ACC",
+    "model_used": "us.amazon.nova-pro-v1:0",
+    "api_used": "converse",
+    "pdf_info": {
+      "original_size": 53159,
+      "first_page_size": 51968,
+      "is_scanned": true
+    }
+  },
+  "extraction_result": {
+    "extraction_data": {
+      "path": "ACC/802013773/186_CA_2020-02-29.pdf",
+      "result": {
+        "companyName": "S & T INGENERIA Y CONSULTORIA SAS",
+        "documentCategory": "Equity Composition",
+        "taxId": "802,013,773-0",
+        "country": "Colombia",
+        "identificationDetails": {
+          "source": "id_analysis",
+          "indicators": [
+            "NIT format matches Colombia"
+          ],
+          "conflictingSources": [],
+          "requiresReview": "false"
+        },
+        "relatedParties": [
+          {
+            "type": "person",
+            "firstName": "TANIA ELENA",
+            "lastName": "CHEMAS AVENDANO",
+            "identificationType": "C.C.",
+            "identificationNumber": "32.728.993",
+            "relationshipType": "Shareholder",
+            "participationPercentage": "50,00%",
+            "timeFound": "1",
+            "job": ""
+          },
+          {
+            "type": "person",
+            "firstName": "FARID EDUARDO",
+            "lastName": "RADI SAGBINI",
+            "identificationType": "C.C.",
+            "identificationNumber": "77.025.796",
+            "relationshipType": "Shareholder",
+            "participationPercentage": "50,00%",
+            "timeFound": "1",
+            "job": "REPRESENTANTE LEGAL"
+          }
+        ]
+      },
+      "documentType": "company",
+      "documentNumber": "802013773",
+      "category": "ACC"
+    },
+    "raw_response": {
+      "ResponseMetadata": {
+        "RequestId": "f4d28ea8-7049-44da-823e-033c15895133",
+        "HTTPStatusCode": 200,
+        "HTTPHeaders": {
+          "date": "Thu, 28 Aug 2025 07:34:03 GMT",
+          "content-type": "application/json",
+          "content-length": "1505",
+          "connection": "keep-alive",
+          "x-amzn-requestid": "f4d28ea8-7049-44da-823e-033c15895133"
+        },
+        "RetryAttempts": 0
+      },
+      "output": {
+        "message": {
+          "role": "assistant",
+          "content": [
+            {
+              "text": "```json { \"result\": { \"companyName\": \"S & T INGENERIA Y CONSULTORIA SAS\", \"documentCategory\": \"Equity Composition\", \"taxId\": \"802,013,773-0\", \"country\": \"Colombia\", \"identificationDetails\": { \"source\": \"id_analysis\", \"indicators\": [ \"NIT format matches Colombia\" ], \"conflictingSources\": [], \"requiresReview\": \"false\" }, \"relatedParties\": [ { \"type\": \"person\", \"firstName\": \"TANIA ELENA\", \"lastName\": \"CHEMAS AVENDANO\", \"identificationType\": \"C.C.\", \"identificationNumber\": \"32.728.993\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"50,00%\", \"timeFound\": \"1\", \"job\": \"\" }, { \"type\": \"person\", \"firstName\": \"FARID EDUARDO\", \"lastName\": \"RADI SAGBINI\", \"identificationType\": \"C.C.\", \"identificationNumber\": \"77.025.796\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"50,00%\", \"timeFound\": \"1\", \"job\": \"REPRESENTANTE LEGAL\" } ] }, \"documentType\": \"company\", \"category\": \"ACC\" } ```"
+            }
+          ]
+        }
+      },
+      "stopReason": "end_turn",
+      "usage": {
+        "inputTokens": 5398,
+        "outputTokens": 332,
+        "totalTokens": 5730
+      },
+      "metrics": {
+        "latencyMs": 6114
+      },
+      "model_id": "us.amazon.nova-pro-v1:0",
+      "api_used": "converse",
+      "model_params": {
+        "maxTokens": 8000,
+        "topP": 1,
+        "temperature": 0
+      }
+    },
+    "model_used": "us.amazon.nova-pro-v1:0",
+    "api_used": "converse"
+  }
+}

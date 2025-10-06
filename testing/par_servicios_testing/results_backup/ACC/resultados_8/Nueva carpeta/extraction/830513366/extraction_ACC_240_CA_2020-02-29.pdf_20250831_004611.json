@@ -1,0 +1,130 @@
+{
+  "extraction_data": {
+    "result": {
+      "companyName": "NEWSAT S.A.S.",
+      "documentCategory": "Equity Composition",
+      "taxId": "830.513.366-3",
+      "country": "Colombia",
+      "identificationDetails": {
+        "source": "text_reference",
+        "indicators": [
+          "Cámara de Comercio de Bogotá",
+          "Normas de Auditoria Generalmente Aceptadas en Colombia",
+          "BOGOTA D.C."
+        ],
+        "conflictingSources": [],
+        "requiresReview": "false"
+      },
+      "relatedParties": [
+        {
+          "type": "person",
+          "firstName": "Carlos Enrique",
+          "lastName": "Rosero Ceron",
+          "identificationType": "C.C.",
+          "identificationNumber": "6386024",
+          "relationshipType": "Shareholder",
+          "participationPercentage": "40%",
+          "timeFound": "1",
+          "job": ""
+        },
+        {
+          "type": "person",
+          "firstName": "Shai",
+          "lastName": "Bercovich",
+          "identificationType": "C.C.",
+          "identificationNumber": "301680",
+          "relationshipType": "Shareholder",
+          "participationPercentage": "40%",
+          "timeFound": "1",
+          "job": ""
+        },
+        {
+          "type": "person",
+          "firstName": "Diego Alejandro",
+          "lastName": "Salazar Vasquez",
+          "identificationType": "C.C.",
+          "identificationNumber": "91499446",
+          "relationshipType": "Shareholder",
+          "participationPercentage": "20%",
+          "timeFound": "1",
+          "job": ""
+        }
+      ]
+    },
+    "documentType": "company",
+    "category": "ACC"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "{ \"result\": { \"companyName\": \"NEWSAT S.A.S.\", \"documentCategory\": \"Equity Composition\", \"taxId\": \"830.513.366-3\", \"country\": \"Colombia\", \"identificationDetails\": { \"source\": \"text_reference\", \"indicators\": [ \"Cámara de Comercio de Bogotá\", \"Normas de Auditoria Generalmente Aceptadas en Colombia\", \"BOGOTA D.C.\" ], \"conflictingSources\": [], \"requiresReview\": \"false\" }, \"relatedParties\": [ { \"type\": \"person\", \"firstName\": \"Carlos Enrique\", \"lastName\": \"Rosero Ceron\", \"identificationType\": \"C.C.\", \"identificationNumber\": \"6386024\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"40%\", \"timeFound\": \"1\", \"job\": \"\" }, { \"type\": \"person\", \"firstName\": \"Shai\", \"lastName\": \"Bercovich\", \"identificationType\": \"C.C.\", \"identificationNumber\": \"301680\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"40%\", \"timeFound\": \"1\", \"job\": \"\" }, { \"type\": \"person\", \"firstName\": \"Diego Alejandro\", \"lastName\": \"Salazar Vasquez\", \"identificationType\": \"C.C.\", \"identificationNumber\": \"91499446\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"20%\", \"timeFound\": \"1\", \"job\": \"\" } ] }, \"documentType\": \"company\", \"category\": \"ACC\" }"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 9,
+      "cache_creation_input_tokens": 6695,
+      "cache_read_input_tokens": 0,
+      "output_tokens": 1218
+    },
+    "ResponseMetadata": {
+      "RequestId": "15ca9f12-c3cc-47bd-b16d-e1a0e0befd0b",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Sun, 31 Aug 2025 05:46:11 GMT",
+        "content-type": "application/json",
+        "content-length": "7064",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "15ca9f12-c3cc-47bd-b16d-e1a0e0befd0b",
+        "x-amzn-bedrock-invocation-latency": "14702",
+        "x-amzn-bedrock-cache-write-input-token-count": "6695",
+        "x-amzn-bedrock-cache-read-input-token-count": "0",
+        "x-amzn-bedrock-output-token-count": "1218",
+        "x-amzn-bedrock-input-token-count": "9"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_01TFg1EyXoPYsTU5WP4abRmM",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-sonnet-4-20250514",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Let me analyze the document to extract the required information. Looking at the document, I can see: 1. **Company Name**: \"NEWSAT S.A.S.\" - This is clearly indicated throughout the document as the issuing company. 2. **Tax ID (NIT)**: \"830.513.366-3\" - This is clearly stated as \"NIT. 830.513.366-3\" 3. **Country**: This appears to be Colombia based on: - The use of \"NIT\" which is Colombia's tax identification system - Reference to \"Cámara de Comercio de Bogotá\" (Bogotá Chamber of Commerce) - Reference to \"Normas de Auditoria Generalmente Aceptadas en Colombia\" (Generally Accepted Auditing Standards in Colombia) - Address shows \"BOGOTA D.C.\" 4. **Related Parties** (Shareholders): From the shareholder composition table, I can see three shareholders: - CARLOS ENRIQUE ROSERO CERON - ID: 6386024 - 148,000 shares - Value: $1,480,000,000 - Percentage: 40% - SHAI BERCOVICH - ID: 301680 - 148,000 shares - Value: $1,480,000,000 - Percentage: 40% - DIEGO ALEJANDRO SALAZAR VASQUEZ - ID: 91499446 - 74,000 shares - Value: $740,000,000 - Percentage: 20% Looking at the identification numbers: - 6386024: This looks like a CC (Cédula de Ciudadanía) - 7 digits starting with non-zero - 301680: This is shorter (6 digits) - could be CE (Cédula de Extranjería) - 91499446: Confirms as a CC with 8 digits starting with a non-zero number I'll verify the identification patterns for Colombian documents. The Citizens' ID (C.C.) follows a specific numeric pattern of 4-10 digits without letters, while the Foreign ID (C.E.) can include 1-5 initial letters followed by numbers. The patterns match the shareholders' identification numbers precisely. The three identification numbers validate against the CC pattern, representing individual persons. Their ownership percentages total 100%, indicating no ownership conflicts. Based on the comprehensive review, no further investigation is needed.",
+          "signature": "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"
+        },
+        {
+          "type": "text",
+          "text": "{ \"result\": { \"companyName\": \"NEWSAT S.A.S.\", \"documentCategory\": \"Equity Composition\", \"taxId\": \"830.513.366-3\", \"country\": \"Colombia\", \"identificationDetails\": { \"source\": \"text_reference\", \"indicators\": [ \"Cámara de Comercio de Bogotá\", \"Normas de Auditoria Generalmente Aceptadas en Colombia\", \"BOGOTA D.C.\" ], \"conflictingSources\": [], \"requiresReview\": \"false\" }, \"relatedParties\": [ { \"type\": \"person\", \"firstName\": \"Carlos Enrique\", \"lastName\": \"Rosero Ceron\", \"identificationType\": \"C.C.\", \"identificationNumber\": \"6386024\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"40%\", \"timeFound\": \"1\", \"job\": \"\" }, { \"type\": \"person\", \"firstName\": \"Shai\", \"lastName\": \"Bercovich\", \"identificationType\": \"C.C.\", \"identificationNumber\": \"301680\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"40%\", \"timeFound\": \"1\", \"job\": \"\" }, { \"type\": \"person\", \"firstName\": \"Diego Alejandro\", \"lastName\": \"Salazar Vasquez\", \"identificationType\": \"C.C.\", \"identificationNumber\": \"91499446\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"20%\", \"timeFound\": \"1\", \"job\": \"\" } ] }, \"documentType\": \"company\", \"category\": \"ACC\" }"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 9,
+        "cache_creation_input_tokens": 6695,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 1218
+      }
+    },
+    "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 8000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+  "api_used": "invoke_model"
+}

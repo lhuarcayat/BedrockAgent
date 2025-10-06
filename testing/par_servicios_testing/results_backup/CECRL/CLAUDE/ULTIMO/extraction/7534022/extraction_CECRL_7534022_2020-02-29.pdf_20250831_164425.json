@@ -1,0 +1,88 @@
+{
+  "extraction_data": {
+    "result": {
+      "FirstName": "JORGE DIEGO",
+      "LastName": "RESTREPO PEREZ",
+      "CountryIssuer": "Colombia",
+      "Nationality": "colombiano",
+      "IdentificationType": "Cédula de Ciudadanía",
+      "IdentificationNumber": "7.534.022",
+      "Message": ""
+    },
+    "document_type": "person",
+    "category": "CECRL"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "```json { \"result\": { \"FirstName\": \"JORGE DIEGO\", \"LastName\": \"RESTREPO PEREZ\", \"CountryIssuer\": \"Colombia\", \"Nationality\": \"colombiano\", \"IdentificationType\": \"Cédula de Ciudadanía\", \"IdentificationNumber\": \"7.534.022\", \"Message\": \"\" }, \"document_type\": \"person\", \"category\": \"CECRL\" } ```"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 1583,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 4300,
+      "output_tokens": 691
+    },
+    "ResponseMetadata": {
+      "RequestId": "ac286413-b5ba-4f1b-81ee-a7f4d24bfc98",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Sun, 31 Aug 2025 21:44:24 GMT",
+        "content-type": "application/json",
+        "content-length": "5592",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "ac286413-b5ba-4f1b-81ee-a7f4d24bfc98",
+        "x-amzn-bedrock-invocation-latency": "10571",
+        "x-amzn-bedrock-cache-write-input-token-count": "0",
+        "x-amzn-bedrock-cache-read-input-token-count": "4300",
+        "x-amzn-bedrock-output-token-count": "691",
+        "x-amzn-bedrock-input-token-count": "1583"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_01731V9LVd1C8bCBFjhiwgaf",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-sonnet-4-20250514",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "I need to analyze this Colombian identification document. Looking at the images, I can see both the front and back of what appears to be a Cédula de Ciudadanía (Colombian citizenship card). From the front of the document, I can see: - \"REPUBLICA DE COLOMBIA\" - \"IDENTIFICACION PERSONAL\" - \"CEDULA DE CIUDADANIA\" - NUMERO: 7.534.022 - What appears to be \"RESTREPO PEREZ\" - \"APELLIDOS\" - \"JORGE DIEGO\" This seems to be a typical Colombian document with the \"misaligned\" layout mentioned in the instructions. Let me analyze this carefully: Looking at the structure, I can see: - NUMERO: 7.534.022 - RESTREPO PEREZ (this appears after the number) - APELLIDOS (this label appears) - JORGE DIEGO (this appears near the APELLIDOS label) Based on the extraction methodology for Colombian documents with misaligned layout: - The document shows \"RESTREPO PEREZ\" which appears to be the surnames (last names) - Then there's the \"APELLIDOS\" label - Then \"JORGE DIEGO\" which would be the first names This fits the pattern described where Colombian documents have surnames first, then the APELLIDOS label, then the first names, then the NOMBRES label (though I don't clearly see NOMBRES label in this image). From the back of the document, I can see: - FECHA DE NACIMIENTO: 05-JUN-1960 - ARMENIA (QUINDIO) - this appears to be place of birth - Various other administrative details So extracting the information: 1. FirstName: \"JORGE DIEGO\" (the names that appear near the APELLIDOS label, following the misaligned layout pattern) 2. LastName: \"RESTREPO PEREZ\" (the surnames that appear first in the document) 3. The document clearly originates from the Colombian government, with specific administrative details confirming its national identity. 4. The identification number uniquely identifies the individual within the national system. 5. Additional details like birthplace and date provide comprehensive personal identification information.",
+          "signature": "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"
+        },
+        {
+          "type": "text",
+          "text": "```json { \"result\": { \"FirstName\": \"JORGE DIEGO\", \"LastName\": \"RESTREPO PEREZ\", \"CountryIssuer\": \"Colombia\", \"Nationality\": \"colombiano\", \"IdentificationType\": \"Cédula de Ciudadanía\", \"IdentificationNumber\": \"7.534.022\", \"Message\": \"\" }, \"document_type\": \"person\", \"category\": \"CECRL\" } ```"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 1583,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 4300,
+        "output_tokens": 691
+      }
+    },
+    "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 8000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+  "api_used": "invoke_model"
+}

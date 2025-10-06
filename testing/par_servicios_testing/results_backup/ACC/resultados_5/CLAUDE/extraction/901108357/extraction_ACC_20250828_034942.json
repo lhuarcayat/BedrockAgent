@@ -1,0 +1,109 @@
+{
+  "extraction_data": {
+    "path": "ACC/901108357/204_CA_2020-02-29.pdf",
+    "result": {
+      "companyName": "QUIMEL INGENIERIA S.A.S.",
+      "documentCategory": "Equity Composition",
+      "taxId": "901.108.357-8",
+      "country": "Colombia",
+      "identificationDetails": {
+        "source": "id_analysis",
+        "indicators": [
+          "NIT format tax ID",
+          "document structure consistent with Colombian equity certifications"
+        ],
+        "conflictingSources": [],
+        "requiresReview": "false"
+      },
+      "relatedParties": [
+        {
+          "type": "person",
+          "firstName": "JOSE CARLOS",
+          "lastName": "MENDOZA CARRANZA",
+          "identificationType": "C.E.",
+          "identificationNumber": "737708",
+          "relationshipType": "Shareholder",
+          "participationPercentage": "100",
+          "timeFound": "1",
+          "job": "REPRESENTANTE LEGAL"
+        }
+      ]
+    },
+    "documentType": "company",
+    "documentNumber": "901108357",
+    "category": "ACC"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "```json { \"result\": { \"companyName\": \"QUIMEL INGENIERIA S.A.S.\", \"documentCategory\": \"Equity Composition\", \"taxId\": \"901.108.357-8\", \"country\": \"Colombia\", \"identificationDetails\": { \"source\": \"id_analysis\", \"indicators\": [ \"NIT format tax ID\", \"document structure consistent with Colombian equity certifications\" ], \"conflictingSources\": [], \"requiresReview\": \"false\" }, \"relatedParties\": [ { \"type\": \"person\", \"firstName\": \"JOSE CARLOS\", \"lastName\": \"MENDOZA CARRANZA\", \"identificationType\": \"C.E.\", \"identificationNumber\": \"737708\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"100\", \"timeFound\": \"1\", \"job\": \"REPRESENTANTE LEGAL\" } ] }, \"documentType\": \"company\", \"category\": \"ACC\" } ```"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 425,
+      "cache_creation_input_tokens": 6487,
+      "cache_read_input_tokens": 0,
+      "output_tokens": 871
+    },
+    "ResponseMetadata": {
+      "RequestId": "17d849c6-e7f0-4bd0-8bf0-42c658cb2221",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Thu, 28 Aug 2025 08:49:42 GMT",
+        "content-type": "application/json",
+        "content-length": "3777",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "17d849c6-e7f0-4bd0-8bf0-42c658cb2221",
+        "x-amzn-bedrock-invocation-latency": "19496",
+        "x-amzn-bedrock-cache-write-input-token-count": "6487",
+        "x-amzn-bedrock-cache-read-input-token-count": "0",
+        "x-amzn-bedrock-output-token-count": "871",
+        "x-amzn-bedrock-input-token-count": "425"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_01MQCHxVpnFsJWjxEDAnQecC",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-3-7-sonnet-20250219",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Let's analyze this document step-by-step following the extraction rules: ## Step 1: Document Analysis This appears to be an equity composition certificate for a company called \"QUIMEL INGENIERIA S.A.S.\" The document is in Spanish and is a certification issued by the company's accountant. ## Step 2: Root Level Extraction - **companyName**: QUIMEL INGENIERIA S.A.S. - **taxId**: 901.108.357-8 - **documentCategory**: Equity Composition (fixed value per instructions) - **country**: Need to determine this based on our rules ### Country Determination: The document doesn't explicitly mention a country name, but: 1. The shareholder nationality is mentioned as \"SALVADOREÑO\" 2. The tax ID format \"901.108.357-8\" follows the Colombian NIT format (XXX.XXX.XXX-X) 3. \"NIT\" is specifically mentioned, which is the Colombian tax ID type 4. The document is in Spanish Based on the tax ID format and the \"NIT\" reference, we can determine the country is Colombia. **identificationDetails**: - source: \"id_analysis\" (since we're using the NIT format to determine country) - indicators: [\"NIT\", \"Tax ID format 901.108.357-8\"] - conflictingSources: [] (no conflicts found) - requiresReview: \"false\" (all critical fields can be determined) ## Step 3: Related Parties Processing There is one shareholder mentioned: **PersonRelatedParty**: - type: \"person\" - firstName: \"JOSE CARLOS\" - lastName: \"MENDOZA CARRANZA\" - identificationType: Based on Colombia rules, this would be \"C.E.\" (cédula de extranjería) as indicated in the document - identificationNumber: \"737708\" - relationshipType: \"Shareholder\" - participationPercentage: \"100%\" - timeFound: \"1\" (appears only once) - job: \"REPRESENTANTE LEGAL\" (explicitly mentioned) ## Step 4: Validation & Cross-checking - The document contains all necessary information - The tax ID type (NIT) aligns with the identified country (Colombia) - The identification type (C.E.) is valid for Colombia according to hash tables - Participation percentages sum to 100% - No conflicts found in the data Now let's compile this into the required JSON format:",
+          "signature": "ErcBCkgIBxABGAIiQBfJOm63X5r0w/Go6pQTfjgo/ti47QzevzLJekvSGZYNffs50FbAU0LN8rKq7JwFrpjKIohSa8TQVtVlLPtroAISDGvuP32bIg6a+eu/6hoMQZWXNOssRWGr7zD6IjCdJs7iXirInGS24v9motvC/2s7X4uvXrYiVAykTLDlDHtPlXBgnzqGX0+2iGHG7cMqHZrp3RqGmBsJ0XKuh6vLO5hKQshF+goKq2f9fZOvGAI="
+        },
+        {
+          "type": "text",
+          "text": "```json { \"result\": { \"companyName\": \"QUIMEL INGENIERIA S.A.S.\", \"documentCategory\": \"Equity Composition\", \"taxId\": \"901.108.357-8\", \"country\": \"Colombia\", \"identificationDetails\": { \"source\": \"id_analysis\", \"indicators\": [ \"NIT format tax ID\", \"document structure consistent with Colombian equity certifications\" ], \"conflictingSources\": [], \"requiresReview\": \"false\" }, \"relatedParties\": [ { \"type\": \"person\", \"firstName\": \"JOSE CARLOS\", \"lastName\": \"MENDOZA CARRANZA\", \"identificationType\": \"C.E.\", \"identificationNumber\": \"737708\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"100\", \"timeFound\": \"1\", \"job\": \"REPRESENTANTE LEGAL\" } ] }, \"documentType\": \"company\", \"category\": \"ACC\" } ```"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 425,
+        "cache_creation_input_tokens": 6487,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 871
+      }
+    },
+    "model_id": "us.anthropic.claude-3-7-sonnet-20250219-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 8000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "model_used": "us.anthropic.claude-3-7-sonnet-20250219-v1:0",
+  "api_used": "invoke_model"
+}

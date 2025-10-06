@@ -1,0 +1,87 @@
+{
+  "classification_data": {
+    "category": "CECRL",
+    "text": "REPUBLICA DE COLOMBIA IDENTIFICACION PERSONAL CEDULA DE CIUDADANIA NUMERO: 3.557.420 SANCHEZ DUARTE DARIO FECHA DE NACIMIENTO: 01-AGO-1962 YONDO - CASABE YONDO (ANTIOQUIA) LUGAR DE NACIMIENTO 1.75 O+ M ESTATURA G.S. RH SEXO 13-ABR-1991 YONDO FECHA Y LUGAR DE EXPEDICION",
+    "document_number": "3557420",
+    "path": "CECRL/3557420/3557420_2020-02-29.pdf"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "```json { \"category\": \"CECRL\", \"text\": \"REPUBLICA DE COLOMBIA\\nIDENTIFICACION PERSONAL\\nCEDULA DE CIUDADANIA\\nNUMERO: 3.557.420\\nSANCHEZ DUARTE\\nDARIO\\nFECHA DE NACIMIENTO: 01-AGO-1962\\nYONDO - CASABE\\nYONDO (ANTIOQUIA)\\nLUGAR DE NACIMIENTO\\n1.75 O+ M\\nESTATURA G.S. RH SEXO\\n13-ABR-1991 YONDO\\nFECHA Y LUGAR DE EXPEDICION\" } ```"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 9,
+      "cache_creation_input_tokens": 4475,
+      "cache_read_input_tokens": 0,
+      "output_tokens": 818
+    },
+    "ResponseMetadata": {
+      "RequestId": "6aa83712-7915-471d-ad6a-38dfdeb3f135",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Thu, 28 Aug 2025 15:32:10 GMT",
+        "content-type": "application/json",
+        "content-length": "3377",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "6aa83712-7915-471d-ad6a-38dfdeb3f135",
+        "x-amzn-bedrock-invocation-latency": "20674",
+        "x-amzn-bedrock-cache-write-input-token-count": "4475",
+        "x-amzn-bedrock-cache-read-input-token-count": "0",
+        "x-amzn-bedrock-output-token-count": "818",
+        "x-amzn-bedrock-input-token-count": "9"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_0122eJPhxYb6RPvtDdTLNJpF",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-3-7-sonnet-20250219",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Let me analyze this document by following the classification workflow: ### 1. TEXT EXTRACTION The document appears to be a Colombian national ID card (Cédula de Ciudadanía). Here's the text I can extract: ``` REPUBLICA DE COLOMBIA IDENTIFICACION PERSONAL CEDULA DE CIUDADANIA NUMERO: 3.557.420 SANCHEZ DUARTE DARIO FECHA DE NACIMIENTO: 01-AGO-1962 YONDO - CASABE YONDO (ANTIOQUIA) LUGAR DE NACIMIENTO 1.75 O+ M ESTATURA G.S. RH SEXO 13-ABR-1991 YONDO FECHA Y LUGAR DE EXPEDICION ``` There's also a fingerprint image, a signature, a photo (blurred), and what appears to be a barcode or machine-readable zone at the bottom. ### 2. PRIORITY CHECKS - Not BLANK: Contains substantial text content - Not LINK_ONLY: No hyperlinks or URLs ### 3. ISSUER IDENTIFICATION - This is a government-issued personal identification document from Colombia - It's not from DIAN or a Chamber of Commerce - It's issued by the national identification authority of Colombia ### 4. DOCUMENT FUNCTION ANALYSIS - This is a personal identification document - It's not related to corporate documentation, tax compliance, or business entities - Its function is to identify an individual person ### 5. CATEGORY CLASSIFICATION Following the evaluation order: CECRL → RUT → CERL → ACC → RUB → POR_REVISAR This is clearly a CECRL document: - It's a personal identification document (\"IDENTIFICACION PERSONAL\", \"CEDULA DE CIUDADANIA\") - Contains personal biographical data (birth date/place, blood type, gender) - Has security elements (photo, signature, fingerprint) - Government-issued (Republic of Colombia) - Individual identification purpose (not corporate) The document meets all the \"must-have indicators\" for the CECRL category: - Contains identification terminology: \"IDENTIFICACION PERSONAL\", \"CEDULA DE CIUDADANIA\" - Contains personal biographical data: birth date/place, blood type, gender - Has individual photo, signature, and fingerprint - Government-issued ID number with individual name - Has security elements ### 6. CONFIDENCE VALIDATION - Strong evidence: The document clearly shows all the necessary indicators for a CECRL classification - No conflicting signals or unclear purpose - The document is a typical Colombian national ID card Therefore, the classification is CECRL with high confidence.",
+          "signature": "ErcBCkgIBxABGAIiQGuS785ydqURMuE1CgwyfcIqPtJ2EA86H2ydVl5ktFPLNQFd+gf/FFffC+Yuui5vKYaJrmQcVXkOcxGmoDoEx2gSDAfaVYn8qwxSHZTu5hoMuZd0Z7VrhKBUqk3XIjAO++h7WPF9XPXHZjw4RCvLwcTpWJKoboCeKRV24t0/uThfeGj8lMIGh2cFyWfr4foqHYHy4P2T6WRmd0ac4FOQr/jMrk2rSv1pbyBkD9qTGAI="
+        },
+        {
+          "type": "text",
+          "text": "```json { \"category\": \"CECRL\", \"text\": \"REPUBLICA DE COLOMBIA\\nIDENTIFICACION PERSONAL\\nCEDULA DE CIUDADANIA\\nNUMERO: 3.557.420\\nSANCHEZ DUARTE\\nDARIO\\nFECHA DE NACIMIENTO: 01-AGO-1962\\nYONDO - CASABE\\nYONDO (ANTIOQUIA)\\nLUGAR DE NACIMIENTO\\n1.75 O+ M\\nESTATURA G.S. RH SEXO\\n13-ABR-1991 YONDO\\nFECHA Y LUGAR DE EXPEDICION\" } ```"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 9,
+        "cache_creation_input_tokens": 4475,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 818
+      }
+    },
+    "model_id": "us.anthropic.claude-3-7-sonnet-20250219-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 8000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "expected_category": "CECRL",
+  "model_used": "us.anthropic.claude-3-7-sonnet-20250219-v1:0",
+  "api_used": "invoke_model",
+  "pdf_info": {
+    "original_size": 168469,
+    "first_page_size": 163968,
+    "is_scanned": true
+  }
+}

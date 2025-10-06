@@ -1,0 +1,88 @@
+{
+  "extraction_data": {
+    "result": {
+      "firstName": "POR REVISAR",
+      "lastName": "MARÍA DEL ROSARIO",
+      "country_issuer": "Colombia",
+      "nationality": "Colombia",
+      "identificationType": "Cédula de Ciudadanía",
+      "identificationNumber": "52.713.382",
+      "message": "No se pudieron leer correctamente valores para firstName - texto obscurecido por firma"
+    },
+    "document_type": "person",
+    "category": "CECRL"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "```json { \"result\": { \"firstName\": \"POR REVISAR\", \"lastName\": \"MARÍA DEL ROSARIO\", \"country_issuer\": \"Colombia\", \"nationality\": \"Colombia\", \"identificationType\": \"Cédula de Ciudadanía\", \"identificationNumber\": \"52.713.382\", \"message\": \"No se pudieron leer correctamente valores para firstName - texto obscurecido por firma\" }, \"document_type\": \"person\", \"category\": \"CECRL\" } ```"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 10,
+      "cache_creation_input_tokens": 6003,
+      "cache_read_input_tokens": 0,
+      "output_tokens": 1347
+    },
+    "ResponseMetadata": {
+      "RequestId": "8d4612f3-18cd-4e57-bc60-a6f5a38dae5c",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Fri, 29 Aug 2025 15:57:00 GMT",
+        "content-type": "application/json",
+        "content-length": "9561",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "8d4612f3-18cd-4e57-bc60-a6f5a38dae5c",
+        "x-amzn-bedrock-invocation-latency": "22139",
+        "x-amzn-bedrock-cache-write-input-token-count": "6003",
+        "x-amzn-bedrock-cache-read-input-token-count": "0",
+        "x-amzn-bedrock-output-token-count": "1347",
+        "x-amzn-bedrock-input-token-count": "10"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_01GHuTkFkoUcfpJzTN9vtG18",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-sonnet-4-20250514",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "I need to analyze the Colombian identification document in the image and extract all the required information according to the schema. Looking at the document, I can see: 1. This is a Colombian \"Cédula de Ciudadanía\" (citizenship ID card) 2. The header says \"REPÚBLICA DE COLOMBIA\" and \"IDENTIFICACIÓN PERSONAL CÉDULA DE CIUDADANÍA\" 3. The document shows: - NÚMERO: 52.713.382 - CORDÓN SALAZAR - APELLIDOS: MARÍA DEL ROSARIO - NOMBRES: (there appears to be a signature over this area) On the back side, I can see: - FECHA DE NACIMIENTO: 10-JUL-1981 - SAN MATEO (BOYACÁ) - this appears to be the place of birth - LUGAR DE NACIMIENTO - Other details like height (1.51), blood type (O+), sex (F) - Issuance date: 21-JUL-1999 BOGOTÁ D.C. Now I need to extract the information: 1. **firstName**: Looking at the front, I can see \"NOMBRES:\" but the actual text seems obscured by a signature. However, I can make out what appears to be text but it's not clearly readable. 2. **lastName**: I can clearly see \"APELLIDOS: MARÍA DEL ROSARIO\" 3. **country_issuer**: This is clearly Colombia based on \"REPÚBLICA DE COLOMBIA\" 4. **nationality**: Since this is a Colombian citizenship document and the person was born in San Mateo, Boyacá (which is in Colombia), the nationality would be Colombia. 5. **identificationType**: This is a \"Cédula de Ciudadanía\" 6. **identificationNumber**: I can see \"52.713.382\" Wait, let me look more carefully at the names. I see: The document's name fields are creating some confusion. \"CORDÓN SALAZAR\" seems positioned where a surname might typically go, while \"MARÍA DEL ROSARIO\" is labeled under \"APELLIDOS\". This suggests the name structure might be non-standard or potentially reversed. The signature obscuring the \"NOMBRES\" field further complicates identifying the first name definitively. I'll need to carefully parse the name components, considering the possibility that \"CORDÓN SALAZAR\" could be a compound last name, with \"MARÍA DEL ROSARIO\" potentially being part of the first name or a middle name. I'm examining the document's name structure carefully. The positioning suggests \"CORDÓN SALAZAR\" might represent surnames, while \"MARÍA DEL ROSARIO\" could potentially be the given names. The signature is obscuring some text, making precise identification challenging. I'll need to verify the exact placement and field labels to confirm the name components accurately. The document's layout indicates potential complexity in name extraction, with field labels \"APELLIDOS\" and \"NOMBRES\" present but partially obscured. I'll extract what's clearly visible while noting the limitations caused by the signature overlay.",
+          "signature": "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"
+        },
+        {
+          "type": "text",
+          "text": "```json { \"result\": { \"firstName\": \"POR REVISAR\", \"lastName\": \"MARÍA DEL ROSARIO\", \"country_issuer\": \"Colombia\", \"nationality\": \"Colombia\", \"identificationType\": \"Cédula de Ciudadanía\", \"identificationNumber\": \"52.713.382\", \"message\": \"No se pudieron leer correctamente valores para firstName - texto obscurecido por firma\" }, \"document_type\": \"person\", \"category\": \"CECRL\" } ```"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 10,
+        "cache_creation_input_tokens": 6003,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 1347
+      }
+    },
+    "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 8000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+  "api_used": "invoke_model"
+}

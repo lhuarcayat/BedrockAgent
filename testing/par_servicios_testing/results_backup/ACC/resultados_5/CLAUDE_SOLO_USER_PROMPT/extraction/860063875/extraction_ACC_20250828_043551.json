@@ -1,0 +1,130 @@
+{
+  "extraction_data": {
+    "path": "ACC/860063875/CERTIFICACION_ACCIONARIA__Desglose_.pdf",
+    "result": {
+      "companyName": "ENEL COLOMBIA S.A. ESP",
+      "documentCategory": "Equity Composition",
+      "taxId": "860.063.875-8",
+      "country": "Colombia",
+      "identificationDetails": {
+        "source": "text_reference",
+        "indicators": [
+          "Colombia",
+          "Bogotá"
+        ],
+        "conflictingSources": [
+          "Missing identification details for entity: Otros Accionistas Minoritarios"
+        ],
+        "requiresReview": "true"
+      },
+      "relatedParties": [
+        {
+          "type": "company",
+          "companyName": "ENEL AMERICAS S.A.",
+          "identificationType": "NIT",
+          "identificationNumber": "900.283.352-6",
+          "relationshipType": "Shareholder",
+          "participationPercentage": "57.345",
+          "timeFound": "1",
+          "job": ""
+        },
+        {
+          "type": "company",
+          "companyName": "GRUPO ENERGÍA BOGOTÁ S.A. E.S.P.",
+          "identificationType": "NIT",
+          "identificationNumber": "899.999.082-3",
+          "relationshipType": "Shareholder",
+          "participationPercentage": "42.515",
+          "timeFound": "1",
+          "job": ""
+        },
+        {
+          "type": "company",
+          "companyName": "Otros Accionistas Minoritarios",
+          "identificationType": "POR REVISAR",
+          "identificationNumber": "POR REVISAR",
+          "relationshipType": "Shareholder",
+          "participationPercentage": "0.140",
+          "timeFound": "1",
+          "job": ""
+        }
+      ]
+    },
+    "documentType": "company",
+    "documentNumber": "860063875",
+    "category": "ACC"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "Based on the document provided, I've extracted the equity composition information: ```json { \"result\": { \"companyName\": \"ENEL COLOMBIA S.A. ESP\", \"documentCategory\": \"Equity Composition\", \"taxId\": \"860.063.875-8\", \"country\": \"Colombia\", \"identificationDetails\": { \"source\": \"text_reference\", \"indicators\": [ \"Colombia\", \"Bogotá\" ], \"conflictingSources\": [\"Missing identification details for entity: Otros Accionistas Minoritarios\"], \"requiresReview\": \"true\" }, \"relatedParties\": [ { \"type\": \"company\", \"companyName\": \"ENEL AMERICAS S.A.\", \"identificationType\": \"NIT\", \"identificationNumber\": \"900.283.352-6\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"57.345\", \"timeFound\": \"1\", \"job\": \"\" }, { \"type\": \"company\", \"companyName\": \"GRUPO ENERGÍA BOGOTÁ S.A. E.S.P.\", \"identificationType\": \"NIT\", \"identificationNumber\": \"899.999.082-3\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"42.515\", \"timeFound\": \"1\", \"job\": \"\" }, { \"type\": \"company\", \"companyName\": \"Otros Accionistas Minoritarios\", \"identificationType\": \"POR REVISAR\", \"identificationNumber\": \"POR REVISAR\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"0.140\", \"timeFound\": \"1\", \"job\": \"\" } ] }, \"documentType\": \"company\", \"category\": \"ACC\" } ```"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 9,
+      "cache_creation_input_tokens": 8445,
+      "cache_read_input_tokens": 0,
+      "output_tokens": 1389
+    },
+    "ResponseMetadata": {
+      "RequestId": "7b423b95-d562-4960-981d-c474d356ae94",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Thu, 28 Aug 2025 09:35:51 GMT",
+        "content-type": "application/json",
+        "content-length": "5136",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "7b423b95-d562-4960-981d-c474d356ae94",
+        "x-amzn-bedrock-invocation-latency": "25797",
+        "x-amzn-bedrock-cache-write-input-token-count": "8445",
+        "x-amzn-bedrock-cache-read-input-token-count": "0",
+        "x-amzn-bedrock-output-token-count": "1389",
+        "x-amzn-bedrock-input-token-count": "9"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_01PmmLTSHkeZ6D551eXgBFm7",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-3-7-sonnet-20250219",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Let me analyze this document carefully to extract the required information according to the schema. ## Step 1: Document Analysis This appears to be a \"Certificación de Composición Accionaria\" (Shareholding Composition Certificate) for ENEL COLOMBIA S.A. ESP. The document is dated September 2022. The document clearly shows: - The main company name: ENEL COLOMBIA S.A. ESP - Tax ID (NIT): 860.063.875-8 (there's a slight discrepancy as it also shows 860.063.875-6 in headers) - Country: Colombia (mentioned in the document's address at Bogotá, Colombia) - Three shareholders with their participation percentages: 1. ENEL AMERICAS S.A. (NIT 900.283.352-6) - 57.345% 2. GRUPO ENERGÍA BOGOTÁ S.A. E.S.P. (NIT 899.999.082-3) - 42.515% 3. OTROS ACCIONISTAS MINORITARIOS - 0.140% ## Step 2: Root Level Extraction - companyName: \"ENEL COLOMBIA S.A. ESP\" - documentCategory: \"Equity Composition\" - taxId: \"860.063.875-8\" (I'll use this one from the main content rather than the header which shows -6) - country: \"Colombia\" - identificationDetails: - source: \"text_reference\" - indicators: [\"Colombia\", \"Bogotá\"] - conflictingSources: [\"Missing identification details for entity: Otros Accionistas Minoritarios\"] - requiresReview: \"true\" (because of the missing identification details for minority shareholders) ## Step 3: Related Parties Processing 1. ENEL AMERICAS S.A. - type: \"company\" - companyName: \"ENEL AMERICAS S.A.\" - identificationType: \"NIT\" - identificationNumber: \"900.283.352-6\" - relationshipType: \"Shareholder\" - participationPercentage: \"57.345\" - timeFound: \"1\" - job: \"\" 2. GRUPO ENERGÍA BOGOTÁ S.A. E.S.P. - type: \"company\" - companyName: \"GRUPO ENERGÍA BOGOTÁ S.A. E.S.P.\" - identificationType: \"NIT\" - identificationNumber: \"899.999.082-3\" - relationshipType: \"Shareholder\" - participationPercentage: \"42.515\" - timeFound: \"1\" - job: \"\" 3. OTROS ACCIONISTAS MINORITARIOS - type: \"company\" - companyName: \"Otros Accionistas Minoritarios\" - identificationType: \"POR REVISAR\" - identificationNumber: \"POR REVISAR\" - relationshipType: \"Shareholder\" - participationPercentage: \"0.140\" - timeFound: \"1\" - job: \"\" ## Step 4: Validation & Cross-checking - taxId type (NIT) aligns with country (Colombia) ✓ - identificationType (NIT) is in the COMPANY_ID hash table for Colombia ✓ - The participation percentages sum to 100% (57.345 + 42.515 + 0.140 = 100) ✓ - We're missing identification details for the minority shareholders, so requiresReview is set to \"true\" Now I'll create the final JSON:",
+          "signature": "ErcBCkgIBxABGAIiQK4RHjl6W+pX80djx9NWGee5zrJIll655qfRc2buLg7tl4GgDcKbxqE/reZ4udi3VAuQZBeK1mmxD8Tu/m8vMbMSDI4JYCF39xk35mH6xBoMhB9BboXSclO2OeC/IjDHuUVY3tUes+p9zadIU1DFQ2ZzMZJ/TNdnR8/3PjrsyjPZJTeeC9pBqm6W6dgrOkMqHdXIU7VKk2/ko+gSelyw/bIeQJZ0+DG/+hYRUlx5GAI="
+        },
+        {
+          "type": "text",
+          "text": "Based on the document provided, I've extracted the equity composition information: ```json { \"result\": { \"companyName\": \"ENEL COLOMBIA S.A. ESP\", \"documentCategory\": \"Equity Composition\", \"taxId\": \"860.063.875-8\", \"country\": \"Colombia\", \"identificationDetails\": { \"source\": \"text_reference\", \"indicators\": [ \"Colombia\", \"Bogotá\" ], \"conflictingSources\": [\"Missing identification details for entity: Otros Accionistas Minoritarios\"], \"requiresReview\": \"true\" }, \"relatedParties\": [ { \"type\": \"company\", \"companyName\": \"ENEL AMERICAS S.A.\", \"identificationType\": \"NIT\", \"identificationNumber\": \"900.283.352-6\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"57.345\", \"timeFound\": \"1\", \"job\": \"\" }, { \"type\": \"company\", \"companyName\": \"GRUPO ENERGÍA BOGOTÁ S.A. E.S.P.\", \"identificationType\": \"NIT\", \"identificationNumber\": \"899.999.082-3\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"42.515\", \"timeFound\": \"1\", \"job\": \"\" }, { \"type\": \"company\", \"companyName\": \"Otros Accionistas Minoritarios\", \"identificationType\": \"POR REVISAR\", \"identificationNumber\": \"POR REVISAR\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"0.140\", \"timeFound\": \"1\", \"job\": \"\" } ] }, \"documentType\": \"company\", \"category\": \"ACC\" } ```"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 9,
+        "cache_creation_input_tokens": 8445,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 1389
+      }
+    },
+    "model_id": "us.anthropic.claude-3-7-sonnet-20250219-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 8000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "model_used": "us.anthropic.claude-3-7-sonnet-20250219-v1:0",
+  "api_used": "invoke_model"
+}

@@ -1,0 +1,87 @@
+{
+  "classification_data": {
+    "category": "CECRL",
+    "text": "REPUBLICA DE COLOMBIA IDENTIFICACION PERSONAL CEDULA DE CIUDADANIA NUMERO 7.249.040 MESA GÓMEZ APELLIDOS JOSE DEL CARMEN NOMBRES FIRMA FECHA DE NACIMIENTO 27-JUN-1962 PUERTO NARE (ANTIOQUIA) LUGAR DE NACIMIENTO 1.70 B+ M ESTATURA G.S. RH SEXO 23-FEB-1981 PUERTO BOYACÁ FECHA Y LUGAR DE EXPEDICIÓN REGISTRADOR NACIONAL CARLOS ARIEL SÁNCHEZ TORRES ÍNDICE DERECHO A-1500150-00112822-M-0007249040-2C081027 0004907968A 1 1410020296",
+    "document_number": "7249040",
+    "path": "CECRL/7249040/7249040_2020-02-29.pdf"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "```json { \"category\": \"CECRL\", \"text\": \"REPUBLICA DE COLOMBIA\\nIDENTIFICACION PERSONAL\\nCEDULA DE CIUDADANIA\\n\\nNUMERO 7.249.040\\nMESA GÓMEZ\\n\\nAPELLIDOS\\nJOSE DEL CARMEN\\n\\nNOMBRES\\n\\nFIRMA\\n\\nFECHA DE NACIMIENTO 27-JUN-1962\\nPUERTO NARE\\n(ANTIOQUIA)\\nLUGAR DE NACIMIENTO\\n\\n1.70 B+ M\\nESTATURA G.S. RH SEXO\\n\\n23-FEB-1981 PUERTO BOYACÁ\\nFECHA Y LUGAR DE EXPEDICIÓN\\n\\nREGISTRADOR NACIONAL\\nCARLOS ARIEL SÁNCHEZ TORRES\\n\\nÍNDICE DERECHO\\n\\nA-1500150-00112822-M-0007249040-2C081027 0004907968A 1 1410020296\" } ```"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 1584,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 3150,
+      "output_tokens": 896
+    },
+    "ResponseMetadata": {
+      "RequestId": "51db3854-3fb7-46da-9ee4-8389b71579f3",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Sun, 31 Aug 2025 21:34:55 GMT",
+        "content-type": "application/json",
+        "content-length": "5495",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "51db3854-3fb7-46da-9ee4-8389b71579f3",
+        "x-amzn-bedrock-invocation-latency": "13811",
+        "x-amzn-bedrock-cache-write-input-token-count": "0",
+        "x-amzn-bedrock-cache-read-input-token-count": "3150",
+        "x-amzn-bedrock-output-token-count": "896",
+        "x-amzn-bedrock-input-token-count": "1584"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_01D2bhATX2GjyJj2zKWjVDDQ",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-sonnet-4-20250514",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Let me analyze this document following the classification workflow: 1. **TEXT EXTRACTION** I can extract the following text from the document: ``` REPUBLICA DE COLOMBIA IDENTIFICACION PERSONAL CEDULA DE CIUDADANIA NUMERO: 7.249.040 MESA GÓMEZ APELLIDOS: JOSE DEL CARMEN NOMBRES: [signature visible] FECHA DE NACIMIENTO: 27-JUN-1962 PUERTO NARE (ANTIOQUIA) LUGAR DE NACIMIENTO 1.70 B+ M ESTATURA G.S. RH SEXO 23-FEB-1981 PUERTO BOYACÁ FECHA Y LUGAR DE EXPEDICIÓN REGISTRADOR NACIONAL CARLOS ARIEL SÁNCHEZ TORRES [There's also a barcode and fingerprint visible] A-1500150-00112822-M-0007249040-2C081027 0004907968A 1 1410020296 ``` 2. **PRIORITY CHECKS** - Not BLANK: There is substantial content - Not LINK_ONLY: No hyperlinks or URLs visible 3. **DOCUMENT FUNCTION ANALYSIS** What is the MAIN PURPOSE of this document? - This is clearly a personal identification document - It contains biographical data: date of birth (27-JUN-1962), place of birth (PUERTO NARE, ANTIOQUIA), blood type (B+), sex (M), height (1.70) - It has an identification number (7.249.040) - It contains a photograph, signature, and fingerprint - It's issued by a government identification authority 4. **ISSUER IDENTIFICATION** - This is issued by \"REPUBLICA DE COLOMBIA\" - a government identification authority - It's a \"CEDULA DE CIUDADANIA\" which is a Colombian citizenship identification card 5. **CATEGORY CLASSIFICATION** The document definitively matches the CECRL category. It's an official Colombian citizenship identification card with comprehensive personal details and government authentication markers.",
+          "signature": "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"
+        },
+        {
+          "type": "text",
+          "text": "```json { \"category\": \"CECRL\", \"text\": \"REPUBLICA DE COLOMBIA\\nIDENTIFICACION PERSONAL\\nCEDULA DE CIUDADANIA\\n\\nNUMERO 7.249.040\\nMESA GÓMEZ\\n\\nAPELLIDOS\\nJOSE DEL CARMEN\\n\\nNOMBRES\\n\\nFIRMA\\n\\nFECHA DE NACIMIENTO 27-JUN-1962\\nPUERTO NARE\\n(ANTIOQUIA)\\nLUGAR DE NACIMIENTO\\n\\n1.70 B+ M\\nESTATURA G.S. RH SEXO\\n\\n23-FEB-1981 PUERTO BOYACÁ\\nFECHA Y LUGAR DE EXPEDICIÓN\\n\\nREGISTRADOR NACIONAL\\nCARLOS ARIEL SÁNCHEZ TORRES\\n\\nÍNDICE DERECHO\\n\\nA-1500150-00112822-M-0007249040-2C081027 0004907968A 1 1410020296\" } ```"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 1584,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 3150,
+        "output_tokens": 896
+      }
+    },
+    "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 8000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "expected_category": "CECRL",
+  "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+  "api_used": "invoke_model",
+  "pdf_info": {
+    "original_size": 189559,
+    "first_page_size": 185060,
+    "is_scanned": true
+  }
+}

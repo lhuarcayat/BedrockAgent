@@ -1,0 +1,88 @@
+{
+  "extraction_data": {
+    "result": {
+      "FirstName": "JOSE DEL CARMEN",
+      "LastName": "MESA GÓMEZ",
+      "CountryIssuer": "Colombia",
+      "Nationality": "colombiana",
+      "IdentificationType": "Cédula de Ciudadanía",
+      "IdentificationNumber": "7.249.040",
+      "Message": ""
+    },
+    "document_type": "person",
+    "category": "CECRL"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "```json { \"result\": { \"FirstName\": \"JOSE DEL CARMEN\", \"LastName\": \"MESA GÓMEZ\", \"CountryIssuer\": \"Colombia\", \"Nationality\": \"colombiana\", \"IdentificationType\": \"Cédula de Ciudadanía\", \"IdentificationNumber\": \"7.249.040\", \"Message\": \"\" }, \"document_type\": \"person\", \"category\": \"CECRL\" } ```"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 1583,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 4300,
+      "output_tokens": 710
+    },
+    "ResponseMetadata": {
+      "RequestId": "3f2cb153-090e-4ba8-8aca-0de2aa888ad4",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Sun, 31 Aug 2025 21:43:50 GMT",
+        "content-type": "application/json",
+        "content-length": "5800",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "3f2cb153-090e-4ba8-8aca-0de2aa888ad4",
+        "x-amzn-bedrock-invocation-latency": "11111",
+        "x-amzn-bedrock-cache-write-input-token-count": "0",
+        "x-amzn-bedrock-cache-read-input-token-count": "4300",
+        "x-amzn-bedrock-output-token-count": "710",
+        "x-amzn-bedrock-input-token-count": "1583"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_01KTVNdf2Ts2sPKypyJRFQdq",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-sonnet-4-20250514",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Looking at this Colombian identification document, I need to extract the required information according to the methodology specified. Let me analyze the document: 1. Document Structure Analysis: - Header shows \"REPÚBLICA DE COLOMBIA\" - \"IDENTIFICACION PERSONAL\" - \"CEDULA DE CIUDADANIA\" 2. Structured Label Detection: Looking at the visible fields: - NÚMERO: 7.249.040 - MESA GÓMEZ (appears near the number) - APELLIDOS: followed by \"JOSE DEL CARMEN\" - NOMBRES: (appears to be present but the text after it isn't clear) 3. Contextual Analysis: This appears to be a Colombian document that may have the \"misalignment\" issue mentioned in the extraction methodology. Let me analyze: Looking at the layout: - The number \"7.249.040\" appears to be the identification number - \"MESA GÓMEZ\" appears after the number but before the \"APELLIDOS\" label - \"JOSE DEL CARMEN\" appears after the \"APELLIDOS\" label - There's a \"NOMBRES\" label but it doesn't seem to have clear text after it Based on the Colombian document pattern described in the methodology, this could be a case where: - The surnames appear first (MESA GÓMEZ) - Then the \"APELLIDOS\" label appears with what are actually the first names (JOSE DEL CARMEN) - The \"NOMBRES\" label appears but seems separated from the actual names Following the contextual analysis rules for Colombian documents: - FirstName should be: \"JOSE DEL CARMEN\" (what appears after APELLIDOS label) - LastName should be: \"MESA GÓMEZ\" (what appears before APELLIDOS label) 4. Other fields: - CountryIssuer: \"Colombia\" (from \"REPÚBLICA DE COLOMBIA\") - Nationality: \"colombiana\" (since it's a Colombian citizenship card) - IdentificationType: \"Cédula de Ciudadanía\" (clearly stated) - IdentificationNumber: \"7.249.040\" (the number field) I confirm the identification details match the typical Colombian document structure, with the unique misalignment of surname and name placement.",
+          "signature": "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"
+        },
+        {
+          "type": "text",
+          "text": "```json { \"result\": { \"FirstName\": \"JOSE DEL CARMEN\", \"LastName\": \"MESA GÓMEZ\", \"CountryIssuer\": \"Colombia\", \"Nationality\": \"colombiana\", \"IdentificationType\": \"Cédula de Ciudadanía\", \"IdentificationNumber\": \"7.249.040\", \"Message\": \"\" }, \"document_type\": \"person\", \"category\": \"CECRL\" } ```"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 1583,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 4300,
+        "output_tokens": 710
+      }
+    },
+    "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 8000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+  "api_used": "invoke_model"
+}

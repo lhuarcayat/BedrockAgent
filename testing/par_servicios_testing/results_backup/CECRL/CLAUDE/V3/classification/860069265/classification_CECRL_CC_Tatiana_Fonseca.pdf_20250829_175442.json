@@ -1,0 +1,87 @@
+{
+  "classification_data": {
+    "category": "CECRL",
+    "text": "REPUBLICA DE COLOMBIA IDENTIFICACION PERSONAL CEDULA DE CIUDADANIA NUMERO 52.255.747 FONSECA URIBE APELLIDOS CLAUDIA TATIANA NOMBRES FIRMA FECHA DE NACIMIENTO 15-SEP-1974 BOGOTA D.C. (CUNDINAMARCA) LUGAR DE NACIMIENTO 1.70 A- F ESTATURA G.S. RH SEXO 15-JUL-1993 BOGOTA D.C. FECHA Y LUGAR DE EXPEDICION INDICE DERECHO REGISTRADOR NACIONAL DIGITAL CARLOS ORLANDO MEJIA A-1500101-47 154992-F-0052255747-2007102B 04466 072960 02 227095132",
+    "document_number": "860069265",
+    "path": "CECRL/860069265/CC_Tatiana_Fonseca.pdf"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "```json { \"category\": \"CECRL\", \"text\": \"REPUBLICA DE COLOMBIA\\nIDENTIFICACION PERSONAL\\nCEDULA DE CIUDADANIA\\nNUMERO 52.255.747\\nFONSECA URIBE\\nAPELLIDOS\\nCLAUDIA TATIANA\\nNOMBRES\\nFIRMA\\nFECHA DE NACIMIENTO 15-SEP-1974\\nBOGOTA D.C.\\n(CUNDINAMARCA)\\nLUGAR DE NACIMIENTO\\n1.70 A- F\\nESTATURA G.S. RH SEXO\\n15-JUL-1993 BOGOTA D.C.\\nFECHA Y LUGAR DE EXPEDICION\\nINDICE DERECHO\\nREGISTRADOR NACIONAL\\nDIGITAL CARLOS ORLANDO MEJIA\\nA-1500101-47 154992-F-0052255747-2007102B 04466 072960 02 227095132\" } ```"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 9,
+      "cache_creation_input_tokens": 4753,
+      "cache_read_input_tokens": 0,
+      "output_tokens": 872
+    },
+    "ResponseMetadata": {
+      "RequestId": "438a5289-1c78-409c-9c7a-7f19bab3b8de",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Fri, 29 Aug 2025 22:54:29 GMT",
+        "content-type": "application/json",
+        "content-length": "5550",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "438a5289-1c78-409c-9c7a-7f19bab3b8de",
+        "x-amzn-bedrock-invocation-latency": "16698",
+        "x-amzn-bedrock-cache-write-input-token-count": "4753",
+        "x-amzn-bedrock-cache-read-input-token-count": "0",
+        "x-amzn-bedrock-output-token-count": "872",
+        "x-amzn-bedrock-input-token-count": "9"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_01762NBqn8UAZkHntinEfCbX",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-sonnet-4-20250514",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Let me analyze this document step by step. **1. TEXT EXTRACTION** Looking at the document, I can see this is clearly a Colombian identification document (cédula de ciudadanía). Let me extract all visible text: Top part shows: - REPUBLICA DE COLOMBIA - IDENTIFICACION PERSONAL - CEDULA DE CIUDADANIA - NUMERO: 52.255.747 - FONSECA URIBE (apellidos/surnames) - CLAUDIA TATIANA (nombres/names) - There's a signature and photo Bottom part shows: - FECHA DE NACIMIENTO: 15-SEP-1974 (birth date) - BOGOTA D.C. (CUNDINAMARCA) (birth place) - LUGAR DE NACIMIENTO - 1.70 A- F (height, blood type, sex) - ESTATURA G.S. RH SEXO - 15-JUL-1993 BOGOTA D.C. (date and place of expedition) - FECHA Y LUGAR DE EXPEDICION - There's a fingerprint section marked \"INDICE DERECHO\" - A barcode at the bottom - Various reference numbers **2. PRIORITY CHECKS** - Not BLANK - contains meaningful content - Not LINK_ONLY - no hyperlinks or URLs **3. DOCUMENT FUNCTION ANALYSIS** This is clearly a personal identification document. The primary purpose is to identify an individual person (Claudia Tatiana Fonseca Uribe) with her biographical data, photo, signature, and fingerprint. This is a government-issued personal identification card from Colombia. **4. ISSUER IDENTIFICATION** This is issued by the Colombian government (República de Colombia) as a personal identification document, not by DIAN or Chamber of Commerce. **5. CATEGORY CLASSIFICATION** This clearly fits CECRL category: - It's an official personal identification document (cédula de ciudadanía)",
+          "signature": "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"
+        },
+        {
+          "type": "text",
+          "text": "```json { \"category\": \"CECRL\", \"text\": \"REPUBLICA DE COLOMBIA\\nIDENTIFICACION PERSONAL\\nCEDULA DE CIUDADANIA\\nNUMERO 52.255.747\\nFONSECA URIBE\\nAPELLIDOS\\nCLAUDIA TATIANA\\nNOMBRES\\nFIRMA\\nFECHA DE NACIMIENTO 15-SEP-1974\\nBOGOTA D.C.\\n(CUNDINAMARCA)\\nLUGAR DE NACIMIENTO\\n1.70 A- F\\nESTATURA G.S. RH SEXO\\n15-JUL-1993 BOGOTA D.C.\\nFECHA Y LUGAR DE EXPEDICION\\nINDICE DERECHO\\nREGISTRADOR NACIONAL\\nDIGITAL CARLOS ORLANDO MEJIA\\nA-1500101-47 154992-F-0052255747-2007102B 04466 072960 02 227095132\" } ```"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 9,
+        "cache_creation_input_tokens": 4753,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 872
+      }
+    },
+    "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 8000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "expected_category": "CECRL",
+  "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+  "api_used": "invoke_model",
+  "pdf_info": {
+    "original_size": 226738,
+    "first_page_size": 223294,
+    "is_scanned": true
+  }
+}

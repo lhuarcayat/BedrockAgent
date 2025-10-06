@@ -1,0 +1,87 @@
+{
+  "classification_data": {
+    "category": "ACC",
+    "text": "COMPOSICION ACCIONARIA CERTIFICACIÓN DEL CONTADOR PÚBLICO El suscrito Contador Público de LA EMPRESA ROMEGAS SAS., identificada con NIT 900.127.447 - 1, hace constar que, de acuerdo con el libro oficial de registro de accionistas, inscrito en el registro mercantil, CERTIFICA QUE: La composición accionaria es la siguiente: Se expide a los veinticinco (31) días del mes de mayo de 2023 Cordialmente, LAURA I. OVIEDO GOMEZ TP 304428 – T CONTADORA PÚBLICA DOCUMENTO ACCIONISTAS % PARTICIPACION ACCIONES SUSCRITAS VALOR NOMINAL CC. 79.735.871 JULIO CESAR ROMERO MUÑOZ 100% 2.000 $10.000 TOTAL 100% 2.000 $10.000",
+    "document_number": "900127447",
+    "path": "ACC/900127447/217_CA_2020-02-29.pdf"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "```json { \"category\": \"ACC\", \"text\": \"COMPOSICION ACCIONARIA\\nCERTIFICACIÓN DEL CONTADOR PÚBLICO\\nEl suscrito Contador Público de LA EMPRESA ROMEGAS SAS., identificada con \\nNIT 900.127.447 - 1, hace constar que, de acuerdo con el libro oficial de \\nregistro de accionistas, inscrito en el registro mercantil,\\nCERTIFICA QUE:\\nLa composición accionaria es la siguiente:\\nSe expide a los veinticinco (31) días del mes de mayo de 2023\\nCordialmente,\\nLAURA I. OVIEDO GOMEZ\\nTP 304428 – T\\nCONTADORA PÚBLICA\\nDOCUMENTO ACCIONISTAS % \\nPARTICIPACION\\nACCIONES \\nSUSCRITAS\\nVALOR \\nNOMINAL\\nCC. 79.735.871 JULIO CESAR ROMERO \\nMUÑOZ\\n100% 2.000 $10.000\\nTOTAL 100% 2.000 $10.000\" } ```"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 1856,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 3150,
+      "output_tokens": 927
+    },
+    "ResponseMetadata": {
+      "RequestId": "443ffd21-cdb0-4480-81e4-fd03e6d6f878",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Mon, 01 Sep 2025 02:02:48 GMT",
+        "content-type": "application/json",
+        "content-length": "5896",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "443ffd21-cdb0-4480-81e4-fd03e6d6f878",
+        "x-amzn-bedrock-invocation-latency": "17840",
+        "x-amzn-bedrock-cache-write-input-token-count": "0",
+        "x-amzn-bedrock-cache-read-input-token-count": "3150",
+        "x-amzn-bedrock-output-token-count": "927",
+        "x-amzn-bedrock-input-token-count": "1856"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_01Mzh6nsJ7KuBZq5Gmfipwav",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-sonnet-4-20250514",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Following the classification workflow: 1. **TEXT EXTRACTION** I can see that the document contains text in Spanish about \"COMPOSICION ACCIONARIA\" (Shareholder Composition). The document shows: - Title: \"COMPOSICION ACCIONARIA\" - \"CERTIFICACIÓN DEL CONTADOR PÚBLICO\" - Company: \"LA EMPRESA ROMEGAS SAS., identificada con NIT 900.127.447 - 1\" - A certification that shows the shareholder composition - A table showing: - CC. 79.735.871 JULIO CESAR ROMERO MUÑOZ - 100% - 2.000 acciones - $10.000 - TOTAL - 100% - 2.000 - $10.000 - Date: May 31, 2023 - Signed by: LAURA I. OVIEDO GOMEZ - TP 304428 – T - CONTADORA PÚBLICA 2. **PRIORITY CHECKS** - Not BLANK: has significant content - Not LINK_ONLY: no hyperlinks/URLs 3. **DOCUMENT FUNCTION ANALYSIS** The MAIN PURPOSE of this document is to show the shareholding composition of a company. It clearly shows: - Percentage of participation (100%) - Number of shares (2,000 shares) - Value/capital ($10,000) - Shareholder information (name and ID) This is clearly ACC indicative as it shows shareholding composition. 4. **ISSUER IDENTIFICATION** The document is issued by a public accountant (CONTADORA PÚBLICA) on behalf of the company, not by a government authority like Chamber of Commerce or tax authority. This supports ACC classification. 5. **CATEGORY CLASSIFICATION** Looking at the categories in order: - CECRL: No, this is not a personal identification document - CERL: Negative, as the document originates from the company's accountant rather than the Chamber of Commerce - ACC: Confirmed positive match The document definitively meets ACC category criteria with comprehensive shareholder details, including full ownership percentage, share count, and capital contribution.",
+          "signature": "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"
+        },
+        {
+          "type": "text",
+          "text": "```json { \"category\": \"ACC\", \"text\": \"COMPOSICION ACCIONARIA\\nCERTIFICACIÓN DEL CONTADOR PÚBLICO\\nEl suscrito Contador Público de LA EMPRESA ROMEGAS SAS., identificada con \\nNIT 900.127.447 - 1, hace constar que, de acuerdo con el libro oficial de \\nregistro de accionistas, inscrito en el registro mercantil,\\nCERTIFICA QUE:\\nLa composición accionaria es la siguiente:\\nSe expide a los veinticinco (31) días del mes de mayo de 2023\\nCordialmente,\\nLAURA I. OVIEDO GOMEZ\\nTP 304428 – T\\nCONTADORA PÚBLICA\\nDOCUMENTO ACCIONISTAS % \\nPARTICIPACION\\nACCIONES \\nSUSCRITAS\\nVALOR \\nNOMINAL\\nCC. 79.735.871 JULIO CESAR ROMERO \\nMUÑOZ\\n100% 2.000 $10.000\\nTOTAL 100% 2.000 $10.000\" } ```"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 1856,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 3150,
+        "output_tokens": 927
+      }
+    },
+    "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 8000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "expected_category": "ACC",
+  "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+  "api_used": "invoke_model",
+  "pdf_info": {
+    "original_size": 353898,
+    "first_page_size": 352312,
+    "is_scanned": false
+  }
+}

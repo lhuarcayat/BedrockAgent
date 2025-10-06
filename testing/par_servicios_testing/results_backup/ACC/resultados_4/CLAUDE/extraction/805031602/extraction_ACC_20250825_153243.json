@@ -1,0 +1,135 @@
+{
+  "extraction_data": {
+    "path": "ACC/805031602/68_CA_2020-09-23.pdf",
+    "result": {
+      "companyName": "MEGASERVICIOS DE INGENIERIA S.A.S",
+      "documentType": "Equity Composition",
+      "taxId": "805.031.602-7",
+      "country": "Colombia",
+      "identificationDetails": {
+        "source": "text_reference",
+        "indicators": [
+          "Santiago de Cali",
+          "Cali",
+          "Colombia"
+        ],
+        "conflictingSources": [],
+        "requiresReview": false
+      },
+      "relatedParties": [
+        {
+          "firstName": "Dora Matilde",
+          "lastName": "Trejos Puerta",
+          "identificationType": "CC",
+          "identificationNumber": "31.953.854",
+          "relationshipType": "Shareholder",
+          "participationPercentage": "50%",
+          "timeFound": 1,
+          "job": ""
+        },
+        {
+          "firstName": "Juan Carlos",
+          "lastName": "Escobar Welsch",
+          "identificationType": "CC",
+          "identificationNumber": "16.733.280",
+          "relationshipType": "Shareholder",
+          "participationPercentage": "50%",
+          "timeFound": 1,
+          "job": ""
+        },
+        {
+          "firstName": "Juan Carlos",
+          "lastName": "Escobar Welsch",
+          "identificationType": "CC",
+          "identificationNumber": "16.733.280",
+          "relationshipType": "Shareholder",
+          "participationPercentage": "",
+          "timeFound": 2,
+          "job": "Representante Legal"
+        }
+      ]
+    },
+    "document_type": "company",
+    "document_number": "805031602",
+    "category": "ACC",
+    "confidenceScores": {
+      "companyName": 95,
+      "taxId": 95,
+      "country": 98,
+      "relatedParties": 90
+    }
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "```json { \"path\": \"ACC/805031602/68_CA_2020-09-23.pdf\", \"result\": { \"companyName\": \"MEGASERVICIOS DE INGENIERIA S.A.S\", \"documentType\": \"Equity Composition\", \"taxId\": \"805.031.602-7\", \"country\": \"Colombia\", \"identificationDetails\": { \"source\": \"text_reference\", \"indicators\": [ \"Santiago de Cali\", \"Cali\", \"Colombia\" ], \"conflictingSources\": [], \"requiresReview\": false }, \"relatedParties\": [ { \"firstName\": \"Dora Matilde\", \"lastName\": \"Trejos Puerta\", \"identificationType\": \"CC\", \"identificationNumber\": \"31.953.854\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"50%\", \"timeFound\": 1, \"job\": \"\" }, { \"firstName\": \"Juan Carlos\", \"lastName\": \"Escobar Welsch\", \"identificationType\": \"CC\", \"identificationNumber\": \"16.733.280\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"50%\", \"timeFound\": 1, \"job\": \"\" }, { \"firstName\": \"Juan Carlos\", \"lastName\": \"Escobar Welsch\", \"identificationType\": \"CC\", \"identificationNumber\": \"16.733.280\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"\", \"timeFound\": 2, \"job\": \"Representante Legal\" } ] }, \"document_type\": \"company\", \"document_number\": \"805031602\", \"category\": \"ACC\", \"confidenceScores\": { \"companyName\": 95, \"taxId\": 95, \"country\": 98, \"relatedParties\": 90 } } ```"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 496,
+      "cache_creation_input_tokens": 9486,
+      "cache_read_input_tokens": 0,
+      "output_tokens": 1182
+    },
+    "ResponseMetadata": {
+      "RequestId": "79d513c7-4300-412a-918a-9572619051ed",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Mon, 25 Aug 2025 20:32:42 GMT",
+        "content-type": "application/json",
+        "content-length": "7139",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "79d513c7-4300-412a-918a-9572619051ed",
+        "x-amzn-bedrock-invocation-latency": "19679",
+        "x-amzn-bedrock-cache-write-input-token-count": "9486",
+        "x-amzn-bedrock-cache-read-input-token-count": "0",
+        "x-amzn-bedrock-output-token-count": "1182",
+        "x-amzn-bedrock-input-token-count": "496"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_013WgTdA4kCXzLcSmbaEeRTf",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-sonnet-4-20250514",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Let me carefully analyze this document to extract the required information following the instructions. 1. **Document Analysis**: This is a certification document from a public accountant Julio César Suaza in Santiago de Cali, certifying the equity composition of MEGASERVICIOS DE INGENIERIA S.A.S. 2. **Country Detection**: - I see \"Santiago de Cali\" and \"Cali, Colombia\" explicitly mentioned in the document - The document shows \"NIT\" which corresponds to Colombia according to COMPANY_ID hash table - Evidence: Santiago de Cali → Colombia, plus NIT format confirms Colombia 3. **Main Company (Root Level)**: - Company Name: \"MEGASERVICIOS DE INGENIERIA S.A.S\" (from first paragraph) - Tax ID: \"805.031.602-7\" (from first paragraph where it says \"con NIT: 805.031.602 - 7\") - Country: Colombia (clear from Cali reference and NIT format) 4. **Related Parties Analysis**: Looking at the table, I see two shareholders: a) DORA MATILDE TREJOS PUERTA - C.C. 31.953.854 - 50% participation - 7.042 shares b) JUAN CARLOS ESCOBAR WELSCH - C.C. 16.733.280 - 50% participation - 7.042 shares Both appear to be individuals (personal names) with C.C. (Cédula de Ciudadanía) which is valid for Colombia per PERSON_ID hash table. Also, I notice that JUAN CARLOS ESCOBAR WELSCH appears again as \"representante Legal\" (Legal Representative), so he has timeFound=1 as shareholder and timeFound=2 as legal representative. 5. **Name Splitting Rules**: - DORA MATILDE TREJOS PUERTA: firstName=\"Dora Matilde\", lastName=\"Trejos Puerta\" - JUAN CARLOS ESCOBAR WELSCH: firstName=\"Juan Carlos\", lastName=\"Escobar Welsch\" I'll proceed with parsing the name components, ensuring accurate first and last name extraction for both shareholders. The document provides clear identification details, supporting a high-confidence analysis of the company's ownership structure.",
+          "signature": "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"
+        },
+        {
+          "type": "text",
+          "text": "```json { \"path\": \"ACC/805031602/68_CA_2020-09-23.pdf\", \"result\": { \"companyName\": \"MEGASERVICIOS DE INGENIERIA S.A.S\", \"documentType\": \"Equity Composition\", \"taxId\": \"805.031.602-7\", \"country\": \"Colombia\", \"identificationDetails\": { \"source\": \"text_reference\", \"indicators\": [ \"Santiago de Cali\", \"Cali\", \"Colombia\" ], \"conflictingSources\": [], \"requiresReview\": false }, \"relatedParties\": [ { \"firstName\": \"Dora Matilde\", \"lastName\": \"Trejos Puerta\", \"identificationType\": \"CC\", \"identificationNumber\": \"31.953.854\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"50%\", \"timeFound\": 1, \"job\": \"\" }, { \"firstName\": \"Juan Carlos\", \"lastName\": \"Escobar Welsch\", \"identificationType\": \"CC\", \"identificationNumber\": \"16.733.280\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"50%\", \"timeFound\": 1, \"job\": \"\" }, { \"firstName\": \"Juan Carlos\", \"lastName\": \"Escobar Welsch\", \"identificationType\": \"CC\", \"identificationNumber\": \"16.733.280\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"\", \"timeFound\": 2, \"job\": \"Representante Legal\" } ] }, \"document_type\": \"company\", \"document_number\": \"805031602\", \"category\": \"ACC\", \"confidenceScores\": { \"companyName\": 95, \"taxId\": 95, \"country\": 98, \"relatedParties\": 90 } } ```"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 496,
+        "cache_creation_input_tokens": 9486,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 1182
+      }
+    },
+    "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 8000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+  "api_used": "invoke_model"
+}

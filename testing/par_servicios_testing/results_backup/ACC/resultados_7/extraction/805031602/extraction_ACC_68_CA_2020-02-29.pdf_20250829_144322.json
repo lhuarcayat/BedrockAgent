@@ -1,0 +1,118 @@
+{
+  "extraction_data": {
+    "result": {
+      "companyName": "MEGASERVICIOS DE INGENIERÍA S.A.S.",
+      "documentCategory": "Equity Composition",
+      "taxId": "805.031.602-7",
+      "country": "Colombia",
+      "identificationDetails": {
+        "source": "text_reference",
+        "indicators": [
+          "Cali",
+          "NIT format"
+        ],
+        "conflictingSources": [],
+        "requiresReview": "false"
+      },
+      "relatedParties": [
+        {
+          "type": "person",
+          "firstName": "Dora Matilde",
+          "lastName": "Trejos Puerta",
+          "identificationType": "C.C.",
+          "identificationNumber": "31.953.854",
+          "relationshipType": "Shareholder",
+          "participationPercentage": "50%",
+          "timeFound": "1",
+          "job": ""
+        },
+        {
+          "type": "person",
+          "firstName": "Juan Carlos",
+          "lastName": "Escobar Welsch",
+          "identificationType": "C.C.",
+          "identificationNumber": "16.733.280",
+          "relationshipType": "Shareholder",
+          "participationPercentage": "50%",
+          "timeFound": "1",
+          "job": "Representante Legal"
+        }
+      ]
+    },
+    "documentType": "company",
+    "category": "ACC"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "{ \"result\": { \"companyName\": \"MEGASERVICIOS DE INGENIERÍA S.A.S.\", \"documentCategory\": \"Equity Composition\", \"taxId\": \"805.031.602-7\", \"country\": \"Colombia\", \"identificationDetails\": { \"source\": \"text_reference\", \"indicators\": [ \"Cali\", \"NIT format\" ], \"conflictingSources\": [], \"requiresReview\": \"false\" }, \"relatedParties\": [ { \"type\": \"person\", \"firstName\": \"Dora Matilde\", \"lastName\": \"Trejos Puerta\", \"identificationType\": \"C.C.\", \"identificationNumber\": \"31.953.854\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"50%\", \"timeFound\": \"1\", \"job\": \"\" }, { \"type\": \"person\", \"firstName\": \"Juan Carlos\", \"lastName\": \"Escobar Welsch\", \"identificationType\": \"C.C.\", \"identificationNumber\": \"16.733.280\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"50%\", \"timeFound\": \"1\", \"job\": \"Representante Legal\" } ] }, \"documentType\": \"company\", \"category\": \"ACC\" }"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 9,
+      "cache_creation_input_tokens": 6107,
+      "cache_read_input_tokens": 0,
+      "output_tokens": 756
+    },
+    "ResponseMetadata": {
+      "RequestId": "27a7c282-64a3-4a7d-9169-e0b16782847d",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Fri, 29 Aug 2025 19:43:23 GMT",
+        "content-type": "application/json",
+        "content-length": "4622",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "27a7c282-64a3-4a7d-9169-e0b16782847d",
+        "x-amzn-bedrock-invocation-latency": "12975",
+        "x-amzn-bedrock-cache-write-input-token-count": "6107",
+        "x-amzn-bedrock-cache-read-input-token-count": "0",
+        "x-amzn-bedrock-output-token-count": "756",
+        "x-amzn-bedrock-input-token-count": "9"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_01TqgNWVprHpwXradx3VYuBc",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-sonnet-4-20250514",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Let me analyze this Spanish legal document step by step: 1. **Document Analysis:** - This is a certification (certificado) about shareholding composition - Issued by public accountant Julio César Suaza - Contains information about MEGASERVICIOS DE INGENIERÍA S.A.S. 2. **Root Level Extraction:** - **Company Name**: The document is about \"MEGASERVICIOS DE INGENIERÍA S.A.S.\" (from the certification text) - **Tax ID**: \"NIT: 805.031.602 – 7\" (mentioned in the document) - **Country**: The document mentions \"ciudad de Cali\" (city of Cali), which is in Colombia. Also, the NIT format is Colombian. 3. **Related Parties Processing:** Looking at the shareholders table: - DORA MATILDE TREJOS PUERTA, C.C. 31.953.854 - 50% participation, 7.042 shares - JUAN CARLOS ESCOBAR WELSCH, C.C. 16.733.280 - 50% participation, 7.042 shares Both are persons (C.C. indicates Cédula de Ciudadanía, Colombian personal ID) 4. **Validation:** - NIT aligns with Colombia ✓ - C.C. is valid Colombian person ID type ✓ - Percentages sum to 100% ✓ - No conflicts detected Let me format this according to the schema:",
+          "signature": "Eq4KCkgIBxABGAIqQD/yL0pLzaTKTuY1zoTdsgCXeWHwEx0iiOM4bs9x8/HkkeAWT+ZEgJz2B+XgbuJGuRlLF9h2+VWyWz67eEwlWJgSDPQRybMlKtV2p2TrFxoMpHioBaLK0YkRy1xuIjC7bU2O0Va5MXJuPiMC5AXxopYn50SuXvjeCe4WYbpcTKWinq0uxKY/C0T3YTJahCoqkwkCM9YsKHIkhGk2s/kqpZTIpgkDIgqud3Suv2el2ZZaTWQW5eCgYtL3S1oI8lr+/3RPrpcCpW5ug7W0nXGIJqxXuihP+n4Fd8JvC/i27uJGH4vmgvgLqUqRvqOFCzsQqRpQAZYp3HtzPcZircyOjC/ux7/oru69lwwP9VqujxdeLfWrpCNGqIlWZE4yTMtMyhqC7pFOkWaMYKm6nTVK92E6/IeIQszuKDcx7HDbBqSfWZV35ho9B2N3R3O5iPEa/lq34sH8xC/WRbygsIGAQliIJ+2ivleV9TKca3kTjEgDHAKHNZqvVZErmwDLwdQSj5kZb9gcoszLs3+acjd+gTe9+qUj68FiK6McOztMs30Q71GbSbOpZmYFqrIomo6bIvWmeEGnFgVBH6wKej9kucmlVZEhUk2r2G4TEGY3DwK1AZ6PN8umqYCZGe0ltOC9DNgLj1e3lufnXKpFWPWN1vJ2yGaRMI/pcsnfP+uYExFl/EIUh8xsK4ZhznCI89HaJ5nfvFK7esKb2popjFXzzB2vRXiVVVbbCoKzjTORoDBMgDuhT8BqGFCHyu2YHiKPuhNvS2madEsMf0CMcR/Cy0eof3CgXu6K+fFjKEbNTYGiEivDbYWF9uir3udjyhd0fpOuHInJd8EYibJKZYYTONhhf1cqUJtfCPxwRDikBRCqO2n1QCrznfnBVS4CWiF2B0Wp9R+WPKZnjJZe304QYONufvXhvJSgXJegnYbl4FsO+32KxQLh+mAlmc1QVcHEmqCY3ldT8FcNyU4AzhvMeEupHPPPk6VLbMqK+NHTT4xawjMH6j1VcSrMBlqwzEF1hSuTjD3Si4Gvj52krUCU1hUox8q/ORM+bdEU/OnrjOJCHDwNpoRI4je1yOwWJVJRivP0agKeW1Hb1WgsBXDxZJ+S7qLnEQQ6x73bpVeyzlh+ThJ0mJDzRPFQY588kWzZ7P6W6L6s5ar9nGEKLzlZST14Evm9+L954drHHq3C8zr58ZNFKCirvxryIIWbiNgwXp+JPMUXinBw2X/DG60cEqXUQE/hoEWca+E82uMld2Q1r2jnbtV+GCsEbUCdM1b0QbQ95IvtfAskind/gV+HoqrMeqCbze778pyAkgMaGnvwqj7Qq+iTZ6jc4L/gMazg9uvhtBN+du4jWDhoXdIXVr31h4Ie7xSYtbP2cfEUpZn2ECRONLXk43ZLJO4kdMEafQevpWVgRX/Zsv29u91tTavtveBb/FFWkWB+wznfnmXs3Iq2YJB+4iAt2kE6ix6kWDr1wiP0GiuqlvWGFnoSVhLaC2CcpCaBLDjxWZfwteAw4N1PEgIjf2y8ihz/lsjSwLSjo0AMRVkA2sRh+c1Y8dhQiDE4gcHEofzrhb1S3jhOHw93d7Lgn+AaLxSY5NnmF0Qyh6yt5773WB7g3O9RcCN8IrNiDeeQ6dLc2yk4uT1VuAmWb2Vp1iiSZEhWZO27cWnPF3ICrODHrftTrTU+K73OiLDd9jIWobxTol+OFYq2jWVPo8XnS3SAtOhcfmvV16145tXidI5jtgL8U/lJZpbgmSA3GAE="
+        },
+        {
+          "type": "text",
+          "text": "{ \"result\": { \"companyName\": \"MEGASERVICIOS DE INGENIERÍA S.A.S.\", \"documentCategory\": \"Equity Composition\", \"taxId\": \"805.031.602-7\", \"country\": \"Colombia\", \"identificationDetails\": { \"source\": \"text_reference\", \"indicators\": [ \"Cali\", \"NIT format\" ], \"conflictingSources\": [], \"requiresReview\": \"false\" }, \"relatedParties\": [ { \"type\": \"person\", \"firstName\": \"Dora Matilde\", \"lastName\": \"Trejos Puerta\", \"identificationType\": \"C.C.\", \"identificationNumber\": \"31.953.854\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"50%\", \"timeFound\": \"1\", \"job\": \"\" }, { \"type\": \"person\", \"firstName\": \"Juan Carlos\", \"lastName\": \"Escobar Welsch\", \"identificationType\": \"C.C.\", \"identificationNumber\": \"16.733.280\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"50%\", \"timeFound\": \"1\", \"job\": \"Representante Legal\" } ] }, \"documentType\": \"company\", \"category\": \"ACC\" }"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 9,
+        "cache_creation_input_tokens": 6107,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 756
+      }
+    },
+    "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 8000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+  "api_used": "invoke_model"
+}

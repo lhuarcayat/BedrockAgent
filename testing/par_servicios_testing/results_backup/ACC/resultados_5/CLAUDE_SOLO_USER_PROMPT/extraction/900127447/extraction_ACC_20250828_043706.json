@@ -1,0 +1,108 @@
+{
+  "extraction_data": {
+    "path": "ACC/900127447/217_CA_2020-02-29.pdf",
+    "result": {
+      "companyName": "ROMEGAS SAS",
+      "documentCategory": "Equity Composition",
+      "taxId": "900.127.447-1",
+      "country": "Colombia",
+      "identificationDetails": {
+        "source": "id_analysis",
+        "indicators": [
+          "NIT format matches Colombian tax ID pattern"
+        ],
+        "conflictingSources": [],
+        "requiresReview": "false"
+      },
+      "relatedParties": [
+        {
+          "type": "person",
+          "firstName": "JULIO CESAR",
+          "lastName": "ROMERO MUÑOZ",
+          "identificationType": "C.C.",
+          "identificationNumber": "79.735.871",
+          "relationshipType": "Shareholder",
+          "participationPercentage": "100",
+          "timeFound": "1",
+          "job": ""
+        }
+      ]
+    },
+    "documentType": "company",
+    "documentNumber": "900127447",
+    "category": "ACC"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "```json { \"result\": { \"companyName\": \"ROMEGAS SAS\", \"documentCategory\": \"Equity Composition\", \"taxId\": \"900.127.447-1\", \"country\": \"Colombia\", \"identificationDetails\": { \"source\": \"id_analysis\", \"indicators\": [\"NIT format matches Colombian tax ID pattern\"], \"conflictingSources\": [], \"requiresReview\": \"false\" }, \"relatedParties\": [ { \"type\": \"person\", \"firstName\": \"JULIO CESAR\", \"lastName\": \"ROMERO MUÑOZ\", \"identificationType\": \"C.C.\", \"identificationNumber\": \"79.735.871\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"100\", \"timeFound\": \"1\", \"job\": \"\" } ] }, \"documentType\": \"company\", \"category\": \"ACC\" } ```"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 9,
+      "cache_creation_input_tokens": 6345,
+      "cache_read_input_tokens": 0,
+      "output_tokens": 1015
+    },
+    "ResponseMetadata": {
+      "RequestId": "37fbd131-8ed2-43a3-9491-dd955e84f839",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Thu, 28 Aug 2025 09:37:06 GMT",
+        "content-type": "application/json",
+        "content-length": "4249",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "37fbd131-8ed2-43a3-9491-dd955e84f839",
+        "x-amzn-bedrock-invocation-latency": "24626",
+        "x-amzn-bedrock-cache-write-input-token-count": "6345",
+        "x-amzn-bedrock-cache-read-input-token-count": "0",
+        "x-amzn-bedrock-output-token-count": "1015",
+        "x-amzn-bedrock-input-token-count": "9"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_0138TJ2UwpUPfBqBQZMumtaZ",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-3-7-sonnet-20250219",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Let's analyze the document systematically following our workflow: ### Step 1: Document Analysis The document is a \"COMPOSICION ACCIONARIA\" (Equity Composition) from Colombia, certified by a contador público (public accountant). - This is a certification of the shareholder structure of a company - The document is in Spanish - It appears to be from Colombia (based on format and NIT tax ID) - The main company is \"ROMEGAS SAS\" with NIT 900.127.447-1 - The document shows who owns the company's shares ### Step 2: Root Level Extraction - Company Name: ROMEGAS SAS - Tax ID: 900.127.447-1 (This is a Colombian NIT format) - Country: Colombia (determined from the NIT format and document language) - Document is dated May 31, 2023 ### Step 3: Related Parties Processing There appears to be only one shareholder: - Name: JULIO CESAR ROMERO MUÑOZ - ID Type: CC (Cédula de Ciudadanía - Colombian national ID) - ID Number: 79.735.871 - Participation: 100% - Shares: 2,000 - Value per share: $10,000 This appears to be a person (not a company) based on the name format and CC identification. ### Step 4: Validation & Cross-checking - The NIT format (900.127.447-1) is consistent with Colombian tax IDs - The CC format for the shareholder ID is consistent with Colombian personal IDs - The document shows 100% ownership by single shareholder, which is valid - There are no apparent conflicts in the data - All required fields appear to be present Now let's compile this into our JSON structure: 1. For the company: - companyName: \"ROMEGAS SAS\" - documentCategory: \"Equity Composition\" - taxId: \"900.127.447-1\" - country: \"Colombia\" 2. For the identification details: - source: \"id_analysis\" (we're inferring from the NIT format) - indicators: [\"NIT format 900.127.447-1 matches Colombian tax ID pattern\"] - conflictingSources: [] (no conflicts found) - requiresReview: \"false\" (all data seems clear) 3. For the related party (shareholder): - type: \"person\" - firstName: \"JULIO CESAR\" - lastName: \"ROMERO MUÑOZ\" - identificationType: \"C.C.\" (Colombian citizen ID) - identificationNumber: \"79.735.871\" - relationshipType: \"Shareholder\" - participationPercentage: \"100\" - timeFound: \"1\" (appears once in document) - job: \"\" (no job role specified) Let me review for any missing or unclear fields: - All required fields for the company and shareholder appear to be present - The identification follows Colombian standards - The participation percentage adds up to 100% as expected - There are no conflicts in the data Let me prepare the final JSON structure according to our schema.",
+          "signature": "ErcBCkgIBxABGAIiQF2f7VdfO9D28wkQqMOTOjsJ3IKpwHqSDO45YLKLnyMwqaBg0J0Xvt+CTJ5HLc+znEbPzpKgdpg2TBeOqzEUloESDJrJZ5X22q+FE0lMiBoMkFpqxPf3unp7bdrZIjAfGRCEqWLdy8pOKo7q2uroXsmbBvRkbQqOqfjrKwzydRKVZztj7fbsbV8YnPZS+FcqHbSGGtA+NoMPtJIe1q5jS8arLg8TIp2jAI5FpoQ3GAI="
+        },
+        {
+          "type": "text",
+          "text": "```json { \"result\": { \"companyName\": \"ROMEGAS SAS\", \"documentCategory\": \"Equity Composition\", \"taxId\": \"900.127.447-1\", \"country\": \"Colombia\", \"identificationDetails\": { \"source\": \"id_analysis\", \"indicators\": [\"NIT format matches Colombian tax ID pattern\"], \"conflictingSources\": [], \"requiresReview\": \"false\" }, \"relatedParties\": [ { \"type\": \"person\", \"firstName\": \"JULIO CESAR\", \"lastName\": \"ROMERO MUÑOZ\", \"identificationType\": \"C.C.\", \"identificationNumber\": \"79.735.871\", \"relationshipType\": \"Shareholder\", \"participationPercentage\": \"100\", \"timeFound\": \"1\", \"job\": \"\" } ] }, \"documentType\": \"company\", \"category\": \"ACC\" } ```"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 9,
+        "cache_creation_input_tokens": 6345,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 1015
+      }
+    },
+    "model_id": "us.anthropic.claude-3-7-sonnet-20250219-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 8000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "model_used": "us.anthropic.claude-3-7-sonnet-20250219-v1:0",
+  "api_used": "invoke_model"
+}

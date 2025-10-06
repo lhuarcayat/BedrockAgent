@@ -1,0 +1,88 @@
+{
+  "extraction_data": {
+    "result": {
+      "firstName": "LUIS HERNANDO",
+      "lastName": "CORTES ARIAS",
+      "country_issuer": "Colombia",
+      "nationality": "Colombia",
+      "identificationType": "Cédula de Ciudadanía",
+      "identificationNumber": "59568690",
+      "message": ""
+    },
+    "document_type": "person",
+    "category": "CECRL"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "```json { \"result\": { \"firstName\": \"LUIS HERNANDO\", \"lastName\": \"CORTES ARIAS\", \"country_issuer\": \"Colombia\", \"nationality\": \"Colombia\", \"identificationType\": \"Cédula de Ciudadanía\", \"identificationNumber\": \"59568690\", \"message\": \"\" }, \"document_type\": \"person\", \"category\": \"CECRL\" } ```"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 10,
+      "cache_creation_input_tokens": 5982,
+      "cache_read_input_tokens": 0,
+      "output_tokens": 564
+    },
+    "ResponseMetadata": {
+      "RequestId": "c44f6431-97bb-49d6-9e98-3220809c5750",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Fri, 29 Aug 2025 15:42:31 GMT",
+        "content-type": "application/json",
+        "content-length": "4699",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "c44f6431-97bb-49d6-9e98-3220809c5750",
+        "x-amzn-bedrock-invocation-latency": "15571",
+        "x-amzn-bedrock-cache-write-input-token-count": "5982",
+        "x-amzn-bedrock-cache-read-input-token-count": "0",
+        "x-amzn-bedrock-output-token-count": "564",
+        "x-amzn-bedrock-input-token-count": "10"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_01AJVq7Gg9UznXFrWG8wYvJv",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-sonnet-4-20250514",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "Let me analyze this document step by step. 1. **Document Structure Analysis**: This appears to be a Colombian identification document (Cédula de Ciudadanía). I can see \"REPÚBLICA DE COLOMBIA\" at the top, indicating it's issued by Colombia. There's also text about \"IDENTIFICACIÓN PERSONAL\" and \"CEDULA DE CIUDADANÍA\". 2. **Field Detection**: Looking at the document, I can see: - There's a name section with \"LUIS HERNANDO\" under what appears to be \"NOMBRES\" - I can see \"CORTES ARIAS\" which appears to be the surnames/apellidos - There's a number \"59568690\" which appears to be the identification number - The document shows \"FECHA DE NACIMIENTO\" and \"18-MAY-1956\" - There's \"PURIFICACIÓN (TOLIMA)\" which appears to be place of birth - I can see \"1.56\" for height, \"O+\" for blood type, \"M\" for sex 3. **Text Extraction**: - **firstName**: \"LUIS HERNANDO\" (appears under nombres section) - **lastName**: \"CORTES ARIAS\" (appears in the apellidos section) - **country_issuer**: \"Colombia\" (from \"REPÚBLICA DE COLOMBIA\" header) - **nationality**: Should be \"Colombia\" (default for Colombian cédulas unless birth place indicates otherwise) - **identificationType**: \"Cédula de Ciudadanía\" (this is a Colombian cédula) - **identificationNumber**: \"59568690\" (the main ID number visible) 4. **Field Validation**: - The document is clearly an official Colombian identification document - All main fields are extractable - No major issues or contradictions Let me format the JSON response according to the schema.",
+          "signature": "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"
+        },
+        {
+          "type": "text",
+          "text": "```json { \"result\": { \"firstName\": \"LUIS HERNANDO\", \"lastName\": \"CORTES ARIAS\", \"country_issuer\": \"Colombia\", \"nationality\": \"Colombia\", \"identificationType\": \"Cédula de Ciudadanía\", \"identificationNumber\": \"59568690\", \"message\": \"\" }, \"document_type\": \"person\", \"category\": \"CECRL\" } ```"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 10,
+        "cache_creation_input_tokens": 5982,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 564
+      }
+    },
+    "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 8000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+  "api_used": "invoke_model"
+}

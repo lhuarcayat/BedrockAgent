@@ -1,0 +1,88 @@
+{
+  "extraction_data": {
+    "result": {
+      "firstName": "ENRIQUE",
+      "lastName": "POLANIA ANDRADE",
+      "country_issuer": "Colombia",
+      "nationality": "Colombia",
+      "identificationType": "Cédula de Ciudadanía",
+      "identificationNumber": "12.097.982",
+      "message": ""
+    },
+    "document_type": "person",
+    "category": "CECRL"
+  },
+  "raw_response": {
+    "output": {
+      "message": {
+        "content": [
+          {
+            "text": "```json { \"result\": { \"firstName\": \"ENRIQUE\", \"lastName\": \"POLANIA ANDRADE\", \"country_issuer\": \"Colombia\", \"nationality\": \"Colombia\", \"identificationType\": \"Cédula de Ciudadanía\", \"identificationNumber\": \"12.097.982\", \"message\": \"\" }, \"document_type\": \"person\", \"category\": \"CECRL\" } ```"
+          }
+        ]
+      }
+    },
+    "stopReason": "end_turn",
+    "usage": {
+      "input_tokens": 10,
+      "cache_creation_input_tokens": 6429,
+      "cache_read_input_tokens": 0,
+      "output_tokens": 564
+    },
+    "ResponseMetadata": {
+      "RequestId": "d11132a8-2e35-4549-ab48-0b10311bb701",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "date": "Fri, 29 Aug 2025 23:01:55 GMT",
+        "content-type": "application/json",
+        "content-length": "4866",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "d11132a8-2e35-4549-ab48-0b10311bb701",
+        "x-amzn-bedrock-invocation-latency": "11586",
+        "x-amzn-bedrock-cache-write-input-token-count": "6429",
+        "x-amzn-bedrock-cache-read-input-token-count": "0",
+        "x-amzn-bedrock-output-token-count": "564",
+        "x-amzn-bedrock-input-token-count": "10"
+      },
+      "RetryAttempts": 0
+    },
+    "raw_anthropic_response": {
+      "id": "msg_bdrk_01SDsYB7c3ewSYVMVFiDo2KW",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-sonnet-4-20250514",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "I need to analyze this Colombian identification document. Let me examine the document carefully: Looking at the document, I can see: 1. **Document Type**: This appears to be a \"REPUBLICA DE COLOMBIA\" identification document - specifically a \"CEDULA DE CIUDADANIA\" 2. **Names**: I can see: - \"POLANIA ANDRADE\" appears prominently - \"ENRIQUE\" appears below that - The layout suggests \"POLANIA ANDRADE\" are the surnames (apellidos) and \"ENRIQUE\" is the given name (nombres) 3. **Identification Number**: \"12.097.982\" is clearly visible 4. **Country**: \"REPUBLICA DE COLOMBIA\" indicates this is issued by Colombia 5. **Document Type**: \"CEDULA DE CIUDADANIA\" which translates to \"Cédula de Ciudadanía\" 6. **Other details**: I can see birth information showing \"04-DIC-1947\" and \"NEIVA\" as place of birth, with other personal details. Let me extract this information according to the schema: - firstName: \"ENRIQUE\" (this appears to be the nombres/given name) - lastName: \"POLANIA ANDRADE\" (these appear to be the apellidos/surnames) - country_issuer: \"Colombia\" (República de Colombia) - nationality: \"Colombia\" (since this is a Colombian cédula and no other nationality is indicated) - identificationType: \"Cédula de Ciudadanía\" (this is clearly stated) - identificationNumber: \"12.097.982\" (preserving the formatting) - message: \"\" (document appears to be official and all fields extracted successfully) The document appears to be an official Colombian national ID card (Cédula de Ciudadanía) with all the proper official elements including government header, official formatting, and required information fields.",
+          "signature": "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"
+        },
+        {
+          "type": "text",
+          "text": "```json { \"result\": { \"firstName\": \"ENRIQUE\", \"lastName\": \"POLANIA ANDRADE\", \"country_issuer\": \"Colombia\", \"nationality\": \"Colombia\", \"identificationType\": \"Cédula de Ciudadanía\", \"identificationNumber\": \"12.097.982\", \"message\": \"\" }, \"document_type\": \"person\", \"category\": \"CECRL\" } ```"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 10,
+        "cache_creation_input_tokens": 6429,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 564
+      }
+    },
+    "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "api_used": "invoke_model",
+    "model_params": {
+      "max_tokens": 8000,
+      "top_p": 1,
+      "temperature": 1,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 4096
+      }
+    }
+  },
+  "model_used": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+  "api_used": "invoke_model"
+}
